@@ -1,0 +1,72 @@
+PARTS LIST
+
+100nF             C0603           C9
+100nF             C0603           C10
+1nF               C0603           C30
+100nF             C0603           C32
+100nF             C0603           C33
+LED Red           LED0603-R       D6
+PRT-14417         SPARKFUN_PRT-14417J1
+PRT-14417         SPARKFUN_PRT-14417J2
+Jumper 4          JP4             J3
+PRT-14417         SPARKFUN_PRT-14417J5
+PRT-14417         SPARKFUN_PRT-14417J6
+JP2               CON2            JP1
+MOUNTING HOLE     M3              MH1
+MOUNTING HOLE     M3              MH2
+MOUNTING HOLE     M3              MH3
+MOUNTING HOLE     M3              MH4
+10k               R0603           R4
+10k               R0603           R5
+2.2K              R0603           R6
+2.2K              R0603           R13
+2.2K              R0603           R17
+2.2K              R0603           R27
+2.2K              R0603           R28
+SW2               SWITCH          SW3
+SW2               SWITCH          SW6
+1                 TP              TP1
+1                 TP              TP2
+1                 TP              TP3
+MPRLS0025PA00001A XDCR_MPRLS0025PA00001AU8
+TCA9534APWR       SOP65P640X120-16NU9
+EOS
+NET LIST
+
+NODENAME D3V3             $
+    C32        2  C33        2  J1         2  J2         2  J3         3  J5         2  J6         2  JP1        2  R4         2  R5         2  R13        1  R17        1  R27        1  R28        1  U9         1  U9         2  U9         3  U9        16
+NODENAME GND              $
+    C9         1  C10        1  C32        1  C33        1  D6         2  J1         1  J2         1  J3         4  J5         1  J6         1  SW3        3  SW3        4  SW6        3  SW6        4  U8        10  U9         8
+NODENAME LED              $
+    R6         1  U9        10
+NODENAME NetC30-1         $
+    C30        1  U8         6
+NODENAME NetC30-2         $
+    C30        2  U8         4
+NODENAME NetD6-1          $
+    D6         1  R6         2
+NODENAME NetJP1-1         $
+    JP1        1  U8        12
+NODENAME NetR13-2         $
+    R13        2  TP1        1  U9        13
+NODENAME NetTP3-1         $
+    TP3        1  U8         8
+NODENAME NetU9-4          $
+    U9         4
+NODENAME NetU9-5          $
+    U9         5
+NODENAME NetU9-6          $
+    U9         6
+NODENAME NetU9-7          $
+    U9         7
+NODENAME RES              $
+    R17        2  TP2        1  U8         9  U9         9
+NODENAME SCL              $
+    J1         4  J2         4  J3         1  J5         4  J6         4  R28        2  U8         3  U9        14
+NODENAME SDA              $
+    J1         3  J2         3  J3         2  J5         3  J6         3  R27        2  U8         2  U9        15
+NODENAME SW1              $
+    C9         2  R4         1  SW3        1  SW3        2  U9        12
+NODENAME SW2              $
+    C10        2  R5         1  SW6        1  SW6        2  U9        11
+EOS
