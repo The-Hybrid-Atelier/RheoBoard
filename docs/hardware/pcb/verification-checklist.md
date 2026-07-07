@@ -20,5 +20,5 @@ for the change and check them off there.
 ## Documentation
 
 - [ ] `docs/PROGRESS.md` updated with what changed and why
-- [ ] `docs/hardware/revision-history.md` updated
+- [ ] `docs/hardware/pcb/revision-history.md` updated
 - [ ] Relevant exec-plan moved to `docs/exec-plans/completed/` (if finished)
