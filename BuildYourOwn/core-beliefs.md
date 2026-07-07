@@ -16,8 +16,10 @@ that's cheaper than repeating the correction every session.
 - **Don't silently resolve ambiguity.** If a spec or requirement is unclear, record the open
   question in the relevant exec-plan's decision log rather than picking an interpretation and
   moving on quietly.
-- **Small, meaningful commits.** Even without PRs, each commit on `main` should represent one
-  coherent change with a message that explains *why*, not just *what*.
+- **Small, meaningful commits — made by the human, not the agent.** The agent edits files
+  locally and stops; the user reviews and runs `git commit`/`git push` themselves (see
+  `AGENTS.md` → "Working agreement"). When commits do happen, each one should still represent
+  one coherent change with a message that explains *why*, not just *what*.
 - **Docs are updated in the same sitting as the change**, not deferred — `PROGRESS.md` and the
   relevant exec-plan get updated as part of finishing the work, not as separate cleanup.
 - **One deliverable at a time.** Don't try to write the whole BOM, the whole tutorial, or a

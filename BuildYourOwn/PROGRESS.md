@@ -8,6 +8,45 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-07 (8)
+
+Full audit against all three source articles (not just the biggest gap from two sessions ago).
+Mapped every concrete recommendation to something in the repo; found and closed three real gaps:
+
+- **Feature-list pattern wasn't applied at the tutorial-step level.** `BuildYourOwn/README.md`
+  had a track-level checklist, but `tutorial/README.md`'s step list was just placeholder text
+  with no persistent status. Added a checkbox list that's explicit about "written" vs "verified"
+  being different states (mirrors the article's "mark passing only after real testing" lesson).
+- **Sprint-contract ordering was backwards.** `exec-plans/_template.md` had "Verification" after
+  "Plan," so nothing forced agreeing on done-criteria before writing the plan. Renamed to
+  "Success criteria" and moved it before "Plan," with an instruction to fill it in first.
+- **"Every part is traceable" was prose-only, not mechanically enforced.** Added a check to
+  `scripts/check-docs.sh` that scans `BOM.md` table rows for an empty Datasheet column and
+  warns. Tested against both an empty table (current state, passes) and synthetic good/bad rows
+  (correctly flags only the bad one) before landing it.
+- Minor: noted in `AGENTS.md` that future firmware/software should get an `init.sh`-style script
+  + smoke-test step, so that lesson isn't lost by the time it's relevant.
+
+Everything else checked out already: AGENTS.md as map, progress log, exec-plans, human-only
+verification boundary, golden principles, no-commit-by-agent workflow, repo-local-only content.
+
+**Next:** same as before — start populating `BOM.md` and the first tutorial step.
+
+## 2026-07-07 (7)
+
+Workflow change: **the agent no longer commits or pushes.** The user commits to `main`
+themselves, on their own schedule. Updated `AGENTS.md` ("Working agreement" section, session
+bootstrap/wrap-up) and `core-beliefs.md` ("small, meaningful commits" bullet) to reflect this:
+
+- Agent edits files locally and stops — no `git add`/`commit`/`push` on the user's behalf unless
+  explicitly asked to in the moment.
+- `BuildYourOwn/PROGRESS.md` is now the primary continuity mechanism between sessions (more so
+  than before) since git log may lag behind the actual working tree state.
+- Session bootstrap now treats an uncommitted working tree as expected, not a red flag.
+
+**This very entry is an example of the new flow: written but not committed.** Next session (or
+the user) should `git status`/`git diff` to see what's pending from this one.
+
 ## 2026-07-07 (6)
 
 Consolidated the entire harness into `BuildYourOwn/`, removing the top-level `docs/` folder.

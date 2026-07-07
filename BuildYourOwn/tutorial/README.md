@@ -26,9 +26,14 @@ Each step lives in its own folder under [`steps/`](steps/), numbered in build or
 [`_step-template/`](_step-template/) to start a new one — see `steps/README.md` for the
 naming convention.
 
-1. _(step 1 title — TBD)_
-2. _(step 2 title — TBD)_
-3. _...add as steps are written..._
+This list is the source of truth for step status — keep it in sync with `steps/`. A step is
+only `[x]` once it's written **and** a human has verified it against `../VERIFICATION.md`/by
+building it (see `AGENTS.md` → "What the agent can and can't verify") — "written" and "verified"
+are different things, don't collapse them.
+
+- [ ] 01 — _(title TBD)_ — not written
+- _...add a row per step as they're planned; don't delete a row to hide that something regressed
+  — note it instead (e.g. "written, failed verification, see tech-debt-tracker")._
 
 ## Finished
 

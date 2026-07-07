@@ -38,11 +38,15 @@ There are two hardware tracks:
 ## Working agreement (solo dev)
 
 - One developer. Work happens directly on `main` — no feature branches, no PR review gate.
-- Commit early and often, with descriptive messages. **Git log +
-  `BuildYourOwn/PROGRESS.md` are the only continuity mechanism** between sessions — treat
-  writing them well as part of the task, not cleanup afterward.
-- Never rewrite published history on `main` (no force-push, no rebasing committed work).
-  Recovery from a bad change should always be "read the log, revert/fix forward."
+- **The agent never commits or pushes.** Make/edit files locally and stop there — the human
+  reviews (`git status`/`git diff`) and runs `git commit`/`git push` themselves, always. Don't
+  run `git commit`, `git push`, or `git add` on the user's behalf unless explicitly asked to in
+  the moment.
+- Since commits aren't happening every session, **`BuildYourOwn/PROGRESS.md` is the primary
+  continuity mechanism** between sessions (git log matters too, but may lag behind the working
+  tree) — treat writing it well as part of the task, not cleanup afterward.
+- Never rewrite published history on `main` (no force-push, no rebasing committed work) — this
+  is the human's call regardless, but the agent should never suggest or attempt it.
 
 ## What the agent can and can't verify
 
@@ -52,7 +56,7 @@ where agents in general are most prone to declaring victory too early, so treat 
 
 - **Agent-executable:** writing/editing docs, researching and drafting BOM candidates (with
   real product/datasheet links), structuring and drafting tutorial content, describing wiring
-  step-by-step, reviewing checklists, git operations.
+  step-by-step, reviewing checklists, read-only git operations (`status`/`log`/`diff`).
 - **Human-only:** buying/handling parts, cutting, soldering, wiring, powering on, taking
   measurements, filming, and literally every item in `BuildYourOwn/VERIFICATION.md` — those are
   physical checks by definition.
@@ -63,9 +67,12 @@ where agents in general are most prone to declaring victory too early, so treat 
 
 ## Session bootstrap — do this first, every session
 
-1. `git status` — confirm a clean working tree before touching anything.
-2. `git log --oneline -20` — see what actually happened recently (don't trust memory/summaries alone).
-3. Read `BuildYourOwn/PROGRESS.md` — the running log of what's been done and what's next.
+1. `git status` — see what's uncommitted (the user may not have committed the last session's
+   work yet — that's expected now, not a red flag).
+2. `git log --oneline -20` — see what's actually landed on `main` (don't trust memory/summaries
+   alone), but remember the working tree may be ahead of this.
+3. Read `BuildYourOwn/PROGRESS.md` — the running log of what's been done and what's next; this
+   is more current than git log now that commits are batched/manual.
 4. Check `BuildYourOwn/exec-plans/active/` — if a plan is in flight, resume it before starting
    something new.
 5. If nothing is active, check `BuildYourOwn/exec-plans/tech-debt-tracker.md` and
@@ -77,7 +84,8 @@ where agents in general are most prone to declaring victory too early, so treat 
    and doc edits that forgot to update `BuildYourOwn/PROGRESS.md`. Fix what it flags.
 2. Append a dated entry to `BuildYourOwn/PROGRESS.md`: what changed, why, what's next.
 3. Update the relevant exec-plan, or move it to `BuildYourOwn/exec-plans/completed/` if finished.
-4. Commit everything to `main` with a descriptive message.
+4. **Stop — do not commit or push.** Leave the changes in the working tree and tell the user
+   what changed so they can review and commit themselves.
 
 ## `BuildYourOwn/` map
 
@@ -103,4 +111,5 @@ where agents in general are most prone to declaring victory too early, so treat 
   `RheoBoard_V8.BomDoc` is the one exception (text/XML, diffs fine).
 - Any future firmware/software for RheoMap/SlipTopo that lands in this repo should get its own
   section here once it exists (build/run/test commands, entry points) rather than being
-  discovered ad hoc.
+  discovered ad hoc — per the original harness articles this should include an `init.sh`-style
+  script and a basic smoke-test step in "session bootstrap" once there's something runnable.
