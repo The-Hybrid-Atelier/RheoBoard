@@ -16,8 +16,8 @@ exec-plan for the change and check them off there.
 - [ ] Every part in `BuildYourOwn/BOM.md` has a product/datasheet link
       (`docs/references/index.md`)
 - [ ] No unresolved/placeholder parts
-- [ ] `BuildYourOwn/ASSEMBLY.md` matches what was actually built (steps, part orientation,
-      photos if applicable) — someone should be able to follow it cold and get the same result
+- [ ] `BuildYourOwn/tutorial/` matches what was actually built (steps, part orientation, media)
+      — someone should be able to follow it cold and get the same result
 
 ## Documentation
 
