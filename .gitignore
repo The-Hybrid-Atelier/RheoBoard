@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Altium Designer — cache, logs, and generated outputs (regenerable from source, don't track)
+# Based on github/gitignore community/AltiumDesigner.gitignore
+History
+__Previews
+Project\ Logs*
+Project\ Outputs*
+debug.log
+Status\ Report.txt
+*.PcbDoc.htm
+*.SchDocPreview
+*.PcbDocPreview
+.~lock.*
+
+# Altium backup/lock files
+*.~*
+*.Bak
+*.ldb
