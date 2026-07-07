@@ -8,6 +8,30 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-07 (2)
+
+Learned there are two hardware tracks, not one, and restructured the repo accordingly:
+
+- **Build Your Own (BYO)** — off-the-shelf modules/dev boards, breadboard/perfboard, wiring
+  diagrams + BOM + assembly guide instead of CAD. **This is the current focus going forward.**
+- **PCB** — the existing Altium project (`RheoBoard_V8_Final/`). Not actively worked on now.
+
+Changes:
+- Added `BuildYourOwn/` at repo root (`README.md`, `BOM.md`, `ASSEMBLY.md`, `wiring/`) — all
+  empty/TBD scaffolding, nothing built yet.
+- Split `docs/hardware/` into `docs/hardware/pcb/` (moved the existing BOM-tracking,
+  revision-history, verification-checklist docs here unchanged) and
+  `docs/hardware/build-your-own/` (new equivalents, adapted for a no-CAD DIY build — e.g. no
+  DRC/ERC, continuity/power-up checks instead). Added `docs/hardware/index.md` as the map
+  between the two.
+- Updated `AGENTS.md`, `README.md`, `docs/product-specs/index.md` to describe both tracks and
+  flag BYO as current focus.
+- Did **not** touch `RheoBoard_V8_Final/` itself — left it exactly where it is to avoid any
+  risk of breaking internal Altium project references.
+
+**Next:** start populating `BuildYourOwn/BOM.md` once parts are chosen — probably worth opening
+an exec-plan for the first BYO revision rather than editing ad hoc.
+
 ## 2026-07-07
 
 Set up harness engineering scaffolding for solo, direct-to-`main` development, adapted from

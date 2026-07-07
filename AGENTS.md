@@ -5,15 +5,25 @@ If you're an agent (or future-me) starting a session in this repo, read this fil
 
 ## What this repo is
 
-RheoBoard — open hardware supporting **RheoMap** and **SlipTopo**. Product/spec detail
-lands in `docs/product-specs/` as it's written up; treat that folder as the source of truth
-over anything said here.
+Open hardware supporting **RheoMap** and **SlipTopo**. Product/spec detail lands in
+`docs/product-specs/` as it's written up; treat that folder as the source of truth over
+anything said here.
+
+There are two hardware tracks:
+
+1. **PCB** (`RheoBoard_V8_Final/`) — a custom Altium-designed board. Existing, not actively
+   worked on right now.
+2. **Build Your Own / BYO** (`BuildYourOwn/`) — off-the-shelf modules/dev boards on
+   breadboard/perfboard, documented with wiring diagrams + BOM + assembly instructions instead
+   of CAD. **This is the current focus** — assume work is about this track unless told otherwise.
 
 ## Repository layout
 
-- `RheoBoard_V8_Final/` — the Altium Designer project: schematic, PCB layout, symbol/footprint
+- `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, and manufacturing outputs. These are binary CAD files (see "Hardware-specific
   notes" below) — Altium itself is the only thing that opens/edits them.
+- `BuildYourOwn/` — the BYO build: `BOM.md` (parts list), `ASSEMBLY.md` (build steps),
+  `wiring/` (diagrams). Plain text/markdown — diffs and edits normally.
 - `docs/` — the system of record for everything else. Start at `docs/design-docs/index.md`.
 
 ## Working agreement (solo dev)
@@ -49,18 +59,21 @@ over anything said here.
   - `tech-debt-tracker.md` — known gaps/deferred items that aren't worth fixing right now.
   - `_template.md` — copy this to start a new plan.
 - `docs/product-specs/` — what we're building and why (RheoBoard, RheoMap, SlipTopo).
-- `docs/hardware/` — BOM tracking, board revision history, verification checklist.
+- `docs/hardware/` — start at `index.md`. Split into `build-your-own/` and `pcb/`, each with
+  BOM tracking notes, revision history, and a verification checklist for that track.
 - `docs/references/` — external datasheets/standards the design depends on.
 
 ## Hardware-specific notes
 
-- CAD files (`.PcbDoc`, `.SchDoc`, `.PcbLib`, `.SchLib`, `.PrjPcb*`, `.OutJob`, `.Cam`, `.simcfg`)
-  are Altium binaries with no meaningful text diff. **Always describe the intent of a hardware
-  change in prose** (in `docs/PROGRESS.md` and the relevant exec-plan) — that prose is the only
-  legible record of what changed and why, since `git diff` won't show it.
-- `RheoBoard_V8.BomDoc` is text/XML and diffs fine — treat BOM changes like code changes.
-- Before calling a board revision "done," run it through
-  `docs/hardware/verification-checklist.md`.
+- **BYO (`BuildYourOwn/`) is plain text/markdown** — normal git diffs work, edit it like code.
+  Before calling a build revision "done," run it through
+  `docs/hardware/build-your-own/verification-checklist.md`.
+- **PCB (`RheoBoard_V8_Final/`) is Altium binaries** (`.PcbDoc`, `.SchDoc`, `.PcbLib`, `.SchLib`,
+  `.PrjPcb*`, `.OutJob`, `.Cam`, `.simcfg`) with no meaningful text diff — Altium itself is the
+  only editor. **Always describe the intent of a hardware change in prose** (in
+  `docs/PROGRESS.md` and the relevant exec-plan) since `git diff` won't show it.
+  `RheoBoard_V8.BomDoc` is the one exception (text/XML, diffs fine). Verification checklist:
+  `docs/hardware/pcb/verification-checklist.md`.
 - Any future firmware/software for RheoMap/SlipTopo that lands in this repo should get its own
   section here once it exists (build/run/test commands, entry points) rather than being
   discovered ad hoc.
