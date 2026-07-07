@@ -23,9 +23,10 @@ There are two hardware tracks:
   libraries, BOM, and manufacturing outputs. These are binary CAD files (see "Hardware-specific
   notes" below) — Altium itself is the only thing that opens/edits them.
 - `BuildYourOwn/` — the BYO build: `BOM.md` (parts list), `laser-cut/` (platform design files),
-  `wiring/` (pictographic circuit diagrams), `tutorial/` (the Instructables-style, step-by-step
-  build guide — the main deliverable of this track). Plain text/markdown — diffs and edits
-  normally; see `BuildYourOwn/tutorial/README.md` for media (image/video) conventions.
+  `wiring/` (pictographic circuit diagrams), `VERIFICATION.md` (checklist), `tutorial/` (the
+  Instructables-style, step-by-step build guide — the main deliverable of this track). Plain
+  text/markdown — diffs and edits normally, so all of this track's process docs live here
+  directly rather than under `docs/` (see `docs/hardware/index.md` for why).
 - `docs/` — the system of record for everything else. Start at `docs/design-docs/index.md`.
 
 ## Working agreement (solo dev)
@@ -61,15 +62,15 @@ There are two hardware tracks:
   - `tech-debt-tracker.md` — known gaps/deferred items that aren't worth fixing right now.
   - `_template.md` — copy this to start a new plan.
 - `docs/product-specs/` — what we're building and why (RheoBoard, RheoMap, SlipTopo).
-- `docs/hardware/` — start at `index.md`. Split into `build-your-own/` and `pcb/`, each with
-  BOM tracking notes, revision history, and a verification checklist for that track.
+- `docs/hardware/` — start at `index.md`. Only holds a `pcb/` subfolder (BOM tracking notes,
+  revision history, verification checklist) — PCB needs it because its files are binary. BYO's
+  equivalent docs live directly in `BuildYourOwn/` since that's already plain text.
 - `docs/references/` — external datasheets/standards the design depends on.
 
 ## Hardware-specific notes
 
 - **BYO (`BuildYourOwn/`) is plain text/markdown** — normal git diffs work, edit it like code.
-  Before calling a build revision "done," run it through
-  `docs/hardware/build-your-own/verification-checklist.md`.
+  Before calling a build revision "done," run it through `BuildYourOwn/VERIFICATION.md`.
 - **PCB (`RheoBoard_V8_Final/`) is Altium binaries** (`.PcbDoc`, `.SchDoc`, `.PcbLib`, `.SchLib`,
   `.PrjPcb*`, `.OutJob`, `.Cam`, `.simcfg`) with no meaningful text diff — Altium itself is the
   only editor. **Always describe the intent of a hardware change in prose** (in

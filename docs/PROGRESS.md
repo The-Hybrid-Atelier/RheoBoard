@@ -8,6 +8,27 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-07 (4)
+
+Cleanup: `docs/hardware/build-your-own/` was redundant with `BuildYourOwn/` itself and got
+removed, per the harness principle of stripping load-bearing-less complexity rather than
+letting it accumulate.
+
+- `docs/hardware/build-your-own/bom.md` was pure indirection (a pointer + notes about
+  `BuildYourOwn/BOM.md`) — merged its notes directly into `BuildYourOwn/BOM.md`.
+- `docs/hardware/build-your-own/revision-history.md` duplicated `docs/PROGRESS.md`/git log with
+  no added value, since (unlike the PCB track's binary files) `BuildYourOwn/` is plain markdown
+  and already diffs natively — deleted, not replaced.
+- `docs/hardware/build-your-own/verification-checklist.md` had real unique content but was
+  misplaced under `docs/` — moved to `BuildYourOwn/VERIFICATION.md`, living with the hardware
+  it checks.
+- `docs/hardware/pcb/` is unaffected and still justified: Altium binaries have no meaningful
+  diff, so BOM notes + revision history need to live somewhere text-based to be legible at all.
+- Updated `docs/hardware/index.md` to explain this asymmetry explicitly, so it doesn't get
+  "fixed" back into symmetric-but-redundant structure later.
+
+**Next:** same as before — start populating `BuildYourOwn/BOM.md` and the first tutorial step.
+
 ## 2026-07-07 (3)
 
 Fleshed out `BuildYourOwn/` into an Instructables-style tutorial structure, per direction that

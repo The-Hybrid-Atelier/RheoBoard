@@ -10,14 +10,13 @@ now.
 
 ## Status
 
-Not started yet — this is scaffolding only. See `docs/exec-plans/active/` for current work, and
-`docs/hardware/build-your-own/` for process docs (BOM tracking notes, verification checklist,
-revision history).
+Not started yet — this is scaffolding only. See `docs/exec-plans/active/` for current work.
 
 ## Layout
 
 - [`BOM.md`](BOM.md) — bill of materials: what to buy, where from, and why.
 - [`laser-cut/`](laser-cut/) — design files for the laser-cut structural platform.
 - [`wiring/`](wiring/) — circuit/wiring diagrams (pictographic/breadboard-style preferred).
+- [`VERIFICATION.md`](VERIFICATION.md) — checklist to run through before calling a build "done."
 - [`tutorial/`](tutorial/) — the Instructables-style, step-by-step build guide. This is the main
   deliverable — everything above is a resource it links out to.
