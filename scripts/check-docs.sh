@@ -9,6 +9,8 @@
 #   1. BuildYourOwn/exec-plans/active/ has at most one plan in flight.
 #   2. No dangling relative markdown links under BuildYourOwn/.
 #   3. The most recent commit touching BuildYourOwn/ also touched BuildYourOwn/PROGRESS.md.
+#   4. Every BOM.md table row has a non-empty Datasheet column (mechanical version of the
+#      "every part is traceable" rule in core-beliefs.md).
 
 set -uo pipefail
 
@@ -59,6 +61,35 @@ if [ "$found_broken" -eq 1 ]; then
   status=1
 else
   echo "OK (no dangling relative links found)"
+fi
+
+echo
+echo "== BOM datasheet links (BuildYourOwn/BOM.md) =="
+bom_file="BuildYourOwn/BOM.md"
+bom_issue=0
+if [ -f "$bom_file" ]; then
+  while IFS= read -r line; do
+    case "$line" in
+      '|'*) ;;
+      *) continue ;;
+    esac
+    # Skip header row and separator row.
+    case "$line" in
+      *Part*Qty*|*'---'*) continue ;;
+    esac
+    IFS='|' read -r _ col_part _ _ col_datasheet _ <<< "$line"
+    datasheet_trimmed="$(printf '%s' "${col_datasheet:-}" | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//')"
+    if [ -z "$datasheet_trimmed" ]; then
+      part_trimmed="$(printf '%s' "${col_part:-}" | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//')"
+      echo "WARN: BOM row '$part_trimmed' has no datasheet link (core-beliefs.md: every part is traceable)."
+      bom_issue=1
+    fi
+  done < "$bom_file"
+fi
+if [ "$bom_issue" -eq 1 ]; then
+  status=1
+else
+  echo "OK (no rows, or all rows have a datasheet link)"
 fi
 
 echo

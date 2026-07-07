@@ -12,6 +12,15 @@ What are we trying to accomplish, and why does it matter right now?
 
 Relevant background, constraints, links to datasheets/specs/prior plans.
 
+## Success criteria (fill in BEFORE writing the plan below — this is the contract)
+
+How will we know this is actually done? Be concrete enough that "done" isn't a judgment call
+later. For hardware changes, reference `../VERIFICATION.md`. For software/firmware, name the
+actual tests/manual checks that will run.
+
+**If this involves physical work (building, wiring, cutting, testing), see `AGENTS.md` →
+"What the agent can and can't verify" — physical criteria need a human to close them, not the agent.**
+
 ## Plan
 
 - [ ] Step 1
@@ -21,14 +30,6 @@ Relevant background, constraints, links to datasheets/specs/prior plans.
 ## Decision log
 
 - YYYY-MM-DD: decision made and why (especially for anything ambiguous that got resolved).
-
-## Verification
-
-How will we know this is actually done? For hardware changes, reference
-`../VERIFICATION.md`. For software/firmware, note the tests or manual checks run.
-
-**If this involves physical work (building, wiring, cutting, testing), see `AGENTS.md` →
-"What the agent can and can't verify" before checking anything off below as done.**
 
 ## Outcome
 
