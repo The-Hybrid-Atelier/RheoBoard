@@ -1,0 +1,13 @@
+# Altium binary CAD files — suppress noisy/meaningless text diffs
+*.PcbDoc -diff binary
+*.SchDoc -diff binary
+*.PcbLib -diff binary
+*.SchLib -diff binary
+*.PrjPcb -diff binary
+*.PrjPcbStructure -diff binary
+*.OutJob -diff binary
+*.Cam -diff binary
+*.simcfg -diff binary
+
+# BOM is XML/text underneath — keep it diffable
+*.BomDoc text
