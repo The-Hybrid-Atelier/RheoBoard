@@ -8,6 +8,30 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-07 (3)
+
+Fleshed out `BuildYourOwn/` into an Instructables-style tutorial structure, per direction that
+the deliverable is a full step-by-step guide (BOM, laser-cut platform files, pictographic
+circuit diagrams, assembly video) rather than a single flat assembly doc.
+
+- Added `BuildYourOwn/laser-cut/` — scaffold + conventions for platform design files (vector
+  source of truth, DXF for cutting, material/thickness/kerf notes to add once known).
+- Updated `BuildYourOwn/wiring/README.md` to recommend pictographic/breadboard-style diagrams
+  (e.g. Fritzing) over pure schematics, per explicit request.
+- Replaced the flat `BuildYourOwn/ASSEMBLY.md` with `BuildYourOwn/tutorial/`: a
+  `README.md` table-of-contents/intro, a `steps/` folder (one subfolder per numbered step, each
+  with its own `README.md` + `media/`), and a `_step-template/` to copy when adding a step.
+  Decided videos should generally be linked externally (e.g. unlisted YouTube) rather than
+  committed to git, to avoid repo bloat — documented in `tutorial/README.md`.
+- Updated `BuildYourOwn/README.md`, `AGENTS.md`, and
+  `docs/hardware/build-your-own/verification-checklist.md` to match.
+- Still all empty/TBD scaffolding — no BOM entries, design files, diagrams, or step content
+  written yet.
+
+**Next:** pick the first real step to write (probably "gather materials" or "cut the platform")
+once parts/design decisions start landing — likely worth an exec-plan for the first pass at the
+whole tutorial rather than trickling steps in ad hoc.
+
 ## 2026-07-07 (2)
 
 Learned there are two hardware tracks, not one, and restructured the repo accordingly:

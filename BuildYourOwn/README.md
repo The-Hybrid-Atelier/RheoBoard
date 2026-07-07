@@ -16,6 +16,8 @@ revision history).
 
 ## Layout
 
-- [`BOM.md`](BOM.md) — parts list: what to buy, where from, and why.
-- [`ASSEMBLY.md`](ASSEMBLY.md) — step-by-step build instructions.
-- [`wiring/`](wiring/) — wiring diagrams (and photos, once they exist).
+- [`BOM.md`](BOM.md) — bill of materials: what to buy, where from, and why.
+- [`laser-cut/`](laser-cut/) — design files for the laser-cut structural platform.
+- [`wiring/`](wiring/) — circuit/wiring diagrams (pictographic/breadboard-style preferred).
+- [`tutorial/`](tutorial/) — the Instructables-style, step-by-step build guide. This is the main
+  deliverable — everything above is a resource it links out to.

@@ -22,8 +22,10 @@ There are two hardware tracks:
 - `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, and manufacturing outputs. These are binary CAD files (see "Hardware-specific
   notes" below) — Altium itself is the only thing that opens/edits them.
-- `BuildYourOwn/` — the BYO build: `BOM.md` (parts list), `ASSEMBLY.md` (build steps),
-  `wiring/` (diagrams). Plain text/markdown — diffs and edits normally.
+- `BuildYourOwn/` — the BYO build: `BOM.md` (parts list), `laser-cut/` (platform design files),
+  `wiring/` (pictographic circuit diagrams), `tutorial/` (the Instructables-style, step-by-step
+  build guide — the main deliverable of this track). Plain text/markdown — diffs and edits
+  normally; see `BuildYourOwn/tutorial/README.md` for media (image/video) conventions.
 - `docs/` — the system of record for everything else. Start at `docs/design-docs/index.md`.
 
 ## Working agreement (solo dev)
