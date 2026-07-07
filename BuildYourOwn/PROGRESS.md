@@ -8,6 +8,32 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-07 (6)
+
+Consolidated the entire harness into `BuildYourOwn/`, removing the top-level `docs/` folder.
+Prior sessions had drifted toward treating `docs/` and `BuildYourOwn/` as parallel structures,
+which read as duplication even after the last cleanup pass — the real fix was to stop having two
+top-level trees at all, since BYO is currently the only active track and everything under
+`docs/` that wasn't PCB-specific was really about BYO anyway.
+
+- Moved into `BuildYourOwn/` (flat, no subfolder): `PROGRESS.md`, `core-beliefs.md`,
+  `product-specs.md`, `references.md`, `exec-plans/` (active/completed/tech-debt-tracker/template).
+  Dropped `design-docs/index.md`'s wrapper — it only ever pointed at one file.
+- Deleted `docs/hardware/pcb/` (BOM notes, revision history, verification checklist for the
+  Altium track) rather than relocating it — that track is dormant, and per the "simplest
+  solution, add complexity only when needed" principle, it's cheaper to recreate a small doc set
+  later if PCB work resumes than to maintain it unused now. Noted this decision in `AGENTS.md`.
+- Deleted `docs/` entirely once empty.
+- Rewrote `AGENTS.md` top to bottom to reflect the new layout (repo now has just two top-level
+  content areas: `BuildYourOwn/` and `RheoBoard_V8_Final/`, plus `scripts/`).
+- Updated `scripts/check-docs.sh` to check `BuildYourOwn/` instead of `docs/` + `BuildYourOwn/`.
+- Fixed all cross-references in `README.md`, `BuildYourOwn/README.md`, `VERIFICATION.md`,
+  `BOM.md`, `core-beliefs.md`, `product-specs.md`, `exec-plans/_template.md`.
+
+**Next:** same as before — start populating `BuildYourOwn/BOM.md` and the first tutorial step.
+If PCB work ever resumes, revisit the "recreate docs there" decision above before assuming this
+structure needs to expand back out.
+
 ## 2026-07-07 (5)
 
 Re-audited the harness against the three source articles (Anthropic long-running-agent posts,

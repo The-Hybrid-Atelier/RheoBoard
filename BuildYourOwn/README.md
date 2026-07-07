@@ -20,11 +20,19 @@ Not started — this is scaffolding only. Top-level deliverables for this track:
 
 Don't mark this track "done" until every box is genuinely checked. Partial progress (e.g. a
 written tutorial that's never been physically built) is still valuable — just say so plainly in
-`docs/PROGRESS.md` rather than rounding up. See `docs/exec-plans/active/` for what's being
-worked on right now.
+`PROGRESS.md` rather than rounding up. See `exec-plans/active/` for what's being worked on
+right now.
 
 ## Layout
 
+Everything for this track lives directly in this folder (see `AGENTS.md` for why):
+
+- [`PROGRESS.md`](PROGRESS.md) — dated session log.
+- [`core-beliefs.md`](core-beliefs.md) — operating principles.
+- [`exec-plans/`](exec-plans/) — plans for non-trivial work (`active/`, `completed/`,
+  `tech-debt-tracker.md`, `_template.md`).
+- [`product-specs.md`](product-specs.md) — what we're building and why.
+- [`references.md`](references.md) — external datasheets/standards this design depends on.
 - [`BOM.md`](BOM.md) — bill of materials: what to buy, where from, and why.
 - [`laser-cut/`](laser-cut/) — design files for the laser-cut structural platform.
 - [`wiring/`](wiring/) — circuit/wiring diagrams (pictographic/breadboard-style preferred).

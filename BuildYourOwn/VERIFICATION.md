@@ -16,16 +16,16 @@ for the change and check them off there.
 
 ## Parts & docs
 
-- [ ] Every part in [`BOM.md`](BOM.md) has a product/datasheet link (see `docs/references/index.md`)
+- [ ] Every part in [`BOM.md`](BOM.md) has a product/datasheet link (see [`references.md`](references.md))
 - [ ] No unresolved/placeholder parts
 - [ ] [`tutorial/`](tutorial/) matches what was actually built (steps, part orientation, media)
       — someone should be able to follow it cold and get the same result
 
 ## Documentation
 
-- [ ] `docs/PROGRESS.md` updated with what changed and why (this is the revision history for
-      this track — see note in `BOM.md`, no separate log needed since these files diff natively)
-- [ ] Relevant exec-plan moved to `docs/exec-plans/completed/` (if finished)
+- [ ] `PROGRESS.md` updated with what changed and why (this is the revision history for this
+      track — see note in `BOM.md`, no separate log needed since these files diff natively)
+- [ ] Relevant exec-plan moved to `exec-plans/completed/` (if finished)
 
 ## Sign-off
 
