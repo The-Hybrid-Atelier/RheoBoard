@@ -28,6 +28,7 @@ There are two hardware tracks:
   text/markdown — diffs and edits normally, so all of this track's process docs live here
   directly rather than under `docs/` (see `docs/hardware/index.md` for why).
 - `docs/` — the system of record for everything else. Start at `docs/design-docs/index.md`.
+- `scripts/` — small dependency-free maintenance scripts (currently just `check-docs.sh`).
 
 ## Working agreement (solo dev)
 
@@ -37,6 +38,23 @@ There are two hardware tracks:
   sessions — treat writing them well as part of the task, not cleanup afterward.
 - Never rewrite published history on `main` (no force-push, no rebasing committed work).
   Recovery from a bad change should always be "read the log, revert/fix forward."
+
+## What the agent can and can't verify
+
+This is physical hardware. Unlike a web app, there's no `curl`/Playwright equivalent for an
+agent to confirm a wire is actually connected or a part actually fits — that gap is exactly
+where agents in general are most prone to declaring victory too early, so treat it explicitly:
+
+- **Agent-executable:** writing/editing docs, researching and drafting BOM candidates (with
+  real product/datasheet links), structuring and drafting tutorial content, describing wiring
+  step-by-step, reviewing checklists, git operations.
+- **Human-only:** buying/handling parts, cutting, soldering, wiring, powering on, taking
+  measurements, filming, and literally every item in `BuildYourOwn/VERIFICATION.md` and
+  `docs/hardware/pcb/verification-checklist.md` — those are physical checks by definition.
+- **Never check off a human-only item yourself, and never write as if a physical step
+  succeeded unless a human has reported back that it did.** "The instructions look correct"
+  is not verification. If a checklist can't be completed because it needs a human, say so
+  explicitly and leave it unchecked/open rather than rounding up.
 
 ## Session bootstrap — do this first, every session
 
@@ -49,9 +67,11 @@ There are two hardware tracks:
 
 ## Session wrap-up — do this before ending every session
 
-1. Append a dated entry to `docs/PROGRESS.md`: what changed, why, what's next.
-2. Update the relevant exec-plan, or move it to `docs/exec-plans/completed/` if it's finished.
-3. Commit everything (docs + design/code files) to `main` with a descriptive message.
+1. Run `scripts/check-docs.sh` — catches dangling doc links, more than one active exec-plan,
+   and docs edits that forgot to update `docs/PROGRESS.md`. Fix what it flags.
+2. Append a dated entry to `docs/PROGRESS.md`: what changed, why, what's next.
+3. Update the relevant exec-plan, or move it to `docs/exec-plans/completed/` if it's finished.
+4. Commit everything (docs + design/code files) to `main` with a descriptive message.
 
 ## Docs map
 

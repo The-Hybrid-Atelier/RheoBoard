@@ -3,6 +3,10 @@
 Run through before calling a board revision "done." Copy the relevant items into the exec-plan
 for the change and check them off there.
 
+> **Every item below requires a human to physically do or observe something (or run Altium's
+> DRC/ERC themselves).** An agent must never check these off itself — see `AGENTS.md` → "What
+> the agent can and can't verify." Use the sign-off block at the bottom to record who checked.
+
 ## Design
 
 - [ ] DRC (Design Rule Check) clean in Altium
@@ -22,3 +26,9 @@ for the change and check them off there.
 - [ ] `docs/PROGRESS.md` updated with what changed and why
 - [ ] `docs/hardware/pcb/revision-history.md` updated
 - [ ] Relevant exec-plan moved to `docs/exec-plans/completed/` (if finished)
+
+## Sign-off
+
+- Verified by:
+- Date:
+- Notes (anything that failed, was skipped, or needs a follow-up in `tech-debt-tracker.md`):

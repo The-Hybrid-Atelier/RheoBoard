@@ -8,6 +8,39 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-07 (5)
+
+Re-audited the harness against the three source articles (Anthropic long-running-agent posts,
+OpenAI harness engineering post) specifically for gaps, not just structure. Found and fixed:
+
+- **Biggest gap: no equivalent of "verify like a real user."** All three articles rely on the
+  agent being able to run the software itself (Playwright, curl) to catch premature "done"
+  claims. This agent can't solder, cut, or wire anything — so that failure mode (declaring
+  victory too early) was completely unguarded against for physical work. Added a new AGENTS.md
+  section, "What the agent can and can't verify," drawing a hard line: agent-executable
+  (docs/BOM/tutorial writing) vs human-only (anything physical), with an explicit rule to never
+  check off a human-only item without a human having reported back.
+- Added a **sign-off block** (verified by / date / notes) to both `BuildYourOwn/VERIFICATION.md`
+  and `docs/hardware/pcb/verification-checklist.md`, plus a banner stating every item there is
+  human-only.
+- Added a **top-level deliverables checklist** to `BuildYourOwn/README.md` (BOM / laser-cut /
+  wiring / tutorial steps / physically-built-and-verified) — the adapted version of the
+  articles' "feature list" concept, so "is this track actually done" has a concrete answer
+  instead of a vibe.
+- Added `docs/design-docs/core-beliefs.md` principles: work one deliverable at a time (mirrors
+  the "one feature/sprint at a time" lesson), and checklists are a floor, not something to
+  quietly water down to make progress look better than it is.
+- Added `scripts/check-docs.sh` — a dependency-free script (not CI, just run-by-hand) that
+  catches dangling relative markdown links, more than one active exec-plan, and docs/BOM
+  changes that forgot to update `docs/PROGRESS.md`. Wired into the AGENTS.md session wrap-up
+  checklist. This is the OpenAI post's "enforce mechanically, don't rely on memory" lesson,
+  scaled down to something cheap enough for a solo docs-heavy repo.
+- Fixed a stale link in `docs/exec-plans/_template.md` left over from the previous session's
+  `docs/hardware/build-your-own/` removal (would have been caught by the new script).
+
+**Next:** same as before — start populating `BuildYourOwn/BOM.md` and the first tutorial step.
+Run `scripts/check-docs.sh` as part of that work, not just retroactively.
+
 ## 2026-07-07 (4)
 
 Cleanup: `docs/hardware/build-your-own/` was redundant with `BuildYourOwn/` itself and got
