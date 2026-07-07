@@ -3,6 +3,10 @@
 Run through before calling a build revision "done." Copy the relevant items into the exec-plan
 for the change and check them off there.
 
+> **Every item below requires a human to physically do or observe something.** An agent must
+> never check these off itself — see `AGENTS.md` → "What the agent can and can't verify." Use
+> the sign-off block at the bottom to record who actually did the checking.
+
 ## Build
 
 - [ ] Wiring matches the diagram in [`wiring/`](wiring/) (no ad hoc deviations left undocumented)
@@ -22,3 +26,9 @@ for the change and check them off there.
 - [ ] `docs/PROGRESS.md` updated with what changed and why (this is the revision history for
       this track — see note in `BOM.md`, no separate log needed since these files diff natively)
 - [ ] Relevant exec-plan moved to `docs/exec-plans/completed/` (if finished)
+
+## Sign-off
+
+- Verified by:
+- Date:
+- Notes (anything that failed, was skipped, or needs a follow-up in `tech-debt-tracker.md`):

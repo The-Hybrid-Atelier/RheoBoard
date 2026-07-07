@@ -20,3 +20,12 @@ that's cheaper than repeating the correction every session.
   coherent change with a message that explains *why*, not just *what*.
 - **Docs are updated in the same sitting as the change**, not deferred — `docs/PROGRESS.md`
   and the relevant exec-plan get updated as part of finishing the work, not as separate cleanup.
+- **One deliverable at a time.** Don't try to write the whole BOM, the whole tutorial, or a
+  whole board revision in one pass. Pick the single next thing (one BOM section, one tutorial
+  step, one sprint contract), finish and verify it, then move on — this is the main way large
+  hardware/doc efforts stay coherent instead of sprawling into a half-finished mess.
+- **Checklists are a floor, not a self-congratulation exercise.** Don't check off, delete, or
+  quietly water down a verification item to make something look done. If an item is genuinely
+  obsolete, say so explicitly in the exec-plan's decision log — don't just remove it. If an item
+  can't be verified without a human physically doing something, it stays unchecked until a
+  human reports back (see `AGENTS.md` → "What the agent can and can't verify").

@@ -25,8 +25,11 @@ Relevant background, constraints, links to datasheets/specs/prior plans.
 ## Verification
 
 How will we know this is actually done? For hardware changes, reference
-`docs/hardware/verification-checklist.md`. For software/firmware, note the tests or manual
-checks run.
+`BuildYourOwn/VERIFICATION.md` (BYO) or `docs/hardware/pcb/verification-checklist.md` (PCB).
+For software/firmware, note the tests or manual checks run.
+
+**If this involves physical work (building, wiring, cutting, testing), see `AGENTS.md` →
+"What the agent can and can't verify" before checking anything off below as done.**
 
 ## Outcome
 

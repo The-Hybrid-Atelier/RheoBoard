@@ -10,7 +10,18 @@ now.
 
 ## Status
 
-Not started yet — this is scaffolding only. See `docs/exec-plans/active/` for current work.
+Not started — this is scaffolding only. Top-level deliverables for this track:
+
+- [ ] `BOM.md` — parts selected, every row has a datasheet/product link
+- [ ] `laser-cut/` — platform design files complete
+- [ ] `wiring/` — circuit diagram(s) complete
+- [ ] `tutorial/` — every step in `tutorial/steps/` written
+- [ ] A full build has been physically completed and passed `VERIFICATION.md`, **human-signed-off**
+
+Don't mark this track "done" until every box is genuinely checked. Partial progress (e.g. a
+written tutorial that's never been physically built) is still valuable — just say so plainly in
+`docs/PROGRESS.md` rather than rounding up. See `docs/exec-plans/active/` for what's being
+worked on right now.
 
 ## Layout
 
