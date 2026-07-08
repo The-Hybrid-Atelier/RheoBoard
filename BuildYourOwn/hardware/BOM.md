@@ -5,7 +5,7 @@ Parts list for the **2 pumps + 1 valve** DIY bench rig. Wiring:
 [`../software/rheometer-firmware/`](../software/rheometer-firmware/). Component photo sources/licenses:
 [`images/README.md`](images/README.md).
 
-License: CERN-OHL-W-2.0 — see [`../../LICENSE-HARDWARE.txt`](../../LICENSE-HARDWARE.txt). Current
+License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE). Current
 hardware revision: see [`REVISIONS.md`](REVISIONS.md).
 
 | Photo | Part | Qty | Source/link | Datasheet | Notes |

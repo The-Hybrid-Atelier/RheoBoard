@@ -39,9 +39,10 @@ it directly. Re-check whenever a license file, scope statement, or design-file f
    `laser-cut/generate_panel_vector.py` (source) → `panel.svg`/`panel.dxf`, and
    `RheoBoard_V8_Final/*.SchDoc`/`*.PcbDoc`/`*.SchLib`/`*.PcbLib` (Altium native format, not
    Gerber-only). Firmware ships as `.ino`/`.cpp`/`.h` source. All free to download from this repo. ✅
-2. **Scope** — each `LICENSE-*.txt` opens with an explicit list of exactly what it covers, and
-   `hardware/images/README.md` / `hardware/references/README.md` clearly flag third-party photos
-   and datasheets as excluded (own attributions/licenses, not ours to relicense). ✅
+2. **Scope** — root `README.md` → License states explicitly what each of the three licenses
+   covers, and `hardware/images/README.md` / `hardware/references/README.md` clearly flag
+   third-party photos and datasheets as excluded (own attributions/licenses, not ours to
+   relicense). ✅
 3. **Necessary software** — firmware (`software/rheometer-firmware/`) is MIT-licensed (OSI-approved),
    satisfying 3(b) directly; the OSC API is also documented in
    `software/rheometer-firmware/README.md`, satisfying 3(a) as a fallback. ✅
@@ -84,12 +85,13 @@ an agent can prepare files but can't submit the form or make the underlying phys
 See root `README.md` → License for the license breakdown, and `hardware/REVISIONS.md` for
 version tracking.
 
-- [x] Hardware, software, and documentation each have an open license applied (`LICENSE-*.txt`);
-      root `LICENSE` is a clean CERN-OHL-W-2.0 copy (GitHub-detectable), also copied alongside the
-      files it covers (`hardware/LICENSE`, `../laser-cut/LICENSE`, `../RheoBoard_V8_Final/LICENSE`)
-      and the firmware license alongside the firmware (`software/rheometer-firmware/LICENSE`)
+- [x] Hardware, software, and documentation each have an open license applied: root `LICENSE` is
+      a clean CERN-OHL-W-2.0 copy (GitHub-detectable, covers hardware), firmware carries its own
+      MIT copy (`software/rheometer-firmware/LICENSE`, genuinely different license so kept
+      separate — not a duplicate), and documentation (CC BY-SA 4.0) is declared in root
+      `README.md` → License with a link to the canonical text, no local copy needed
 - [x] Firmware carries `SPDX-License-Identifier` headers
-- [x] Hardware-design index files (BOM, wiring, laser-cut READMEs) link to `LICENSE-HARDWARE.txt`
+- [x] Hardware-design index files (BOM, wiring, laser-cut READMEs) link to the root `LICENSE`
 - [x] Hardware revision scheme documented (`hardware/REVISIONS.md`)
 - [x] Machine-readable open-hardware metadata published (`okh-RheoBoard.yml`, Open Know-How manifest) —
       keep in sync with README/REVISIONS when the design changes

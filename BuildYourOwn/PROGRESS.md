@@ -8,6 +8,88 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (30)
+
+User repeatedly asked why there were 4 (root-level) / 8 (repo-wide) files with "LICENSE" in the
+name, then asked to consolidate to match how small open-hardware repos actually do it, citing two
+reference repos ([GaudiLabs/OpenThereminV4](https://github.com/GaudiLabs/OpenThereminV4),
+[BadenLab/LED-Zappelin](https://github.com/BadenLab/LED-Zappelin)). Fetched both repos' actual
+`LICENSE`/README/`okh-*.yml` files: OpenThereminV4 uses a single `LICENSE` (GPL-3.0, one license
+for everything); LED-Zappelin declares 3 different per-category licenses (hardware CERN-OHL v1.2,
+software GPL-3.0, docs CC-BY-SA — their own manifest mislabels software/docs swapped, a flaw not a
+pattern to copy) but still only vendors **one** physical `LICENSE` file — the others are declared
+in prose/manifest only, not duplicated as separate text files, and neither repo colocates copies
+in every subfolder. This directly contradicted this repo's prior (session 25-ish) approach of
+colocating full duplicate license-text copies in every folder they covered.
+
+Consolidated from 8 files down to 2:
+
+- **Removed** (all were exact-duplicate or redundant text): `LICENSE-HARDWARE.txt` (root — root
+  `LICENSE` already had this text verbatim), `LICENSE-SOFTWARE.txt` (root — duplicate of
+  `BuildYourOwn/software/rheometer-firmware/LICENSE`), `LICENSE-DOCUMENTATION.txt` (root — CC
+  BY-SA is a link-and-attribute license, not normally vendored as a local file; folding into
+  README prose instead, matching how CC licenses are typically handled),
+  `RheoBoard_V8_Final/LICENSE`, `BuildYourOwn/hardware/LICENSE`, `BuildYourOwn/laser-cut/LICENSE`
+  (all three were identical copies of the root file).
+- **Kept:** root `LICENSE` (CERN-OHL-W-2.0, full text — hardware, and what GitHub's detector
+  picks up) and `BuildYourOwn/software/rheometer-firmware/LICENSE` (MIT, full text) — kept
+  separate specifically because the firmware's actual license differs from the root license, so
+  this one isn't a duplicate, it's necessary.
+- **Updated references** so nothing dangles: `README.md` (intro paragraph, repo-layout tree,
+  License section table — CC BY-SA row now links straight to
+  https://creativecommons.org/licenses/by-sa/4.0/ instead of a local file), `AGENTS.md` (Licensing
+  section rewritten for the 2-file structure), `BuildYourOwn/hardware/wiring/README.md`,
+  `BuildYourOwn/laser-cut/README.md`, `BuildYourOwn/hardware/BOM.md` (all three pointed at
+  `LICENSE-HARDWARE.txt`, now point at the root `LICENSE`), and `BuildYourOwn/VERIFICATION.md`
+  (OSHW Definition walkthrough item 2, and the OSHWA-readiness checklist's license-file item —
+  same underlying fact, updated wording/paths only, left checked since the requirement itself
+  didn't change). `okh-RheoBoard.yml` needed no change (it declares license names abstractly, no
+  file paths). Ran `scripts/check-docs.sh` after — no dangling links.
+- Per the user's separate standing note this session: the actual license choice/text still isn't
+  approved yet — this was purely a structural cleanup (fewer files, same three declared
+  licenses), not a decision about what to license under. Nothing here should be read as "final."
+
+**Next:** none pending on this specifically — routine remaining OSHWA gaps are unchanged (see
+entry 29 and `VERIFICATION.md`'s self-certification checklist).
+
+---
+
+## 2026-07-08 (29)
+
+User asked for a fillable worksheet mirroring the [OSHWA certification form](https://application.oshwa.org/apply)
+(all 4 sections), pre-filled from repo context wherever possible.
+
+- Added `BuildYourOwn/OSHWA-APPLICATION-DRAFT.md`: field-by-field draft answers pulled from
+  `okh-RheoBoard.yml` (name/affiliation/email/description/keywords/version), `README.md` →
+  License, and `VERIFICATION.md`'s existing OSHW Definition walkthrough (backs all the Section 3
+  yes/no licensing questions). Uses a ✅/⚠️/⬜ legend to distinguish confident pre-fills from
+  judgment-call suggestions (e.g. Individual vs. Company, primary project type) from true unknowns
+  that only the user has (address, phone, personal legal attestations/checkboxes).
+- Flagged the one substantive open question up top: `VERIFICATION.md`'s own readiness checklist
+  shows the physical build isn't done (panel not test-fit/cut, no unit labeled with a revision
+  yet) — noted this isn't necessarily blocking for OSHWA (which certifies documentation openness,
+  not a working prototype) but is a deliberate call only the user can make, not something to round
+  up on.
+- Since the filled-in file will contain personal info (address, phone) once the user completes it,
+  added `BuildYourOwn/OSHWA-APPLICATION-DRAFT.md` to `.gitignore` so it never gets committed to the
+  public repo.
+- User then asked for a `.docx` version (to upload to Google Docs). Installed `pandoc` via
+  Homebrew (wasn't present) and converted the markdown to
+  `BuildYourOwn/OSHWA-APPLICATION-DRAFT.docx` (`pandoc -f gfm --standalone`). Added the `.docx` to
+  `.gitignore` alongside the `.md` for the same PII reason.
+- User then asked to relocate both files into `BuildYourOwn/hardware/references/` rather than
+  leaving them loose at the `BuildYourOwn/` root, to keep the tree organized. Moved both
+  (`OSHWA-APPLICATION-DRAFT.md`/`.docx`) there and updated their `.gitignore` paths to match. Note:
+  this folder's own `README.md` scopes it to "external datasheets, standards, and third-party
+  library notes" — the OSHWA draft doesn't quite fit that description, but it's gitignored (so
+  invisible in git regardless) and this was an explicit placement request, so left the README's
+  table/scope untouched rather than second-guessing it.
+- Did **not** submit anything or touch the actual OSHWA form — this is a local worksheet only, per
+  "Human-only" in `AGENTS.md` (the online submission + agreement checkboxes are the user's alone).
+
+**Next:** no fixed next step — waiting on the user to fill in personal fields and decide the
+before/after-physical-build timing question, then submit the form themselves.
+
 ## 2026-07-08 (28)
 
 User pasted the full text of the [OSHWA Open Source Hardware Definition](https://www.oshwa.org/definition/)

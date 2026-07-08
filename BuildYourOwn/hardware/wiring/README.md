@@ -3,7 +3,7 @@
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
 [`../../software/rheometer-firmware/`](../../software/rheometer-firmware/) (`2P1VX.ino`).
 
-License: CERN-OHL-W-2.0 — see [`../../../LICENSE-HARDWARE.txt`](../../../LICENSE-HARDWARE.txt).
+License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
 ## Electrical wiring
 

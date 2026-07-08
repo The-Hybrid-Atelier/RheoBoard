@@ -1,6 +1,10 @@
 # macOS
 .DS_Store
 
+# Personal draft with PII (address/phone) for the OSHWA certification form — never publish
+BuildYourOwn/hardware/references/OSHWA-APPLICATION-DRAFT.md
+BuildYourOwn/hardware/references/OSHWA-APPLICATION-DRAFT.docx
+
 # Altium Designer — cache, logs, and generated outputs (regenerable from source, don't track)
 # Based on github/gitignore community/AltiumDesigner.gitignore
 History

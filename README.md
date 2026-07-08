@@ -7,8 +7,8 @@ Maintained by Charlie Vuong (The Hybrid Atelier).
 This project is open hardware. The hardware design is licensed under the
 [CERN Open Hardware Licence — Weakly Reciprocal](LICENSE), the firmware under the
 [MIT License](BuildYourOwn/software/rheometer-firmware/LICENSE), and the documentation under
-[CC BY-SA 4.0](LICENSE-DOCUMENTATION.txt) — see [License](#license) for the full breakdown, or
-the machine-readable manifest [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — see [License](#license) for the
+full breakdown, or the machine-readable manifest [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 
 <img src="BuildYourOwn/images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
 
@@ -166,9 +166,10 @@ step.
 │   └── PROGRESS.md, core-beliefs.md, product-specs.md   - Project docs
 ├── RheoBoard_V8_Final/        Custom PCB (Altium: schematic, layout, libraries, BOM, outputs)
 ├── okh-RheoBoard.yml          Open Know-How manifest (machine-readable open-hardware metadata)
-├── LICENSE, LICENSE-*.txt     Per-category licenses (hardware / software / documentation) — also
-│                              copied alongside the files they cover (hardware/, laser-cut/,
-│                              software/rheometer-firmware/, RheoBoard_V8_Final/)
+├── LICENSE                    Hardware license, full text (CERN-OHL-W-2.0) — also the repo's
+│                              GitHub-detected license; software/documentation licenses are
+│                              declared in the License section below (firmware also carries its
+│                              own copy: `software/rheometer-firmware/LICENSE`)
 └── AGENTS.md                  Map for AI coding agents working in this repo
 ```
 
@@ -189,13 +190,14 @@ for the latest state.
 ## License
 
 RheoBoard uses three separate licenses — one per category of content, as recommended by
-[OSHWA](https://certification.oshwa.org/)'s open hardware certification guidance:
+[OSHWA](https://certification.oshwa.org/)'s open hardware certification guidance. Each is a
+standard, unmodified license text — no repo-specific copy needed beyond where noted:
 
-| Content | License | File |
+| Content | License | Text |
 |---|---|---|
-| Hardware — wiring diagrams, laser-cut design, BOM, PCB design | [CERN-OHL-W-2.0](https://ohwr.org/cern_ohl_w_v2.txt) | [`LICENSE-HARDWARE.txt`](LICENSE-HARDWARE.txt) |
-| Software — firmware (`BuildYourOwn/software/rheometer-firmware/`) | MIT | [`LICENSE-SOFTWARE.txt`](LICENSE-SOFTWARE.txt) |
-| Documentation — READMEs, build guide, BOM/wiring write-ups | CC BY-SA 4.0 | [`LICENSE-DOCUMENTATION.txt`](LICENSE-DOCUMENTATION.txt) |
+| Hardware — wiring diagrams, laser-cut design, BOM, PCB design | [CERN-OHL-W-2.0](https://ohwr.org/cern_ohl_w_v2.txt) | [`LICENSE`](LICENSE) (repo root) |
+| Software — firmware (`BuildYourOwn/software/rheometer-firmware/`) | MIT | [`BuildYourOwn/software/rheometer-firmware/LICENSE`](BuildYourOwn/software/rheometer-firmware/LICENSE) |
+| Documentation — READMEs, build guide, BOM/wiring write-ups | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | linked above, no local copy (standard practice for CC licenses) |
 
 CERN-OHL-W is "weakly reciprocal": anyone who modifies the hardware design must share those
 modifications back under the same license, but a larger project that merely incorporates this
