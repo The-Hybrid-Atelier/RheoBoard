@@ -18,8 +18,8 @@ items into `PROGRESS.md` for the change and check them off there.
 
 - [ ] Every part in [`hardware/BOM.md`](hardware/BOM.md) has a product/datasheet link (see [`hardware/references/`](hardware/references/))
 - [ ] No unresolved/placeholder parts
-- [ ] [`tutorial/`](tutorial/) matches what was actually built (steps, part orientation, media)
-      — someone should be able to follow it cold and get the same result
+- [ ] [`README.md`](README.md) (step-by-step guide) matches what was actually built (steps, part
+      orientation, media) — someone should be able to follow it cold and get the same result
 
 ## Documentation
 
@@ -30,4 +30,4 @@ items into `PROGRESS.md` for the change and check them off there.
 
 - Verified by:
 - Date:
-- Notes (anything that failed, was skipped, or needs a follow-up in `tech-debt-tracker.md`):
+- Notes (anything that failed, was skipped, or needs a follow-up in `PROGRESS.md`):

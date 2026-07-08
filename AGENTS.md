@@ -22,14 +22,19 @@ There are two hardware tracks:
    (`PROGRESS.md`) since `git diff` won't show it. PCB-specific process docs can live alongside
    the design in `RheoBoard_V8_Final/` when needed, mirroring `BuildYourOwn/`'s pattern.
 
+- The repo root `README.md` is the project overview (both tracks: features, hardware, software
+  config, connect-and-use, repo layout) — it links into `BuildYourOwn/` for detail rather than
+  duplicating it.
+
 ## Repository layout
 
-- `BuildYourOwn/` — the harness + DIY build. `tutorial/` is where the build actually starts
-  (numbered steps); `README.md` is the reference doc the tutorial links out to. Builder-facing:
-  `README.md`, `tutorial/`, `laser-cut/` (cut files), `software/` (code + firmware), `hardware/`
-  (`BOM.md`, `wiring/`, `images/` component photos, `references/` datasheets — everything
-  electrical in one place), `images/` (project-wide photos: teaser, IDE screenshots),
-  `VERIFICATION.md`. Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`.
+- `BuildYourOwn/` — the harness + DIY build. `README.md` **is** the step-by-step build guide
+  itself (single file, all 8 steps inline, no separate `tutorial/` folder) — that's where a
+  builder actually starts; the root `README.md` is the reference/overview doc that links into it.
+  Also here: `laser-cut/` (cut files), `software/` (code + firmware), `hardware/` (`BOM.md`,
+  `wiring/`, `images/` component photos, `references/` datasheets — everything electrical in one
+  place), `images/` (project-wide photos: teaser, IDE screenshots), `VERIFICATION.md`.
+  Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`.
 - `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, manufacturing outputs. Binary CAD files — Altium is the only thing that opens
   them (see "Hardware-specific notes" below).
@@ -86,17 +91,19 @@ where agents in general are most prone to declaring victory too early, so treat 
 
 ## `BuildYourOwn/` map
 
-- `tutorial/` — the build guide itself: `README.md` overview + `steps/01`–`08` (numbered,
-  Instructables-style). This is where a builder starts.
+- `README.md` — **the build guide itself**: one file, all 8 numbered steps inline
+  (Instructables-style), plus overview/before-you-start/tips at the top. This is where a builder
+  starts; there is no separate `tutorial/` folder — it was consolidated into this single file.
 - `hardware/` — everything electrical in one place: `BOM.md` (parts list), `wiring/` (electrical +
   pneumatic diagrams), `images/` (component photos), `references/` (vendored datasheets).
 - `laser-cut/` — laser-cut platform design files (placement map, cut lines, system diagram).
 - `software/` — firmware source (`rheometer-firmware/`) and IDE setup notes.
-- `images/` — project-wide photos not specific to a hardware part (teaser, IDE screenshots).
+- `images/` — project-wide photos not specific to a hardware part (teaser, IDE screenshots), plus
+  per-step build photos named by step (e.g. `step02-panel-placement.jpg`).
 - `PROGRESS.md` — dated session log, the primary continuity mechanism (see working agreement).
 - `core-beliefs.md` — operating principles; update it when a recurring mistake/preference emerges.
 - `product-specs.md` — what we're building and why (RheoBoard, RheoMap, RheoData, SlipAtlas).
-- `VERIFICATION.md` — pre-release checklist (human sign-off). See `BuildYourOwn/README.md` for how
+- `VERIFICATION.md` — pre-release checklist (human sign-off). See the repo root `README.md` for how
   these fit together.
 
 ## Hardware-specific notes

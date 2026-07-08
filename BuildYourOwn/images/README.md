@@ -10,10 +10,11 @@ without extra digging.
 
 | File | Purpose | Status |
 |---|---|---|
-| [`teaser.jpg`](teaser.jpg) | Hero image for `README.md` and tutorial overview | Added — user-provided photo of the assembled bench build, resized to 640×480 (~100 KB) and rendered at 480 px wide in both READMEs so it doesn't dominate the page |
+| [`teaser.jpg`](teaser.jpg) | Hero image for `README.md` (root and `BuildYourOwn/`) | Added — user-provided photo of the assembled bench build, resized to 640×480 (~100 KB) and rendered at 480 px wide in both READMEs so it doesn't dominate the page |
 | `platform.png` | Assembled laser-cut platform | TBD |
 | `wiring.png` | Finished wiring (same angle as pictographic diagram in `../hardware/wiring/`) | TBD |
 | `ide-settings.png` | Screenshot of correct IDE/board/port settings for firmware upload | TBD |
 
-Step-specific photos still belong in each step's `tutorial/steps/NN-*/media/` folder — this
-folder is for project-wide images referenced from `README.md`.
+Per-step build photos also belong here (named by step, e.g. `step02-panel-placement.jpg`) since
+the step-by-step guide (`../README.md`) is a single file rather than per-step folders — see its
+"Media conventions" section.
