@@ -25,4 +25,5 @@ To add a step:
 Keep step numbers stable once referenced elsewhere (e.g. from `BOM.md` notes) — if a step needs
 to be inserted later, it's fine to leave gaps (`05`, `06`, `07a`) rather than renumbering everything.
 
-_Empty — no steps written yet._
+_Eight step folders exist as scaffold (OpenTheremin-inspired outline). Content still TBD in each
+`README.md`._

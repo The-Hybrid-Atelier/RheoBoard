@@ -2,9 +2,38 @@
 
 Design files for the laser-cut structural platform/frame that the BYO build sits on.
 
+Modeled on [Calico's `3D print models/`](https://github.com/jsli96/calico/tree/main/3D%20print%20models)
+folder — they document each mechanical part with material, recommended settings, and assembly
+notes in the main README. We do the same here for laser-cut flat parts.
+
 _Empty — no design files yet._
 
-## Conventions (fill in as files are added)
+## Parts *(fill in as designed)*
+
+| Part | Material | Thickness | Source file | Used in tutorial step |
+|---|---|---|---|---|
+| _(e.g. base plate)_ | _(e.g. plywood)_ | _(e.g. 6 mm)_ | _(e.g. `base-plate.svg`)_ | _(e.g. 02)_ |
+
+## Recommended cut settings *(Calico-style — adapt per machine)*
+
+Document starting-point settings here once tested — flag as "recalibrate for your machine,"
+same as Calico does for print settings.
+
+| Setting | Value | Notes |
+|---|---|---|
+| Material | TBD | e.g. birch plywood, acrylic |
+| Thickness | TBD | Must match CAD |
+| Kerf compensation | TBD | Measure on your laser |
+| Power / speed | TBD | Starting point only |
+
+Calico reference (3D print equivalent):
+
+| Calico part | Material | Layer height | Infill | Notes |
+|---|---|---|---|---|
+| Main body | PLA / Carbon PLA | 0.2 mm | 20% | 30° print angle, supports |
+| Track | TPU Shore-95A | 0.2 mm | 20% | Flat, modular pieces |
+
+## File conventions
 
 - **Vector source** (`.svg` or `.ai`/`.dxf`) is the source of truth for each cut part — keep it
   next to any exported/print-ready version rather than replacing it.

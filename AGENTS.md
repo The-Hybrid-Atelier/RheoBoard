@@ -6,7 +6,7 @@ file first.
 
 ## What this repo is
 
-Open hardware supporting **RheoMap** and **SlipTopo**. Product/spec detail lands in
+Open hardware supporting **RheoMap**, **RheoData**, and **SlipAtlas**. Product/spec detail lands in
 `BuildYourOwn/product-specs.md` as it's written up; treat that file as the source of truth over
 anything said here.
 
@@ -17,19 +17,17 @@ There are two hardware tracks:
    of CAD. **This is the current focus and holds essentially the entire harness** (progress log,
    exec-plans, core beliefs, references, product specs) — assume work is about this track and
    lives in this folder unless told otherwise.
-2. **PCB** (`RheoBoard_V8_Final/`) — a custom Altium-designed board. Not actively worked on.
-   It currently has no dedicated process docs (deleted when this track went dormant, per the
-   "simplest solution, add complexity only when needed" principle) — if this track picks back
-   up, recreate a small doc set for it then (BOM notes, revision history, verification
-   checklist — mirror `BuildYourOwn/`'s pattern of keeping docs with the hardware they describe).
+2. **PCB** (`RheoBoard_V8_Final/`) — custom Altium-designed board (schematic, layout, symbol/
+   footprint libraries, BOM). Binary CAD files — describe intent of changes in prose (`PROGRESS.md`,
+   exec-plans) since `git diff` won't show it. PCB-specific process docs can live alongside the
+   design in `RheoBoard_V8_Final/` when needed, mirroring `BuildYourOwn/`'s pattern.
 
 ## Repository layout
 
-- `BuildYourOwn/` — the harness. Everything lives here directly (plain text/markdown, diffs
-  normally): `PROGRESS.md` (session log — read this first), `core-beliefs.md` (operating
-  principles), `exec-plans/` (planning), `product-specs.md`, `references.md`, `BOM.md`,
-  `VERIFICATION.md`, `laser-cut/`, `wiring/`, `tutorial/` (the Instructables-style build guide —
-  the main deliverable).
+- `BuildYourOwn/` — the harness + BYO build. Builder-facing: `README.md` (Calico-style master
+  doc), `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `tutorial/`, `VERIFICATION.md`.
+  Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `exec-plans/`, `product-specs.md`,
+  `references.md`, `previous-revisions/`.
 - `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, manufacturing outputs. Binary CAD files — Altium is the only thing that opens
   them (see "Hardware-specific notes" below).
@@ -96,9 +94,10 @@ where agents in general are most prone to declaring victory too early, so treat 
   - `completed/` — finished plans, kept for history.
   - `tech-debt-tracker.md` — known gaps/deferred items that aren't worth fixing right now.
   - `_template.md` — copy this to start a new plan.
-- `product-specs.md` — what we're building and why (RheoBoard, RheoMap, SlipTopo).
+- `product-specs.md` — what we're building and why (RheoBoard, RheoMap, RheoData, SlipAtlas).
 - `references.md` — external datasheets/standards the design depends on.
-- `BOM.md`, `laser-cut/`, `wiring/`, `VERIFICATION.md`, `tutorial/` — see `BuildYourOwn/README.md`.
+- `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `previous-revisions/`,
+  `VERIFICATION.md`, `tutorial/` — see `BuildYourOwn/README.md`.
 
 ## Hardware-specific notes
 
@@ -109,7 +108,7 @@ where agents in general are most prone to declaring victory too early, so treat 
   only editor. If this track becomes active again, **always describe the intent of a hardware
   change in prose** somewhere text-based, since `git diff` won't show it.
   `RheoBoard_V8.BomDoc` is the one exception (text/XML, diffs fine).
-- Any future firmware/software for RheoMap/SlipTopo that lands in this repo should get its own
+- Any future firmware/software for RheoMap/RheoData/SlipAtlas that lands in this repo should get its own
   section here once it exists (build/run/test commands, entry points) rather than being
   discovered ad hoc — per the original harness articles this should include an `init.sh`-style
   script and a basic smoke-test step in "session bootstrap" once there's something runnable.
