@@ -8,6 +8,38 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (23)
+
+Removed the "none human-verified yet, no photos/video exist yet" style status notes from
+`BuildYourOwn/README.md` (the builder-facing guide), per explicit user feedback: these were
+agent-facing progress-tracking notes that had leaked into the builder-facing doc, not something a
+person following the guide needs to read. User's framing: *"This is a note for you only... a note
+for you to keep track and help me."*
+
+- Removed from the top-of-file intro (`_All 8 steps written; none human-verified yet, no
+  photos/video exist yet._`) and from the "## Steps" section intro sentence ("None of these are
+  human-verified yet, and no photos/video exist for any step.").
+- **Left the per-step blockers in place** (Step 02 "— blocked on laser-cut vector file", Step 05
+  "— blocked on RheoMap's fixture spec") — those are actual content facts a builder needs (the
+  step genuinely can't be completed yet), not process/QA metadata about doc completeness, so they
+  stayed. Same reasoning for the inline TBD notes inside Steps 02 and 05's instructions.
+  Did **not** touch the root `README.md`'s "## Status" checklist (`- [ ] Step-by-step guide
+  human-verified against a real build`, etc.) — that's a distinct, explicitly-labeled
+  project-status section (conventional in a README), not narration mixed into the guide itself;
+  wasn't what was quoted, so left alone pending explicit ask.
+- **This tracking status isn't lost** — it's exactly what this file (`PROGRESS.md`) and
+  `VERIFICATION.md` are for. Current state, for continuity: all 8 steps in
+  `BuildYourOwn/README.md` are written but **not yet human-verified against a real build**; no
+  step has photos or video. Step 02 is additionally blocked on the laser-cut vector file not
+  existing yet; Step 05 is additionally blocked on RheoMap's sample/fixture geometry spec not
+  existing yet. Update this note (or clear it) once a real build verification pass happens.
+- Ran `scripts/check-docs.sh` — all checks pass.
+
+**Next:** none from this pass. If the root `README.md` Status checklist should get the same
+treatment, that's a separate explicit ask.
+
+---
+
 ## 2026-07-08 (22)
 
 Trimmed `BuildYourOwn/README.md` (the step-by-step guide) per explicit user feedback that it read
