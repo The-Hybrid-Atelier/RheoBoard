@@ -20,10 +20,11 @@
    Connect ENA→GPIO 32, ENB→GPIO 33. OUT1/OUT2→PUMP1 (4700), OUT3/OUT4→PUMP2 (4700).
 5. **L298N #2 (valve):** same direction wiring on the active channel. ENA→GPIO 14 (VALVE2).
    OUT1/OUT2→VALVE2 (4663). ENB/GPIO 15/OUT3/OUT4 may stay unwired.
-6. **Qwiic:** [MicroPressure sensor](https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html)
-   to ESP32 Thing Plus Qwiic port (I2C address `0x18`).
-7. Optional: Qwiic Button on the same bus.
-8. Continuity-check new connections **before** applying 12 V (see
+6. **Qwiic chain:** ESP32 Thing Plus Qwiic port → [MicroPressure sensor](https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html)
+   (I2C `0x18`) → [Qwiic Button](https://www.sparkfun.com/sparkfun-qwiic-button.html) (I2C `0x6F`,
+   default). Qwiic devices daisy-chain — plug a second Qwiic cable from the sensor's spare port to
+   the button.
+7. Continuity-check new connections **before** applying 12 V (see
    [`../../../VERIFICATION.md`](../../../VERIFICATION.md)).
 
 GPIO map must match [`../../../software/2P1VX/PneumaticSystem.h`](../../../software/2P1VX/PneumaticSystem.h).

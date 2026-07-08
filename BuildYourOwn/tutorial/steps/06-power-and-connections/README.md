@@ -3,13 +3,13 @@
 - **Time:** ~15–30 min
 - **Difficulty:** easy
 
-Power the 2P1V rig: **12 V adapter** to both L298N motor rails, plus USB to the ESP32. Data path:
-USB serial (bench) and BLE (RheoData).
+Power the 2P1V rig: **12 V adapter** to both L298N motor rails, plus micro-USB to the ESP32. Data
+path: USB serial (bench) and BLE (RheoData).
 
 ## What you'll need for this step
 
-- **Parts:** 12 V DC adapter (≥ 2 A recommended), USB-C cable, Qwiic pressure sensor already wired —
-  see [`../../../BOM.md`](../../../BOM.md).
+- **Parts:** 12 V DC adapter (≥ 2 A recommended), micro-USB cable, Qwiic MicroPressure + Qwiic
+  Button already wired — see [`../../../BOM.md`](../../../BOM.md).
 - **Design files:** power section of [`../../../wiring/2P1V-wiring-diagram.png`](../../../wiring/2P1V-wiring-diagram.png).
 - **Tools:** multimeter (recommended)
 
@@ -18,10 +18,11 @@ USB serial (bench) and BLE (RheoData).
 1. **Common ground:** confirm ESP32 GND, both L298N GND, and 12 V adapter (−) are tied together
    before energizing.
 2. **Motor power:** connect **12 V (+)** to both L298N motor power inputs. Polarity per module labels.
-3. **ESP32:** power via USB-C (programming cable is fine for bench use). Do not back-feed 12 V into
+3. **ESP32:** power via micro-USB (the same cable used for programming). Do not back-feed 12 V into
    the ESP32.
 4. **First power-on:** with pumps/valve off (firmware idle), verify no excessive current draw or hot
-   components. Then connect Serial Monitor @ 115200 and confirm MPRLS reads (~ambient).
+   components. Then connect Serial Monitor @ 115200 and confirm MPRLS reads (~ambient) and the
+   Qwiic Button responds (LED lights on press).
 5. **BLE:** from RheoData, connect to device name **`2P1VX`**.
 
 ## Media

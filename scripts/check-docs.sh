@@ -6,10 +6,9 @@
 # session wrap-up checklist in AGENTS.md. Exits non-zero if something needs a look.
 #
 # Checks:
-#   1. BuildYourOwn/exec-plans/active/ has at most one plan in flight.
-#   2. No dangling relative markdown links under BuildYourOwn/.
-#   3. The most recent commit touching BuildYourOwn/ also touched BuildYourOwn/PROGRESS.md.
-#   4. Every BOM.md table row has a non-empty Datasheet column (mechanical version of the
+#   1. No dangling relative markdown links under BuildYourOwn/.
+#   2. The most recent commit touching BuildYourOwn/ also touched BuildYourOwn/PROGRESS.md.
+#   3. Every BOM.md table row has a non-empty Datasheet column (mechanical version of the
 #      "every part is traceable" rule in core-beliefs.md).
 
 set -uo pipefail
@@ -19,16 +18,6 @@ cd "$repo_root"
 
 status=0
 
-echo "== Active exec-plans =="
-active_count=$(find BuildYourOwn/exec-plans/active -maxdepth 1 -type f -name '*.md' ! -name 'README.md' 2>/dev/null | wc -l | tr -d ' ')
-if [ "$active_count" -gt 1 ]; then
-  echo "WARN: $active_count plans in BuildYourOwn/exec-plans/active/ (expected 0-1) — pick one before starting more."
-  status=1
-else
-  echo "OK ($active_count active plan(s))"
-fi
-
-echo
 echo "== Dangling relative markdown links (BuildYourOwn/) =="
 found_broken=0
 while IFS= read -r -d '' file; do

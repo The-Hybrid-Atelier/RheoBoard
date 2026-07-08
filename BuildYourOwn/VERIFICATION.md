@@ -25,7 +25,6 @@ for the change and check them off there.
 
 - [ ] `PROGRESS.md` updated with what changed and why (this is the revision history for this
       track — see note in `BOM.md`, no separate log needed since these files diff natively)
-- [ ] Relevant exec-plan moved to `exec-plans/completed/` (if finished)
 
 ## Sign-off
 
