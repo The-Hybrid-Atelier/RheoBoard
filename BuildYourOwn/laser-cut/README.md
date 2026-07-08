@@ -4,9 +4,8 @@ Design files for the laser-cut acrylic panel that mounts every 2P1V component (p
 L298N drivers, ESP32, Qwiic sensor + button) with zip ties — no screws, no enclosure, just a flat
 mounting panel.
 
-Modeled on [Calico's `3D print models/`](https://github.com/jsli96/calico/tree/main/3D%20print%20models)
-folder — they document each mechanical part with material, recommended settings, and assembly
-notes in the main README. We do the same here for the laser-cut flat panel.
+Each mechanical part is documented here with material, recommended cut settings, and assembly
+notes, same spirit as a 3D-printed-parts README but for laser-cut flat stock.
 
 ## Panel at a glance
 

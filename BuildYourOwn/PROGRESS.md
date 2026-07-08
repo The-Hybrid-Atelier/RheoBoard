@@ -8,6 +8,88 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (12)
+
+Wrote the tutorial in full detail — all 8 steps now have real instructions, and the last
+`TBD`/scaffold sections in `tutorial/README.md` are filled in.
+
+- **`tutorial/README.md`:** wrote "Overview" (what you build, difficulty, an estimated **~4–7 h
+  hands-on** build time derived from summing per-step estimates — flagged as unmeasured/placeholder
+  until a real build times it), a concrete "Tools" list under "Before you start," and a "Tips"
+  section consolidating the most important tip from each step (tagged by step number). Updated the
+  per-step status table: all 8 steps are now "written, not verified" (step 05 additionally flagged
+  as blocked on a real spec).
+- **Step 05 (mount and setup) — written from scratch:** panel placement/stability, tracing every
+  pneumatic line for kinks/pinches after mounting, cable slack, and environmental notes (drafts/heat
+  near the chamber can bias the REP's baseline sampling window). Explicitly flagged that exact
+  sample/fixture geometry (standoff, alignment) depends on RheoMap's product spec, which is still
+  `TBD` in `product-specs.md` — did not fabricate fixture specifics that don't exist yet.
+- **Step 08 (ready to use) — written from scratch:** using the full `2P1VX` firmware API (read from
+  `2P1VX.ino` / `PneumaticSystem.h` / `software/2P1VX/README.md`), documented all four REP trigger
+  paths (BLE `rheo/rep`, onboard boot-button GPIO 0, Qwiic single-click, USB serial `REP`), the
+  Qwiic Button's other two gestures (double-click = latched suck, hold = momentary blow), the bench
+  serial command set, and how to read a trace via RheoData or raw serial `#S`/`#PH` lines. Points at
+  `VERIFICATION.md` sign-off as the final gate.
+- **Reviewed steps 01–04, 06–07** against everything that changed in recent sessions (ESP32
+  micro-USB variant, Qwiic Button now required, laser-cut panel, diagram regeneration): filled in
+  three remaining `TBD` time estimates (step 01 ~15–20 min, step 02 ~30–45 min hands-on excluding
+  laser turnaround, step 07 ~20–30 min initial pass) and fixed a stale "follow section A —
+  Electrical Wiring" reference in step 03 — the current diagram/`wiring/README.md` use "Electrical
+  wiring" / "Pneumatic plumbing" headings, not lettered sections. Everything else checked out
+  consistent (no leftover "Qwiic Button optional" language, ESP32 Boards Manager URL matches
+  `references.md`).
+- Top-level `README.md` Status checklist split the old combined "written **and** human-verified"
+  tutorial line into two — "written" is now checked (all 8 steps), "human-verified" stays open.
+- Ran `scripts/check-docs.sh` — all checks pass (no dangling links, BOM datasheet coverage OK,
+  `PROGRESS.md` freshness OK).
+
+**Next:** tutorial content is now complete on paper; the remaining gap across the whole tutorial is
+media (zero photos/videos exist for any step) and human verification against a real build
+(`VERIFICATION.md`). Step 05 will need a follow-up pass once RheoMap's sample/fixture geometry spec
+is written. No further tutorial *writing* is blocking — next session's focus should shift to either
+producing the laser-cut vector file (`.svg`/`.dxf`, still TBD in `laser-cut/README.md`) or an actual
+build to generate media and verification data.
+
+---
+
+## 2026-07-08 (11)
+
+Removed all mentions of **Calico** and **OpenTheremin V4** from project-facing docs. Both were
+used across earlier sessions purely as internal documentation-model references (style/structure
+inspiration for the agent) — user clarified they were never meant to be cited in the actual
+project docs, and asked for them out.
+
+- Stripped references from 13 files: `README.md`'s "Documentation model" blockquote and three
+  "Calico equivalent"/Instructables-layer asides; `tutorial/README.md`'s entire "Documentation
+  model" section (the Calico/OpenTheremin table + PDF note) and a "Calico keeps tips..." aside;
+  `product-specs.md`'s BYO bullet; `laser-cut/README.md`'s "Modeled on Calico" intro;
+  `images/README.md`'s "Modeled on Calico" intro; `software/README.md`'s "(Calico pattern)"
+  aside; `AGENTS.md`'s "(Calico-style master doc)" aside; and OpenTheremin "equivalent" asides in
+  tutorial steps 01, 02, 05, 07, 08.
+- In every case, kept the actual substance the reference had informed (e.g. "document material/
+  thickness/kerf," "images live at the folder root for GitHub rendering," "runtime BLE params
+  instead of one-shot calibration") — only removed the citation/comparison, not the underlying
+  content or structure.
+- Removed the Calico and OpenTheremin V4 (4 sub-rows: repo, download page, product page, local
+  PDF) rows from `references.md` entirely, since those aren't real project dependencies — they
+  were agent-facing planning notes that had leaked into a file meant for datasheets/libraries the
+  design actually depends on.
+- While in `tutorial/steps/README.md`, also fixed a stale example folder tree (showed made-up
+  names `01-gather-materials/`, `02-cut-the-platform/` instead of the real
+  `01-kit-contents-and-tools/`, `02-assemble-platform/`) and updated its own stale "content still
+  TBD" note to match the real per-step status already recorded in `tutorial/README.md`.
+- Verified with `scripts/check-docs.sh` (all passing) and a repo-wide grep — zero remaining
+  mentions outside `PROGRESS.md`'s own history (left untouched, since it's a log of what
+  happened at the time, not a living doc).
+- User also asked what `scripts/` is/whether it's needed — explained `check-docs.sh`'s three
+  checks (dangling links, PROGRESS.md freshness, BOM datasheet coverage) and recommended keeping
+  it since — unlike the empty `exec-plans/`/`previous-revisions/` removed in entry (8) — it's
+  small, functional, and has actually caught real issues across this session. Left as-is pending
+  user's call.
+
+**Next:** same as prior entries — vector cut file for the laser-cut panel, steps 05/08 still need
+real instructions, then a real build to generate photos/video and human-verify the written steps.
+
 ## 2026-07-08 (10)
 
 User asked to double-check the repo against their Instructables definition (step-by-step guide +

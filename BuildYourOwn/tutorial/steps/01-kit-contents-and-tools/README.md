@@ -1,6 +1,6 @@
 # Step 01: Kit contents and tools
 
-- **Time:** TBD
+- **Time:** ~15–20 min
 - **Difficulty:** easy
 
 ## What you'll need for this step
@@ -8,8 +8,9 @@
 - **Parts:** full list in [`../../../BOM.md`](../../../BOM.md) — verify everything arrived before
   starting assembly.
 - **Design files:** none for this step.
-- **Tools:** list here once known (OpenTheremin equivalent: *"cross-head screwdriver only"* for
-  their kit — ours will likely need more for breadboard/laser-cut build).
+- **Tools:** see [`../../README.md`](../../README.md) → "Before you start" for the full tool list
+  (laser cutter access, soldering iron, screwdriver, multimeter, computer with USB) — this step is
+  just confirming you have them, not using any of them yet.
 
 ## Instructions
 

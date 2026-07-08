@@ -1,6 +1,7 @@
 # Step 02: Assemble the platform
 
-- **Time:** TBD
+- **Time:** ~30–45 min hands-on (excludes laser-cutting turnaround, which can be days if
+  outsourced to a cut-to-order service)
 - **Difficulty:** requires laser cutter access (or a cut-to-order service); assembly itself is
   hand tools only (zip ties, no screws)
 
@@ -11,9 +12,7 @@
 - **Design files:** [`../../../laser-cut/`](../../../laser-cut/) — cut the panel first if not
   pre-cut. **Note:** as of this writing only a raster design reference exists there (placement
   map + cut-geometry preview); the laser-ready vector file (`.svg`/`.dxf`) still needs to be
-  produced from `laser-cut/panel-cut-lines.png` before this step can actually be cut. OpenTheremin
-  equivalent: mechanical drawing + tripod mount in their
-  [Electronics folder](https://github.com/GaudiLabs/OpenThereminV4/tree/main/Electronics).
+  produced from `laser-cut/panel-cut-lines.png` before this step can actually be cut.
 - **Tools:** small zip-tie cutters/flush cutters, laser cutter (or cut-to-order service).
 
 ## Instructions
@@ -33,8 +32,8 @@
 
 ## Media
 
-Pictographic or photo sequence strongly recommended (OpenTheremin PDF uses one photo per
-sub-step). `laser-cut/panel-placement-map.png` doubles as the primary pictographic reference here.
+Pictographic or photo sequence strongly recommended (one photo per sub-step).
+`laser-cut/panel-placement-map.png` doubles as the primary pictographic reference here.
 
 ## Tips / common mistakes
 
