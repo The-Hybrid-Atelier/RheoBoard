@@ -8,6 +8,56 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (21)
+
+Two more structural moves per explicit user request: (1) consolidate the 9-file `tutorial/`
+folder (overview + 8 per-step READMEs + template + steps index) into **one** `README.md`, located
+directly in `BuildYourOwn/`; (2) move the old `BuildYourOwn/README.md` (project overview/reference
+doc) up to the **repo root**, merged with the existing root `README.md`.
+
+- **New `BuildYourOwn/README.md`** — the step-by-step build guide itself, single file. All 8 steps
+  from `tutorial/steps/NN-*/README.md` are now `## Step NN: ...` sections in one document (in
+  build order), preceded by the old `tutorial/README.md`'s Overview/Before-you-start content and
+  followed by its Tips/Media-conventions content. Internal links between steps changed from folder
+  links (`../03-wire-electronics/`) to same-file anchors (`#step-03-wire-the-electronics`) —
+  verified every anchor matches GitHub's actual heading-slug algorithm (lowercase, strip
+  punctuation, spaces→hyphens) by cross-checking against the real `## Step NN: ...` headings.
+  Cross-folder paths got *shallower* since this file now sits at `BuildYourOwn/` root instead of
+  3 levels deep in `tutorial/steps/NN/`: `../../../hardware/BOM.md` → `hardware/BOM.md`, etc.
+- **Deleted `tutorial/` entirely** (`rm -rf`) — `README.md`, `_step-template/` (incl. its
+  `media/.gitkeep`), and all 8 `steps/NN-*/README.md` — once satisfied every line of content had
+  a home in the new consolidated file. Per-step `media/` folders go away too: future build photos
+  now land directly in `images/`, named by step (e.g. `step02-panel-placement.jpg`), noted in the
+  new file's "Media conventions" section.
+- **Root `README.md` rewrite** — merged the old root README (project intro, two-track summary,
+  minimal repo layout, status, license) with the old `BuildYourOwn/README.md`'s reference content
+  (Features, Hardware incl. wiring diagrams + component gallery, Software configuration, Connect
+  and use, Tips, Repo layout, Status checklist). All paths that used to be relative to
+  `BuildYourOwn/` got a `BuildYourOwn/` prefix added since this content now lives at repo root.
+  Added a "Start here" callout pointing at `BuildYourOwn/README.md` as the actual build guide,
+  mirroring the callout the old `BuildYourOwn/README.md` had (that callout's job moved with the
+  content).
+- **Updated every remaining cross-reference to the removed `tutorial/`**: `AGENTS.md` (repository
+  layout + `BuildYourOwn/` map sections rewritten), `BuildYourOwn/VERIFICATION.md`,
+  `BuildYourOwn/product-specs.md`, `BuildYourOwn/images/README.md`, `BuildYourOwn/laser-cut/README.md`
+  (two step-02 references + the "once files exist" checklist), `BuildYourOwn/software/README.md`
+  (builder walkthrough link). Also fixed two unrelated pre-existing stale references caught along
+  the way: `VERIFICATION.md`'s sign-off note pointed at a `tech-debt-tracker.md` that was deleted
+  back in entry 15/16's `exec-plans/` cleanup (now points at `PROGRESS.md` instead).
+- Ran `scripts/check-docs.sh` (all three checks pass) plus a manual `rg -n "tutorial/"` sweep
+  (only the two intentional "there is no separate tutorial/ folder anymore" explanatory mentions
+  in `AGENTS.md` remain) — the script's own dangling-link checker doesn't validate `#anchor`
+  fragments, so those were checked by hand as noted above.
+- **Left every earlier `PROGRESS.md` entry untouched** — they correctly describe the repo as it
+  was at the time (including the now-removed `tutorial/` folder); only this entry reflects the
+  current single-file-guide structure.
+
+**Next:** none from this pass — verified clean. Same substantive open items as before: real
+laser-cut vector file, `images/ide-settings.png` + `images/platform.png` + `images/wiring.png`
+captures, human verification of the build guide, RheoMap fixture spec for Step 05.
+
+---
+
 ## 2026-07-08 (20)
 
 Restructured `BuildYourOwn/`'s top level again, superseding entry 19's `assets/` folder — per

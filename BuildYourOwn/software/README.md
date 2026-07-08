@@ -52,7 +52,7 @@ Restart the Arduino IDE afterward so it picks up the new library.
    see below).
 2. Select board **SparkFun ESP32 Thing Plus** (or **ESP32 Dev Module**) and the micro-USB port.
 3. Upload. Serial Monitor @ 115200 should print `2P1VX initialized`.
-4. Builder walkthrough: [`../tutorial/steps/04-install-firmware/`](../tutorial/steps/04-install-firmware/).
+4. Builder walkthrough: [`../README.md`](../README.md) → Step 04.
 
 Add a screenshot of correct board/port settings to `../images/ide-settings.png` when captured.
 

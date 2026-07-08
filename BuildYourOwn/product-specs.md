@@ -8,6 +8,6 @@ keep this index a table of contents, not the spec itself.
 - **SlipAtlas** — TBD, spec to be added.
 - Hardware for the above comes in two tracks:
   - **Build Your Own** (`../BuildYourOwn/`, this folder) — DIY off-the-shelf build. Spec: TBD.
-    **Current focus.** Single README + fab folders + firmware + tips, with step-by-step detail
-    in `tutorial/` — see `README.md` and `tutorial/README.md`.
+    **Current focus.** Single-file, step-by-step build guide in `README.md`; reference material
+    (BOM, wiring, firmware) in `hardware/` and `software/`.
   - **Custom PCB** (`../RheoBoard_V8_Final/`) — Altium-designed board. Spec: TBD.

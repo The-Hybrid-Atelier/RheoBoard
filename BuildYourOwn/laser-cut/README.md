@@ -31,7 +31,7 @@ conventions" below). Nothing in this folder has been physically cut or verified 
 | File | What it is |
 |---|---|
 | [`panel-cut-lines.png`](panel-cut-lines.png) | Cut-geometry preview: corner mounting holes + every zip-tie slot, no labels. This is the geometry the real vector file needs to reproduce. |
-| [`panel-placement-map.png`](panel-placement-map.png) | Labeled reference: where each component sits, which slots it's zip-tied through, and how many ties per part. Primary reference for [tutorial step 02](../tutorial/steps/02-assemble-platform/). |
+| [`panel-placement-map.png`](panel-placement-map.png) | Labeled reference: where each component sits, which slots it's zip-tied through, and how many ties per part. Primary reference for [Step 02 of the build guide](../README.md#step-02-assemble-the-platform). |
 | [`panel-system-diagram.png`](panel-system-diagram.png) | Full system diagram (pneumatic tubing + electronics wiring) overlaid on the same panel/mounting scheme, drawn for a **2-valve (2P2V)** variant — see the callout below before using it as wiring truth. |
 
 ## Component placement + zip-tie map
@@ -72,9 +72,9 @@ point (per `AGENTS.md`), and record the decision in `PROGRESS.md`.
 
 ## Parts
 
-| Part | Material | Thickness | Source file | Used in tutorial step |
+| Part | Material | Thickness | Source file | Used in build guide step |
 |---|---|---|---|---|
-| Component panel | Acrylic | 3 mm | [`panel-cut-lines.png`](panel-cut-lines.png) (reference only — vector `.svg`/`.dxf` TBD) | [02](../tutorial/steps/02-assemble-platform/) |
+| Component panel | Acrylic | 3 mm | [`panel-cut-lines.png`](panel-cut-lines.png) (reference only — vector `.svg`/`.dxf` TBD) | [Step 02](../README.md#step-02-assemble-the-platform) |
 
 ## Recommended cut settings
 
@@ -101,7 +101,7 @@ point (per `AGENTS.md`), and record the decision in `PROGRESS.md`.
 ## Once files exist
 
 - [ ] Vector source (`.svg`/`.dxf`) produced, matching `panel-cut-lines.png` geometry
-- [x] Each part linked to where it's referenced in `../tutorial/` (step 02)
+- [x] Each part linked to where it's referenced in `../README.md` (Step 02)
 - [ ] Kerf compensation measured and recorded (material + thickness already known: 3 mm acrylic)
 - [ ] Cut settings (power/speed) recorded for the specific laser cutter used, flagged as
       "starting point, recalibrate for your machine" rather than gospel
