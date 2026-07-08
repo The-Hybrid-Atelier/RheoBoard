@@ -3,6 +3,9 @@
 Project overview and reference material (BOM, wiring, firmware API) live in the
 [repo root README](../README.md); this file is the build guide.
 
+License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
+[repo root README](../README.md) → License, or [`../LICENSE`](../LICENSE).
+
 <img src="images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
 
 ## Overview
@@ -20,15 +23,15 @@ or custom PCB work.
 - **Materials:** [`hardware/BOM.md`](hardware/BOM.md)
 - **Design files:** [`laser-cut/`](laser-cut/) (platform), [`hardware/wiring/`](hardware/wiring/) (circuits)
 - **Software:** [`software/`](software/) (flash procedure is Step 04)
-- **Tools:** laser cutter or cut-to-order service (`.svg`/`.dxf` — note the vector file is still
-  TBD, see [`laser-cut/README.md`](laser-cut/README.md)); zip-tie/flush cutters; soldering iron +
-  solder + wire strippers + small screwdriver + multimeter; computer with data-capable micro-USB
-  cable; phone/tablet or computer running **RheoData** for BLE control
+- **Tools:** laser cutter or cut-to-order service (`laser-cut/panel.svg`/`.dxf` — draft, not yet
+  test-fit against real parts, see [`laser-cut/README.md`](laser-cut/README.md)); zip-tie/flush
+  cutters; soldering iron + solder + wire strippers + small screwdriver + multimeter; computer
+  with data-capable micro-USB cable; phone/tablet or computer running **RheoData** for BLE control
 
 ## Steps
 
 - [Step 01 — Kit contents and tools](#step-01-kit-contents-and-tools)
-- [Step 02 — Assemble the platform](#step-02-assemble-the-platform) — blocked on laser-cut vector file
+- [Step 02 — Assemble the platform](#step-02-assemble-the-platform) — laser-cut vector file is a draft, not yet test-fit
 - [Step 03 — Wire the electronics](#step-03-wire-the-electronics)
 - [Step 04 — Install firmware](#step-04-install-firmware)
 - [Step 05 — Mount and set up](#step-05-mount-and-set-up) — blocked on RheoMap's fixture spec
@@ -51,11 +54,13 @@ or custom PCB work.
 ## Step 02: Assemble the platform
 
 Parts: acrylic panel, ~20 zip ties, Ø10 bulkhead fitting, 4 feet — see
-[`hardware/BOM.md`](hardware/BOM.md). Design file: [`laser-cut/`](laser-cut/) (vector cut file
-still TBD — only a raster reference exists, see [`laser-cut/README.md`](laser-cut/README.md)).
+[`hardware/BOM.md`](hardware/BOM.md). Design file: [`laser-cut/panel.svg`](laser-cut/panel.svg)
+(draft vector cut file — not yet test-fit against real parts, see
+[`laser-cut/README.md`](laser-cut/README.md) before cutting).
 
 1. Cut the panel (290 × 200 × 3 mm acrylic) per
-   [`laser-cut/panel-cut-lines.png`](laser-cut/panel-cut-lines.png).
+   [`laser-cut/panel.svg`](laser-cut/panel.svg) — test-fit real components against the geometry
+   first (see the status note in `laser-cut/README.md`).
 2. Attach the 4 corner feet.
 3. Install the Ø10 bulkhead fitting at the CHAMBER position.
 4. Zip-tie each component per

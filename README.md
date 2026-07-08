@@ -51,8 +51,8 @@ Qwiic sensor + button) mounts to it with zip ties through cut slots, no screws o
 Design files, the component placement + zip-tie map, and cut settings are in
 [`BuildYourOwn/laser-cut/`](BuildYourOwn/laser-cut/).
 
-**Status:** design reference images exist (placement map + cut-geometry preview); the actual
-laser-ready vector file (`.svg`/`.dxf`) and the physical cut are still TBD — see
+**Status:** a draft vector cut file (`panel.svg`/`panel.dxf`, traced from the raster reference)
+exists but hasn't been verified against real parts, and the physical cut hasn't happened — see
 [`BuildYourOwn/laser-cut/README.md`](BuildYourOwn/laser-cut/README.md) for what's there and what's
 missing.
 
@@ -158,4 +158,25 @@ for the latest state.
 
 ## License
 
-TBD.
+RheoBoard uses three separate licenses — one per category of content, as recommended by
+[OSHWA](https://certification.oshwa.org/)'s open hardware certification guidance:
+
+| Content | License | File |
+|---|---|---|
+| Hardware — wiring diagrams, laser-cut design, BOM, PCB design | [CERN-OHL-W-2.0](https://ohwr.org/cern_ohl_w_v2.txt) | [`LICENSE-HARDWARE.txt`](LICENSE-HARDWARE.txt) |
+| Software — firmware (`BuildYourOwn/software/rheometer-firmware/`) | MIT | [`LICENSE-SOFTWARE.txt`](LICENSE-SOFTWARE.txt) |
+| Documentation — READMEs, build guide, BOM/wiring write-ups | CC BY-SA 4.0 | [`LICENSE-DOCUMENTATION.txt`](LICENSE-DOCUMENTATION.txt) |
+
+CERN-OHL-W is "weakly reciprocal": anyone who modifies the hardware design must share those
+modifications back under the same license, but a larger project that merely incorporates this
+hardware doesn't have to be open itself. Third-party components (ESP32, L298N, pumps, valve,
+sensor, Qwiic modules) and third-party libraries (ThingPlusBLEOSC, OSC, ESP32 BLE Arduino, etc.)
+remain under their own licenses — see
+[`BuildYourOwn/hardware/references/README.md`](BuildYourOwn/hardware/references/README.md).
+
+**Not yet OSHWA-certified — self-certification hasn't been submitted.** Applying these licenses
+is a prerequisite, not the whole requirement. Hardware revision tracking:
+[`BuildYourOwn/hardware/REVISIONS.md`](BuildYourOwn/hardware/REVISIONS.md). Remaining gap before
+submission: the laser-cut panel's vector file ([`BuildYourOwn/laser-cut/panel.svg`](BuildYourOwn/laser-cut/panel.svg))
+is a traced draft that still needs to be test-fit against real components. See
+[`BuildYourOwn/PROGRESS.md`](BuildYourOwn/PROGRESS.md) for the current status.

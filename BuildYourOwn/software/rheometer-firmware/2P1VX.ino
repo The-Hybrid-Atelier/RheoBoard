@@ -5,6 +5,9 @@
 // reflashing. Command namespace is rheo/* (replaces /slip/*).
 // One build: BLE pipeline ("2P1VX") + USB serial bench stream (SERIAL_STREAM).
 // Detailed docs: README.md
+//
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Charlie Vuong -- see ../../../LICENSE-SOFTWARE.txt
 // ============================================================================
 
 // ---- BLE identity (consumed by BLEHandler.h #ifndef guards) -----------------

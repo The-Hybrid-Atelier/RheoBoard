@@ -1,0 +1,13 @@
+RheoBoard uses three separate licenses, one per category of content:
+
+- **Hardware** (wiring diagrams, laser-cut design, BOM, PCB design) —
+  CERN-OHL-W-2.0 — see [`LICENSE-HARDWARE.txt`](LICENSE-HARDWARE.txt)
+- **Software** (firmware) —
+  MIT — see [`LICENSE-SOFTWARE.txt`](LICENSE-SOFTWARE.txt)
+- **Documentation** (READMEs, build guide, BOM/wiring write-ups) —
+  CC BY-SA 4.0 — see [`LICENSE-DOCUMENTATION.txt`](LICENSE-DOCUMENTATION.txt)
+
+This split is standard practice for open hardware projects (see the OSHWA certification
+guidance at https://certification.oshwa.org/) since hardware, software, and documentation are
+different categories of intellectual property that don't fit under a single license. See the
+root [`README.md`](README.md) → License section for more detail.

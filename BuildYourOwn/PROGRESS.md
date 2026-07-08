@@ -8,6 +8,131 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (25)
+
+Continuation of (24): user clarified "don't say we have the license" — meaning don't imply OSHWA
+*certification/approval* has happened (applying our own license to our own copyrighted work
+needs no external approval; OSHWA certification is a separate, later, self-submitted step that
+genuinely hasn't happened). Re-audited all files touched in (24) for exactly that distinction —
+none overclaimed certification, all consistently say "not yet OSHWA-certified." Then closed out
+the two biggest actual gaps flagged in (24) as blockers:
+
+**1. Wiring diagram now has real editable source.** The original generator script was lost in a
+past `/tmp/` session (see (24)). Rebuilt it from scratch as
+`hardware/wiring/generate_wiring_diagram.py` (matplotlib, ~230 lines) — reproduces the same
+electrical facts as the existing `2P1V-wiring-diagram.png` (title block, legend, all
+component boxes/pins/wires/notes) from the documented wiring (wiring/README.md prose +
+`PneumaticSystem.h` GPIO defines), not copied from the lost original. Iterated on layout bugs
+(legend/box overlap, a GND-bus wire that accidentally routed through the Notes section, Qwiic
+I2C wire drawn through component text) until clean. Regenerated the PNG from this script
+(functionally identical diagram, minor cosmetic differences from the old render since the exact
+prior script is unrecoverable) and folded PNG palette-quantization into the script itself so
+`python3 generate_wiring_diagram.py` is a complete one-command regen (89KB output, same order of
+magnitude as the previous file). Documented the regen command in `hardware/wiring/README.md`.
+
+**2. Hardware revision scheme added.** New `hardware/REVISIONS.md` — Rev-letter table mapping a
+physical unit to the exact design-file revision it was built from (OSHWA requirement). Current:
+**Rev A, not yet physically built**. Cross-linked from `hardware/BOM.md`, `laser-cut/README.md`,
+and root `README.md`.
+
+**3. Laser-cut vector file — draft produced, explicitly NOT verified.** This was the harder call.
+No authoritative body-dimension data exists for the pump/valve (only port dimensions are
+published; datasheets don't give an overall footprint), so a from-scratch CAD layout built on
+assumed dimensions would have been a bigger risk than value. Instead: pixel-analyzed the existing
+`panel-cut-lines.png` raster reference (confirmed its 1024×706px canvas maps 1:1 onto the panel's
+290×200mm bounds — aspect ratio matches to within 0.1%) using `scipy.ndimage` connected-component
+labeling, extracted real mm coordinates for all 4 corner holes, the chamber bulkhead hole, and
+~50 zip-tie slots directly from the reference geometry (not invented), then cross-checked the
+big circle's position against `panel-placement-map.png`'s independently-extracted CHAMBER marker
+position — they agree, which validated the scale/registration assumption. Wrote
+`laser-cut/generate_panel_vector.py`, which outputs `panel.svg` + `panel.dxf` (hand-written
+minimal ASCII DXF, no `ezdxf` dependency) from this traced table, plus a `--retrace` mode that
+re-runs the pixel extraction fresh for future review. **What's honestly uncertain:** which exact
+part each zip-tie slot belongs to — grouped into 5 rough columns matching
+`panel-placement-map.png`'s left-to-right layout, but not independently re-verified slot-by-slot,
+so the script/README are explicit that this is a draft needing a real test-fit pass, not a
+finished CAD file. Updated `laser-cut/README.md`'s status callout, file table, parts table, and
+"once files exist" checklist accordingly; updated root `README.md`, `BuildYourOwn/README.md`
+(Step 02), `hardware/BOM.md`, and `AGENTS.md` to say "draft vector file, not yet test-fit"
+instead of "vector file TBD" everywhere that phrase appeared.
+
+**4. OSHWA submission-readiness checklist added** to `VERIFICATION.md` (new section) — the
+concrete, current-state checklist for what's done vs. still needed before submitting the actual
+OSHWA self-certification form (a human-only step: agreeing to their Certification Mark License
+Agreement isn't something an agent should do on the user's behalf).
+
+Ran `scripts/check-docs.sh` — all checks pass (no dangling links after the ~8 files' worth of
+cross-reference updates).
+
+**Next:** the laser-cut vector file's slot-to-part assignment and overall accuracy needs a real
+test-fit pass once physical parts are in hand — that's the last concrete blocker before this
+project could reasonably go up for OSHWA self-certification. Everything else on the checklist in
+`VERIFICATION.md` → "OSHWA self-certification readiness" is either done or explicitly human-only
+(submitting the form itself, physically cutting/labeling the first unit).
+
+---
+
+## 2026-07-08 (24)
+
+User asked whether the project meets OSHWA (Open Source Hardware Association) certification
+standards, and which license to use. Researched OSHWA's actual certification requirements and the
+hardware-license landscape (CERN OHL variants, TAPR, Solderpad) live, then applied licensing.
+
+**Assessment (before this session): not OSHWA-certifiable.** Root `README.md`'s License section
+said "TBD", no `LICENSE` file existed anywhere, firmware had no license header, and docs had no
+open-license notice. Design-file-format gap also confirmed: the wiring diagram is a rendered PNG
+only — the matplotlib script that generated it lived in `/tmp/` in a past session and was never
+committed, so there's no editable source in the repo; the laser-cut panel has no vector source
+either (already flagged). Both are OSHWA blockers ("design files in the preferred format for
+making changes") independent of licensing.
+
+**What changed this session** — clarified with the user that hardware/software/docs need
+*separate* licenses (standard OSHWA guidance, since GPL/CC aren't hardware licenses and OSHWA
+itself isn't a license). User chose, via explicit options:
+
+- **Hardware** (wiring diagrams, laser-cut design, BOM, PCB design under `RheoBoard_V8_Final/`) —
+  **CERN-OHL-W-2.0** (weakly reciprocal: modifications to the design must stay open, but a larger
+  project merely incorporating it doesn't have to). Full official text vendored into
+  `LICENSE-HARDWARE.txt` (fetched from `ohwr.org/cern_ohl_w_v2.txt`, not reproduced from memory).
+- **Firmware** — **MIT** (matches the `ThingPlusBLEOSC` dependency's own license). Text in
+  `LICENSE-SOFTWARE.txt`.
+- **Documentation** — **CC BY-SA 4.0**. Notice + link in `LICENSE-DOCUMENTATION.txt` (per CC's own
+  guidance, linked rather than the full legal code reproduced).
+- Added a root `LICENSE` file explaining the three-way split, and rewrote root `README.md`'s
+  License section into a table with the same breakdown plus an explicit "not yet OSHWA-certified"
+  caveat pointing back here.
+- Added `SPDX-License-Identifier: MIT` headers to all 5 firmware files
+  (`2P1VX.ino`, `PneumaticSystem.{h,cpp}`, `RheoSystem.{h,cpp}`).
+- Added one-line "License: CERN-OHL-W-2.0 — see ..." pointers to the three hardware-design index
+  files: `hardware/wiring/README.md`, `laser-cut/README.md`, `hardware/BOM.md`.
+- Added a license line to `BuildYourOwn/README.md`'s intro, and a new "## Licensing" section in
+  `AGENTS.md` so future agents apply the right header/pointer convention to new files.
+- Copyright holder on all three: "Charlie Vuong" (pulled from `git config user.name`, confirmed
+  live rather than guessed) — copyright year 2026.
+- Did **not** add a `RheoBoard_V8_Final/` README notice (none exists yet) — it's already in scope
+  per `LICENSE-HARDWARE.txt`'s stated coverage, but a per-folder pointer can be added once that
+  track has an active README.
+
+**Remaining OSHWA gaps (not addressed this session — user explicitly scoped this pass to
+"just add the LICENSE files," not a full remediation plan):**
+
+- Laser-cut vector source file (`.svg`/`.dxf`) still doesn't exist — raster-only design files
+  don't satisfy "preferred format for making changes."
+- Wiring diagram's generator script was never committed (lost from a past `/tmp/` session) — the
+  PNG alone is a rendered artifact, not editable source. Should regenerate the script and commit
+  it under `hardware/wiring/` alongside the PNG next time the diagram is touched.
+- No hardware version/revision-numbering scheme documented (OSHWA wants a physical unit
+  traceable to a design-file revision).
+- Self-certification with OSHWA (free, online form + Certification Mark Agreement, annual
+  renewal) hasn't been submitted — only makes sense once the above are resolved.
+- Ran `scripts/check-docs.sh` — passes (it doesn't check license files, this was a manual review).
+
+**Next:** if/when the laser-cut vector file gets produced and the wiring-diagram generator script
+is recreated, commit both as real design-file sources — that's the biggest remaining blocker to
+being certifiable, bigger than anything licensing-related.
+
+---
+
 ## 2026-07-08 (23)
 
 Removed the "none human-verified yet, no photos/video exist yet" style status notes from

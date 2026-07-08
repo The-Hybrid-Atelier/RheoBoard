@@ -1,0 +1,23 @@
+RheoBoard — Documentation License
+
+Copyright (c) 2026 Charlie Vuong
+
+This license applies to the written documentation in this repository: READMEs, the step-by-step
+build guide, the BOM's descriptive text, wiring/plumbing write-ups, and other markdown content —
+excluding firmware/software (see LICENSE-SOFTWARE.txt) and hardware design files (see
+LICENSE-HARDWARE.txt). Third-party component photos have their own attributions — see
+`BuildYourOwn/hardware/images/README.md`.
+
+Licensed under the Creative Commons Attribution-ShareAlike 4.0 International License
+(CC BY-SA 4.0).
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+Summary (not a substitute for the full legal text linked above): you are free to share and adapt
+this material for any purpose, even commercially, as long as you:
+
+  - give appropriate credit, provide a link to the license, and indicate if changes were made;
+  - distribute your contributions under the same license as the original.

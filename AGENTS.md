@@ -106,6 +106,18 @@ where agents in general are most prone to declaring victory too early, so treat 
 - `VERIFICATION.md` — pre-release checklist (human sign-off). See the repo root `README.md` for how
   these fit together.
 
+## Licensing
+
+Three separate licenses, one per content category (see root `README.md` → License, or `LICENSE`):
+hardware design files (wiring, laser-cut, BOM, PCB) are **CERN-OHL-W-2.0**
+(`LICENSE-HARDWARE.txt`); firmware is **MIT** (`LICENSE-SOFTWARE.txt`); documentation is
+**CC BY-SA 4.0** (`LICENSE-DOCUMENTATION.txt`). New firmware files should carry an
+`SPDX-License-Identifier: MIT` header (see existing files for the pattern); new hardware-design
+index files (BOM/wiring/laser-cut READMEs) should carry a one-line pointer to
+`LICENSE-HARDWARE.txt`. Not yet OSHWA-certified — see `BuildYourOwn/PROGRESS.md` for the
+remaining gaps (laser-cut vector file needs physical test-fit verification, self-certification
+submission not yet made).
+
 ## Hardware-specific notes
 
 - **DIY (`BuildYourOwn/`) is plain text/markdown** — normal git diffs work, edit it like code.
