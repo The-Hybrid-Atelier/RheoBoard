@@ -3,7 +3,7 @@
 - **Time:** ~15–30 min
 - **Difficulty:** easy
 
-Power the 2P1V rig: **12 V adapter** to both L298N motor rails, plus micro-USB to the ESP32. Data
+Power this design: **12 V adapter** to both L298N motor rails, plus micro-USB to the ESP32. Data
 path: USB serial (bench) and BLE (RheoData).
 
 ## What you'll need for this step

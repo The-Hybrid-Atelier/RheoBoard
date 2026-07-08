@@ -1,11 +1,11 @@
 # Circuit / wiring diagrams
 
-**2P1V rig** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
-[`../software/2P1VX/`](../software/2P1VX/) (`2P1VX.ino`).
+**This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
+[`../software/rheometer-firmware/`](../software/rheometer-firmware/) (`2P1VX.ino`).
 
 ## Electrical wiring
 
-![2P1V electrical wiring diagram](2P1V-wiring-diagram.png)
+![Electrical wiring diagram](2P1V-wiring-diagram.png)
 
 Summary (see diagram for full detail):
 
@@ -15,7 +15,7 @@ Summary (see diagram for full detail):
 - **L298N #1 (pumps):** ENA/ENB jumpers OFF; IN1/IN3 looped to +5V, IN2/IN4 to GND (direction
   hardwired). OUT1/2 → PUMP1 (vacuum), OUT3/4 → PUMP2 (pressure).
 - **L298N #2 (valve):** same direction wiring. ENA→GPIO 14 (VALVE2). OUT1/OUT2→VALVE2. GPIO 15 /
-  ENB / OUT3/OUT4 may be left unwired in minimal 2P1V builds.
+  ENB / OUT3/OUT4 may be left unwired in this minimal build.
 - **Power:** external **12 V DC adapter** (≥ 2 A recommended) to both L298N motor power inputs;
   common GND with ESP32. PWM on ENA/ENB limits effective voltage to pumps (~4.5 V rated) and valve
   (~6 V rated) — see [`../BOM.md`](../BOM.md) notes.
@@ -25,7 +25,7 @@ GPIO map matches `PneumaticSystem.h` in firmware: `PIN_PUMP1_EN=32`, `PIN_PUMP2_
 
 ## Pneumatic plumbing
 
-![2P1V tube connection diagram](2P1V-tube-connection.png)
+![Pneumatic tube connection diagram](2P1V-tube-connection.png)
 
 See also [`pneumatic-plumbing.md`](pneumatic-plumbing.md) for text summary and REP cycle.
 
@@ -43,6 +43,7 @@ every part in this diagram (ESP32 Thing Plus, MPRLS sensor, L298N, Adafruit 4700
 ## Conventions
 
 - Prefer pictographic diagrams (like the images above) over abstract schematics for builders.
-- When updating wiring, update the image **and** the GPIO defines in `software/2P1VX/PneumaticSystem.h`
+- When updating wiring, update the image **and** the GPIO defines in
+  `software/rheometer-firmware/PneumaticSystem.h`
   together — keep them in sync.
 - A photo of the finished build from the same angle as the diagram is a useful supplement.

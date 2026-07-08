@@ -1,6 +1,10 @@
-# 2P1VX Firmware API
+# Firmware API
 
-2 pumps, 1 valve bench rig (SparkFun ESP32 Thing Plus + L298N).  
+This simple rheometer's firmware — 2 pumps, 1 valve bench rig (SparkFun ESP32 Thing Plus +
+L298N). The sketch file is still named `2P1VX.ino` and the compiled firmware still advertises
+itself over BLE as device `2P1VX` — that identifier is unchanged in the code itself, only the
+project's docs/folder naming dropped it. Look for `2P1VX` when scanning for the device in
+RheoData.  
 All parameters are runtime-settable over BLE without reflashing.
 
 ---

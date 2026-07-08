@@ -3,8 +3,8 @@
 - **Time:** ~30–60 min (first-time ESP32 toolchain setup)
 - **Difficulty:** moderate (requires computer + USB)
 
-Flash **`2P1VX`** — BLE firmware for the 2P1V rig. Source:
-[`../../../software/2P1VX/2P1VX.ino`](../../../software/2P1VX/2P1VX.ino).
+Flash the BLE firmware for this design. Source:
+[`../../../software/rheometer-firmware/2P1VX.ino`](../../../software/rheometer-firmware/2P1VX.ino).
 
 ## What you'll need for this step
 
@@ -26,8 +26,8 @@ Flash **`2P1VX`** — BLE firmware for the 2P1V rig. Source:
    ```
    Restart the Arduino IDE afterward. (Also depends on ESP32 BLE Arduino by Neil Kolban, usually
    bundled with the `esp32` core already.)
-5. Open `BuildYourOwn/software/2P1VX/2P1VX.ino` from this repo (or your sketchbook copy — keep
-   them in sync).
+5. Open `BuildYourOwn/software/rheometer-firmware/2P1VX.ino` from this repo (or your sketchbook
+   copy — keep them in sync).
 6. Board: **SparkFun ESP32 Thing Plus** (or generic **ESP32 Dev Module** — this is a plain
    ESP32-WROOM-32D/E, not S2/S3); select the micro-USB serial port.
 7. Upload. Open Serial Monitor @ **115200** baud.
@@ -43,7 +43,7 @@ Screenshot of board + port selection → save as `images/ide-settings.png` when 
 - Use a **data-capable** micro-USB cable — charge-only cables won't show a serial port.
 - If MPRLS or Button is missing/misaddressed, firmware may still boot but that device's readings
   won't work — check the Qwiic chain order and cable seating.
-- Full OSC/API docs: [`../../../software/2P1VX/README.md`](../../../software/2P1VX/README.md).
+- Full OSC/API docs: [`../../../software/rheometer-firmware/README.md`](../../../software/rheometer-firmware/README.md).
 
 ## Check before moving on
 

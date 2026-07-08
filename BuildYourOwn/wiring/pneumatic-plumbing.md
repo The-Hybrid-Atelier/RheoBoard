@@ -1,4 +1,4 @@
-# 2P1V pneumatic plumbing
+# Pneumatic plumbing
 
 Text companion to [`2P1V-tube-connection.png`](2P1V-tube-connection.png). Tubing: **3 mm ID silicone**
 ([Adafruit 4664](https://www.adafruit.com/product/4664) or equivalent).
@@ -33,7 +33,7 @@ Idle pump not selected is disconnected through the valve — no plug or seal nee
 
 ## REP cycle (firmware)
 
-Matches `2P1VX` firmware phases: **baseline → retract (PUMP1) → extrude (PUMP2) → relax**.
+Matches the firmware phases: **baseline → retract (PUMP1) → extrude (PUMP2) → relax**.
 
 1. **Baseline** — pumps off, ambient pressure sampling.
 2. **Retract** — VALVE2 OFF, PUMP1 on (vacuum).
@@ -41,4 +41,4 @@ Matches `2P1VX` firmware phases: **baseline → retract (PUMP1) → extrude (PUM
 4. **Relax** — tail of fixed 1500 ms REP window.
 
 Trigger via BLE (`rheo/rep`), Qwiic button (single click), onboard button, or USB serial `REP`.
-Full API: [`../software/2P1VX/README.md`](../software/2P1VX/README.md).
+Full API: [`../software/rheometer-firmware/README.md`](../software/rheometer-firmware/README.md).

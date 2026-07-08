@@ -1,8 +1,8 @@
-# Bill of Materials — Build Your Own (2P1V rig)
+# Bill of Materials — Build Your Own
 
 Parts list for the **2 pumps + 1 valve** BYO bench rig. Wiring:
 [`wiring/2P1V-wiring-diagram.png`](wiring/2P1V-wiring-diagram.png). Firmware:
-[`software/2P1VX/`](software/2P1VX/). Component photo sources/licenses:
+[`software/rheometer-firmware/`](software/rheometer-firmware/). Component photo sources/licenses:
 [`images/components/README.md`](images/components/README.md).
 
 | Photo | Part | Qty | Source/link | Datasheet | Notes |
@@ -32,6 +32,7 @@ Parts list for the **2 pumps + 1 valve** BYO bench rig. Wiring:
 - The L298N photo is a generic-module stand-in (no single canonical vendor page) — see
   [`images/components/README.md`](images/components/README.md) for its source/license. Swap it for
   a photo of your exact board if it looks different.
-- When swapping a part, update this table, `wiring/` diagrams, and `software/2P1VX/PneumaticSystem.h`
+- When swapping a part, update this table, `wiring/` diagrams, and
+  `software/rheometer-firmware/PneumaticSystem.h`
   GPIO defines together.
 - Record any substitution in `references.md` and `PROGRESS.md`.

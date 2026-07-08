@@ -10,13 +10,13 @@ step — see the per-step status below._
 
 ## Overview
 
-You'll build the **2P1V rig**: a benchtop pneumatic "pull-push" measurement head — 2 air pumps +
+You'll build **this simple rheometer**: a benchtop pneumatic "pull-push" measurement head — 2 air pumps +
 1 valve zip-tied to a laser-cut acrylic panel, driven by an ESP32 over BLE, sensed by a Qwiic
 MicroPressure sensor. The end result is a device that runs a **REP** (retract → extrude pulse)
 on command — from BLE (RheoData), the onboard/Qwiic button, or USB serial — and streams a
 pressure trace for each one.
 
-_Hero photo/video: add once a build exists._
+![This simple rheometer — assembled bench prototype](../images/teaser.png)
 
 - **Estimated build time:** not yet measured end-to-end by a human build. Summing the per-step
   time estimates below gives **~4–7 hours hands-on** for a first-timer, dominated by step 03's
@@ -78,7 +78,7 @@ step it's tagged with._
 - **(01)** Don't start wiring until every `BOM.md` row is accounted for — discovering a missing
   part mid-build is far more costly than catching it during inventory.
 - **(02)** Leave the VALVE1 zip-tie slot empty — it's a reserved position for a future 2-valve
-  variant, not part of this 2P1V build.
+  variant, not part of this build.
 - **(03)** L298N ENA/ENB jumpers must be **removed** — the ESP32 drives those pins with PWM, and a
   jumper would fight it.
 - **(03)** Pumps are ~4.5 V parts riding on a 12 V motor rail; effective drive is set by firmware

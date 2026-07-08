@@ -24,7 +24,7 @@
 4. Place and zip-tie each component per the numbered map in
    [`laser-cut/panel-placement-map.png`](../../../laser-cut/panel-placement-map.png) and the table
    in [`laser-cut/README.md`](../../../laser-cut/README.md#component-placement--zip-tie-map):
-   PUMP1/PUMP2 lying flat, VALVE2 (leave the VALVE1 slot empty — unpopulated in this 2P1V build),
+   PUMP1/PUMP2 lying flat, VALVE2 (leave the VALVE1 slot empty — unpopulated in this build),
    MPRLS + Button next to the ESP32, both L298N boards clear of their heatsinks, ESP32, and the
    power terminal block.
 5. Don't wire anything yet — this step is mechanical placement only. Electrical wiring is
