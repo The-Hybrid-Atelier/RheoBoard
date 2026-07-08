@@ -8,6 +8,90 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (5)
+
+Corrected BYO electronics BOM to match actual parts:
+
+- **Pumps:** [Adafruit 4700](https://www.adafruit.com/product/4700) ZR320-02PM air pump/vacuum (not
+  4699 peristaltic). Port plumbing sets flow direction; motor polarity does not.
+- **Valve:** [Adafruit 4663](https://www.adafruit.com/product/4663) FA0520E — qty 1 active in 2P1V.
+- **Power:** single external **12 V** adapter (both L298N motor rails); PWM limits effective drive.
+- **Sensor / MCU:** SparkFun Qwiic MicroPressure + ESP32 Thing Plus (unchanged).
+- Vendored datasheets: `references/datasheets/ZR320-02PM_4.5V.pdf`, `4663_C14660_DC_6V.pdf`.
+- Updated `BOM.md`, `references.md`, `wiring/`, `README.md`, tutorial steps 03 and 06.
+
+**Next:** update wiring diagram image if it still shows dual 6–7 V supplies or 4699 pumps; human-verify
+build against revised BOM.
+
+Not committed.
+
+## 2026-07-08 (4)
+
+Integrated **2P1VX** firmware and **2P1V** wiring/plumbing from user's Arduino sketchbook and diagrams:
+
+- Copied firmware into `software/2P1VX/` (`2P1VX.ino`, `PneumaticSystem.*`, `RheoSystem.*`, API README).
+- Added `wiring/2P1V-wiring-diagram.png`, `wiring/2P1V-tube-connection.png`, `wiring/pneumatic-plumbing.md`.
+- Populated `BOM.md` (2P1V rig parts + datasheet links where available).
+- Updated `README.md` (features, hardware, software config, connect/use, status checkboxes).
+- Updated `software/README.md`, `references.md` (parts + ThingPlusBLEOSC local lib note).
+- Filled tutorial steps 03, 04, 06, 07 with 2P1V-specific content (still needs human verification).
+
+**Next:** capture `images/ide-settings.png` + `images/teaser.png`; human-verify tutorial steps and
+`VERIFICATION.md`; decide whether to vendor `ThingPlusBLEOSC` into repo or document install-only.
+
+Not committed.
+
+## 2026-07-08 (3)
+
+Naming and tone cleanup:
+
+- Product names updated to **RheoMap**, **RheoData**, and **SlipAtlas** (replacing SlipTopo)
+  across `README.md`, `AGENTS.md`, `BuildYourOwn/README.md`, `product-specs.md`, and tutorial
+  step 08.
+- Removed "not actively worked on" / "dormant" / "not active" language for the PCB track
+  (`RheoBoard_V8_Final/`) — both hardware tracks stay in the repo; BYO remains the agent's
+  default focus unless told otherwise. PCB described neutrally in `AGENTS.md`.
+
+Not committed.
+
+## 2026-07-08 (2)
+
+User pointed to [Calico](https://github.com/jsli96/calico) as a closer documentation model than
+OpenTheremin alone. Restructured BYO scaffolding to match:
+
+- Rewrote `README.md` as Calico-style master builder doc: table of contents, features, hardware
+  (platform + electronics), software configuration, connect/use, tips, plus link-out to
+  `tutorial/steps/` for Instructables-depth detail.
+- Added `images/` (teaser, IDE settings, project-wide photos — Calico keeps these at repo root).
+- Added `previous-revisions/` (Calico's `calico 1.0 (previous model)/` pattern).
+- Updated `laser-cut/README.md` with Calico-style parts table + recommended settings block.
+- Updated `tutorial/README.md` doc model: Calico primary, OpenTheremin secondary.
+- Updated `references.md`, `product-specs.md`, `software/README.md`, `AGENTS.md`.
+
+Still all placeholders — no BOM parts, design files, firmware, or images yet. Not committed.
+
+**Next:** choose MCU/platform and populate `BOM.md` + `README.md` Features section first.
+
+## 2026-07-08
+
+Accessed OpenTheremin V4 sources (GitHub, website download page, local assembly PDF) and
+scaffolded RheoBoard BYO to **combine** their split documentation model in one repo:
+
+- **GitHub side** (`Electronics/` + `Software/`): added `software/` folder (firmware placeholder);
+  existing `BOM.md`, `wiring/`, `laser-cut/` map to their BOM/schematic/mechanical files (BYO
+  uses modules + pictographic wiring instead of a single KiCad PCB).
+- **Website/PDF side** (assembly + detailed flash guide): added 8 tutorial step folders
+  (01-kit-contents through 08-ready-to-use) inspired by the 7-step OpenTheremin PDF + software
+  upload page; step 04 is the combined flash guide.
+- `tutorial/README.md`: documentation model table mapping OpenTheremin → RheoBoard paths.
+- `references.md`: links to GitHub, website, and local PDF noted.
+
+All step READMEs are scaffold/placeholders only — rheometer-specific content still TBD once
+parts and firmware are chosen. Did not commit (per working agreement).
+
+**Next:** define actual BOM parts and rheometer-specific calibration/measurement workflow, then
+fill step 01 and 03 first (inventory + wiring depend on part choices).
+
 ## 2026-07-07 (8)
 
 Full audit against all three source articles (not just the biggest gap from two sessions ago).
