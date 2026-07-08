@@ -12,7 +12,7 @@ anything said here.
 
 There are two hardware tracks:
 
-1. **Build Your Own / BYO** (`BuildYourOwn/`) — off-the-shelf modules/dev boards on
+1. **Build Your Own / DIY** (`BuildYourOwn/`) — off-the-shelf modules/dev boards on
    breadboard/perfboard, documented with wiring diagrams + BOM + assembly instructions instead
    of CAD. **This is the current focus and holds essentially the entire harness** (progress log,
    core beliefs, references, product specs) — assume work is about this track and lives in this
@@ -24,7 +24,7 @@ There are two hardware tracks:
 
 ## Repository layout
 
-- `BuildYourOwn/` — the harness + BYO build. Builder-facing: `README.md` (single master doc),
+- `BuildYourOwn/` — the harness + DIY build. Builder-facing: `README.md` (single master doc),
   `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `tutorial/`, `VERIFICATION.md`.
   Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`, `references.md`.
 - `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
@@ -92,7 +92,7 @@ where agents in general are most prone to declaring victory too early, so treat 
 
 ## Hardware-specific notes
 
-- **BYO (`BuildYourOwn/`) is plain text/markdown** — normal git diffs work, edit it like code.
+- **DIY (`BuildYourOwn/`) is plain text/markdown** — normal git diffs work, edit it like code.
   Before calling a build revision "done," run it through `BuildYourOwn/VERIFICATION.md`.
 - **PCB (`RheoBoard_V8_Final/`) is Altium binaries** (`.PcbDoc`, `.SchDoc`, `.PcbLib`, `.SchLib`,
   `.PrjPcb*`, `.OutJob`, `.Cam`, `.simcfg`) with no meaningful text diff — Altium itself is the

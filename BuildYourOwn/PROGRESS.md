@@ -8,6 +8,30 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (18)
+
+Replaced every "BYO" with "DIY" across the project, per explicit user request ("Do not use
+'BYO'"). Purely a terminology swap — no structural changes.
+
+- Updated prose in `AGENTS.md` (3 spots), `BuildYourOwn/README.md`, `tutorial/README.md`,
+  `BOM.md`, `images/README.md`, `tutorial/steps/07-calibrate/README.md`, and every historical
+  mention across `PROGRESS.md` itself (whole-word replace, so it didn't touch `BuildYourOwn` —
+  that folder name doesn't contain "BYO" as a substring).
+- The regenerated wiring schematic from entry 17 had "BYO" baked into its rendered title text
+  (both the page title and the title block said "RheoBoard BYO") — re-ran the generator script
+  with "DIY" substituted and re-exported `wiring/2P1V-wiring-diagram.png` (same size, 49 KB).
+  Checked the other three generated/vendored diagrams (`2P1V-tube-connection.png`,
+  `panel-system-diagram.png`, `panel-placement-map.png`) for baked-in "BYO" text — none found, no
+  other images needed touching.
+- Did **not** rename the `BuildYourOwn/` folder or any filenames — the user's instruction was
+  about the "BYO" abbreviation in prose/labels, not the spelled-out folder name.
+- Ran `scripts/check-docs.sh` — all checks pass. Confirmed with a case-insensitive repo-wide
+  grep that no "byo" string remains anywhere.
+
+**Next:** none — this was a complete, verified sweep.
+
+---
+
 ## 2026-07-08 (17)
 
 Regenerated `wiring/2P1V-wiring-diagram.png` in a real schematic-capture style, per user
@@ -36,7 +60,7 @@ something out of KiCad/Eagle.
   diagrams over abstract schematics everywhere, which the new electrical diagram deliberately
   contradicts. Now states electrical wiring is schematic-style (precision) while pneumatic
   plumbing stays pictographic (physical tube routing, not electrical nets).
-- Also dropped "2P1V" from the on-image title text (now "RheoBoard BYO — Electrical Schematic")
+- Also dropped "2P1V" from the on-image title text (now "RheoBoard DIY — Electrical Schematic")
   to match the broader de-branding done this session — left the **filename**
   (`2P1V-wiring-diagram.png`) alone since renaming files is a separate, larger decision (see
   entry 14 and the tech-debt note it left).
@@ -230,7 +254,7 @@ project docs, and asked for them out.
 - Stripped references from 13 files: `README.md`'s "Documentation model" blockquote and three
   "Calico equivalent"/Instructables-layer asides; `tutorial/README.md`'s entire "Documentation
   model" section (the Calico/OpenTheremin table + PDF note) and a "Calico keeps tips..." aside;
-  `product-specs.md`'s BYO bullet; `laser-cut/README.md`'s "Modeled on Calico" intro;
+  `product-specs.md`'s DIY bullet; `laser-cut/README.md`'s "Modeled on Calico" intro;
   `images/README.md`'s "Modeled on Calico" intro; `software/README.md`'s "(Calico pattern)"
   aside; `AGENTS.md`'s "(Calico-style master doc)" aside; and OpenTheremin "equivalent" asides in
   tutorial steps 01, 02, 05, 07, 08.
@@ -411,7 +435,7 @@ Not committed.
 
 ## 2026-07-08 (5)
 
-Corrected BYO electronics BOM to match actual parts:
+Corrected DIY electronics BOM to match actual parts:
 
 - **Pumps:** [Adafruit 4700](https://www.adafruit.com/product/4700) ZR320-02PM air pump/vacuum (not
   4699 peristaltic). Port plumbing sets flow direction; motor polarity does not.
@@ -450,7 +474,7 @@ Naming and tone cleanup:
   across `README.md`, `AGENTS.md`, `BuildYourOwn/README.md`, `product-specs.md`, and tutorial
   step 08.
 - Removed "not actively worked on" / "dormant" / "not active" language for the PCB track
-  (`RheoBoard_V8_Final/`) — both hardware tracks stay in the repo; BYO remains the agent's
+  (`RheoBoard_V8_Final/`) — both hardware tracks stay in the repo; DIY remains the agent's
   default focus unless told otherwise. PCB described neutrally in `AGENTS.md`.
 
 Not committed.
@@ -458,7 +482,7 @@ Not committed.
 ## 2026-07-08 (2)
 
 User pointed to [Calico](https://github.com/jsli96/calico) as a closer documentation model than
-OpenTheremin alone. Restructured BYO scaffolding to match:
+OpenTheremin alone. Restructured DIY scaffolding to match:
 
 - Rewrote `README.md` as Calico-style master builder doc: table of contents, features, hardware
   (platform + electronics), software configuration, connect/use, tips, plus link-out to
@@ -476,10 +500,10 @@ Still all placeholders — no BOM parts, design files, firmware, or images yet. 
 ## 2026-07-08
 
 Accessed OpenTheremin V4 sources (GitHub, website download page, local assembly PDF) and
-scaffolded RheoBoard BYO to **combine** their split documentation model in one repo:
+scaffolded RheoBoard DIY to **combine** their split documentation model in one repo:
 
 - **GitHub side** (`Electronics/` + `Software/`): added `software/` folder (firmware placeholder);
-  existing `BOM.md`, `wiring/`, `laser-cut/` map to their BOM/schematic/mechanical files (BYO
+  existing `BOM.md`, `wiring/`, `laser-cut/` map to their BOM/schematic/mechanical files (DIY
   uses modules + pictographic wiring instead of a single KiCad PCB).
 - **Website/PDF side** (assembly + detailed flash guide): added 8 tutorial step folders
   (01-kit-contents through 08-ready-to-use) inspired by the 7-step OpenTheremin PDF + software
@@ -537,8 +561,8 @@ the user) should `git status`/`git diff` to see what's pending from this one.
 Consolidated the entire harness into `BuildYourOwn/`, removing the top-level `docs/` folder.
 Prior sessions had drifted toward treating `docs/` and `BuildYourOwn/` as parallel structures,
 which read as duplication even after the last cleanup pass — the real fix was to stop having two
-top-level trees at all, since BYO is currently the only active track and everything under
-`docs/` that wasn't PCB-specific was really about BYO anyway.
+top-level trees at all, since DIY is currently the only active track and everything under
+`docs/` that wasn't PCB-specific was really about DIY anyway.
 
 - Moved into `BuildYourOwn/` (flat, no subfolder): `PROGRESS.md`, `core-beliefs.md`,
   `product-specs.md`, `references.md`, `exec-plans/` (active/completed/tech-debt-tracker/template).
@@ -640,7 +664,7 @@ whole tutorial rather than trickling steps in ad hoc.
 
 Learned there are two hardware tracks, not one, and restructured the repo accordingly:
 
-- **Build Your Own (BYO)** — off-the-shelf modules/dev boards, breadboard/perfboard, wiring
+- **Build Your Own (DIY)** — off-the-shelf modules/dev boards, breadboard/perfboard, wiring
   diagrams + BOM + assembly guide instead of CAD. **This is the current focus going forward.**
 - **PCB** — the existing Altium project (`RheoBoard_V8_Final/`). Not actively worked on now.
 
@@ -653,12 +677,12 @@ Changes:
   DRC/ERC, continuity/power-up checks instead). Added `docs/hardware/index.md` as the map
   between the two.
 - Updated `AGENTS.md`, `README.md`, `docs/product-specs/index.md` to describe both tracks and
-  flag BYO as current focus.
+  flag DIY as current focus.
 - Did **not** touch `RheoBoard_V8_Final/` itself — left it exactly where it is to avoid any
   risk of breaking internal Altium project references.
 
 **Next:** start populating `BuildYourOwn/BOM.md` once parts are chosen — probably worth opening
-an exec-plan for the first BYO revision rather than editing ad hoc.
+an exec-plan for the first DIY revision rather than editing ad hoc.
 
 ## 2026-07-07
 

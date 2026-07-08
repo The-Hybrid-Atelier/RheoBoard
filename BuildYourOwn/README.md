@@ -49,7 +49,7 @@ Parts list: [`BOM.md`](BOM.md) (with component photos).
 
 Wiring: pictographic breadboard-style diagrams in [`wiring/`](wiring/) — not abstract schematics.
 
-This BYO track wires breakout boards instead of a custom PCB; optional custom PCB docs live in
+This DIY track wires breakout boards instead of a custom PCB; optional custom PCB docs live in
 [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/).
 
 **This design** — electrical wiring and pneumatic plumbing:

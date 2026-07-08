@@ -1,7 +1,7 @@
 # Tutorial: Build Your Own Rheometer
 
 An Instructables-style, step-by-step guide that takes someone from zero to a working DIY
-rheometer build. This is the primary deliverable of the BYO track — everything else in
+rheometer build. This is the primary deliverable of the DIY track — everything else in
 `BuildYourOwn/` (`BOM.md`, `laser-cut/`, `wiring/`, `software/`) is a resource this tutorial
 links out to.
 

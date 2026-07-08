@@ -1,6 +1,6 @@
 # Bill of Materials — Build Your Own
 
-Parts list for the **2 pumps + 1 valve** BYO bench rig. Wiring:
+Parts list for the **2 pumps + 1 valve** DIY bench rig. Wiring:
 [`wiring/2P1V-wiring-diagram.png`](wiring/2P1V-wiring-diagram.png). Firmware:
 [`software/rheometer-firmware/`](software/rheometer-firmware/). Component photo sources/licenses:
 [`images/components/README.md`](images/components/README.md).

@@ -3,7 +3,7 @@
 - **Time:** ~20–30 min for an initial tuning pass (ongoing — re-tune per fluid/fixture as needed)
 - **Difficulty:** moderate
 
-RheoBoard BYO uses **runtime BLE parameters** rather than a one-shot onboard calibration. Firmware
+RheoBoard DIY uses **runtime BLE parameters** rather than a one-shot onboard calibration. Firmware
 defaults are tuned for this design's bench rig; adjust per fluid/fixture via RheoData OSC.
 
 ## What you'll need for this step
