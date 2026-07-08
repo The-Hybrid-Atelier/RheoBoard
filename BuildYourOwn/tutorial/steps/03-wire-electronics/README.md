@@ -47,7 +47,7 @@ Diagram reference + photo of actual wiring from the same angle as the diagram.
 - Pumps are ~4.5 V parts on a 12 V rail — use firmware PWM defaults; avoid 100% duty for long runs
   (Adafruit recommends ~50% duty for the 4700).
 - Any deviation from the published diagram must be documented (update `wiring/` or note in
-  exec-plan).
+  `PROGRESS.md`).
 
 ## Check before moving on
 

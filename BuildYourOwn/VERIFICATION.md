@@ -1,7 +1,7 @@
 # Build verification checklist
 
-Run through before calling a build revision "done." Copy the relevant items into the exec-plan
-for the change and check them off there.
+Run through before calling a build revision "done." Check items off here, or copy the relevant
+items into `PROGRESS.md` for the change and check them off there.
 
 > **Every item below requires a human to physically do or observe something.** An agent must
 > never check these off itself — see `AGENTS.md` → "What the agent can and can't verify." Use

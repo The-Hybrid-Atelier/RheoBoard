@@ -14,8 +14,8 @@
 ## Instructions
 
 1. Unpack and inventory every item against `BOM.md`.
-2. Note anything missing or substituted — log in an exec-plan if it's a design change, don't
-   silently substitute.
+2. Note anything missing or substituted — record it in `PROGRESS.md` if it's a design change,
+   don't silently substitute.
 3. Gather tools listed in [`../../README.md`](../../README.md) → "Before you start."
 
 ## Media

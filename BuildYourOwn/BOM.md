@@ -18,6 +18,10 @@ Parts list for the **2 pumps + 1 valve** BYO bench rig. Wiring:
 | — | Silicone tubing 3 mm ID | 1 | https://www.adafruit.com/product/4664 | — | Pneumatic plumbing; see `wiring/pneumatic-plumbing.md` |
 | — | Qwiic cables (×2) | 2 | https://www.sparkfun.com/cables.html | — | ESP32 → MicroPressure → Button (daisy-chained on one I2C bus) |
 | — | micro-USB cable | 1 | — | — | Flash `2P1VX.ino`; also powers the ESP32 during upload/bench use |
+| — | Acrylic panel, laser-cut (290 × 200 × 3 mm) | 1 | — | — | Mounting platform for every component; see [`laser-cut/`](laser-cut/) for cut file + placement map (vector source still TBD) |
+| — | Zip ties, small (~2.5 mm wide) | ~20 | — | — | Every component is zip-tied to the panel, not screwed; see [`laser-cut/README.md`](laser-cut/README.md) for tie counts per part |
+| — | Ø10 panel-mount bulkhead fitting | 1 | — | — | Chamber/nozzle mount point on the panel; pairs with the 3 mm ID tubing above |
+| — | Rubber/plastic feet | 4 | — | — | Panel corner feet |
 
 ## Notes
 
@@ -30,6 +34,4 @@ Parts list for the **2 pumps + 1 valve** BYO bench rig. Wiring:
   a photo of your exact board if it looks different.
 - When swapping a part, update this table, `wiring/` diagrams, and `software/2P1VX/PneumaticSystem.h`
   GPIO defines together.
-- Record any substitution in `references.md` and the relevant exec-plan decision log.
-- Laser-cut platform parts (if used) are not listed here yet — add rows when `laser-cut/` design
-  files land.
+- Record any substitution in `references.md` and `PROGRESS.md`.
