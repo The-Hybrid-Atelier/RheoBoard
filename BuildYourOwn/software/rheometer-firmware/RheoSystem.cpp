@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Charlie Vuong -- see ../../../LICENSE-SOFTWARE.txt
 #include "RheoSystem.h"
 #include "OSCHandler.h"
 

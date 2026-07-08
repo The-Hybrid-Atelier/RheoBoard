@@ -5,6 +5,9 @@ Parts list for the **2 pumps + 1 valve** DIY bench rig. Wiring:
 [`../software/rheometer-firmware/`](../software/rheometer-firmware/). Component photo sources/licenses:
 [`images/README.md`](images/README.md).
 
+License: CERN-OHL-W-2.0 — see [`../../LICENSE-HARDWARE.txt`](../../LICENSE-HARDWARE.txt). Current
+hardware revision: see [`REVISIONS.md`](REVISIONS.md).
+
 | Photo | Part | Qty | Source/link | Datasheet | Notes |
 |---|---|---|---|---|---|
 | <img src="images/esp32-thing-plus.jpg" width="100" alt="ESP32 Thing Plus"> | SparkFun ESP32 Thing Plus (micro-USB, WRL-15663) | 1 | https://www.sparkfun.com/sparkfun-esp32-thing-plus.html | [`references/datasheets/ESP32_Thing_Plus_Schematic.pdf`](references/datasheets/ESP32_Thing_Plus_Schematic.pdf), [`ESP32_Thing_Plus_Graphical_Datasheet.pdf`](references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf) | MCU; plain ESP32-WROOM-32D/E (not S2/S3); powers + programs over micro-USB; Qwiic port for sensor chain |
@@ -18,7 +21,7 @@ Parts list for the **2 pumps + 1 valve** DIY bench rig. Wiring:
 | — | Silicone tubing 3 mm ID | 1 | https://www.adafruit.com/product/4664 | — | Pneumatic plumbing; see `wiring/pneumatic-plumbing.md` |
 | — | Qwiic cables (×2) | 2 | https://www.sparkfun.com/cables.html | — | ESP32 → MicroPressure → Button (daisy-chained on one I2C bus) |
 | — | micro-USB cable | 1 | — | — | Flash `2P1VX.ino`; also powers the ESP32 during upload/bench use |
-| — | Acrylic panel, laser-cut (290 × 200 × 3 mm) | 1 | — | — | Mounting platform for every component; see [`../laser-cut/`](../laser-cut/) for cut file + placement map (vector source still TBD) |
+| — | Acrylic panel, laser-cut (290 × 200 × 3 mm) | 1 | — | — | Mounting platform for every component; see [`../laser-cut/`](../laser-cut/) for cut file + placement map (draft vector file, not yet test-fit — see status there) |
 | — | Zip ties, small (~2.5 mm wide) | ~20 | — | — | Every component is zip-tied to the panel, not screwed; see [`../laser-cut/README.md`](../laser-cut/README.md) for tie counts per part |
 | — | Ø10 panel-mount bulkhead fitting | 1 | — | — | Chamber/nozzle mount point on the panel; pairs with the 3 mm ID tubing above |
 | — | Rubber/plastic feet | 4 | — | — | Panel corner feet |

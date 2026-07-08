@@ -3,6 +3,8 @@
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
 [`../../software/rheometer-firmware/`](../../software/rheometer-firmware/) (`2P1VX.ino`).
 
+License: CERN-OHL-W-2.0 — see [`../../../LICENSE-HARDWARE.txt`](../../../LICENSE-HARDWARE.txt).
+
 ## Electrical wiring
 
 <a href="2P1V-wiring-diagram.png"><img src="2P1V-wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
@@ -49,3 +51,16 @@ every part in this diagram (ESP32 Thing Plus, MPRLS sensor, L298N, Adafruit 4700
   `../../software/rheometer-firmware/PneumaticSystem.h`
   together — keep them in sync.
 - A photo of the finished build from the same angle as the diagram is a useful supplement.
+
+## Regenerating the electrical diagram
+
+`2P1V-wiring-diagram.png` is a rendered export — [`generate_wiring_diagram.py`](generate_wiring_diagram.py)
+is the actual editable source (requires `matplotlib`; `Pillow` optional, used to shrink the PNG).
+Edit the script, not the PNG directly:
+
+```bash
+python3 generate_wiring_diagram.py
+```
+
+`2P1V-tube-connection.png` (pneumatic) has no equivalent script yet — it's photo/pictogram-style,
+not a generated diagram.

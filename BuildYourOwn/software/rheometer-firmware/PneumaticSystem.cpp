@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Charlie Vuong -- see ../../../LICENSE-SOFTWARE.txt
 #include <Wire.h>
 #include "PneumaticSystem.h"
 #include "OSCHandler.h"

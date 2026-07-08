@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="290.0mm" height="200.0mm" viewBox="0 0 290.0 200.0">
+<rect x="0" y="0" width="290.0" height="200.0" rx="3.0" fill="none" stroke="black" stroke-width="0.2"/>
+<circle cx="10.05" cy="10.06" r="2.975" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="279.95" cy="10.06" r="2.975" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="10.05" cy="189.94" r="2.975" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="279.95" cy="189.94" r="2.975" fill="none" stroke="red" stroke-width="0.2"/>
+<circle cx="261.96" cy="60.06" r="6.23" fill="none" stroke="red" stroke-width="0.2"/>
+<g data-column="column A (x~34-66mm -- pumps + L298N #1, per placement map)">
+<rect x="28.89" y="16.71" width="10.48" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="60.89" y="16.71" width="10.48" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="28.88" y="49.86" width="10.20" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="60.89" y="49.86" width="10.20" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="28.88" y="68.84" width="10.20" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="60.89" y="68.84" width="10.20" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="28.60" y="101.70" width="10.76" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="60.61" y="101.70" width="10.76" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="32.29" y="120.68" width="9.63" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="58.05" y="120.68" width="9.63" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="32.29" y="169.69" width="9.63" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="58.05" y="169.69" width="9.63" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+</g>
+<g data-column="column B (x~106-134mm -- valves + L298N #2, per placement map)">
+<rect x="104.22" y="20.96" width="9.63" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="126.30" y="20.96" width="9.35" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="104.22" y="45.61" width="3.96" height="5.38" rx="1.80" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="110.17" y="45.61" width="3.68" height="5.38" rx="1.67" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="126.31" y="45.61" width="3.68" height="5.38" rx="1.67" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="131.69" y="45.61" width="3.96" height="5.38" rx="1.80" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="104.22" y="73.09" width="9.63" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="126.30" y="73.09" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="104.22" y="97.45" width="9.63" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="126.30" y="97.45" width="9.35" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="113.56" y="106.23" width="4.81" height="7.65" rx="2.19" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="121.49" y="106.23" width="5.10" height="7.37" rx="2.32" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="102.52" y="120.68" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="128.00" y="120.68" width="9.63" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="102.52" y="169.69" width="9.35" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="128.00" y="169.69" width="9.63" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+</g>
+<g data-column="column C (x~46-55mm -- narrow paired slot, same shape as the likely T-connector-node pairs at y~48/110/154mm elsewhere on this panel)">
+<rect x="43.62" y="106.23" width="4.81" height="7.37" rx="2.19" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="52.68" y="106.23" width="3.96" height="7.65" rx="1.80" fill="none" stroke="red" stroke-width="0.2"/>
+</g>
+<g data-column="column D (x~122-260mm -- MPRLS/BUTTON/ESP32 area, per placement map)">
+<rect x="117.81" y="51.28" width="8.50" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="191.73" y="51.28" width="8.50" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="117.81" y="63.17" width="8.50" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="191.73" y="63.18" width="8.50" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="177.57" y="72.23" width="5.38" height="9.35" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="209.00" y="72.23" width="5.38" height="9.35" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="224.58" y="72.23" width="5.38" height="9.35" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="256.02" y="72.52" width="5.38" height="9.07" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="177.57" y="86.41" width="5.38" height="9.35" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="209.00" y="86.41" width="5.38" height="9.35" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="224.58" y="86.69" width="5.38" height="9.07" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="256.02" y="86.41" width="5.38" height="9.35" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="183.79" y="126.91" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="218.91" y="126.91" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="158.59" y="150.43" width="4.81" height="7.37" rx="2.19" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="166.52" y="150.43" width="5.10" height="7.08" rx="2.32" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="183.79" y="155.53" width="9.35" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="218.63" y="155.53" width="9.35" height="5.67" rx="2.58" fill="none" stroke="red" stroke-width="0.2"/>
+</g>
+<g data-column="column E (x~249-267mm -- PWR terminal block area, per placement map)">
+<rect x="246.11" y="167.70" width="5.66" height="8.50" rx="2.57" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="264.23" y="167.70" width="5.66" height="8.50" rx="2.57" fill="none" stroke="red" stroke-width="0.2"/>
+</g>
+</svg>
