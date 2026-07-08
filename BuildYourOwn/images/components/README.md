@@ -20,7 +20,7 @@ There are two similarly-named SparkFun boards — make sure you have the right o
 - **SparkFun ESP32 Thing Plus (micro-USB, WRL-15663)** — used by this build. Programs and powers
   over micro-USB.
 - **SparkFun Thing Plus – ESP32 WROOM (USB-C, WRL-20168)** — a newer, different board with a
-  USB-C connector. **Not** what `2P1VX` firmware targets in this repo; do not substitute without
+  USB-C connector. **Not** what the firmware in this repo targets; do not substitute without
   checking pinout differences first.
 
 ## Notes

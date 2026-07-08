@@ -1,11 +1,12 @@
 # Software / firmware
 
-**Entry point:** [`2P1VX/2P1VX.ino`](2P1VX/2P1VX.ino) — 2 pumps, 1 valve bench firmware for
-**RheoData** (SparkFun ESP32 Thing Plus, micro-USB, WRL-15663 + 2× L298N + Qwiic MicroPressure +
-Qwiic Button). BLE device name: `2P1VX`.
+**Entry point:** [`rheometer-firmware/2P1VX.ino`](rheometer-firmware/2P1VX.ino) — this design's
+2 pumps, 1 valve bench firmware for **RheoData** (SparkFun ESP32 Thing Plus, micro-USB,
+WRL-15663 + 2× L298N + Qwiic MicroPressure + Qwiic Button). The sketch file/BLE device name are
+unchanged in code: `2P1VX`.
 
-API reference: [`2P1VX/README.md`](2P1VX/README.md) (OSC commands, REP parameters, serial bench
-commands).
+API reference: [`rheometer-firmware/README.md`](rheometer-firmware/README.md) (OSC commands, REP
+parameters, serial bench commands).
 
 ## Toolchain
 
@@ -47,7 +48,8 @@ Restart the Arduino IDE afterward so it picks up the new library.
 
 ## Upload
 
-1. Open `2P1VX/2P1VX.ino` in Arduino IDE (from this repo, or your sketchbook copy — see below).
+1. Open `rheometer-firmware/2P1VX.ino` in Arduino IDE (from this repo, or your sketchbook copy —
+   see below).
 2. Select board **SparkFun ESP32 Thing Plus** (or **ESP32 Dev Module**) and the micro-USB port.
 3. Upload. Serial Monitor @ 115200 should print `2P1VX initialized`.
 4. Builder walkthrough: [`../tutorial/steps/04-install-firmware/`](../tutorial/steps/04-install-firmware/).
@@ -60,8 +62,8 @@ Firmware may also be edited from:
 
 `/Users/charlievuong/Documents/Arduino/RheoData/thingplus/2P1VX`
 
-**`BuildYourOwn/software/2P1VX/` in this repo is the copy to commit.** Sync changes between
-sketchbook and repo before committing so they don't drift.
+**`BuildYourOwn/software/rheometer-firmware/` in this repo is the copy to commit.** Sync changes
+between sketchbook and repo before committing so they don't drift.
 
 ## Connect and use (summary)
 

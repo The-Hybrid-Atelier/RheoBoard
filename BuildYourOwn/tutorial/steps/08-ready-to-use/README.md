@@ -13,7 +13,7 @@ triggered a REP from all three control paths at least once.
   BLE advertising as confirmed in step 06).
 - **Design files:** none.
 - **Tools:** RheoData (BLE) and/or a serial monitor (USB) for the workflow below. Full OSC/serial
-  API: [`../../../software/2P1VX/README.md`](../../../software/2P1VX/README.md).
+  API: [`../../../software/rheometer-firmware/README.md`](../../../software/rheometer-firmware/README.md).
 
 ## Instructions
 
@@ -46,7 +46,7 @@ without needing Serial Monitor open.
 | `rheo/api` (BLE) | Prints the full supported OSC command list back over BLE/Serial |
 
 Full parameter reference (REP timing, sampling rate, etc.): step 07 and
-[`../../../software/2P1VX/README.md`](../../../software/2P1VX/README.md).
+[`../../../software/rheometer-firmware/README.md`](../../../software/rheometer-firmware/README.md).
 
 ### 3. Read a measurement
 
@@ -65,8 +65,8 @@ human sign-off block at the bottom — this is the final gate before calling the
 
 ## Media
 
-Hero photo/video of a working rig mid-REP (LED lit) — suitable for the tutorial overview section
-and `images/teaser.png`.
+`../../../images/teaser.png` has an assembled-rig photo. Still wanted: a photo/video of the rig
+mid-REP (LED lit) to show it actually running, not just assembled.
 
 ## Tips / common mistakes
 

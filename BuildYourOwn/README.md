@@ -5,7 +5,7 @@ a laser-cut platform, pictographic wiring diagrams, firmware, and a step-by-step
 
 _Custom PCB variant: [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/)_
 
-_Add `images/teaser.png` here when it exists._
+![This simple rheometer — assembled bench prototype](images/teaser.png)
 
 ## Table of contents
 
@@ -25,8 +25,8 @@ _Add `images/teaser.png` here when it exists._
   1 solenoid air valve ([Adafruit 4663](https://www.adafruit.com/product/4663)) — switched-port
   "flip" plumbing for retract/extrude REP cycles.
 - **Sensing:** SparkFun Qwiic MicroPressure (Honeywell MPRLS) on the shared pneumatic line.
-- **Control:** BLE OSC API (`2P1VX` firmware), SparkFun Qwiic Button (daisy-chained after the
-  sensor) for onboard gestures, USB serial commands for bench debug.
+- **Control:** BLE OSC API (this design's firmware), SparkFun Qwiic Button (daisy-chained after
+  the sensor) for onboard gestures, USB serial commands for bench debug.
 - **Drivers:** 2× L298N H-bridge modules (#1 = 2 pumps, #2 = valve); one external **12 V** adapter
   powers both.
 
@@ -52,11 +52,11 @@ Wiring: pictographic breadboard-style diagrams in [`wiring/`](wiring/) — not a
 This BYO track wires breakout boards instead of a custom PCB; optional custom PCB docs live in
 [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/).
 
-**2P1V rig** — electrical wiring and pneumatic plumbing:
+**This design** — electrical wiring and pneumatic plumbing:
 
-![2P1V electrical wiring diagram](wiring/2P1V-wiring-diagram.png)
+![Electrical wiring diagram](wiring/2P1V-wiring-diagram.png)
 
-![2P1V pneumatic tube connection diagram](wiring/2P1V-tube-connection.png)
+![Pneumatic tube connection diagram](wiring/2P1V-tube-connection.png)
 
 Text summary of the pneumatic logic: [`wiring/pneumatic-plumbing.md`](wiring/pneumatic-plumbing.md).
 
@@ -71,7 +71,9 @@ Photo sources/licenses: [`images/components/README.md`](images/components/README
 
 ## Software configuration
 
-Firmware: [`software/2P1VX/2P1VX.ino`](software/2P1VX/2P1VX.ino) — device name **`2P1VX`**.
+Firmware: [`software/rheometer-firmware/2P1VX.ino`](software/rheometer-firmware/2P1VX.ino) — the
+code is unchanged, so it still advertises itself over BLE as **`2P1VX`**; look for that name when
+connecting from RheoData.
 
 1. Install [Arduino IDE](https://www.arduino.cc/en/software) 2.x and the ESP32 board package
    (Espressif `esp32` core — URL in [`software/README.md`](software/README.md)).
@@ -82,7 +84,7 @@ Firmware: [`software/2P1VX/2P1VX.ino`](software/2P1VX/2P1VX.ino) — device name
    Screenshot target: `images/ide-settings.png` (add when captured).
 4. Upload — full walkthrough: [`tutorial/steps/04-install-firmware/`](tutorial/steps/04-install-firmware/).
 
-API reference: [`software/2P1VX/README.md`](software/2P1VX/README.md).
+API reference: [`software/rheometer-firmware/README.md`](software/rheometer-firmware/README.md).
 
 ## Connect and use
 
@@ -133,10 +135,10 @@ Agent/session docs — not part of the builder-facing guide:
 
 ### Status
 
-- [x] `BOM.md` populated (2P1V rig; generic supply/tubing rows lack vendor links)
+- [x] `BOM.md` populated (generic supply/tubing rows lack vendor links)
 - [ ] `laser-cut/` design files complete
-- [x] `wiring/` pictographic diagram(s) complete (2P1V electrical + pneumatic)
-- [x] `software/` firmware present (`2P1VX`)
+- [x] `wiring/` pictographic diagram(s) complete (electrical + pneumatic)
+- [x] `software/` firmware present
 - [x] `tutorial/steps/` written (all 8 steps; step 05 partially blocked on RheoMap's fixture spec)
 - [ ] `tutorial/steps/` human-verified against a real build
 - [ ] Full build passed [`VERIFICATION.md`](VERIFICATION.md)

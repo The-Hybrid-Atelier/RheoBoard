@@ -39,7 +39,7 @@ the rig is physically ready for power — step 06 turns it on.
    enough slack that plugging in doesn't tug on the panel or its feet.
 5. **Environment:** avoid direct drafts or a heat source pointed at the chamber/sensor — the
    REP's baseline phase (ambient pressure sampling, default 420 ms — see
-   [`../../../software/2P1VX/README.md`](../../../software/2P1VX/README.md)) is short but not
+   [`../../../software/rheometer-firmware/README.md`](../../../software/rheometer-firmware/README.md)) is short but not
    instant, and a sudden draft during that window will bias the whole trace.
 
 ## Media

@@ -3,12 +3,12 @@
 - **Time:** ~20–30 min for an initial tuning pass (ongoing — re-tune per fluid/fixture as needed)
 - **Difficulty:** moderate
 
-RheoBoard BYO uses **runtime BLE parameters** rather than a one-shot onboard calibration. Defaults
-in `2P1VX` are tuned for the 2P1V bench rig; adjust per fluid/fixture via RheoData OSC.
+RheoBoard BYO uses **runtime BLE parameters** rather than a one-shot onboard calibration. Firmware
+defaults are tuned for this design's bench rig; adjust per fluid/fixture via RheoData OSC.
 
 ## What you'll need for this step
 
-- **Parts:** assembled 2P1V rig with firmware running; sample chamber/nozzle plumbed.
+- **Parts:** assembled rig with firmware running; sample chamber/nozzle plumbed.
 - **Design files:** none.
 - **Tools:** RheoData (BLE), optional USB serial for bench commands
 
@@ -24,7 +24,7 @@ in `2P1VX` are tuned for the 2P1V bench rig; adjust per fluid/fixture via RheoDa
 6. **Verify:** trigger `rheo/rep` and confirm pressure trace shape is repeatable across 3 runs
    (`rheo/rep/triad`).
 
-Full parameter list: [`../../../software/2P1VX/README.md`](../../../software/2P1VX/README.md).
+Full parameter list: [`../../../software/rheometer-firmware/README.md`](../../../software/rheometer-firmware/README.md).
 
 ## Media
 

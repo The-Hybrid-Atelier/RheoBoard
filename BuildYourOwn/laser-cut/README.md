@@ -1,6 +1,6 @@
 # Laser-cut platform — design files
 
-Design files for the laser-cut acrylic panel that mounts every 2P1V component (pumps, valve,
+Design files for the laser-cut acrylic panel that mounts every component of this design (pumps, valve,
 L298N drivers, ESP32, Qwiic sensor + button) with zip ties — no screws, no enclosure, just a flat
 mounting panel.
 
@@ -40,7 +40,7 @@ Looking at the panel from the front (top view). Colored box = component footprin
 zip-tie hole (cut); red dashes = zip-tie strap over the part. Full detail in
 [`panel-placement-map.png`](panel-placement-map.png).
 
-| # | Part | How it's tied | Status in our 2P1V build |
+| # | Part | How it's tied | Status in our build |
 |---|---|---|---|
 | 1–2 | PUMP1, PUMP2 (Adafruit 4700) | Lie flat; 2 zip-ties across the body (4 slots) each | Populated |
 | 3 | VALVE1 (Adafruit 4663) | 2 ties over the body (4 slots) | **Unpopulated / reserved.** Mirrors GPIO 15 being reserved and not populated in [`../wiring/2P1V-wiring-diagram.png`](../wiring/2P1V-wiring-diagram.png). Leave this slot empty unless building a 2-valve variant (see callout below). |
@@ -52,11 +52,11 @@ zip-tie hole (cut); red dashes = zip-tie strap over the part. Full detail in
 | T | T-connector (shared pneumatic line) | 1 tie at each node on the shared line | Populated |
 | PWR | Power terminal block | 1 tie on the terminal block | Populated |
 
-## ⚠️ Panel diagram shows a 2-valve (2P2V) system — we build 2P1V
+## ⚠️ Panel diagram shows a 2-valve (2P2V) system — this design uses a single valve
 
 [`panel-system-diagram.png`](panel-system-diagram.png) documents a **2P2V** variant: VALVE1 and
 VALVE2 each dedicated to one pump and driven independently (GPIO 14 → VALVE1, GPIO 15 → VALVE2).
-**That is not our current build.** Our 2P1V rig uses a single valve (VALVE2) whose metal/plastic
+**That is not our current build.** This design uses a single valve (VALVE2) whose metal/plastic
 poles switch one shared line between the two pumps — GPIO 15 stays reserved/unpopulated. The
 authoritative pneumatic and electrical reference for what we're actually building is:
 
@@ -67,7 +67,7 @@ authoritative pneumatic and electrical reference for what we're actually buildin
 The panel's *mechanical* layout (dimensions, component positions, hole map) is shared between
 both variants — only VALVE1's position, its tubing, and GPIO 15 are unused here. If a 2-valve
 variant gets built later, `panel-system-diagram.png` applies directly; update `BOM.md`, the
-wiring diagram, `pneumatic-plumbing.md`, and `software/2P1VX/PneumaticSystem.h` together at that
+wiring diagram, `pneumatic-plumbing.md`, and `software/rheometer-firmware/PneumaticSystem.h` together at that
 point (per `AGENTS.md`), and record the decision in `PROGRESS.md`.
 
 ## Parts

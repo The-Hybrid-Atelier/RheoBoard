@@ -27,7 +27,7 @@
 7. Continuity-check new connections **before** applying 12 V (see
    [`../../../VERIFICATION.md`](../../../VERIFICATION.md)).
 
-GPIO map must match [`../../../software/2P1VX/PneumaticSystem.h`](../../../software/2P1VX/PneumaticSystem.h).
+GPIO map must match [`../../../software/rheometer-firmware/PneumaticSystem.h`](../../../software/rheometer-firmware/PneumaticSystem.h).
 
 ## Pneumatic plumbing (same step or next)
 

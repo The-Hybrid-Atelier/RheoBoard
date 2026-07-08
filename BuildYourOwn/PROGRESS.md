@@ -8,6 +8,62 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (14)
+
+Stopped branding the build as "2P1V"/"2P1VX" in user-facing docs — user wants it referred to as
+"this design" or "this simple rheometer" instead, without touching the actual firmware/code.
+
+- **Renamed `software/2P1VX/` → `software/rheometer-firmware/`** (plain `mv`, not `git mv` — no
+  `git add`/staging performed). **Left every file inside untouched**, including the sketch's own
+  filename (`2P1VX.ino`) and its content (`DEVICE_NAME "2P1VX"` and all code/comments) — user was
+  explicit: don't change firmware or code, only the folder and its `README.md`.
+- Rewrote `software/rheometer-firmware/README.md`'s title/intro to drop the "2P1VX Firmware API"
+  branding, while explicitly noting the sketch file and BLE device name are still `2P1VX` in the
+  unchanged code — a builder scanning for the device in RheoData still needs that exact string.
+- Swept every other doc (`README.md`, `BOM.md`, `references.md`, `wiring/README.md`,
+  `wiring/pneumatic-plumbing.md`, `laser-cut/README.md`, `images/README.md`,
+  `images/components/README.md`, `software/README.md`, `tutorial/README.md`, all 8 tutorial step
+  READMEs) replacing descriptive/label uses of "2P1V rig" / "2P1VX firmware" with generic phrasing
+  ("this design," "this simple rheometer," "the firmware"), and updated every path reference from
+  `software/2P1VX/` to `software/rheometer-firmware/`.
+- **Deliberately kept** the literal string `2P1VX` in the small number of places where it's a
+  required technical fact, not decoration — the BLE device name a builder must look for in
+  RheoData, and literal quoted serial output (`2P1VX initialized`) — since the firmware itself is
+  unchanged and those strings are real. **Deliberately left alone:** the wiring diagram filenames
+  themselves (`2P1V-wiring-diagram.png`, `2P1V-tube-connection.png` — renaming image files wasn't
+  asked for, only the firmware folder), and all older `PROGRESS.md` entries below this one (not
+  rewriting history).
+- Ran `scripts/check-docs.sh` after the rename — no dangling links, confirming every reference to
+  the old `software/2P1VX/` path got updated.
+
+**Next:** if the wiring diagram filenames (`2P1V-*.png`) or the firmware's actual BLE device name
+should also drop "2P1V" at some point, that's a separate, larger decision (image regeneration /
+alt-text, or an actual firmware change affecting real device pairing) — flagged, not done here.
+
+---
+
+## 2026-07-08 (13)
+
+Added the first real build photo: `images/teaser.png`, a user-provided photo of the assembled
+bench build (user described it as representative of the final product's look).
+
+- Copied the photo to `images/teaser.png` and embedded it in `README.md` (top hero spot,
+  replacing the "add when it exists" placeholder) and `tutorial/README.md` (Overview section,
+  replacing the "add once a build exists" placeholder).
+- Updated `images/README.md`'s file table to mark `teaser.png` as added (still `TBD`:
+  `platform.png`, `wiring.png`, `ide-settings.png`).
+- Updated step 08's Media section to point at `images/teaser.png` for the assembled shot, and
+  narrowed the remaining ask to a photo/video of the rig actually mid-REP (LED lit), not just
+  assembled.
+- **Did not** cross-check the photo against the wiring diagram or laser-cut mounting scheme in
+  detail (e.g. exact zip-tie vs. tape mounting) — this was purely an image-placement task, not a
+  build-verification pass. Flagged in chat for the user to confirm separately if wanted.
+
+**Next:** `platform.png`, `wiring.png`, and `ide-settings.png` are still unphotographed; a
+mid-REP action shot/video is still wanted per step 08. Tutorial steps remain human-unverified.
+
+---
+
 ## 2026-07-08 (12)
 
 Wrote the tutorial in full detail — all 8 steps now have real instructions, and the last
@@ -25,7 +81,7 @@ Wrote the tutorial in full detail — all 8 steps now have real instructions, an
   sample/fixture geometry (standoff, alignment) depends on RheoMap's product spec, which is still
   `TBD` in `product-specs.md` — did not fabricate fixture specifics that don't exist yet.
 - **Step 08 (ready to use) — written from scratch:** using the full `2P1VX` firmware API (read from
-  `2P1VX.ino` / `PneumaticSystem.h` / `software/2P1VX/README.md`), documented all four REP trigger
+  `2P1VX.ino` / `PneumaticSystem.h` / `software/rheometer-firmware/README.md`), documented all four REP trigger
   paths (BLE `rheo/rep`, onboard boot-button GPIO 0, Qwiic single-click, USB serial `REP`), the
   Qwiic Button's other two gestures (double-click = latched suck, hold = momentary blow), the bench
   serial command set, and how to read a trace via RheoData or raw serial `#S`/`#PH` lines. Points at
