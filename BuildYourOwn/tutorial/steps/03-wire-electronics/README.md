@@ -5,8 +5,8 @@
 
 ## What you'll need for this step
 
-- **Parts:** electronics rows in [`../../../BOM.md`](../../../BOM.md).
-- **Design files:** [`../../../wiring/2P1V-wiring-diagram.png`](../../../wiring/2P1V-wiring-diagram.png) —
+- **Parts:** electronics rows in [`../../../hardware/BOM.md`](../../../hardware/BOM.md).
+- **Design files:** [`../../../hardware/wiring/2P1V-wiring-diagram.png`](../../../hardware/wiring/2P1V-wiring-diagram.png) —
   this diagram covers electrical wiring only; pneumatic plumbing is a separate diagram (see below).
 - **Tools:** soldering iron, wire strippers, multimeter, small screwdriver (L298N terminals)
 
@@ -31,8 +31,8 @@ GPIO map must match [`../../../software/rheometer-firmware/PneumaticSystem.h`](.
 
 ## Pneumatic plumbing (same step or next)
 
-After electrical wiring, plumb per [`../../../wiring/2P1V-tube-connection.png`](../../../wiring/2P1V-tube-connection.png)
-and [`../../../wiring/pneumatic-plumbing.md`](../../../wiring/pneumatic-plumbing.md).
+After electrical wiring, plumb per [`../../../hardware/wiring/2P1V-tube-connection.png`](../../../hardware/wiring/2P1V-tube-connection.png)
+and [`../../../hardware/wiring/pneumatic-plumbing.md`](../../../hardware/wiring/pneumatic-plumbing.md).
 
 **4700 port orientation matters:** PUMP1 side port → valve metal pole (vacuum); PUMP2 tubing port →
 valve plastic pole (pressure). Motor polarity does not flip air direction.
@@ -46,11 +46,11 @@ Diagram reference + photo of actual wiring from the same angle as the diagram.
 - L298N ENA/ENB jumpers must be **OFF** when using PWM from the ESP32.
 - Pumps are ~4.5 V parts on a 12 V rail — use firmware PWM defaults; avoid 100% duty for long runs
   (Adafruit recommends ~50% duty for the 4700).
-- Any deviation from the published diagram must be documented (update `wiring/` or note in
+- Any deviation from the published diagram must be documented (update `hardware/wiring/` or note in
   `PROGRESS.md`).
 
 ## Check before moving on
 
-- [ ] Wiring matches `wiring/2P1V-wiring-diagram.png`
-- [ ] Pneumatic plumbing matches `wiring/2P1V-tube-connection.png` (4700 port orientation)
+- [ ] Wiring matches `hardware/wiring/2P1V-wiring-diagram.png`
+- [ ] Pneumatic plumbing matches `hardware/wiring/2P1V-tube-connection.png` (4700 port orientation)
 - [ ] Continuity/short check passed (12 V not applied yet)

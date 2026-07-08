@@ -22,7 +22,7 @@ To add a step:
    `README.md`.
 4. Add it to the numbered list in `../README.md`.
 
-Keep step numbers stable once referenced elsewhere (e.g. from `BOM.md` notes) — if a step needs
+Keep step numbers stable once referenced elsewhere (e.g. from `hardware/BOM.md` notes) — if a step needs
 to be inserted later, it's fine to leave gaps (`05`, `06`, `07a`) rather than renumbering everything.
 
 _All eight step folders have written instructions now — see `../README.md` for per-step status

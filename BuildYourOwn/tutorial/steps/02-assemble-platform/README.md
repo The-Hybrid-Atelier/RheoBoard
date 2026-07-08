@@ -8,7 +8,7 @@
 ## What you'll need for this step
 
 - **Parts:** acrylic panel, zip ties (~20), Ø10 bulkhead fitting, 4× rubber/plastic feet — see
-  [`../../../BOM.md`](../../../BOM.md).
+  [`../../../hardware/BOM.md`](../../../hardware/BOM.md).
 - **Design files:** [`../../../laser-cut/`](../../../laser-cut/) — cut the panel first if not
   pre-cut. **Note:** as of this writing only a raster design reference exists there (placement
   map + cut-geometry preview); the laser-ready vector file (`.svg`/`.dxf`) still needs to be

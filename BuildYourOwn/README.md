@@ -7,6 +7,13 @@ _Custom PCB variant: [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/)_
 
 <img src="images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
 
+## Start here
+
+**This README is a reference doc, not the build guide.** To actually build one, start the
+numbered, photo-based walkthrough: **[`tutorial/README.md`](tutorial/README.md)** → steps 01–08
+in [`tutorial/steps/`](tutorial/steps/). Everything below (BOM, wiring, firmware) is background
+the tutorial links out to as it goes.
+
 ## Table of contents
 
 - [Features](#features)
@@ -45,29 +52,33 @@ laser-ready vector file (`.svg`/`.dxf`) and the physical cut are still TBD — s
 
 ### Electronics
 
-Parts list: [`BOM.md`](BOM.md) (with component photos).
+Everything electrical — parts list, wiring diagrams, component photos, and datasheets — lives in
+[`hardware/`](hardware/).
 
-Wiring: pictographic breadboard-style diagrams in [`wiring/`](wiring/) — not abstract schematics.
+Parts list: [`hardware/BOM.md`](hardware/BOM.md) (with component photos).
+
+Wiring: pictographic breadboard-style diagrams in [`hardware/wiring/`](hardware/wiring/) — not
+abstract schematics.
 
 This DIY track wires breakout boards instead of a custom PCB; optional custom PCB docs live in
 [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/).
 
 **This design** — electrical wiring and pneumatic plumbing:
 
-<a href="wiring/2P1V-wiring-diagram.png"><img src="wiring/2P1V-wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
+<a href="hardware/wiring/2P1V-wiring-diagram.png"><img src="hardware/wiring/2P1V-wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
 
-<a href="wiring/2P1V-tube-connection.png"><img src="wiring/2P1V-tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
+<a href="hardware/wiring/2P1V-tube-connection.png"><img src="hardware/wiring/2P1V-tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
-Text summary of the pneumatic logic: [`wiring/pneumatic-plumbing.md`](wiring/pneumatic-plumbing.md).
+Text summary of the pneumatic logic: [`hardware/wiring/pneumatic-plumbing.md`](hardware/wiring/pneumatic-plumbing.md).
 
 #### Component gallery
 
 | | | |
 |---|---|---|
-| <img src="images/components/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus"><br>SparkFun ESP32 Thing Plus (micro-USB) | <img src="images/components/qwiic-micropressure.jpg" width="180" alt="SparkFun Qwiic MicroPressure"><br>Qwiic MicroPressure (MPRLS) | <img src="images/components/qwiic-button.jpg" width="180" alt="SparkFun Qwiic Button"><br>Qwiic Button |
-| <img src="images/components/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="images/components/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) | <img src="images/components/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve |
+| <img src="hardware/images/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus"><br>SparkFun ESP32 Thing Plus (micro-USB) | <img src="hardware/images/qwiic-micropressure.jpg" width="180" alt="SparkFun Qwiic MicroPressure"><br>Qwiic MicroPressure (MPRLS) | <img src="hardware/images/qwiic-button.jpg" width="180" alt="SparkFun Qwiic Button"><br>Qwiic Button |
+| <img src="hardware/images/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="hardware/images/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) | <img src="hardware/images/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve |
 
-Photo sources/licenses: [`images/components/README.md`](images/components/README.md).
+Photo sources/licenses: [`hardware/images/README.md`](hardware/images/README.md).
 
 ## Software configuration
 
@@ -129,15 +140,15 @@ Agent/session docs — not part of the builder-facing guide:
 | [`PROGRESS.md`](PROGRESS.md) | Session log |
 | [`core-beliefs.md`](core-beliefs.md) | Operating principles |
 | [`product-specs.md`](product-specs.md) | What we're building and why |
-| [`references.md`](references.md) | Datasheets + external project links |
+| [`hardware/references/`](hardware/references/) | Datasheets + external project links |
 | [`VERIFICATION.md`](VERIFICATION.md) | Pre-release checklist (human sign-off) |
 | [`images/`](images/) | Teaser, IDE screenshots, project-wide photos |
 
 ### Status
 
-- [x] `BOM.md` populated (generic supply/tubing rows lack vendor links)
+- [x] `hardware/BOM.md` populated (generic supply/tubing rows lack vendor links)
 - [ ] `laser-cut/` design files complete
-- [x] `wiring/` pictographic diagram(s) complete (electrical + pneumatic)
+- [x] `hardware/wiring/` pictographic diagram(s) complete (electrical + pneumatic)
 - [x] `software/` firmware present
 - [x] `tutorial/steps/` written (all 8 steps; step 05 partially blocked on RheoMap's fixture spec)
 - [ ] `tutorial/steps/` human-verified against a real build

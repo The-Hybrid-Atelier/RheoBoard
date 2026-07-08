@@ -8,6 +8,109 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (20)
+
+Restructured `BuildYourOwn/`'s top level again, superseding entry 19's `assets/` folder — per
+explicit user request to make the tutorial the obvious starting point and group all electrical
+content (wiring, BOM, component photos, datasheets) under one `hardware/` folder, as a sibling to
+`laser-cut/` and `software/`. Asked 3 clarifying multiple-choice questions first (what happens to
+nested tutorial steps, what exactly "hardware" should contain, where it sits) since guessing wrong
+would mean a third reshuffle — user chose: keep `tutorial/steps/` nested as-is (just make
+`README.md` launch it more clearly), `hardware/` = wiring + BOM + component photos + datasheets
+(the full electronics bundle), and `hardware/` as a top-level sibling folder.
+
+- **New layout:**
+  - `hardware/BOM.md` — was `BOM.md` at root.
+  - `hardware/wiring/` — was `assets/wiring/` (unchanged contents: diagrams + `pneumatic-plumbing.md`).
+  - `hardware/images/` — was `assets/images/components/` (the 6 component photos + their README),
+    flattened one level since `hardware/` already narrows the scope to electrical parts.
+  - `hardware/references/` — was `assets/references/` (unchanged contents: `README.md` +
+    `datasheets/`).
+  - `images/` (top-level) — was `assets/images/` minus the `components/` subfolder (just
+    `teaser.jpg` + `README.md`, the project-wide/non-electrical photos). Dropped the now-pointless
+    `assets/` wrapper since nothing else remained under it — a single-child wrapper folder wasn't
+    adding value once wiring/references/component-photos moved out.
+  - `tutorial/` — untouched structurally (steps stay nested under `tutorial/steps/NN-*/`).
+- Added a "Start here" callout at the top of `README.md` (right after the hero image, before the
+  table of contents) explicitly stating the README is a reference doc and pointing to
+  `tutorial/README.md` as the actual build entry point — addresses the "should include all steps"
+  half of the request without physically flattening the tutorial folder.
+- Updated every cross-reference across the repo (`README.md`, `VERIFICATION.md`, `core-beliefs.md`,
+  `AGENTS.md`, `laser-cut/README.md`, `software/README.md`, `tutorial/README.md`,
+  `tutorial/_step-template/README.md`, all 8 tutorial step READMEs, and the moved files'
+  own internal links) — recomputed relative-path depth in both directions: some links got
+  shallower (e.g. `hardware/wiring/README.md`'s `../../BOM.md` → `../BOM.md` since BOM.md is now a
+  direct sibling in `hardware/`), others needed a new `hardware/` segment inserted
+  (e.g. tutorial steps' `../../../assets/wiring/...` → `../../../hardware/wiring/...`).
+- Fixed `scripts/check-docs.sh`'s hardcoded `bom_file="BuildYourOwn/BOM.md"` to
+  `BuildYourOwn/hardware/BOM.md` — the datasheet-coverage check was silently passing vacuously
+  (file not found → zero rows checked) until this was caught and fixed; re-ran after the fix and
+  confirmed it's now actually checking the real file.
+- Rewrote `AGENTS.md`'s "Repository layout" and "`BuildYourOwn/` map" sections to describe the new
+  `hardware/`/`images/`/`tutorial/`-starts-here structure instead of the one-session-old `assets/`
+  description from entry 19.
+- **Left entry 19 (and all earlier entries) untouched** — they correctly describe the repo as it
+  was at the time; only this entry and going forward reflect `hardware/`.
+- Verified with a fresh `rg -l "assets/"` sweep (not just the IDE's search tool, which had a stale
+  cache from the pre-move git state) that no live doc still points at the old `assets/` paths —
+  remaining hits are entry 19's historical prose and one unrelated `sparkfun.com/assets/...` URL.
+  Also spot-checked every `.md` file's relative links resolve on disk (`dirname(file) + link`
+  exists) across the whole `BuildYourOwn/` tree; the only "broken" hit is the step template's
+  placeholder `media/photo-01.jpg`, which is intentionally aspirational.
+- Ran `scripts/check-docs.sh` after all fixes — all three checks pass.
+
+**Next:** none from this reshuffle — verified clean. Same open items as before (real laser-cut
+vector file, `images/ide-settings.png` + `images/platform.png` + `images/wiring.png` captures,
+human verification of tutorial steps, RheoMap fixture spec for step 05).
+
+---
+
+## 2026-07-08 (19)
+
+Consolidated `images/`, `wiring/`, and `references.md`/`references/` into a single
+`assets/` folder, per explicit user request ("These are should be combine to same folder").
+All three were top-level, media/reference-heavy folders (photos, diagrams, vendored PDFs) —
+grouping them makes `BuildYourOwn/`'s top level read as prose docs + one media folder instead
+of three separate media-ish folders scattered alongside the markdown.
+
+- New layout: `assets/images/` (was `images/`, includes `components/` subfolder unchanged),
+  `assets/wiring/` (was `wiring/`, includes `pneumatic-plumbing.md` unchanged), and
+  `assets/references/` (was the `references.md` file *and* the separate `references/datasheets/`
+  folder — merged so the file becomes `assets/references/README.md` sitting next to its own
+  `datasheets/` subfolder, matching the `images/README.md` / `wiring/README.md` pattern of
+  "folder + its own README index").
+- **Named it `assets/`, not `media/`** — `media/` was already taken: every tutorial step has its
+  own per-step `tutorial/steps/NN-*/media/` folder for step-specific photos/video (see
+  `tutorial/_step-template/README.md`). Reusing "media" for the new top-level folder would have
+  created a confusing naming collision between two different-scoped things.
+- Used plain `mv`/`mkdir` (not `git mv`) — consistent with how the `software/2P1VX/` →
+  `software/rheometer-firmware/` rename was done earlier (entry 14): the agent doesn't stage
+  files for the user.
+- Updated every real cross-reference across the repo: `README.md`, `BOM.md`,
+  `VERIFICATION.md`, `AGENTS.md`, `core-beliefs.md`, `laser-cut/README.md`, `software/README.md`,
+  `tutorial/README.md`, `tutorial/_step-template/README.md`, and all 8 tutorial step READMEs —
+  recomputing relative-path depth where the move added a folder level (e.g. tutorial steps'
+  `../../../wiring/...` → `../../../assets/wiring/...`). Also fixed the *internal* links inside
+  the moved files themselves (`assets/wiring/README.md`'s `../software/` → `../../software/` now
+  that it's one level deeper; `assets/references/README.md`'s self-references to its own
+  `datasheets/` subfolder simplified from `references/datasheets/` to just `datasheets/`).
+- **Did not touch `PROGRESS.md`'s historical entries** — old entries describing past work
+  correctly reference paths as they were *at the time* (e.g. "`wiring/2P1V-wiring-diagram.png`
+  regenerated..."); rewriting them to the new path would misrepresent history. Only this entry
+  and going forward use `assets/`.
+- Left the per-step `media/` convention (`tutorial/steps/README.md`, `_step-template/README.md`)
+  completely alone — unrelated concept, different scope.
+- Ran `scripts/check-docs.sh` — all checks pass. Also did a manual repo-wide grep sweep for any
+  remaining bare (non-`assets/`-prefixed) mentions of `images/`, `wiring/`, or `references/` —
+  the only hits left are the unrelated per-step `media/` lines and two intentional parenthetical
+  breakdowns in `AGENTS.md` that spell out `assets/`'s contents.
+
+**Next:** none — this was a complete, verified sweep. If new project-wide media gets added later
+(e.g. `platform.png`, `wiring.png`, `ide-settings.png` from the still-open capture tasks), it goes
+in `assets/images/` going forward, not a new top-level folder.
+
+---
+
 ## 2026-07-08 (18)
 
 Replaced every "BYO" with "DIY" across the project, per explicit user request ("Do not use

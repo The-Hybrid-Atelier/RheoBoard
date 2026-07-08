@@ -5,7 +5,7 @@
 
 ## What you'll need for this step
 
-- **Parts:** full list in [`../../../BOM.md`](../../../BOM.md) — verify everything arrived before
+- **Parts:** full list in [`../../../hardware/BOM.md`](../../../hardware/BOM.md) — verify everything arrived before
   starting assembly.
 - **Design files:** none for this step.
 - **Tools:** see [`../../README.md`](../../README.md) → "Before you start" for the full tool list
@@ -14,7 +14,7 @@
 
 ## Instructions
 
-1. Unpack and inventory every item against `BOM.md`.
+1. Unpack and inventory every item against `hardware/BOM.md`.
 2. Note anything missing or substituted — record it in `PROGRESS.md` if it's a design change,
    don't silently substitute.
 3. Gather tools listed in [`../../README.md`](../../README.md) → "Before you start."
@@ -29,5 +29,5 @@ Add a photo of laid-out kit contents to `media/` once available.
 
 ## Check before moving on
 
-- [ ] Every `BOM.md` row accounted for (or explicitly marked "not in this revision")
+- [ ] Every `hardware/BOM.md` row accounted for (or explicitly marked "not in this revision")
 - [ ] Tools gathered

@@ -9,8 +9,8 @@ path: USB serial (bench) and BLE (RheoData).
 ## What you'll need for this step
 
 - **Parts:** 12 V DC adapter (≥ 2 A recommended), micro-USB cable, Qwiic MicroPressure + Qwiic
-  Button already wired — see [`../../../BOM.md`](../../../BOM.md).
-- **Design files:** power section of [`../../../wiring/2P1V-wiring-diagram.png`](../../../wiring/2P1V-wiring-diagram.png).
+  Button already wired — see [`../../../hardware/BOM.md`](../../../hardware/BOM.md).
+- **Design files:** power section of [`../../../hardware/wiring/2P1V-wiring-diagram.png`](../../../hardware/wiring/2P1V-wiring-diagram.png).
 - **Tools:** multimeter (recommended)
 
 ## Instructions

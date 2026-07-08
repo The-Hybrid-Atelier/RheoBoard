@@ -15,7 +15,8 @@ Flash the BLE firmware for this design. Source:
 ## Instructions
 
 1. Install [Arduino IDE](https://www.arduino.cc/en/software) 2.x.
-2. **Boards Manager:** add ESP32 package URL from [`../../../references.md`](../../../references.md)
+2. **Boards Manager:** add ESP32 package URL from
+   [`../../../hardware/references/README.md`](../../../hardware/references/README.md)
    (Espressif `esp32` core). Install **esp32 by Espressif Systems**.
 3. **Libraries** (Library Manager): SparkFun Qwiic Button, SparkFun MicroPressure, OSC (by Adrian
    Freed).
@@ -36,7 +37,7 @@ Flash the BLE firmware for this design. Source:
 
 ## Media
 
-Screenshot of board + port selection → save as `images/ide-settings.png` when captured.
+Screenshot of board + port selection → save as `../../../images/ide-settings.png` when captured.
 
 ## Tips / common mistakes
 

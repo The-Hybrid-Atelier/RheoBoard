@@ -35,7 +35,7 @@ Video of calibration procedure recommended (external YouTube hosting is fine).
 - If extrude is too aggressive, lower `push/power` or lengthen `push/ramp/time` before shortening
   `push/time`.
 - Valve state must match pump: retract = VALVE2 OFF + PUMP1; extrude = VALVE2 ON + PUMP2 (see
-  [`../../../wiring/pneumatic-plumbing.md`](../../../wiring/pneumatic-plumbing.md)).
+  [`../../../hardware/wiring/pneumatic-plumbing.md`](../../../hardware/wiring/pneumatic-plumbing.md)).
 
 ## Check before moving on
 

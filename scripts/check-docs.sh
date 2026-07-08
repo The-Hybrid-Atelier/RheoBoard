@@ -53,8 +53,8 @@ else
 fi
 
 echo
-echo "== BOM datasheet links (BuildYourOwn/BOM.md) =="
-bom_file="BuildYourOwn/BOM.md"
+echo "== BOM datasheet links (BuildYourOwn/hardware/BOM.md) =="
+bom_file="BuildYourOwn/hardware/BOM.md"
 bom_issue=0
 if [ -f "$bom_file" ]; then
   while IFS= read -r line; do

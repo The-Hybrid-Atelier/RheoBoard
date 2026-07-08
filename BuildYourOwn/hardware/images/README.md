@@ -1,6 +1,6 @@
 # Component photos
 
-Reference photos for each electronic part in [`../../BOM.md`](../../BOM.md), pulled from the
+Reference photos for each electronic part in [`../BOM.md`](../BOM.md), pulled from the
 manufacturer/vendor's own product photography (or a freely-licensed source where no vendor photo
 exists). These are for builder identification only — not renders of *our* build.
 
