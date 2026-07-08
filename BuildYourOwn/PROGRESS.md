@@ -8,6 +8,34 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (15)
+
+Resized/compressed `images/teaser.jpg` (formerly `teaser.png`) — user said the picture was
+rendering too big.
+
+- The file was 1024×768, 244 KB, and — despite the `.png` extension — actually JPEG-encoded
+  content (it just worked because browsers/GitHub sniff real content, not the extension).
+  Resized to 640×480 and re-compressed (quality ~70) → ~100 KB, and renamed to `teaser.jpg` to
+  match its real encoding.
+- Beyond shrinking the file, also switched both embeds (`README.md`, `tutorial/README.md`) from
+  plain Markdown `![]()` to an HTML `<img width="480">` tag — Markdown image syntax has no size
+  control, so this was needed to actually constrain the *rendered* width on the page, not just
+  the underlying file's pixel dimensions.
+- Updated every reference (`images/README.md`'s file table, step 08's Media section) from
+  `teaser.png` → `teaser.jpg`. Left the four older, pre-existing `PROGRESS.md` entries that
+  mention a still-pending `images/teaser.png` capture request untouched (historical record from
+  before this file existed) — only corrected the one same-day entry (13) that documented adding
+  the original file.
+- Ran `scripts/check-docs.sh` — link/BOM checks pass; the "PROGRESS.md freshness" WARN it printed
+  is about the user's own most recent git commit not touching `PROGRESS.md` in the same commit —
+  unrelated to this session (the agent never commits), noted here only so it's not mistaken for
+  something this change broke.
+
+**Next:** if 480 px still reads too large/small once viewed on GitHub, it's a one-line `width=`
+tweak in both READMEs.
+
+---
+
 ## 2026-07-08 (14)
 
 Stopped branding the build as "2P1V"/"2P1VX" in user-facing docs — user wants it referred to as
@@ -44,15 +72,16 @@ alt-text, or an actual firmware change affecting real device pairing) — flagge
 
 ## 2026-07-08 (13)
 
-Added the first real build photo: `images/teaser.png`, a user-provided photo of the assembled
+Added the first real build photo: `images/teaser.jpg`, a user-provided photo of the assembled
 bench build (user described it as representative of the final product's look).
 
-- Copied the photo to `images/teaser.png` and embedded it in `README.md` (top hero spot,
+- Copied the photo to `images/teaser.jpg` and embedded it in `README.md` (top hero spot,
   replacing the "add when it exists" placeholder) and `tutorial/README.md` (Overview section,
-  replacing the "add once a build exists" placeholder).
-- Updated `images/README.md`'s file table to mark `teaser.png` as added (still `TBD`:
+  replacing the "add once a build exists" placeholder). (Originally saved as `teaser.png`; see the
+  later same-day entry that resized it and corrected the extension to `.jpg`, its actual encoding.)
+- Updated `images/README.md`'s file table to mark `teaser.jpg` as added (still `TBD`:
   `platform.png`, `wiring.png`, `ide-settings.png`).
-- Updated step 08's Media section to point at `images/teaser.png` for the assembled shot, and
+- Updated step 08's Media section to point at `images/teaser.jpg` for the assembled shot, and
   narrowed the remaining ask to a photo/video of the rig actually mid-REP (LED lit), not just
   assembled.
 - **Did not** cross-check the photo against the wiring diagram or laser-cut mounting scheme in

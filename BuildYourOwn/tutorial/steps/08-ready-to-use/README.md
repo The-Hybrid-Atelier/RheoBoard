@@ -65,7 +65,7 @@ human sign-off block at the bottom — this is the final gate before calling the
 
 ## Media
 
-`../../../images/teaser.png` has an assembled-rig photo. Still wanted: a photo/video of the rig
+`../../../images/teaser.jpg` has an assembled-rig photo. Still wanted: a photo/video of the rig
 mid-REP (LED lit) to show it actually running, not just assembled.
 
 ## Tips / common mistakes
