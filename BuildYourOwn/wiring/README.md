@@ -42,7 +42,9 @@ every part in this diagram (ESP32 Thing Plus, MPRLS sensor, L298N, Adafruit 4700
 
 ## Conventions
 
-- Prefer pictographic diagrams (like the images above) over abstract schematics for builders.
+- Electrical wiring is drawn as a labeled schematic (component blocks with named pins,
+  orthogonal wire routing, junction dots, net-color legend) for precision. Pneumatic plumbing
+  stays pictographic/photo-style since it's about physical tube routing, not electrical nets.
 - When updating wiring, update the image **and** the GPIO defines in
   `software/rheometer-firmware/PneumaticSystem.h`
   together — keep them in sync.

@@ -8,6 +8,49 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (17)
+
+Regenerated `wiring/2P1V-wiring-diagram.png` in a real schematic-capture style, per user
+request ("make it more organiz[ed], look like real schematic") — previous version was a
+labeled block diagram (colored boxes with prose-y text inside); this one now reads like
+something out of KiCad/Eagle.
+
+- Rebuilt the generator script (Matplotlib) from scratch with: a bordered sheet frame + column/
+  row reference grid (numbers/letters along the edges, like a fab drawing), components drawn as
+  IC-style rectangles with individually labeled pin stubs (`ENA`, `GPIO32`, `OUT1/2`, etc.)
+  instead of paragraph text, strictly orthogonal (Manhattan) wire routing, filled junction dots
+  at every real electrical tee (e.g. the +12V and GND buses splitting to both L298N boards), and
+  a KiCad-style title block (title / scale / rev / sheet) in the bottom-right corner.
+- Net-color legend kept from the old version (+12V orange, GND black, GPIO→EN blue, motor/valve
+  load dark red, Qwiic/I2C purple, unused/reserved dashed gray) since it reads well and matches
+  the pneumatic diagram's palette.
+- The two internal L298N jumpers (IN1/IN3→+5V, IN2/IN4→GND — hardwired direction-setting wires
+  the builder makes on the module's own terminal block) are drawn as short local pin stubs at the
+  bottom of each driver box rather than routed anywhere, since they're not really "cross-board"
+  wires. Positioned at pin fractions >0.5 specifically so they fall outside the GND bus's
+  horizontal span and don't visually cross it.
+- Content is unchanged from the previous version (nets, GPIO map, unused/reserved items) — this
+  was a pure re-draw for legibility/style, cross-checked against
+  `software/rheometer-firmware/PneumaticSystem.h` again while at it.
+- Updated `wiring/README.md`'s "Conventions" section: it previously said to prefer pictographic
+  diagrams over abstract schematics everywhere, which the new electrical diagram deliberately
+  contradicts. Now states electrical wiring is schematic-style (precision) while pneumatic
+  plumbing stays pictographic (physical tube routing, not electrical nets).
+- Also dropped "2P1V" from the on-image title text (now "RheoBoard BYO — Electrical Schematic")
+  to match the broader de-branding done this session — left the **filename**
+  (`2P1V-wiring-diagram.png`) alone since renaming files is a separate, larger decision (see
+  entry 14 and the tech-debt note it left).
+- Rendered at 1900 px wide, quantized PNG (`FASTOCTREE`, 256 colors) → **49 KB** (previous
+  version was 92 KB, so this is smaller *and* denser with information).
+- Ran `scripts/check-docs.sh` — all checks pass.
+
+**Next:** no further action needed unless the user wants the pneumatic tube diagram
+(`2P1V-tube-connection.png`) restyled to match, or wants the filename itself de-branded (would
+need to update every reference across `README.md`, `BOM.md`, `wiring/README.md`,
+`tutorial/steps/03-wire-electronics/`).
+
+---
+
 ## 2026-07-08 (16)
 
 Resized/compressed every other image in the repo (user asked for "all other pictures as well"
