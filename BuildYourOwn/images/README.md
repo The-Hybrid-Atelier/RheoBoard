@@ -1,7 +1,7 @@
 # Images
 
 Hero photos, wiring reference shots, IDE configuration screenshots, and other builder-facing
-images for the BYO track.
+images for the DIY track.
 
 Images live at this folder's root (not nested subfolders) so the README renders well on GitHub
 without extra digging.
