@@ -7,7 +7,7 @@ mounting panel.
 Each mechanical part is documented here with material, recommended cut settings, and assembly
 notes, same spirit as a 3D-printed-parts README but for laser-cut flat stock.
 
-License: CERN-OHL-W-2.0 — see [`../../LICENSE-HARDWARE.txt`](../../LICENSE-HARDWARE.txt). Current
+License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE). Current
 hardware revision: see [`../hardware/REVISIONS.md`](../hardware/REVISIONS.md).
 
 ## Panel at a glance
