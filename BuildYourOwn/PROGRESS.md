@@ -8,6 +8,66 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (10)
+
+User asked to double-check the repo against their Instructables definition (step-by-step guide +
+BOM + laser-cut design files + pictographic circuit diagram + assembly videos). Audited
+everything (see chat for the full breakdown given to the user) and fixed one stale doc found
+along the way:
+
+- **`tutorial/README.md`'s per-step status tracker was stale** — it marked all 8 steps
+  "scaffold only" even though steps 01/02/03/04/06/07 have had real written instructions for
+  several sessions now. Updated it to accurately show: 6 steps written-but-unverified, 2 steps
+  (05-mount-and-setup, 08-ready-to-use) still genuinely TBD, and called out that **zero steps
+  have photos or video yet** regardless of text status (every `media/` folder is empty).
+- No other content changes this entry — this was an audit pass, not new build content. Full
+  gap list (laser-cut vector file, step photos, assembly/calibration videos, remaining BOM
+  vendor links) is unchanged from what's already flagged in `README.md` → Status and
+  `laser-cut/README.md`.
+
+**Next:** same as prior entries — vector cut file for the panel, then a real build to generate
+photos/video and human-verify the written steps.
+
+## 2026-07-08 (9)
+
+Added the first real content to `laser-cut/` (previously empty scaffold) from design reference
+images the user provided, and caught/fixed stale `exec-plan` references left over from session
+(8)'s removal of `exec-plans/`.
+
+- **`laser-cut/` populated:** vendored three raster reference images
+  (`panel-cut-lines.png` — cut-geometry preview, no labels; `panel-placement-map.png` — labeled
+  component + zip-tie map; `panel-system-diagram.png` — full pneumatic+electronics system
+  diagram) and rewrote `laser-cut/README.md` around them: panel spec (290×200×3 mm acrylic,
+  zip-tied, no screws), the component placement/tie-count table, and cut settings (material/
+  thickness known, kerf/power/speed still TBD).
+- **Important scope catch:** the provided system diagram documents a **2P2V** (2-valve) variant
+  (VALVE1 + VALVE2 both driven, GPIO14 + GPIO15), which conflicts with the repo's actual **2P1V**
+  (1-valve) build. Flagged this to the user explicitly rather than silently merging; user chose
+  to **keep the build 2P1V** and use the panel only for its mechanical layout. Documented VALVE1's
+  zip-tie slot as unpopulated/reserved (mirrors GPIO15 already being reserved in the wiring
+  diagram) with an explicit callout in `laser-cut/README.md` pointing back at
+  `wiring/pneumatic-plumbing.md` as the authoritative pneumatic/electrical reference. No changes
+  made to `BOM.md`'s part list, the wiring diagram, or firmware GPIO config as a result — those
+  only change if a 2-valve variant is actually built later.
+- **Explicitly flagged as NOT laser-ready:** these are raster (`.png`) references only; no
+  vector (`.svg`/`.dxf`) cut file exists yet, and nothing has been physically cut. Called this out
+  in `laser-cut/README.md`, `BuildYourOwn/README.md`, and tutorial step 02 rather than implying
+  the platform is buildable today.
+- Added BOM rows for the panel itself, zip ties, the Ø10 chamber bulkhead fitting, and corner
+  feet (all generic/no-vendor-link-yet, same pattern as the existing resistor/DC-adapter rows).
+- Filled in `tutorial/steps/02-assemble-platform/README.md` with real instructions (cut → feet →
+  bulkhead → zip-tie each component per the placement map → stop before wiring) instead of `TBD`
+  placeholders.
+- **Stale `exec-plan` reference cleanup** (missed during session (8)'s removal): fixed mentions in
+  `core-beliefs.md` (5 spots — replaced "exec-plan"/"exec-plan's decision log" with `PROGRESS.md`
+  as the record-keeping location), `BOM.md`, `VERIFICATION.md`, and tutorial steps
+  01-kit-contents-and-tools and 03-wire-electronics. Re-grepped the whole repo afterward to
+  confirm no more live (non-`PROGRESS.md`-history) references remain.
+
+**Next:** produce the actual vector cut file (`.svg`/`.dxf`) matching `panel-cut-lines.png`
+before the panel can be physically cut; capture `images/ide-settings.png` + `images/teaser.png`
+from a real build; human-verify wiring/tutorial/platform against a real build.
+
 ## 2026-07-08 (8)
 
 Removed `exec-plans/` and `previous-revisions/` from the harness — both were pure empty

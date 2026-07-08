@@ -5,7 +5,8 @@ rheometer build. This is the primary deliverable of the BYO track — everything
 `BuildYourOwn/` (`BOM.md`, `laser-cut/`, `wiring/`, `software/`) is a resource this tutorial
 links out to.
 
-_Scaffold in place — step folders exist with placeholders; content TBD._
+_Content written for most steps; none human-verified yet, and no photos/videos exist for any
+step — see the per-step status below._
 
 ## Documentation model
 
@@ -53,16 +54,17 @@ naming convention.
 This list is the source of truth for step status — keep it in sync with `steps/`. A step is
 only `[x]` once it's written **and** a human has verified it against `../VERIFICATION.md`/by
 building it (see `AGENTS.md` → "What the agent can and can't verify") — "written" and "verified"
-are different things, don't collapse them.
+are different things, don't collapse them. **No step has photos or video yet regardless of text
+status** — every step's `media/` folder is currently empty.
 
-- [ ] 01 — [Kit contents and tools](steps/01-kit-contents-and-tools/) — scaffold only
-- [ ] 02 — [Assemble the platform](steps/02-assemble-platform/) — scaffold only
-- [ ] 03 — [Wire the electronics](steps/03-wire-electronics/) — scaffold only
-- [ ] 04 — [Install firmware](steps/04-install-firmware/) — scaffold only
-- [ ] 05 — [Mount and set up](steps/05-mount-and-setup/) — scaffold only
-- [ ] 06 — [Power and data connections](steps/06-power-and-connections/) — scaffold only
-- [ ] 07 — [Calibrate](steps/07-calibrate/) — scaffold only
-- [ ] 08 — [Ready to use](steps/08-ready-to-use/) — scaffold only
+- [ ] 01 — [Kit contents and tools](steps/01-kit-contents-and-tools/) — written, not verified; no media
+- [ ] 02 — [Assemble the platform](steps/02-assemble-platform/) — written, not verified; blocked on laser-cut vector file; no media
+- [ ] 03 — [Wire the electronics](steps/03-wire-electronics/) — written, not verified; no media
+- [ ] 04 — [Install firmware](steps/04-install-firmware/) — written, not verified; no media
+- [ ] 05 — [Mount and set up](steps/05-mount-and-setup/) — scaffold only, instructions still TBD
+- [ ] 06 — [Power and data connections](steps/06-power-and-connections/) — written, not verified; no media
+- [ ] 07 — [Calibrate](steps/07-calibrate/) — written, not verified; no media
+- [ ] 08 — [Ready to use](steps/08-ready-to-use/) — scaffold only, instructions still TBD
 
 ## Finished
 

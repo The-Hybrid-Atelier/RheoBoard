@@ -40,13 +40,18 @@ _Add `images/teaser.png` here when it exists._
 
 ### Platform (laser-cut)
 
-Mechanical structure for the rheometer — design files and cut settings in [`laser-cut/`](laser-cut/).
+A single 290 × 200 mm, 3 mm acrylic panel — every component (pumps, valve, L298N drivers, ESP32,
+Qwiic sensor + button) mounts to it with zip ties through cut slots, no screws or enclosure.
+Design files, the component placement + zip-tie map, and cut settings are in
+[`laser-cut/`](laser-cut/).
 
 Calico equivalent: [`3D print models/`](https://github.com/jsli96/calico/tree/main/3D%20print%20models)
 (PLA body, TPU tracks, print settings in README). We use laser-cut flat stock instead of 3D print;
 document material, thickness, and kerf the same way Calico documents layer height and infill.
 
-_TBD — no design files yet._
+**Status:** design reference images exist (placement map + cut-geometry preview); the actual
+laser-ready vector file (`.svg`/`.dxf`) and the physical cut are still TBD — see
+[`laser-cut/README.md`](laser-cut/README.md) for what's there and what's missing.
 
 ### Electronics
 
