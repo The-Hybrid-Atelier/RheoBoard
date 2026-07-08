@@ -52,8 +52,7 @@ Restart the Arduino IDE afterward so it picks up the new library.
 3. Upload. Serial Monitor @ 115200 should print `2P1VX initialized`.
 4. Builder walkthrough: [`../tutorial/steps/04-install-firmware/`](../tutorial/steps/04-install-firmware/).
 
-Add a screenshot of correct board/port settings to `images/ide-settings.png` when captured (Calico
-pattern).
+Add a screenshot of correct board/port settings to `images/ide-settings.png` when captured.
 
 ## Developer sketchbook copy
 

@@ -7,7 +7,7 @@
 
 - **Parts:** electronics rows in [`../../../BOM.md`](../../../BOM.md).
 - **Design files:** [`../../../wiring/2P1V-wiring-diagram.png`](../../../wiring/2P1V-wiring-diagram.png) —
-  follow section **A — Electrical Wiring**.
+  this diagram covers electrical wiring only; pneumatic plumbing is a separate diagram (see below).
 - **Tools:** soldering iron, wire strippers, multimeter, small screwdriver (L298N terminals)
 
 ## Instructions

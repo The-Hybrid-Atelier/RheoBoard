@@ -3,12 +3,6 @@
 DIY rheometer for **RheoMap**, **RheoData**, and **SlipAtlas**: off-the-shelf modules on breadboard/perfboard,
 a laser-cut platform, pictographic wiring diagrams, firmware, and a step-by-step build guide.
 
-> **Documentation model:** primarily
-> [Calico](https://github.com/jsli96/calico) (single repo README + fab folders + firmware +
-> IDE setup + tips). Step-by-step detail lives in [`tutorial/`](tutorial/) (Instructables-style).
-> [OpenTheremin V4](https://github.com/GaudiLabs/OpenThereminV4) is a secondary reference for
-> assembly/calibration flow — see [`tutorial/README.md`](tutorial/README.md).
-
 _Custom PCB variant: [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/)_
 
 _Add `images/teaser.png` here when it exists._
@@ -45,10 +39,6 @@ Qwiic sensor + button) mounts to it with zip ties through cut slots, no screws o
 Design files, the component placement + zip-tie map, and cut settings are in
 [`laser-cut/`](laser-cut/).
 
-Calico equivalent: [`3D print models/`](https://github.com/jsli96/calico/tree/main/3D%20print%20models)
-(PLA body, TPU tracks, print settings in README). We use laser-cut flat stock instead of 3D print;
-document material, thickness, and kerf the same way Calico documents layer height and infill.
-
 **Status:** design reference images exist (placement map + cut-geometry preview); the actual
 laser-ready vector file (`.svg`/`.dxf`) and the physical cut are still TBD — see
 [`laser-cut/README.md`](laser-cut/README.md) for what's there and what's missing.
@@ -59,9 +49,8 @@ Parts list: [`BOM.md`](BOM.md) (with component photos).
 
 Wiring: pictographic breadboard-style diagrams in [`wiring/`](wiring/) — not abstract schematics.
 
-Calico equivalent: custom PCB in [`PCB files/`](https://github.com/jsli96/calico/tree/main/PCB%20files)
-plus `control-Board.png` in repo root. Our BYO track wires breakout boards instead; optional
-custom PCB docs live in [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/).
+This BYO track wires breakout boards instead of a custom PCB; optional custom PCB docs live in
+[`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/).
 
 **2P1V rig** — electrical wiring and pneumatic plumbing:
 
@@ -113,15 +102,21 @@ For photo-based assembly with per-step media and videos, follow the numbered gui
 
 **[`tutorial/README.md`](tutorial/README.md)** → steps 01–08 in [`tutorial/steps/`](tutorial/steps/).
 
-This is the Instructables layer on top of this README — Calico folds everything into one README;
-we split detailed steps out so photos/videos don't bloat the entry doc.
+This is the Instructables layer on top of this README — detailed steps are split out so
+photos/videos don't bloat the entry doc.
 
 ## Tips
 
-_TBD — field notes once you've built one. Calico examples: LED color = status, connector types,
-battery polarity warning, how to find IP if Serial Monitor doesn't show it._
+Full context for each is in [`tutorial/README.md`](tutorial/README.md) → Tips, tagged by step.
 
--
+- L298N ENA/ENB jumpers must be **removed** — the ESP32 drives those pins with PWM.
+- Never route pump/valve current through the ESP32's 5 V pin — motors get their own 12 V adapter.
+- Pumps are ~4.5 V parts on a 12 V rail; avoid 100% duty continuously (Adafruit rates the 4700 for
+  ~50%) — tune `rheo/rep/pull/power` / `push/power` instead of running full-blast.
+- Onboard button (GPIO 0), Qwiic Button, BLE (`rheo/rep`), and USB serial (`REP`) all trigger the
+  same REP routine — use whichever's convenient.
+- Onboard LED (GPIO 13) lights while a REP, manual blow, latched suck, or pump test is active —
+  useful at-a-glance status without opening Serial Monitor.
 
 ## Repo layout (harness)
 
@@ -142,5 +137,6 @@ Agent/session docs — not part of the builder-facing guide:
 - [ ] `laser-cut/` design files complete
 - [x] `wiring/` pictographic diagram(s) complete (2P1V electrical + pneumatic)
 - [x] `software/` firmware present (`2P1VX`)
-- [ ] `tutorial/steps/` written **and** human-verified
+- [x] `tutorial/steps/` written (all 8 steps; step 05 partially blocked on RheoMap's fixture spec)
+- [ ] `tutorial/steps/` human-verified against a real build
 - [ ] Full build passed [`VERIFICATION.md`](VERIFICATION.md)

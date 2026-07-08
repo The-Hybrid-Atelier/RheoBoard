@@ -1,11 +1,10 @@
 # Step 07: Calibrate
 
-- **Time:** TBD (depends on RheoData workflow)
+- **Time:** ~20–30 min for an initial tuning pass (ongoing — re-tune per fluid/fixture as needed)
 - **Difficulty:** moderate
 
-RheoBoard BYO uses **runtime BLE parameters** rather than a one-shot onboard calibration like
-OpenTheremin. Defaults in `2P1VX` are tuned for the 2P1V bench rig; adjust per fluid/fixture via
-RheoData OSC.
+RheoBoard BYO uses **runtime BLE parameters** rather than a one-shot onboard calibration. Defaults
+in `2P1VX` are tuned for the 2P1V bench rig; adjust per fluid/fixture via RheoData OSC.
 
 ## What you'll need for this step
 

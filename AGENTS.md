@@ -24,8 +24,8 @@ There are two hardware tracks:
 
 ## Repository layout
 
-- `BuildYourOwn/` — the harness + BYO build. Builder-facing: `README.md` (Calico-style master
-  doc), `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `tutorial/`, `VERIFICATION.md`.
+- `BuildYourOwn/` — the harness + BYO build. Builder-facing: `README.md` (single master doc),
+  `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `tutorial/`, `VERIFICATION.md`.
   Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`, `references.md`.
 - `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, manufacturing outputs. Binary CAD files — Altium is the only thing that opens

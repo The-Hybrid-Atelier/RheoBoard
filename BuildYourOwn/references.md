@@ -21,8 +21,3 @@ standards change over time.
 | SparkFun Qwiic Button library | https://github.com/sparkfun/SparkFun_Qwiic_Button_Arduino_Library | Arduino Library Manager |
 | SparkFun MicroPressure library | https://github.com/sparkfun/SparkFun_MicroPressure_Arduino_Library | Arduino Library Manager |
 | **ThingPlusBLEOSC** | https://github.com/cearto/ThingPlusBLEOSC | BLE + OSC transport for RheoData; MIT license; not on Library Manager — `git clone` into Arduino `libraries/`. Depends on **OSC** (Adrian Freed, Library Manager) and **ESP32 BLE Arduino** (Neil Kolban, usually bundled with the `esp32` core). |
-| Calico (primary doc model) | https://github.com/jsli96/calico | Single README: features, hardware, IDE setup, connect/use, tips + `3D print models/` + `PCB files/` + `main_app.ino`. Closest reference for RheoBoard BYO layout. |
-| OpenTheremin V4 (secondary) | https://github.com/GaudiLabs/OpenThereminV4 | Assembly/calibration step flow; GPL-3.0. |
-| OpenTheremin V4 download / flash guide | https://www.gaudi.ch/OpenTheremin/index.php/download | Website-side firmware upload steps → our `tutorial/steps/04-install-firmware/`. |
-| OpenTheremin V4 product page | https://www.gaudi.ch/OpenTheremin/ | Product context / feature list reference. |
-| OpenTheremin V4 assembly instructions (PDF) | Local: `Instructions_OpenThereminV4.pdf` | 7-step photo assembly guide; mapped to tutorial steps 01–08. Not in GitHub repo. CC BY 4.0 (Urs Gaudenz, 2021). |

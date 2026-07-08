@@ -3,9 +3,8 @@
 Hero photos, wiring reference shots, IDE configuration screenshots, and other builder-facing
 images for the BYO track.
 
-Modeled on [Calico](https://github.com/jsli96/calico), which keeps key images at the project
-root (`teaser.png`, `control-Board.png`, `esp32-3s-ide-settings.png`, etc.) so the README renders
-well on GitHub without digging into subfolders.
+Images live at this folder's root (not nested subfolders) so the README renders well on GitHub
+without extra digging.
 
 _Empty — add images as the build takes shape._
 
