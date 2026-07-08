@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate 2P1V-wiring-diagram.png — the electrical schematic for this design.
+"""Generate wiring-diagram.png — the electrical schematic for this design.
 
 SPDX-License-Identifier: CERN-OHL-W-2.0
 Copyright (c) 2026 Charlie Vuong -- see ../../../LICENSE-HARDWARE.txt
@@ -247,7 +247,7 @@ notes = [
     "NOTES:",
     "1. 10 kΩ pull-downs on GPIO 14/15/32/33 hold enable lines LOW at boot/reset, before firmware runs.",
     "2. ESP32 GND, both L298N GND terminals, and the 12V supply (−) are all tied together — one common reference for GPIO/EN logic and the motor rail.",
-    "3. Pneumatic plumbing (tubing, valve ports, chamber) is a separate diagram — see wiring/2P1V-tube-connection.png and wiring/pneumatic-plumbing.md.",
+    "3. Pneumatic plumbing (tubing, valve ports, chamber) is a separate diagram — see wiring/tube-connection.png and wiring/pneumatic-plumbing.md.",
     "4. Firmware GPIO source of truth: software/rheometer-firmware/PneumaticSystem.h.",
 ]
 ny = 2.15
@@ -270,7 +270,7 @@ ax.text(tb_x + tb_w / 2, tb_y + 0.21, "REV. 1", ha="center", va="center", fontsi
 ax.text(tb_x + 5 * tb_w / 6, tb_y + 0.21, "SHEET 1/1", ha="center", va="center", fontsize=6)
 
 plt.tight_layout()
-OUT = "2P1V-wiring-diagram.png"
+OUT = "wiring-diagram.png"
 plt.savefig(OUT, dpi=220, bbox_inches="tight", facecolor="white")
 
 # Quantize: this is a flat-color technical diagram, not a photo, so a small palette

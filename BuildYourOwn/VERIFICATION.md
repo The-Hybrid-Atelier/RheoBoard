@@ -26,6 +26,56 @@ items into `PROGRESS.md` for the change and check them off there.
 - [ ] `PROGRESS.md` updated with what changed and why (this is the revision history for this
       track — see note in `hardware/BOM.md`, no separate log needed since these files diff natively)
 
+## Open Source Hardware Definition compliance
+
+Point-by-point check against the [OSHWA Open Source Hardware Definition](https://www.oshwa.org/definition/)
+(the 12 criteria a license/project must meet to count as OSHW at all — distinct from *certification*,
+which is the separate registration process checklisted below). Unlike the rest of this file, this
+section is about licensing/documentation choices, not physical verification, so an agent can assess
+it directly. Re-check whenever a license file, scope statement, or design-file format changes.
+
+1. **Documentation** — hardware design files are in native/editable formats, not obfuscated or
+   compiled-only: `hardware/wiring/generate_wiring_diagram.py` (source) → PNG,
+   `laser-cut/generate_panel_vector.py` (source) → `panel.svg`/`panel.dxf`, and
+   `RheoBoard_V8_Final/*.SchDoc`/`*.PcbDoc`/`*.SchLib`/`*.PcbLib` (Altium native format, not
+   Gerber-only). Firmware ships as `.ino`/`.cpp`/`.h` source. All free to download from this repo. ✅
+2. **Scope** — each `LICENSE-*.txt` opens with an explicit list of exactly what it covers, and
+   `hardware/images/README.md` / `hardware/references/README.md` clearly flag third-party photos
+   and datasheets as excluded (own attributions/licenses, not ours to relicense). ✅
+3. **Necessary software** — firmware (`software/rheometer-firmware/`) is MIT-licensed (OSI-approved),
+   satisfying 3(b) directly; the OSC API is also documented in
+   `software/rheometer-firmware/README.md`, satisfying 3(a) as a fallback. ✅
+4. **Derived works** — CERN-OHL-W-2.0, MIT, and CC BY-SA 4.0 all explicitly permit modification,
+   redistribution, and manufacture/sale of derivatives. ✅
+5. **Free redistribution** — none of the three licenses charge or permit charging a royalty for
+   redistribution or derivatives. ✅
+6. **Attribution** — all three licenses require attribution without dictating a display format;
+   none is more restrictive than that. ✅
+7. **No discrimination against persons/groups** — none of the three licenses restrict who may use
+   the project. ✅
+8. **No discrimination against fields of endeavor** — none of the three licenses carry a
+   non-commercial or field-of-use restriction (this was explicitly checked — see OSHWA's own
+   guidance that NC/ND-flavored licenses are incompatible with the definition; ours carry neither). ✅
+9. **Distribution of license** — all three are perpetual, run-with-the-work licenses; no
+   re-execution or additional agreement is required from downstream recipients. ✅
+10. **Not specific to a product** — the license grants themselves are generic (CERN-OHL-W-2.0, MIT,
+    CC BY-SA 4.0 text); only the accompanying scope/copyright notices name RheoBoard, which is
+    normal practice, not a license restriction. ✅
+11. **Must not restrict other hardware/software** — CERN-OHL-W's reciprocity only reaches
+    modifications of the licensed design itself; a larger system merely incorporating this hardware
+    isn't required to be open. ✅
+12. **Technology-neutral** — none of the three licenses are tied to a specific technology, part, or
+    interface style. ✅
+
+Also noted (from the Definition's introduction, not a numbered criterion, but a stated obligation on
+downstream producers): root `README.md` → License now tells anyone who builds/sells units based on
+this design to make clear those units aren't sanctioned by the original designer and not to use the
+project's names to imply endorsement.
+
+**Net: all 12 criteria are met** by the current three-license setup (CERN-OHL-W-2.0 hardware / MIT
+software / CC BY-SA 4.0 documentation) — this is independent of, and already ahead of, OSHWA
+certification (below), which additionally requires the physical/registration steps.
+
 ## OSHWA self-certification readiness
 
 Checklist for [OSHWA certification](https://certification.oshwa.org/) (free, self-certified,
@@ -34,10 +84,15 @@ an agent can prepare files but can't submit the form or make the underlying phys
 See root `README.md` → License for the license breakdown, and `hardware/REVISIONS.md` for
 version tracking.
 
-- [x] Hardware, software, and documentation each have an open license applied (`LICENSE-*.txt`)
+- [x] Hardware, software, and documentation each have an open license applied (`LICENSE-*.txt`);
+      root `LICENSE` is a clean CERN-OHL-W-2.0 copy (GitHub-detectable), also copied alongside the
+      files it covers (`hardware/LICENSE`, `../laser-cut/LICENSE`, `../RheoBoard_V8_Final/LICENSE`)
+      and the firmware license alongside the firmware (`software/rheometer-firmware/LICENSE`)
 - [x] Firmware carries `SPDX-License-Identifier` headers
 - [x] Hardware-design index files (BOM, wiring, laser-cut READMEs) link to `LICENSE-HARDWARE.txt`
 - [x] Hardware revision scheme documented (`hardware/REVISIONS.md`)
+- [x] Machine-readable open-hardware metadata published (`okh-RheoBoard.yml`, Open Know-How manifest) —
+      keep in sync with README/REVISIONS when the design changes
 - [x] Editable design-file sources exist for the wiring diagram
       (`hardware/wiring/generate_wiring_diagram.py`) and the laser-cut panel
       (`laser-cut/generate_panel_vector.py` → `panel.svg`/`panel.dxf`)

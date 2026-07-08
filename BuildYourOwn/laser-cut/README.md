@@ -50,7 +50,7 @@ zip-tie hole (cut); red dashes = zip-tie strap over the part. Full detail in
 | # | Part | How it's tied | Status in our build |
 |---|---|---|---|
 | 1–2 | PUMP1, PUMP2 (Adafruit 4700) | Lie flat; 2 zip-ties across the body (4 slots) each | Populated |
-| 3 | VALVE1 (Adafruit 4663) | 2 ties over the body (4 slots) | **Unpopulated / reserved.** Mirrors GPIO 15 being reserved and not populated in [`../hardware/wiring/2P1V-wiring-diagram.png`](../hardware/wiring/2P1V-wiring-diagram.png). Leave this slot empty unless building a 2-valve variant (see callout below). |
+| 3 | VALVE1 (Adafruit 4663) | 2 ties over the body (4 slots) | **Unpopulated / reserved.** Mirrors GPIO 15 being reserved and not populated in [`../hardware/wiring/wiring-diagram.png`](../hardware/wiring/wiring-diagram.png). Leave this slot empty unless building a 2-valve variant (see callout below). |
 | 4 | VALVE2 (Adafruit 4663) | 2 ties over the body (4 slots) | Populated — the only valve driven (GPIO 14) |
 | 5 | MPRLS (Qwiic MicroPressure) | 2 ties (4 slots) — next to ESP32 | Populated |
 | 6 | Button (Qwiic Button) | 2 ties (4 slots) | Populated |
@@ -67,9 +67,9 @@ VALVE2 each dedicated to one pump and driven independently (GPIO 14 → VALVE1, 
 poles switch one shared line between the two pumps — GPIO 15 stays reserved/unpopulated. The
 authoritative pneumatic and electrical reference for what we're actually building is:
 
-- [`../hardware/wiring/2P1V-wiring-diagram.png`](../hardware/wiring/2P1V-wiring-diagram.png) — electrical wiring
+- [`../hardware/wiring/wiring-diagram.png`](../hardware/wiring/wiring-diagram.png) — electrical wiring
 - [`../hardware/wiring/pneumatic-plumbing.md`](../hardware/wiring/pneumatic-plumbing.md) — tubing + valve logic
-- [`../hardware/wiring/2P1V-tube-connection.png`](../hardware/wiring/2P1V-tube-connection.png) — tube diagram
+- [`../hardware/wiring/tube-connection.png`](../hardware/wiring/tube-connection.png) — tube diagram
 
 The panel's *mechanical* layout (dimensions, component positions, hole map) is shared between
 both variants — only VALVE1's position, its tubing, and GPIO 15 are unused here. If a 2-valve

@@ -8,6 +8,130 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (28)
+
+User pasted the full text of the [OSHWA Open Source Hardware Definition](https://www.oshwa.org/definition/)
+(the 12-point criteria a license/project must meet to *be* OSHW — distinct from OSHWA
+*certification*, the separate registration process already tracked in `VERIFICATION.md`) and asked
+to double-check compliance. Went through each of the 12 points against the actual repo state rather
+than assuming: confirmed hardware design files are native/editable everywhere (matplotlib/Python
+sources for wiring + laser-cut, Altium native `.SchDoc`/`.PcbDoc`/`.SchLib`/`.PcbLib` for the PCB —
+checked the PCB library subfolders too, all native, no Gerber-only substitutes), each `LICENSE-*.txt`
+states its scope explicitly and excludes third-party photos/datasheets (cross-checked against
+`hardware/images/README.md` / `hardware/references/README.md`), firmware is MIT (OSI-approved,
+satisfies the "necessary software" clause directly), and none of the three licenses
+(CERN-OHL-W-2.0 / MIT / CC BY-SA 4.0) carry a non-commercial or no-derivatives restriction that
+would violate the definition (web-searched OSHWA's own licensing guidance to confirm CERN-OHL-W-2.0
+is their explicitly recommended hardware license and to double check the NC/ND incompatibility
+rule). Result: **all 12 criteria are met** by the current licensing setup.
+
+- Added a permanent "Open Source Hardware Definition compliance" section to `VERIFICATION.md`,
+  point-by-point, so this check doesn't need to be redone from scratch if licenses or design-file
+  formats ever change — kept separate from the existing "OSHWA self-certification readiness"
+  checklist since the two are genuinely different things (definition compliance vs. registration).
+- Added one line to root `README.md` → License, covering an obligation from the Definition's
+  introduction (not one of the 12 numbered criteria, but a stated expectation): anyone building/
+  selling units based on this design should make clear those units aren't sanctioned by the
+  original designer and shouldn't use the project's names to imply endorsement.
+- Ran `scripts/check-docs.sh` — passes.
+
+**Next:** unchanged — laser-cut vector file test-fit, building/labeling a first unit, and OSHWA
+self-certification submission remain the human-only steps.
+
+## 2026-07-08 (27)
+
+User asked again to align with the same reference repo from (26) (kept anonymous per their
+instruction), saying "try again" — read this as wanting closer structural fidelity, not that (26)
+was lost (it was still present on disk, uncommitted). Fetched the reference repo's actual raw
+`README.md`, `okh-<name>.yml`, `kitspace.yml`, and its nested hardware-folder `LICENSE` file
+directly (rather than relying on a scraped page) to find concrete patterns (26) hadn't yet matched:
+
+- **Root `LICENSE` rewritten as a clean, unmodified CERN-OHL-W-2.0 text** (just a copyright line +
+  the standard license body, no custom scope paragraph) instead of the old three-way explainer —
+  the explainer version wasn't machine-detectable by GitHub's license identifier. The scope
+  explanation now lives only in `LICENSE-HARDWARE.txt` (unchanged) and the README's License
+  section table, so nothing was lost, just deduplicated to where it's discoverable.
+- **Colocated full LICENSE-text copies next to the files they cover** — the reference repo puts a
+  complete `PCB/LICENSE` (CERN OHL) right in its hardware folder, not just a root pointer; matched
+  that with `BuildYourOwn/hardware/LICENSE`, `BuildYourOwn/laser-cut/LICENSE`,
+  `RheoBoard_V8_Final/LICENSE` (all CERN-OHL-W-2.0, identical to root `LICENSE`) and
+  `BuildYourOwn/software/rheometer-firmware/LICENSE` (MIT). Documented in `AGENTS.md` that all
+  copies must be updated together if a license text ever changes.
+- **Renamed `okh.yml` → `okh-RheoBoard.yml`**, matching the reference manifest's
+  `okh-<ProjectName>.yml` naming convention (the OKH spec allows either; picked the named form for
+  fidelity). Updated every reference in `README.md`, `AGENTS.md`, `VERIFICATION.md` (left
+  `PROGRESS.md`'s (26) entry using the old name — historical, accurate at the time). Also added
+  `manifest-language`, `documentation-language`, and a `contact` block to the manifest, matching
+  fields present in the reference's manifest that (26)'s version had omitted.
+- **Dropped the `2P1V-` prefix from the two wiring-diagram image filenames** (`wiring-diagram.png`,
+  `tube-connection.png` — previously `2P1V-wiring-diagram.png` / `2P1V-tube-connection.png`),
+  closing out a de-branding gap flagged as a "separate, larger decision" back in (18)/(19). Updated
+  every live reference (`README.md`, `BuildYourOwn/README.md`, both wiring READMEs, `BOM.md`,
+  laser-cut `README.md`, `REVISIONS.md`, `okh-RheoBoard.yml`, and the `OUT =` filename inside
+  `generate_wiring_diagram.py`) and regenerated the PNG under its new name to confirm the script
+  still runs end-to-end. Left historical `PROGRESS.md` entries referencing the old filenames as-is.
+- **README top matter tightened to the reference's style:** the three per-category licenses are
+  now named as direct clickable links right under the maintainer line (mirroring "This project is
+  licensed under X. The hardware is licensed under Y."), and added a short bullet-list of
+  highlights linking straight to the build guide, BOM, verification checklist, and firmware API —
+  the reference repo leads with an equivalent linked bullet list before its full write-up.
+- **Did not add `kitspace.yml`** — confirmed by inspecting `RheoBoard_V8_Final/`: it's all Altium
+  binaries (`.PcbDoc`, `.SchDoc`, `.PcbLib`, etc.), no KiCad project or Gerber exports, and
+  Kitspace's `kitspace.yml` schema specifically expects `gerbers:`/`bom:` paths per sub-board. Not
+  fabricable through that pipeline as-is; revisit only if the PCB track is ever exported to
+  KiCad/Gerbers.
+- Ran `scripts/check-docs.sh` (passes) and independently verified every path referenced from
+  `okh-RheoBoard.yml` resolves on disk, and the manifest still parses as valid YAML.
+
+**Next:** unchanged from (26) — the laser-cut vector file still needs a physical test-fit pass;
+that plus building/labeling a first unit are the remaining human-only steps before OSHWA
+self-certification submission. If the maintainer affiliation/email in `okh-RheoBoard.yml` +
+`README.md` is wrong, correct it (appears in both).
+
+## 2026-07-08 (26)
+
+User pointed at a well-regarded published open-hardware repo as a structural model (kept
+anonymous here per their instruction — it's a reference for us, not something to name in the
+project) and asked to bring RheoBoard up to that bar. Studied what that kind of repo does that we
+didn't yet: a machine-readable metadata manifest, and a README that leads with open-hardware
+front-matter (tagline, maintainer, prominent up-front license statement, repo-structure tree).
+
+- **Added `okh.yml`** (repo root) — an Open Know-How Manifest 1.0 file (the standard
+  machine-readable metadata format for open-hardware discoverability/indexing, aligned with the
+  OSHWA definition). Researched the OKH spec fresh rather than guessing fields. Populated title,
+  description, intended-use, keywords, project/documentation links, teaser image, version
+  (`Rev A`), `development-stage: prototype`, `made: false` / `made-independently: false` (honest —
+  nothing's been physically built), a health-and-safety notice (mains 12 V, soldering,
+  pressurized air), the three SPDX licenses (hardware CERN-OHL-W-2.0 / software MIT / docs
+  CC-BY-SA-4.0), licensor, and relative paths to the BOM, design-file sources (both generator
+  scripts + `panel.svg`/`.dxf`), schematics, build guide, firmware, and verification checklist.
+  Validated it parses as YAML and confirmed all 13 referenced local paths resolve on disk.
+- **Root `README.md` restructured to lead like an open-hardware landing page:** added a
+  one-line tagline under the title, a maintainer line, and a prominent license statement in the
+  first screenful (previously licensing was only at the bottom) with a pointer to `okh.yml`.
+  Converted the "Repository layout" bullet list into an ASCII directory tree (clearer at a
+  glance, matches the convention of established open-hardware repos), and added `okh.yml` +
+  the LICENSE files to it.
+- **Cross-references:** noted `okh.yml` in `AGENTS.md`'s Licensing section (with a reminder to
+  keep its `date-updated`/`version`/`made`/license/paths in sync with README + REVISIONS), and
+  added it as a checked item in `VERIFICATION.md`'s OSHWA-readiness checklist.
+- Git remote confirmed as `github.com/The-Hybrid-Atelier/RheoBoard` (used for the absolute URLs
+  in the manifest); maintainer identity pulled from `git config` (Charlie Vuong), affiliation
+  "The Hybrid Atelier" inferred from the org name — **flag for the user to correct if the
+  affiliation/email in `okh.yml` and README should be something else.**
+- Ran `scripts/check-docs.sh` — all pass. Did **not** add a `kitspace.yml` (the model repo has
+  one): Kitspace indexing targets fabricable PCB projects with KiCad/Gerber outputs, whereas our
+  current focus is the breadboard/module DIY track and the PCB track is Altium binaries Kitspace
+  can't ingest — so it'd be low-value/likely-invalid right now. Revisit if the PCB track is ever
+  exported to KiCad/Gerbers.
+
+**Next:** unchanged from (25) — the laser-cut vector file still needs a physical test-fit pass;
+that plus building/labeling a first unit are the remaining human-only steps before OSHWA
+self-certification submission. If the maintainer affiliation/email in `okh.yml` + README is
+wrong, correct it (one-line fix in both).
+
+---
+
 ## 2026-07-08 (25)
 
 Continuation of (24): user clarified "don't say we have the license" — meaning don't imply OSHWA
