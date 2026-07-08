@@ -8,6 +8,46 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (16)
+
+Resized/compressed every other image in the repo (user asked for "all other pictures as well"
+after the `teaser.jpg` pass) — total image payload dropped from ~2.1 MB to ~460 KB (excluding
+`teaser.jpg`, already handled previously).
+
+- **`wiring/2P1V-wiring-diagram.png`:** 3322×2618 / 644 KB → 1800×1418 / **92 KB**. Resized with
+  `sips`, then re-encoded as an indexed-palette PNG (`PIL.Image.quantize`, FASTOCTREE, 256 colors)
+  instead of plain resize alone — this is what a diagram made mostly of flat colors/text
+  compresses down so dramatically with zero visible quality loss (spot-checked at full size).
+- **`wiring/2P1V-tube-connection.png`:** was actually JPEG-encoded (mismatched extension, same
+  issue as the old `teaser.png`) at 1024×683 / 88 KB. Re-encoded as a true quantized PNG →
+  **42 KB**, removing the JPEG artifacts a line-art diagram shouldn't have. Extension left as
+  `.png` since this is genuinely PNG now (only `teaser` needed a rename, since that one's a
+  photo).
+- **`laser-cut/*.png`** (`panel-cut-lines`, `panel-system-diagram`, `panel-placement-map`): same
+  quantization treatment → 24 KB→4 KB, 98 KB→22 KB, 65 KB→36 KB respectively. These are only
+  linked (not embedded inline) in `laser-cut/README.md`, so this only helps click-through load
+  time, not page rendering.
+- **`images/components/*.jpg`** (6 product photos, real photography — quantization doesn't apply
+  to photos): resized to a 500 px long edge + re-compressed (JPEG quality 78) →
+  ~150–300 KB each down to **10–36 KB each**.
+- **Display-width fixes** (the underlying reason this mattered beyond just download size): the
+  component gallery in `README.md` and the photo column in `BOM.md` were plain Markdown `![]()`
+  images inside table cells — at native resolution (600–970 px per photo, wildly inconsistent
+  with the 248 px L298N photo) that would have rendered as an oversized, uneven-looking table.
+  Switched every one to an HTML `<img width="…">` tag (180 px in the `README.md` gallery, 100 px
+  in `BOM.md`'s narrower table) for small, uniform thumbnails. Did the same for the two wiring
+  diagrams in `README.md`/`wiring/README.md` (`width="800"`/`"600"`, wrapped in `<a href>` so the
+  full-resolution image is still one click away for anyone who needs to actually read the diagram
+  closely).
+- Ran `scripts/check-docs.sh` — all checks pass.
+
+**Next:** no other images remain unoptimized. If any new photos/diagrams get added later (the
+still-outstanding `platform.png`, `wiring.png`, `ide-settings.png`, or step media), apply the same
+treatment: quantized PNG for line-art/diagrams, resized+compressed JPEG for photos, explicit
+`<img width>` for anything embedded inside a table or used as a page hero.
+
+---
+
 ## 2026-07-08 (15)
 
 Resized/compressed `images/teaser.jpg` (formerly `teaser.png`) — user said the picture was

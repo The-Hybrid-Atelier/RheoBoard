@@ -5,7 +5,7 @@
 
 ## Electrical wiring
 
-![Electrical wiring diagram](2P1V-wiring-diagram.png)
+<a href="2P1V-wiring-diagram.png"><img src="2P1V-wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
 
 Summary (see diagram for full detail):
 
@@ -25,7 +25,7 @@ GPIO map matches `PneumaticSystem.h` in firmware: `PIN_PUMP1_EN=32`, `PIN_PUMP2_
 
 ## Pneumatic plumbing
 
-![Pneumatic tube connection diagram](2P1V-tube-connection.png)
+<a href="2P1V-tube-connection.png"><img src="2P1V-tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
 See also [`pneumatic-plumbing.md`](pneumatic-plumbing.md) for text summary and REP cycle.
 
