@@ -5,7 +5,7 @@ a laser-cut platform, pictographic wiring diagrams, firmware, and a step-by-step
 
 _Custom PCB variant: [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/)_
 
-![This simple rheometer — assembled bench prototype](images/teaser.png)
+<img src="images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
 
 ## Table of contents
 

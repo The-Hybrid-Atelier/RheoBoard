@@ -16,7 +16,7 @@ MicroPressure sensor. The end result is a device that runs a **REP** (retract �
 on command — from BLE (RheoData), the onboard/Qwiic button, or USB serial — and streams a
 pressure trace for each one.
 
-![This simple rheometer — assembled bench prototype](../images/teaser.png)
+<img src="../images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
 
 - **Estimated build time:** not yet measured end-to-end by a human build. Summing the per-step
   time estimates below gives **~4–7 hours hands-on** for a first-timer, dominated by step 03's
