@@ -7,7 +7,7 @@ License: CERN-OHL-W-2.0 — see [`../../../LICENSE-HARDWARE.txt`](../../../LICEN
 
 ## Electrical wiring
 
-<a href="2P1V-wiring-diagram.png"><img src="2P1V-wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
+<a href="wiring-diagram.png"><img src="wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
 
 Summary (see diagram for full detail):
 
@@ -27,7 +27,7 @@ GPIO map matches `PneumaticSystem.h` in firmware: `PIN_PUMP1_EN=32`, `PIN_PUMP2_
 
 ## Pneumatic plumbing
 
-<a href="2P1V-tube-connection.png"><img src="2P1V-tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
+<a href="tube-connection.png"><img src="tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
 See also [`pneumatic-plumbing.md`](pneumatic-plumbing.md) for text summary and REP cycle.
 
@@ -54,7 +54,7 @@ every part in this diagram (ESP32 Thing Plus, MPRLS sensor, L298N, Adafruit 4700
 
 ## Regenerating the electrical diagram
 
-`2P1V-wiring-diagram.png` is a rendered export — [`generate_wiring_diagram.py`](generate_wiring_diagram.py)
+`wiring-diagram.png` is a rendered export — [`generate_wiring_diagram.py`](generate_wiring_diagram.py)
 is the actual editable source (requires `matplotlib`; `Pillow` optional, used to shrink the PNG).
 Edit the script, not the PNG directly:
 
@@ -62,5 +62,5 @@ Edit the script, not the PNG directly:
 python3 generate_wiring_diagram.py
 ```
 
-`2P1V-tube-connection.png` (pneumatic) has no equivalent script yet — it's photo/pictogram-style,
+`tube-connection.png` (pneumatic) has no equivalent script yet — it's photo/pictogram-style,
 not a generated diagram.

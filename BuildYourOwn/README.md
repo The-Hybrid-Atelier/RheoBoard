@@ -76,7 +76,7 @@ Parts: acrylic panel, ~20 zip ties, Ø10 bulkhead fitting, 4 feet — see
 ## Step 03: Wire the electronics
 
 Parts: electronics rows in [`hardware/BOM.md`](hardware/BOM.md). Diagram:
-[`hardware/wiring/2P1V-wiring-diagram.png`](hardware/wiring/2P1V-wiring-diagram.png) (electrical
+[`hardware/wiring/wiring-diagram.png`](hardware/wiring/wiring-diagram.png) (electrical
 only — pneumatic plumbing is separate, below).
 
 1. Tie ESP32 GND, both L298N GNDs, and the 12 V adapter (−) together.
@@ -94,7 +94,7 @@ GPIO map must match
 [`software/rheometer-firmware/PneumaticSystem.h`](software/rheometer-firmware/PneumaticSystem.h).
 
 **Pneumatic plumbing:** plumb per
-[`hardware/wiring/2P1V-tube-connection.png`](hardware/wiring/2P1V-tube-connection.png) and
+[`hardware/wiring/tube-connection.png`](hardware/wiring/tube-connection.png) and
 [`hardware/wiring/pneumatic-plumbing.md`](hardware/wiring/pneumatic-plumbing.md). PUMP1 port →
 valve metal pole (vacuum); PUMP2 port → valve plastic pole (pressure) — motor polarity doesn't
 flip air direction.

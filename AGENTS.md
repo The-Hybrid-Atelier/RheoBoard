@@ -111,12 +111,19 @@ where agents in general are most prone to declaring victory too early, so treat 
 Three separate licenses, one per content category (see root `README.md` → License, or `LICENSE`):
 hardware design files (wiring, laser-cut, BOM, PCB) are **CERN-OHL-W-2.0**
 (`LICENSE-HARDWARE.txt`); firmware is **MIT** (`LICENSE-SOFTWARE.txt`); documentation is
-**CC BY-SA 4.0** (`LICENSE-DOCUMENTATION.txt`). New firmware files should carry an
+**CC BY-SA 4.0** (`LICENSE-DOCUMENTATION.txt`). The root `LICENSE` file is a clean, unmodified copy
+of the CERN-OHL-W-2.0 text (so GitHub's license detector picks it up) — identical copies also live
+next to the files they cover: `BuildYourOwn/hardware/LICENSE`, `BuildYourOwn/laser-cut/LICENSE`,
+`RheoBoard_V8_Final/LICENSE` (all CERN-OHL-W-2.0), and
+`BuildYourOwn/software/rheometer-firmware/LICENSE` (MIT). If a license's canonical text ever
+changes, update all copies together. New firmware files should carry an
 `SPDX-License-Identifier: MIT` header (see existing files for the pattern); new hardware-design
 index files (BOM/wiring/laser-cut READMEs) should carry a one-line pointer to
-`LICENSE-HARDWARE.txt`. Not yet OSHWA-certified — see `BuildYourOwn/PROGRESS.md` for the
-remaining gaps (laser-cut vector file needs physical test-fit verification, self-certification
-submission not yet made).
+`LICENSE-HARDWARE.txt`. Machine-readable open-hardware metadata lives in `okh-RheoBoard.yml` (Open
+Know-How manifest, repo root) — keep its `date-updated`, `version`, `made`, license, and
+design-file paths in sync with `README.md` and `hardware/REVISIONS.md` whenever those change.
+Not yet OSHWA-certified — see `BuildYourOwn/PROGRESS.md` for the remaining gaps (laser-cut vector
+file needs physical test-fit verification, self-certification submission not yet made).
 
 ## Hardware-specific notes
 

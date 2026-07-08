@@ -1,7 +1,20 @@
 # RheoBoard
 
-Open hardware powering **RheoMap**, **RheoData**, and **SlipAtlas**. There are two ways to build
-the hardware:
+### A low-cost, DIY benchtop pneumatic rheometer head for the RheoMap, RheoData, and SlipAtlas projects
+
+Maintained by Charlie Vuong (The Hybrid Atelier).
+
+This project is open hardware. The hardware design is licensed under the
+[CERN Open Hardware Licence — Weakly Reciprocal](LICENSE), the firmware under the
+[MIT License](BuildYourOwn/software/rheometer-firmware/LICENSE), and the documentation under
+[CC BY-SA 4.0](LICENSE-DOCUMENTATION.txt) — see [License](#license) for the full breakdown, or
+the machine-readable manifest [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
+
+<img src="BuildYourOwn/images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
+
+A benchtop pneumatic "pull-push" head: 2 air pumps + 1 valve on a laser-cut panel, driven by an
+ESP32 over BLE and sensed by a Qwiic MicroPressure sensor, built from off-the-shelf modules for
+well under the cost of a commercial instrument. There are two ways to build the hardware:
 
 1. **Build Your Own** ([`BuildYourOwn/`](BuildYourOwn/)) — off-the-shelf modules/dev boards,
    breadboard/perfboard, wiring diagrams + BOM + assembly guide. **Current focus.**
@@ -10,7 +23,11 @@ the hardware:
 > Full project background, goals, and specs are being written up in
 > `BuildYourOwn/product-specs.md` — this README will grow as that lands.
 
-<img src="BuildYourOwn/images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
+- [A step-by-step build guide](BuildYourOwn/README.md)
+- [A full bill of materials, with photos](BuildYourOwn/hardware/BOM.md)
+- [Editable wiring-diagram and laser-cut design sources](#repository-layout), not just rendered images
+- [A build-verification checklist](BuildYourOwn/VERIFICATION.md)
+- [Firmware and OSC control API](BuildYourOwn/software/rheometer-firmware/README.md)
 
 ## Start here
 
@@ -71,9 +88,9 @@ This DIY track wires breakout boards instead of a custom PCB; optional custom PC
 
 **This design** — electrical wiring and pneumatic plumbing:
 
-<a href="BuildYourOwn/hardware/wiring/2P1V-wiring-diagram.png"><img src="BuildYourOwn/hardware/wiring/2P1V-wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
+<a href="BuildYourOwn/hardware/wiring/wiring-diagram.png"><img src="BuildYourOwn/hardware/wiring/wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
 
-<a href="BuildYourOwn/hardware/wiring/2P1V-tube-connection.png"><img src="BuildYourOwn/hardware/wiring/2P1V-tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
+<a href="BuildYourOwn/hardware/wiring/tube-connection.png"><img src="BuildYourOwn/hardware/wiring/tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
 Text summary of the pneumatic logic:
 [`BuildYourOwn/hardware/wiring/pneumatic-plumbing.md`](BuildYourOwn/hardware/wiring/pneumatic-plumbing.md).
@@ -133,14 +150,27 @@ step.
 
 ## Repository layout
 
-- `BuildYourOwn/` — the DIY build guide + harness: `README.md` (step-by-step build guide, single
-  file), `hardware/` (`BOM.md`, `wiring/`, component `images/`, `references/` datasheets),
-  `laser-cut/` (platform design files), `software/` (firmware), `images/` (project-wide photos),
-  plus agent-facing docs (`PROGRESS.md`, `core-beliefs.md`, `product-specs.md`,
-  `VERIFICATION.md`).
-- `RheoBoard_V8_Final/` — Altium Designer project (schematic, PCB layout, symbol/footprint
-  libraries, BOM, manufacturing outputs).
-- `AGENTS.md` — map for AI coding agents (and future-me) working in this repo.
+```
+├── BuildYourOwn/              The DIY build (current focus) + project docs
+│   ├── README.md              - Step-by-step build guide (8 steps, single file)
+│   ├── hardware/              - Everything electrical
+│   │   ├── BOM.md             - Bill of materials (with component photos)
+│   │   ├── wiring/            - Electrical schematic + pneumatic diagrams (+ generator script)
+│   │   ├── images/            - Component photos
+│   │   ├── references/        - Vendored datasheets
+│   │   └── REVISIONS.md       - Hardware revision history (unit ↔ design-file mapping)
+│   ├── laser-cut/             - Mounting-panel design files (vector source + placement map)
+│   ├── software/              - ESP32 firmware + IDE setup
+│   ├── images/                - Project-wide photos (teaser, etc.)
+│   ├── VERIFICATION.md        - Build verification + OSHWA-readiness checklist
+│   └── PROGRESS.md, core-beliefs.md, product-specs.md   - Project docs
+├── RheoBoard_V8_Final/        Custom PCB (Altium: schematic, layout, libraries, BOM, outputs)
+├── okh-RheoBoard.yml          Open Know-How manifest (machine-readable open-hardware metadata)
+├── LICENSE, LICENSE-*.txt     Per-category licenses (hardware / software / documentation) — also
+│                              copied alongside the files they cover (hardware/, laser-cut/,
+│                              software/rheometer-firmware/, RheoBoard_V8_Final/)
+└── AGENTS.md                  Map for AI coding agents working in this repo
+```
 
 ## Status
 
@@ -173,6 +203,15 @@ hardware doesn't have to be open itself. Third-party components (ESP32, L298N, p
 sensor, Qwiic modules) and third-party libraries (ThingPlusBLEOSC, OSC, ESP32 BLE Arduino, etc.)
 remain under their own licenses — see
 [`BuildYourOwn/hardware/references/README.md`](BuildYourOwn/hardware/references/README.md).
+
+If you build and distribute units based on this design, per the
+[Open Source Hardware Definition](https://www.oshwa.org/definition/)'s introduction: make clear
+that your units aren't manufactured, sold, warrantied, or otherwise sanctioned by the original
+designer, and don't use "RheoBoard"/"RheoMap"/"RheoData"/"SlipAtlas" or the original designer's
+name to imply endorsement.
+
+Machine-readable metadata for open-hardware indexers is in [`okh-RheoBoard.yml`](okh-RheoBoard.yml) (Open Know-How
+manifest).
 
 **Not yet OSHWA-certified — self-certification hasn't been submitted.** Applying these licenses
 is a prerequisite, not the whole requirement. Hardware revision tracking:

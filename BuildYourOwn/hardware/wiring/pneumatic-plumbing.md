@@ -1,6 +1,6 @@
 # Pneumatic plumbing
 
-Text companion to [`2P1V-tube-connection.png`](2P1V-tube-connection.png). Tubing: **3 mm ID silicone**
+Text companion to [`tube-connection.png`](tube-connection.png). Tubing: **3 mm ID silicone**
 ([Adafruit 4664](https://www.adafruit.com/product/4664) or equivalent).
 
 ## Components
