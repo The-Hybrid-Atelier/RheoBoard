@@ -54,9 +54,9 @@ This BYO track wires breakout boards instead of a custom PCB; optional custom PC
 
 **This design** — electrical wiring and pneumatic plumbing:
 
-![Electrical wiring diagram](wiring/2P1V-wiring-diagram.png)
+<a href="wiring/2P1V-wiring-diagram.png"><img src="wiring/2P1V-wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
 
-![Pneumatic tube connection diagram](wiring/2P1V-tube-connection.png)
+<a href="wiring/2P1V-tube-connection.png"><img src="wiring/2P1V-tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
 Text summary of the pneumatic logic: [`wiring/pneumatic-plumbing.md`](wiring/pneumatic-plumbing.md).
 
@@ -64,8 +64,8 @@ Text summary of the pneumatic logic: [`wiring/pneumatic-plumbing.md`](wiring/pne
 
 | | | |
 |---|---|---|
-| ![SparkFun ESP32 Thing Plus](images/components/esp32-thing-plus.jpg)<br>SparkFun ESP32 Thing Plus (micro-USB) | ![SparkFun Qwiic MicroPressure](images/components/qwiic-micropressure.jpg)<br>Qwiic MicroPressure (MPRLS) | ![SparkFun Qwiic Button](images/components/qwiic-button.jpg)<br>Qwiic Button |
-| ![L298N motor driver module](images/components/l298n-motor-driver.jpg)<br>L298N dual H-bridge (×2) | ![Adafruit 4700 air pump](images/components/adafruit-4700-air-pump.jpg)<br>Adafruit 4700 air pump (×2) | ![Adafruit 4663 air valve](images/components/adafruit-4663-air-valve.jpg)<br>Adafruit 4663 air valve |
+| <img src="images/components/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus"><br>SparkFun ESP32 Thing Plus (micro-USB) | <img src="images/components/qwiic-micropressure.jpg" width="180" alt="SparkFun Qwiic MicroPressure"><br>Qwiic MicroPressure (MPRLS) | <img src="images/components/qwiic-button.jpg" width="180" alt="SparkFun Qwiic Button"><br>Qwiic Button |
+| <img src="images/components/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="images/components/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) | <img src="images/components/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve |
 
 Photo sources/licenses: [`images/components/README.md`](images/components/README.md).
 
