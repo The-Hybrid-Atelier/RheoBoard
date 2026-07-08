@@ -3,8 +3,6 @@
 Project overview and reference material (BOM, wiring, firmware API) live in the
 [repo root README](../README.md); this file is the build guide.
 
-_All 8 steps written; none human-verified yet, no photos/video exist yet._
-
 <img src="images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
 
 ## Overview
@@ -28,8 +26,6 @@ or custom PCB work.
   cable; phone/tablet or computer running **RheoData** for BLE control
 
 ## Steps
-
-None of these are human-verified yet, and no photos/video exist for any step.
 
 - [Step 01 — Kit contents and tools](#step-01-kit-contents-and-tools)
 - [Step 02 — Assemble the platform](#step-02-assemble-the-platform) — blocked on laser-cut vector file
