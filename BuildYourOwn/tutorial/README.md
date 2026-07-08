@@ -24,7 +24,6 @@ OpenTheremin's 7-step assembly PDF informed the step outline below.
 | [Calico `PCB files/`](https://github.com/jsli96/calico/tree/main/PCB%20files) | Custom PCB | [`../wiring/`](../wiring/) (BYO modules) or [`../../RheoBoard_V8_Final/`](../../RheoBoard_V8_Final/) (PCB track) |
 | [Calico `main_app.ino`](https://github.com/jsli96/calico/blob/main/main_app.ino) | Firmware at repo root | [`../software/`](../software/) |
 | Calico root images (`teaser.png`, `esp32-3s-ide-settings.png`, …) | README visuals | [`../images/`](../images/) |
-| [Calico `calico 1.0 (previous model)/`](https://github.com/jsli96/calico/tree/main/calico%201.0%20(previous%20model)) | Archived revision | [`../previous-revisions/`](../previous-revisions/) |
 | OpenTheremin PDF assembly | 7-step photo guide | Steps 01–08 below |
 | [OpenTheremin download page](https://www.gaudi.ch/OpenTheremin/index.php/download) | Detailed flash steps | Step [`04-install-firmware`](steps/04-install-firmware/) |
 

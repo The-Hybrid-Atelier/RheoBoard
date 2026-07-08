@@ -25,13 +25,16 @@ _Add `images/teaser.png` here when it exists._
 
 ## Features
 
-- **MCU:** SparkFun ESP32 Thing Plus (ESP32-S3) — BLE to **RheoData**, USB serial for bench debug.
+- **MCU:** SparkFun ESP32 Thing Plus (micro-USB, plain ESP32-WROOM-32D/E) — BLE to **RheoData**,
+  micro-USB for both programming and power.
 - **Pneumatics:** 2 air pump/vacuum motors ([Adafruit 4700](https://www.adafruit.com/product/4700)) +
   1 solenoid air valve ([Adafruit 4663](https://www.adafruit.com/product/4663)) — switched-port
   "flip" plumbing for retract/extrude REP cycles.
 - **Sensing:** SparkFun Qwiic MicroPressure (Honeywell MPRLS) on the shared pneumatic line.
-- **Control:** BLE OSC API (`2P1VX` firmware), optional Qwiic button gestures, USB serial commands.
-- **Drivers:** 2× L298N H-bridge modules (#1 = pumps, #2 = valve); external **12 V** adapter.
+- **Control:** BLE OSC API (`2P1VX` firmware), SparkFun Qwiic Button (daisy-chained after the
+  sensor) for onboard gestures, USB serial commands for bench debug.
+- **Drivers:** 2× L298N H-bridge modules (#1 = 2 pumps, #2 = valve); one external **12 V** adapter
+  powers both.
 
 ## Hardware
 
@@ -47,7 +50,7 @@ _TBD — no design files yet._
 
 ### Electronics
 
-Parts list: [`BOM.md`](BOM.md)
+Parts list: [`BOM.md`](BOM.md) (with component photos).
 
 Wiring: pictographic breadboard-style diagrams in [`wiring/`](wiring/) — not abstract schematics.
 
@@ -55,11 +58,22 @@ Calico equivalent: custom PCB in [`PCB files/`](https://github.com/jsli96/calico
 plus `control-Board.png` in repo root. Our BYO track wires breakout boards instead; optional
 custom PCB docs live in [`../RheoBoard_V8_Final/`](../RheoBoard_V8_Final/).
 
-**2P1V rig** — electrical wiring and pneumatic plumbing diagrams in [`wiring/`](wiring/):
+**2P1V rig** — electrical wiring and pneumatic plumbing:
 
-- [`wiring/2P1V-wiring-diagram.png`](wiring/2P1V-wiring-diagram.png)
-- [`wiring/2P1V-tube-connection.png`](wiring/2P1V-tube-connection.png)
-- Text summary: [`wiring/pneumatic-plumbing.md`](wiring/pneumatic-plumbing.md)
+![2P1V electrical wiring diagram](wiring/2P1V-wiring-diagram.png)
+
+![2P1V pneumatic tube connection diagram](wiring/2P1V-tube-connection.png)
+
+Text summary of the pneumatic logic: [`wiring/pneumatic-plumbing.md`](wiring/pneumatic-plumbing.md).
+
+#### Component gallery
+
+| | | |
+|---|---|---|
+| ![SparkFun ESP32 Thing Plus](images/components/esp32-thing-plus.jpg)<br>SparkFun ESP32 Thing Plus (micro-USB) | ![SparkFun Qwiic MicroPressure](images/components/qwiic-micropressure.jpg)<br>Qwiic MicroPressure (MPRLS) | ![SparkFun Qwiic Button](images/components/qwiic-button.jpg)<br>Qwiic Button |
+| ![L298N motor driver module](images/components/l298n-motor-driver.jpg)<br>L298N dual H-bridge (×2) | ![Adafruit 4700 air pump](images/components/adafruit-4700-air-pump.jpg)<br>Adafruit 4700 air pump (×2) | ![Adafruit 4663 air valve](images/components/adafruit-4663-air-valve.jpg)<br>Adafruit 4663 air valve |
+
+Photo sources/licenses: [`images/components/README.md`](images/components/README.md).
 
 ## Software configuration
 
@@ -67,9 +81,10 @@ Firmware: [`software/2P1VX/2P1VX.ino`](software/2P1VX/2P1VX.ino) — device name
 
 1. Install [Arduino IDE](https://www.arduino.cc/en/software) 2.x and the ESP32 board package
    (Espressif `esp32` core — URL in [`software/README.md`](software/README.md)).
-2. Install libraries: SparkFun Qwiic Button, SparkFun MicroPressure, and local **ThingPlusBLEOSC**
-   (see [`software/README.md`](software/README.md) and [`references.md`](references.md)).
-3. Board: **ESP32S3 Dev Module** or SparkFun ESP32 Thing Plus; port: USB-C on the Thing Plus.
+2. Install libraries: SparkFun Qwiic Button, SparkFun MicroPressure, OSC (Adrian Freed), and
+   [**ThingPlusBLEOSC**](https://github.com/cearto/ThingPlusBLEOSC) (`git clone` into Arduino
+   `libraries/` — not on Library Manager; see [`software/README.md`](software/README.md)).
+3. Board: **SparkFun ESP32 Thing Plus** (or generic **ESP32 Dev Module**); port: micro-USB.
    Screenshot target: `images/ide-settings.png` (add when captured).
 4. Upload — full walkthrough: [`tutorial/steps/04-install-firmware/`](tutorial/steps/04-install-firmware/).
 
@@ -83,7 +98,7 @@ API reference: [`software/2P1VX/README.md`](software/2P1VX/README.md).
    OSC `rheo/rep`; tune parameters under `rheo/rep/*` (defaults documented in firmware README).
 3. **USB serial (bench):** 115200 baud — `REP`, `STOP`, `PUMP1 <pct>`, `PUMP2 <pct>` when
    `SERIAL_STREAM` is enabled.
-4. **Qwiic button (optional):** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.
+4. **Qwiic button:** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.
 
 First successful upload should print `2P1VX initialized` on Serial Monitor.
 
@@ -111,12 +126,10 @@ Agent/session docs — not part of the builder-facing guide:
 |---|---|
 | [`PROGRESS.md`](PROGRESS.md) | Session log |
 | [`core-beliefs.md`](core-beliefs.md) | Operating principles |
-| [`exec-plans/`](exec-plans/) | Planning (`active/`, `completed/`, `tech-debt-tracker.md`) |
 | [`product-specs.md`](product-specs.md) | What we're building and why |
 | [`references.md`](references.md) | Datasheets + external project links |
 | [`VERIFICATION.md`](VERIFICATION.md) | Pre-release checklist (human sign-off) |
 | [`images/`](images/) | Teaser, IDE screenshots, project-wide photos |
-| [`previous-revisions/`](previous-revisions/) | Archived superseded designs |
 
 ### Status
 

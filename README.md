@@ -12,8 +12,8 @@ Open hardware powering **RheoMap**, **RheoData**, and **SlipAtlas**. There are t
 ## Repository layout
 
 - `BuildYourOwn/` — the DIY build, and essentially the whole project harness: parts list,
-  design files, wiring diagrams, tutorial, plus the docs (progress log, exec-plans, core
-  beliefs, references, product specs).
+  design files, wiring diagrams, tutorial, plus the docs (progress log, core beliefs,
+  references, product specs).
 - `RheoBoard_V8_Final/` — Altium Designer project (schematic, PCB layout, symbol/footprint
   libraries, BOM, manufacturing outputs).
 - `AGENTS.md` — map for AI coding agents (and future-me) working in this repo.

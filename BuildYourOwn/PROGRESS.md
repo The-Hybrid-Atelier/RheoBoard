@@ -8,6 +8,97 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (8)
+
+Removed `exec-plans/` and `previous-revisions/` from the harness — both were pure empty
+scaffolding (no active/completed plans, no tracked tech debt, no archived revisions ever
+actually landed in them across 7 sessions) and the user judged the ceremony wasn't earning its
+keep for a solo-dev docs repo at this size. Reversible later if a genuinely large/ambiguous piece
+of work (e.g. the laser-cut design work, still TBD) turns out to need a written plan — just
+recreate the folder and copy `AGENTS.md`'s old wording out of git history.
+
+- Deleted `BuildYourOwn/exec-plans/` (active/, completed/, tech-debt-tracker.md, _template.md)
+  and `BuildYourOwn/previous-revisions/`.
+- Updated `AGENTS.md`: dropped both from the repo-layout and `BuildYourOwn/` map sections,
+  removed session-bootstrap steps 4–5 (check exec-plans/active, tech-debt-tracker) in favor of a
+  single "check product-specs.md if PROGRESS.md's Next note isn't obvious" step, and dropped
+  wrap-up step 3 (update/move exec-plan).
+- Updated `scripts/check-docs.sh`: removed the "Active exec-plans" check block and renumbered
+  the check list in the header comment (now 3 checks instead of 4).
+- Updated cross-references: top-level `README.md`, `BuildYourOwn/README.md` (harness table),
+  `BuildYourOwn/VERIFICATION.md` (dropped the "move exec-plan to completed/" checklist item),
+  `BuildYourOwn/tutorial/README.md` (dropped the Calico-"previous model" → `previous-revisions/`
+  doc-model row, since there's no longer an equivalent).
+- Left historical `PROGRESS.md` entries below untouched (they're a log of what happened at the
+  time, not a living doc) even though several mention exec-plans/previous-revisions in the past
+  tense.
+
+**Next:** same as prior entry — capture `images/ide-settings.png` + `images/teaser.png` from a
+real build; human-verify wiring/tutorial against a real build; `laser-cut/` design files TBD.
+
+## 2026-07-08 (7)
+
+Corrected the ESP32 board identity, promoted the Qwiic Button to a required part, wired in the
+real ThingPlusBLEOSC repo, and rebuilt the wiring diagram at higher resolution:
+
+- **ESP32 Thing Plus variant fix:** the actual part is the **micro-USB** board (WRL-15663, plain
+  ESP32-WROOM-32D/E) — earlier session had mistakenly sourced the USB-C variant's photo (WRL-20168,
+  ESP32-S3) and referenced "ESP32S3 Dev Module" as the Arduino board. Fixed photo, datasheet
+  (vendored schematic + graphical datasheet), and every doc mention (`BOM.md`, `references.md`,
+  `software/README.md`, `README.md`, tutorial steps 03/04/06). Added a note in
+  `images/components/README.md` distinguishing the two similarly-named SparkFun boards so this
+  mistake doesn't recur.
+- **Qwiic Button promoted from optional to required** (user confirmed it's part of the system,
+  daisy-chained after the MicroPressure sensor on one I2C bus). Added its photo, schematic PDF,
+  and BOM row; updated wiring diagram, `README.md`, and tutorial steps accordingly.
+- **ThingPlusBLEOSC** real repo found: https://github.com/cearto/ThingPlusBLEOSC (MIT license, by
+  cearto). Replaced the "local library, path TBD" placeholder with real install instructions
+  (`git clone` into Arduino `libraries/`) and its actual dependencies (OSC by Adrian Freed, ESP32
+  BLE Arduino by Neil Kolban) across `references.md`, `software/README.md`, `README.md`, and
+  tutorial step 04.
+- **Wiring diagram regenerated again** (`wiring/2P1V-wiring-diagram.png`): higher resolution
+  (220 dpi vs. 150), electrical-only (confirmed no pneumatic content ever leaked in — the tube
+  diagram is a separate file), added the Qwiic Button to the I2C chain, labeled micro-USB
+  explicitly, and fixed power-wire routing so it no longer visually cuts through other boxes.
+- Vendored new datasheets: `ESP32_Thing_Plus_Schematic.pdf`, `ESP32_Thing_Plus_Graphical_Datasheet.pdf`,
+  `Qwiic_Button_Schematic.pdf`, `Honeywell_MPR_Series_Datasheet.pdf`.
+- **Wiring diagram redesigned a third time**, matching the layout/style of an older reference
+  diagram the user had on hand (title + subtitle banner, a color-coded legend row, a 3-column
+  block layout: DC supply/ESP32/Qwiic sensor/Qwiic button stacked on the left, the two L298N
+  boards in the middle, color-coded output boxes — including an explicit greyed-out "2nd valve
+  channel — not populated" box — on the right). Rewrote the generator (Matplotlib) to record each
+  text line's exact y-coordinate per box and route every wire (+12V, GND, GPIO→EN, load wires) to
+  land precisely on its labeled row instead of an eyeballed offset, which had caused visible
+  misalignment/crossing in the prior pass. Verified the file on disk was already correctly updated
+  from the previous regeneration (confirmed via direct pixel read, 3379×2506) — the "still shows
+  old picture" report was a stale viewer cache, not a stale file; confirmed no duplicate copies of
+  the diagram exist elsewhere in the repo.
+
+**Next:** capture `images/ide-settings.png` + `images/teaser.png` from a real upload; human-verify
+the corrected wiring against a real build; laser-cut `laser-cut/` design files still TBD.
+
+Not committed.
+
+## 2026-07-08 (6)
+
+Regenerated the wiring diagram and added a real component photo gallery:
+
+- **`wiring/2P1V-wiring-diagram.png`** regenerated programmatically (matplotlib, precise text —
+  not AI image generation, to keep GPIO numbers/labels exact) to reflect the single **12 V**
+  supply and **Adafruit 4700** pumps / **Adafruit 4663** valve (was previously dual 6–7 V supplies
+  language baked into the old image). Second valve channel (ENB/OUT3-4) now shown explicitly as
+  "not populated" rather than "wired but unused."
+- Added **`images/components/`** with real vendor product photos: SparkFun ESP32 Thing Plus,
+  SparkFun Qwiic MicroPressure, Adafruit 4700 pump, Adafruit 4663 valve (all sourced directly from
+  Adafruit/SparkFun product pages or their GitHub hardware repos), plus a generic L298N module
+  photo (cropped from a CC BY-SA 4.0 Wikimedia Commons circuit illustration — no single canonical
+  vendor page exists for that generic part). Attribution/sourcing in
+  `images/components/README.md`.
+- Embedded (not just linked) diagrams and component photos directly in `BOM.md`, `README.md`
+  (new "Component gallery" section), and `wiring/README.md`.
+
+Not committed.
+
 ## 2026-07-08 (5)
 
 Corrected BYO electronics BOM to match actual parts:

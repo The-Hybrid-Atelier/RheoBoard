@@ -15,19 +15,18 @@ There are two hardware tracks:
 1. **Build Your Own / BYO** (`BuildYourOwn/`) — off-the-shelf modules/dev boards on
    breadboard/perfboard, documented with wiring diagrams + BOM + assembly instructions instead
    of CAD. **This is the current focus and holds essentially the entire harness** (progress log,
-   exec-plans, core beliefs, references, product specs) — assume work is about this track and
-   lives in this folder unless told otherwise.
+   core beliefs, references, product specs) — assume work is about this track and lives in this
+   folder unless told otherwise.
 2. **PCB** (`RheoBoard_V8_Final/`) — custom Altium-designed board (schematic, layout, symbol/
-   footprint libraries, BOM). Binary CAD files — describe intent of changes in prose (`PROGRESS.md`,
-   exec-plans) since `git diff` won't show it. PCB-specific process docs can live alongside the
-   design in `RheoBoard_V8_Final/` when needed, mirroring `BuildYourOwn/`'s pattern.
+   footprint libraries, BOM). Binary CAD files — describe intent of changes in prose
+   (`PROGRESS.md`) since `git diff` won't show it. PCB-specific process docs can live alongside
+   the design in `RheoBoard_V8_Final/` when needed, mirroring `BuildYourOwn/`'s pattern.
 
 ## Repository layout
 
 - `BuildYourOwn/` — the harness + BYO build. Builder-facing: `README.md` (Calico-style master
   doc), `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `tutorial/`, `VERIFICATION.md`.
-  Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `exec-plans/`, `product-specs.md`,
-  `references.md`, `previous-revisions/`.
+  Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`, `references.md`.
 - `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, manufacturing outputs. Binary CAD files — Altium is the only thing that opens
   them (see "Hardware-specific notes" below).
@@ -71,33 +70,25 @@ where agents in general are most prone to declaring victory too early, so treat 
    alone), but remember the working tree may be ahead of this.
 3. Read `BuildYourOwn/PROGRESS.md` — the running log of what's been done and what's next; this
    is more current than git log now that commits are batched/manual.
-4. Check `BuildYourOwn/exec-plans/active/` — if a plan is in flight, resume it before starting
-   something new.
-5. If nothing is active, check `BuildYourOwn/exec-plans/tech-debt-tracker.md` and
-   `BuildYourOwn/product-specs.md` for the next priority.
+4. Check `BuildYourOwn/product-specs.md` for the next priority if `PROGRESS.md`'s "Next" note
+   doesn't already point somewhere obvious.
 
 ## Session wrap-up — do this before ending every session
 
-1. Run `scripts/check-docs.sh` — catches dangling doc links, more than one active exec-plan,
-   and doc edits that forgot to update `BuildYourOwn/PROGRESS.md`. Fix what it flags.
+1. Run `scripts/check-docs.sh` — catches dangling doc links and doc edits that forgot to update
+   `BuildYourOwn/PROGRESS.md`. Fix what it flags.
 2. Append a dated entry to `BuildYourOwn/PROGRESS.md`: what changed, why, what's next.
-3. Update the relevant exec-plan, or move it to `BuildYourOwn/exec-plans/completed/` if finished.
-4. **Stop — do not commit or push.** Leave the changes in the working tree and tell the user
+3. **Stop — do not commit or push.** Leave the changes in the working tree and tell the user
    what changed so they can review and commit themselves.
 
 ## `BuildYourOwn/` map
 
 - `PROGRESS.md` — dated session log, the primary continuity mechanism (see working agreement).
 - `core-beliefs.md` — operating principles; update it when a recurring mistake/preference emerges.
-- `exec-plans/` — plans for any non-trivial chunk of work.
-  - `active/` — in-flight plans (should usually contain 0-1 items).
-  - `completed/` — finished plans, kept for history.
-  - `tech-debt-tracker.md` — known gaps/deferred items that aren't worth fixing right now.
-  - `_template.md` — copy this to start a new plan.
 - `product-specs.md` — what we're building and why (RheoBoard, RheoMap, RheoData, SlipAtlas).
 - `references.md` — external datasheets/standards the design depends on.
-- `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `previous-revisions/`,
-  `VERIFICATION.md`, `tutorial/` — see `BuildYourOwn/README.md`.
+- `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `VERIFICATION.md`, `tutorial/` —
+  see `BuildYourOwn/README.md`.
 
 ## Hardware-specific notes
 

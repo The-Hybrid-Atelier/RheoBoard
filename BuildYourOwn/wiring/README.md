@@ -9,8 +9,8 @@
 
 Summary (see diagram for full detail):
 
-- **MCU:** SparkFun ESP32 Thing Plus — GPIO 32/33 → L298N #1 (pumps), GPIO 14/15 → L298N #2
-  (valves), Qwiic → MPRLS pressure sensor (I2C `0x18`).
+- **MCU:** SparkFun ESP32 Thing Plus — GPIO 32/33 → L298N #1 (pumps), GPIO 14 → L298N #2
+  (valve), Qwiic → MPRLS pressure sensor (I2C `0x18`).
 - **10 kΩ pull-downs** on GPIO 14, 15, 32, 33 to GND.
 - **L298N #1 (pumps):** ENA/ENB jumpers OFF; IN1/IN3 looped to +5V, IN2/IN4 to GND (direction
   hardwired). OUT1/2 → PUMP1 (vacuum), OUT3/4 → PUMP2 (pressure).
@@ -33,6 +33,12 @@ See also [`pneumatic-plumbing.md`](pneumatic-plumbing.md) for text summary and R
 - **VALVE2 (4663)** flips common between PUMP1 (vacuum, metal pole) and PUMP2 (pressure, plastic
   pole).
 - **MPRLS** tees into the shared line to chamber/nozzle.
+
+## Component photos
+
+See [`../BOM.md`](../BOM.md) and [`../images/components/`](../images/components/) for a photo of
+every part in this diagram (ESP32 Thing Plus, MPRLS sensor, L298N, Adafruit 4700 pumps, Adafruit
+4663 valve).
 
 ## Conventions
 
