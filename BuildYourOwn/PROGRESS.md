@@ -8,6 +8,41 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-08 (22)
+
+Trimmed `BuildYourOwn/README.md` (the step-by-step guide) per explicit user feedback that it read
+as "too much yapping" — pointed back at the OpenTheremin V4 PDF example shared earlier in the
+session (entry from 2026-07-08 07:33 session log: "notably brief at just four pages with numbered
+steps," minimal prose, mostly short imperative instructions) as the target style.
+
+- **Removed `Time`/`Difficulty` lines from every step** — cut, not relocated; there's no
+  replacement metadata since it wasn't asked for.
+- **Rewrote all 8 steps as short numbered instructions**, cutting most explanatory prose,
+  multi-sentence justifications, and repeated context (e.g. "What you'll need for this step" prose
+  blocks trimmed to a single inline sentence or dropped where it just repeated "Before you start").
+  Kept every load-bearing technical fact (GPIO pins, I2C addresses, part numbers, OSC parameter
+  names/defaults, table content) — nothing technical was cut, only the surrounding narration.
+  Condensed multi-line "Tips / common mistakes" and "Check before moving on" blocks per step down
+  to a single **Tip:** line each (or folded into the instructions directly) rather than separate
+  sections.
+- Compacted the top-level "Steps" status list from one verbose line per step
+  ("— written, not verified; no media") repeated 8 times to one disclaimer sentence above the list
+  plus only the two step-specific blockers (Step 02: laser-cut vector file; Step 05: RheoMap
+  fixture spec) called out inline.
+- Trimmed "Overview" from two long bullet points to two short paragraphs; trimmed the bottom
+  "Tips (all steps, at a glance)" list to one line per tip instead of two—three; trimmed "Media
+  conventions" to two sentences.
+- **Did not touch step heading text** (`## Step 01: Kit contents and tools`, etc.) — anchors
+  linked from `laser-cut/README.md` and within the file itself depend on the exact heading slug;
+  verified after the edit that `grep -n "^## Step"` still matches every anchor used elsewhere.
+- Net effect: `BuildYourOwn/README.md` went from ~540 lines to ~266 (git diff: +133/-407).
+- Ran `scripts/check-docs.sh` — all checks pass.
+
+**Next:** none from this pass. If the root `README.md` (project overview) also reads as too
+verbose, the same treatment could apply there, but that wasn't requested this round.
+
+---
+
 ## 2026-07-08 (21)
 
 Two more structural moves per explicit user request: (1) consolidate the 9-file `tutorial/`
