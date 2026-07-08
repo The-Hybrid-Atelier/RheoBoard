@@ -12,7 +12,7 @@ the rig is physically ready for power — step 06 turns it on.
 - **Parts:** the fully assembled panel from steps 02–03 (platform + zip-tied components +
   electrical wiring + pneumatic tubing).
 - **Design files:** [`../../../laser-cut/`](../../../laser-cut/) — panel dimensions and the
-  chamber/foot positions. [`../../../wiring/pneumatic-plumbing.md`](../../../wiring/pneumatic-plumbing.md)
+  chamber/foot positions. [`../../../hardware/wiring/pneumatic-plumbing.md`](../../../hardware/wiring/pneumatic-plumbing.md)
   for what the shared line/chamber connects to.
 - **Tools:** none beyond what's already in hand (no new fasteners — the panel's 4 corner feet
   are its only "mount").
@@ -27,7 +27,7 @@ the rig is physically ready for power — step 06 turns it on.
    chamber is kinked, pinched under a zip tie, or under tension from panel placement. A kinked
    line reads as a phantom pressure spike or a dead channel that isn't actually a wiring fault.
 3. **Position the chamber/nozzle** (the Ø10 bulkhead fitting — "the line we sense" per
-   [`pneumatic-plumbing.md`](../../../wiring/pneumatic-plumbing.md)) at whatever sample or test
+   [`pneumatic-plumbing.md`](../../../hardware/wiring/pneumatic-plumbing.md)) at whatever sample or test
    surface it needs to interface with for your measurement.
    **This is the one part of this step we can't fully spec yet** — the exact sample/fixture
    geometry (standoff distance, alignment, contact angle) is part of the RheoMap product spec,

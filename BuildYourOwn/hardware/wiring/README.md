@@ -1,7 +1,7 @@
 # Circuit / wiring diagrams
 
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
-[`../software/rheometer-firmware/`](../software/rheometer-firmware/) (`2P1VX.ino`).
+[`../../software/rheometer-firmware/`](../../software/rheometer-firmware/) (`2P1VX.ino`).
 
 ## Electrical wiring
 
@@ -36,7 +36,7 @@ See also [`pneumatic-plumbing.md`](pneumatic-plumbing.md) for text summary and R
 
 ## Component photos
 
-See [`../BOM.md`](../BOM.md) and [`../images/components/`](../images/components/) for a photo of
+See [`../BOM.md`](../BOM.md) and [`../images/`](../images/) for a photo of
 every part in this diagram (ESP32 Thing Plus, MPRLS sensor, L298N, Adafruit 4700 pumps, Adafruit
 4663 valve).
 
@@ -46,6 +46,6 @@ every part in this diagram (ESP32 Thing Plus, MPRLS sensor, L298N, Adafruit 4700
   orthogonal wire routing, junction dots, net-color legend) for precision. Pneumatic plumbing
   stays pictographic/photo-style since it's about physical tube routing, not electrical nets.
 - When updating wiring, update the image **and** the GPIO defines in
-  `software/rheometer-firmware/PneumaticSystem.h`
+  `../../software/rheometer-firmware/PneumaticSystem.h`
   together — keep them in sync.
 - A photo of the finished build from the same angle as the diagram is a useful supplement.

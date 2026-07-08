@@ -2,7 +2,7 @@
 
 An Instructables-style, step-by-step guide that takes someone from zero to a working DIY
 rheometer build. This is the primary deliverable of the DIY track — everything else in
-`BuildYourOwn/` (`BOM.md`, `laser-cut/`, `wiring/`, `software/`) is a resource this tutorial
+`BuildYourOwn/` (`hardware/`, `laser-cut/`, `software/`) is a resource this tutorial
 links out to.
 
 _Content written for all 8 steps; none human-verified yet, and no photos/videos exist for any
@@ -30,9 +30,9 @@ pressure trace for each one.
 
 ## Before you start
 
-- **Materials:** see [`../BOM.md`](../BOM.md).
-- **Design files:** see [`../laser-cut/`](../laser-cut/) for the platform, [`../wiring/`](../wiring/)
-  for circuit diagrams.
+- **Materials:** see [`../hardware/BOM.md`](../hardware/BOM.md).
+- **Design files:** see [`../laser-cut/`](../laser-cut/) for the platform,
+  [`../hardware/wiring/`](../hardware/wiring/) for circuit diagrams.
 - **Software:** see [`../software/`](../software/) for firmware source; flash procedure is step 04.
 - **Tools:**
   - Laser cutter access, or a cut-to-order service that accepts `.svg`/`.dxf` (step 02 — note the
@@ -75,7 +75,7 @@ _Field notes for builders — also mirrored in [`../README.md`](../README.md) �
 We maintain both copies so each entry doc stays self-contained. Full context for each is in the
 step it's tagged with._
 
-- **(01)** Don't start wiring until every `BOM.md` row is accounted for — discovering a missing
+- **(01)** Don't start wiring until every `hardware/BOM.md` row is accounted for — discovering a missing
   part mid-build is far more costly than catching it during inventory.
 - **(02)** Leave the VALVE1 zip-tie slot empty — it's a reserved position for a future 2-valve
   variant, not part of this build.

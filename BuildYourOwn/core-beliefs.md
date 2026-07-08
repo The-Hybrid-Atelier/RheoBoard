@@ -8,7 +8,7 @@ that's cheaper than repeating the correction every session.
   `git diff`. Any schematic/layout/library change must be described in `PROGRESS.md` in enough
   detail that someone could reconstruct *why* without opening Altium.
 - **Every part is traceable.** A component only belongs in the BOM if its datasheet is linked
-  (in `references.md` or inline in the BOM row) and its footprint/symbol has been checked
+  (in `hardware/references/README.md` or inline in the BOM row) and its footprint/symbol has been checked
   against that datasheet. No guessing pinouts or package dimensions.
 - **Prefer boring, available parts.** Mainstream, well-documented, multi-sourced components
   beat exotic ones unless there's a documented reason (performance, cost, form factor) — write

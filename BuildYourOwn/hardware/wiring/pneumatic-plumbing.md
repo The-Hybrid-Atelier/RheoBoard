@@ -41,4 +41,4 @@ Matches the firmware phases: **baseline → retract (PUMP1) → extrude (PUMP2) 
 4. **Relax** — tail of fixed 1500 ms REP window.
 
 Trigger via BLE (`rheo/rep`), Qwiic button (single click), onboard button, or USB serial `REP`.
-Full API: [`../software/rheometer-firmware/README.md`](../software/rheometer-firmware/README.md).
+Full API: [`../../software/rheometer-firmware/README.md`](../../software/rheometer-firmware/README.md).

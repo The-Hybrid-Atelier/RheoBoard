@@ -5,8 +5,8 @@
 
 ## What you'll need for this step
 
-- **Parts:** (reference rows in `../../BOM.md`)
-- **Design files:** (reference files in `../../laser-cut/` or `../../wiring/` if this step uses them)
+- **Parts:** (reference rows in `../../hardware/BOM.md`)
+- **Design files:** (reference files in `../../laser-cut/` or `../../hardware/wiring/` if this step uses them)
 - **Tools:**
 
 ## Instructions

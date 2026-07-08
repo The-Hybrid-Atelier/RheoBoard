@@ -24,9 +24,12 @@ There are two hardware tracks:
 
 ## Repository layout
 
-- `BuildYourOwn/` — the harness + DIY build. Builder-facing: `README.md` (single master doc),
-  `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `tutorial/`, `VERIFICATION.md`.
-  Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`, `references.md`.
+- `BuildYourOwn/` — the harness + DIY build. `tutorial/` is where the build actually starts
+  (numbered steps); `README.md` is the reference doc the tutorial links out to. Builder-facing:
+  `README.md`, `tutorial/`, `laser-cut/` (cut files), `software/` (code + firmware), `hardware/`
+  (`BOM.md`, `wiring/`, `images/` component photos, `references/` datasheets — everything
+  electrical in one place), `images/` (project-wide photos: teaser, IDE screenshots),
+  `VERIFICATION.md`. Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`.
 - `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, manufacturing outputs. Binary CAD files — Altium is the only thing that opens
   them (see "Hardware-specific notes" below).
@@ -83,12 +86,18 @@ where agents in general are most prone to declaring victory too early, so treat 
 
 ## `BuildYourOwn/` map
 
+- `tutorial/` — the build guide itself: `README.md` overview + `steps/01`–`08` (numbered,
+  Instructables-style). This is where a builder starts.
+- `hardware/` — everything electrical in one place: `BOM.md` (parts list), `wiring/` (electrical +
+  pneumatic diagrams), `images/` (component photos), `references/` (vendored datasheets).
+- `laser-cut/` — laser-cut platform design files (placement map, cut lines, system diagram).
+- `software/` — firmware source (`rheometer-firmware/`) and IDE setup notes.
+- `images/` — project-wide photos not specific to a hardware part (teaser, IDE screenshots).
 - `PROGRESS.md` — dated session log, the primary continuity mechanism (see working agreement).
 - `core-beliefs.md` — operating principles; update it when a recurring mistake/preference emerges.
 - `product-specs.md` — what we're building and why (RheoBoard, RheoMap, RheoData, SlipAtlas).
-- `references.md` — external datasheets/standards the design depends on.
-- `BOM.md`, `laser-cut/`, `wiring/`, `software/`, `images/`, `VERIFICATION.md`, `tutorial/` —
-  see `BuildYourOwn/README.md`.
+- `VERIFICATION.md` — pre-release checklist (human sign-off). See `BuildYourOwn/README.md` for how
+  these fit together.
 
 ## Hardware-specific notes
 
