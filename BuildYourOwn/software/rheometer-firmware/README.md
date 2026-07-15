@@ -1,11 +1,74 @@
 # Firmware API
 
-This simple rheometer's firmware — 2 pumps, 1 valve bench rig (SparkFun ESP32 Thing Plus +
-L298N). The sketch file is still named `2P1VX.ino` and the compiled firmware still advertises
-itself over BLE as device `2P1VX` — that identifier is unchanged in the code itself, only the
-project's docs/folder naming dropped it. Look for `2P1VX` when scanning for the device in
-RheoData.  
-All parameters are runtime-settable over BLE without reflashing.
+This simple rheometer's firmware — 2 pumps, 1 valve bench rig (SparkFun ESP32 Thing Plus + L298N),
+with an **Adafruit ATtiny1616 Breakout (seesaw, STEMMA QT / Qwiic)** inserted between the ESP32
+and the two L298N drivers. The sketch file is named `2P1V_Adafruit.ino` and the compiled firmware
+advertises itself over BLE as device `2P1V_Adafruit` — look for that name when connecting from
+RheoData. All parameters are runtime-settable over BLE without reflashing.
+
+---
+
+## Hardware / wiring
+
+The ESP32 Thing Plus's single Qwiic (I2C) bus is daisy-chained to three boards:
+
+1. **SparkFun Qwiic Button** — manual REP / suck-toggle / blow gestures, address `0x6F`
+2. **SparkFun MicroPressure (MPRLS)** — REP pressure sensing, address `0x18`
+3. **Adafruit ATtiny1616 Breakout (seesaw)** — pump/valve control, address `0x49` (factory default)
+
+No address jumpers to change — `0x49`/`0x18`/`0x6F` don't collide, so this is a single-board,
+zero-configuration addition to the Qwiic chain.
+
+The seesaw board supplies three connected control signals that earlier builds sourced from the
+ESP32: L298N #1 `ENA`/`ENB` and L298N #2 `ENB`. **These remain discrete point-to-point wires**:
+the ESP32 only needs its one Qwiic cable, but seesaw pins `0`, `1`, and `5` run directly to the
+L298N boards. Qwiic does not carry these signals. Seesaw pin `4` remains reserved in firmware
+for a possible VALVE1 channel but is physically NC in this single-valve build.
+
+| Seesaw pin | Signal | Drives | Pin type |
+|---|---|---|---|
+| `0` | `PUMP1_EN` | L298N #1 `ENA` — vacuum pump | PWM |
+| `1` | `PUMP2_EN` | L298N #1 `ENB` — pressure pump | PWM |
+| `4` | `VALVE1_EN` | Reserved for L298N #2 `ENA`; physically NC in this build | digital |
+| `5` | `VALVE2_EN` | L298N #2 `ENB` — the only valve driven (flip selector) | digital |
+
+L298N #2 uses only Motor B: `ENB` → seesaw pin `5`, `IN3` → +5V, `IN4` → GND, and
+`OUT3/OUT4` → VALVE2. Its unused Motor A terminals (`ENA`, `IN1`, `IN2`, `OUT1/OUT2`) are NC.
+On both L298N modules, keep the separate `5V-EN` regulator jumper ON and remove the ENA/ENB
+jumper caps. Use each module's own +5 V output for its direction inputs; do not parallel the
+two +5 V outputs or apply external 5 V while `5V-EN` is installed.
+
+### ⚠️ Qwiic is signal-only — L298N motor power still needs its own wires
+
+The Qwiic cable only carries I2C commands and 3.3V logic power for the seesaw board's own
+microcontroller. It does **not** carry the current that drives the pumps/valve — that's still the
+L298N boards' job, wired to the 12V supply same as always. The L298N boards' motor-power wiring
+and the actuator leads out are unaffected by this build; only the *signal* path (`ENA`/`ENB`)
+moved off native ESP32 pins.
+
+**Why this build keeps proportional control:** the Adafruit ATtiny1616 breakout is not a plain
+digital expander — it's a real microcontroller running Adafruit's "seesaw" firmware, which
+exposes **real 8-bit PWM over I2C** (`Adafruit_seesaw::analogWrite`, `setPWMFreq`) on 5 of its 12
+GPIO pins. That's functionally the same drive-%/duration/ramp control that direct ESP32 LEDC PWM
+gave earlier builds, just issued over I2C instead of a native PWM pin. So `RheoSystem.h`/
+`RheoSystem.cpp` and every REP percentage/ramp parameter are unchanged — only the low-level
+primitives in `PneumaticSystem.h`/`.cpp` (`pumpSetPct`, `pumpSet`, `valveBlow`, `valveSuck`,
+`halBegin`) changed, to call `ss.analogWrite()` / `ss.digitalWrite()` instead of `ledcWrite()` /
+`digitalWrite()`.
+
+**Arduino library:** requires the
+[Adafruit seesaw Library](https://github.com/adafruit/Adafruit_Seesaw)
+(`Adafruit_seesaw.h`, class `Adafruit_seesaw`) — install via Library
+Manager: search "Adafruit seesaw Library".
+
+**Power note:** the seesaw board's own logic is powered from the Qwiic 3.3 V and GND conductors,
+so its separate `Vin` header pin is NC and its `GND` pin is on the system's common-ground net.
+This logic supply is electrically separate from the L298N motor-supply rail — same isolation the
+ESP32 pins always had from the 12V rail. No voltage derating is needed; this build keeps the existing 12V L298N supply
+exactly as-is.
+
+See [`../../hardware/wiring/wiring-diagram.png`](../../hardware/wiring/wiring-diagram.png) for the
+full connection diagram.
 
 ---
 
@@ -33,7 +96,7 @@ All parameter addresses below accept an optional value. **Omit the value to read
 
 ## REP sensing routine parameters
 
-All addresses below are scoped under `rheo/rep/` so that future sensing routines can have their own namespaces without collision.
+All addresses below are scoped under `rheo/rep/` so that future sensing routines can have their own namespaces without collision. Full proportional power/ramp control, not just timing.
 
 ### Pull (retract — PUMP1, vacuum)
 
@@ -81,7 +144,7 @@ These are sent by the firmware; the bridge listens for them.
 
 ## REP timing
 
-A full REP window runs `BASELINE → RETRACT → EXTRUDE → RELAX`. Total window is fixed at 1500 ms (`REP_TIME` in `params.h`); only the phase durations are runtime-tunable.
+A full REP window runs `BASELINE → RETRACT → EXTRUDE → RELAX`. Total window is fixed at 1500 ms (`REP_TIME` in `RheoSystem.h`); only the phase durations are runtime-tunable.
 
 ```
 0 ms        rep/baseline/time      +VALVE_SETTLE+rep/pull/time  +VALVE_SETTLE+rep/push/time  1500 ms

@@ -1,9 +1,10 @@
 # Software / firmware
 
-**Entry point:** [`rheometer-firmware/2P1VX.ino`](rheometer-firmware/2P1VX.ino) — this design's
-2 pumps, 1 valve bench firmware for **RheoData** (SparkFun ESP32 Thing Plus, micro-USB,
-WRL-15663 + 2× L298N + Qwiic MicroPressure + Qwiic Button). The sketch file/BLE device name are
-unchanged in code: `2P1VX`.
+**Entry point:** [`rheometer-firmware/2P1V_Adafruit.ino`](rheometer-firmware/2P1V_Adafruit.ino) —
+this design's 2 pumps, 1 valve bench firmware for **RheoData** (SparkFun ESP32 Thing Plus,
+micro-USB, WRL-15663 + 2× L298N + Qwiic MicroPressure + Qwiic Button + Adafruit ATtiny1616
+seesaw breakout, driving the L298N `ENA`/`ENB` lines over Qwiic instead of direct GPIO). The
+sketch file/BLE device name in code: `2P1V_Adafruit`.
 
 API reference: [`rheometer-firmware/README.md`](rheometer-firmware/README.md) (OSC commands, REP
 parameters, serial bench commands).
@@ -33,6 +34,7 @@ your core version documents.)
 |---|---|---|
 | [SparkFun Qwiic Button](https://github.com/sparkfun/SparkFun_Qwiic_Button_Arduino_Library) | Library Manager | Onboard button gestures (REP trigger, latched suck/blow) |
 | [SparkFun MicroPressure](https://github.com/sparkfun/SparkFun_MicroPressure_Arduino_Library) | Library Manager | MPRLS sensor |
+| [Adafruit seesaw Library](https://github.com/adafruit/Adafruit_Seesaw) | Library Manager (search "Adafruit seesaw Library") | Drives the ATtiny1616 seesaw breakout's PWM/GPIO pins (L298N `ENA`/`ENB`) |
 | **[ThingPlusBLEOSC](https://github.com/cearto/ThingPlusBLEOSC)** | Manual (below) | BLE + OSC transport — not on Library Manager |
 | OSC (by Adrian Freed) | Library Manager | Required by ThingPlusBLEOSC |
 | ESP32 BLE Arduino (by Neil Kolban) | Usually bundled with the `esp32` core | Required by ThingPlusBLEOSC |
@@ -48,10 +50,10 @@ Restart the Arduino IDE afterward so it picks up the new library.
 
 ## Upload
 
-1. Open `rheometer-firmware/2P1VX.ino` in Arduino IDE (from this repo, or your sketchbook copy —
-   see below).
+1. Open `rheometer-firmware/2P1V_Adafruit.ino` in Arduino IDE (from this repo, or your sketchbook
+   copy — see below).
 2. Select board **SparkFun ESP32 Thing Plus** (or **ESP32 Dev Module**) and the micro-USB port.
-3. Upload. Serial Monitor @ 115200 should print `2P1VX initialized`.
+3. Upload. Serial Monitor @ 115200 should print `2P1V_Adafruit initialized`.
 4. Builder walkthrough: [`../README.md`](../README.md) → Step 04.
 
 Add a screenshot of correct board/port settings to `../images/ide-settings.png` when captured.
@@ -60,14 +62,14 @@ Add a screenshot of correct board/port settings to `../images/ide-settings.png` 
 
 Firmware may also be edited from:
 
-`/Users/charlievuong/Documents/Arduino/RheoData/thingplus/2P1VX`
+`/Users/charlievuong/Documents/Arduino/RheoData/thingplus/2P1V_Adafruit`
 
 **`BuildYourOwn/software/rheometer-firmware/` in this repo is the copy to commit.** Sync changes
 between sketchbook and repo before committing so they don't drift.
 
 ## Connect and use (summary)
 
-- **BLE:** device advertises as `2P1VX`; control via RheoData bridge / OSC (`rheo/rep`, etc.).
+- **BLE:** device advertises as `2P1V_Adafruit`; control via RheoData bridge / OSC (`rheo/rep`, etc.).
 - **USB serial (bench):** commands `REP`, `STOP`, `PUMP1 <pct>`, `PUMP2 <pct>` when `SERIAL_STREAM`
   is enabled (default).
 - **Qwiic button:** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.

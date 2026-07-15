@@ -24,7 +24,7 @@ Adafruit recommends ~**50% duty cycle** for the 4700 (not continuous run). Firmw
 
 ## Valve logic (VALVE2)
 
-| VALVE2 state | GPIO 14 | Path |
+| VALVE2 state | seesaw pin 5 | Path |
 |---|---|---|
 | OFF (suck / retract) | LOW | Common → metal pole → PUMP1 vacuum |
 | ON (blow / extrude) | HIGH | Common → plastic pole → PUMP2 pressure |

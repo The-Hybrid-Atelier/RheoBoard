@@ -54,10 +54,12 @@ that guide links out to as it goes.
   1 solenoid air valve ([Adafruit 4663](https://www.adafruit.com/product/4663)) — switched-port
   "flip" plumbing for retract/extrude REP cycles.
 - **Sensing:** SparkFun Qwiic MicroPressure (Honeywell MPRLS) on the shared pneumatic line.
-- **Control:** BLE OSC API (this design's firmware), SparkFun Qwiic Button (daisy-chained after
-  the sensor) for onboard gestures, USB serial commands for bench debug.
+- **Control:** BLE OSC API (this design's firmware), SparkFun Qwiic Button (daisy-chained on the
+  same Qwiic bus) for onboard gestures, USB serial commands for bench debug.
 - **Drivers:** 2× L298N H-bridge modules (#1 = 2 pumps, #2 = valve); one external **12 V** adapter
-  powers both.
+  powers both. `ENA`/`ENB` control lines are driven by an
+  [Adafruit ATtiny1616 Breakout with seesaw](https://www.adafruit.com/product/5690) on the Qwiic
+  bus (real PWM over I2C), not native ESP32 GPIO pins.
 
 ## Hardware
 
@@ -100,22 +102,24 @@ Text summary of the pneumatic logic:
 | | | |
 |---|---|---|
 | <img src="BuildYourOwn/hardware/images/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus"><br>SparkFun ESP32 Thing Plus (micro-USB) | <img src="BuildYourOwn/hardware/images/qwiic-micropressure.jpg" width="180" alt="SparkFun Qwiic MicroPressure"><br>Qwiic MicroPressure (MPRLS) | <img src="BuildYourOwn/hardware/images/qwiic-button.jpg" width="180" alt="SparkFun Qwiic Button"><br>Qwiic Button |
-| <img src="BuildYourOwn/hardware/images/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="BuildYourOwn/hardware/images/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) | <img src="BuildYourOwn/hardware/images/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve |
+| <img src="BuildYourOwn/hardware/images/adafruit-attiny1616-seesaw.jpg" width="180" alt="Adafruit ATtiny1616 Breakout with seesaw"><br>Adafruit ATtiny1616 seesaw breakout | <img src="BuildYourOwn/hardware/images/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="BuildYourOwn/hardware/images/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) |
+| <img src="BuildYourOwn/hardware/images/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve | | |
 
 Photo sources/licenses:
 [`BuildYourOwn/hardware/images/README.md`](BuildYourOwn/hardware/images/README.md).
 
 ## Software configuration
 
-Firmware: [`BuildYourOwn/software/rheometer-firmware/2P1VX.ino`](BuildYourOwn/software/rheometer-firmware/2P1VX.ino)
-— the code is unchanged, so it still advertises itself over BLE as **`2P1VX`**; look for that name
-when connecting from RheoData.
+Firmware: [`BuildYourOwn/software/rheometer-firmware/2P1V_Adafruit.ino`](BuildYourOwn/software/rheometer-firmware/2P1V_Adafruit.ino)
+— advertises itself over BLE as **`2P1V_Adafruit`**; look for that name when connecting from
+RheoData.
 
 1. Install [Arduino IDE](https://www.arduino.cc/en/software) 2.x and the ESP32 board package
    (Espressif `esp32` core — URL in [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md)).
-2. Install libraries: SparkFun Qwiic Button, SparkFun MicroPressure, OSC (Adrian Freed), and
-   [**ThingPlusBLEOSC**](https://github.com/cearto/ThingPlusBLEOSC) (`git clone` into Arduino
-   `libraries/` — not on Library Manager; see [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md)).
+2. Install libraries: SparkFun Qwiic Button, SparkFun MicroPressure, **Adafruit seesaw Library**,
+   OSC (Adrian Freed), and [**ThingPlusBLEOSC**](https://github.com/cearto/ThingPlusBLEOSC)
+   (`git clone` into Arduino `libraries/` — not on Library Manager; see
+   [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md)).
 3. Board: **SparkFun ESP32 Thing Plus** (or generic **ESP32 Dev Module**); port: micro-USB.
    Screenshot target: `BuildYourOwn/images/ide-settings.png` (add when captured).
 4. Upload — full walkthrough: [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 04.
@@ -126,20 +130,21 @@ API reference: [`BuildYourOwn/software/rheometer-firmware/README.md`](BuildYourO
 
 1. **Power:** connect the **12 V adapter** to both L298N motor rails; share GND with the ESP32.
    See [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 06.
-2. **BLE:** pair/connect from **RheoData** — device advertises as `2P1VX`. Trigger a REP with
-   OSC `rheo/rep`; tune parameters under `rheo/rep/*` (defaults documented in firmware README).
+2. **BLE:** pair/connect from **RheoData** — device advertises as `2P1V_Adafruit`. Trigger a REP
+   with OSC `rheo/rep`; tune parameters under `rheo/rep/*` (defaults documented in firmware README).
 3. **USB serial (bench):** 115200 baud — `REP`, `STOP`, `PUMP1 <pct>`, `PUMP2 <pct>` when
    `SERIAL_STREAM` is enabled.
 4. **Qwiic button:** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.
 
-First successful upload should print `2P1VX initialized` on Serial Monitor.
+First successful upload should print `2P1V_Adafruit initialized` on Serial Monitor.
 
 ## Tips
 
 Full context for each is in [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Tips, tagged by
 step.
 
-- L298N ENA/ENB jumpers must be **removed** — the ESP32 drives those pins with PWM.
+- L298N ENA/ENB jumpers must be **removed** — the Adafruit ATtiny1616 seesaw breakout drives those
+  pins with PWM (over Qwiic/I2C, not native ESP32 GPIO).
 - Never route pump/valve current through the ESP32's 5 V pin — motors get their own 12 V adapter.
 - Pumps are ~4.5 V parts on a 12 V rail; avoid 100% duty continuously (Adafruit rates the 4700 for
   ~50%) — tune `rheo/rep/pull/power` / `push/power` instead of running full-blast.

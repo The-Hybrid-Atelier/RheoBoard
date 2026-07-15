@@ -50,29 +50,31 @@ zip-tie hole (cut); red dashes = zip-tie strap over the part. Full detail in
 | # | Part | How it's tied | Status in our build |
 |---|---|---|---|
 | 1–2 | PUMP1, PUMP2 (Adafruit 4700) | Lie flat; 2 zip-ties across the body (4 slots) each | Populated |
-| 3 | VALVE1 (Adafruit 4663) | 2 ties over the body (4 slots) | **Unpopulated / reserved.** Mirrors GPIO 15 being reserved and not populated in [`../hardware/wiring/wiring-diagram.png`](../hardware/wiring/wiring-diagram.png). Leave this slot empty unless building a 2-valve variant (see callout below). |
-| 4 | VALVE2 (Adafruit 4663) | 2 ties over the body (4 slots) | Populated — the only valve driven (GPIO 14) |
+| 3 | VALVE1 (Adafruit 4663) | 2 ties over the body (4 slots) | **Unpopulated / reserved.** Seesaw pin `4` and L298N #2 Motor A are NC in [`../hardware/wiring/wiring-diagram.png`](../hardware/wiring/wiring-diagram.png). Leave this slot empty unless building a 2-valve variant (see callout below). |
+| 4 | VALVE2 (Adafruit 4663) | 2 ties over the body (4 slots) | Populated — the only valve driven (seesaw pin `5`) |
 | 5 | MPRLS (Qwiic MicroPressure) | 2 ties (4 slots) — next to ESP32 | Populated |
 | 6 | Button (Qwiic Button) | 2 ties (4 slots) | Populated |
 | 7 | ESP32 Thing Plus | 2 ties over the short sides (4 slots) | Populated |
 | 8–9 | L298N #1 (pumps), L298N #2 (valve) | 2 ties each, clear of the heatsink | Populated |
 | T | T-connector (shared pneumatic line) | 1 tie at each node on the shared line | Populated |
 | PWR | Power terminal block | 1 tie on the terminal block | Populated |
+| — | Adafruit ATtiny1616 seesaw breakout (Rev B addition) | **Not yet placed.** Small enough to fit near the ESP32/Qwiic devices, but no slot exists in `panel-placement-map.png`/`panel.svg` yet — see `../hardware/REVISIONS.md` Rev B and `../hardware/BOM.md`. Needs a human test-fit pass alongside the rest of the still-unverified vector file (see status callout above), not just an agent-drawn guess at a slot position. |
 
 ## ⚠️ Panel diagram shows a 2-valve (2P2V) system — this design uses a single valve
 
 [`panel-system-diagram.png`](panel-system-diagram.png) documents a **2P2V** variant: VALVE1 and
-VALVE2 each dedicated to one pump and driven independently (GPIO 14 → VALVE1, GPIO 15 → VALVE2).
-**That is not our current build.** This design uses a single valve (VALVE2) whose metal/plastic
-poles switch one shared line between the two pumps — GPIO 15 stays reserved/unpopulated. The
-authoritative pneumatic and electrical reference for what we're actually building is:
+VALVE2 each dedicated to one pump and driven independently (seesaw pin `4` → VALVE1, pin `5` →
+VALVE2). **That is not our current build.** This design uses a single valve (VALVE2) whose
+metal/plastic poles switch one shared line between the two pumps — seesaw pin `4` stays
+reserved/unpopulated. The authoritative pneumatic and electrical reference for what we're actually
+building is:
 
 - [`../hardware/wiring/wiring-diagram.png`](../hardware/wiring/wiring-diagram.png) — electrical wiring
 - [`../hardware/wiring/pneumatic-plumbing.md`](../hardware/wiring/pneumatic-plumbing.md) — tubing + valve logic
 - [`../hardware/wiring/tube-connection.png`](../hardware/wiring/tube-connection.png) — tube diagram
 
 The panel's *mechanical* layout (dimensions, component positions, hole map) is shared between
-both variants — only VALVE1's position, its tubing, and GPIO 15 are unused here. If a 2-valve
+both variants — only VALVE1's position, its tubing, and seesaw pin `4` are unused here. If a 2-valve
 variant gets built later, `panel-system-diagram.png` applies directly; update `../hardware/BOM.md`, the
 wiring diagram, `pneumatic-plumbing.md`, and `../software/rheometer-firmware/PneumaticSystem.h` together at that
 point (per `AGENTS.md`), and record the decision in `PROGRESS.md`.

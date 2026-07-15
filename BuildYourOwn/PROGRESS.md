@@ -8,6 +8,125 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (32)
+
+Follow-up to entry 31: the user pointed at their own `wiring_diagram.py` (in the external
+`2P1V_Adafruit` sketchbook folder that entry 31 sourced the firmware from) and asked for
+`hardware/wiring/wiring-diagram.png` to be regenerated from **that** script's layout/style
+instead — "just change title and couple notes, keep everything else." Entry 31's from-scratch
+schematic-sheet redesign (sheet border, revision title block, and IN1/IN3 direction-pin detail)
+is now superseded by this simpler style.
+
+- Replaced `hardware/wiring/generate_wiring_diagram.py` wholesale with a port of the user's
+  source script: rounded `FancyBboxPatch` component boxes (ESP32 → Qwiic bus → Button/seesaw/
+  MicroPressure → seesaw pin-fanout → 2× L298N → 4 actuator boxes), a legend bar, and a
+  pin-map reference table — no sheet border/grid.
+- Initially changed only the title (`"2P1V_Adafruit — ESP32 Thing Plus + ..."` →
+  `"RheoBoard DIY — Electrical Schematic"`) and the two spots that named the external
+  `2P1VX`/`2P1V_GPIO` sketch variants by name (subtitle + footer note), reworded to generic
+  "direct ESP32 GPIO" / "earlier direct-GPIO builds" phrasing per this repo's existing
+  generic-naming convention (entry 14). Kept the Pillow palette-quantize post-step (not in the
+  source script) since it's this repo's established convention for keeping embedded PNGs small.
+- After reviewing that render, the user asked to restore the missing power information and fix
+  the top text overflowing its box. Widened the same source layout to add a left-hand **12 V DC
+  supply** block and +12 V connections to both L298N motor rails. The first revision used a long
+  black common-GND route; at the user's request, replaced that with standard three-bar ground
+  symbols at the supply, ESP32, and both L298Ns (repeated symbols denote one common net).
+  Enlarged the top information box so the full design summary and five-item legend (I2C,
+  control, load, +12 V, GND) are contained inside it.
+- Expanded both L298N blocks to account for every terminal (`ENA`, `ENB`, `IN1`–`IN4`,
+  `OUT1/2`, `OUT3/4`, `12V`, `5V`, `GND`) and explicitly state that both ENA/ENB jumper caps
+  are OFF. This exposed and fixed an earlier documentation inconsistency: because VALVE2 uses
+  Motor B (`ENB`), it must connect to `OUT3/OUT4`, not `OUT1/OUT2`. L298N #2 Motor A is wholly
+  unused (`ENA`, `IN1`, `IN2`, `OUT1/OUT2` = NC); seesaw pin `4` is reserved/NC rather than
+  physically wired. Synchronized the build guide, wiring README, BOM, firmware README/comments,
+  hardware revision row, and laser-cut variant note with this terminal-level map.
+- Clarified the ATtiny1616 breakout's power pins: Qwiic supplies its 3.3 V and common GND, so
+  the separate `Vin` header pin is NC. Added an explicit ground symbol at the breakout and
+  synchronized that note across the diagram source, wiring README, build guide, BOM, and
+  firmware README.
+- Clarified the three different L298N jumper caps after reviewing the user's module photo:
+  keep each module's `5V-EN` regulator jumper ON, remove its ENA/ENB jumper caps, and use its
+  local +5 V output for the direction-input highs. Added this directly inside both L298N blocks
+  and synchronized the wiring README, build guide, BOM, and firmware README; also warned not to
+  parallel the two onboard-regulator outputs or apply external 5 V while `5V-EN` is installed.
+- Regenerated `wiring-diagram.png` from the new script and visually reviewed it. Did not touch
+  unrelated hardware geometry or physical-verification status.
+- Re-ran `scripts/check-docs.sh`: same single pre-existing `README.md -> RheoBoard_V8_Final/`
+  flag as entry 31, nothing new.
+
+**Next:** none outstanding from this follow-up.
+
+## 2026-07-15 (31)
+
+Followed a user-supplied firmware update (`~/Documents/Arduino/RheoData/thingplus/2P1V_Adafruit`,
+outside this repo) and, per explicit confirmation, made it the **replacement** for the current
+build (not an additional variant) — bumping the hardware revision to **Rev B**. The change: an
+**Adafruit ATtiny1616 Breakout with seesaw** (STEMMA QT/Qwiic, PID 5690, I2C `0x49`) is inserted
+between the ESP32 and the two L298N drivers. `ENA`/`ENB` control (`PUMP1_EN`/`PUMP2_EN`/
+`VALVE1_EN`/`VALVE2_EN`) now runs ESP32 → Qwiic (I2C) → seesaw pins `0`/`1`/`4`/`5` → discrete
+wires → L298N, instead of straight to native ESP32 GPIO 32/33/15/14. Seesaw exposes real 8-bit PWM
+over I2C, so proportional pump control is unchanged — only the low-level HAL primitives moved.
+
+- **Firmware** (`software/rheometer-firmware/`): renamed `2P1VX.ino` → `2P1V_Adafruit.ino`
+  (`DEVICE_NAME`/Serial banner updated to match); rewrote `PneumaticSystem.h`/`.cpp` to use
+  `Adafruit_seesaw` (`ss.analogWrite`/`ss.digitalWrite`/`ss.pinMode` instead of `ledcWrite`/
+  `digitalWrite`) — dropped the now-unused LEDC PWM helpers. `RheoSystem.h`/`.cpp` are
+  byte-for-byte unchanged (REP phase machine/params never touched native pins). While touching all
+  5 firmware files, also fixed a pre-existing stale license-header path
+  (`../../../LICENSE-SOFTWARE.txt`, a file removed in entry 30's license consolidation but never
+  updated in the firmware comments) to `LICENSE` (same directory).
+- Rewrote `software/rheometer-firmware/README.md` (added a "Hardware / wiring" section covering
+  the seesaw pin map and the Adafruit seesaw Library dependency) and `software/README.md`
+  (toolchain library table, sketchbook path, device name) — same "keep generic phrasing, keep the
+  literal device-name string only where technically required" convention as entry 14's earlier
+  2P1VX rename.
+- **`hardware/BOM.md`**: added the seesaw breakout row (link, address, notes); vendored a real
+  product photo (`hardware/images/adafruit-attiny1616-seesaw.jpg`, fetched from
+  `cdn-shop.adafruit.com/970x728/5690-00.jpg`, cited in `images/README.md`); bumped Qwiic cable
+  qty 2→3 (three daisy-chained peripherals now, not two); removed the "10 kΩ pull-down resistor
+  ×4" row (those protected ESP32 pins that are no longer wired to anything) and added a note
+  flagging that the seesaw board's own boot-time pin state is **not confirmed** — the source docs
+  for this build don't mention an equivalent safeguard, and that's a real hardware question this
+  agent can't verify (see `AGENTS.md`).
+- **`hardware/wiring/generate_wiring_diagram.py`**: restructured the schematic — ESP32 box now
+  only needs Qwiic + GND (no more GPIO32/33/14/15* pins); added an "ATtiny1616 (seesaw)" box on
+  the Qwiic bus row alongside Button/MicroPressure; its 4 output pins route down and outside the
+  L298N box footprints (added a small `route_ctrl()` helper) instead of cutting across them; made
+  the `box()` title/subtitle text positioning use fixed offsets from the top edge instead of
+  height-fraction offsets, so it no longer breaks on short boxes (needed for the resized actuator
+  row). Regenerated `wiring-diagram.png`; visually spot-checked via cropped-region reads before
+  accepting it (seesaw pin fan-out, actuator stack, title block placement). Updated
+  `wiring/README.md`'s prose summary and `wiring/pneumatic-plumbing.md`'s valve-logic table
+  (`GPIO 14` → `seesaw pin 5`) to match.
+- **`BuildYourOwn/README.md`** (Steps 03/04/06/08, Tips) and root **`README.md`** (Features,
+  Software configuration, Connect and use, Tips, component gallery): swept every `2P1VX` /
+  `GPIO 32/33/14/15` reference to the seesaw-based equivalent; added the Adafruit seesaw Library
+  install step; added the seesaw breakout to the component gallery.
+- `hardware/references/README.md`: added the ATtiny1616 breakout + Adafruit seesaw Library rows.
+- `hardware/REVISIONS.md`: added the **Rev B** row describing this change; bumped
+  `okh-RheoBoard.yml`'s `version`/`date-updated`/`description` to match; updated
+  `VERIFICATION.md`'s "Rev A" readiness-checklist mention to Rev B.
+- `laser-cut/README.md`: flagged (didn't fabricate) that the seesaw board has **no placement slot
+  yet** in `panel-placement-map.png`/`panel.svg` — those files are still the pre-existing
+  unverified draft, and adding a real slot needs the same human test-fit pass already blocking the
+  rest of the vector file, not an agent-drawn guess. Also swapped its two `GPIO 14`/`GPIO 15`
+  callouts (2P2V variant discussion) for the seesaw pin numbers.
+- Ran `scripts/check-docs.sh` — the only remaining flag (`README.md -> RheoBoard_V8_Final/`) is a
+  pre-existing directory-link false-positive from before this session (confirmed via
+  `git show HEAD:README.md`), not something introduced here.
+- **Did not touch:** `laser-cut/panel.svg`/`.dxf`/`panel-placement-map.png` geometry (see above),
+  `panel-system-diagram.png` (still documents the dormant 2-valve variant with its own separate
+  callout), or the sibling `2P1V_Sparkfun`/`2P1V_GIPO`/`2P1V_QMD` builds mentioned in the source
+  sketchbook's comments — those aren't part of this repo and weren't asked for.
+
+**Next:** the seesaw board's own power-up pin state (see BOM/wiring notes above) and the
+laser-cut placement slot are both open, human-only follow-ups. Otherwise this brings the DIY track
+back to fully self-consistent docs at Rev B — same remaining gaps as before (panel not test-fit/
+cut, OSHWA self-certification not submitted).
+
+---
+
 ## 2026-07-08 (30)
 
 User repeatedly asked why there were 4 (root-level) / 8 (repo-wide) files with "LICENSE" in the

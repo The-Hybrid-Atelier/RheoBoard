@@ -1,25 +1,42 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 Charlie Vuong -- see ../../../LICENSE-SOFTWARE.txt
+// Copyright (c) 2026 Charlie Vuong -- see LICENSE
 #ifndef PNEUMATIC_SYSTEM_H
 #define PNEUMATIC_SYSTEM_H
 
 #include <Arduino.h>
+#include <Wire.h>
 #include <SparkFun_MicroPressure.h>
+#include <Adafruit_seesaw.h>   // Adafruit ATtiny1616 Breakout with seesaw -- Library Manager: "Adafruit seesaw Library"
 #include "OSCHandler.h"
 
 // ---- Build flags ------------------------------------------------------------
 #define SERIAL_STREAM 1        // USB serial bench stream; set 0 to disable
 
-// ---- Pneumatic hardware (GPIO, PWM, I2C) ------------------------------------
-#define PIN_PUMP1_EN    32
-#define PIN_PUMP2_EN    33
-#define PIN_VALVE1_EN   15     // wired but unused in this single-valve build
-#define PIN_VALVE2_EN   14
-#define PIN_SW1         -1     // optional external REP button to GND; -1 = none
-#define PIN_LED1        -1     // optional external status LED; -1 = none
-#define MPRLS_I2C_ADDR  0x18
-#define PWM_FREQ_HZ     1000
-#define PWM_RES_BITS    8
+// ---- Qwiic bus (I2C, shared/daisy-chained): Button + MicroPressure + this
+// ATtiny1616 seesaw board all hang off the ESP32's single Qwiic connector. -----
+#define MPRLS_I2C_ADDR   0x18
+#define SEESAW_I2C_ADDR  0x49   // Adafruit seesaw factory default (no address jumpers needed --
+                                 // doesn't collide with MPRLS 0x18 or Qwiic Button 0x6F)
+
+// ---- Pump/valve control -- routed through the ATtiny1616 seesaw board ------
+// Earlier builds sourced PUMP1_EN/PUMP2_EN from ESP32 pins 32/33 (LEDC PWM)
+// and VALVE2_EN from pin 14. Here the Adafruit ATtiny1616 breakout (seesaw
+// firmware) sits between the ESP32 and the two L298N drivers, carrying those
+// three connected signals -- and unlike a plain digital
+// I2C GPIO expander (no PWM), seesaw exposes REAL 8-bit PWM over I2C
+// (Adafruit_seesaw::analogWrite), so pump drive stays fully proportional.
+// RheoSystem's REP phase machine, config percentages, and ramp logic are
+// therefore UNCHANGED; only the low-level primitives below differ.
+#define SS_PUMP1_EN   0   // was ESP32 pin 32 (vacuum pump, L298N #1 ENA) -- seesaw PWM pin
+#define SS_PUMP2_EN   1   // was ESP32 pin 33 (pressure pump, L298N #1 ENB) -- seesaw PWM pin
+#define SS_VALVE1_EN  4   // reserved for future VALVE1; physically NC in this single-valve build
+#define SS_VALVE2_EN  5   // was ESP32 pin 14 (the only valve driven -- flip selector) -- plain GPIO
+
+// ---- Optional bench extras (native ESP32 pins; unaffected by the seesaw move)
+#define PIN_SW1   -1     // optional external REP button to GND; -1 = none
+#define PIN_LED1  -1     // optional external status LED; -1 = none
+
+#define PWM_FREQ_HZ     1000   // set via Adafruit_seesaw::setPWMFreq
 #define VALVE_SETTLE_MS 15     // valve-flip guard before pump drive
 
 // ---- Pressure sampling ------------------------------------------------------
@@ -28,39 +45,23 @@
 #define MAX_RATE     1000
 
 extern SparkFun_MicroPressure mpr;
+extern Adafruit_seesaw ss;   // ATtiny1616 seesaw driving PUMP1/PUMP2/VALVE2; VALVE1 pin is reserved
 
 enum PumpChannel { PUMP_1 = 1, PUMP_2 = 2 };
-
-// ---- LEDC PWM helpers (ESP32 Arduino core 2.x / 3.x) -----------------------
-inline void pwmAttach(uint8_t pin, uint8_t ch) {
-#if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR >= 3)
-  ledcAttach(pin, PWM_FREQ_HZ, PWM_RES_BITS); (void)ch;
-#else
-  ledcSetup(ch, PWM_FREQ_HZ, PWM_RES_BITS); ledcAttachPin(pin, ch);
-#endif
-}
-inline void pwmWrite(uint8_t pin, uint8_t ch, uint8_t duty) {
-#if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR >= 3)
-  ledcWrite(pin, duty); (void)ch;
-#else
-  ledcWrite(ch, duty); (void)pin;
-#endif
-}
 
 // ---- Pump / valve / sensor primitives ---------------------------------------
 inline void pumpSetPct(PumpChannel c, int pct) {
   pct = constrain(pct, 0, 100);
   uint8_t duty = (uint8_t)((pct * 255) / 100);
-  if (c == PUMP_1) pwmWrite(PIN_PUMP1_EN, 0, duty);
-  else             pwmWrite(PIN_PUMP2_EN, 1, duty);
+  ss.analogWrite(c == PUMP_1 ? SS_PUMP1_EN : SS_PUMP2_EN, duty);
 }
 inline void pumpSet(PumpChannel c, bool on) { pumpSetPct(c, on ? 100 : 0); }
 inline void pumpsOff()         { pumpSet(PUMP_1, false); pumpSet(PUMP_2, false); }
 inline void ledExt(bool on)    { if (PIN_LED1 >= 0) digitalWrite(PIN_LED1, on ? HIGH : LOW); }
 inline bool sw1Pressed()       { return PIN_SW1 >= 0 && digitalRead(PIN_SW1) == LOW; }
 inline float readPressure()    { return mpr.readPressure(PA); }
-inline void valveSuck() { digitalWrite(PIN_VALVE2_EN, LOW);  }
-inline void valveBlow() { digitalWrite(PIN_VALVE2_EN, HIGH); }
+inline void valveSuck() { ss.digitalWrite(SS_VALVE2_EN, LOW);  }
+inline void valveBlow() { ss.digitalWrite(SS_VALVE2_EN, HIGH); }
 
 bool halBegin();
 void sendApiEntry(const char* entry);  // notifies one /rheo/api reply line over BLE TX
