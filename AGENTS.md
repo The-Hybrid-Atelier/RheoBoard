@@ -1,5 +1,3 @@
 # Agent note
 
-Author-only agent guidance and working notes are stored locally in `.private/`, which is ignored
-by git and intentionally excluded from the published project. If `.private/AGENTS.md` exists,
-read it before making changes.
+Maintainer and agent guidance is stored in `.private/AGENTS.md`. Read it before making changes.
