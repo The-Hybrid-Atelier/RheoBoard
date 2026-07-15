@@ -45,7 +45,8 @@ acrylic. Record the verified settings after the first successful cut.
 3. Install the four feet and chamber fitting.
 4. Position components using `panel-placement-map.png`; leave the unused **VALVE1** position empty.
 5. Loosely install the zip ties, confirm cable and tube clearance, then tighten and trim them.
-6. Continue with [Step 03 — Wire the electronics](../README.md#step-03-wire-the-electronics).
+6. Continue with
+   [Step 02 — Connect electronics and tubing](../README.md#step-02-connect-electronics-and-tubing).
 
 ## Modify or regenerate the design
 

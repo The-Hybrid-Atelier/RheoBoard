@@ -28,8 +28,8 @@ There are two hardware tracks:
 
 ## Repository layout
 
-- `BuildYourOwn/` — the harness + DIY build. `README.md` **is** the step-by-step build guide
-  itself (single file, all 8 steps inline, no separate `tutorial/` folder) — that's where a
+- `BuildYourOwn/` — the harness + DIY build. `README.md` **is** the concise five-step build guide
+ itself (single file, no separate `tutorial/` folder) — that's where a
   builder actually starts; the root `README.md` is the reference/overview doc that links into it.
   Also here: `laser-cut/` (cut files), `software/` (code + firmware), `hardware/` (`README.md` BOM,
   `electronic-wiring/`, `tube-wiring/`, `references/` datasheets), `images/` (project and
@@ -91,7 +91,7 @@ where agents in general are most prone to declaring victory too early, so treat 
 
 ## `BuildYourOwn/` map
 
-- `README.md` — **the build guide itself**: one file, all 8 numbered steps inline
+- `README.md` — **the build guide itself**: one file, five numbered steps inline
   (Instructables-style), plus overview/before-you-start/tips at the top. This is where a builder
   starts; there is no separate `tutorial/` folder — it was consolidated into this single file.
 - `hardware/` — `README.md` (parts list), `electronic-wiring/` (electronic schematic + generator),
