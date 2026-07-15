@@ -21,7 +21,7 @@ custom PCB work.
 
 ## Before you start
 
-- **Materials:** [`hardware/BOM.md`](hardware/BOM.md)
+- **Materials:** [`hardware/README.md`](hardware/README.md)
 - **Design files:** [`laser-cut/`](laser-cut/) (platform),
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
@@ -47,7 +47,7 @@ custom PCB work.
 
 ## Step 01: Kit contents and tools
 
-1. Unpack everything and check it against [`hardware/BOM.md`](hardware/BOM.md).
+1. Unpack everything and check it against [`hardware/README.md`](hardware/README.md).
 2. Note anything missing or substituted in `PROGRESS.md` — don't silently substitute.
 3. Gather the tools listed above.
 
@@ -58,7 +58,7 @@ custom PCB work.
 ## Step 02: Assemble the platform
 
 Parts: acrylic panel, ~22 zip ties, Ø10 bulkhead fitting, 4 feet — see
-[`hardware/BOM.md`](hardware/BOM.md). Design file: [`laser-cut/panel.svg`](laser-cut/panel.svg)
+[`hardware/README.md`](hardware/README.md). Design file: [`laser-cut/panel.svg`](laser-cut/panel.svg)
 (draft vector cut file — not yet test-fit against real parts, see
 [`laser-cut/README.md`](laser-cut/README.md) before cutting).
 
@@ -80,7 +80,7 @@ Parts: acrylic panel, ~22 zip ties, Ø10 bulkhead fitting, 4 feet — see
 
 ## Step 03: Wire the electronics
 
-Parts: electronics rows in [`hardware/BOM.md`](hardware/BOM.md). Diagram:
+Parts: electronics rows in [`hardware/README.md`](hardware/README.md). Diagram:
 [`hardware/electronic-wiring/wiring-diagram.png`](hardware/electronic-wiring/wiring-diagram.png) (electrical
 only — pneumatic plumbing is separate, below).
 
@@ -108,7 +108,7 @@ source docs don't call out an equivalent for the seesaw board's own power-up sta
 watch for L298N output glitches when first powering up in Step 06.
 
 Pin map must match
-[`software/rheometer-firmware/PneumaticSystem.h`](software/rheometer-firmware/PneumaticSystem.h).
+[`software/2P1V_Adafruit/PneumaticSystem.h`](software/2P1V_Adafruit/PneumaticSystem.h).
 
 **Pneumatic plumbing:** plumb per
 [`hardware/tube-wiring/`](hardware/tube-wiring/). PUMP1 port →
@@ -123,7 +123,7 @@ jumper caps so seesaw can control the enable pins.
 ## Step 04: Install firmware
 
 Flash the BLE firmware:
-[`software/rheometer-firmware/2P1V_Adafruit.ino`](software/rheometer-firmware/2P1V_Adafruit.ino).
+[`software/2P1V_Adafruit/2P1V_Adafruit.ino`](software/2P1V_Adafruit/2P1V_Adafruit.ino).
 
 1. Install [Arduino IDE](https://www.arduino.cc/en/software) 2.x.
 2. Boards Manager: add the ESP32 URL from
@@ -163,7 +163,7 @@ Flash the BLE firmware:
 
 ## Step 06: Power and data connections
 
-Parts: 12 V adapter (≥ 2 A), micro-USB cable — see [`hardware/BOM.md`](hardware/BOM.md).
+Parts: 12 V adapter (≥ 2 A), micro-USB cable — see [`hardware/README.md`](hardware/README.md).
 
 1. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
    tied together; confirm adapter (+) reaches both L298N motor power inputs.
@@ -192,7 +192,7 @@ RheoBoard DIY uses runtime BLE parameters, not a one-shot calibration.
 6. Trigger `rheo/rep/triad` and confirm 3 repeatable traces.
 
 Full parameter list:
-[`software/rheometer-firmware/README.md`](software/rheometer-firmware/README.md).
+[`software/README.md`](software/README.md).
 
 **Tip:** if extrude feels too aggressive, lengthen `push/ramp/time` before shortening `push/time`.
 
@@ -214,7 +214,7 @@ The onboard LED (GPIO 13) lights for the duration.
 **Other controls:** `rheo/rep/triad` (3 REPs back to back), `rheo/stop` / `STOP` (abort),
 `rheo/purge` (clear the line), Qwiic double-click (latched vacuum), Qwiic hold (momentary blow),
 `PUMP1 <pct>` / `PUMP2 <pct>` (serial bench debug), `rheo/api` (list commands). Full reference:
-[`software/rheometer-firmware/README.md`](software/rheometer-firmware/README.md).
+[`software/README.md`](software/README.md).
 
 **Read a measurement:** via RheoData, connect to `2P1V_Adafruit` and trigger `rheo/rep` — the
 pressure trace shows in its capture view. Via serial, type `REP` and watch `#S,<ms>,<Pa>` samples

@@ -17,7 +17,7 @@ items into `PROGRESS.md` for the change and check them off there.
 
 ## Parts & docs
 
-- [ ] Every part in [`hardware/BOM.md`](hardware/BOM.md) has a product/datasheet link (see [`hardware/references/`](hardware/references/))
+- [ ] Every part in [`hardware/README.md`](hardware/README.md) has a product/datasheet link (see [`hardware/references/`](hardware/references/))
 - [ ] No unresolved/placeholder parts
 - [ ] [`README.md`](README.md) (step-by-step guide) matches what was actually built (steps, part
       orientation, media) — someone should be able to follow it cold and get the same result
@@ -25,7 +25,7 @@ items into `PROGRESS.md` for the change and check them off there.
 ## Documentation
 
 - [ ] `PROGRESS.md` updated with what changed and why (this is the revision history for this
-      track — see note in `hardware/BOM.md`, no separate log needed since these files diff natively)
+      track; no separate hardware revision file is maintained)
 
 ## Open Source Hardware Definition compliance
 
@@ -41,12 +41,12 @@ it directly. Re-check whenever a license file, scope statement, or design-file f
    `RheoBoard-PCB_V9/*.SchDoc`/`*.PcbDoc`/`*.SchLib`/`*.PcbLib` (Altium native format, not
    Gerber-only). Firmware ships as `.ino`/`.cpp`/`.h` source. All free to download from this repo. ✅
 2. **Scope** — root `README.md` → License states explicitly what each of the three licenses
-   covers, and `hardware/images/README.md` / `hardware/references/README.md` clearly flag
+   covers, and `images/README.md` / `hardware/references/README.md` clearly flag
    third-party photos and datasheets as excluded (own attributions/licenses, not ours to
    relicense). ✅
-3. **Necessary software** — firmware (`software/rheometer-firmware/`) is MIT-licensed (OSI-approved),
+3. **Necessary software** — firmware (`software/`) is MIT-licensed (OSI-approved),
    satisfying 3(b) directly; the OSC API is also documented in
-   `software/rheometer-firmware/README.md`, satisfying 3(a) as a fallback. ✅
+   `software/README.md`, satisfying 3(a) as a fallback. ✅
 4. **Derived works** — CERN-OHL-W-2.0, MIT, and CC BY-SA 4.0 all explicitly permit modification,
    redistribution, and manufacture/sale of derivatives. ✅
 5. **Free redistribution** — none of the three licenses charge or permit charging a royalty for
@@ -83,20 +83,17 @@ certification (below), which additionally requires the physical/registration ste
 Checklist for [OSHWA certification](https://certification.oshwa.org/) (free, self-certified,
 annual renewal) — **not yet submitted**. Everything below needs a human to review and act on;
 an agent can prepare files but can't submit the form or make the underlying physical/legal calls.
-See root `README.md` → License for the license breakdown, and `hardware/REVISIONS.md` for
-version tracking.
+See root `README.md` → License for the license breakdown. The current version identifier is stored
+in `okh-RheoBoard.yml`.
 
-- [x] Hardware, software, and documentation each have an open license applied: root `LICENSE` is
-      a clean CERN-OHL-W-2.0 copy (GitHub-detectable, covers hardware), firmware carries its own
-      MIT copy (`software/rheometer-firmware/LICENSE`, genuinely different license so kept
-      separate — not a duplicate), and documentation (CC BY-SA 4.0) is declared in root
-      `README.md` → License with a link to the canonical text, no local copy needed
+- [x] Hardware, software, and documentation each have an open license applied in the single root
+      `LICENSE`: CERN-OHL-W-2.0 for hardware, MIT for firmware, and a CC BY-SA 4.0 declaration
+      with canonical-text link for documentation
 - [x] Firmware carries `SPDX-License-Identifier` headers
-- [x] Hardware-design index files (BOM, electronic wiring, tube wiring, and laser-cut READMEs)
+- [x] Hardware-design index files (hardware, electronic wiring, tube wiring, and laser-cut READMEs)
       link to the root `LICENSE`
-- [x] Hardware revision scheme documented (`hardware/REVISIONS.md`)
 - [x] Machine-readable open-hardware metadata published (`okh-RheoBoard.yml`, Open Know-How manifest) —
-      keep in sync with README/REVISIONS when the design changes
+      keep in sync with README when the design changes
 - [x] Editable design-file sources exist for the wiring diagram
       (`hardware/electronic-wiring/generate_wiring_diagram.py`) and the laser-cut panel
       (`laser-cut/generate_panel_vector.py` → `panel.svg`/`panel.dxf`)
@@ -104,8 +101,8 @@ version tracking.
       (human-only — the current file is draft geometry: columns A–E are traced and the Rev B
       seesaw slots in column F are an explicit addition; see `laser-cut/README.md`)
 - [ ] Panel physically cut at least once, confirming the vector file is accurate
-- [ ] First physical unit labeled with its revision (`hardware/REVISIONS.md` — currently Rev B,
-      unbuilt) and that revision/date recorded back into `REVISIONS.md`
+- [ ] First physical unit labeled with the version/date from `okh-RheoBoard.yml`, and its build
+      date recorded in `PROGRESS.md`
 - [ ] Third-party components double-checked as either fully open or clearly marked non-open with
       accessible datasheets (currently: all COTS parts, all datasheets vendored in
       `hardware/references/` — re-confirm nothing changed since)

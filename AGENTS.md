@@ -31,9 +31,9 @@ There are two hardware tracks:
 - `BuildYourOwn/` — the harness + DIY build. `README.md` **is** the step-by-step build guide
   itself (single file, all 8 steps inline, no separate `tutorial/` folder) — that's where a
   builder actually starts; the root `README.md` is the reference/overview doc that links into it.
-  Also here: `laser-cut/` (cut files), `software/` (code + firmware), `hardware/` (`BOM.md`,
-  `electronic-wiring/`, `tube-wiring/`, `images/` component photos, `references/` datasheets),
-  `images/` (project-wide photos: teaser, IDE screenshots), `VERIFICATION.md`.
+  Also here: `laser-cut/` (cut files), `software/` (code + firmware), `hardware/` (`README.md` BOM,
+  `electronic-wiring/`, `tube-wiring/`, `references/` datasheets), `images/` (project and
+  component photos), `VERIFICATION.md`.
   Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`.
 - `RheoBoard-PCB_V9/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, manufacturing outputs. Binary CAD files — Altium is the only thing that opens
@@ -94,13 +94,14 @@ where agents in general are most prone to declaring victory too early, so treat 
 - `README.md` — **the build guide itself**: one file, all 8 numbered steps inline
   (Instructables-style), plus overview/before-you-start/tips at the top. This is where a builder
   starts; there is no separate `tutorial/` folder — it was consolidated into this single file.
-- `hardware/` — `BOM.md` (parts list), `electronic-wiring/` (electronic schematic + generator),
-  `tube-wiring/` (pneumatic tube diagram + instructions), `images/` (component photos), and
-  `references/` (vendored datasheets).
-- `laser-cut/` — laser-cut platform design files (placement map, cut lines, system diagram).
-- `software/` — firmware source (`rheometer-firmware/`) and IDE setup notes.
-- `images/` — project-wide photos not specific to a hardware part (teaser, IDE screenshots), plus
-  per-step build photos named by step (e.g. `step02-panel-placement.jpg`).
+- `hardware/` — `README.md` (parts list), `electronic-wiring/` (electronic schematic + generator),
+  `tube-wiring/` (pneumatic tube diagram + instructions), and `references/` (vendored datasheets).
+- `laser-cut/` — laser-cut platform design files (vector cut files, cut-line reference, and
+  placement map).
+- `software/` — one README/API reference, with Arduino-compatible MIT-licensed sketch sources
+  in `2P1V_Adafruit/` (entry point `2P1V_Adafruit.ino`; folder/file names must match).
+- `images/` — project photos, component reference photos, IDE screenshots, and per-step build
+  photos named by step (e.g. `step02-panel-placement.jpg`).
 - `PROGRESS.md` — dated session log, the primary continuity mechanism (see working agreement).
 - `core-beliefs.md` — operating principles; update it when a recurring mistake/preference emerges.
 - `product-specs.md` — what we're building and why (RheoBoard, RheoMap, RheoData, SlipAtlas).
@@ -109,22 +110,17 @@ where agents in general are most prone to declaring victory too early, so treat 
 
 ## Licensing
 
-Three separate licenses, one per content category (see root `README.md` → License), kept as just
-two physical files (no per-folder duplicate copies — a single repo-root `LICENSE` plus one for
-firmware, matching how most small open-hardware repos do this): hardware design files (wiring,
-laser-cut, BOM, PCB) are **CERN-OHL-W-2.0**, full text in the root `LICENSE` file (also what
-GitHub's license detector picks up); firmware is **MIT**, full text in
-`BuildYourOwn/software/rheometer-firmware/LICENSE` (kept separate because the firmware's license
-genuinely differs from the root license — not a duplicate); documentation is **CC BY-SA 4.0**,
-declared in `README.md` → License with a link to the canonical text
-(https://creativecommons.org/licenses/by-sa/4.0/) rather than a vendored local copy, which is
-standard practice for CC licenses. New firmware files should carry an
+Three licenses, one per content category (see root `README.md` → License), are declared in one
+physical repo-root `LICENSE`: hardware design files (wiring, laser-cut, BOM, PCB) are
+**CERN-OHL-W-2.0**; firmware is **MIT**; documentation is **CC BY-SA 4.0**, linked to the canonical
+text (https://creativecommons.org/licenses/by-sa/4.0/). The root file contains the complete,
+unmodified CERN-OHL-W-2.0 and MIT texts plus clear scope declarations. New firmware files carry an
 `SPDX-License-Identifier: MIT` header (see existing files for the pattern); new hardware-design
-index files (BOM/electronic-wiring/tube-wiring/laser-cut READMEs) should carry a one-line pointer
+index files (hardware/electronic-wiring/tube-wiring/laser-cut READMEs) should carry a one-line pointer
 to the root `LICENSE`.
 Machine-readable open-hardware metadata lives in `okh-RheoBoard.yml` (Open Know-How manifest, repo
 root) — keep its `date-updated`, `version`, `made`, license, and design-file paths in sync with
-`README.md` and `hardware/REVISIONS.md` whenever those change.
+`README.md` whenever those change.
 Not yet OSHWA-certified — see `BuildYourOwn/PROGRESS.md` for the remaining gaps (laser-cut vector
 file needs physical test-fit verification, self-certification submission not yet made).
 

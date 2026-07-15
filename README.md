@@ -6,9 +6,10 @@ Maintained by Charlie Vuong (The Hybrid Atelier).
 
 This project is open hardware. The hardware design is licensed under the
 [CERN Open Hardware Licence — Weakly Reciprocal](LICENSE), the firmware under the
-[MIT License](BuildYourOwn/software/rheometer-firmware/LICENSE), and the documentation under
+[MIT License](LICENSE), and the documentation under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — see [License](#license) for the
-full breakdown, or the machine-readable manifest [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
+full breakdown. All project license notices are consolidated in the root [`LICENSE`](LICENSE).
+Machine-readable open-hardware metadata remains in [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 
 <img src="BuildYourOwn/images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
 
@@ -24,10 +25,10 @@ well under the cost of a commercial instrument. There are two ways to build the 
 > `BuildYourOwn/product-specs.md` — this README will grow as that lands.
 
 - [A step-by-step build guide](BuildYourOwn/README.md)
-- [A full bill of materials, with photos](BuildYourOwn/hardware/BOM.md)
+- [A full bill of materials, with photos](BuildYourOwn/hardware/README.md)
 - [Editable wiring-diagram and laser-cut design sources](#repository-layout), not just rendered images
 - [A build-verification checklist](BuildYourOwn/VERIFICATION.md)
-- [Firmware and OSC control API](BuildYourOwn/software/rheometer-firmware/README.md)
+- [Firmware and OSC control API](BuildYourOwn/software/README.md)
 
 ## Start here
 
@@ -77,10 +78,10 @@ what's there and what's missing.
 
 ### Electronics
 
-Everything electrical — parts list, wiring diagrams, component photos, and datasheets — lives in
+Electrical documentation — parts list, wiring diagrams, and datasheets — lives in
 [`BuildYourOwn/hardware/`](BuildYourOwn/hardware/).
 
-Parts list: [`BuildYourOwn/hardware/BOM.md`](BuildYourOwn/hardware/BOM.md) (with component photos).
+Parts list: [`BuildYourOwn/hardware/README.md`](BuildYourOwn/hardware/README.md) (with component photos).
 
 Wiring instructions are split into
 [`BuildYourOwn/hardware/electronic-wiring/`](BuildYourOwn/hardware/electronic-wiring/) and
@@ -102,16 +103,16 @@ Tube instructions and pneumatic logic:
 
 | | | |
 |---|---|---|
-| <img src="BuildYourOwn/hardware/images/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus"><br>SparkFun ESP32 Thing Plus (micro-USB) | <img src="BuildYourOwn/hardware/images/qwiic-micropressure.jpg" width="180" alt="SparkFun Qwiic MicroPressure"><br>Qwiic MicroPressure (MPRLS) | <img src="BuildYourOwn/hardware/images/qwiic-button.jpg" width="180" alt="SparkFun Qwiic Button"><br>Qwiic Button |
-| <img src="BuildYourOwn/hardware/images/adafruit-attiny1616-seesaw.jpg" width="180" alt="Adafruit ATtiny1616 Breakout with seesaw"><br>Adafruit ATtiny1616 seesaw breakout | <img src="BuildYourOwn/hardware/images/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="BuildYourOwn/hardware/images/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) |
-| <img src="BuildYourOwn/hardware/images/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve | | |
+| <img src="BuildYourOwn/images/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus"><br>SparkFun ESP32 Thing Plus (micro-USB) | <img src="BuildYourOwn/images/qwiic-micropressure.jpg" width="180" alt="SparkFun Qwiic MicroPressure"><br>Qwiic MicroPressure (MPRLS) | <img src="BuildYourOwn/images/qwiic-button.jpg" width="180" alt="SparkFun Qwiic Button"><br>Qwiic Button |
+| <img src="BuildYourOwn/images/adafruit-attiny1616-seesaw.jpg" width="180" alt="Adafruit ATtiny1616 Breakout with seesaw"><br>Adafruit ATtiny1616 seesaw breakout | <img src="BuildYourOwn/images/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="BuildYourOwn/images/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) |
+| <img src="BuildYourOwn/images/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve | | |
 
 Photo sources/licenses:
-[`BuildYourOwn/hardware/images/README.md`](BuildYourOwn/hardware/images/README.md).
+[`BuildYourOwn/images/README.md`](BuildYourOwn/images/README.md).
 
 ## Software configuration
 
-Firmware: [`BuildYourOwn/software/rheometer-firmware/2P1V_Adafruit.ino`](BuildYourOwn/software/rheometer-firmware/2P1V_Adafruit.ino)
+Firmware: [`BuildYourOwn/software/2P1V_Adafruit/2P1V_Adafruit.ino`](BuildYourOwn/software/2P1V_Adafruit/2P1V_Adafruit.ino)
 — advertises itself over BLE as **`2P1V_Adafruit`**; look for that name when connecting from
 RheoData.
 
@@ -125,7 +126,7 @@ RheoData.
    Screenshot target: `BuildYourOwn/images/ide-settings.png` (add when captured).
 4. Upload — full walkthrough: [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 04.
 
-API reference: [`BuildYourOwn/software/rheometer-firmware/README.md`](BuildYourOwn/software/rheometer-firmware/README.md).
+API reference: [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md).
 
 ## Connect and use
 
@@ -160,29 +161,24 @@ step.
 ├── BuildYourOwn/              The DIY build (current focus) + project docs
 │   ├── README.md              - Step-by-step build guide (8 steps, single file)
 │   ├── hardware/              - Everything electrical
-│   │   ├── BOM.md             - Bill of materials (with component photos)
+│   │   ├── README.md          - Bill of materials (with component photos)
 │   │   ├── electronic-wiring/ - Electronic schematic + generator script
 │   │   ├── tube-wiring/       - Pneumatic tube diagram + instructions
-│   │   ├── images/            - Component photos
-│   │   ├── references/        - Vendored datasheets
-│   │   └── REVISIONS.md       - Hardware revision history (unit ↔ design-file mapping)
+│   │   └── references/        - Vendored datasheets
 │   ├── laser-cut/             - Mounting-panel design files (vector source + placement map)
 │   ├── software/              - ESP32 firmware + IDE setup
-│   ├── images/                - Project-wide photos (teaser, etc.)
+│   ├── images/                - Project and component photos
 │   ├── VERIFICATION.md        - Build verification + OSHWA-readiness checklist
 │   └── PROGRESS.md, core-beliefs.md, product-specs.md   - Project docs
 ├── RheoBoard-PCB_V9/          Custom PCB (Altium: schematic, layout, libraries, BOM, outputs)
 ├── okh-RheoBoard.yml          Open Know-How manifest (machine-readable open-hardware metadata)
-├── LICENSE                    Hardware license, full text (CERN-OHL-W-2.0) — also the repo's
-│                              GitHub-detected license; software/documentation licenses are
-│                              declared in the License section below (firmware also carries its
-│                              own copy: `software/rheometer-firmware/LICENSE`)
+├── LICENSE                    License scope + CERN-OHL-W-2.0 and MIT full texts
 └── AGENTS.md                  Map for AI coding agents working in this repo
 ```
 
 ## Status
 
-- [x] `BuildYourOwn/hardware/BOM.md` populated (generic supply/tubing rows lack vendor links)
+- [x] `BuildYourOwn/hardware/README.md` BOM populated (generic supply/tubing rows lack vendor links)
 - [ ] `BuildYourOwn/laser-cut/` design files complete
 - [x] Electronic and tube wiring diagrams complete
 - [x] `BuildYourOwn/software/` firmware present
@@ -196,15 +192,15 @@ for the latest state.
 
 ## License
 
-RheoBoard uses three separate licenses — one per category of content, as recommended by
-[OSHWA](https://certification.oshwa.org/)'s open hardware certification guidance. Each is a
-standard, unmodified license text — no repo-specific copy needed beyond where noted:
+RheoBoard uses three licenses, scoped by content as recommended by
+[OSHWA](https://certification.oshwa.org/)'s open hardware certification guidance. Their notices
+are consolidated in the single root [`LICENSE`](LICENSE) file:
 
 | Content | License | Text |
 |---|---|---|
-| Hardware — wiring diagrams, laser-cut design, BOM, PCB design | [CERN-OHL-W-2.0](https://ohwr.org/cern_ohl_w_v2.txt) | [`LICENSE`](LICENSE) (repo root) |
-| Software — firmware (`BuildYourOwn/software/rheometer-firmware/`) | MIT | [`BuildYourOwn/software/rheometer-firmware/LICENSE`](BuildYourOwn/software/rheometer-firmware/LICENSE) |
-| Documentation — READMEs, build guide, BOM/wiring write-ups | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | linked above, no local copy (standard practice for CC licenses) |
+| Hardware — wiring diagrams, laser-cut design, BOM, PCB design | [CERN-OHL-W-2.0](https://ohwr.org/cern_ohl_w_v2.txt) | [`LICENSE`](LICENSE) |
+| Software — firmware (`BuildYourOwn/software/`) | MIT | [`LICENSE`](LICENSE) |
+| Documentation — READMEs, build guide, BOM/wiring write-ups | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | declaration in [`LICENSE`](LICENSE); canonical text linked |
 
 CERN-OHL-W is "weakly reciprocal": anyone who modifies the hardware design must share those
 modifications back under the same license, but a larger project that merely incorporates this
@@ -223,8 +219,9 @@ Machine-readable metadata for open-hardware indexers is in [`okh-RheoBoard.yml`]
 manifest).
 
 **Not yet OSHWA-certified — self-certification hasn't been submitted.** Applying these licenses
-is a prerequisite, not the whole requirement. Hardware revision tracking:
-[`BuildYourOwn/hardware/REVISIONS.md`](BuildYourOwn/hardware/REVISIONS.md). Remaining gap before
-submission: the laser-cut panel's vector file ([`BuildYourOwn/laser-cut/panel.svg`](BuildYourOwn/laser-cut/panel.svg))
-is a traced draft that still needs to be test-fit against real components. See
+is a prerequisite, not the whole requirement. The current version remains recorded in
+[`okh-RheoBoard.yml`](okh-RheoBoard.yml), but the first physical unit still needs a version/date
+label. The laser-cut panel's vector file
+([`BuildYourOwn/laser-cut/panel.svg`](BuildYourOwn/laser-cut/panel.svg)) is a traced draft that
+still needs to be test-fit against real components. See
 [`BuildYourOwn/PROGRESS.md`](BuildYourOwn/PROGRESS.md) for the current status.
