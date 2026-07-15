@@ -5,9 +5,8 @@ rheometer components.
 
 License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 
-> **Draft — test-fit before cutting the final acrylic.** The panel has not been physically cut or
-> verified against real parts. In particular, confirm every zip-tie slot and the ATtiny1616 seesaw
-> placement.
+> **Verified Rev B:** the current `panel.svg`/`.dxf` was physically cut and test-fit against the
+> complete one-valve build, including the ATtiny1616 seesaw placement, on 2026-07-15.
 
 ## Specifications
 

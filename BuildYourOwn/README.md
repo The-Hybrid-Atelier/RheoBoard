@@ -26,8 +26,8 @@ custom PCB work.
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
 - **Software:** [`software/`](software/)
-- **Tools:** laser cutter or cut-to-order service (`laser-cut/panel.svg`/`.dxf` — draft, not yet
-  test-fit against real parts, see [`laser-cut/README.md`](laser-cut/README.md)); zip-tie/flush
+- **Tools:** laser cutter or cut-to-order service (`laser-cut/panel.svg`/`.dxf`, see
+  [`laser-cut/README.md`](laser-cut/README.md)); zip-tie/flush
   cutters; wire strippers, small screwdriver, and multimeter; soldering iron + solder only if
   headers or wire leads are not already fitted; computer with data-capable micro-USB cable;
   phone/tablet or computer running **RheoData** for BLE control
@@ -46,7 +46,7 @@ custom PCB work.
 
 <a href="laser-cut/panel-placement-map.png"><img src="laser-cut/panel-placement-map.png" alt="Laser-cut panel component placement map" width="700"></a>
 
-1. Follow [`laser-cut/README.md`](laser-cut/README.md) to test-fit and cut the draft panel.
+1. Follow [`laser-cut/README.md`](laser-cut/README.md) to test-fit and cut the panel.
 2. Attach the four corner feet and install the Ø10 bulkhead fitting at **CHAMBER**.
 3. Zip-tie each component per
    [`laser-cut/panel-placement-map.png`](laser-cut/panel-placement-map.png): PUMP1/PUMP2 lying
