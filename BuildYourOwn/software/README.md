@@ -57,17 +57,6 @@ Restart the Arduino IDE afterward so it picks up the new library.
 3. Upload. Serial Monitor @ 115200 should print `2P1V_Adafruit initialized`.
 4. Builder walkthrough: [`../README.md`](../README.md) → Step 04.
 
-Add a screenshot of correct board/port settings to `../images/ide-settings.png` when captured.
-
-## Developer sketchbook copy
-
-Firmware may also be edited from:
-
-`/Users/charlievuong/Documents/Arduino/RheoData/thingplus/2P1V_Adafruit`
-
-**`BuildYourOwn/software/` in this repo is the copy to commit.** Sync changes between the
-sketchbook and repo before committing so they don't drift.
-
 ## Connect and use (summary)
 
 - **BLE:** device advertises as `2P1V_Adafruit`; control via RheoData bridge / OSC (`rheo/rep`, etc.).
@@ -77,20 +66,13 @@ sketchbook and repo before committing so they don't drift.
 
 Full connect/use section: [root README → Connect and use](../../README.md#connect-and-use).
 
-## Hardware / wiring
+## Firmware pin map
 
-The ESP32 Thing Plus's Qwiic (I2C) bus is daisy-chained to three boards:
+The firmware expects these I2C addresses:
 
-1. **SparkFun Qwiic Button** — manual REP / suck-toggle / blow gestures, address `0x6F`
-2. **SparkFun MicroPressure (MPRLS)** — REP pressure sensing, address `0x18`
-3. **Adafruit ATtiny1616 Breakout (seesaw)** — pump/valve control, address `0x49`
-
-The addresses do not collide and physical order along the Qwiic chain does not matter.
-
-The seesaw board supplies three control signals that earlier builds sourced from the ESP32.
-These are discrete point-to-point wires: seesaw pins `0`, `1`, and `5` run directly to the L298N
-boards. Qwiic carries I2C commands and 3.3 V logic power, not the L298N control signals or motor
-current. Pin `4` is reserved in firmware but physically NC in this single-valve build.
+- Qwiic Button: `0x6F`
+- MicroPressure (MPRLS): `0x18`
+- ATtiny1616 seesaw: `0x49`
 
 | Seesaw pin | Signal | Drives | Pin type |
 |---|---|---|---|
@@ -99,17 +81,9 @@ current. Pin `4` is reserved in firmware but physically NC in this single-valve 
 | `4` | `VALVE1_EN` | Reserved for L298N #2 `ENA`; physically NC | digital |
 | `5` | `VALVE2_EN` | L298N #2 `ENB` — the only valve driven | digital |
 
-L298N #2 uses only Motor B: `ENB` → seesaw pin `5`, `IN3` → local +5 V, `IN4` → GND, and
-`OUT3/OUT4` → VALVE2. Its Motor A terminals (`ENA`, `IN1`, `IN2`, `OUT1/OUT2`) are NC.
-On both L298N modules, keep `5V-EN` ON and remove the ENA/ENB jumper caps. Do not parallel the
-modules' +5 V outputs or apply external 5 V while `5V-EN` is installed.
-
-The seesaw logic is powered from Qwiic 3.3 V and GND; its separate `Vin` header is NC. The pumps
-and valve remain powered through the L298N boards from the 12 V motor rail.
-
-See the
-[`../hardware/electronic-wiring/wiring-diagram.png`](../hardware/electronic-wiring/wiring-diagram.png)
-for the full connection diagram.
+These constants are defined in `2P1V_Adafruit/PneumaticSystem.h`. Physical connections and power
+rules are maintained in
+[`../hardware/electronic-wiring/README.md`](../hardware/electronic-wiring/README.md).
 
 ## Control API
 

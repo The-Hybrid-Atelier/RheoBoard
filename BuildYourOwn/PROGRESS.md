@@ -8,6 +8,32 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (43)
+
+Focused every active `BuildYourOwn/**/README.md` on its own folder and removed duplicated
+instructions:
+
+- `BuildYourOwn/README.md` is now only the eight-step build workflow. Detailed cutting, wiring,
+  firmware setup/API, and repeated tip summaries were replaced with direct folder links.
+- `hardware/README.md` is only the BOM plus procurement/substitution notes.
+- `hardware/electronic-wiring/README.md` owns electrical terminals, power rules, pin mapping,
+  startup-risk notes, and diagram regeneration.
+- `hardware/tube-wiring/README.md` owns pneumatic ports, valve paths, and REP flow behavior.
+- `software/README.md` owns toolchain setup, dependencies, upload, firmware pin constants, API
+  parameters/defaults, timing, and serial commands. Removed the machine-specific sketchbook path
+  and screenshot TODO.
+- `hardware/references/README.md` now indexes only hardware references/datasheets;
+  `images/README.md` now contains only image identification and attribution.
+- Clarified that the pump's manufacturer-recommended ~50% duty cycle means intermittent run time,
+  not a 50% instantaneous PWM ceiling.
+
+License pointers and short safety checks remain where they are needed for standalone use.
+
+**Next:** physically verify the build and panel; no documentation-only check can complete those
+human sign-offs.
+
+---
+
 ## 2026-07-15 (42)
 
 Rewrote `laser-cut/README.md` as a concise, builder-facing laser-cut instruction instead of a
