@@ -8,6 +8,22 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (46)
+
+Rewrote the repository-root `README.md` as a concise project landing page. Removed duplicated
+build steps, detailed feature lists, embedded wiring diagrams, component gallery, firmware setup,
+operating tips, and the long status/license explanations; those details already live in the
+authoritative `BuildYourOwn/` guides.
+
+The root README now contains only the project summary, DIY starting links, the two hardware tracks,
+a compact repository map, current physical-verification warning, and license/metadata pointers.
+Also replaced the software guide's now-removed root “Connect and use” anchor with the current
+five-step guide's Step 05 link.
+
+**Next:** none from this shortening; physical panel test-fit and full-build verification remain.
+
+---
+
 ## 2026-07-15 (45)
 
 Embedded existing project images directly in the five-step build guide without moving or copying

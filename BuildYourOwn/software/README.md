@@ -64,7 +64,7 @@ Restart the Arduino IDE afterward so it picks up the new library.
   is enabled (default).
 - **Qwiic button:** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.
 
-Full connect/use section: [root README → Connect and use](../../README.md#connect-and-use).
+Builder workflow: [Step 05 — Calibrate and use](../README.md#step-05-calibrate-and-use).
 
 ## Firmware pin map
 
