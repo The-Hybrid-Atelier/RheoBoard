@@ -66,14 +66,14 @@ that guide links out to as it goes.
 ### Platform (laser-cut)
 
 A single 290 × 200 mm, 3 mm acrylic panel — every component (pumps, valve, L298N drivers, ESP32,
-Qwiic sensor + button) mounts to it with zip ties through cut slots, no screws or enclosure.
-Design files, the component placement + zip-tie map, and cut settings are in
-[`BuildYourOwn/laser-cut/`](BuildYourOwn/laser-cut/).
+Qwiic sensor + button, ATtiny1616 seesaw breakout) mounts to it with zip ties through cut slots,
+no screws or enclosure. Design files, the component placement + zip-tie map, and cut settings are
+in [`BuildYourOwn/laser-cut/`](BuildYourOwn/laser-cut/).
 
-**Status:** a draft vector cut file (`panel.svg`/`panel.dxf`, traced from the raster reference)
-exists but hasn't been verified against real parts, and the physical cut hasn't happened — see
-[`BuildYourOwn/laser-cut/README.md`](BuildYourOwn/laser-cut/README.md) for what's there and what's
-missing.
+**Status:** a draft vector cut file (`panel.svg`/`panel.dxf`, including a Rev B seesaw placement
+slot right of the ESP32) exists but hasn't been verified against real parts, and the physical cut
+hasn't happened — see [`BuildYourOwn/laser-cut/README.md`](BuildYourOwn/laser-cut/README.md) for
+what's there and what's missing.
 
 ### Electronics
 

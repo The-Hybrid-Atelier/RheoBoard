@@ -2,7 +2,7 @@
 """Generate panel.svg / panel.dxf -- vector cut geometry for the laser-cut platform.
 
 SPDX-License-Identifier: CERN-OHL-W-2.0
-Copyright (c) 2026 Charlie Vuong -- see ../../LICENSE-HARDWARE.txt
+Copyright (c) 2026 Charlie Vuong -- see ../../LICENSE
 
 WHAT THIS IS: a vector trace of panel-cut-lines.png (the pre-existing raster design
 reference provided alongside this build), converted to real mm coordinates and proper vector
@@ -12,23 +12,23 @@ margin), so pixel position converts directly to mm position -- see `retrace()` b
 extraction method (connected-component analysis on non-white pixels).
 
 WHAT THIS IS NOT: independently verified against physical parts, and not a fine-grained,
-slot-by-slot part attribution. Every hole/slot below is positioned exactly where
-panel-cut-lines.png draws it (this part is objective, reproducible via --retrace). But WHICH
-named part each slot belongs to is only established at coarse column/row granularity by eye
-against panel-placement-map.png -- it has not been re-derived slot-by-slot with certainty.
-Corner holes and the chamber bulkhead hole are high-confidence (unambiguous, isolated shapes,
-cross-checked against panel-placement-map.png's CHAMBER marker position). The ~50 zip-tie slots
-are grouped into rough columns matching the placement map's left-to-right layout, not labeled
-per-part -- cross-reference ../laser-cut/panel-placement-map.png visually if you need to know
-exactly which slot belongs to which component.
+slot-by-slot part attribution. Columns A–E are positioned exactly where panel-cut-lines.png
+draws them (objective, reproducible via --retrace). Column F (ATtiny1616 seesaw, Rev B) is an
+explicit addition based on the board's Eagle outline (12.7 × 30.48 mm) and free space right of
+the ESP32 — not traced from the original raster. WHICH named part each A–E slot belongs to is
+only established at coarse column/row granularity by eye against panel-placement-map.png.
+Corner holes and the chamber bulkhead hole are high-confidence (unambiguous, isolated shapes).
 
 **Do not cut material from this file without test-fitting real parts first** -- see
 ../VERIFICATION.md and AGENTS.md -> "What the agent can and can't verify."
 
 Usage:
-    python3 generate_panel_vector.py            # write panel.svg + panel.dxf from the traced
-                                                   geometry table baked into this script
-    python3 generate_panel_vector.py --retrace   # re-run pixel extraction against
+    python3 generate_panel_vector.py            # write panel.svg + panel.dxf from the geometry
+                                                   table baked into this script
+    python3 generate_panel_vector.py --rasters  # also refresh panel-cut-lines.png (add column-F
+                                                   slots) and panel-placement-map.png (seesaw
+                                                   footprint + slots + label); requires Pillow
+    python3 generate_panel_vector.py --retrace  # re-run pixel extraction against
                                                    panel-cut-lines.png and print a fresh
                                                    geometry table for review (requires
                                                    numpy/scipy/Pillow; does not overwrite the
@@ -98,6 +98,23 @@ SLOT_COLUMNS_MM = {
     "column E (x~249-267mm -- PWR terminal block area, per placement map)": [
         (248.94, 171.95, 5.66, 8.50), (267.06, 171.95, 5.66, 8.50),
     ],
+    # Rev B addition — NOT traced from panel-cut-lines.png. Adafruit ATtiny1616 seesaw
+    # breakout (PID 5690) is 12.7 × 30.48 mm (Eagle outline). Placed right of ESP32 / above
+    # PWR, long axis horizontal (STEMMA QT on the short ends, facing ESP32 ↔ free edge).
+    # 2 zip-ties over the short sides (4 slots), same pattern as ESP32/MPRLS. Draft only —
+    # still needs a human test-fit against the real board before cutting material.
+    "column F (x~240-264mm -- ATtiny1616 seesaw, Rev B)": [
+        (240.00, 128.00, 9.35, 5.38), (264.00, 128.00, 9.35, 5.38),
+        (240.00, 148.00, 9.35, 5.38), (264.00, 148.00, 9.35, 5.38),
+    ],
+}
+
+# Footprint used by the placement-map overlay (mm). Centered in the column-F slot rectangle.
+SEESAW_FOOTPRINT_MM = {
+    "label": "10 SEESAW",
+    "center": (252.00, 138.00),
+    "size": (30.48, 12.70),  # long × short, board long-axis horizontal
+    "slots": "column F (x~240-264mm -- ATtiny1616 seesaw, Rev B)",
 }
 
 
@@ -193,6 +210,107 @@ def retrace():
     print(f"# {kept} kept after filtering tiny marks")
 
 
+def _draw_slot_ellipse(draw, cx, cy, w, h, fill, outline=None, width=1):
+    """Draw a filled ellipse representing one zip-tie slot (axis-aligned)."""
+    box = [cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2]
+    draw.ellipse(box, fill=fill, outline=outline, width=width)
+
+
+def update_rasters():
+    """Refresh panel-cut-lines.png and panel-placement-map.png for the Rev B seesaw slots.
+
+    cut-lines: 1024×706 maps 1:1 onto the 290×200 mm panel — draw column-F slots in red.
+    placement-map: calibrated from known ESP32 / PWR / chamber features; draw footprint box,
+    slots, dashed zip-tie straps, a '10 SEESAW' label, and a matching legend line.
+    Idempotent enough for re-runs only if you restore the PNGs from git first — otherwise
+    re-running stacks a second copy of the overlay on top of the first.
+    """
+    from PIL import Image, ImageDraw, ImageFont
+
+    try:
+        font_sm = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 13)
+        font_tiny = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 11)
+    except OSError:
+        font_sm = font_tiny = ImageFont.load_default()
+
+    # ---- panel-cut-lines.png (1:1 mm ↔ px via panel bounds) ----------------- #
+    cut = Image.open("panel-cut-lines.png").convert("RGBA")
+    sx_c, sy_c = PANEL_W_MM / cut.width, PANEL_H_MM / cut.height
+    draw_c = ImageDraw.Draw(cut)
+    for x, y, w, h in SLOT_COLUMNS_MM[SEESAW_FOOTPRINT_MM["slots"]]:
+        _draw_slot_ellipse(
+            draw_c, x / sx_c, y / sy_c, w / sx_c, h / sy_c, fill=(220, 40, 40, 255)
+        )
+    # Keep as palette PNG (matches prior size regime) but with enough colors for new red
+    cut.convert("RGB").quantize(colors=64, method=getattr(Image, "Quantize", Image).FASTOCTREE).save(
+        "panel-cut-lines.png", optimize=True
+    )
+    print("Updated panel-cut-lines.png (column-F seesaw slots)")
+
+    # ---- panel-placement-map.png (calibrated affine from known features) --- #
+    # Calibration anchors (mm → observed px), from ESP32 / PWR / chamber / corners:
+    #   ESP32 TL slot (188.47, 129.60) → ~(502.4, 356.2)
+    #   scale ≈ 2.48 px/mm; origin ≈ (35.6, 33.1)
+    ox, oy, sxp, syp = 35.6, 33.1, 2.477, 2.493
+
+    def mm_to_place(x_mm, y_mm):
+        return ox + x_mm * sxp, oy + y_mm * syp
+
+    place = Image.open("panel-placement-map.png").convert("RGBA")
+    draw_p = ImageDraw.Draw(place, "RGBA")
+
+    cx, cy = SEESAW_FOOTPRINT_MM["center"]
+    bw, bh = SEESAW_FOOTPRINT_MM["size"]
+    # Footprint box — amber to match the wiring-diagram seesaw color family
+    x0, y0 = mm_to_place(cx - bw / 2, cy - bh / 2)
+    x1, y1 = mm_to_place(cx + bw / 2, cy + bh / 2)
+    draw_p.rounded_rectangle(
+        [x0, y0, x1, y1],
+        radius=4,
+        fill=(255, 230, 150, 230),
+        outline=(160, 110, 20, 255),
+        width=2,
+    )
+
+    slot_fill = (220, 40, 40, 255)
+    for x, y, w, h in SLOT_COLUMNS_MM[SEESAW_FOOTPRINT_MM["slots"]]:
+        px, py = mm_to_place(x, y)
+        _draw_slot_ellipse(draw_p, px, py, w * sxp, h * syp, fill=slot_fill)
+
+    # Dashed zip-tie path over each short end (top slot ↔ bottom slot)
+    dash_color = (200, 40, 40, 220)
+    for x_mm in (240.00, 264.00):
+        top = mm_to_place(x_mm, 128.00)
+        bot = mm_to_place(x_mm, 148.00)
+        steps = 8
+        for i in range(0, steps, 2):
+            t0, t1 = i / steps, (i + 1) / steps
+            draw_p.line(
+                [
+                    (top[0] + (bot[0] - top[0]) * t0, top[1] + (bot[1] - top[1]) * t0),
+                    (top[0] + (bot[0] - top[0]) * t1, top[1] + (bot[1] - top[1]) * t1),
+                ],
+                fill=dash_color,
+                width=2,
+            )
+
+    label = SEESAW_FOOTPRINT_MM["label"]
+    lx, ly = mm_to_place(cx, cy)
+    bbox = draw_p.textbbox((0, 0), label, font=font_sm)
+    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    draw_p.text((lx - tw / 2, ly - th / 2), label, fill=(80, 50, 0, 255), font=font_sm)
+
+    # Legend line — gap between the PWR row (~y 224–238) and the Chamber notes (~y 260).
+    legend_line = "10 SEESAW: 2 ties over short sides (4 slots)"
+    draw_p.rectangle([768, 242, 1005, 258], fill=(251, 252, 253, 255))
+    draw_p.text((772, 244), legend_line, fill=(30, 30, 40, 255), font=font_tiny)
+
+    place.convert("RGB").quantize(colors=256, method=getattr(Image, "Quantize", Image).FASTOCTREE).save(
+        "panel-placement-map.png", optimize=True
+    )
+    print("Updated panel-placement-map.png (seesaw footprint + slots + legend)")
+
+
 if __name__ == "__main__":
     if "--retrace" in sys.argv:
         retrace()
@@ -202,3 +320,5 @@ if __name__ == "__main__":
     with open("panel.dxf", "w") as f:
         f.write(build_dxf())
     print("Wrote panel.svg and panel.dxf")
+    if "--rasters" in sys.argv:
+        update_rasters()
