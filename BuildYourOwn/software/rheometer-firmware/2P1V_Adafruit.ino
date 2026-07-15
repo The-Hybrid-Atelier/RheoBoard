@@ -134,7 +134,7 @@ void setup() {
   rheo.setup();
   qwiicButtonReady = qwiicButton.begin();
   Serial.println(qwiicButtonReady ? "Qwiic button ready (1-click=REP, 2-click=suck, hold=blow)."
-                                  : "Qwiic button not found (optional, skipping).");
+                                  : "Qwiic button not found (required for documented button controls; continuing without it).");
   // Pass all four explicitly -- setupBLE()'s defaults only resolve per-translation-unit,
   // so an unparameterized call would silently build against BLEHandler.h's placeholder
   // fallbacks (see BLEHandler.h) instead of this sketch's real name/UUIDs.

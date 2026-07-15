@@ -52,7 +52,7 @@ zip-tie hole (cut); red dashes = zip-tie strap over the part. Full detail in
 | # | Part | How it's tied | Status in our build |
 |---|---|---|---|
 | 1–2 | PUMP1, PUMP2 (Adafruit 4700) | Lie flat; 2 zip-ties across the body (4 slots) each | Populated |
-| 3 | VALVE1 (Adafruit 4663) | 2 ties over the body (4 slots) | **Unpopulated / reserved.** Seesaw pin `4` and L298N #2 Motor A are NC in [`../hardware/wiring/wiring-diagram.png`](../hardware/wiring/wiring-diagram.png). Leave this slot empty unless building a 2-valve variant (see callout below). |
+| 3 | VALVE1 (Adafruit 4663) | 2 ties over the body (4 slots) | **Unpopulated / reserved.** Seesaw pin `4` and L298N #2 Motor A are NC in [`../hardware/electronic-wiring/wiring-diagram.png`](../hardware/electronic-wiring/wiring-diagram.png). Leave this slot empty unless building a 2-valve variant (see callout below). |
 | 4 | VALVE2 (Adafruit 4663) | 2 ties over the body (4 slots) | Populated — the only valve driven (seesaw pin `5`) |
 | 5 | MPRLS (Qwiic MicroPressure) | 2 ties (4 slots) — next to ESP32 | Populated |
 | 6 | Button (Qwiic Button) | 2 ties (4 slots) | Populated |
@@ -71,14 +71,13 @@ metal/plastic poles switch one shared line between the two pumps — seesaw pin 
 reserved/unpopulated. The authoritative pneumatic and electrical reference for what we're actually
 building is:
 
-- [`../hardware/wiring/wiring-diagram.png`](../hardware/wiring/wiring-diagram.png) — electrical wiring
-- [`../hardware/wiring/pneumatic-plumbing.md`](../hardware/wiring/pneumatic-plumbing.md) — tubing + valve logic
-- [`../hardware/wiring/tube-connection.png`](../hardware/wiring/tube-connection.png) — tube diagram
+- [`../hardware/electronic-wiring/`](../hardware/electronic-wiring/) — electronic wiring
+- [`../hardware/tube-wiring/`](../hardware/tube-wiring/) — tube diagram, tubing, and valve logic
 
 The panel's *mechanical* layout (dimensions, component positions, hole map) is shared between
 both variants — only VALVE1's position, its tubing, and seesaw pin `4` are unused here. If a 2-valve
 variant gets built later, `panel-system-diagram.png` applies directly; update `../hardware/BOM.md`, the
-wiring diagram, `pneumatic-plumbing.md`, and `../software/rheometer-firmware/PneumaticSystem.h` together at that
+electronic and tube wiring instructions, and `../software/rheometer-firmware/PneumaticSystem.h` together at that
 point (per `AGENTS.md`), and record the decision in `PROGRESS.md`.
 
 ## Parts

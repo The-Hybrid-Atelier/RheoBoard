@@ -8,6 +8,61 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (35)
+
+Split the combined `hardware/wiring/` folder into two sibling folders at the user's request:
+
+- `hardware/electronic-wiring/` now contains `wiring-diagram.png`,
+  `generate_wiring_diagram.py`, and a focused electronic-wiring `README.md`.
+- `hardware/tube-wiring/` now contains `tube-connection.png` and a focused `README.md` that
+  incorporates the former `pneumatic-plumbing.md` instructions, component port map, valve logic,
+  REP cycle, and diagram-source note.
+- Updated all live links and path declarations across the root/build READMEs, BOM, laser-cut
+  guide, firmware README, verification checklist, hardware revision mapping, Open Know-How
+  manifest, image index, and `AGENTS.md`. Historical progress entries retain their original paths.
+
+This is an organizational/documentation change only; the diagrams, wiring, and physical design did
+not change, so Rev B remains current.
+
+**Next:** none from this folder split.
+
+---
+
+## 2026-07-15 (34)
+
+Audited every living `README.md` and the builder instructions under `BuildYourOwn/` against the
+current Rev B firmware, BOM, wiring, and laser-cut placement. The core Rev B facts were already
+consistent: sketch/BLE name `2P1V_Adafruit`, seesaw `0x49`, connected pins `0`/`1`/`5`, reserved
+pin `4`, three Qwiic cables, `10 SEESAW` panel placement, and ~22 zip ties.
+
+- Fixed `software/README.md`'s one substantive signal-path error: the ESP32 sends I2C commands to
+  the seesaw over Qwiic, but seesaw-to-L298N `ENA`/`ENB` controls are discrete wires. Also renamed
+  the Qwiic Button purpose from “onboard” to “external.”
+- Fixed `hardware/BOM.md` saying MPRLS was the “first” Qwiic device; physical device order does
+  not matter on the shared I2C bus.
+- Tightened `BuildYourOwn/README.md`: corrected overview typos, made the conditional soldering
+  requirement explicit, removed the misleading “cable/order” troubleshooting phrase, and changed
+  Step 06 so the ESP32/seesaw/MPRLS logic is verified over USB before the 12 V motor rail is
+  energized. The 12 V step now explicitly watches for unexpected actuator motion because the
+  seesaw power-up pin state remains physically unverified.
+- Updated the firmware's missing-Qwiic-Button serial message: the code can continue without it,
+  but it is required for the documented external-button controls (no longer called optional).
+- Updated `VERIFICATION.md` to describe the panel accurately: columns A–E are traced geometry;
+  Rev B seesaw column F is an explicit draft addition.
+- Re-swept all `BuildYourOwn/**/README.md` files: no live stale `2P1VX`, direct ESP32 GPIO
+  14/15/32/33 instructions, ~20 zip-tie count, “no seesaw placement” note, or Qwiic-carried
+  ENA/ENB claim remains. Historical `PROGRESS.md` entries were intentionally left unchanged.
+- Follow-up audit fixed the stale software “Connect and use” target, removed the deleted “Media
+  conventions” cross-reference, clarified seesaw I2C commands versus discrete EN wires, and
+  updated living PCB links from removed `RheoBoard_V8_Final/` to `RheoBoard-PCB_V9/`.
+  `scripts/check-docs.sh` now passes all checks. IDE diagnostics report no errors. No firmware
+  compiler (`arduino-cli`) is installed, but the only firmware edit is a Serial message string.
+
+**Next:** human test-fit/cut/bring-up remains required. During first 12 V power-up, specifically
+watch for L298N output glitches before treating the seesaw idle-state question as resolved.
+
+---
+
 ## 2026-07-15 (32)
 
 Added the Rev B **ATtiny1616 seesaw placement** to the laser-cut panel and swept the related

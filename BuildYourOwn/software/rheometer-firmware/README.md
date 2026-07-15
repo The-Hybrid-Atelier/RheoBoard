@@ -67,8 +67,9 @@ This logic supply is electrically separate from the L298N motor-supply rail — 
 ESP32 pins always had from the 12V rail. No voltage derating is needed; this build keeps the existing 12V L298N supply
 exactly as-is.
 
-See [`../../hardware/wiring/wiring-diagram.png`](../../hardware/wiring/wiring-diagram.png) for the
-full connection diagram.
+See
+[`../../hardware/electronic-wiring/wiring-diagram.png`](../../hardware/electronic-wiring/wiring-diagram.png)
+for the full connection diagram.
 
 ---
 

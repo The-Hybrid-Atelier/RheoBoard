@@ -18,7 +18,7 @@ well under the cost of a commercial instrument. There are two ways to build the 
 
 1. **Build Your Own** ([`BuildYourOwn/`](BuildYourOwn/)) — off-the-shelf modules/dev boards,
    breadboard/perfboard, wiring diagrams + BOM + assembly guide. **Current focus.**
-2. **Custom PCB** ([`RheoBoard_V8_Final/`](RheoBoard_V8_Final/)) — Altium-designed board.
+2. **Custom PCB** ([`RheoBoard-PCB_V9/`](RheoBoard-PCB_V9/)) — Altium-designed board.
 
 > Full project background, goals, and specs are being written up in
 > `BuildYourOwn/product-specs.md` — this README will grow as that lands.
@@ -82,20 +82,21 @@ Everything electrical — parts list, wiring diagrams, component photos, and dat
 
 Parts list: [`BuildYourOwn/hardware/BOM.md`](BuildYourOwn/hardware/BOM.md) (with component photos).
 
-Wiring: pictographic breadboard-style diagrams in
-[`BuildYourOwn/hardware/wiring/`](BuildYourOwn/hardware/wiring/) — not abstract schematics.
+Wiring instructions are split into
+[`BuildYourOwn/hardware/electronic-wiring/`](BuildYourOwn/hardware/electronic-wiring/) and
+[`BuildYourOwn/hardware/tube-wiring/`](BuildYourOwn/hardware/tube-wiring/).
 
 This DIY track wires breakout boards instead of a custom PCB; optional custom PCB docs live in
-[`RheoBoard_V8_Final/`](RheoBoard_V8_Final/).
+[`RheoBoard-PCB_V9/`](RheoBoard-PCB_V9/).
 
 **This design** — electrical wiring and pneumatic plumbing:
 
-<a href="BuildYourOwn/hardware/wiring/wiring-diagram.png"><img src="BuildYourOwn/hardware/wiring/wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
+<a href="BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png"><img src="BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
 
-<a href="BuildYourOwn/hardware/wiring/tube-connection.png"><img src="BuildYourOwn/hardware/wiring/tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
+<a href="BuildYourOwn/hardware/tube-wiring/tube-connection.png"><img src="BuildYourOwn/hardware/tube-wiring/tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
-Text summary of the pneumatic logic:
-[`BuildYourOwn/hardware/wiring/pneumatic-plumbing.md`](BuildYourOwn/hardware/wiring/pneumatic-plumbing.md).
+Tube instructions and pneumatic logic:
+[`BuildYourOwn/hardware/tube-wiring/README.md`](BuildYourOwn/hardware/tube-wiring/README.md).
 
 #### Component gallery
 
@@ -143,8 +144,8 @@ First successful upload should print `2P1V_Adafruit initialized` on Serial Monit
 Full context for each is in [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Tips, tagged by
 step.
 
-- L298N ENA/ENB jumpers must be **removed** — the Adafruit ATtiny1616 seesaw breakout drives those
-  pins with PWM (over Qwiic/I2C, not native ESP32 GPIO).
+- L298N ENA/ENB jumpers must be **removed** — the ESP32 sends PWM/GPIO commands to the seesaw over
+  Qwiic/I2C, then seesaw pins `0`/`1`/`5` drive the L298N enable inputs through discrete wires.
 - Never route pump/valve current through the ESP32's 5 V pin — motors get their own 12 V adapter.
 - Pumps are ~4.5 V parts on a 12 V rail; avoid 100% duty continuously (Adafruit rates the 4700 for
   ~50%) — tune `rheo/rep/pull/power` / `push/power` instead of running full-blast.
@@ -160,7 +161,8 @@ step.
 │   ├── README.md              - Step-by-step build guide (8 steps, single file)
 │   ├── hardware/              - Everything electrical
 │   │   ├── BOM.md             - Bill of materials (with component photos)
-│   │   ├── wiring/            - Electrical schematic + pneumatic diagrams (+ generator script)
+│   │   ├── electronic-wiring/ - Electronic schematic + generator script
+│   │   ├── tube-wiring/       - Pneumatic tube diagram + instructions
 │   │   ├── images/            - Component photos
 │   │   ├── references/        - Vendored datasheets
 │   │   └── REVISIONS.md       - Hardware revision history (unit ↔ design-file mapping)
@@ -169,7 +171,7 @@ step.
 │   ├── images/                - Project-wide photos (teaser, etc.)
 │   ├── VERIFICATION.md        - Build verification + OSHWA-readiness checklist
 │   └── PROGRESS.md, core-beliefs.md, product-specs.md   - Project docs
-├── RheoBoard_V8_Final/        Custom PCB (Altium: schematic, layout, libraries, BOM, outputs)
+├── RheoBoard-PCB_V9/          Custom PCB (Altium: schematic, layout, libraries, BOM, outputs)
 ├── okh-RheoBoard.yml          Open Know-How manifest (machine-readable open-hardware metadata)
 ├── LICENSE                    Hardware license, full text (CERN-OHL-W-2.0) — also the repo's
 │                              GitHub-detected license; software/documentation licenses are
@@ -182,7 +184,7 @@ step.
 
 - [x] `BuildYourOwn/hardware/BOM.md` populated (generic supply/tubing rows lack vendor links)
 - [ ] `BuildYourOwn/laser-cut/` design files complete
-- [x] `BuildYourOwn/hardware/wiring/` pictographic diagram(s) complete (electrical + pneumatic)
+- [x] Electronic and tube wiring diagrams complete
 - [x] `BuildYourOwn/software/` firmware present
 - [x] `BuildYourOwn/README.md` step-by-step guide written (all 8 steps; Step 05 partially blocked
       on RheoMap's fixture spec)

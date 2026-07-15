@@ -1,11 +1,9 @@
-# Circuit / wiring diagrams
+# Electronic wiring
 
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
 [`../../software/rheometer-firmware/`](../../software/rheometer-firmware/) (`2P1V_Adafruit.ino`).
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
-
-## Electrical wiring
 
 <a href="wiring-diagram.png"><img src="wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
 
@@ -43,17 +41,6 @@ path now on the seesaw board, those specific resistors no longer apply — but t
 docs don't call out an equivalent for the seesaw board's own power-up state. Watch for L298N
 output glitches on power-up during Step 03/06 bring-up; see `hardware/BOM.md` notes.
 
-## Pneumatic plumbing
-
-<a href="tube-connection.png"><img src="tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
-
-See also [`pneumatic-plumbing.md`](pneumatic-plumbing.md) for text summary and REP cycle.
-
-- **Tubing:** 3 mm ID silicone throughout.
-- **VALVE2 (4663)** flips common between PUMP1 (vacuum, metal pole) and PUMP2 (pressure, plastic
-  pole).
-- **MPRLS** tees into the shared line to chamber/nozzle.
-
 ## Component photos
 
 See [`../BOM.md`](../BOM.md) and [`../images/`](../images/) for a photo of
@@ -62,9 +49,8 @@ seesaw breakout, L298N, Adafruit 4700 pumps, Adafruit 4663 valve).
 
 ## Conventions
 
-- Electrical wiring is drawn as a labeled schematic (component blocks with named pins,
-  orthogonal wire routing, junction dots, net-color legend) for precision. Pneumatic plumbing
-  stays pictographic/photo-style since it's about physical tube routing, not electrical nets.
+- Electronic wiring is drawn as a labeled schematic with component blocks, named pins,
+  orthogonal wire routing, junction dots, and a net-color legend.
 - When updating wiring, update the image **and** the pin defines in
   `../../software/rheometer-firmware/PneumaticSystem.h`
   together — keep them in sync.
@@ -79,6 +65,3 @@ Edit the script, not the PNG directly:
 ```bash
 python3 generate_wiring_diagram.py
 ```
-
-`tube-connection.png` (pneumatic) has no equivalent script yet — it's photo/pictogram-style,
-not a generated diagram.

@@ -3,8 +3,9 @@
 **Entry point:** [`rheometer-firmware/2P1V_Adafruit.ino`](rheometer-firmware/2P1V_Adafruit.ino) —
 this design's 2 pumps, 1 valve bench firmware for **RheoData** (SparkFun ESP32 Thing Plus,
 micro-USB, WRL-15663 + 2× L298N + Qwiic MicroPressure + Qwiic Button + Adafruit ATtiny1616
-seesaw breakout, driving the L298N `ENA`/`ENB` lines over Qwiic instead of direct GPIO). The
-sketch file/BLE device name in code: `2P1V_Adafruit`.
+seesaw breakout). The ESP32 commands the seesaw over Qwiic; seesaw pins `0`, `1`, and `5` then
+drive the L298N `ENA`/`ENB` inputs through discrete wires instead of native ESP32 GPIO. The sketch
+file/BLE device name in code: `2P1V_Adafruit`.
 
 API reference: [`rheometer-firmware/README.md`](rheometer-firmware/README.md) (OSC commands, REP
 parameters, serial bench commands).
@@ -32,7 +33,7 @@ your core version documents.)
 
 | Library | Install via | Purpose |
 |---|---|---|
-| [SparkFun Qwiic Button](https://github.com/sparkfun/SparkFun_Qwiic_Button_Arduino_Library) | Library Manager | Onboard button gestures (REP trigger, latched suck/blow) |
+| [SparkFun Qwiic Button](https://github.com/sparkfun/SparkFun_Qwiic_Button_Arduino_Library) | Library Manager | External Qwiic button gestures (REP trigger, latched suck/blow) |
 | [SparkFun MicroPressure](https://github.com/sparkfun/SparkFun_MicroPressure_Arduino_Library) | Library Manager | MPRLS sensor |
 | [Adafruit seesaw Library](https://github.com/adafruit/Adafruit_Seesaw) | Library Manager (search "Adafruit seesaw Library") | Drives the ATtiny1616 seesaw breakout's PWM/GPIO pins (L298N `ENA`/`ENB`) |
 | **[ThingPlusBLEOSC](https://github.com/cearto/ThingPlusBLEOSC)** | Manual (below) | BLE + OSC transport — not on Library Manager |
@@ -74,4 +75,4 @@ between sketchbook and repo before committing so they don't drift.
   is enabled (default).
 - **Qwiic button:** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.
 
-Full connect/use section: [`../README.md`](../README.md) → Connect and use.
+Full connect/use section: [root README → Connect and use](../../README.md#connect-and-use).

@@ -1,7 +1,14 @@
-# Pneumatic plumbing
+# Tube wiring
 
-Text companion to [`tube-connection.png`](tube-connection.png). Tubing: **3 mm ID silicone**
-([Adafruit 4664](https://www.adafruit.com/product/4664) or equivalent).
+**This simple rheometer** — pneumatic connections for 2 pumps, 1 switched-port valve, the
+pressure sensor, and the chamber/nozzle.
+
+License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
+
+<a href="tube-connection.png"><img src="tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
+
+Tubing: **3 mm ID silicone** ([Adafruit 4664](https://www.adafruit.com/product/4664) or
+equivalent).
 
 ## Components
 
@@ -42,3 +49,7 @@ Matches the firmware phases: **baseline → retract (PUMP1) → extrude (PUMP2) 
 
 Trigger via BLE (`rheo/rep`), Qwiic button (single click), onboard button, or USB serial `REP`.
 Full API: [`../../software/rheometer-firmware/README.md`](../../software/rheometer-firmware/README.md).
+
+## Diagram source
+
+`tube-connection.png` is a photo/pictogram-style diagram and has no editable generator script yet.
