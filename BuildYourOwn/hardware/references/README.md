@@ -1,15 +1,13 @@
 # References
 
-External datasheets, standards, and third-party library notes the design depends on. Link out
-rather than duplicating content, and note the revision/date you relied on since datasheets and
-standards change over time.
+External hardware references and vendored datasheets used to select and verify the BOM.
 
 | Component/Standard | Link | Notes |
 |---|---|---|
 | SparkFun ESP32 Thing Plus (micro-USB, WRL-15663) | https://www.sparkfun.com/sparkfun-esp32-thing-plus.html | MCU for this design's firmware; plain ESP32-WROOM-32D/E (not S2/S3); [hardware repo](https://github.com/sparkfun/ESP32_Thing_Plus); schematic/graphical datasheet vendored in `datasheets/` |
 | SparkFun Qwiic MicroPressure (MPRLS) | https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html | I2C `0x18`; [hardware repo](https://github.com/sparkfun/MicroPressure_Sensor) |
-| SparkFun Qwiic Button (red, BOB-15932) | https://www.sparkfun.com/sparkfun-qwiic-button.html | Required in this design (1-click=REP, hold=blow); default I2C `0x6F`; [hardware repo](https://github.com/sparkfun/Qwiic_Button) |
-| Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | https://www.adafruit.com/product/5690 | Receives PWM/GPIO commands over I2C (`0x49` default), then drives L298N `ENA`/`ENB` through discrete wires; [primary guide](https://learn.adafruit.com/adafruit-attiny817-seesaw) |
+| SparkFun Qwiic Button (red, BOB-15932) | https://www.sparkfun.com/sparkfun-qwiic-button.html | Default I2C `0x6F`; [hardware repo](https://github.com/sparkfun/Qwiic_Button) |
+| Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | https://www.adafruit.com/product/5690 | Default I2C `0x49`; [primary guide](https://learn.adafruit.com/adafruit-attiny817-seesaw) |
 | Adafruit 4700 air pump / vacuum (ZR320-02PM) | https://www.adafruit.com/product/4700 | ~4.5 V, 1.8 LPM; flow fixed by port plumbing; datasheet in `datasheets/ZR320-02PM_4.5V.pdf` |
 | Adafruit 4663 air valve (FA0520E) | https://www.adafruit.com/product/4663 | 6 V 3-port flip valve; datasheet in `datasheets/4663_C14660_DC_6V.pdf` |
 | Adafruit silicone tubing 3 mm ID | https://www.adafruit.com/product/4664 | For 4700 pumps and 4663 valve ports |
@@ -18,8 +16,3 @@ standards change over time.
 | ESP32 Thing Plus graphical datasheet | vendored: `datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf` | Pinout diagram, power specs |
 | Qwiic Button schematic | vendored: `datasheets/Qwiic_Button_Schematic.pdf` | SparkFun Eagle schematic export |
 | L298N (ST) | https://www.st.com/resource/en/datasheet/l298.pdf | Dual H-bridge IC datasheet (generic module, no single canonical vendor page) |
-| ESP32 Arduino core (Espressif) | https://espressif.github.io/arduino-esp32/package_esp32_index.json | Boards Manager URL |
-| SparkFun Qwiic Button library | https://github.com/sparkfun/SparkFun_Qwiic_Button_Arduino_Library | Arduino Library Manager |
-| SparkFun MicroPressure library | https://github.com/sparkfun/SparkFun_MicroPressure_Arduino_Library | Arduino Library Manager |
-| Adafruit seesaw Library | https://github.com/adafruit/Adafruit_Seesaw | Arduino Library Manager (search "Adafruit seesaw Library"); drives the ATtiny1616 breakout's PWM/GPIO pins |
-| **ThingPlusBLEOSC** | https://github.com/cearto/ThingPlusBLEOSC | BLE + OSC transport for RheoData; MIT license; not on Library Manager — `git clone` into Arduino `libraries/`. Depends on **OSC** (Adrian Freed, Library Manager) and **ESP32 BLE Arduino** (Neil Kolban, usually bundled with the `esp32` core). |

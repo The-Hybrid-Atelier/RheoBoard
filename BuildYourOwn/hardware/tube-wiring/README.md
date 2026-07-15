@@ -26,9 +26,6 @@ The ZR320-02PM always draws air in through the **side port** and pushes it out t
 Reversing motor wires does **not** flip flow direction — retract vs extrude is set by **which port
 is plumbed to the valve** and which is open to atmosphere, not by L298N direction wiring.
 
-Adafruit recommends ~**50% duty cycle** for the 4700 (not continuous run). Firmware REP timing +
-`rheo/rep/pull/power` and `rheo/rep/push/power` defaults should respect this.
-
 ## Valve logic (VALVE2)
 
 | VALVE2 state | seesaw pin 5 | Path |
@@ -38,17 +35,17 @@ Adafruit recommends ~**50% duty cycle** for the 4700 (not continuous run). Firmw
 
 Idle pump not selected is disconnected through the valve — no plug or seal needed.
 
-## REP cycle (firmware)
+## Flow during a REP
 
-Matches the firmware phases: **baseline → retract (PUMP1) → extrude (PUMP2) → relax**.
+The tube paths change with the firmware phases:
 
 1. **Baseline** — pumps off, ambient pressure sampling.
 2. **Retract** — VALVE2 OFF, PUMP1 on (vacuum).
 3. **Extrude** — VALVE2 ON, PUMP2 on (pressure, with optional ramp).
-4. **Relax** — tail of fixed 1500 ms REP window.
+4. **Relax** — both pumps stop.
 
-Trigger via BLE (`rheo/rep`), Qwiic button (single click), onboard button, or USB serial `REP`.
-Full API: [`../../software/README.md`](../../software/README.md).
+Timing, controls, and parameter defaults are documented in
+[`../../software/README.md`](../../software/README.md).
 
 ## Diagram source
 

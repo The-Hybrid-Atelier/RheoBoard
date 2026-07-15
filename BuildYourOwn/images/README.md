@@ -15,16 +15,6 @@ photography or a freely licensed source and are for builder identification only.
 | `adafruit-4663-air-valve.jpg` | Adafruit 4663 — 6V Air Valve (FA0520E) | [Adafruit product page](https://www.adafruit.com/product/4663) |
 | `l298n-motor-driver.jpg` | Generic L298N dual H-bridge module | Cropped from [Wikimedia Commons: *Dosmotorsl298n.jpg*](https://commons.wikimedia.org/wiki/File:Dosmotorsl298n.jpg) by Quel.soler, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — no single canonical vendor page exists for this generic module, so this is the best-effort stand-in; swap for your exact board's photo if it differs. |
 
-## Note on the ESP32 Thing Plus variant
-
-There are two similarly-named SparkFun boards — make sure you have the right one:
-
-- **SparkFun ESP32 Thing Plus (micro-USB, WRL-15663)** — used by this build. Programs and powers
-  over micro-USB.
-- **SparkFun Thing Plus – ESP32 WROOM (USB-C, WRL-20168)** — a newer, different board with a
-  USB-C connector. **Not** what the firmware in this repo targets; do not substitute without
-  checking pinout differences first.
-
 ## Notes
 
 - SparkFun and Adafruit images are used here for **build identification purposes** (this is what
