@@ -17,10 +17,10 @@ There are two hardware tracks:
    of CAD. **This is the current focus and holds essentially the entire harness** (progress log,
    core beliefs, references, product specs) — assume work is about this track and lives in this
    folder unless told otherwise.
-2. **PCB** (`RheoBoard_V8_Final/`) — custom Altium-designed board (schematic, layout, symbol/
+2. **PCB** (`RheoBoard-PCB_V9/`) — custom Altium-designed board (schematic, layout, symbol/
    footprint libraries, BOM). Binary CAD files — describe intent of changes in prose
    (`PROGRESS.md`) since `git diff` won't show it. PCB-specific process docs can live alongside
-   the design in `RheoBoard_V8_Final/` when needed, mirroring `BuildYourOwn/`'s pattern.
+   the design in `RheoBoard-PCB_V9/` when needed, mirroring `BuildYourOwn/`'s pattern.
 
 - The repo root `README.md` is the project overview (both tracks: features, hardware, software
   config, connect-and-use, repo layout) — it links into `BuildYourOwn/` for detail rather than
@@ -32,10 +32,10 @@ There are two hardware tracks:
   itself (single file, all 8 steps inline, no separate `tutorial/` folder) — that's where a
   builder actually starts; the root `README.md` is the reference/overview doc that links into it.
   Also here: `laser-cut/` (cut files), `software/` (code + firmware), `hardware/` (`BOM.md`,
-  `wiring/`, `images/` component photos, `references/` datasheets — everything electrical in one
-  place), `images/` (project-wide photos: teaser, IDE screenshots), `VERIFICATION.md`.
+  `electronic-wiring/`, `tube-wiring/`, `images/` component photos, `references/` datasheets),
+  `images/` (project-wide photos: teaser, IDE screenshots), `VERIFICATION.md`.
   Agent-facing: `PROGRESS.md`, `core-beliefs.md`, `product-specs.md`.
-- `RheoBoard_V8_Final/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
+- `RheoBoard-PCB_V9/` — the Altium Designer PCB project: schematic, layout, symbol/footprint
   libraries, BOM, manufacturing outputs. Binary CAD files — Altium is the only thing that opens
   them (see "Hardware-specific notes" below).
 - `scripts/` — small dependency-free maintenance scripts (currently just `check-docs.sh`).
@@ -94,8 +94,9 @@ where agents in general are most prone to declaring victory too early, so treat 
 - `README.md` — **the build guide itself**: one file, all 8 numbered steps inline
   (Instructables-style), plus overview/before-you-start/tips at the top. This is where a builder
   starts; there is no separate `tutorial/` folder — it was consolidated into this single file.
-- `hardware/` — everything electrical in one place: `BOM.md` (parts list), `wiring/` (electrical +
-  pneumatic diagrams), `images/` (component photos), `references/` (vendored datasheets).
+- `hardware/` — `BOM.md` (parts list), `electronic-wiring/` (electronic schematic + generator),
+  `tube-wiring/` (pneumatic tube diagram + instructions), `images/` (component photos), and
+  `references/` (vendored datasheets).
 - `laser-cut/` — laser-cut platform design files (placement map, cut lines, system diagram).
 - `software/` — firmware source (`rheometer-firmware/`) and IDE setup notes.
 - `images/` — project-wide photos not specific to a hardware part (teaser, IDE screenshots), plus
@@ -119,7 +120,8 @@ declared in `README.md` → License with a link to the canonical text
 (https://creativecommons.org/licenses/by-sa/4.0/) rather than a vendored local copy, which is
 standard practice for CC licenses. New firmware files should carry an
 `SPDX-License-Identifier: MIT` header (see existing files for the pattern); new hardware-design
-index files (BOM/wiring/laser-cut READMEs) should carry a one-line pointer to the root `LICENSE`.
+index files (BOM/electronic-wiring/tube-wiring/laser-cut READMEs) should carry a one-line pointer
+to the root `LICENSE`.
 Machine-readable open-hardware metadata lives in `okh-RheoBoard.yml` (Open Know-How manifest, repo
 root) — keep its `date-updated`, `version`, `made`, license, and design-file paths in sync with
 `README.md` and `hardware/REVISIONS.md` whenever those change.
@@ -130,7 +132,7 @@ file needs physical test-fit verification, self-certification submission not yet
 
 - **DIY (`BuildYourOwn/`) is plain text/markdown** — normal git diffs work, edit it like code.
   Before calling a build revision "done," run it through `BuildYourOwn/VERIFICATION.md`.
-- **PCB (`RheoBoard_V8_Final/`) is Altium binaries** (`.PcbDoc`, `.SchDoc`, `.PcbLib`, `.SchLib`,
+- **PCB (`RheoBoard-PCB_V9/`) is Altium binaries** (`.PcbDoc`, `.SchDoc`, `.PcbLib`, `.SchLib`,
   `.PrjPcb*`, `.OutJob`, `.Cam`, `.simcfg`) with no meaningful text diff — Altium itself is the
   only editor. If this track becomes active again, **always describe the intent of a hardware
   change in prose** somewhere text-based, since `git diff` won't show it.

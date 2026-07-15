@@ -10,4 +10,4 @@ keep this index a table of contents, not the spec itself.
   - **Build Your Own** (`../BuildYourOwn/`, this folder) — DIY off-the-shelf build. Spec: TBD.
     **Current focus.** Single-file, step-by-step build guide in `README.md`; reference material
     (BOM, wiring, firmware) in `hardware/` and `software/`.
-  - **Custom PCB** (`../RheoBoard_V8_Final/`) — Altium-designed board. Spec: TBD.
+  - **Custom PCB** (`../RheoBoard-PCB_V9/`) — Altium-designed board. Spec: TBD.

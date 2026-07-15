@@ -74,7 +74,7 @@ licensor:
 bom: BuildYourOwn/hardware/BOM.md
 
 design-files:
-  - path: BuildYourOwn/hardware/wiring/generate_wiring_diagram.py
+  - path: BuildYourOwn/hardware/electronic-wiring/generate_wiring_diagram.py
     title: Electrical wiring diagram source (regenerates the schematic PNG)
   - path: BuildYourOwn/laser-cut/generate_panel_vector.py
     title: Laser-cut panel vector source (generates panel.svg / panel.dxf)
@@ -84,9 +84,9 @@ design-files:
     title: Laser-cut panel vector, DXF export
 
 schematics:
-  - path: BuildYourOwn/hardware/wiring/wiring-diagram.png
+  - path: BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png
     title: Electrical schematic
-  - path: BuildYourOwn/hardware/wiring/tube-connection.png
+  - path: BuildYourOwn/hardware/tube-wiring/tube-connection.png
     title: Pneumatic tube-connection diagram
 
 making-instructions:

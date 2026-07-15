@@ -9,7 +9,8 @@ items into `PROGRESS.md` for the change and check them off there.
 
 ## Build
 
-- [ ] Wiring matches the diagram in [`hardware/wiring/`](hardware/wiring/) (no ad hoc deviations left undocumented)
+- [ ] Electronic wiring matches [`hardware/electronic-wiring/`](hardware/electronic-wiring/)
+- [ ] Tube wiring matches [`hardware/tube-wiring/`](hardware/tube-wiring/)
 - [ ] Continuity/short check on all new connections before first power-up
 - [ ] Powers up without excessive current draw or heat on any component
 - [ ] Every signal/sensor reads plausible values (not stuck, not noise)
@@ -35,9 +36,9 @@ section is about licensing/documentation choices, not physical verification, so 
 it directly. Re-check whenever a license file, scope statement, or design-file format changes.
 
 1. **Documentation** — hardware design files are in native/editable formats, not obfuscated or
-   compiled-only: `hardware/wiring/generate_wiring_diagram.py` (source) → PNG,
+   compiled-only: `hardware/electronic-wiring/generate_wiring_diagram.py` (source) → PNG,
    `laser-cut/generate_panel_vector.py` (source) → `panel.svg`/`panel.dxf`, and
-   `RheoBoard_V8_Final/*.SchDoc`/`*.PcbDoc`/`*.SchLib`/`*.PcbLib` (Altium native format, not
+   `RheoBoard-PCB_V9/*.SchDoc`/`*.PcbDoc`/`*.SchLib`/`*.PcbLib` (Altium native format, not
    Gerber-only). Firmware ships as `.ino`/`.cpp`/`.h` source. All free to download from this repo. ✅
 2. **Scope** — root `README.md` → License states explicitly what each of the three licenses
    covers, and `hardware/images/README.md` / `hardware/references/README.md` clearly flag
@@ -91,15 +92,17 @@ version tracking.
       separate — not a duplicate), and documentation (CC BY-SA 4.0) is declared in root
       `README.md` → License with a link to the canonical text, no local copy needed
 - [x] Firmware carries `SPDX-License-Identifier` headers
-- [x] Hardware-design index files (BOM, wiring, laser-cut READMEs) link to the root `LICENSE`
+- [x] Hardware-design index files (BOM, electronic wiring, tube wiring, and laser-cut READMEs)
+      link to the root `LICENSE`
 - [x] Hardware revision scheme documented (`hardware/REVISIONS.md`)
 - [x] Machine-readable open-hardware metadata published (`okh-RheoBoard.yml`, Open Know-How manifest) —
       keep in sync with README/REVISIONS when the design changes
 - [x] Editable design-file sources exist for the wiring diagram
-      (`hardware/wiring/generate_wiring_diagram.py`) and the laser-cut panel
+      (`hardware/electronic-wiring/generate_wiring_diagram.py`) and the laser-cut panel
       (`laser-cut/generate_panel_vector.py` → `panel.svg`/`panel.dxf`)
 - [ ] Laser-cut vector file test-fit against real physical parts and corrected if needed
-      (human-only — the current file is a traced draft, see `laser-cut/README.md`)
+      (human-only — the current file is draft geometry: columns A–E are traced and the Rev B
+      seesaw slots in column F are an explicit addition; see `laser-cut/README.md`)
 - [ ] Panel physically cut at least once, confirming the vector file is accurate
 - [ ] First physical unit labeled with its revision (`hardware/REVISIONS.md` — currently Rev B,
       unbuilt) and that revision/date recorded back into `REVISIONS.md`

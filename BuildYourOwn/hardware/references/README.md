@@ -9,7 +9,7 @@ standards change over time.
 | SparkFun ESP32 Thing Plus (micro-USB, WRL-15663) | https://www.sparkfun.com/sparkfun-esp32-thing-plus.html | MCU for this design's firmware; plain ESP32-WROOM-32D/E (not S2/S3); [hardware repo](https://github.com/sparkfun/ESP32_Thing_Plus); schematic/graphical datasheet vendored in `datasheets/` |
 | SparkFun Qwiic MicroPressure (MPRLS) | https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html | I2C `0x18`; [hardware repo](https://github.com/sparkfun/MicroPressure_Sensor) |
 | SparkFun Qwiic Button (red, BOB-15932) | https://www.sparkfun.com/sparkfun-qwiic-button.html | Required in this design (1-click=REP, hold=blow); default I2C `0x6F`; [hardware repo](https://github.com/sparkfun/Qwiic_Button) |
-| Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | https://www.adafruit.com/product/5690 | Drives L298N `ENA`/`ENB` over I2C (real PWM); default I2C `0x49`; [primary guide](https://learn.adafruit.com/adafruit-attiny817-seesaw) |
+| Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | https://www.adafruit.com/product/5690 | Receives PWM/GPIO commands over I2C (`0x49` default), then drives L298N `ENA`/`ENB` through discrete wires; [primary guide](https://learn.adafruit.com/adafruit-attiny817-seesaw) |
 | Adafruit 4700 air pump / vacuum (ZR320-02PM) | https://www.adafruit.com/product/4700 | ~4.5 V, 1.8 LPM; flow fixed by port plumbing; datasheet in `datasheets/ZR320-02PM_4.5V.pdf` |
 | Adafruit 4663 air valve (FA0520E) | https://www.adafruit.com/product/4663 | 6 V 3-port flip valve; datasheet in `datasheets/4663_C14660_DC_6V.pdf` |
 | Adafruit silicone tubing 3 mm ID | https://www.adafruit.com/product/4664 | For 4700 pumps and 4663 valve ports |

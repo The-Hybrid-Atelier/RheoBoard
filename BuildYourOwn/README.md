@@ -10,23 +10,27 @@ License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
 
 ## Overview
 
-This simple rheometer is a pneumatic retraction-extrusion with 2 air pumps + 1 valve on a laser-cut
-arcylic panel, driven by an ESP32 over BLE, sensed by a Qwiic MicroPressure sensor.
+This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a
+laser-cut acrylic panel, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
 
-The sensing routine is REP (retraction-extrution pulse) on command and streams a pressure trace.
+The sensing routine runs a REP (retraction-extrusion pulse) on command and streams a pressure trace.
 
-No needs basic soldering. Need Arduino IDE familiarity, and reading a wiring diagram — no CAD or
+Basic soldering is not required if the boards already have headers and the actuator leads are
+prepared. You need Arduino IDE familiarity and the ability to read a wiring diagram — no CAD or
 custom PCB work.
 
 ## Before you start
 
 - **Materials:** [`hardware/BOM.md`](hardware/BOM.md)
-- **Design files:** [`laser-cut/`](laser-cut/) (platform), [`hardware/wiring/`](hardware/wiring/) (circuits)
+- **Design files:** [`laser-cut/`](laser-cut/) (platform),
+  [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
+  [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
 - **Software:** [`software/`](software/) (flash procedure is Step 04)
 - **Tools:** laser cutter or cut-to-order service (`laser-cut/panel.svg`/`.dxf` — draft, not yet
   test-fit against real parts, see [`laser-cut/README.md`](laser-cut/README.md)); zip-tie/flush
-  cutters; soldering iron + solder + wire strippers + small screwdriver + multimeter; computer
-  with data-capable micro-USB cable; phone/tablet or computer running **RheoData** for BLE control
+  cutters; wire strippers, small screwdriver, and multimeter; soldering iron + solder only if
+  headers or wire leads are not already fitted; computer with data-capable micro-USB cable;
+  phone/tablet or computer running **RheoData** for BLE control
 
 ## Steps
 
@@ -77,7 +81,7 @@ Parts: acrylic panel, ~22 zip ties, Ø10 bulkhead fitting, 4 feet — see
 ## Step 03: Wire the electronics
 
 Parts: electronics rows in [`hardware/BOM.md`](hardware/BOM.md). Diagram:
-[`hardware/wiring/wiring-diagram.png`](hardware/wiring/wiring-diagram.png) (electrical
+[`hardware/electronic-wiring/wiring-diagram.png`](hardware/electronic-wiring/wiring-diagram.png) (electrical
 only — pneumatic plumbing is separate, below).
 
 1. Tie ESP32 GND, both L298N GNDs, and the 12 V adapter (−) together.
@@ -107,8 +111,7 @@ Pin map must match
 [`software/rheometer-firmware/PneumaticSystem.h`](software/rheometer-firmware/PneumaticSystem.h).
 
 **Pneumatic plumbing:** plumb per
-[`hardware/wiring/tube-connection.png`](hardware/wiring/tube-connection.png) and
-[`hardware/wiring/pneumatic-plumbing.md`](hardware/wiring/pneumatic-plumbing.md). PUMP1 port →
+[`hardware/tube-wiring/`](hardware/tube-wiring/). PUMP1 port →
 valve metal pole (vacuum); PUMP2 port → valve plastic pole (pressure) — motor polarity doesn't
 flip air direction.
 
@@ -162,13 +165,14 @@ Flash the BLE firmware:
 
 Parts: 12 V adapter (≥ 2 A), micro-USB cable — see [`hardware/BOM.md`](hardware/BOM.md).
 
-1. Confirm ESP32 GND, both L298N GNDs, and the 12 V adapter (−) are tied together.
-2. Connect 12 V (+) to both L298N motor power inputs.
-3. Power the ESP32 via micro-USB. Never back-feed 12 V into it.
-4. With motors off, check for excessive current draw or heat. Then open Serial Monitor @ 115200
-   and confirm MPRLS reads near ambient, the Qwiic Button responds, and the seesaw board is found
-   (no "seesaw board not found on Qwiic bus" message).
-5. From RheoData, connect to BLE device **`2P1V_Adafruit`**.
+1. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
+   tied together; confirm adapter (+) reaches both L298N motor power inputs.
+2. Power the ESP32 via micro-USB. Never back-feed 12 V into it.
+3. Open Serial Monitor @ 115200 and confirm the MPRLS, required Qwiic Button, and seesaw board are
+   found (no "not found on Qwiic bus" or HAL-init error).
+4. With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/
+   valve movement, excessive current draw, or heat. Disconnect immediately if any appears.
+5. Confirm MPRLS reads near ambient, then connect RheoData to BLE device **`2P1V_Adafruit`**.
 
 **Tip:** 12 V is the motor supply rail — actual drive to the ~4.5 V pumps / ~6 V valve is set by
 firmware PWM (`rheo/rep/pull/power`, `push/power`), not adapter voltage.
@@ -235,8 +239,8 @@ _Fill in once there's a working build: final photos/video, FAQ, calibration note
   (~50% max per Adafruit). ENA/ENB are wired from the seesaw board, not native ESP32 pins.
 - **(04)** Use a data-capable micro-USB cable; Arduino Library Manager needs the Adafruit seesaw
   Library added alongside the usual SparkFun libraries.
-- **(04)/(06)** MPRLS/Button/seesaw issues are usually a Qwiic cable/order problem, not the part
-  itself.
+- **(04)/(06)** MPRLS/Button/seesaw issues are usually a Qwiic cable, connector, or address
+  problem, not the part itself; physical order along the I2C chain does not matter.
 - **(06)** Never power motors from the ESP32 5 V pin.
 - **(07)** Lengthen `push/ramp/time` before shortening `push/time` if extrude feels aggressive.
 - **(08)** Onboard button, Qwiic Button, BLE, and serial all trigger the same REP — use
