@@ -84,6 +84,35 @@ User asked for a fillable worksheet mirroring the [OSHWA certification form](htt
   library notes" — the OSHWA draft doesn't quite fit that description, but it's gitignored (so
   invisible in git regardless) and this was an explicit placement request, so left the README's
   table/scope untouched rather than second-guessing it.
+- User then: (1) asked to drop the `.md` and keep only the `.docx` going forward, (2) asked to
+  strip the ✅/⚠️/⬜ legend/icons so it reads like an actual filled-out form rather than an
+  annotated worksheet, highlighting only the fields still genuinely blank, and (3) provided real
+  personal/contact info (legal name **Hoang Vuong**; address at UTA's Department of Computer
+  Science and Engineering, 500 UTA Blvd, Arlington, TX 76010; phone). Regenerated the `.docx`
+  directly from a temp markdown source via `pandoc -f markdown+mark` (the `mark` extension isn't
+  available under `gfm`, hence switching input format) so genuinely-unfilled fields (public contact
+  email, the "Creator Contribution requirement" personal read-and-confirm, and the two agreement
+  checkboxes) get real yellow Word highlighting instead of an emoji marker. Deleted the `.md`
+  source per the user's request to keep only the `.docx`, and updated `.gitignore` accordingly
+  (dropped the now-nonexistent `.md` entry, kept the `.docx` entry, added a `~$*` pattern for Word's
+  transient lock files after noticing one — `~$HWA-APPLICATION-DRAFT.docx` — appear alongside it,
+  meaning the file was open in Word at the time; user should close/reopen Word to see the
+  regenerated version rather than risk Word re-saving stale content over it).
+- Flagged but did not act on (not asked): the repo's own metadata (`okh-RheoBoard.yml`,
+  `README.md`) still says "Charlie Vuong," not "Hoang Vuong" — left a note in the `.docx` itself
+  about the mismatch rather than silently changing repo-wide maintainer identity unprompted.
+- User supplied the last missing field (public contact email: `cearto@uta.edu` — matches the
+  GitHub handle already cited for the `ThingPlusBLEOSC` dependency, so likely the same person).
+  Regenerated the `.docx` again and did a full verification pass: parsed the OOXML directly to
+  confirm exactly 3 fields remain yellow-highlighted (Creator Contribution requirement read-and-
+  confirm, and the two agreement checkboxes — all personal attestations, correctly left blank) and
+  that no ✅/⚠️/⬜ characters remain anywhere in the document; also did a `pandoc ... -t plain`
+  full-text readback to proofread every field value end-to-end. The Word lock file
+  (`~$HWA-APPLICATION-DRAFT.docx`) is gone now, confirming Word was closed and the regenerated file
+  is what the user will see on next open — no stale-overwrite risk this time.
+
+**Next:** none outstanding on this thread — the `.docx` is ready for the user to check the 3
+highlighted items themselves and submit at https://application.oshwa.org/apply.
 - Did **not** submit anything or touch the actual OSHWA form — this is a local worksheet only, per
   "Human-only" in `AGENTS.md` (the online submission + agreement checkboxes are the user's alone).
 
