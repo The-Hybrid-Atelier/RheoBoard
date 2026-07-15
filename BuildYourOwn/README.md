@@ -44,6 +44,8 @@ custom PCB work.
 
 ## Step 01: Assemble the platform
 
+<a href="laser-cut/panel-placement-map.png"><img src="laser-cut/panel-placement-map.png" alt="Laser-cut panel component placement map" width="700"></a>
+
 1. Follow [`laser-cut/README.md`](laser-cut/README.md) to test-fit and cut the draft panel.
 2. Attach the four corner feet and install the Ø10 bulkhead fitting at **CHAMBER**.
 3. Zip-tie each component per
@@ -56,6 +58,10 @@ custom PCB work.
 ---
 
 ## Step 02: Connect electronics and tubing
+
+<a href="hardware/electronic-wiring/wiring-diagram.png"><img src="hardware/electronic-wiring/wiring-diagram.png" alt="Electronic wiring diagram" width="800"></a>
+
+<a href="hardware/tube-wiring/tube-connection.png"><img src="hardware/tube-wiring/tube-connection.png" alt="Pneumatic tube-connection diagram" width="600"></a>
 
 1. Leave micro-USB and the 12 V adapter disconnected.
 2. Wire every electrical connection exactly as shown in
@@ -95,6 +101,8 @@ custom PCB work.
 ---
 
 ## Step 05: Calibrate and use
+
+<img src="images/teaser.jpg" alt="Assembled RheoBoard bench prototype" width="480">
 
 RheoBoard uses runtime BLE parameters rather than a one-shot calibration. Parameter definitions
 and defaults are maintained in [`software/README.md`](software/README.md).
