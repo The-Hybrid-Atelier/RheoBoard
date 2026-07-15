@@ -21,7 +21,6 @@ Supporting instructions:
 - [Electronic wiring](BuildYourOwn/hardware/electronic-wiring/)
 - [Tube wiring](BuildYourOwn/hardware/tube-wiring/)
 - [Firmware and OSC API](BuildYourOwn/software/)
-- [Build verification checklist](BuildYourOwn/VERIFICATION.md)
 
 > **Build status:** Rev B was physically cut, assembled, labeled, and human-verified on
 > 2026-07-15. OSHWA certification has not yet been submitted.
@@ -44,16 +43,12 @@ BuildYourOwn/
 │   └── references/        Datasheets
 ├── laser-cut/             Panel vectors and cutting instructions
 ├── software/              ESP32 firmware and API
-├── images/                Project and component photos
-└── VERIFICATION.md        Human build-verification checklist
+└── images/                Project and component photos
 
 RheoBoard-PCB_V9/          Custom PCB source files
 okh-RheoBoard.yml          Open Know-How metadata
 LICENSE                    Project license notices and texts
 ```
-
-The latest work and remaining tasks are recorded in
-[`BuildYourOwn/PROGRESS.md`](BuildYourOwn/PROGRESS.md).
 
 ## License
 

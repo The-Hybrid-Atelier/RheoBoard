@@ -1,8 +1,8 @@
 # macOS
 .DS_Store
 
-# Personal draft with PII (address/phone) for the OSHWA certification form — never publish
-BuildYourOwn/hardware/references/OSHWA-APPLICATION-DRAFT.docx
+# Author/agent working notes, checklists, and application drafts — never publish
+.private/
 
 # Microsoft Office temp/lock files (e.g. ~$OSHWA-APPLICATION-DRAFT.docx while a .docx is open)
 ~$*

@@ -107,12 +107,10 @@ custom PCB work.
 RheoBoard uses runtime BLE parameters rather than a one-shot calibration. Parameter definitions
 and defaults are maintained in [`software/README.md`](software/README.md).
 
-1. Position the chamber/nozzle repeatably at the sample. Exact fixture geometry remains dependent
-   on the unfinished [`product-specs.md`](product-specs.md).
+1. Position the chamber/nozzle repeatably at the sample.
 2. Let the MPRLS stabilize, then run several REPs with no sample.
 3. Tune baseline, retract, extrude, ramp, and sampling parameters until a triad produces three
    repeatable traces.
 4. Measure the sample and confirm its pressure trace appears in RheoData.
 5. Use [`software/README.md`](software/README.md) for BLE, button, serial, and debug controls.
-6. Complete the human sign-off in [`VERIFICATION.md`](VERIFICATION.md) before treating the build
-   as verified.
+6. Save the verified settings and use the same fixture position for comparable measurements.
