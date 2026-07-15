@@ -23,8 +23,8 @@ Supporting instructions:
 - [Firmware and OSC API](BuildYourOwn/software/)
 - [Build verification checklist](BuildYourOwn/VERIFICATION.md)
 
-> **Current limitation:** the laser-cut vector file is a draft and has not been physically cut or
-> test-fit against real parts. The complete build also still needs human verification.
+> **Build status:** Rev B was physically cut, assembled, labeled, and human-verified on
+> 2026-07-15. OSHWA certification has not yet been submitted.
 
 ## Hardware tracks
 

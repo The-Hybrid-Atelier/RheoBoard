@@ -8,6 +8,28 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (47)
+
+The user confirmed the current **Rev B** design was physically built and labeled
+`RheoBoard DIY — Rev B` with build date **2026-07-15**. The build uses the ATtiny1616 seesaw,
+one-valve configuration, current `panel.svg`/`.dxf`, and the documented electronic and tube
+wiring. The user also confirmed continuity, safe power-up, plausible sensor readings, REP
+operation, pressure-trace output, and build-guide accuracy.
+
+- Checked the corresponding human-only build, panel, labeling, and documentation items in
+  `VERIFICATION.md`; added Charlie Vuong's dated sign-off. BOM link completeness, third-party
+  component review, OSHWA submission, and post-approval mark usage remain open.
+- Updated `okh-RheoBoard.yml` to `made: true`, retained `made-independently: false` because this
+  is the creator's own build, and changed the panel metadata from draft/unbuilt to physically
+  cut/test-fit.
+- Replaced stale unbuilt/draft warnings in the root README, build guide, laser-cut guide, vector
+  generator documentation, and electronic-wiring power-up note.
+
+**Next:** ensure the repository is publicly accessible, finish the remaining BOM/third-party
+review, then submit the OSHWA certification form and Certification Mark License Agreement.
+
+---
+
 ## 2026-07-15 (46)
 
 Rewrote the repository-root `README.md` as a concise project landing page. Removed duplicated

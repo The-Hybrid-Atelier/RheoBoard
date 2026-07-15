@@ -9,22 +9,22 @@ items into `PROGRESS.md` for the change and check them off there.
 
 ## Build
 
-- [ ] Electronic wiring matches [`hardware/electronic-wiring/`](hardware/electronic-wiring/)
-- [ ] Tube wiring matches [`hardware/tube-wiring/`](hardware/tube-wiring/)
-- [ ] Continuity/short check on all new connections before first power-up
-- [ ] Powers up without excessive current draw or heat on any component
-- [ ] Every signal/sensor reads plausible values (not stuck, not noise)
+- [x] Electronic wiring matches [`hardware/electronic-wiring/`](hardware/electronic-wiring/)
+- [x] Tube wiring matches [`hardware/tube-wiring/`](hardware/tube-wiring/)
+- [x] Continuity/short check on all new connections before first power-up
+- [x] Powers up without excessive current draw or heat on any component
+- [x] Every signal/sensor reads plausible values (not stuck, not noise)
 
 ## Parts & docs
 
 - [ ] Every part in [`hardware/README.md`](hardware/README.md) has a product/datasheet link (see [`hardware/references/`](hardware/references/))
-- [ ] No unresolved/placeholder parts
-- [ ] [`README.md`](README.md) (step-by-step guide) matches what was actually built (steps, part
+- [x] No unresolved/placeholder parts
+- [x] [`README.md`](README.md) (step-by-step guide) matches what was actually built (steps, part
       orientation, media) — someone should be able to follow it cold and get the same result
 
 ## Documentation
 
-- [ ] `PROGRESS.md` updated with what changed and why (this is the revision history for this
+- [x] `PROGRESS.md` updated with what changed and why (this is the revision history for this
       track; no separate hardware revision file is maintained)
 
 ## Open Source Hardware Definition compliance
@@ -97,11 +97,11 @@ in `okh-RheoBoard.yml`.
 - [x] Editable design-file sources exist for the wiring diagram
       (`hardware/electronic-wiring/generate_wiring_diagram.py`) and the laser-cut panel
       (`laser-cut/generate_panel_vector.py` → `panel.svg`/`panel.dxf`)
-- [ ] Laser-cut vector file test-fit against real physical parts and corrected if needed
-      (human-only — the current file is draft geometry: columns A–E are traced and the Rev B
-      seesaw slots in column F are an explicit addition; see `laser-cut/README.md`)
-- [ ] Panel physically cut at least once, confirming the vector file is accurate
-- [ ] First physical unit labeled with the version/date from `okh-RheoBoard.yml`, and its build
+- [x] Laser-cut vector file test-fit against real physical parts and corrected if needed
+      (columns A–E originated from the raster trace; the Rev B seesaw slots in column F were an
+      explicit addition; the complete panel was physically verified on 2026-07-15)
+- [x] Panel physically cut at least once, confirming the vector file is accurate
+- [x] First physical unit labeled with the version/date from `okh-RheoBoard.yml`, and its build
       date recorded in `PROGRESS.md`
 - [ ] Third-party components double-checked as either fully open or clearly marked non-open with
       accessible datasheets (currently: all COTS parts, all datasheets vendored in
@@ -113,6 +113,9 @@ in `okh-RheoBoard.yml`.
 
 ## Sign-off
 
-- Verified by:
-- Date:
-- Notes (anything that failed, was skipped, or needs a follow-up in `PROGRESS.md`):
+- Verified by: Charlie Vuong
+- Date: 2026-07-15
+- Notes: User confirmed the Rev B unit was cut from the current `panel.svg`/`.dxf`, includes the
+  ATtiny1616 seesaw and one-valve configuration, matches both wiring guides, and passed continuity,
+  power, sensor, REP, pressure-trace, and documentation checks. BOM link completeness, third-party
+  component review, and OSHWA submission remain open.

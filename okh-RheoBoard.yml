@@ -26,7 +26,8 @@ description: >
 intended-use: >
   Bench research and teaching instrument for characterizing the pneumatic pressure response of
   soft/viscous samples. Built and operated by makers, students, and researchers comfortable with
-  basic soldering and the Arduino IDE. Not a medical or safety-critical device.
+  the Arduino IDE and reading wiring diagrams. Soldering is only needed when headers or actuator
+  leads are not already fitted. Not a medical or safety-critical device.
 
 keywords:
   - open-hardware
@@ -47,10 +48,9 @@ contact:
 
 version: Rev B
 development-stage: prototype
-# Design and documentation are complete for Rev B, but no physical unit has been built or
-# verified yet, and the laser-cut vector file (including the Rev B seesaw placement slot) has
-# not been test-fit against real parts.
-made: false
+# Rev B was physically built, cut from the current panel.svg/.dxf, and human-verified on
+# 2026-07-15. made-independently remains false because this was the creator's own build.
+made: true
 made-independently: false
 
 health-safety-notice: >
@@ -79,7 +79,7 @@ design-files:
   - path: BuildYourOwn/laser-cut/generate_panel_vector.py
     title: Laser-cut panel vector source (generates panel.svg / panel.dxf)
   - path: BuildYourOwn/laser-cut/panel.svg
-    title: Laser-cut panel vector (draft, not yet test-fit against parts)
+    title: Laser-cut panel vector (Rev B, physically test-fit)
   - path: BuildYourOwn/laser-cut/panel.dxf
     title: Laser-cut panel vector, DXF export
 
@@ -95,7 +95,7 @@ making-instructions:
 
 manufacturing-files:
   - path: BuildYourOwn/laser-cut/panel.dxf
-    title: Laser-cut panel, DXF (draft)
+    title: Laser-cut panel, DXF (Rev B, physically cut)
 
 operating-instructions:
   - path: BuildYourOwn/software/README.md

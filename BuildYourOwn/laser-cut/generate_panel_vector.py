@@ -11,16 +11,14 @@ primitives (circles, rounded-rectangle slots) instead of a flat image. panel-cut
 margin), so pixel position converts directly to mm position -- see `retrace()` below for the
 extraction method (connected-component analysis on non-white pixels).
 
-WHAT THIS IS NOT: independently verified against physical parts, and not a fine-grained,
-slot-by-slot part attribution. Columns A–E are positioned exactly where panel-cut-lines.png
-draws them (objective, reproducible via --retrace). Column F (ATtiny1616 seesaw, Rev B) is an
-explicit addition based on the board's Eagle outline (12.7 × 30.48 mm) and free space right of
-the ESP32 — not traced from the original raster. WHICH named part each A–E slot belongs to is
-only established at coarse column/row granularity by eye against panel-placement-map.png.
-Corner holes and the chamber bulkhead hole are high-confidence (unambiguous, isolated shapes).
+GEOMETRY ORIGIN: Columns A–E are positioned exactly where panel-cut-lines.png draws them
+(objective, reproducible via --retrace). Column F (ATtiny1616 seesaw, Rev B) is an explicit
+addition based on the board's Eagle outline (12.7 × 30.48 mm) and free space right of the ESP32,
+not traced from the original raster. Named part attribution for the A–E slots was established by
+comparison with panel-placement-map.png.
 
-**Do not cut material from this file without test-fitting real parts first** -- see
-../VERIFICATION.md and AGENTS.md -> "What the agent can and can't verify."
+VERIFICATION: the generated Rev B panel was physically cut and test-fit against the complete
+one-valve build, including the ATtiny1616 seesaw placement, on 2026-07-15.
 
 Usage:
     python3 generate_panel_vector.py            # write panel.svg + panel.dxf from the geometry
