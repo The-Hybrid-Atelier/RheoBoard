@@ -101,10 +101,6 @@ operating-instructions:
   - path: BuildYourOwn/software/README.md
     title: Firmware / OSC API reference and operation
 
-quality-instructions:
-  - path: BuildYourOwn/VERIFICATION.md
-    title: Build verification checklist (human sign-off)
-
 software:
   - path: BuildYourOwn/software/2P1V_Adafruit
     title: ESP32 rheometer firmware (Arduino/C++)
