@@ -4,7 +4,7 @@
 # Keep in sync with README.md and BuildYourOwn/hardware/REVISIONS.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-07-08
+date-updated: 2026-07-15
 
 manifest-author:
   name: Charlie Vuong
@@ -18,8 +18,9 @@ title: RheoBoard
 description: >
   A low-cost, DIY benchtop pneumatic "pull-push" rheometer head built from off-the-shelf
   modules. Two air pump/vacuum motors and one solenoid air valve, mounted on a laser-cut
-  acrylic panel and driven by an ESP32 microcontroller through two L298N H-bridge drivers,
-  run a retract-extrude pulse (REP) on command while a Qwiic MicroPressure sensor streams the
+  acrylic panel and driven by an ESP32 microcontroller through two L298N H-bridge drivers
+  (controlled via an Adafruit ATtiny1616 seesaw breakout on the Qwiic/I2C bus), run a
+  retract-extrude pulse (REP) on command while a Qwiic MicroPressure sensor streams the
   pressure trace over BLE. Open hardware supporting the RheoMap, RheoData, and SlipAtlas
   projects.
 intended-use: >
@@ -44,10 +45,11 @@ contact:
   affiliation: The Hybrid Atelier
   email: hxv6892@mavs.uta.edu
 
-version: Rev A
+version: Rev B
 development-stage: prototype
-# Design and documentation are complete for Rev A, but no physical unit has been built or
-# verified yet, and the laser-cut vector file has not been test-fit against real parts.
+# Design and documentation are complete for Rev B, but no physical unit has been built or
+# verified yet, and the laser-cut vector file has not been test-fit against real parts (and
+# doesn't yet have a placement slot for the Rev B seesaw board addition).
 made: false
 made-independently: false
 

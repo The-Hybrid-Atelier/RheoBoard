@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 Charlie Vuong -- see ../../../LICENSE-SOFTWARE.txt
+// Copyright (c) 2026 Charlie Vuong -- see LICENSE
 #include <Wire.h>
 #include "PneumaticSystem.h"
 #include "OSCHandler.h"
@@ -7,16 +7,33 @@
 #include "MemoryStream.h"
 
 SparkFun_MicroPressure mpr;
+Adafruit_seesaw ss;
 
 bool halBegin() {
   Wire.begin();
-  pwmAttach(PIN_PUMP1_EN, 0); pwmAttach(PIN_PUMP2_EN, 1);
-  pwmWrite(PIN_PUMP1_EN, 0, 0); pwmWrite(PIN_PUMP2_EN, 1, 0);
-  pinMode(PIN_VALVE1_EN, OUTPUT); digitalWrite(PIN_VALVE1_EN, LOW);
-  pinMode(PIN_VALVE2_EN, OUTPUT); digitalWrite(PIN_VALVE2_EN, LOW);
+
+  bool seesawOk = ss.begin(SEESAW_I2C_ADDR);
+  ss.pinMode(SS_PUMP1_EN,  OUTPUT);
+  ss.pinMode(SS_PUMP2_EN,  OUTPUT);
+  ss.pinMode(SS_VALVE1_EN, OUTPUT);
+  ss.pinMode(SS_VALVE2_EN, OUTPUT);
+  if (seesawOk) {
+    ss.setPWMFreq(SS_PUMP1_EN, PWM_FREQ_HZ);
+    ss.setPWMFreq(SS_PUMP2_EN, PWM_FREQ_HZ);
+  }
+  // Safe idle: pumps off, valve resting on the de-energized (vacuum) pole.
+  // Reserved VALVE1 pin is held low even though it is physically NC.
+  pumpsOff();
+  ss.digitalWrite(SS_VALVE1_EN, LOW);
+  valveSuck();
+
   if (PIN_SW1  >= 0) pinMode(PIN_SW1, INPUT_PULLUP);
   if (PIN_LED1 >= 0) { pinMode(PIN_LED1, OUTPUT); digitalWrite(PIN_LED1, LOW); }
-  return mpr.begin(MPRLS_I2C_ADDR, Wire);
+
+  bool mprOk = mpr.begin(MPRLS_I2C_ADDR, Wire);
+  if (!seesawOk) Serial.println("PneumaticSystem: ATtiny1616 seesaw board not found on Qwiic bus.");
+  if (!mprOk)    Serial.println("PneumaticSystem: MPRLS pressure sensor not found on Qwiic bus.");
+  return seesawOk && mprOk;
 }
 
 // ---- Pump / valve -----------------------------------------------------------
@@ -108,7 +125,7 @@ void sendApiEntry(const char* entry) {
 
 void PneumaticSystem::setup() {
   if (!halBegin()) {
-    Serial.println("PneumaticSystem: HAL init failed (MPRLS not found).");
+    Serial.println("PneumaticSystem: HAL init failed (seesaw board and/or MPRLS not found).");
     while (1) delay(1000);
   }
 }

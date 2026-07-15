@@ -101,7 +101,7 @@ version tracking.
 - [ ] Laser-cut vector file test-fit against real physical parts and corrected if needed
       (human-only — the current file is a traced draft, see `laser-cut/README.md`)
 - [ ] Panel physically cut at least once, confirming the vector file is accurate
-- [ ] First physical unit labeled with its revision (`hardware/REVISIONS.md` — currently Rev A,
+- [ ] First physical unit labeled with its revision (`hardware/REVISIONS.md` — currently Rev B,
       unbuilt) and that revision/date recorded back into `REVISIONS.md`
 - [ ] Third-party components double-checked as either fully open or clearly marked non-open with
       accessible datasheets (currently: all COTS parts, all datasheets vendored in
