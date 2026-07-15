@@ -8,7 +8,7 @@
 # Checks:
 #   1. No dangling relative markdown links under BuildYourOwn/.
 #   2. The most recent commit touching BuildYourOwn/ also touched BuildYourOwn/PROGRESS.md.
-#   3. Every BOM.md table row has a non-empty Datasheet column (mechanical version of the
+#   3. Every BOM table row in hardware/README.md has a non-empty Datasheet column (mechanical version of the
 #      "every part is traceable" rule in core-beliefs.md).
 
 set -uo pipefail
@@ -53,8 +53,8 @@ else
 fi
 
 echo
-echo "== BOM datasheet links (BuildYourOwn/hardware/BOM.md) =="
-bom_file="BuildYourOwn/hardware/BOM.md"
+echo "== BOM datasheet links (BuildYourOwn/hardware/README.md) =="
+bom_file="BuildYourOwn/hardware/README.md"
 bom_issue=0
 if [ -f "$bom_file" ]; then
   while IFS= read -r line; do

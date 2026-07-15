@@ -8,6 +8,120 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (42)
+
+Rewrote `laser-cut/README.md` as a concise, builder-facing laser-cut instruction instead of a
+design-history/status document. Reduced it from 112 lines to a direct workflow: specifications,
+file choice, 1:1 paper/cardboard test fit, kerf test, machine-specific cutting, post-cut checks,
+component placement, and vector regeneration. Preserved the prominent warning that the draft has
+not been physically cut or verified against real parts; no human-only checks were marked complete.
+
+**Next:** after the first physical cut, record the machine, power/speed, measured kerf, and fit
+corrections.
+
+---
+
+## 2026-07-15 (41)
+
+Removed `laser-cut/panel-system-diagram.png` at the user's request because it documented a
+different 2-pump/2-valve variant and could mislead builders of the current single-valve design.
+Removed its file-table row and the full 2P2V explanatory section from `laser-cut/README.md`, and
+updated `AGENTS.md`'s laser-cut folder map. The current `panel-placement-map.png`, electronic
+wiring, and tube-wiring instructions remain authoritative.
+
+**Next:** none from this cleanup.
+
+---
+
+## 2026-07-15 (40)
+
+Consolidated all project license notices into the single repository-root `LICENSE`, as requested.
+
+- Removed `BuildYourOwn/software/LICENSE`.
+- Added an explicit scope notice to root `LICENSE`: CERN-OHL-W-2.0 for hardware, MIT for firmware,
+  and CC BY-SA 4.0 for documentation.
+- Preserved the complete, unmodified CERN-OHL-W-2.0 text and appended the complete MIT text.
+- Updated the root/software READMEs, verification checklist, `AGENTS.md`, and all firmware
+  copyright-header pointers. Firmware retains `SPDX-License-Identifier: MIT` headers.
+
+**Next:** none from this consolidation.
+
+---
+
+## 2026-07-15 (39)
+
+Simplified the hardware documentation at the user's request:
+
+- Removed `hardware/REVISIONS.md`.
+- Renamed `hardware/BOM.md` to `hardware/README.md`, making the BOM the folder's automatic landing
+  page on GitHub.
+- Updated all live BOM and revision-file links across the build guide, root README, wiring and
+  laser-cut guides, image attribution, verification checklist, `AGENTS.md`, Open Know-How
+  manifest, and `scripts/check-docs.sh`.
+- Kept the current `Rev B` version identifier in `okh-RheoBoard.yml` and existing design
+  annotations, but `PROGRESS.md` is now the only narrative change history. The first physical unit
+  still needs a version/date label for OSHWA readiness.
+
+**Next:** none from this simplification; physical test-fit, build labeling, and OSHWA submission
+remain human-only.
+
+---
+
+## 2026-07-15 (38)
+
+Consolidated the duplicate image locations into one `BuildYourOwn/images/` folder, as requested.
+Moved all seven component reference photos out of `hardware/images/` and removed that empty folder;
+`teaser.jpg` remains in the same top-level images folder.
+
+- Moved the component-photo source/attribution README to `BuildYourOwn/images/README.md`, shortened
+  its introduction, and added the teaser photo to its inventory. This attribution content is kept
+  because the component images come from vendors and Wikimedia.
+- Updated the BOM thumbnails and attribution links, root README component gallery and repository
+  tree, electronic-wiring guide, verification checklist, and `AGENTS.md` to use the consolidated
+  location.
+- Historical progress entries retain their original image paths.
+
+**Next:** none from this consolidation.
+
+---
+
+## 2026-07-15 (37)
+
+Removed the redundant `BuildYourOwn/software/rheometer-firmware/` documentation layer at the
+user's request. Merged its API README into `software/README.md`, leaving one concise source for
+toolchain setup, dependencies, upload steps, seesaw/L298N pin map, OSC parameters, REP timing,
+serial commands, and Qwiic Button gestures.
+
+Arduino requires the sketch folder and primary `.ino` filename to match. After that constraint was
+confirmed from Arduino's official sketch specification, the user chose the compatible layout:
+
+- `software/README.md` — setup + API
+- `software/LICENSE` — MIT license
+- `software/2P1V_Adafruit/` — sketch and four `.h`/`.cpp` files, with matching
+  `2P1V_Adafruit.ino` entry point
+
+Updated all living software references in the root/build READMEs, hardware docs,
+electronic/tube wiring guides, laser-cut guide, verification checklist, `AGENTS.md`, and
+`okh-RheoBoard.yml`.
+Source license-header pointers now use `../LICENSE`. Historical progress entries retain their old
+paths because they describe the layout at the time.
+
+**Next:** none from this consolidation.
+
+---
+
+## 2026-07-15 (36)
+
+Removed `BuildYourOwn/images/README.md` at the user's request. It was a verbose inventory of the
+existing `teaser.jpg` plus three nonexistent/TBD image placeholders (`platform.png`, `wiring.png`,
+`ide-settings.png`); no living file linked to this README, so deleting it removes scaffolding
+without losing build instructions, image attribution, or a required cross-reference. Future
+builder photos can still be added directly under `BuildYourOwn/images/` and linked where used.
+
+**Next:** none from this cleanup.
+
+---
+
 ## 2026-07-15 (35)
 
 Split the combined `hardware/wiring/` folder into two sibling folders at the user's request:

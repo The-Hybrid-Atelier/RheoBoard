@@ -1,7 +1,7 @@
 # Electronic wiring
 
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
-[`../../software/rheometer-firmware/`](../../software/rheometer-firmware/) (`2P1V_Adafruit.ino`).
+[`../../software/`](../../software/) (`2P1V_Adafruit.ino`).
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
@@ -29,7 +29,7 @@ Summary (see diagram for full detail):
   or feed external 5 V while `5V-EN` is installed.
 - **Power:** external **12 V DC adapter** (≥ 2 A recommended) to both L298N motor power inputs;
   common GND with ESP32. PWM on ENA/ENB limits effective voltage to pumps (~4.5 V rated) and valve
-  (~6 V rated) — see [`../BOM.md`](../BOM.md) notes.
+  (~6 V rated) — see [`../README.md`](../README.md) notes.
 
 Pin map matches `PneumaticSystem.h` in firmware: `SS_PUMP1_EN=0`, `SS_PUMP2_EN=1`, and
 `SS_VALVE2_EN=5`. `SS_VALVE1_EN=4` is reserved in firmware but physically **NC** in this
@@ -39,11 +39,11 @@ single-valve build (all are seesaw pins, not native ESP32 GPIO).
 pull-downs on the ESP32 pins driving `ENA`/`ENB` to hold them low during boot. With that signal
 path now on the seesaw board, those specific resistors no longer apply — but this build's source
 docs don't call out an equivalent for the seesaw board's own power-up state. Watch for L298N
-output glitches on power-up during Step 03/06 bring-up; see `hardware/BOM.md` notes.
+output glitches on power-up during Step 03/06 bring-up; see `hardware/README.md` notes.
 
 ## Component photos
 
-See [`../BOM.md`](../BOM.md) and [`../images/`](../images/) for a photo of
+See [`../README.md`](../README.md) and [`../../images/`](../../images/) for a photo of
 every part in this diagram (ESP32 Thing Plus, MPRLS sensor, Qwiic Button, Adafruit ATtiny1616
 seesaw breakout, L298N, Adafruit 4700 pumps, Adafruit 4663 valve).
 
@@ -52,7 +52,7 @@ seesaw breakout, L298N, Adafruit 4700 pumps, Adafruit 4663 valve).
 - Electronic wiring is drawn as a labeled schematic with component blocks, named pins,
   orthogonal wire routing, junction dots, and a net-color legend.
 - When updating wiring, update the image **and** the pin defines in
-  `../../software/rheometer-firmware/PneumaticSystem.h`
+  `../../software/2P1V_Adafruit/PneumaticSystem.h`
   together — keep them in sync.
 - A photo of the finished build from the same angle as the diagram is a useful supplement.
 

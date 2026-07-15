@@ -15,7 +15,7 @@
 // Detailed docs: README.md
 //
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 Charlie Vuong -- see LICENSE
+// Copyright (c) 2026 Charlie Vuong -- see ../../../LICENSE
 // ============================================================================
 
 // ---- BLE identity (consumed by BLEHandler.h #ifndef guards) -----------------

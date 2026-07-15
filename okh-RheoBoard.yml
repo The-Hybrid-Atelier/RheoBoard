@@ -1,7 +1,7 @@
 # Open Know-How Manifest 1.0
 # Machine-readable metadata for open-hardware indexers (Open Know-How / OSHWA ecosystem).
 # Spec: https://standards.internetofproduction.org/pub/okh/release/1
-# Keep in sync with README.md and BuildYourOwn/hardware/REVISIONS.md when anything changes.
+# Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
 date-updated: 2026-07-15
@@ -71,7 +71,7 @@ licensor:
   email: hxv6892@mavs.uta.edu
 
 # ---- Documentation & design-file locations (relative to this manifest) ------
-bom: BuildYourOwn/hardware/BOM.md
+bom: BuildYourOwn/hardware/README.md
 
 design-files:
   - path: BuildYourOwn/hardware/electronic-wiring/generate_wiring_diagram.py
@@ -98,7 +98,7 @@ manufacturing-files:
     title: Laser-cut panel, DXF (draft)
 
 operating-instructions:
-  - path: BuildYourOwn/software/rheometer-firmware/README.md
+  - path: BuildYourOwn/software/README.md
     title: Firmware / OSC API reference and operation
 
 quality-instructions:
@@ -106,5 +106,5 @@ quality-instructions:
     title: Build verification checklist (human sign-off)
 
 software:
-  - path: BuildYourOwn/software/rheometer-firmware
+  - path: BuildYourOwn/software/2P1V_Adafruit
     title: ESP32 rheometer firmware (Arduino/C++)

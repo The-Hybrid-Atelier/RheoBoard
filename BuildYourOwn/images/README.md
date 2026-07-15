@@ -1,19 +1,34 @@
 # Images
 
-Hero photos, wiring reference shots, IDE configuration screenshots, and other builder-facing
-images for the DIY track.
+Project photos and reference photos for the parts in
+[`../hardware/README.md`](../hardware/README.md). Component images come from manufacturer/vendor
+photography or a freely licensed source and are for builder identification only.
 
-Images live at this folder's root (not nested subfolders) so the README renders well on GitHub
-without extra digging.
-
-## Files
-
-| File | Purpose | Status |
+| File | Part | Source |
 |---|---|---|
-| [`teaser.jpg`](teaser.jpg) | Hero image for `README.md` (root and `BuildYourOwn/`) | Added — user-provided photo of the assembled bench build, resized to 640×480 (~100 KB) and rendered at 480 px wide in both READMEs so it doesn't dominate the page |
-| `platform.png` | Assembled laser-cut platform | TBD |
-| `wiring.png` | Finished wiring (same angle as the diagram in `../hardware/electronic-wiring/`) | TBD |
-| `ide-settings.png` | Screenshot of correct IDE/board/port settings for firmware upload | TBD |
+| `teaser.jpg` | Assembled bench prototype used as the project hero image | User-provided project photo |
+| `esp32-thing-plus.jpg` | SparkFun ESP32 Thing Plus (micro-USB), WRL-15663 | [SparkFun product page](https://www.sparkfun.com/sparkfun-esp32-thing-plus.html) / [hardware repo](https://github.com/sparkfun/ESP32_Thing_Plus) |
+| `qwiic-micropressure.jpg` | SparkFun Qwiic MicroPressure Sensor, SEN-16476 | [SparkFun product page](https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html) / [hardware repo](https://github.com/sparkfun/MicroPressure_Sensor) |
+| `qwiic-button.jpg` | SparkFun Qwiic Button, red, BOB-15932 | [SparkFun product page](https://www.sparkfun.com/sparkfun-qwiic-button.html) / [hardware repo](https://github.com/sparkfun/Qwiic_Button) |
+| `adafruit-attiny1616-seesaw.jpg` | Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | [Adafruit product page](https://www.adafruit.com/product/5690), image via `cdn-shop.adafruit.com/970x728/5690-00.jpg` |
+| `adafruit-4700-air-pump.jpg` | Adafruit 4700 — Air Pump and Vacuum DC Motor (ZR320-02PM) | [Adafruit product page](https://www.adafruit.com/product/4700) |
+| `adafruit-4663-air-valve.jpg` | Adafruit 4663 — 6V Air Valve (FA0520E) | [Adafruit product page](https://www.adafruit.com/product/4663) |
+| `l298n-motor-driver.jpg` | Generic L298N dual H-bridge module | Cropped from [Wikimedia Commons: *Dosmotorsl298n.jpg*](https://commons.wikimedia.org/wiki/File:Dosmotorsl298n.jpg) by Quel.soler, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — no single canonical vendor page exists for this generic module, so this is the best-effort stand-in; swap for your exact board's photo if it differs. |
 
-Per-step build photos also belong here (named by step, e.g. `step02-panel-placement.jpg`) since
-the step-by-step guide (`../README.md`) is a single file rather than per-step folders.
+## Note on the ESP32 Thing Plus variant
+
+There are two similarly-named SparkFun boards — make sure you have the right one:
+
+- **SparkFun ESP32 Thing Plus (micro-USB, WRL-15663)** — used by this build. Programs and powers
+  over micro-USB.
+- **SparkFun Thing Plus – ESP32 WROOM (USB-C, WRL-20168)** — a newer, different board with a
+  USB-C connector. **Not** what the firmware in this repo targets; do not substitute without
+  checking pinout differences first.
+
+## Notes
+
+- SparkFun and Adafruit images are used here for **build identification purposes** (this is what
+  the part looks like when it arrives) — not redistributed as marketing material. Link to the
+  product page for authoritative specs.
+- If a part is substituted, replace the photo here and update
+  [`../hardware/README.md`](../hardware/README.md) accordingly.
