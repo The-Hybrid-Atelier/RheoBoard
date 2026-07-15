@@ -22,7 +22,7 @@ hardware revision: see [`REVISIONS.md`](REVISIONS.md).
 | — | Qwiic cables (×3) | 3 | https://www.sparkfun.com/cables.html | — | ESP32 → Button → MicroPressure → ATtiny1616 seesaw (daisy-chained on one I2C bus; order along the chain doesn't matter for I2C) |
 | — | micro-USB cable | 1 | — | — | Flash `2P1V_Adafruit.ino`; also powers the ESP32 during upload/bench use |
 | — | Acrylic panel, laser-cut (290 × 200 × 3 mm) | 1 | — | — | Mounting platform for every component; see [`../laser-cut/`](../laser-cut/) for cut file + placement map (draft vector file, not yet test-fit — see status there) |
-| — | Zip ties, small (~2.5 mm wide) | ~20 | — | — | Every component is zip-tied to the panel, not screwed; see [`../laser-cut/README.md`](../laser-cut/README.md) for tie counts per part |
+| — | Zip ties, small (~2.5 mm wide) | ~22 | — | — | Every component is zip-tied to the panel, not screwed; see [`../laser-cut/README.md`](../laser-cut/README.md) for tie counts per part (includes 2 ties for the Rev B seesaw breakout) |
 | — | Ø10 panel-mount bulkhead fitting | 1 | — | — | Chamber/nozzle mount point on the panel; pairs with the 3 mm ID tubing above |
 | — | Rubber/plastic feet | 4 | — | — | Panel corner feet |
 

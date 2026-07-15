@@ -65,4 +65,10 @@
 <rect x="246.11" y="167.70" width="5.66" height="8.50" rx="2.57" fill="none" stroke="red" stroke-width="0.2"/>
 <rect x="264.23" y="167.70" width="5.66" height="8.50" rx="2.57" fill="none" stroke="red" stroke-width="0.2"/>
 </g>
+<g data-column="column F (x~240-264mm -- ATtiny1616 seesaw, Rev B)">
+<rect x="235.32" y="125.31" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="259.32" y="125.31" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="235.32" y="145.31" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+<rect x="259.32" y="145.31" width="9.35" height="5.38" rx="2.45" fill="none" stroke="red" stroke-width="0.2"/>
+</g>
 </svg>

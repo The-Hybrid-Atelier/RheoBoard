@@ -48,8 +48,8 @@ contact:
 version: Rev B
 development-stage: prototype
 # Design and documentation are complete for Rev B, but no physical unit has been built or
-# verified yet, and the laser-cut vector file has not been test-fit against real parts (and
-# doesn't yet have a placement slot for the Rev B seesaw board addition).
+# verified yet, and the laser-cut vector file (including the Rev B seesaw placement slot) has
+# not been test-fit against real parts.
 made: false
 made-independently: false
 

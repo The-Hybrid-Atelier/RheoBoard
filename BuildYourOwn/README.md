@@ -10,13 +10,13 @@ License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
 
 ## Overview
 
-**This simple rheometer** is a benchtop pneumatic "pull-push" head: 2 air pumps + 1 valve on a
-laser-cut panel, driven by an ESP32 over BLE, sensed by a Qwiic MicroPressure sensor. It runs a
-**REP** (retract → extrude pulse) on command and streams a pressure trace.
+This simple rheometer is a pneumatic retraction-extrusion with 2 air pumps + 1 valve on a laser-cut
+arcylic panel, driven by an ESP32 over BLE, sensed by a Qwiic MicroPressure sensor.
 
-~4–7 hours hands-on for a first build (mostly Step 03's soldering), plus laser-cut turnaround if
-outsourced. Needs basic soldering, Arduino IDE familiarity, and reading a wiring diagram — no CAD
-or custom PCB work.
+The sensing routine is REP (retraction-extrution pulse) on command and streams a pressure trace.
+
+No needs basic soldering. Need Arduino IDE familiarity, and reading a wiring diagram — no CAD or
+custom PCB work.
 
 ## Before you start
 
@@ -53,7 +53,7 @@ or custom PCB work.
 
 ## Step 02: Assemble the platform
 
-Parts: acrylic panel, ~20 zip ties, Ø10 bulkhead fitting, 4 feet — see
+Parts: acrylic panel, ~22 zip ties, Ø10 bulkhead fitting, 4 feet — see
 [`hardware/BOM.md`](hardware/BOM.md). Design file: [`laser-cut/panel.svg`](laser-cut/panel.svg)
 (draft vector cut file — not yet test-fit against real parts, see
 [`laser-cut/README.md`](laser-cut/README.md) before cutting).
@@ -66,7 +66,8 @@ Parts: acrylic panel, ~20 zip ties, Ø10 bulkhead fitting, 4 feet — see
 4. Zip-tie each component per
    [`laser-cut/panel-placement-map.png`](laser-cut/panel-placement-map.png): PUMP1/PUMP2 lying
    flat, VALVE2 (leave VALVE1 empty), MPRLS + Button next to the ESP32, both L298N boards clear of
-   their heatsinks, ESP32, power terminal block.
+   their heatsinks, ESP32, **ATtiny1616 seesaw** (right of ESP32 / above PWR — label `10 SEESAW`),
+   power terminal block.
 5. Don't wire anything yet — that's Step 03.
 
 **Tip:** leave the VALVE1 zip-tie slot empty — reserved for a future 2-valve variant.
@@ -240,9 +241,3 @@ _Fill in once there's a working build: final photos/video, FAQ, calibration note
 - **(07)** Lengthen `push/ramp/time` before shortening `push/time` if extrude feels aggressive.
 - **(08)** Onboard button, Qwiic Button, BLE, and serial all trigger the same REP — use
   whichever's convenient.
-
-## Media conventions
-
-Photos go in [`images/`](images/), named by step (e.g. `step02-panel-placement.jpg`). Prefer
-hosting video externally (e.g. unlisted YouTube) and linking it, rather than committing large
-files to git.

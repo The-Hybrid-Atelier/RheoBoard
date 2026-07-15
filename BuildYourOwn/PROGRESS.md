@@ -10,6 +10,44 @@ Newest entries at the top. One entry per session/sitting.
 
 ## 2026-07-15 (32)
 
+Added the Rev B **ATtiny1616 seesaw placement** to the laser-cut panel and swept the related
+docs so the panel, build guide, BOM, revisions, and OKH manifest agree.
+
+- **Geometry** (Adafruit Eagle outline for PID 5690: **12.7 × 30.48 mm**): new column F in
+  `laser-cut/generate_panel_vector.py` — four zip-tie slots at (240/264, 128/148) mm, board
+  centered at (252, 138) mm, long axis horizontal, right of ESP32 / above PWR. Regenerated
+  `panel.svg` / `panel.dxf`. Column F is an explicit addition (not traced from the original
+  `panel-cut-lines.png`); still draft / not human test-fit.
+- **Rasters:** extended the generator with `--rasters` to (1) draw the new slots onto
+  `panel-cut-lines.png` and (2) overlay footprint + slots + dashed ties + `10 SEESAW` label +
+  legend line onto `panel-placement-map.png` (calibrated from existing ESP32/PWR/chamber
+  features). Re-running `--rasters` stacks overlays — restore those PNGs from git first.
+- **Docs:** `laser-cut/README.md` (row #10, status callout, regen command), Step 02 in
+  `BuildYourOwn/README.md`, root `README.md` platform blurb, `hardware/REVISIONS.md` Rev B,
+  `hardware/BOM.md` zip-tie qty ~20→~22, `okh-RheoBoard.yml` (removed "no seesaw slot yet").
+- Did **not** touch `panel-system-diagram.png` (still the dormant 2P2V overlay reference).
+- `scripts/check-docs.sh`: only pre-existing `README.md -> RheoBoard_V8_Final/` false-positive.
+
+**Next:** human test-fit of the draft panel (including the new seesaw slots) against real parts,
+then cut/label a Rev B unit. Seesaw boot-time pin state remains an open hardware question
+(BOM/wiring notes). OSHWA form still unsubmitted.
+
+---
+
+## 2026-07-15 (33)
+
+Updated `BuildYourOwn/README.md`'s Overview wording exactly as supplied by the user: replaced the
+benchtop "pull-push" description with "pneumatic retraction-extrusion," identified the panel as
+laser-cut acrylic, split the REP sensing routine into its own paragraph, removed the build-time
+estimate, and changed the prerequisite wording to say basic soldering is not needed. Also removed
+the closing "Media conventions" section at the user's request.
+
+**Next:** none from this copy edit.
+
+---
+
+## 2026-07-15 (32)
+
 Follow-up to entry 31: the user pointed at their own `wiring_diagram.py` (in the external
 `2P1V_Adafruit` sketchbook folder that entry 31 sourced the firmware from) and asked for
 `hardware/wiring/wiring-diagram.png` to be regenerated from **that** script's layout/style
