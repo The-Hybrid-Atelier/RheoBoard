@@ -40,7 +40,8 @@ single-valve build (all are seesaw pins, not native ESP32 GPIO).
 pull-downs on the ESP32 pins driving `ENA`/`ENB` to hold them low during boot. With that signal
 path now on the seesaw board, those specific resistors no longer apply — but this build's source
 docs don't call out an equivalent for the seesaw board's own power-up state. Watch for L298N
-output glitches during [Step 06 power-up](../../README.md#step-06-power-and-data-connections).
+output glitches during the
+[Step 04 power-on test](../../README.md#step-04-power-on-test).
 
 ## Conventions
 

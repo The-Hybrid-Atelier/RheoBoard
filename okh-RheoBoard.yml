@@ -91,7 +91,7 @@ schematics:
 
 making-instructions:
   - path: BuildYourOwn/README.md
-    title: Step-by-step build guide (8 steps, single file)
+    title: Concise five-step build guide
 
 manufacturing-files:
   - path: BuildYourOwn/laser-cut/panel.dxf

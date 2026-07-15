@@ -124,14 +124,14 @@ RheoData.
    [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md)).
 3. Board: **SparkFun ESP32 Thing Plus** (or generic **ESP32 Dev Module**); port: micro-USB.
    Screenshot target: `BuildYourOwn/images/ide-settings.png` (add when captured).
-4. Upload — full walkthrough: [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 04.
+4. Upload — full walkthrough: [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 03.
 
 API reference: [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md).
 
 ## Connect and use
 
 1. **Power:** connect the **12 V adapter** to both L298N motor rails; share GND with the ESP32.
-   See [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 06.
+   See [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 04.
 2. **BLE:** pair/connect from **RheoData** — device advertises as `2P1V_Adafruit`. Trigger a REP
    with OSC `rheo/rep`; tune parameters under `rheo/rep/*` (defaults documented in firmware README).
 3. **USB serial (bench):** 115200 baud — `REP`, `STOP`, `PUMP1 <pct>`, `PUMP2 <pct>` when
@@ -159,7 +159,7 @@ step.
 
 ```
 ├── BuildYourOwn/              The DIY build (current focus) + project docs
-│   ├── README.md              - Step-by-step build guide (8 steps, single file)
+│   ├── README.md              - Concise five-step build guide
 │   ├── hardware/              - Everything electrical
 │   │   ├── README.md          - Bill of materials (with component photos)
 │   │   ├── electronic-wiring/ - Electronic schematic + generator script
@@ -182,7 +182,7 @@ step.
 - [ ] `BuildYourOwn/laser-cut/` design files complete
 - [x] Electronic and tube wiring diagrams complete
 - [x] `BuildYourOwn/software/` firmware present
-- [x] `BuildYourOwn/README.md` step-by-step guide written (all 8 steps; Step 05 partially blocked
+- [x] `BuildYourOwn/README.md` five-step guide written (Step 05 partially blocked
       on RheoMap's fixture spec)
 - [ ] Step-by-step guide human-verified against a real build
 - [ ] Full build passed [`BuildYourOwn/VERIFICATION.md`](BuildYourOwn/VERIFICATION.md)

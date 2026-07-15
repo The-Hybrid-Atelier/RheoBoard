@@ -8,12 +8,31 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (44)
+
+Shortened the builder guide from eight steps to five meaningful stages:
+
+1. Assemble the platform.
+2. Connect electronics and tubing.
+3. Install firmware.
+4. Run the power-on test.
+5. Calibrate and use.
+
+Moved the obvious inventory/tool check into `Before you start`, merged generic mounting/setup into
+power-on and use, and removed repeated operating explanations. Updated every active step reference
+in the root README, laser-cut/electronic-wiring/software guides, `AGENTS.md`, and
+`okh-RheoBoard.yml`. Historical progress entries retain the former eight-step names.
+
+**Next:** no documentation-only work; physical verification remains open.
+
+---
+
 ## 2026-07-15 (43)
 
 Focused every active `BuildYourOwn/**/README.md` on its own folder and removed duplicated
 instructions:
 
-- `BuildYourOwn/README.md` is now only the eight-step build workflow. Detailed cutting, wiring,
+- `BuildYourOwn/README.md` is now only the build workflow. Detailed cutting, wiring,
   firmware setup/API, and repeated tip summaries were replaced with direct folder links.
 - `hardware/README.md` is only the BOM plus procurement/substitution notes.
 - `hardware/electronic-wiring/README.md` owns electrical terminals, power rules, pin mapping,

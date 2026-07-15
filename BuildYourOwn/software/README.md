@@ -55,7 +55,7 @@ Restart the Arduino IDE afterward so it picks up the new library.
 1. Open `2P1V_Adafruit/2P1V_Adafruit.ino` in Arduino IDE (from this repo, or your sketchbook copy).
 2. Select board **SparkFun ESP32 Thing Plus** (or **ESP32 Dev Module**) and the micro-USB port.
 3. Upload. Serial Monitor @ 115200 should print `2P1V_Adafruit initialized`.
-4. Builder walkthrough: [`../README.md`](../README.md) → Step 04.
+4. Builder walkthrough: [`../README.md`](../README.md) → Step 03.
 
 ## Connect and use (summary)
 

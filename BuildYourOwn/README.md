@@ -21,11 +21,11 @@ custom PCB work.
 
 ## Before you start
 
-- **Materials:** [`hardware/README.md`](hardware/README.md)
+- Check the [`hardware/README.md`](hardware/README.md) BOM before ordering or substituting parts.
 - **Design files:** [`laser-cut/`](laser-cut/) (platform),
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
-- **Software:** [`software/`](software/) (flash procedure is Step 04)
+- **Software:** [`software/`](software/)
 - **Tools:** laser cutter or cut-to-order service (`laser-cut/panel.svg`/`.dxf` — draft, not yet
   test-fit against real parts, see [`laser-cut/README.md`](laser-cut/README.md)); zip-tie/flush
   cutters; wire strippers, small screwdriver, and multimeter; soldering iron + solder only if
@@ -34,26 +34,15 @@ custom PCB work.
 
 ## Steps
 
-- [Step 01 — Kit contents and tools](#step-01-kit-contents-and-tools)
-- [Step 02 — Assemble the platform](#step-02-assemble-the-platform)
-- [Step 03 — Wire the electronics](#step-03-wire-the-electronics)
-- [Step 04 — Install firmware](#step-04-install-firmware)
-- [Step 05 — Mount and set up](#step-05-mount-and-set-up) — blocked on RheoMap's fixture spec
-- [Step 06 — Power and data connections](#step-06-power-and-data-connections)
-- [Step 07 — Calibrate](#step-07-calibrate)
-- [Step 08 — Ready to use](#step-08-ready-to-use)
+- [Step 01 — Assemble the platform](#step-01-assemble-the-platform)
+- [Step 02 — Connect electronics and tubing](#step-02-connect-electronics-and-tubing)
+- [Step 03 — Install firmware](#step-03-install-firmware)
+- [Step 04 — Power-on test](#step-04-power-on-test)
+- [Step 05 — Calibrate and use](#step-05-calibrate-and-use)
 
 ---
 
-## Step 01: Kit contents and tools
-
-1. Unpack everything and check it against [`hardware/README.md`](hardware/README.md).
-2. Resolve any missing or incompatible substitutions before assembly.
-3. Gather the tools listed above. Do not start wiring until the BOM is fully accounted for.
-
----
-
-## Step 02: Assemble the platform
+## Step 01: Assemble the platform
 
 1. Follow [`laser-cut/README.md`](laser-cut/README.md) to test-fit and cut the draft panel.
 2. Attach the four corner feet and install the Ø10 bulkhead fitting at **CHAMBER**.
@@ -66,7 +55,7 @@ custom PCB work.
 
 ---
 
-## Step 03: Wire the electronics
+## Step 02: Connect electronics and tubing
 
 1. Leave micro-USB and the 12 V adapter disconnected.
 2. Wire every electrical connection exactly as shown in
@@ -81,7 +70,7 @@ custom PCB work.
 
 ---
 
-## Step 04: Install firmware
+## Step 03: Install firmware
 
 1. Follow the toolchain, library, and upload instructions in
    [`software/README.md`](software/README.md).
@@ -91,56 +80,31 @@ custom PCB work.
 
 ---
 
-## Step 05: Mount and set up
+## Step 04: Power-on test
 
-1. Place the panel on a flat, stable, level surface.
-2. Trace every pneumatic line for kinks, pinches, or tension.
-3. Position the chamber/nozzle at your sample. **Exact fixture geometry is TBD** (depends on
-   RheoMap's spec — see [`product-specs.md`](product-specs.md)); keep the position repeatable
-   between runs for now.
-4. Leave slack in the micro-USB and 12 V cables so plugging in doesn't stress the panel.
-5. Keep drafts and heat sources away from the chamber — the REP's baseline phase is brief but
-   sensitive to disturbance.
-
----
-
-## Step 06: Power and data connections
-
-Parts: 12 V adapter (≥ 2 A), micro-USB cable — see [`hardware/README.md`](hardware/README.md).
-
-1. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
+1. Place the panel on a stable surface; inspect tubing and leave slack in both power cables.
+2. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
    tied together; confirm adapter (+) reaches both L298N motor power inputs.
-2. Power the ESP32 via micro-USB. Never back-feed 12 V into it.
-3. Open Serial Monitor @ 115200 and confirm the MPRLS, required Qwiic Button, and seesaw board are
+3. Power the ESP32 via micro-USB. Never back-feed 12 V into it.
+4. Open Serial Monitor at 115200 and confirm the MPRLS, Qwiic Button, and seesaw board are
    found (no "not found on Qwiic bus" or HAL-init error).
-4. With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/
+5. With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/
    valve movement, excessive current draw, or heat. Disconnect immediately if any appears.
-5. Confirm MPRLS reads near ambient, then connect RheoData to BLE device **`2P1V_Adafruit`**.
-
-**Tip:** 12 V is the motor supply rail — actual drive to the ~4.5 V pumps / ~6 V valve is set by
-firmware PWM (`rheo/rep/pull/power`, `push/power`), not adapter voltage.
+6. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`.
 
 ---
 
-## Step 07: Calibrate
+## Step 05: Calibrate and use
 
 RheoBoard uses runtime BLE parameters rather than a one-shot calibration. Parameter definitions
 and defaults are maintained in [`software/README.md`](software/README.md).
 
-1. Let the MPRLS stabilize, then run several REPs with no sample.
-2. Adjust baseline time until the pre-pulse trace is stable.
-3. Tune retract power/time for a clean pull without prolonged pump operation.
-4. Tune extrude power/time and ramp for a controlled push.
-5. Set the sampling rate for the required capture resolution.
-6. Run a triad and confirm three repeatable traces before measuring samples.
-
----
-
-## Step 08: Ready to use
-
-1. Connect RheoData to BLE device `2P1V_Adafruit`.
-2. Trigger a REP and confirm the pressure trace appears in the capture view.
-3. Repeat the measurement and confirm the trace is stable enough for the intended experiment.
-4. Use [`software/README.md`](software/README.md) for all BLE, button, serial, and debug controls.
-5. Complete the human sign-off in [`VERIFICATION.md`](VERIFICATION.md) before treating the build
+1. Position the chamber/nozzle repeatably at the sample. Exact fixture geometry remains dependent
+   on the unfinished [`product-specs.md`](product-specs.md).
+2. Let the MPRLS stabilize, then run several REPs with no sample.
+3. Tune baseline, retract, extrude, ramp, and sampling parameters until a triad produces three
+   repeatable traces.
+4. Measure the sample and confirm its pressure trace appears in RheoData.
+5. Use [`software/README.md`](software/README.md) for BLE, button, serial, and debug controls.
+6. Complete the human sign-off in [`VERIFICATION.md`](VERIFICATION.md) before treating the build
    as verified.
