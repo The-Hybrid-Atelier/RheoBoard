@@ -8,6 +8,22 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-15 (45)
+
+Embedded existing project images directly in the five-step build guide without moving or copying
+any assets:
+
+- Step 01 uses `laser-cut/panel-placement-map.png`.
+- Step 02 uses `hardware/electronic-wiring/wiring-diagram.png` and
+  `hardware/tube-wiring/tube-connection.png`.
+- Step 05 uses `images/teaser.jpg`.
+
+Each image links to its existing source location where a full-size diagram is useful.
+
+**Next:** none from this documentation change.
+
+---
+
 ## 2026-07-15 (44)
 
 Shortened the builder guide from eight steps to five meaningful stages:
