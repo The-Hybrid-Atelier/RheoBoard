@@ -1,227 +1,74 @@
 # RheoBoard
 
-### A low-cost, DIY benchtop pneumatic rheometer head for the RheoMap, RheoData, and SlipAtlas projects
+### A low-cost pneumatic rheometer for RheoMap, RheoData, and SlipAtlas
 
 Maintained by Charlie Vuong (The Hybrid Atelier).
 
-This project is open hardware. The hardware design is licensed under the
-[CERN Open Hardware Licence — Weakly Reciprocal](LICENSE), the firmware under the
-[MIT License](LICENSE), and the documentation under
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — see [License](#license) for the
-full breakdown. All project license notices are consolidated in the root [`LICENSE`](LICENSE).
-Machine-readable open-hardware metadata remains in [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
+<img src="BuildYourOwn/images/teaser.jpg" alt="RheoBoard assembled bench prototype" width="480">
 
-<img src="BuildYourOwn/images/teaser.jpg" alt="This simple rheometer — assembled bench prototype" width="480">
+RheoBoard is open hardware for pneumatic retraction-extrusion measurements. The DIY version uses
+two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs
+a REP (retraction-extrusion pulse) and streams the pressure trace.
 
-A benchtop pneumatic "pull-push" head: 2 air pumps + 1 valve on a laser-cut panel, driven by an
-ESP32 over BLE and sensed by a Qwiic MicroPressure sensor, built from off-the-shelf modules for
-well under the cost of a commercial instrument. There are two ways to build the hardware:
+## Build the DIY version
 
-1. **Build Your Own** ([`BuildYourOwn/`](BuildYourOwn/)) — off-the-shelf modules/dev boards,
-   breadboard/perfboard, wiring diagrams + BOM + assembly guide. **Current focus.**
-2. **Custom PCB** ([`RheoBoard-PCB_V9/`](RheoBoard-PCB_V9/)) — Altium-designed board.
+Start with the **[step-by-step build guide](BuildYourOwn/README.md)**.
 
-> Full project background, goals, and specs are being written up in
-> `BuildYourOwn/product-specs.md` — this README will grow as that lands.
+Supporting instructions:
 
-- [A step-by-step build guide](BuildYourOwn/README.md)
-- [A full bill of materials, with photos](BuildYourOwn/hardware/README.md)
-- [Editable wiring-diagram and laser-cut design sources](#repository-layout), not just rendered images
-- [A build-verification checklist](BuildYourOwn/VERIFICATION.md)
-- [Firmware and OSC control API](BuildYourOwn/software/README.md)
+- [Hardware and bill of materials](BuildYourOwn/hardware/README.md)
+- [Laser-cut panel](BuildYourOwn/laser-cut/)
+- [Electronic wiring](BuildYourOwn/hardware/electronic-wiring/)
+- [Tube wiring](BuildYourOwn/hardware/tube-wiring/)
+- [Firmware and OSC API](BuildYourOwn/software/)
+- [Build verification checklist](BuildYourOwn/VERIFICATION.md)
 
-## Start here
+> **Current limitation:** the laser-cut vector file is a draft and has not been physically cut or
+> test-fit against real parts. The complete build also still needs human verification.
 
-Want to actually build one? Skip straight to the numbered, step-by-step guide:
-**[`BuildYourOwn/README.md`](BuildYourOwn/README.md)**. Everything below is reference material
-that guide links out to as it goes.
+## Hardware tracks
 
-## Table of contents
-
-- [Features](#features)
-- [Hardware](#hardware)
-- [Software configuration](#software-configuration)
-- [Connect and use](#connect-and-use)
-- [Tips](#tips)
-- [Repository layout](#repository-layout)
-- [Status](#status)
-- [License](#license)
-
-## Features
-
-- **MCU:** SparkFun ESP32 Thing Plus (micro-USB, plain ESP32-WROOM-32D/E) — BLE to **RheoData**,
-  micro-USB for both programming and power.
-- **Pneumatics:** 2 air pump/vacuum motors ([Adafruit 4700](https://www.adafruit.com/product/4700)) +
-  1 solenoid air valve ([Adafruit 4663](https://www.adafruit.com/product/4663)) — switched-port
-  "flip" plumbing for retract/extrude REP cycles.
-- **Sensing:** SparkFun Qwiic MicroPressure (Honeywell MPRLS) on the shared pneumatic line.
-- **Control:** BLE OSC API (this design's firmware), SparkFun Qwiic Button (daisy-chained on the
-  same Qwiic bus) for onboard gestures, USB serial commands for bench debug.
-- **Drivers:** 2× L298N H-bridge modules (#1 = 2 pumps, #2 = valve); one external **12 V** adapter
-  powers both. `ENA`/`ENB` control lines are driven by an
-  [Adafruit ATtiny1616 Breakout with seesaw](https://www.adafruit.com/product/5690) on the Qwiic
-  bus (real PWM over I2C), not native ESP32 GPIO pins.
-
-## Hardware
-
-### Platform (laser-cut)
-
-A single 290 × 200 mm, 3 mm acrylic panel — every component (pumps, valve, L298N drivers, ESP32,
-Qwiic sensor + button, ATtiny1616 seesaw breakout) mounts to it with zip ties through cut slots,
-no screws or enclosure. Design files, the component placement + zip-tie map, and cut settings are
-in [`BuildYourOwn/laser-cut/`](BuildYourOwn/laser-cut/).
-
-**Status:** a draft vector cut file (`panel.svg`/`panel.dxf`, including a Rev B seesaw placement
-slot right of the ESP32) exists but hasn't been verified against real parts, and the physical cut
-hasn't happened — see [`BuildYourOwn/laser-cut/README.md`](BuildYourOwn/laser-cut/README.md) for
-what's there and what's missing.
-
-### Electronics
-
-Electrical documentation — parts list, wiring diagrams, and datasheets — lives in
-[`BuildYourOwn/hardware/`](BuildYourOwn/hardware/).
-
-Parts list: [`BuildYourOwn/hardware/README.md`](BuildYourOwn/hardware/README.md) (with component photos).
-
-Wiring instructions are split into
-[`BuildYourOwn/hardware/electronic-wiring/`](BuildYourOwn/hardware/electronic-wiring/) and
-[`BuildYourOwn/hardware/tube-wiring/`](BuildYourOwn/hardware/tube-wiring/).
-
-This DIY track wires breakout boards instead of a custom PCB; optional custom PCB docs live in
-[`RheoBoard-PCB_V9/`](RheoBoard-PCB_V9/).
-
-**This design** — electrical wiring and pneumatic plumbing:
-
-<a href="BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png"><img src="BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png" alt="Electrical wiring diagram" width="800"></a>
-
-<a href="BuildYourOwn/hardware/tube-wiring/tube-connection.png"><img src="BuildYourOwn/hardware/tube-wiring/tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
-
-Tube instructions and pneumatic logic:
-[`BuildYourOwn/hardware/tube-wiring/README.md`](BuildYourOwn/hardware/tube-wiring/README.md).
-
-#### Component gallery
-
-| | | |
-|---|---|---|
-| <img src="BuildYourOwn/images/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus"><br>SparkFun ESP32 Thing Plus (micro-USB) | <img src="BuildYourOwn/images/qwiic-micropressure.jpg" width="180" alt="SparkFun Qwiic MicroPressure"><br>Qwiic MicroPressure (MPRLS) | <img src="BuildYourOwn/images/qwiic-button.jpg" width="180" alt="SparkFun Qwiic Button"><br>Qwiic Button |
-| <img src="BuildYourOwn/images/adafruit-attiny1616-seesaw.jpg" width="180" alt="Adafruit ATtiny1616 Breakout with seesaw"><br>Adafruit ATtiny1616 seesaw breakout | <img src="BuildYourOwn/images/l298n-motor-driver.jpg" width="180" alt="L298N motor driver module"><br>L298N dual H-bridge (×2) | <img src="BuildYourOwn/images/adafruit-4700-air-pump.jpg" width="180" alt="Adafruit 4700 air pump"><br>Adafruit 4700 air pump (×2) |
-| <img src="BuildYourOwn/images/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 air valve"><br>Adafruit 4663 air valve | | |
-
-Photo sources/licenses:
-[`BuildYourOwn/images/README.md`](BuildYourOwn/images/README.md).
-
-## Software configuration
-
-Firmware: [`BuildYourOwn/software/2P1V_Adafruit/2P1V_Adafruit.ino`](BuildYourOwn/software/2P1V_Adafruit/2P1V_Adafruit.ino)
-— advertises itself over BLE as **`2P1V_Adafruit`**; look for that name when connecting from
-RheoData.
-
-1. Install [Arduino IDE](https://www.arduino.cc/en/software) 2.x and the ESP32 board package
-   (Espressif `esp32` core — URL in [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md)).
-2. Install libraries: SparkFun Qwiic Button, SparkFun MicroPressure, **Adafruit seesaw Library**,
-   OSC (Adrian Freed), and [**ThingPlusBLEOSC**](https://github.com/cearto/ThingPlusBLEOSC)
-   (`git clone` into Arduino `libraries/` — not on Library Manager; see
-   [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md)).
-3. Board: **SparkFun ESP32 Thing Plus** (or generic **ESP32 Dev Module**); port: micro-USB.
-   Screenshot target: `BuildYourOwn/images/ide-settings.png` (add when captured).
-4. Upload — full walkthrough: [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 03.
-
-API reference: [`BuildYourOwn/software/README.md`](BuildYourOwn/software/README.md).
-
-## Connect and use
-
-1. **Power:** connect the **12 V adapter** to both L298N motor rails; share GND with the ESP32.
-   See [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Step 04.
-2. **BLE:** pair/connect from **RheoData** — device advertises as `2P1V_Adafruit`. Trigger a REP
-   with OSC `rheo/rep`; tune parameters under `rheo/rep/*` (defaults documented in firmware README).
-3. **USB serial (bench):** 115200 baud — `REP`, `STOP`, `PUMP1 <pct>`, `PUMP2 <pct>` when
-   `SERIAL_STREAM` is enabled.
-4. **Qwiic button:** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.
-
-First successful upload should print `2P1V_Adafruit initialized` on Serial Monitor.
-
-## Tips
-
-Full context for each is in [`BuildYourOwn/README.md`](BuildYourOwn/README.md) → Tips, tagged by
-step.
-
-- L298N ENA/ENB jumpers must be **removed** — the ESP32 sends PWM/GPIO commands to the seesaw over
-  Qwiic/I2C, then seesaw pins `0`/`1`/`5` drive the L298N enable inputs through discrete wires.
-- Never route pump/valve current through the ESP32's 5 V pin — motors get their own 12 V adapter.
-- Pumps are ~4.5 V parts on a 12 V rail; avoid 100% duty continuously (Adafruit rates the 4700 for
-  ~50%) — tune `rheo/rep/pull/power` / `push/power` instead of running full-blast.
-- Onboard button (GPIO 0), Qwiic Button, BLE (`rheo/rep`), and USB serial (`REP`) all trigger the
-  same REP routine — use whichever's convenient.
-- Onboard LED (GPIO 13) lights while a REP, manual blow, latched suck, or pump test is active —
-  useful at-a-glance status without opening Serial Monitor.
+1. **DIY** ([`BuildYourOwn/`](BuildYourOwn/)) — the current focus, built from off-the-shelf
+   modules on a laser-cut acrylic panel.
+2. **Custom PCB** ([`RheoBoard-PCB_V9/`](RheoBoard-PCB_V9/)) — the Altium-designed board.
 
 ## Repository layout
 
+```text
+BuildYourOwn/
+├── README.md              Step-by-step DIY build guide
+├── hardware/
+│   ├── README.md          Bill of materials
+│   ├── electronic-wiring/ Electronic schematic and source
+│   ├── tube-wiring/       Pneumatic tube diagram and instructions
+│   └── references/        Datasheets
+├── laser-cut/             Panel vectors and cutting instructions
+├── software/              ESP32 firmware and API
+├── images/                Project and component photos
+└── VERIFICATION.md        Human build-verification checklist
+
+RheoBoard-PCB_V9/          Custom PCB source files
+okh-RheoBoard.yml          Open Know-How metadata
+LICENSE                    Project license notices and texts
 ```
-├── BuildYourOwn/              The DIY build (current focus) + project docs
-│   ├── README.md              - Concise five-step build guide
-│   ├── hardware/              - Everything electrical
-│   │   ├── README.md          - Bill of materials (with component photos)
-│   │   ├── electronic-wiring/ - Electronic schematic + generator script
-│   │   ├── tube-wiring/       - Pneumatic tube diagram + instructions
-│   │   └── references/        - Vendored datasheets
-│   ├── laser-cut/             - Mounting-panel design files (vector source + placement map)
-│   ├── software/              - ESP32 firmware + IDE setup
-│   ├── images/                - Project and component photos
-│   ├── VERIFICATION.md        - Build verification + OSHWA-readiness checklist
-│   └── PROGRESS.md, core-beliefs.md, product-specs.md   - Project docs
-├── RheoBoard-PCB_V9/          Custom PCB (Altium: schematic, layout, libraries, BOM, outputs)
-├── okh-RheoBoard.yml          Open Know-How manifest (machine-readable open-hardware metadata)
-├── LICENSE                    License scope + CERN-OHL-W-2.0 and MIT full texts
-└── AGENTS.md                  Map for AI coding agents working in this repo
-```
 
-## Status
-
-- [x] `BuildYourOwn/hardware/README.md` BOM populated (generic supply/tubing rows lack vendor links)
-- [ ] `BuildYourOwn/laser-cut/` design files complete
-- [x] Electronic and tube wiring diagrams complete
-- [x] `BuildYourOwn/software/` firmware present
-- [x] `BuildYourOwn/README.md` five-step guide written (Step 05 partially blocked
-      on RheoMap's fixture spec)
-- [ ] Step-by-step guide human-verified against a real build
-- [ ] Full build passed [`BuildYourOwn/VERIFICATION.md`](BuildYourOwn/VERIFICATION.md)
-
-Actively developed, solo maintainer. See [`BuildYourOwn/PROGRESS.md`](BuildYourOwn/PROGRESS.md)
-for the latest state.
+The latest work and remaining tasks are recorded in
+[`BuildYourOwn/PROGRESS.md`](BuildYourOwn/PROGRESS.md).
 
 ## License
 
-RheoBoard uses three licenses, scoped by content as recommended by
-[OSHWA](https://certification.oshwa.org/)'s open hardware certification guidance. Their notices
-are consolidated in the single root [`LICENSE`](LICENSE) file:
+All license notices are consolidated in [`LICENSE`](LICENSE):
 
-| Content | License | Text |
-|---|---|---|
-| Hardware — wiring diagrams, laser-cut design, BOM, PCB design | [CERN-OHL-W-2.0](https://ohwr.org/cern_ohl_w_v2.txt) | [`LICENSE`](LICENSE) |
-| Software — firmware (`BuildYourOwn/software/`) | MIT | [`LICENSE`](LICENSE) |
-| Documentation — READMEs, build guide, BOM/wiring write-ups | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | declaration in [`LICENSE`](LICENSE); canonical text linked |
+- Hardware designs: CERN-OHL-W-2.0
+- Firmware: MIT
+- Documentation: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-CERN-OHL-W is "weakly reciprocal": anyone who modifies the hardware design must share those
-modifications back under the same license, but a larger project that merely incorporates this
-hardware doesn't have to be open itself. Third-party components (ESP32, L298N, pumps, valve,
-sensor, Qwiic modules) and third-party libraries (ThingPlusBLEOSC, OSC, ESP32 BLE Arduino, etc.)
-remain under their own licenses — see
+Third-party parts, photos, datasheets, and libraries remain under their original terms; sources
+are listed in [`BuildYourOwn/images/README.md`](BuildYourOwn/images/README.md) and
 [`BuildYourOwn/hardware/references/README.md`](BuildYourOwn/hardware/references/README.md).
 
-If you build and distribute units based on this design, per the
-[Open Source Hardware Definition](https://www.oshwa.org/definition/)'s introduction: make clear
-that your units aren't manufactured, sold, warrantied, or otherwise sanctioned by the original
-designer, and don't use "RheoBoard"/"RheoMap"/"RheoData"/"SlipAtlas" or the original designer's
-name to imply endorsement.
+RheoBoard is not yet OSHWA-certified. Machine-readable project metadata and the current version
+are in [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 
-Machine-readable metadata for open-hardware indexers is in [`okh-RheoBoard.yml`](okh-RheoBoard.yml) (Open Know-How
-manifest).
-
-**Not yet OSHWA-certified — self-certification hasn't been submitted.** Applying these licenses
-is a prerequisite, not the whole requirement. The current version remains recorded in
-[`okh-RheoBoard.yml`](okh-RheoBoard.yml), but the first physical unit still needs a version/date
-label. The laser-cut panel's vector file
-([`BuildYourOwn/laser-cut/panel.svg`](BuildYourOwn/laser-cut/panel.svg)) is a traced draft that
-still needs to be test-fit against real components. See
-[`BuildYourOwn/PROGRESS.md`](BuildYourOwn/PROGRESS.md) for the current status.
+If you build or distribute a derived unit, do not imply that it is manufactured, sold, warranted,
+or endorsed by the original designer.
