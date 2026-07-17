@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "master-board plus slave-eagle-import") (type "KiCad") (uri "${KIPRJMOD}/master-board plus slave-eagle-import.kicad_sym") (options "") (descr ""))
+)

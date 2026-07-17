@@ -1,0 +1,11 @@
+# Cadence Design Systems, Inc.
+# Allegro PCB Router Automatic Router
+# Allegro PCB Router v22-1-0 made 2022/08/17 at 12:48:59
+# Running on host 
+# 
+#            Command Line Parameters
+#            -----------------------
+# Design File Name : D:\HoangVuong\RheoBoard_Adafruit_V6\RheoBoard_Adafruit_V6\MICROPROCESSOR\POWER.dsn
+# No "-do" or "-docmd" switches specified on command line.
+# Status File Name : D:\HoangVuong\RheoBoard_Adafruit_V6\RheoBoard_Adafruit_V6\MICROPROCESSOR\monitor.sts
+select_product  Allegro PCB SI GXL
