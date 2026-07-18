@@ -8,6 +8,45 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-17 (50)
+
+Rebuilt the DIY laser-cut panel for the user's requested single-valve, front-to-back arrangement:
+
+- Rotated both pumps 90° and centered VALVE2 between them in the front row.
+- Placed L298N #1, which controls both pumps, on the left and L298N #2, which controls VALVE2, on
+  the right.
+- Placed MPRLS directly below VALVE2. Removed the PWR mounting position, and placed the ATtiny1616
+  seesaw, ESP32, and Button behind the drivers in one rear row. Moved the Button beside the ESP32
+  and reduced the finished panel from 290 × 200 mm to 230 × 200 mm while retaining edge clearance
+  for all cut features and corner feet.
+- Replaced placeholder outlines with verified physical envelopes for all non-L298N parts:
+  pumps 58.2 × Ø27.0 mm nominal (58.3 × 27.2 mm tolerance-max body), valve 36.02 × 14.5 mm
+  nominal (36.32 × 14.8 mm tolerance-max body), seesaw 25.5 × 17.8 mm, ESP32 Thing Plus
+  64.77 × 22.86 mm, and MPRLS/Button 25.4 × 25.4 mm each. L298N placeholders remain at the
+  user's explicit request because generic module sizes vary.
+- The user confirmed the supplied pump drawing is the actual pump: Adafruit 4699 / ZR370-02PM,
+  not the previously documented Adafruit 4700 / ZR320-02PM. Updated the BOM, tube guide,
+  references, photo, and vendored datasheet accordingly.
+- Removed the unused VALVE1 footprint and all chamber/bulkhead geometry. Removed the panel-mount
+  bulkhead from the BOM and adjusted the estimated zip-tie quantity for the final slot count.
+- Regenerated `panel.svg`, `panel.dxf`, `panel-cut-lines.png`, and `panel-placement-map.png` from
+  source geometry. Both PNG references are now rendered from scratch and can be regenerated
+  repeatedly without retaining obsolete graphics.
+- Moved the unpublished experimental QMD panel variant to the ignored local-only path
+  `.private/laser-cut-qmd/`; its source and generated files must not be committed or published.
+- Updated the laser-cut guide and main DIY build step for the new positions.
+- Advanced the Open Know-How manifest to Rev C and `made: false`, clarified the root build status,
+  and reopened the Rev C panel test-fit/cut items without changing the historical Rev B sign-off.
+
+Rev B remains the last physically verified panel. Rev C is intentionally marked unverified because
+the complete component relayout and removed chamber hole require a new 1:1 real-part test-fit.
+
+**Next:** print or cut Rev C in cardboard at 1:1, place the real components, verify tie-slot
+clearance and connector access, then update verification records only after the user reports the
+physical result.
+
+---
+
 ## 2026-07-15 (49)
 
 The user reversed entry 48's publication decision and explicitly requested that the complete

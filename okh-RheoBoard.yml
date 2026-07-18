@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-07-15
+date-updated: 2026-07-17
 
 manifest-author:
   name: Charlie Vuong
@@ -46,11 +46,11 @@ contact:
   affiliation: The Hybrid Atelier
   email: hxv6892@mavs.uta.edu
 
-version: Rev B
+version: Rev C
 development-stage: prototype
-# Rev B was physically built, cut from the current panel.svg/.dxf, and human-verified on
-# 2026-07-15. made-independently remains false because this was the creator's own build.
-made: true
+# Rev B was physically built and verified on 2026-07-15. The current Rev C panel files relocate
+# parts and have not yet been physically test-fit, so this manifest version is not marked made.
+made: false
 made-independently: false
 
 health-safety-notice: >
@@ -79,7 +79,7 @@ design-files:
   - path: BuildYourOwn/laser-cut/generate_panel_vector.py
     title: Laser-cut panel vector source (generates panel.svg / panel.dxf)
   - path: BuildYourOwn/laser-cut/panel.svg
-    title: Laser-cut panel vector (Rev B, physically test-fit)
+    title: Laser-cut panel vector (Rev C, physical test-fit required)
   - path: BuildYourOwn/laser-cut/panel.dxf
     title: Laser-cut panel vector, DXF export
 
@@ -95,7 +95,7 @@ making-instructions:
 
 manufacturing-files:
   - path: BuildYourOwn/laser-cut/panel.dxf
-    title: Laser-cut panel, DXF (Rev B, physically cut)
+    title: Laser-cut panel, DXF (Rev C, physical test-fit required)
 
 operating-instructions:
   - path: BuildYourOwn/software/README.md

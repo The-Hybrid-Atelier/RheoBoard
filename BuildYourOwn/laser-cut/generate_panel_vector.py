@@ -4,28 +4,23 @@
 SPDX-License-Identifier: CERN-OHL-W-2.0
 Copyright (c) 2026 Charlie Vuong -- see ../../LICENSE
 
-WHAT THIS IS: a vector trace of panel-cut-lines.png (the pre-existing raster design
-reference provided alongside this build), converted to real mm coordinates and proper vector
-primitives (circles, rounded-rectangle slots) instead of a flat image. panel-cut-lines.png's
-1024x706px canvas maps 1:1 onto the panel's 290x200mm bounds (matching aspect ratio, no
-margin), so pixel position converts directly to mm position -- see `retrace()` below for the
-extraction method (connected-component analysis on non-white pixels).
+WHAT THIS IS: source geometry for the laser-cut panel, expressed in real millimeter coordinates
+and exported as SVG, DXF, and proportional PNG references. Rev B originated as a trace of the
+older raster design; current Rev C geometry is maintained directly in the tables below.
 
-GEOMETRY ORIGIN: Columns A–E are positioned exactly where panel-cut-lines.png draws them
-(objective, reproducible via --retrace). Column F (ATtiny1616 seesaw, Rev B) is an explicit
-addition based on the board's Eagle outline (12.7 × 30.48 mm) and free space right of the ESP32,
-not traced from the original raster. Named part attribution for the A–E slots was established by
-comparison with panel-placement-map.png.
+GEOMETRY ORIGIN: Rev B originated as a trace of panel-cut-lines.png. Rev C is an explicit
+component-driven relayout: both pumps are rotated 90 degrees with VALVE2 centered between them;
+the two-pump L298N is left and the valve L298N is right; MPRLS sits directly below VALVE2;
+the seesaw, ESP32, and Button form a rear row; and the former chamber/bulkhead hole is removed.
 
-VERIFICATION: the generated Rev B panel was physically cut and test-fit against the complete
-one-valve build, including the ATtiny1616 seesaw placement, on 2026-07-15.
+VERIFICATION: Rev B was physically cut and test-fit on 2026-07-15. The current Rev C geometry
+is a new arrangement and requires a fresh 1:1 physical test-fit before acrylic is cut.
 
 Usage:
     python3 generate_panel_vector.py            # write panel.svg + panel.dxf from the geometry
                                                    table baked into this script
-    python3 generate_panel_vector.py --rasters  # also refresh panel-cut-lines.png (add column-F
-                                                   slots) and panel-placement-map.png (seesaw
-                                                   footprint + slots + label); requires Pillow
+    python3 generate_panel_vector.py --rasters  # also rebuild both PNG references from source;
+                                                   requires Pillow
     python3 generate_panel_vector.py --retrace  # re-run pixel extraction against
                                                    panel-cut-lines.png and print a fresh
                                                    geometry table for review (requires
@@ -35,86 +30,87 @@ Usage:
 
 import sys
 
-PANEL_W_MM = 290.0
+PANEL_W_MM = 230.0
 PANEL_H_MM = 200.0
 PANEL_CORNER_R_MM = 3.0
 
 # ---- Traced geometry (mm, origin = panel top-left, +x right, +y down) -------
-# All values below came directly out of a --retrace run against panel-cut-lines.png; nothing
-# here is invented or estimated by hand. See module docstring for what is/isn't verified.
+# Most retained Rev B values came from a --retrace run against panel-cut-lines.png. Rev C
+# removals, rotations, and relocated modules are explicit design changes; see the module docstring.
 
 # (x, y, diameter) -- 4 corner mounting holes (feet), ~10mm inset from each edge
 CORNER_HOLES_MM = [
     (10.05, 10.06, 5.95),
-    (279.95, 10.06, 5.95),
+    (PANEL_W_MM - 10.05, 10.06, 5.95),
     (10.05, 189.94, 5.95),
-    (279.95, 189.94, 5.95),
+    (PANEL_W_MM - 10.05, 189.94, 5.95),
 ]
 
-# (x, y, diameter) -- panel-mount bulkhead fitting for the chamber connection (labeled "Ø10" in
-# BOM/README -- that's the fitting's own spec, not necessarily this panel-hole diameter; confirm
-# against the actual fitting's datasheet before cutting)
-CHAMBER_HOLE_MM = (261.96, 60.06, 12.46)
+# Rev C does not mount the chamber or a chamber bulkhead on this panel.
+CHAMBER_HOLE_MM = None
 
-# Zip-tie slots: (x, y, w, h) mm, rounded-rectangle. Grouped into rough columns matching
-# panel-placement-map.png's left-to-right layout -- NOT a verified per-part breakdown, see
-# module docstring.
+# Zip-tie slots: (x, y, w, h) mm, rounded rectangles. Rev C is organized by component:
+# both pumps are rotated 90 degrees with VALVE2 between them; the pump driver is left and the
+# valve driver is right; MPRLS sits below the valve; the remaining modules form a rear row.
 SLOT_COLUMNS_MM = {
-    "column A (x~34-66mm -- pumps + L298N #1, per placement map)": [
-        (34.13, 19.55, 10.48, 5.67), (66.13, 19.55, 10.48, 5.67),
-        (33.98, 52.55, 10.20, 5.38), (65.99, 52.55, 10.20, 5.38),
-        (33.98, 71.53, 10.20, 5.38), (65.99, 71.53, 10.20, 5.38),
-        (33.98, 104.53, 10.76, 5.67), (65.99, 104.53, 10.76, 5.67),
-        (37.10, 123.51, 9.63, 5.67), (62.87, 123.51, 9.63, 5.67),
-        (37.10, 172.52, 9.63, 5.67), (62.87, 172.52, 9.63, 5.67),
+    "pump1": [
+        (30.00, 29.00, 5.60, 10.40), (70.00, 29.00, 5.60, 10.40),
+        (30.00, 61.00, 5.60, 10.40), (70.00, 61.00, 5.60, 10.40),
     ],
-    "column B (x~106-134mm -- valves + L298N #2, per placement map)": [
-        (109.03, 23.65, 9.63, 5.38), (130.98, 23.80, 9.35, 5.67),
-        (106.20, 48.30, 3.96, 5.38), (112.01, 48.30, 3.68, 5.38),
-        (128.15, 48.30, 3.68, 5.38), (133.67, 48.30, 3.96, 5.38),
-        (109.03, 75.78, 9.63, 5.38), (130.98, 75.78, 9.35, 5.38),
-        (109.03, 100.28, 9.63, 5.67), (130.98, 100.28, 9.35, 5.67),
-        (115.97, 110.06, 4.81, 7.65), (124.04, 109.92, 5.10, 7.37),
-        (107.19, 123.37, 9.35, 5.38), (132.82, 123.37, 9.63, 5.38),
-        (107.19, 172.52, 9.35, 5.67), (132.82, 172.52, 9.63, 5.67),
+    "valve2": [
+        (109.00, 32.50, 9.60, 5.40), (131.00, 32.50, 9.60, 5.40),
+        (109.00, 57.50, 9.60, 5.40), (131.00, 57.50, 9.60, 5.40),
     ],
-    "column C (x~46-55mm -- narrow paired slot, same shape as the likely T-connector-node "
-    "pairs at y~48/110/154mm elsewhere on this panel)": [
-        (46.02, 109.92, 4.81, 7.37), (54.66, 110.06, 3.96, 7.65),
+    "pump2": [
+        (170.00, 29.00, 5.60, 10.40), (210.00, 29.00, 5.60, 10.40),
+        (170.00, 61.00, 5.60, 10.40), (210.00, 61.00, 5.60, 10.40),
     ],
-    "column D (x~122-260mm -- MPRLS/BUTTON/ESP32 area, per placement map)": [
-        (122.06, 53.97, 8.50, 5.38), (195.98, 53.97, 8.50, 5.38),
-        (122.06, 65.86, 8.50, 5.38), (195.98, 66.01, 8.50, 5.67),
-        (180.26, 76.91, 5.38, 9.35), (211.69, 76.91, 5.38, 9.35),
-        (227.27, 76.91, 5.38, 9.35), (258.71, 77.05, 5.38, 9.07),
-        (180.26, 91.08, 5.38, 9.35), (211.69, 91.08, 5.38, 9.35),
-        (227.27, 91.22, 5.38, 9.07), (258.71, 91.08, 5.38, 9.35),
-        (188.47, 129.60, 9.35, 5.38), (223.59, 129.60, 9.35, 5.38),
-        (161.00, 154.11, 4.81, 7.37), (169.07, 153.97, 5.10, 7.08),
-        (188.47, 158.36, 9.35, 5.67), (223.31, 158.36, 9.35, 5.67),
+    "l298n1": [
+        (52.00, 95.00, 9.60, 5.60), (78.00, 95.00, 9.60, 5.60),
+        (52.00, 135.00, 9.60, 5.60), (78.00, 135.00, 9.60, 5.60),
     ],
-    "column E (x~249-267mm -- PWR terminal block area, per placement map)": [
-        (248.94, 171.95, 5.66, 8.50), (267.06, 171.95, 5.66, 8.50),
+    "l298n2": [
+        (177.00, 95.00, 9.60, 5.60), (203.00, 95.00, 9.60, 5.60),
+        (177.00, 135.00, 9.60, 5.60), (203.00, 135.00, 9.60, 5.60),
     ],
-    # Rev B addition — NOT traced from panel-cut-lines.png. Adafruit ATtiny1616 seesaw
-    # breakout (PID 5690) is 12.7 × 30.48 mm (Eagle outline). Placed right of ESP32 / above
-    # PWR, long axis horizontal (STEMMA QT on the short ends, facing ESP32 ↔ free edge).
-    # 2 zip-ties over the short sides (4 slots), same pattern as ESP32/MPRLS. Draft only —
-    # still needs a human test-fit against the real board before cutting material.
-    "column F (x~240-264mm -- ATtiny1616 seesaw, Rev B)": [
-        (240.00, 128.00, 9.35, 5.38), (264.00, 128.00, 9.35, 5.38),
-        (240.00, 148.00, 9.35, 5.38), (264.00, 148.00, 9.35, 5.38),
+    "seesaw": [
+        (73.00, 158.00, 9.35, 5.40), (97.00, 158.00, 9.35, 5.40),
+        (73.00, 182.00, 9.35, 5.40), (97.00, 182.00, 9.35, 5.40),
+    ],
+    "mprls": [
+        (104.00, 80.00, 5.40, 9.35), (136.00, 80.00, 5.40, 9.35),
+        (104.00, 100.00, 5.40, 9.35), (136.00, 100.00, 5.40, 9.35),
+    ],
+    "button": [
+        (179.00, 160.00, 5.40, 9.35), (211.00, 160.00, 5.40, 9.35),
+        (179.00, 180.00, 5.40, 9.35), (211.00, 180.00, 5.40, 9.35),
+    ],
+    "esp32": [
+        (122.00, 152.00, 9.35, 5.40), (158.00, 152.00, 9.35, 5.40),
+        (122.00, 188.00, 9.35, 5.40), (158.00, 188.00, 9.35, 5.40),
     ],
 }
 
 # Footprint used by the placement-map overlay (mm). Centered in the column-F slot rectangle.
 SEESAW_FOOTPRINT_MM = {
-    "label": "10 SEESAW",
-    "center": (252.00, 138.00),
-    "size": (30.48, 12.70),  # long × short, board long-axis horizontal
-    "slots": "column F (x~240-264mm -- ATtiny1616 seesaw, Rev B)",
+    "label": "6 SEESAW",
+    "center": (85.00, 170.00),
+    "size": (25.50, 17.80),  # Adafruit PID 5690 physical board outline
+    "slots": "seesaw",
 }
 
+# Physical top-view envelopes used by the placement map. Dimensions are manufacturer nominal
+# values in millimeters; slot spacing adds clearance outside each envelope. L298N modules are
+# intentionally excluded because generic module dimensions vary and the user requested that
+# their existing placeholder footprints remain unchanged.
+PHYSICAL_ENVELOPES_MM = {
+    "pump": (27.20, 58.30),       # Adafruit 4699 / ZR370-02PM tolerance-max body (W × H)
+    "valve": (36.32, 14.80),      # Adafruit 4663 / FA0520E tolerance-max body
+    "seesaw": (25.50, 17.80),     # Adafruit PID 5690
+    "mprls": (25.40, 25.40),      # SparkFun SEN-16476, 1 × 1 inch
+    "button": (25.40, 25.40),     # SparkFun BOB-15932, 1 × 1 inch
+    "esp32": (64.77, 22.86),      # SparkFun WRL-15663, 2.55 × 0.9 inch
+}
 
 def build_svg():
     parts = []
@@ -128,8 +124,9 @@ def build_svg():
     )
     for x, y, d in CORNER_HOLES_MM:
         parts.append(f'<circle cx="{x}" cy="{y}" r="{d/2}" fill="none" stroke="red" stroke-width="0.2"/>')
-    cx, cy, cd = CHAMBER_HOLE_MM
-    parts.append(f'<circle cx="{cx}" cy="{cy}" r="{cd/2}" fill="none" stroke="red" stroke-width="0.2"/>')
+    if CHAMBER_HOLE_MM:
+        cx, cy, cd = CHAMBER_HOLE_MM
+        parts.append(f'<circle cx="{cx}" cy="{cy}" r="{cd/2}" fill="none" stroke="red" stroke-width="0.2"/>')
     for label, slots in SLOT_COLUMNS_MM.items():
         parts.append(f'<g data-column="{label}">')
         for x, y, w, h in slots:
@@ -166,7 +163,8 @@ def build_dxf():
     rounded_rect(PANEL_W_MM / 2, PANEL_H_MM / 2, PANEL_W_MM, PANEL_H_MM, PANEL_CORNER_R_MM)
     for x, y, d in CORNER_HOLES_MM:
         circle(x, y, d)
-    circle(*CHAMBER_HOLE_MM)
+    if CHAMBER_HOLE_MM:
+        circle(*CHAMBER_HOLE_MM)
     for slots in SLOT_COLUMNS_MM.values():
         for x, y, w, h in slots:
             rounded_rect(x, y, w, h, min(w, h) / 2.2)
@@ -215,98 +213,193 @@ def _draw_slot_ellipse(draw, cx, cy, w, h, fill, outline=None, width=1):
 
 
 def update_rasters():
-    """Refresh panel-cut-lines.png and panel-placement-map.png for the Rev B seesaw slots.
+    """Refresh panel-cut-lines.png and panel-placement-map.png for the Rev C layout.
 
-    cut-lines: 1024×706 maps 1:1 onto the 290×200 mm panel — draw column-F slots in red.
-    placement-map: calibrated from known ESP32 / PWR / chamber features; draw footprint box,
-    slots, dashed zip-tie straps, a '10 SEESAW' label, and a matching legend line.
-    Idempotent enough for re-runs only if you restore the PNGs from git first — otherwise
-    re-running stacks a second copy of the overlay on top of the first.
+    Both PNG files are rendered from scratch from the source geometry, so removed features cannot
+    linger and repeated runs are idempotent.
     """
     from PIL import Image, ImageDraw, ImageFont
 
     try:
-        font_sm = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 13)
-        font_tiny = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 11)
+        font_tiny = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 12)
+        font_body = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)
+        font_label = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+        font_bold = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16, index=1)
+        font_title = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 19, index=1)
     except OSError:
-        font_sm = font_tiny = ImageFont.load_default()
+        font_tiny = font_body = font_label = font_bold = font_title = ImageFont.load_default()
 
-    # ---- panel-cut-lines.png (1:1 mm ↔ px via panel bounds) ----------------- #
-    cut = Image.open("panel-cut-lines.png").convert("RGBA")
-    sx_c, sy_c = PANEL_W_MM / cut.width, PANEL_H_MM / cut.height
+    # ---- panel-cut-lines.png ------------------------------------------------ #
+    cut_height = 706
+    cut_width = round(cut_height * PANEL_W_MM / PANEL_H_MM)
+    cut = Image.new("RGB", (cut_width, cut_height), "white")
     draw_c = ImageDraw.Draw(cut)
-    for x, y, w, h in SLOT_COLUMNS_MM[SEESAW_FOOTPRINT_MM["slots"]]:
-        _draw_slot_ellipse(
-            draw_c, x / sx_c, y / sy_c, w / sx_c, h / sy_c, fill=(220, 40, 40, 255)
-        )
-    # Keep as palette PNG (matches prior size regime) but with enough colors for new red
-    cut.convert("RGB").quantize(colors=64, method=getattr(Image, "Quantize", Image).FASTOCTREE).save(
-        "panel-cut-lines.png", optimize=True
-    )
-    print("Updated panel-cut-lines.png (column-F seesaw slots)")
+    sx_c, sy_c = cut.width / PANEL_W_MM, cut.height / PANEL_H_MM
 
-    # ---- panel-placement-map.png (calibrated affine from known features) --- #
-    # Calibration anchors (mm → observed px), from ESP32 / PWR / chamber / corners:
-    #   ESP32 TL slot (188.47, 129.60) → ~(502.4, 356.2)
-    #   scale ≈ 2.48 px/mm; origin ≈ (35.6, 33.1)
-    ox, oy, sxp, syp = 35.6, 33.1, 2.477, 2.493
+    def cut_box(cx, cy, w, h):
+        return [
+            (cx - w / 2) * sx_c,
+            (cy - h / 2) * sy_c,
+            (cx + w / 2) * sx_c,
+            (cy + h / 2) * sy_c,
+        ]
 
-    def mm_to_place(x_mm, y_mm):
-        return ox + x_mm * sxp, oy + y_mm * syp
-
-    place = Image.open("panel-placement-map.png").convert("RGBA")
-    draw_p = ImageDraw.Draw(place, "RGBA")
-
-    cx, cy = SEESAW_FOOTPRINT_MM["center"]
-    bw, bh = SEESAW_FOOTPRINT_MM["size"]
-    # Footprint box — amber to match the wiring-diagram seesaw color family
-    x0, y0 = mm_to_place(cx - bw / 2, cy - bh / 2)
-    x1, y1 = mm_to_place(cx + bw / 2, cy + bh / 2)
-    draw_p.rounded_rectangle(
-        [x0, y0, x1, y1],
-        radius=4,
-        fill=(255, 230, 150, 230),
-        outline=(160, 110, 20, 255),
+    draw_c.rounded_rectangle(
+        [1, 1, cut.width - 2, cut.height - 2],
+        radius=PANEL_CORNER_R_MM * sx_c,
+        outline=(30, 55, 85),
         width=2,
     )
+    for x, y, d in CORNER_HOLES_MM:
+        draw_c.ellipse(cut_box(x, y, d, d), outline=(220, 40, 40), width=2)
+    if CHAMBER_HOLE_MM:
+        x, y, d = CHAMBER_HOLE_MM
+        draw_c.ellipse(cut_box(x, y, d, d), outline=(220, 40, 40), width=2)
+    for slots in SLOT_COLUMNS_MM.values():
+        for x, y, w, h in slots:
+            draw_c.rounded_rectangle(
+                cut_box(x, y, w, h),
+                radius=min(w * sx_c, h * sy_c) / 2.2,
+                outline=(220, 40, 40),
+                width=2,
+            )
+    cut.quantize(colors=32).save("panel-cut-lines.png", optimize=True)
+    print("Updated panel-cut-lines.png (clean Rev C geometry)")
 
-    slot_fill = (220, 40, 40, 255)
-    for x, y, w, h in SLOT_COLUMNS_MM[SEESAW_FOOTPRINT_MM["slots"]]:
+    # ---- panel-placement-map.png ------------------------------------------- #
+    place = Image.new("RGB", (1120, 700), (248, 250, 252))
+    draw_p = ImageDraw.Draw(place)
+    ox, oy, scale = 30.0, 45.0, 3.05
+
+    def mm_to_place(x_mm, y_mm):
+        return ox + x_mm * scale, oy + y_mm * scale
+
+    panel_box = [ox, oy, ox + PANEL_W_MM * scale, oy + PANEL_H_MM * scale]
+    draw_p.rounded_rectangle(
+        panel_box,
+        radius=PANEL_CORNER_R_MM * scale,
+        fill=(255, 255, 255),
+        outline=(35, 55, 80),
+        width=3,
+    )
+    for x, y, d in CORNER_HOLES_MM:
         px, py = mm_to_place(x, y)
-        _draw_slot_ellipse(draw_p, px, py, w * sxp, h * syp, fill=slot_fill)
+        r = d * scale / 2
+        draw_p.ellipse([px - r, py - r, px + r, py + r], outline=(220, 40, 40), width=2)
 
-    # Dashed zip-tie path over each short end (top slot ↔ bottom slot)
-    dash_color = (200, 40, 40, 220)
-    for x_mm in (240.00, 264.00):
-        top = mm_to_place(x_mm, 128.00)
-        bot = mm_to_place(x_mm, 148.00)
-        steps = 8
-        for i in range(0, steps, 2):
-            t0, t1 = i / steps, (i + 1) / steps
-            draw_p.line(
+    components = [
+        ("1", "PUMP1", (50, 45), PHYSICAL_ENVELOPES_MM["pump"], "pump1", (211, 245, 220), (55, 145, 85)),
+        ("2", "VALVE2", (120, 45), PHYSICAL_ENVELOPES_MM["valve"], "valve2", (214, 231, 255), (55, 100, 190)),
+        ("3", "PUMP2", (190, 45), PHYSICAL_ENVELOPES_MM["pump"], "pump2", (211, 245, 220), (55, 145, 85)),
+        ("4", "L298N #1", (65, 115), (42, 30), "l298n1", (255, 239, 190), (170, 105, 25)),
+        ("5", "L298N #2", (190, 115), (42, 30), "l298n2", (255, 239, 190), (170, 105, 25)),
+        ("6", "SEESAW", (85, 170), PHYSICAL_ENVELOPES_MM["seesaw"], "seesaw", (255, 231, 165), (155, 105, 20)),
+        ("7", "MPRLS", (120, 90), PHYSICAL_ENVELOPES_MM["mprls"], "mprls", (235, 220, 255), (110, 55, 165)),
+        ("8", "BUTTON", (195, 170), PHYSICAL_ENVELOPES_MM["button"], "button", (235, 220, 255), (110, 55, 165)),
+        ("9", "ESP32", (140, 170), PHYSICAL_ENVELOPES_MM["esp32"], "esp32", (211, 245, 220), (55, 145, 85)),
+    ]
+
+    def centered_text(center, text, font, fill):
+        bbox = draw_p.textbbox((0, 0), text, font=font)
+        width = bbox[2] - bbox[0]
+        height = bbox[3] - bbox[1]
+        draw_p.text((center[0] - width / 2, center[1] - height / 2), text, font=font, fill=fill)
+
+    for number, label, center_mm, size_mm, group, fill, outline in components:
+        cx, cy = mm_to_place(*center_mm)
+        width, height = size_mm[0] * scale, size_mm[1] * scale
+        draw_p.rounded_rectangle(
+            [cx - width / 2, cy - height / 2, cx + width / 2, cy + height / 2],
+            radius=6,
+            fill=fill,
+            outline=outline,
+            width=2,
+        )
+        centered_text((cx, cy), label, font_label if len(label) < 8 else font_body, outline)
+
+        if number:
+            nx, ny = cx - width / 2 - 11, cy - height / 2 - 8
+            draw_p.ellipse([nx - 9, ny - 9, nx + 9, ny + 9], fill=(20, 30, 45))
+            centered_text((nx, ny - 1), number, font_tiny, "white")
+
+        slots = SLOT_COLUMNS_MM[group]
+        if len(slots) == 4:
+            pairs = (
+                ((0, 1), (2, 3))
+                if group in ("pump1", "pump2", "mprls", "button")
+                else ((0, 2), (1, 3))
+            )
+            for left_index, right_index in pairs:
+                start = mm_to_place(slots[left_index][0], slots[left_index][1])
+                end = mm_to_place(slots[right_index][0], slots[right_index][1])
+                for step in range(0, 8, 2):
+                    t0, t1 = step / 8, (step + 1) / 8
+                    draw_p.line(
+                        [
+                            (start[0] + (end[0] - start[0]) * t0,
+                             start[1] + (end[1] - start[1]) * t0),
+                            (start[0] + (end[0] - start[0]) * t1,
+                             start[1] + (end[1] - start[1]) * t1),
+                        ],
+                        fill=(205, 45, 45),
+                        width=2,
+                    )
+        elif len(slots) == 2:
+            start = mm_to_place(slots[0][0], slots[0][1])
+            end = mm_to_place(slots[1][0], slots[1][1])
+            draw_p.line([start, end], fill=(205, 45, 45), width=2)
+
+        for x, y, w, h in slots:
+            px, py = mm_to_place(x, y)
+            draw_p.rounded_rectangle(
                 [
-                    (top[0] + (bot[0] - top[0]) * t0, top[1] + (bot[1] - top[1]) * t0),
-                    (top[0] + (bot[0] - top[0]) * t1, top[1] + (bot[1] - top[1]) * t1),
+                    px - w * scale / 2,
+                    py - h * scale / 2,
+                    px + w * scale / 2,
+                    py + h * scale / 2,
                 ],
-                fill=dash_color,
+                radius=min(w, h) * scale / 2.2,
+                fill=(255, 240, 240),
+                outline=(220, 40, 40),
                 width=2,
             )
 
-    label = SEESAW_FOOTPRINT_MM["label"]
-    lx, ly = mm_to_place(cx, cy)
-    bbox = draw_p.textbbox((0, 0), label, font=font_sm)
-    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-    draw_p.text((lx - tw / 2, ly - th / 2), label, fill=(80, 50, 0, 255), font=font_sm)
+    legend_x = 760
+    draw_p.text((legend_x, 48), "REV C PLACEMENT", font=font_title, fill=(20, 30, 45))
+    draw_p.text((legend_x, 76), "Top view — front at top", font=font_body, fill=(80, 90, 105))
+    legend_lines = [
+        "1  PUMP1 — rotated 90°",
+        "2  VALVE2 — between both pumps",
+        "3  PUMP2 — rotated 90°",
+        "4  L298N #1 — controls both pumps",
+        "5  L298N #2 — controls VALVE2",
+        "6  SEESAW — rear row",
+        "7  MPRLS — directly below VALVE2",
+        "8  Qwiic Button — beside ESP32",
+        "9  ESP32 — rear row",
+        "",
+        "PHYSICAL ENVELOPES",
+        "Pump: 58.3 × 27.2 mm tolerance-max",
+        "Valve: 36.32 × 14.8 mm tolerance-max",
+        "Seesaw: 25.5 × 17.8 mm",
+        "ESP32: 64.77 × 22.86 mm",
+        "MPRLS / Button: 25.4 × 25.4 mm",
+        "",
+        "No VALVE1 mounting position.",
+        "No chamber or bulkhead hole.",
+        "",
+        "Red outlines are laser-cut slots.",
+        "Red dashes show zip-tie paths.",
+        "Keep L298N heatsinks unobstructed.",
+        "Non-L298N outlines use physical dimensions.",
+        "L298N outlines remain placeholders.",
+        "Placement only; wire per electrical schematic.",
+    ]
+    for index, text in enumerate(legend_lines):
+        draw_p.text((legend_x, 112 + index * 21), text, font=font_body, fill=(35, 45, 60))
 
-    # Legend line — gap between the PWR row (~y 224–238) and the Chamber notes (~y 260).
-    legend_line = "10 SEESAW: 2 ties over short sides (4 slots)"
-    draw_p.rectangle([768, 242, 1005, 258], fill=(251, 252, 253, 255))
-    draw_p.text((772, 244), legend_line, fill=(30, 30, 40, 255), font=font_tiny)
-
-    place.convert("RGB").quantize(colors=256, method=getattr(Image, "Quantize", Image).FASTOCTREE).save(
-        "panel-placement-map.png", optimize=True
-    )
-    print("Updated panel-placement-map.png (seesaw footprint + slots + legend)")
+    place.quantize(colors=256).save("panel-placement-map.png", optimize=True)
+    print("Updated panel-placement-map.png (requested Rev C component order)")
 
 
 if __name__ == "__main__":

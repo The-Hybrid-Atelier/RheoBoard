@@ -23,7 +23,8 @@ Supporting instructions:
 - [Firmware and OSC API](BuildYourOwn/software/)
 
 > **Build status:** Rev B was physically cut, assembled, labeled, and human-verified on
-> 2026-07-15. OSHWA certification has not yet been submitted.
+> 2026-07-15. The current Rev C panel layout requires a new physical test-fit. OSHWA certification
+> has not yet been submitted.
 
 ## Hardware tracks
 

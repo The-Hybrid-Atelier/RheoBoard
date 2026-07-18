@@ -102,12 +102,17 @@ in `../okh-RheoBoard.yml`.
 - [x] Editable design-file sources exist for the wiring diagram
       (`BuildYourOwn/hardware/electronic-wiring/generate_wiring_diagram.py`) and the laser-cut panel
       (`BuildYourOwn/laser-cut/generate_panel_vector.py` → `panel.svg`/`panel.dxf`)
-- [x] Laser-cut vector file test-fit against real physical parts and corrected if needed
+- [x] Rev B laser-cut vector file test-fit against real physical parts and corrected if needed
       (columns A–E originated from the raster trace; the Rev B seesaw slots in column F were an
       explicit addition; the complete panel was physically verified on 2026-07-15)
-- [x] Panel physically cut at least once, confirming the vector file is accurate
-- [x] First physical unit labeled with the version/date from `okh-RheoBoard.yml`, and its build
-      date recorded in `PROGRESS.md`
+- [x] Rev B panel physically cut at least once, confirming that revision's vector file was accurate
+- [x] Rev B physical unit labeled with its version/date and recorded in `PROGRESS.md`
+- [x] Rev C non-L298N placement envelopes matched to manufacturer dimensions (including the
+      user-confirmed Adafruit 4699 / ZR370-02PM pump drawing); generic L298N outlines intentionally
+      remain placeholders pending the full physical test-fit
+- [ ] Rev C laser-cut vector printed/cut at 1:1 and test-fit against all real parts
+- [ ] Rev C panel physically cut, assembled, and labeled with the version/date from
+      `okh-RheoBoard.yml`
 - [ ] Third-party components double-checked as either fully open or clearly marked non-open with
       accessible datasheets (currently: all COTS parts, all datasheets vendored in
       `hardware/references/` — re-confirm nothing changed since)
