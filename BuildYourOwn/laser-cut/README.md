@@ -5,15 +5,30 @@ rheometer components.
 
 License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 
-> **Verified Rev B:** the current `panel.svg`/`.dxf` was physically cut and test-fit against the
-> complete one-valve build, including the ATtiny1616 seesaw placement, on 2026-07-15.
+> **Rev C requires test-fitting:** both pumps are rotated 90° with VALVE2 centered between them.
+> The two-pump L298N is on the left, the valve L298N is on the right, MPRLS is directly below
+> VALVE2, and the seesaw, ESP32, and Button are behind the drivers. PWR, VALVE1, and the former
+> chamber/bulkhead hole are removed. This new arrangement has not yet been physically test-fit.
 
 ## Specifications
 
 - Material: 3 mm acrylic
-- Finished size: 290 × 200 mm
-- Chamber fitting: Ø10 mm panel-mount bulkhead
+- Finished size: 230 × 200 mm
 - Mounting: zip ties through the cut slots; four feet at the corner holes
+
+Physical envelopes used for Rev C placement:
+
+- Pumps: Adafruit 4699 / ZR370-02PM, **58.2 × Ø27.0 mm nominal**; the placement outline uses
+  the tolerance-max 58.3 × 27.2 mm body, rotated 90°
+- VALVE2: Adafruit 4663 / FA0520E, **36.02 × 14.5 mm** top-view envelope
+- ATtiny1616 seesaw: **25.5 × 17.8 mm**
+- ESP32 Thing Plus WRL-15663: **64.77 × 22.86 mm**
+- SparkFun MPRLS and Qwiic Button: **25.4 × 25.4 mm** each
+- L298N modules: retained placeholder outlines because generic module dimensions vary; test-fit
+  the exact boards before cutting
+
+The pump, valve, and MPRLS envelopes do not reserve pneumatic tube bend radius; confirm port and tubing
+clearance during the required 1:1 test-fit.
 
 ## Files
 
@@ -25,7 +40,7 @@ License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 ## Cut the panel
 
 1. Open `panel.svg` or `panel.dxf` in the laser-cutter software.
-2. Confirm the imported panel measures exactly **290 × 200 mm**. Do not scale it.
+2. Confirm the imported panel measures exactly **230 × 200 mm**. Do not scale it.
 3. Print the design at 1:1 scale on paper or make a low-cost cardboard test cut.
 4. Place every real component over the test pattern and verify its slots against
    [`panel-placement-map.png`](panel-placement-map.png).
@@ -40,9 +55,9 @@ acrylic. Record the verified settings after the first successful cut.
 ## After cutting
 
 1. Remove the protective film and clean any sharp or melted edges.
-2. Check the overall dimensions, corner holes, Ø10 mm chamber hole, and every zip-tie slot.
-3. Install the four feet and chamber fitting.
-4. Position components using `panel-placement-map.png`; leave the unused **VALVE1** position empty.
+2. Check the overall dimensions, corner holes, and every zip-tie slot.
+3. Install the four feet.
+4. Position components using `panel-placement-map.png`; Rev C has no VALVE1 or chamber position.
 5. Loosely install the zip ties, confirm cable and tube clearance, then tighten and trim them.
 6. Continue with
    [Step 02 — Connect electronics and tubing](../README.md#step-02-connect-electronics-and-tubing).

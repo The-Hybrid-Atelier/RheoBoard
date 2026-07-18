@@ -15,15 +15,14 @@ License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 | <img src="../images/qwiic-button.jpg" width="100" alt="Qwiic Button"> | SparkFun Qwiic Button, red (BOB-15932) | 1 | https://www.sparkfun.com/sparkfun-qwiic-button.html | [`references/datasheets/Qwiic_Button_Schematic.pdf`](references/datasheets/Qwiic_Button_Schematic.pdf) | I2C `0x6F`; Qwiic |
 | <img src="../images/adafruit-attiny1616-seesaw.jpg" width="100" alt="Adafruit ATtiny1616 Breakout with seesaw"> | Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | 1 | https://www.adafruit.com/product/5690 | [Adafruit seesaw guide](https://learn.adafruit.com/adafruit-attiny817-seesaw) | I2C `0x49`; 3.3 V Qwiic logic; PWM/GPIO output |
 | <img src="../images/l298n-motor-driver.jpg" width="100" alt="L298N module"> | L298N dual H-bridge module | 2 | https://www.amazon.com/s?k=L298N+motor+driver | https://www.st.com/resource/en/datasheet/l298.pdf | #1 drives two pumps; #2 drives one valve |
-| <img src="../images/adafruit-4700-air-pump.jpg" width="100" alt="Adafruit 4700 air pump"> | Air pump / vacuum motor (Adafruit 4700, ZR320-02PM) | 2 | https://www.adafruit.com/product/4700 | [`references/datasheets/ZR320-02PM_4.5V.pdf`](references/datasheets/ZR320-02PM_4.5V.pdf) | ~4.5 V / ~600 mA each |
+| <img src="../images/adafruit-4699-air-pump.jpg" width="100" alt="Adafruit 4699 air pump"> | Air pump / vacuum motor (Adafruit 4699, ZR370-02PM) | 2 | https://www.adafruit.com/product/4699 | [`references/datasheets/ZR370-02PM_4.5V.pdf`](references/datasheets/ZR370-02PM_4.5V.pdf) | ~4.5 V / ~500 mA each; 2.5 LPM; 58.2 × Ø27.0 mm nominal |
 | <img src="../images/adafruit-4663-air-valve.jpg" width="100" alt="Adafruit 4663 air valve"> | 6 V air valve (Adafruit 4663, FA0520E) | 1 | https://www.adafruit.com/product/4663 | [`references/datasheets/4663_C14660_DC_6V.pdf`](references/datasheets/4663_C14660_DC_6V.pdf) | 3-port flip selector |
 | — | DC power adapter 12 V | 1 | — | — | External supply for both L298N motor rails; ≥ 2 A recommended; share GND with ESP32 |
 | — | Silicone tubing 3 mm ID | 1 | https://www.adafruit.com/product/4664 | — | Pneumatic plumbing; see `tube-wiring/README.md` |
 | — | Qwiic cables | 3 | https://www.sparkfun.com/cables.html | — | Four Qwiic boards daisy-chained on one I2C bus |
 | — | micro-USB cable | 1 | — | — | Flash `2P1V_Adafruit.ino`; also powers the ESP32 during upload/bench use |
-| — | Acrylic panel, laser-cut (290 × 200 × 3 mm) | 1 | — | — | See [`../laser-cut/`](../laser-cut/) |
-| — | Zip ties, small (~2.5 mm wide) | ~22 | — | — | Component mounting |
-| — | Ø10 panel-mount bulkhead fitting | 1 | — | — | Chamber/nozzle mount point on the panel; pairs with the 3 mm ID tubing above |
+| — | Acrylic panel, laser-cut (230 × 200 × 3 mm) | 1 | — | — | See [`../laser-cut/`](../laser-cut/) |
+| — | Zip ties, small (~2.5 mm wide) | ~18 | — | — | Component mounting |
 | — | Rubber/plastic feet | 4 | — | — | Panel corner feet |
 
 ## Notes

@@ -14,15 +14,15 @@ equivalent).
 
 | Label | Part | Port usage |
 |---|---|---|
-| PUMP1 | [Adafruit 4700](https://www.adafruit.com/product/4700) ZR320-02PM (vacuum) | **Side port** (inlet) → VALVE2 metal pole; **tubing port** (outlet) → atmosphere |
-| PUMP2 | Adafruit 4700 ZR320-02PM (pressure) | **Tubing port** (outlet) → VALVE2 plastic pole; **side port** (inlet) → atmosphere |
+| PUMP1 | [Adafruit 4699](https://www.adafruit.com/product/4699) ZR370-02PM (vacuum) | **Side port** (inlet) → VALVE2 metal pole; **tubing port** (outlet) → atmosphere |
+| PUMP2 | Adafruit 4699 ZR370-02PM (pressure) | **Tubing port** (outlet) → VALVE2 plastic pole; **side port** (inlet) → atmosphere |
 | VALVE2 | [Adafruit 4663](https://www.adafruit.com/product/4663) FA0520E | Metal pole (OFF) = vacuum path; plastic pole (ON) = pressure path; common → shared line |
 | Sensor | [SparkFun Qwiic MicroPressure](https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html) (MPRLS) | Teed into shared line |
 | Output | Chamber / nozzle | Bottom of shared line — "the line we sense" |
 
-### Pump note (4700)
+### Pump note (4699)
 
-The ZR320-02PM always draws air in through the **side port** and pushes it out the **tubing port**.
+The ZR370-02PM always draws air in through the **side port** and pushes it out the **tubing port**.
 Reversing motor wires does **not** flip flow direction — retract vs extrude is set by **which port
 is plumbed to the valve** and which is open to atmosphere, not by L298N direction wiring.
 

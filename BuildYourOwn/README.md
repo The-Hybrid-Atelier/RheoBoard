@@ -47,12 +47,13 @@ custom PCB work.
 <a href="laser-cut/panel-placement-map.png"><img src="laser-cut/panel-placement-map.png" alt="Laser-cut panel component placement map" width="700"></a>
 
 1. Follow [`laser-cut/README.md`](laser-cut/README.md) to test-fit and cut the panel.
-2. Attach the four corner feet and install the Ø10 bulkhead fitting at **CHAMBER**.
+2. Attach the four corner feet.
 3. Zip-tie each component per
-   [`laser-cut/panel-placement-map.png`](laser-cut/panel-placement-map.png): PUMP1/PUMP2 lying
-   flat, VALVE2 (leave VALVE1 empty), MPRLS + Button next to the ESP32, both L298N boards clear of
-   their heatsinks, ESP32, **ATtiny1616 seesaw** (right of ESP32 / above PWR — label `10 SEESAW`),
-   power terminal block.
+   [`laser-cut/panel-placement-map.png`](laser-cut/panel-placement-map.png): PUMP1 and PUMP2
+   rotated 90° with VALVE2 centered between them; L298N #1 (both pumps) on the left; L298N #2
+   (VALVE2) on the right; MPRLS directly below VALVE2; and **ATtiny1616 seesaw**, ESP32, and
+   Button in the rear row, with the Button beside the ESP32. Rev C has no PWR, VALVE1, or chamber
+   mounting position.
 4. Confirm cable and tube clearance, tighten and trim the ties, then continue to wiring.
 
 ---
