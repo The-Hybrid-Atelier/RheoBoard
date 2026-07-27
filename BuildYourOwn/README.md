@@ -22,7 +22,7 @@ custom PCB work.
 ## Before you start
 
 - Check the [`hardware/README.md`](hardware/README.md) BOM before ordering or substituting parts.
-- **Design files:** [`laser-cut/`](laser-cut/) (platform),
+- **Design files:** [`laser-cut/`](laser-cut/) (platform), [`cad/`](cad/) (sensing tube),
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
 - **Software:** [`software/`](software/)

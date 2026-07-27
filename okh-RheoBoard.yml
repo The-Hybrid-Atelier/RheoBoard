@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-07-17
+date-updated: 2026-07-20
 
 manifest-author:
   name: Charlie Vuong
@@ -82,6 +82,12 @@ design-files:
     title: Laser-cut panel vector (Rev C, physical test-fit required)
   - path: BuildYourOwn/laser-cut/panel.dxf
     title: Laser-cut panel vector, DXF export
+  - path: BuildYourOwn/cad/sensing_tube.scad
+    title: Parametric sensing-tube OpenSCAD source
+  - path: BuildYourOwn/cad/sensing_tube.stl
+    title: Printable sensing-tube mesh (physical fit required)
+  - path: BuildYourOwn/cad/connector_small.stl
+    title: Printable small connector mesh (physical fit required)
 
 schematics:
   - path: BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png
@@ -96,6 +102,10 @@ making-instructions:
 manufacturing-files:
   - path: BuildYourOwn/laser-cut/panel.dxf
     title: Laser-cut panel, DXF (Rev C, physical test-fit required)
+  - path: BuildYourOwn/cad/sensing_tube.stl
+    title: Sensing-tube STL (physical fit required)
+  - path: BuildYourOwn/cad/connector_small.stl
+    title: Small sensing-system connector STL (physical fit required)
 
 operating-instructions:
   - path: BuildYourOwn/software/README.md
