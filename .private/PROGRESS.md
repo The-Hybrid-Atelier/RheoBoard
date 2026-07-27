@@ -8,6 +8,25 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-07-20 (51)
+
+Documented the sensing-system CAD models:
+
+- Added `BuildYourOwn/cad/README.md`, focused on `sensing_tube.stl` and `connector_small.stl`,
+  with their measured mesh envelopes, intended roles, viewing guidance, and test-fit cautions.
+- Linked both STL files directly so GitHub opens its native interactive 3D viewer; removed the
+  static render images because GitHub Markdown cannot embed the viewer inside the README itself.
+- Added the sensing-tube CAD folder to the main DIY guide's design-file links and registered the
+  OpenSCAD/STL files in the Open Know-How manifest.
+
+The model documentation is complete, but connector fit, airflow, and leak tightness still require
+physical test prints with the actual tubing and Value Plastics FTLLB220-6005 fitting.
+
+**Next:** test-print both documented models at 100% scale and report the physical fit before
+marking them verified.
+
+---
+
 ## 2026-07-17 (50)
 
 Rebuilt the DIY laser-cut panel for the user's requested single-valve, front-to-back arrangement:
