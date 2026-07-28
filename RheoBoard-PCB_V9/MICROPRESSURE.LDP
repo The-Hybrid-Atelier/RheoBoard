@@ -1,4 +1,0 @@
-Layer Pairs Export File for PCB: D:\HoangVuong\RheoBoard_Adafruit_V6\RheoBoard_Adafruit_V6\MICROPROCESSOR\MICROPRESSURE.PcbDoc
-LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=micropressure-roundholes-plated.txt|DrillLayers=gtl,gbl
-LayersSetName=Top_Bot_Plated_Slot_Holes|DrillFile=micropressure-slotholes-plated.txt|DrillLayers=gtl,gbl
-LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=micropressure-roundholes-nonplated.txt|DrillLayers=gtl,gbl
