@@ -1,0 +1,16 @@
+\t (00:00:13) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:13)     Journal start - Sun Jul  5 13:47:09 2026
+\t (00:00:13)         Host=THINKPAD User=THINKPAD Pid=25436 CPUs=12
+\t (00:00:13) CmdLine= c:\cadence\spb_22.1\tools\bin\allegro.exe C:\Users\THINKPAD\Downloads\PCB-master\PCB-master\programmable-air-v0.5\master-board plus slave.brd
+\t (00:00:13) 
+   (00:00:13) Loading axlcore.cxt 
+\t (00:00:14) Opening existing design...
+\e (00:00:14) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\e (00:00:14) ERROR(SPMHDB-238): The design is corrupted. It may have been copied from a different architecture using ASCII mode; copy using binary mode.
+\i (00:00:52) fillin confirm
+\t (00:00:52) Starting new design...
+\i (00:00:53) trapsize 1
+\t (00:00:53) Loading NV GPU Plugin
+\i (00:00:53) generaledit 
+\i (00:00:55) exit 
+\t (00:00:56)     Journal end - Sun Jul  5 13:47:52 2026
