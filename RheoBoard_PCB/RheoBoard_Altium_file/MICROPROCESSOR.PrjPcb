@@ -53,81 +53,13 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=COVER.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=5
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=UVGDJWMG
-
-[Document2]
-DocumentPath=POWER.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=6
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=PKFPWWXS
-
-[Document3]
-DocumentPath=MCU.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=7
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=TBURQGUJ
-
-[Document4]
-DocumentPath=PERIPHERAL.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=8
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=CGXCKPBN
-
-[Document5]
 DocumentPath=schematic1.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=4
+AnnotateOrder=-1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -137,7 +69,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HFREPLRF
 
-[Document6]
+[Document2]
 DocumentPath=MPRLS0025PA00001A\SnapEDAsch.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -154,7 +86,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JVHTISAB
 
-[Document7]
+[Document3]
 DocumentPath=PRT-14417\PRT-14417.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -171,7 +103,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XPLXEIAD
 
-[Document8]
+[Document4]
 DocumentPath=MPRLS0025PA00001A\SnapEDApcb.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -188,7 +120,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GMIVLSFD
 
-[Document9]
+[Document5]
 DocumentPath=TCA9534APWR\TCA9534APWR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -205,7 +137,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QYWTRNOZ
 
-[Document10]
+[Document6]
 DocumentPath=TCA9534APWR\SOP65P640X120-16N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -222,7 +154,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XIBCHXPF
 
-[Document11]
+[Document7]
 DocumentPath=LIB_PRESSURE.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -239,7 +171,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GNQEZVNM
 
-[Document12]
+[Document8]
 DocumentPath=..\SOT50P160X60-6N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -256,7 +188,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QUXHSPOG
 
-[Document13]
+[Document9]
 DocumentPath=PRT-14417\SPARKFUN_PRT-14417.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -273,7 +205,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WXCQVAWW
 
-[Document14]
+[Document10]
 DocumentPath=LIB_PRESSURE.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -290,7 +222,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RPLLFRUV
 
-[Document15]
+[Document11]
 DocumentPath=..\MCP9700-E_TO.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -307,7 +239,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document16]
+[Document12]
 DocumentPath=..\MJD122G.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -324,7 +256,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document17]
+[Document13]
 DocumentPath=outjob.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -341,7 +273,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document18]
+[Document14]
 DocumentPath=MICROPROCESSOR.BomDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -358,7 +290,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document19]
+[Document15]
 DocumentPath=project_sim_config.simcfg
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -375,7 +307,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document20]
+[Document16]
 DocumentPath=MICROPROCESSOR.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -392,7 +324,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document21]
+[Document17]
 DocumentPath=MICROPRESSURE.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -409,7 +341,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XFFRCJGI
 
-[Document22]
+[Document18]
 DocumentPath=CAMtastic1.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -426,7 +358,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document23]
+[Document19]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Capacitors_Alu_Dip.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -443,7 +375,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document24]
+[Document20]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Capacitors_Alu_Smd.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -460,7 +392,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document25]
+[Document21]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Capacitors_Semi.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -477,7 +409,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document26]
+[Document22]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Connectors.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -494,7 +426,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document27]
+[Document23]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Copy of KhanhBK_SCH_Library_1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -511,7 +443,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XFOEBOPO
 
-[Document28]
+[Document24]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Diode.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -528,7 +460,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document29]
+[Document25]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Fuse.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -545,7 +477,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document30]
+[Document26]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Herry.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -562,7 +494,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document31]
+[Document27]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Jump_2.0.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -579,7 +511,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document32]
+[Document28]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Jump_2.54.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -596,7 +528,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document33]
+[Document29]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\KF.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -613,7 +545,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document34]
+[Document30]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\KhanhBK_SCH_Library_1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -630,7 +562,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NTHGDAYU
 
-[Document35]
+[Document31]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Led.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -647,7 +579,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document36]
+[Document32]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Led7segs.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -664,7 +596,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document37]
+[Document33]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Library.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -681,7 +613,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document38]
+[Document34]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Module.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -698,7 +630,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document39]
+[Document35]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Resistor.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -715,7 +647,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document40]
+[Document36]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Straps.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -732,7 +664,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document41]
+[Document37]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Switch.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -749,7 +681,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document42]
+[Document38]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Tranformers.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -766,7 +698,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document43]
+[Document39]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_1\Usb.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -783,7 +715,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document44]
+[Document40]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_2\KhanhBK_PCB_Library_2.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -800,7 +732,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document45]
+[Document41]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\LibUsing\Library_2\KhanhBK_SCH_Library_2.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -817,7 +749,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CURTBXSB
 
-[Document46]
+[Document42]
 DocumentPath=E:\Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001\Altium_ Bộ Thư viện Altium Khủng 4Gb\Altium Library.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -834,7 +766,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document47]
+[Document43]
 DocumentPath=SOT50P160X60-6N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -851,7 +783,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document48]
+[Document44]
 DocumentPath=ul_AO3400A\Altium\AO3400A\AO3400A.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -868,7 +800,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document49]
+[Document45]
 DocumentPath=ul_CL10A106MQ8NNNC\Altium\CL10A106MQ8NNNC\CL10A106MQ8NNNC.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -885,7 +817,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RGIGAAAE
 
-[Document50]
+[Document46]
 DocumentPath=ul_AP2112K-3-3TRG1\Altium\AP2112K-3-3TRG1\AP2112K-3P3TRG1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -902,7 +834,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document51]
+[Document47]
 DocumentPath=ul_BLM18KG331WH1D\Altium\BLM18KG331WH1D\BLM18KG331WH1D.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -919,7 +851,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TTQSFAMN
 
-[Document52]
+[Document48]
 DocumentPath=slum869\TPS563203_PSPICE_TRANS\TPS563203_TRANS.lib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -936,7 +868,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document53]
+[Document49]
 DocumentPath=ul_PCA9632DP2-118\Altium\PCA9632DP2,118.LibPkg
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -953,7 +885,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document54]
+[Document50]
 DocumentPath=ul_PCA9632DP2-118\Altium\PCA9632DP2,118.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -970,7 +902,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document55]
+[Document51]
 DocumentPath=ul_PCA9632DP2-118\Altium\PCA9632DP2,118.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -987,8 +919,127 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ADYEBZLJ
 
-[Document56]
+[Document52]
 DocumentPath=MICROPROCESSOR.Annotation
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document53]
+DocumentPath=ul_TPS563203DRLR\Altium\TPS563203DRLR.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=LDHIOWTS
+
+[Document54]
+DocumentPath=ul_BC817-40\Altium\diode-nc_pin.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document55]
+DocumentPath=ul_BC817-40\Altium\Diode_CA~SOT-23.IntLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document56]
+DocumentPath=ul_BC817-40-215\Altium\BC817-40-215\BC817-40,215.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document57]
+DocumentPath=ul_BC817-40\Altium\BC817-40.LibPkg
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document58]
+DocumentPath=ul_BC817-40\Altium\BC817-40.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document59]
+DocumentPath=ul_BC817-40\Altium\BC817-40.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -1279,7 +1330,7 @@ AutoOpenFile=-1
 AutoOpenOutJob=-1
 
 [Generic_SmartPDFSettings]
-ProjectMode=0
+ProjectMode=-1
 ZoomPrecision=50
 AddNetsInformation=-1
 AddNetPins=-1
@@ -1292,7 +1343,7 @@ TemplateFilename=
 TemplateStoreRelative=-1
 PCB_PrintColor=0
 SCH_PrintColor=0
-PrintQuality=-4
+PrintQuality=-3
 SCH_ShowNoErc=-1
 SCH_ShowParameter=-1
 SCH_ShowProbes=-1
