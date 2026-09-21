@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="540" viewBox="0 0 1180 540">
+  <title>Rheo Board block diagram</title>
+
+  <g fill="none" stroke="#4A4A4A" stroke-width="1.5">
+    <!-- 12V to U1 and U2 -->
+    <path d="M176 88 H248 V162 H292"/>
+    <path d="M248 88 V252 H292"/>
+    <!-- U1 4V5 to U3 only; U2 is a separate 6V rail -->
+    <path d="M428 162 H468 V207 H512"/>
+    <!-- I2C to U6 and U4, around U3 -->
+    <path d="M552 372 H648 V207 H660"/>
+    <path d="M552 372 H648 V322 H660"/>
+    <!-- U6 to PUMP1 and PUMP2 -->
+    <path d="M796 207 H814 V118 H854"/>
+    <path d="M814 207 V188 H854"/>
+    <!-- U4 to VALVE1 and VALVE2 -->
+    <path d="M796 322 H814 V372 H854"/>
+    <path d="M814 322 V442 H854"/>
+    <!-- MicroPressure and ESP32 to I2C bus -->
+    <path d="M216 372 H292"/>
+    <path d="M118 427 V400 H248 V372"/>
+  </g>
+  <text x="210" y="78" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">VIN</text>
+  <text x="210" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">VIN</text>
+  <text x="468" y="188" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555555">4V5</text>
+
+  <g id="dcIn">
+    <rect x="20" y="60" width="156" height="56" rx="4" fill="#FFECBD" stroke="#FFC943" stroke-width="1.5"/>
+    <text x="98" y="94" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">12V DC IN</text>
+  </g>
+
+  <g id="rheo">
+    <rect x="260" y="20" width="720" height="500" rx="4" fill="#C2E5FF" stroke="#3DADFF" stroke-width="1.5"/>
+    <text x="620" y="48" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#1E1E1E">Rheo Board</text>
+
+    <g id="u1">
+      <rect x="292" y="134" width="136" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="360" y="168" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">U1 BUCK</text>
+    </g>
+    <g id="u2">
+      <rect x="292" y="224" width="136" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="360" y="258" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">U2 BUCK</text>
+    </g>
+    <g id="u3">
+      <rect x="512" y="179" width="126" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="575" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">U3 LDO</text>
+    </g>
+    <g id="i2c">
+      <rect x="292" y="344" width="260" height="56" rx="28" fill="#E8E8E8" stroke="#666666" stroke-width="1"/>
+      <text x="422" y="378" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">I2C bus</text>
+    </g>
+    <g id="u6">
+      <rect x="660" y="179" width="136" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="728" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">U6 PWM</text>
+    </g>
+    <g id="u4">
+      <rect x="660" y="294" width="136" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="728" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">U4 I/O</text>
+    </g>
+    <g id="pump1">
+      <rect x="854" y="90" width="108" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="908" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">PUMP1</text>
+    </g>
+    <g id="pump2">
+      <rect x="854" y="160" width="108" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="908" y="194" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">PUMP2</text>
+    </g>
+    <g id="valve1">
+      <rect x="854" y="344" width="108" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="908" y="378" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">VALVE1</text>
+    </g>
+    <g id="valve2">
+      <rect x="854" y="414" width="108" height="56" rx="4" fill="#FFFFFF" stroke="#3DADFF" stroke-width="1"/>
+      <text x="908" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">VALVE2</text>
+    </g>
+  </g>
+
+  <g id="mpr">
+    <rect x="20" y="344" width="196" height="56" rx="4" fill="#CDF4D3" stroke="#66D575" stroke-width="1.5"/>
+    <text x="118" y="378" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1E1E1E">Qwiic MicroPressure</text>
+  </g>
+  <g id="esp32">
+    <rect x="20" y="427" width="196" height="56" rx="4" fill="#DCCCFF" stroke="#874FFF" stroke-width="1.5"/>
+    <text x="118" y="461" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1E1E1E">ESP32 Thing Plus</text>
+  </g>
+</svg>
