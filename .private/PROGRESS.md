@@ -8,6 +8,39 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-09-02 (53)
+
+Wrote a Vietnamese PCB V9 design-spec Word doc on the Desktop
+(`THÔNG SỐ KỸ THUẬT MẠCH RHEOBOARD.docx`), modeled on the fan-controller
+example: overview, board functions, I2C host command table, 100×100×1.6 mm
+layout figure, operating/safety notes, and part-quality rules. Scope is
+custom PCB V9 only (2 pumps + 2 valves, 12 V DC). Host is external ESP32
+on Qwiic — not OSC/BLE DIY firmware. U6 is documented as LED PWM only;
+pumps/valves are U4. Not copied into the repo.
+
+**Next:** user review of the Desktop docx (SW1/SW2 function and jack
+center polarity still need a human confirm); move a copy into the repo
+only if they want it versioned.
+
+---
+
+## 2026-09-01 (52)
+
+Added a Figma-ready SVG block diagram of the Rheo Board power/control layout
+(`BuildYourOwn/hardware/electronic-wiring/rheo-board-block-diagram.svg`): 12 V in on
+the left, U1/U2/U3 on the board, a shared I2C bus to the external ESP32 and Qwiic
+MicroPressure, U6 to both pumps, and U4 to both valves.
+
+Checked the V9 POWER schematic: U1 and U2 do **not** both feed U3. U1
+makes **4V5**, fused to **4V5A**, which is U3 VIN/EN; U3 VOUT is **3V3**.
+U2 is a separate **6V** buck from VIN. Removed the incorrect U2–U3 line
+from the block diagram.
+
+**Next:** import the SVG into Figma and adjust placement if needed; this is a
+system block diagram, not a substitute for the wiring schematic.
+
+---
+
 ## 2026-07-20 (51)
 
 Documented the sensing-system CAD models:
