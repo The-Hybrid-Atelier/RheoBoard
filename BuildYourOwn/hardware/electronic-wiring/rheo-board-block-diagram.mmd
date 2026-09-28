@@ -1,0 +1,37 @@
+flowchart LR
+    dcIn["12V DC IN"]
+
+    subgraph rheo ["Rheo Board"]
+        u1["U1 BUCK"]
+        u2["U2 BUCK"]
+        u3["U3 LDO"]
+        i2c(["I2C bus"])
+        u4["U4 I/O"]
+        u6["U6 PWM"]
+        pump1["PUMP1"]
+        pump2["PUMP2"]
+        valve1["VALVE1"]
+        valve2["VALVE2"]
+
+        u1 -->|"4V5"| u3
+        i2c --- u4
+        i2c --- u6
+        u6 --- pump1
+        u6 --- pump2
+        u4 --- valve1
+        u4 --- valve2
+    end
+
+    esp32["ESP32 Thing Plus"]
+    mpr["Qwiic MicroPressure"]
+
+    dcIn -->|"VIN"| u1
+    dcIn -->|"VIN"| u2
+    esp32 --- i2c
+    mpr --- i2c
+
+    style rheo fill:#C2E5FF,stroke:#3DADFF
+    style dcIn fill:#FFECBD,stroke:#FFC943
+    style esp32 fill:#DCCCFF,stroke:#874FFF
+    style mpr fill:#CDF4D3,stroke:#66D575
+    style i2c fill:#E8E8E8,stroke:#666666
