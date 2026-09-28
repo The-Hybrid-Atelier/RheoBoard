@@ -3,6 +3,7 @@
 
 # Author/agent working notes, checklists, and application drafts — never publish
 .private/
+/AGENTS.md
 
 # Microsoft Office temp/lock files (e.g. ~$OSHWA-APPLICATION-DRAFT.docx while a .docx is open)
 ~$*
