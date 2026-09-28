@@ -1,8 +1,8 @@
 # macOS
 .DS_Store
 
-# Local-only unpublished design variants
-.private/laser-cut-qmd/
+# Author/agent working notes, checklists, and application drafts — never publish
+.private/
 
 # Microsoft Office temp/lock files (e.g. ~$OSHWA-APPLICATION-DRAFT.docx while a .docx is open)
 ~$*
