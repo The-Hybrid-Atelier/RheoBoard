@@ -2,7 +2,7 @@
 
 ### A low-cost pneumatic rheometer for RheoMap, RheoData, and SlipAtlas
 
-Maintained by Charlie Vuong (The Hybrid Atelier).
+Maintained by Charlie Vuong (The Hybrid Atelier at UT Arlington).
 
 <img src="BuildYourOwn/images/teaser.jpg" alt="RheoBoard assembled bench prototype" width="480">
 
