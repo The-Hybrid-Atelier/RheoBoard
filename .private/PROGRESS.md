@@ -8,6 +8,38 @@ Newest entries at the top. One entry per session/sitting.
 
 ---
 
+## 2026-09-28 (54)
+
+Filled Mouser product links in `RheoBoard_PCB/BOM/BOM_RheoboardV1.xlsx`,
+column G (`Mouser Link`), for the exact LCSC manufacturer part when that
+part is listed on Mouser and its value/tolerance/current match the sheet.
+First pass linked the JST headers, PJ-082BH, TPS563203DRLR, and
+TL3301NF160QG. A second pass found the Uni-Royal 0603 1% resistors on
+Mouser under the Royalohm name and linked those too (100k, 2.2k, 4.7k,
+100Ω, 10k, 1k, 330Ω, 30k, 270k). A third pass relaxed tolerance and the
+nearest standard value, while keeping package size the same: Yageo
+0.1µF 0603, Knowles 10nF 0603, Vishay 18pF 0603 C0G, Vishay 196k 0603,
+Yageo 135k 0603, and Royalohm 549Ω 0603. The SS34 footprint is SMB, so
+that row links onsemi MBRS340T3G rather than onsemi SS34 (SMC). The LED
+row links Lite-On LTST-C190KRKT, a 0603 (1.6 × 0.8 mm) SMD LED. The
+inductor row links Bourns SRP5030TA-4R7M, the part named on the
+4.7uH_2A footprint. F1 now links Littelfuse 0461002.ER, a 2 A, 10.1 × 3.1 mm fuse, because
+the JDTfuse part is not on Mouser and the footprint is that size. D1 now
+links Diodes Inc B540C-13-F, a 5A 40V Schottky in SMC, because
+JSMSEMI SS54 is not on Mouser and the board footprint is SMC. The four
+CCTC capacitors that Mouser does not sell now link same-size
+parts: Yageo 10µF 25V 0805, Yageo 1nF 50V 0603, Murata 10µF 25V 0603,
+and Samsung 22µF 25V 0805. Added U5, Honeywell
+MPRLS0025PA00001A, with its Mouser link. Added the two pumps (U8, U11)
+as Adafruit ZR370-02PM and the two valves (U9, U10) as Adafruit
+FA0520E. U4 (TCA9534APWR) and U7 (PCA9685) are on the PCB and are not
+in this spreadsheet.
+
+**Next:** user review of the remaining blank rows (CCTC ceramics, JSMSEMI
+SS54, and the 2A fuse), and whether U4 and U7 should be added to the BOM.
+
+---
+
 ## 2026-09-02 (53)
 
 Wrote a Vietnamese PCB V9 design-spec Word doc on the Desktop
