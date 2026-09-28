@@ -10,7 +10,7 @@ RheoBoard is open hardware for pneumatic retraction-extrusion measurements. The 
 two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs
 a REP (retraction-extrusion pulse) and streams the pressure trace.
 
-## Build the DIY version
+## DIY version
 
 Start with the **[step-by-step build guide](BuildYourOwn/README.md)**.
 
@@ -26,7 +26,7 @@ Supporting instructions:
 > 2026-07-15. The current Rev C panel layout requires a new physical test-fit. OSHWA certification
 > has not yet been submitted.
 
-## Hardware tracks
+## Hardware PCB version
 
 1. **DIY** ([`BuildYourOwn/`](BuildYourOwn/)) — the current focus, built from off-the-shelf
    modules on a laser-cut acrylic panel.
