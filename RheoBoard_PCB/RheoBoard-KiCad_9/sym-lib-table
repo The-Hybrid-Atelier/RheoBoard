@@ -1,8 +1,0 @@
-(sym_lib_table
-	(version 7)
-	(lib (name "BC817-40") (type "Altium") (uri "${KIPRJMOD}/BC817-40.SchLib") (options "") (descr ""))
-	(lib (name "diode-nc_pin") (type "Altium") (uri "${KIPRJMOD}/diode-nc_pin.SchLib") (options "") (descr ""))
-	(lib (name "Copy of KhanhBK_SCH_Library_1") (type "Altium") (uri "E:/Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001/Altium_ Bộ Thư viện Altium Khủng 4Gb/LibUsing/Library_1/Copy of KhanhBK_SCH_Library_1.SchLib") (options "") (descr ""))
-	(lib (name "KhanhBK_SCH_Library_1") (type "Altium") (uri "E:/Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001/Altium_ Bộ Thư viện Altium Khủng 4Gb/LibUsing/Library_1/KhanhBK_SCH_Library_1.SchLib") (options "") (descr ""))
-	(lib (name "KhanhBK_SCH_Library_2") (type "Altium") (uri "E:/Altium_ Bộ Thư viện Altium Khủng 4Gb-20250916T200949Z-1-001/Altium_ Bộ Thư viện Altium Khủng 4Gb/LibUsing/Library_2/KhanhBK_SCH_Library_2.SchLib") (options "") (descr ""))
-)
