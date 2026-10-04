@@ -11,3 +11,7 @@ Issues and pull requests are welcome.
 The license notices and texts are in [`LICENSE`](LICENSE).
 
 Maintainer: Charlie Vuong (The Hybrid Atelier at UT Arlington).
+
+## Adding to the wiki
+
+TODO: how to add a wiki page.

@@ -38,32 +38,71 @@ DIY module build. Read [`RheoBoard_PCB/README.md`](RheoBoard_PCB/README.md) befo
 
 ## Documentation
 
+### Getting Started
+
 - [Specifications](docs/specs.md)
+- [Panel layout](docs/panel-layout.md)
 - [Safety](docs/safety.md)
-- [FAQ](docs/faq.md)
-- [Changelog](CHANGELOG.md)
+
+### Background
+
+- [Project goals](docs/project-goals.md)
+- [Part numbers](docs/part-numbers.md)
+- [Versions](CHANGELOG.md)
+
+### Building
+
+- [Build options](docs/build-options.md)
+- [Parts to buy](docs/parts-to-buy.md)
+- [Parts to 3D print](docs/parts-to-3d-print.md)
+- [Parts to laser-cut](docs/parts-to-laser-cut.md)
+- [Parts to machine](docs/parts-to-machine.md)
+- [Assembly tools](docs/assembly-tools.md)
+- [Assembly instructions](BuildYourOwn/README.md)
+- [Wiring](docs/wiring.md)
+- [Firmware](docs/firmware.md)
+
+### Using
+
+- [Connecting](docs/connecting.md)
+- [Power-on checks](docs/power-on-checks.md)
+- [Calibration and measurement](docs/calibration-and-measurement.md)
+
+### Maintenance
+
+- [Maintenance](docs/maintenance.md)
+
+### Extending
+
+- [Mods](docs/mods.md)
+- [Guidelines](docs/guidelines.md)
+
+### Troubleshooting
+
+- [Troubleshooting](docs/troubleshooting.md)
+
+### Contributing
+
 - [Contributing](CONTRIBUTING.md)
 
-Pages still to be written:
+### Acknowledgements
+
+- [Acknowledgements](docs/acknowledgements.md)
+
+### FAQ
+
+- [FAQ](docs/faq.md)
+
+### Pages still to be written
 
 - [Assembly packets](docs/assembly-packets.md)
 - [Tools](docs/tools.md)
-- [Mods](docs/mods.md)
-- [Troubleshooting](docs/troubleshooting.md)
 - [Certification](docs/certification.md)
 - [Logo](docs/logo.md)
-- [Acknowledgements](docs/acknowledgements.md)
 - [Kit vendors](docs/kit-vendors.md)
 - [Community](docs/community.md)
 - [Citation](docs/citation.md)
 - [Assembly video](docs/assembly-video.md)
-
-Linked statements already in the repository:
-
-- [PCB has no firmware](RheoBoard_PCB/README.md)
-- [Connector meshes without an editable source](BuildYourOwn/cad/connector/README.md)
-- [Enclosure STEP without an editable source](BuildYourOwn/cad/encloser/README.md)
-- [Rev C panel has not been test-fit](BuildYourOwn/laser-cut/README.md)
 
 ## Repository layout
 
@@ -76,7 +115,7 @@ BuildYourOwn/
 ├── software/              ESP32 firmware and API (DIY build)
 └── images/                Project and component photos
 
-docs/                      Specifications, safety, FAQ, and pages still to be written
+docs/                      Documentation pages listed under Documentation above
 RheoBoard_PCB/             KiCad board, fabrication files, and board notes
 CHANGELOG.md               Public version notes
 CONTRIBUTING.md            How to contribute
