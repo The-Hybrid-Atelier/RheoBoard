@@ -10,9 +10,12 @@ RheoBoard is open hardware for pneumatic retraction-extrusion measurements. The 
 two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs
 a REP (retraction-extrusion pulse) and streams the pressure trace.
 
-## DIY version
+## Start here
 
-Start with the **[step-by-step build guide](BuildYourOwn/README.md)**.
+1. [Step-by-step DIY build guide](BuildYourOwn/README.md)
+2. [Custom PCB](RheoBoard_PCB/README.md)
+
+## DIY version
 
 Supporting instructions:
 
@@ -21,32 +24,62 @@ Supporting instructions:
 - [Electronic wiring](BuildYourOwn/hardware/electronic-wiring/)
 - [Tube wiring](BuildYourOwn/hardware/tube-wiring/)
 - [Firmware and OSC API](BuildYourOwn/software/)
+- [Sensing-tube CAD](BuildYourOwn/cad/connector/)
 
-> **Build status:** Rev B was physically cut, assembled, labeled, and human-verified on
-> 2026-07-15. The current Rev C panel layout requires a new physical test-fit. OSHWA certification
-> has not yet been submitted.
+> **Build status:** The current panel files are Rev C
+> ([laser-cut panel](BuildYourOwn/laser-cut/README.md)). Physical test-fit is still required.
+> OSHWA certification has not yet been submitted.
 
-## Hardware PCB version
+## Custom PCB
 
-1. **DIY** ([`BuildYourOwn/`](BuildYourOwn/)) — the current focus, built from off-the-shelf
-   modules on a laser-cut acrylic panel.
-2. **Custom PCB** ([`RheoBoard-PCB_V9/`](RheoBoard-PCB_V9/)) — the Altium-designed board.
+[`RheoBoard_PCB/`](RheoBoard_PCB/) is a separate KiCad 10 board: schematic, layout, libraries,
+Gerbers, assembly BOM, and pick-and-place. The firmware in `BuildYourOwn/software/` drives the
+DIY module build. Read [`RheoBoard_PCB/README.md`](RheoBoard_PCB/README.md) before ordering boards.
+
+## Documentation
+
+- [Specifications](docs/specs.md)
+- [Safety](docs/safety.md)
+- [FAQ](docs/faq.md)
+- [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md)
+
+Pages still to be written:
+
+- [Assembly packets](docs/assembly-packets.md)
+- [Tools](docs/tools.md)
+- [Mods](docs/mods.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [Certification](docs/certification.md)
+- [Logo](docs/logo.md)
+- [Acknowledgements](docs/acknowledgements.md)
+- [Kit vendors](docs/kit-vendors.md)
+- [Community](docs/community.md)
+- [Citation](docs/citation.md)
+- [Assembly video](docs/assembly-video.md)
+
+Linked statements already in the repository:
+
+- [PCB has no firmware](RheoBoard_PCB/README.md)
+- [Connector meshes without an editable source](BuildYourOwn/cad/connector/README.md)
+- [Enclosure STEP without an editable source](BuildYourOwn/cad/encloser/README.md)
+- [Rev C panel has not been test-fit](BuildYourOwn/laser-cut/README.md)
 
 ## Repository layout
 
 ```text
 BuildYourOwn/
 ├── README.md              Step-by-step DIY build guide
-├── hardware/
-│   ├── README.md          Bill of materials
-│   ├── electronic-wiring/ Electronic schematic and source
-│   ├── tube-wiring/       Pneumatic tube diagram and instructions
-│   └── references/        Datasheets
+├── hardware/              BOM, wiring, tube diagram, datasheets
 ├── laser-cut/             Panel vectors and cutting instructions
-├── software/              ESP32 firmware and API
+├── cad/                   Sensing-tube CAD; enclosure STEP exports
+├── software/              ESP32 firmware and API (DIY build)
 └── images/                Project and component photos
 
-RheoBoard-PCB_V9/          Custom PCB source files
+docs/                      Specifications, safety, FAQ, and pages still to be written
+RheoBoard_PCB/             KiCad board, fabrication files, and board notes
+CHANGELOG.md               Public version notes
+CONTRIBUTING.md            How to contribute
 okh-RheoBoard.yml          Open Know-How metadata
 LICENSE                    Project license notices and texts
 ```

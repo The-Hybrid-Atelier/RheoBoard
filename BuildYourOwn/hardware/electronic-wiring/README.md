@@ -36,9 +36,8 @@ Pin map matches `PneumaticSystem.h` in firmware: `SS_PUMP1_EN=0`, `SS_PUMP2_EN=1
 `SS_VALVE2_EN=5`. `SS_VALVE1_EN=4` is reserved in firmware but physically **NC** in this
 single-valve build (all are seesaw pins, not native ESP32 GPIO).
 
-**Power-up verification:** the Rev B build was tested on 2026-07-15 with no unexpected L298N,
-pump, or valve movement during startup. The earlier direct-GPIO build's 10 kΩ pull-down resistors
-are not used with the seesaw-controlled signal path.
+The earlier direct-GPIO build's 10 kΩ pull-down resistors are not used with the seesaw-controlled
+signal path.
 
 ## Conventions
 

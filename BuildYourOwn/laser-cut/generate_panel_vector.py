@@ -5,16 +5,16 @@ SPDX-License-Identifier: CERN-OHL-W-2.0
 Copyright (c) 2026 Charlie Vuong -- see ../../LICENSE
 
 WHAT THIS IS: source geometry for the laser-cut panel, expressed in real millimeter coordinates
-and exported as SVG, DXF, and proportional PNG references. Rev B originated as a trace of the
-older raster design; current Rev C geometry is maintained directly in the tables below.
+and exported as SVG, DXF, and proportional PNG references. Current Rev C geometry is maintained
+directly in the tables below.
 
-GEOMETRY ORIGIN: Rev B originated as a trace of panel-cut-lines.png. Rev C is an explicit
+GEOMETRY ORIGIN: The earlier geometry was a trace of panel-cut-lines.png. Rev C is an explicit
 component-driven relayout: both pumps are rotated 90 degrees with VALVE2 centered between them;
 the two-pump L298N is left and the valve L298N is right; MPRLS sits directly below VALVE2;
 the seesaw, ESP32, and Button form a rear row; and the former chamber/bulkhead hole is removed.
 
-VERIFICATION: Rev B was physically cut and test-fit on 2026-07-15. The current Rev C geometry
-is a new arrangement and requires a fresh 1:1 physical test-fit before acrylic is cut.
+VERIFICATION: The current Rev C geometry is a new arrangement and requires a fresh 1:1 physical
+test-fit before acrylic is cut.
 
 Usage:
     python3 generate_panel_vector.py            # write panel.svg + panel.dxf from the geometry
@@ -35,7 +35,7 @@ PANEL_H_MM = 200.0
 PANEL_CORNER_R_MM = 3.0
 
 # ---- Traced geometry (mm, origin = panel top-left, +x right, +y down) -------
-# Most retained Rev B values came from a --retrace run against panel-cut-lines.png. Rev C
+# Most retained values came from a --retrace run against panel-cut-lines.png. Rev C
 # removals, rotations, and relocated modules are explicit design changes; see the module docstring.
 
 # (x, y, diameter) -- 4 corner mounting holes (feet), ~10mm inset from each edge

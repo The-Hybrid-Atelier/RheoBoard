@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-07-20
+date-updated: 2026-10-04
 
 manifest-author:
   name: Charlie Vuong
@@ -21,8 +21,8 @@ description: >
   acrylic panel and driven by an ESP32 microcontroller through two L298N H-bridge drivers
   (controlled via an Adafruit ATtiny1616 seesaw breakout on the Qwiic/I2C bus), run a
   retract-extrude pulse (REP) on command while a Qwiic MicroPressure sensor streams the
-  pressure trace over BLE. Open hardware supporting the RheoMap, RheoData, and SlipAtlas
-  projects.
+  pressure trace over BLE. A separate KiCad PCB prototype lives under RheoBoard_PCB and is not
+  this Rev C DIY build. Open hardware supporting the RheoMap, RheoData, and SlipAtlas projects.
 intended-use: >
   Bench research and teaching instrument for characterizing the pneumatic pressure response of
   soft/viscous samples. Built and operated by makers, students, and researchers comfortable with
@@ -48,8 +48,9 @@ contact:
 
 version: Rev C
 development-stage: prototype
-# Rev B was physically built and verified on 2026-07-15. The current Rev C panel files relocate
-# parts and have not yet been physically test-fit, so this manifest version is not marked made.
+# version "Rev C" is the DIY laser-cut panel, not the KiCad board.
+# The current Rev C panel files relocate parts and have not yet been physically test-fit,
+# so this manifest version is not marked made.
 made: false
 made-independently: false
 
@@ -82,12 +83,18 @@ design-files:
     title: Laser-cut panel vector (Rev C, physical test-fit required)
   - path: BuildYourOwn/laser-cut/panel.dxf
     title: Laser-cut panel vector, DXF export
-  - path: BuildYourOwn/cad/sensing_tube.scad
+  - path: BuildYourOwn/cad/connector/sensing_tube.scad
     title: Parametric sensing-tube OpenSCAD source
-  - path: BuildYourOwn/cad/sensing_tube.stl
-    title: Printable sensing-tube mesh (physical fit required)
-  - path: BuildYourOwn/cad/connector_small.stl
-    title: Printable small connector mesh (physical fit required)
+  - path: BuildYourOwn/cad/connector/sensing_tube.stl
+    title: Printable sensing-tube mesh exported from sensing_tube.scad (physical fit required)
+  - path: BuildYourOwn/cad/connector/connector_small.stl
+    title: Small connector mesh export; editable source not yet published (physical fit required)
+  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/1.kicad_pro
+    title: KiCad 10 project for the custom PCB prototype
+  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/1.kicad_sch
+    title: KiCad root schematic for the custom PCB
+  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/1.kicad_pcb
+    title: KiCad board layout for the custom PCB
 
 schematics:
   - path: BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png
@@ -97,15 +104,25 @@ schematics:
 
 making-instructions:
   - path: BuildYourOwn/README.md
-    title: Concise five-step build guide
+    title: Concise five-step DIY build guide
+  - path: RheoBoard_PCB/README.md
+    title: How to open the KiCad board and where its fabrication files are
 
 manufacturing-files:
   - path: BuildYourOwn/laser-cut/panel.dxf
     title: Laser-cut panel, DXF (Rev C, physical test-fit required)
-  - path: BuildYourOwn/cad/sensing_tube.stl
-    title: Sensing-tube STL (physical fit required)
-  - path: BuildYourOwn/cad/connector_small.stl
-    title: Small sensing-system connector STL (physical fit required)
+  - path: BuildYourOwn/cad/connector/sensing_tube.stl
+    title: Sensing-tube STL exported from OpenSCAD (physical fit required)
+  - path: BuildYourOwn/cad/connector/connector_small.stl
+    title: Small connector STL; editable source not yet published (physical fit required)
+  - path: BuildYourOwn/cad/encloser/Concept_v2.STEP
+    title: Enclosure concept STEP export; editable CAD source not yet published; not the Rev C panel
+  - path: RheoBoard_PCB/RheoBoard_v1/Gerber/1-job.gbrjob
+    title: PCB fabrication job (Gerbers in this folder; drills in ../Drill)
+  - path: RheoBoard_PCB/BOM/BOM_RheoboardV1_JLCSMT.xlsx
+    title: PCB assembly BOM
+  - path: RheoBoard_PCB/RheoBoard_v1/CPL/CPL.csv
+    title: PCB pick-and-place
 
 operating-instructions:
   - path: BuildYourOwn/software/README.md
@@ -114,3 +131,12 @@ operating-instructions:
 software:
   - path: BuildYourOwn/software/2P1V_Adafruit
     title: ESP32 rheometer firmware (Arduino/C++)
+
+# Real documentation pages. TODO-only pages are not listed.
+documentation:
+  - path: docs/specs.md
+    title: Specifications from the DIY bill of materials, build guide, laser-cut notes, and firmware reference
+  - path: docs/safety.md
+    title: Safety notes from the health-safety notice and the build guide
+  - path: docs/faq.md
+    title: FAQ answers from the build guide

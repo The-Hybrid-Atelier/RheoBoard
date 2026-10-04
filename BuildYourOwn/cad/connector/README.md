@@ -3,7 +3,7 @@
 This folder contains printable tube and connector models for the rheometer's pneumatic sensing
 system. Open either STL link on GitHub to inspect the model in its interactive 3D viewer.
 
-License: hardware CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
+License: hardware CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
 ## Sensing tube
 
@@ -24,6 +24,7 @@ pneumatic system.
 
 [`connector_small.stl`](connector_small.stl) is the compact threaded-to-barbed connector used in
 the sensing tube assembly. Its mesh envelope is approximately **6.35 × 7.33 × 15.54 mm**.
+This file is a mesh export. An editable source for it is not in this folder yet.
 
 ## Viewing and printing
 
@@ -36,6 +37,14 @@ the sensing tube assembly. Its mesh envelope is approximately **6.35 × 7.33 × 
 - Do not treat a printed part as pressure-rated, food-safe, or medical-grade without independent
   material and process validation.
 
-The other STL files in this folder are alternate or intermediate variants. Use the two models
-documented above for the current sensing-system assembly unless the build instructions specify
-otherwise.
+## Meshes without an editable source
+
+`sensing_tube.scad` is the preferred format for changing the sensing tube. These files are mesh
+exports only. Treat them as supplementary until a parametric source is added:
+
+- [`connector_small.stl`](connector_small.stl) — current small connector
+- [`connector_big.stl`](connector_big.stl) — alternate larger connector
+- [`sensing_tube_open.stl`](sensing_tube_open.stl) — alternate open tube
+
+Use [`sensing_tube.stl`](sensing_tube.stl) and [`connector_small.stl`](connector_small.stl) for the
+current sensing-system assembly unless the build instructions specify otherwise.
