@@ -29,7 +29,6 @@ Rev C placement, from the laser-cut panel notes:
 - Both pumps are rotated 90° with VALVE2 centered between them.
 - The two-pump L298N is on the left, the valve L298N is on the right, MPRLS is directly below VALVE2, and the seesaw, ESP32, and Button are behind the drivers.
 - PWR, VALVE1, and the former chamber/bulkhead hole are removed.
-- This new arrangement has not yet been physically test-fit.
 
 The build guide places L298N #1 (both pumps) on the left, L298N #2 (VALVE2) on the right, and the Button beside the ESP32. It states that Rev C has no PWR, VALVE1, or chamber mounting position.
 

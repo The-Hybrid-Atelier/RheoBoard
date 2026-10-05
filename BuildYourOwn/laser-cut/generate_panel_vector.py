@@ -13,9 +13,6 @@ component-driven relayout: both pumps are rotated 90 degrees with VALVE2 centere
 the two-pump L298N is left and the valve L298N is right; MPRLS sits directly below VALVE2;
 the seesaw, ESP32, and Button form a rear row; and the former chamber/bulkhead hole is removed.
 
-VERIFICATION: The current Rev C geometry is a new arrangement and requires a fresh 1:1 physical
-test-fit before acrylic is cut.
-
 Usage:
     python3 generate_panel_vector.py            # write panel.svg + panel.dxf from the geometry
                                                    table baked into this script

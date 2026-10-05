@@ -15,7 +15,7 @@ a REP (retraction-extrusion pulse) and streams the pressure trace.
 
 The firmware in `BuildYourOwn/software/` drives the DIY module build.
 
-The current panel files are Rev C. Physical test-fit is still required.
+A future enclosure concept — STEP exports and photos — is in [`BuildYourOwn/cad/encloser/`](BuildYourOwn/cad/encloser/); the editable source and print files are not in the repo yet.
 
 The detailed guide is the [RheoBoard wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki).
 

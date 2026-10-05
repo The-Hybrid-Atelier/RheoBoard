@@ -5,10 +5,10 @@ rheometer components.
 
 License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 
-> **Rev C requires test-fitting:** both pumps are rotated 90° with VALVE2 centered between them.
-> The two-pump L298N is on the left, the valve L298N is on the right, MPRLS is directly below
-> VALVE2, and the seesaw, ESP32, and Button are behind the drivers. PWR, VALVE1, and the former
-> chamber/bulkhead hole are removed. This new arrangement has not yet been physically test-fit.
+Rev C placement: both pumps are rotated 90° with VALVE2 centered between them.
+The two-pump L298N is on the left, the valve L298N is on the right, MPRLS is directly below
+VALVE2, and the seesaw, ESP32, and Button are behind the drivers. PWR, VALVE1, and the former
+chamber/bulkhead hole are removed.
 
 ## Specifications
 
@@ -27,8 +27,8 @@ Physical envelopes used for Rev C placement:
 - L298N modules: retained placeholder outlines because generic module dimensions vary; test-fit
   the exact boards before cutting
 
-The pump, valve, and MPRLS envelopes do not reserve pneumatic tube bend radius; confirm port and tubing
-clearance during the required 1:1 test-fit.
+The pump, valve, and MPRLS envelopes do not reserve pneumatic tube bend radius. Confirm port and tubing
+clearance when you place parts on the paper pattern.
 
 ## Files
 

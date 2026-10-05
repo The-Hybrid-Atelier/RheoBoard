@@ -11,3 +11,5 @@ From that README: `sensing_tube.scad` is the preferred format for changing the s
 - `sensing_tube_open.stl` — alternate open tube
 
 From that README: `connector_small.stl` is a mesh export. An editable source for it is not in `BuildYourOwn/cad/connector/` yet.
+
+Enclosure files are in [`BuildYourOwn/cad/encloser/`](../BuildYourOwn/cad/encloser/). `Concept_v2.STEP` and the STEP files in `part/` are exports of an enclosure concept. Photos are `encloser_pic1.jpg`, `encloser_pic2.jpg`, and `encloser_pic3.jpg`. The editable CAD project is not in the repo. There is no STL or slicer file, so these are not a print job yet. The current DIY build remains the laser-cut panel in [`BuildYourOwn/laser-cut/`](../BuildYourOwn/laser-cut/).
