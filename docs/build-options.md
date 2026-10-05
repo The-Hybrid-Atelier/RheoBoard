@@ -2,7 +2,7 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-Claims below are already in [`README.md`](../README.md) and [`RheoBoard_PCB/README.md`](../RheoBoard_PCB/README.md). The DIY build comes first. The custom PCB comes second.
+The DIY build comes first and the custom PCB comes second, matching [`README.md`](../README.md). Board details are in [`RheoBoard_PCB/README.md`](../RheoBoard_PCB/README.md).
 
 ## DIY
 

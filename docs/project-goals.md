@@ -6,8 +6,6 @@ Sentences below are already in [`README.md`](../README.md) or in the `intended-u
 
 From `README.md`:
 
-A low-cost pneumatic rheometer for RheoMap, RheoData, and SlipAtlas.
-
 RheoBoard is open hardware for pneumatic retraction-extrusion measurements. The DIY version uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 
 From `okh-RheoBoard.yml` `intended-use`:

@@ -10,7 +10,7 @@ Issues and pull requests are welcome.
 
 The license notices and texts are in [`LICENSE`](LICENSE).
 
-Maintainer: Charlie Vuong (The Hybrid Atelier at UT Arlington).
+Maintainer: [Charlie Vuong](https://charlie-vuong.com) (The Hybrid Atelier at UT Arlington).
 
 ## Adding to the wiki
 
