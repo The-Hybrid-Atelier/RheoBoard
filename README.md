@@ -31,8 +31,12 @@ Third-party parts, photos, datasheets, and libraries remain under their original
 are listed in [`BuildYourOwn/images/README.md`](BuildYourOwn/images/README.md) and
 [`BuildYourOwn/hardware/references/README.md`](BuildYourOwn/hardware/references/README.md).
 
-RheoBoard is not yet OSHWA-certified. Machine-readable project metadata and the current version
-are in [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
+<a href="https://certification.oshwa.org/us002865.html"><img src="docs/images/oshwa-certification-mark-US002865-wide.svg" alt="OSHW certification mark US002865" height="48"></a>
+
+RheoBoard is certified open source hardware by the Open Source Hardware Association, UID
+[US002865](https://certification.oshwa.org/us002865.html) (certified 2026-10-08). See
+[`docs/certification.md`](docs/certification.md). Machine-readable project metadata and the current
+version are in [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 
 If you build or distribute a derived unit, do not imply that it is manufactured, sold, warranted,
 or endorsed by the original designer.

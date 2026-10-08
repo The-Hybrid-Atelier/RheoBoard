@@ -24,15 +24,15 @@ From the laser-cut panel notes:
 
 The bill of materials lists the same panel as acrylic, laser-cut, 230 × 200 × 3 mm, with about 18 small zip ties (~2.5 mm wide) and 4 rubber/plastic feet.
 
-Rev C placement, from the laser-cut panel notes:
+Version 1 placement, from the laser-cut panel notes:
 
 - Both pumps are rotated 90° with VALVE2 centered between them.
 - The two-pump L298N is on the left, the valve L298N is on the right, MPRLS is directly below VALVE2, and the seesaw, ESP32, and Button are behind the drivers.
 - PWR, VALVE1, and the former chamber/bulkhead hole are removed.
 
-The build guide places L298N #1 (both pumps) on the left, L298N #2 (VALVE2) on the right, and the Button beside the ESP32. It states that Rev C has no PWR, VALVE1, or chamber mounting position.
+The build guide places L298N #1 (both pumps) on the left, L298N #2 (VALVE2) on the right, and the Button beside the ESP32. It states that version 1 has no PWR, VALVE1, or chamber mounting position.
 
-Physical envelopes used for Rev C placement, from the laser-cut panel notes:
+Physical envelopes used for version 1 placement, from the laser-cut panel notes:
 
 - Pumps: Adafruit 4699 / ZR370-02PM, **58.2 × Ø27.0 mm nominal**; the placement outline uses the tolerance-max 58.3 × 27.2 mm body, rotated 90°
 - VALVE2: Adafruit 4663 / FA0520E, **36.02 × 14.5 mm** top-view envelope

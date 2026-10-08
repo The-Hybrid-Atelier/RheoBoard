@@ -5,10 +5,10 @@ SPDX-License-Identifier: CERN-OHL-W-2.0
 Copyright (c) 2026 Charlie Vuong -- see ../../LICENSE
 
 WHAT THIS IS: source geometry for the laser-cut panel, expressed in real millimeter coordinates
-and exported as SVG, DXF, and proportional PNG references. Current Rev C geometry is maintained
+and exported as SVG, DXF, and proportional PNG references. Current version 1 geometry is maintained
 directly in the tables below.
 
-GEOMETRY ORIGIN: The earlier geometry was a trace of panel-cut-lines.png. Rev C is an explicit
+GEOMETRY ORIGIN: The earlier geometry was a trace of panel-cut-lines.png. Version 1 is an explicit
 component-driven relayout: both pumps are rotated 90 degrees with VALVE2 centered between them;
 the two-pump L298N is left and the valve L298N is right; MPRLS sits directly below VALVE2;
 the seesaw, ESP32, and Button form a rear row; and the former chamber/bulkhead hole is removed.
@@ -32,7 +32,7 @@ PANEL_H_MM = 200.0
 PANEL_CORNER_R_MM = 3.0
 
 # ---- Traced geometry (mm, origin = panel top-left, +x right, +y down) -------
-# Most retained values came from a --retrace run against panel-cut-lines.png. Rev C
+# Most retained values came from a --retrace run against panel-cut-lines.png. Version 1
 # removals, rotations, and relocated modules are explicit design changes; see the module docstring.
 
 # (x, y, diameter) -- 4 corner mounting holes (feet), ~10mm inset from each edge
@@ -43,10 +43,10 @@ CORNER_HOLES_MM = [
     (PANEL_W_MM - 10.05, 189.94, 5.95),
 ]
 
-# Rev C does not mount the chamber or a chamber bulkhead on this panel.
+# Version 1 does not mount the chamber or a chamber bulkhead on this panel.
 CHAMBER_HOLE_MM = None
 
-# Zip-tie slots: (x, y, w, h) mm, rounded rectangles. Rev C is organized by component:
+# Zip-tie slots: (x, y, w, h) mm, rounded rectangles. Version 1 is organized by component:
 # both pumps are rotated 90 degrees with VALVE2 between them; the pump driver is left and the
 # valve driver is right; MPRLS sits below the valve; the remaining modules form a rear row.
 SLOT_COLUMNS_MM = {
@@ -210,7 +210,7 @@ def _draw_slot_ellipse(draw, cx, cy, w, h, fill, outline=None, width=1):
 
 
 def update_rasters():
-    """Refresh panel-cut-lines.png and panel-placement-map.png for the Rev C layout.
+    """Refresh panel-cut-lines.png and panel-placement-map.png for the version 1 layout.
 
     Both PNG files are rendered from scratch from the source geometry, so removed features cannot
     linger and repeated runs are idempotent.
@@ -261,7 +261,7 @@ def update_rasters():
                 width=2,
             )
     cut.quantize(colors=32).save("panel-cut-lines.png", optimize=True)
-    print("Updated panel-cut-lines.png (clean Rev C geometry)")
+    print("Updated panel-cut-lines.png (clean version 1 geometry)")
 
     # ---- panel-placement-map.png ------------------------------------------- #
     place = Image.new("RGB", (1120, 700), (248, 250, 252))
@@ -362,7 +362,7 @@ def update_rasters():
             )
 
     legend_x = 760
-    draw_p.text((legend_x, 48), "REV C PLACEMENT", font=font_title, fill=(20, 30, 45))
+    draw_p.text((legend_x, 48), "VERSION 1 PLACEMENT", font=font_title, fill=(20, 30, 45))
     draw_p.text((legend_x, 76), "Top view — front at top", font=font_body, fill=(80, 90, 105))
     legend_lines = [
         "1  PUMP1 — rotated 90°",
@@ -396,7 +396,7 @@ def update_rasters():
         draw_p.text((legend_x, 112 + index * 21), text, font=font_body, fill=(35, 45, 60))
 
     place.quantize(colors=256).save("panel-placement-map.png", optimize=True)
-    print("Updated panel-placement-map.png (requested Rev C component order)")
+    print("Updated panel-placement-map.png (requested version 1 component order)")
 
 
 if __name__ == "__main__":

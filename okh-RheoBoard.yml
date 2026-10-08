@@ -4,7 +4,9 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-05
+date-updated: 2026-10-08
+# OSHWA certified 2026-10-08, UID US002865: https://certification.oshwa.org/us002865.html
+# (OKH 1.0 has no certification field.)
 
 manifest-author:
   name: Charlie Vuong
@@ -22,7 +24,7 @@ description: >
   (controlled via an Adafruit ATtiny1616 seesaw breakout on the Qwiic/I2C bus), run a
   retract-extrude pulse (REP) on command while a Qwiic MicroPressure sensor streams the
   pressure trace over BLE. A separate KiCad PCB prototype lives under RheoBoard_PCB and is not
-  this Rev C DIY build. Open hardware supporting the RheoMap, RheoData, and SlipAtlas projects.
+  this DIY build. Open hardware supporting the RheoMap, RheoData, and SlipAtlas projects.
 intended-use: >
   Bench research and teaching instrument for characterizing the pneumatic pressure response of
   soft/viscous samples. Built and operated by makers, students, and researchers comfortable with
@@ -46,9 +48,10 @@ contact:
   affiliation: The Hybrid Atelier
   email: hxv6892@mavs.uta.edu
 
-version: Rev C
+version: "1"
 development-stage: prototype
-# version "Rev C" is the DIY laser-cut panel, not the KiCad board.
+# version "1" is the DIY laser-cut panel build certified by OSHWA (US002865), not the KiCad
+# board (whose own silkscreen label is "Rheoboard V1").
 # Enclosure print files are not published yet.
 made: false
 made-independently: false
@@ -79,7 +82,7 @@ design-files:
   - path: BuildYourOwn/laser-cut/generate_panel_vector.py
     title: Laser-cut panel vector source (generates panel.svg / panel.dxf)
   - path: BuildYourOwn/laser-cut/panel.svg
-    title: Laser-cut panel vector (Rev C)
+    title: Laser-cut panel vector (version 1)
   - path: BuildYourOwn/laser-cut/panel.dxf
     title: Laser-cut panel vector, DXF export
   - path: BuildYourOwn/cad/connector/sensing_tube.scad
@@ -109,7 +112,7 @@ making-instructions:
 
 manufacturing-files:
   - path: BuildYourOwn/laser-cut/panel.dxf
-    title: Laser-cut panel, DXF (Rev C)
+    title: Laser-cut panel, DXF (version 1)
   - path: BuildYourOwn/cad/connector/sensing_tube.stl
     title: Sensing-tube STL exported from OpenSCAD (physical fit required)
   - path: BuildYourOwn/cad/connector/connector_small.stl
@@ -139,3 +142,5 @@ documentation:
     title: Safety notes from the health-safety notice and the build guide
   - path: docs/faq.md
     title: FAQ answers from the build guide
+  - path: docs/certification.md
+    title: OSHWA certification (UID US002865) and certification mark files

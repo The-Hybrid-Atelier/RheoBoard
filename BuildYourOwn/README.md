@@ -52,7 +52,7 @@ custom PCB work.
    [`laser-cut/panel-placement-map.png`](laser-cut/panel-placement-map.png): PUMP1 and PUMP2
    rotated 90° with VALVE2 centered between them; L298N #1 (both pumps) on the left; L298N #2
    (VALVE2) on the right; MPRLS directly below VALVE2; and **ATtiny1616 seesaw**, ESP32, and
-   Button in the rear row, with the Button beside the ESP32. Rev C has no PWR, VALVE1, or chamber
+   Button in the rear row, with the Button beside the ESP32. Version 1 has no PWR, VALVE1, or chamber
    mounting position.
 4. Confirm cable and tube clearance, tighten and trim the ties, then continue to wiring.
 

@@ -30,9 +30,9 @@ Software: [`software/`](../BuildYourOwn/software/).
 - Computer with a data-capable micro-USB cable
 - Phone/tablet or computer running **RheoData** for BLE control
 
-## How is the Rev C panel assembled?
+## How is the version 1 panel assembled?
 
-Follow the laser-cut panel notes to test-fit and cut the panel. Attach the four corner feet. Zip-tie each component per the placement map: PUMP1 and PUMP2 rotated 90° with VALVE2 centered between them; L298N #1 (both pumps) on the left; L298N #2 (VALVE2) on the right; MPRLS directly below VALVE2; and the ATtiny1616 seesaw, ESP32, and Button in the rear row, with the Button beside the ESP32. Rev C has no PWR, VALVE1, or chamber mounting position. Confirm cable and tube clearance, tighten and trim the ties, then continue to wiring.
+Follow the laser-cut panel notes to test-fit and cut the panel. Attach the four corner feet. Zip-tie each component per the placement map: PUMP1 and PUMP2 rotated 90° with VALVE2 centered between them; L298N #1 (both pumps) on the left; L298N #2 (VALVE2) on the right; MPRLS directly below VALVE2; and the ATtiny1616 seesaw, ESP32, and Button in the rear row, with the Button beside the ESP32. Version 1 has no PWR, VALVE1, or chamber mounting position. Confirm cable and tube clearance, tighten and trim the ties, then continue to wiring.
 
 See [Step 01](../BuildYourOwn/README.md#step-01-assemble-the-platform).
 
