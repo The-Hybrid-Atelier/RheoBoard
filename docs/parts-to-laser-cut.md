@@ -2,6 +2,8 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-Laser-cut panel files are in [`BuildYourOwn/laser-cut/`](../BuildYourOwn/laser-cut/).
+RheoBoard has no laser-cut parts. Version 2 uses a 3D-printed panel and enclosure; see
+[Parts to 3D print](parts-to-3d-print.md).
 
-From [`BuildYourOwn/laser-cut/README.md`](../BuildYourOwn/laser-cut/README.md): use `panel.svg` or `panel.dxf` to cut the mounting panel for the rheometer components.
+The version 1 laser-cut panel, the build certified by OSHWA as US002865, is archived in
+[`BuildYourOwn/archive/laser-cut-v1/`](../BuildYourOwn/archive/laser-cut-v1/) for reference only.

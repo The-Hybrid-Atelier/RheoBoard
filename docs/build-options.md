@@ -10,7 +10,7 @@ Start with the [step-by-step DIY build guide](../BuildYourOwn/README.md).
 
 The DIY version uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 
-The current panel files are version 1 ([laser-cut panel](../BuildYourOwn/laser-cut/README.md)). A future enclosure concept — STEP exports and photos — is in [`BuildYourOwn/cad/encloser/`](../BuildYourOwn/cad/encloser/); the editable source and print files are not in the repo yet.
+Version 2 uses a 3D-printed panel and enclosure ([print files and notes](../BuildYourOwn/cad/encloser/README.md)). There are no laser-cut parts. The version 1 laser-cut panel, certified by OSHWA as US002865, is archived in [`BuildYourOwn/archive/laser-cut-v1/`](../BuildYourOwn/archive/laser-cut-v1/).
 
 ## Custom PCB
 

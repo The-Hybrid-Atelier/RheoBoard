@@ -1,9 +1,15 @@
-# Laser-cut panel
+# Laser-cut panel (archived, version 1)
+
+> **Archived.** RheoBoard no longer uses a laser-cut panel. Version 2 uses a 3D-printed panel and
+> enclosure; see [`../../cad/encloser/README.md`](../../cad/encloser/README.md). These files are the
+> laser-cut panel of version 1, the build certified by OSHWA as US002865. They are kept for
+> reference only; the full version 1 documentation is at the `v1` git tag:
+> https://github.com/The-Hybrid-Atelier/RheoBoard/tree/v1
 
 Use [`panel.svg`](panel.svg) or [`panel.dxf`](panel.dxf) to cut the mounting panel for the
 rheometer components.
 
-License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
+License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
 Version 1 placement: both pumps are rotated 90° with VALVE2 centered between them.
 The two-pump L298N is on the left, the valve L298N is on the right, MPRLS is directly below
@@ -60,7 +66,7 @@ acrylic. Record the verified settings after the first successful cut.
 4. Position components using `panel-placement-map.png`; version 1 has no VALVE1 or chamber position.
 5. Loosely install the zip ties, confirm cable and tube clearance, then tighten and trim them.
 6. Continue with
-   [Step 02 — Connect electronics and tubing](../README.md#step-02-connect-electronics-and-tubing).
+   [Step 02 — Connect electronics and tubing](../../README.md#step-02-connect-electronics-and-tubing).
 
 ## Modify or regenerate the design
 

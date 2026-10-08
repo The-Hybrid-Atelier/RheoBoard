@@ -11,7 +11,8 @@ License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
 ## Overview
 
 This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a
-laser-cut acrylic panel, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
+3D-printed panel inside a 3D-printed enclosure, driven by an ESP32 over BLE and sensed by a Qwiic
+MicroPressure sensor. There are no laser-cut parts.
 
 The sensing routine runs a REP (retraction-extrusion pulse) on command and streams a pressure trace.
 
@@ -22,12 +23,13 @@ custom PCB work.
 ## Before you start
 
 - Check the [`hardware/README.md`](hardware/README.md) BOM before ordering or substituting parts.
-- **Design files:** [`laser-cut/`](laser-cut/) (platform), [`cad/`](cad/) (sensing tube),
+- **Design files:** [`cad/encloser/`](cad/encloser/) (3D-printed panel and enclosure),
+  [`cad/connector/`](cad/connector/) (sensing tube),
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
 - **Software:** [`software/`](software/)
-- **Tools:** laser cutter or cut-to-order service (`laser-cut/panel.svg`/`.dxf`, see
-  [`laser-cut/README.md`](laser-cut/README.md)); zip-tie/flush
+- **Tools:** 3D printer (Bambu Lab, PLA, normal profile; see
+  [`cad/encloser/README.md`](cad/encloser/README.md)); flush
   cutters; wire strippers, small screwdriver, and multimeter; soldering iron + solder only if
   headers or wire leads are not already fitted; computer with data-capable micro-USB cable;
   phone/tablet or computer running **RheoData** for BLE control
@@ -44,17 +46,15 @@ custom PCB work.
 
 ## Step 01: Assemble the platform
 
-<a href="laser-cut/panel-placement-map.png"><img src="laser-cut/panel-placement-map.png" alt="Laser-cut panel component placement map" width="700"></a>
+<a href="cad/encloser/encloser_pic1.jpg"><img src="cad/encloser/encloser_pic1.jpg" alt="3D-printed panel and enclosure render" width="700"></a>
 
-1. Follow [`laser-cut/README.md`](laser-cut/README.md) to test-fit and cut the panel.
-2. Attach the four corner feet.
-3. Zip-tie each component per
-   [`laser-cut/panel-placement-map.png`](laser-cut/panel-placement-map.png): PUMP1 and PUMP2
-   rotated 90° with VALVE2 centered between them; L298N #1 (both pumps) on the left; L298N #2
-   (VALVE2) on the right; MPRLS directly below VALVE2; and **ATtiny1616 seesaw**, ESP32, and
-   Button in the rear row, with the Button beside the ESP32. Version 1 has no PWR, VALVE1, or chamber
-   mounting position.
-4. Confirm cable and tube clearance, tighten and trim the ties, then continue to wiring.
+1. Print the panel, pump holders, bracket, enclosure body, and lid in PLA with the normal Bambu
+   profile, following [`cad/encloser/README.md`](cad/encloser/README.md).
+2. Mount the two pumps upright in the printed holders and the valve between them, as in the
+   renders.
+3. TODO: fastening hardware, and where the L298N drivers, MPRLS, seesaw, ESP32, and Button mount
+   on the printed panel.
+4. Confirm cable and tube clearance, then continue to wiring.
 
 ---
 
@@ -89,7 +89,7 @@ custom PCB work.
 
 ## Step 04: Power-on test
 
-1. Place the panel on a stable surface; inspect tubing and leave slack in both power cables.
+1. Place the unit on a stable surface; inspect tubing and leave slack in both power cables.
 2. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
    tied together; confirm adapter (+) reaches both L298N motor power inputs.
 3. Power the ESP32 via micro-USB. Never back-feed 12 V into it.

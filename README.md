@@ -15,7 +15,8 @@ a REP (retraction-extrusion pulse) and streams the pressure trace.
 
 The firmware in `BuildYourOwn/software/` drives the DIY module build.
 
-A future enclosure concept — STEP exports and photos — is in [`BuildYourOwn/cad/encloser/`](BuildYourOwn/cad/encloser/); the editable source and print files are not in the repo yet.
+The panel and enclosure are 3D printed (PLA); print files and notes are in
+[`BuildYourOwn/cad/encloser/`](BuildYourOwn/cad/encloser/). There are no laser-cut parts.
 
 The detailed guide is the [RheoBoard wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki).
 
@@ -33,9 +34,10 @@ are listed in [`BuildYourOwn/images/README.md`](BuildYourOwn/images/README.md) a
 
 <a href="https://certification.oshwa.org/us002865.html"><img src="docs/images/oshwa-certification-mark-US002865-wide.svg" alt="OSHW certification mark US002865" height="48"></a>
 
-RheoBoard is certified open source hardware by the Open Source Hardware Association, UID
-[US002865](https://certification.oshwa.org/us002865.html) (certified 2026-10-08). See
-[`docs/certification.md`](docs/certification.md). Machine-readable project metadata and the current
+RheoBoard version 1 is certified open source hardware by the Open Source Hardware Association,
+UID [US002865](https://certification.oshwa.org/us002865.html) (certified 2026-10-08); its docs are
+at the [`v1` tag](https://github.com/The-Hybrid-Atelier/RheoBoard/tree/v1). Version 2, the
+3D-printed build on `main`, is not certified yet. See [`docs/certification.md`](docs/certification.md). Machine-readable project metadata and the current
 version are in [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 
 If you build or distribute a derived unit, do not imply that it is manufactured, sold, warranted,

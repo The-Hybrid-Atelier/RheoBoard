@@ -5,7 +5,7 @@ Copyright (c) 2026 Charlie Vuong
 
 This repository uses one root license file with terms scoped by content:
 
-- Hardware design files (including wiring, laser-cut files, BOM, and PCB design files) are
+- Hardware design files (including wiring, 3D-print files, BOM, and PCB design files) are
   licensed under CERN-OHL-W-2.0. The complete, unmodified license text appears below.
 - Firmware in BuildYourOwn/software/ is licensed under the MIT License. The complete license
   text appears after the CERN-OHL-W-2.0 text.

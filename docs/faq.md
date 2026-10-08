@@ -14,8 +14,8 @@ Check the bill of materials before ordering or substituting parts: [`hardware/RE
 
 Design files named in the build guide:
 
-- [`laser-cut/`](../BuildYourOwn/laser-cut/) (platform)
-- [`cad/`](../BuildYourOwn/cad/) (sensing tube)
+- [`cad/encloser/`](../BuildYourOwn/cad/encloser/) (3D-printed panel and enclosure)
+- [`cad/connector/`](../BuildYourOwn/cad/connector/) (sensing tube)
 - [`hardware/electronic-wiring/`](../BuildYourOwn/hardware/electronic-wiring/) (electronics)
 - [`hardware/tube-wiring/`](../BuildYourOwn/hardware/tube-wiring/) (tubing)
 
@@ -23,16 +23,16 @@ Software: [`software/`](../BuildYourOwn/software/).
 
 ## What tools does the build guide name?
 
-- Laser cutter or cut-to-order service (`laser-cut/panel.svg` / `.dxf`; see the [laser-cut panel notes](../BuildYourOwn/laser-cut/README.md))
-- Zip-tie/flush cutters
+- 3D printer: Bambu Lab, PLA, normal profile (see the [print notes](../BuildYourOwn/cad/encloser/README.md))
+- Flush cutters
 - Wire strippers, small screwdriver, and multimeter
 - Soldering iron and solder only if headers or wire leads are not already fitted
 - Computer with a data-capable micro-USB cable
 - Phone/tablet or computer running **RheoData** for BLE control
 
-## How is the version 1 panel assembled?
+## How is the panel assembled?
 
-Follow the laser-cut panel notes to test-fit and cut the panel. Attach the four corner feet. Zip-tie each component per the placement map: PUMP1 and PUMP2 rotated 90° with VALVE2 centered between them; L298N #1 (both pumps) on the left; L298N #2 (VALVE2) on the right; MPRLS directly below VALVE2; and the ATtiny1616 seesaw, ESP32, and Button in the rear row, with the Button beside the ESP32. Version 1 has no PWR, VALVE1, or chamber mounting position. Confirm cable and tube clearance, tighten and trim the ties, then continue to wiring.
+Print the panel, pump holders, bracket, enclosure body, and lid in PLA with the normal Bambu profile, following the print notes. Mount the two pumps upright in the printed holders and the valve between them, as in the renders. Fastening hardware and the positions of the remaining boards are still TODO. Confirm cable and tube clearance, then continue to wiring. There are no laser-cut parts.
 
 See [Step 01](../BuildYourOwn/README.md#step-01-assemble-the-platform).
 
@@ -44,7 +44,7 @@ See [Step 02](../BuildYourOwn/README.md#step-02-connect-electronics-and-tubing).
 
 ## How does the power-on test proceed?
 
-Place the panel on a stable surface; inspect tubing and leave slack in both power cables. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are tied together; confirm adapter (+) reaches both L298N motor power inputs. Power the ESP32 via micro-USB. Never back-feed 12 V into it. Open Serial Monitor at 115200 and confirm the MPRLS, Qwiic Button, and seesaw board are found (no "not found on Qwiic bus" or HAL-init error). With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/valve movement, excessive current draw, or heat. Disconnect immediately if any appears. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`.
+Place the unit on a stable surface; inspect tubing and leave slack in both power cables. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are tied together; confirm adapter (+) reaches both L298N motor power inputs. Power the ESP32 via micro-USB. Never back-feed 12 V into it. Open Serial Monitor at 115200 and confirm the MPRLS, Qwiic Button, and seesaw board are found (no "not found on Qwiic bus" or HAL-init error). With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/valve movement, excessive current draw, or heat. Disconnect immediately if any appears. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`.
 
 See [Step 04](../BuildYourOwn/README.md#step-04-power-on-test).
 

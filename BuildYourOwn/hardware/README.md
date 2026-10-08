@@ -21,9 +21,8 @@ License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 | — | Silicone tubing 3 mm ID | 1 | https://www.adafruit.com/product/4664 | — | Pneumatic plumbing; see `tube-wiring/README.md` |
 | — | Qwiic cables | 3 | https://www.sparkfun.com/cables.html | — | Four Qwiic boards daisy-chained on one I2C bus |
 | — | micro-USB cable | 1 | — | — | Flash `2P1V_Adafruit.ino`; also powers the ESP32 during upload/bench use |
-| — | Acrylic panel, laser-cut (230 × 200 × 3 mm) | 1 | — | — | See [`../laser-cut/`](../laser-cut/) |
-| — | Zip ties, small (~2.5 mm wide) | ~18 | — | — | Component mounting |
-| — | Rubber/plastic feet | 4 | — | — | Panel corner feet |
+| — | 3D-printed panel, pump holders, bracket, enclosure body, and lid (PLA) | 1 set | — | — | See [`../cad/encloser/`](../cad/encloser/); Bambu Lab printer, normal PLA profile |
+| — | Fastening hardware | TODO | — | — | TODO: screw size and count for the 4 mm panel holes and the lid |
 
 ## Notes
 

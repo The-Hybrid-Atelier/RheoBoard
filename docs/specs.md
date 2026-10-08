@@ -2,46 +2,40 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [build guide](../BuildYourOwn/README.md), the [laser-cut panel notes](../BuildYourOwn/laser-cut/README.md), and the [firmware reference](../BuildYourOwn/software/README.md).
+Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [build guide](../BuildYourOwn/README.md), the [print notes](../BuildYourOwn/cad/encloser/README.md), and the [firmware reference](../BuildYourOwn/software/README.md).
 
 ## System
 
 From the build guide:
 
-This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a laser-cut acrylic panel, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
+This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a 3D-printed panel inside a 3D-printed enclosure, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
 
 The sensing routine runs a REP (retraction-extrusion pulse) on command and streams a pressure trace.
 
 Basic soldering is not required if the boards already have headers and the actuator leads are prepared.
 
-## Panel
+## Panel and enclosure
 
-From the laser-cut panel notes:
+From the [print notes](../BuildYourOwn/cad/encloser/README.md):
 
-- Material: 3 mm acrylic
-- Finished size: 230 × 200 mm
-- Mounting: zip ties through the cut slots; four feet at the corner holes
+- Material: PLA, printed on a Bambu Lab printer with the normal profile
+- Parts: base panel about 170 × 170 × 4 mm with 4 mm holes, pump holders about 42.5 × 45 × 81 mm,
+  a small bracket, the enclosure body about 195 mm wide, and a lid about 195 × 195 × 29 mm
+  (sizes approximate, from the STEP geometry)
+- Placement, from the renders: the two pumps stand upright in printed holders, with the valve
+  between them and the L298N drivers behind the pumps
 
-The bill of materials lists the same panel as acrylic, laser-cut, 230 × 200 × 3 mm, with about 18 small zip ties (~2.5 mm wide) and 4 rubber/plastic feet.
+TODO: fastening hardware, overall assembled size, and placement of the MPRLS, seesaw, ESP32, and
+Button.
 
-Version 1 placement, from the laser-cut panel notes:
+Component sizes, from the bill of materials and the component datasheets:
 
-- Both pumps are rotated 90° with VALVE2 centered between them.
-- The two-pump L298N is on the left, the valve L298N is on the right, MPRLS is directly below VALVE2, and the seesaw, ESP32, and Button are behind the drivers.
-- PWR, VALVE1, and the former chamber/bulkhead hole are removed.
-
-The build guide places L298N #1 (both pumps) on the left, L298N #2 (VALVE2) on the right, and the Button beside the ESP32. It states that version 1 has no PWR, VALVE1, or chamber mounting position.
-
-Physical envelopes used for version 1 placement, from the laser-cut panel notes:
-
-- Pumps: Adafruit 4699 / ZR370-02PM, **58.2 × Ø27.0 mm nominal**; the placement outline uses the tolerance-max 58.3 × 27.2 mm body, rotated 90°
+- Pumps: Adafruit 4699 / ZR370-02PM, **58.2 × Ø27.0 mm nominal**
 - VALVE2: Adafruit 4663 / FA0520E, **36.02 × 14.5 mm** top-view envelope
 - ATtiny1616 seesaw: **25.5 × 17.8 mm**
 - ESP32 Thing Plus WRL-15663: **64.77 × 22.86 mm**
 - SparkFun MPRLS and Qwiic Button: **25.4 × 25.4 mm** each
-- L298N modules: retained placeholder outlines because generic module dimensions vary; test-fit the exact boards before cutting
-
-The pump, valve, and MPRLS envelopes do not reserve pneumatic tube bend radius.
+- L298N modules: generic module dimensions vary; check your exact boards
 
 ## Bill of materials
 
