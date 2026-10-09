@@ -1,0 +1,26 @@
+[
+  {
+    "name": "export_netlist",
+    "args": {
+      "board": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch",
+      "output": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/review/final.net"
+    },
+    "output": "final-netlist-export"
+  },
+  {
+    "name": "run_erc",
+    "args": {
+      "schematic": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch",
+      "severity": "info"
+    },
+    "output": "final-erc"
+  },
+  {
+    "name": "export_schematic_pdf",
+    "args": {
+      "schematic": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch",
+      "output": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/review/final-schematic.pdf"
+    },
+    "output": "final-schematic-export"
+  }
+]

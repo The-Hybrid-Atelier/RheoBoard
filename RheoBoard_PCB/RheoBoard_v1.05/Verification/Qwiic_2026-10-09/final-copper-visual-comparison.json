@@ -1,0 +1,44 @@
+[
+  {
+    "layer": "F.Cu",
+    "image_size": [
+      6000,
+      4243
+    ],
+    "all_difference_bbox_pixels": [
+      2754,
+      1229,
+      3963,
+      2543
+    ],
+    "significant_difference_bbox_pixels": [
+      3768,
+      2188,
+      3963,
+      2543
+    ],
+    "max_image_scale_px_per_mm": 20.2020202020202,
+    "method": "Independent same-size native copper-only PDFs rasterized with Poppler; significant difference threshold10/255; this is visual geometry evidence at approximately49.5um/pixel, not exact-coordinate certification."
+  },
+  {
+    "layer": "B.Cu",
+    "image_size": [
+      6000,
+      4243
+    ],
+    "all_difference_bbox_pixels": [
+      3760,
+      2198,
+      3953,
+      2543
+    ],
+    "significant_difference_bbox_pixels": [
+      3760,
+      2198,
+      3953,
+      2543
+    ],
+    "max_image_scale_px_per_mm": 20.2020202020202,
+    "method": "Independent same-size native copper-only PDFs rasterized with Poppler; significant difference threshold10/255; this is visual geometry evidence at approximately49.5um/pixel, not exact-coordinate certification."
+  }
+]

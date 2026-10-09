@@ -21,7 +21,7 @@ title: RheoBoard
 description: >
   A low-cost, DIY benchtop pneumatic "pull-push" rheometer head built from off-the-shelf
   modules. Two air pump/vacuum motors and one solenoid air valve, mounted on a 3D-printed
-  PLA panel inside a 3D-printed enclosure and driven by an ESP32 microcontroller through two L298N H-bridge drivers
+  PLA panel and driven by an ESP32 microcontroller through two L298N H-bridge drivers
   (controlled via an Adafruit ATtiny1616 seesaw breakout on the Qwiic/I2C bus), run a
   retract-extrude pulse (REP) on command while a Qwiic MicroPressure sensor streams the
   pressure trace over BLE. A separate KiCad PCB prototype lives under RheoBoard_PCB and is not
@@ -51,7 +51,7 @@ contact:
 
 version: "2"
 development-stage: prototype
-# version "2" is the DIY build with a 3D-printed panel and enclosure. Version 1 (laser-cut panel)
+# version "2" is the DIY build with a 3D-printed panel. Version 1 (laser-cut panel)
 # is the OSHWA-certified build (US002865), frozen at the v1 git tag. Neither is the KiCad board
 # (whose own silkscreen label is "Rheoboard V1").
 made: false
@@ -81,7 +81,7 @@ design-files:
   - path: BuildYourOwn/hardware/electronic-wiring/generate_wiring_diagram.py
     title: Electrical wiring diagram source (regenerates the schematic PNG)
   - path: BuildYourOwn/cad/encloser/Concept_v2.STEP
-    title: 3D-printed panel and enclosure, full assembly STEP (editable CAD project not yet published)
+    title: 3D-printed panel, full assembly STEP (editable CAD project not yet published)
   - path: BuildYourOwn/cad/connector/sensing_tube.scad
     title: Parametric sensing-tube OpenSCAD source
   - path: BuildYourOwn/cad/connector/sensing_tube.stl
@@ -113,7 +113,7 @@ manufacturing-files:
   - path: BuildYourOwn/cad/connector/connector_small.stl
     title: Small connector STL; editable source not yet published (physical fit required)
   - path: BuildYourOwn/cad/encloser/part
-    title: Printable panel, pump holder, bracket, enclosure body, and lid STEP files (PLA, Bambu Lab normal profile)
+    title: Printable panel STEP files (PLA, Bambu Lab normal profile)
   - path: RheoBoard_PCB/RheoBoard_v1/Gerber/1-job.gbrjob
     title: PCB fabrication job (Gerbers in this folder; drills in ../Drill)
   - path: RheoBoard_PCB/BOM/BOM_RheoboardV1_JLCSMT.xlsx

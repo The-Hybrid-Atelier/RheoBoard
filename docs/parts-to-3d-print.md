@@ -4,13 +4,13 @@ License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
 ## Print these
 
-Enclosure sizes and likely roles are from
+Panel sizes and likely roles are from
 [`BuildYourOwn/cad/encloser/README.md`](../BuildYourOwn/cad/encloser/README.md). Sensing-tube and
 small-connector facts are from
 [`BuildYourOwn/cad/connector/README.md`](../BuildYourOwn/cad/connector/README.md). Where that
 README leaves copy count, orientation, or supports open, the cell below is TODO.
 
-### Panel and enclosure
+### Panel
 
 Print in PLA on a Bambu Lab printer with the normal profile. Bambu Studio opens the STEP files
 directly. There are no STL or slicer project files for these parts yet. Files are in
@@ -19,13 +19,14 @@ directly. There are no STL or slicer project files for these parts yet. Files ar
 | File | Approx. size (mm) | Likely role | Copies |
 |---|---|---|---|
 | [`part/part_01_holes_4mm.STEP`](../BuildYourOwn/cad/encloser/part/part_01_holes_4mm.STEP) | 170 × 170 × 4 | Base panel, with 4 mm holes | TODO |
-| [`part/part_2.STEP`](../BuildYourOwn/cad/encloser/part/part_2.STEP) | 42.5 × 45 × 81 | Pump holder (the renders show two) | TODO |
+| [`part/part_2.STEP`](../BuildYourOwn/cad/encloser/part/part_2.STEP) | 42.5 × 45 × 81 | Pump holder | TODO |
 | [`part/part_03.STEP`](../BuildYourOwn/cad/encloser/part/part_03.STEP) | 45 × 12 × 15 | Small bracket, likely for the valve | TODO |
-| [`part/part_04.STEP`](../BuildYourOwn/cad/encloser/part/part_04.STEP) | about 195 wide | Enclosure body | TODO |
-| [`part/part_05.STEP`](../BuildYourOwn/cad/encloser/part/part_05.STEP) | 195 × 195 × 29 | Lid | TODO |
+| [`part/part_04.STEP`](../BuildYourOwn/cad/encloser/part/part_04.STEP) | about 195 wide | TODO | TODO |
+| [`part/part_05.STEP`](../BuildYourOwn/cad/encloser/part/part_05.STEP) | 195 × 195 × 29 | TODO | TODO |
 
-TODO: confirm each part's role and the number of copies. TODO: print orientation, supports, and
-any non-default settings per part.
+TODO: confirm each part's role and the number of copies. The annotated photo does not label
+`part_04.STEP` or `part_05.STEP`. TODO: print orientation, supports, and any non-default settings
+per part.
 
 [`Concept_v2.STEP`](../BuildYourOwn/cad/encloser/Concept_v2.STEP) is the full assembly, including
 the purchased components. The editable CAD project that produced these STEP files is not in this
@@ -45,12 +46,14 @@ Test-print both parts and verify the thread, luer, tubing, airflow, and leak-tig
 real hardware before use. Use these two files for the current sensing-system assembly unless the
 build instructions specify otherwise.
 
+`sensing_tube.stl` and `connector_small.stl` are not the probe.
+
 Printing both groups is [Step 01](../BuildYourOwn/README.md#step-01-assemble-the-platform) of the
 build guide.
 
 ### Probe (print files not in the repo yet)
 
-The probe is a 3D-printed GL45 two-port cap, the [Adafruit 4661](https://www.adafruit.com/product/4661) tube, and a 3D-printed tube that fits GL45. Those two print files are not in this repository yet. TODO. [`sensing_tube.stl`](../BuildYourOwn/cad/connector/sensing_tube.stl) and [`connector_small.stl`](../BuildYourOwn/cad/connector/connector_small.stl) are not those GL45 parts.
+Exactly two models are still to be added, both TODO because the files are not in this repository: one GL45 two-port cap, and one tube that connects to that GL45 cap. The probe also uses the [Adafruit 4661](https://www.adafruit.com/product/4661) tube. [`sensing_tube.stl`](../BuildYourOwn/cad/connector/sensing_tube.stl) and [`connector_small.stl`](../BuildYourOwn/cad/connector/connector_small.stl) are not those parts.
 
 ## Meshes without an editable source
 

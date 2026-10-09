@@ -1,9 +1,11 @@
 # RheoBoard v1.05 BOM
 
-Reconciled against the saved v1.05 PCB and regenerated placement export on 2026-10-09. Every fitted BOM reference and footprint matches the board; the SMT BOM and placement file contain the same 134 references.
+Updated for the dedicated J9 Qwiic master interface on 2026-10-09. The BOM contains 147 fitted parts, including 140 SMT parts. Final saved-board and placement reconciliation is recorded in the [current review report](../Verification/REVIEW_REPORT.md).
 
-- [Complete parts workbook](BOM_RheoBoard_v1.05.xlsx): 141 fitted parts, manufacturer numbers, sources, revision notes and manual accessories.
-- [JLCPCB SMT-only BOM](BOM_RheoBoard_v1.05_JLCPCB.csv): 134 SMT parts. Use with the [matching v1.05 placement file](../Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv).
+- [Complete parts workbook](BOM_RheoBoard_v1.05.xlsx): 147 fitted parts, manufacturer numbers, sources, revision notes and manual accessories.
+- [JLCPCB SMT-only BOM](BOM_RheoBoard_v1.05_JLCPCB.csv): 140 SMT parts. Use with the [matching v1.05 placement file](../Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv).
+
+The Qwiic update adds U13 TCA9517ADGKR (C201698), C68/C69 100 nF (C14663), R82/R83 4.7 kΩ (C23162) and R84 10 kΩ (C25804). J9 connects the separately powered master; J1/J12/J17 remain locally powered sensor ports. J18 is a local service connector. The four bulk capacitors remain Panasonic EEEFK1H220P, 22 µF / 50 V. Earlier purchased-part selections are retained.
 
 The seven manually fitted parts are J2, J3, J18, U8, U9, U10 and U11. U9/U10 are valve headers; the external valves are listed separately on the workbook's Manual accessories tab. Mounting holes, test points and open solder jumpers are PCB features, not purchased components.
 

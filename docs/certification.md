@@ -31,6 +31,6 @@ licenses. Do not modify the mark. The mark is used on the GitHub repository and 
 it is not printed on the PCB or the 3D-printed parts. Follow the
 [usage guidelines](https://github.com/oshwa/certification-mark) when using it.
 
-The certification covers version 1. Version 2 (the 3D-printed panel and enclosure on `main`) is
+The certification covers version 1. Version 2 (the 3D-printed panel on `main`) is
 not certified yet and needs its own OSHWA registration and UID. A derived or modified build is
 not covered by US002865 and should not carry this mark.

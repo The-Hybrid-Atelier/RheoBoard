@@ -1,0 +1,396 @@
+{
+  "checks": [
+    {
+      "name": "six intended component additions",
+      "pass": true,
+      "evidence": [
+        "C68",
+        "C69",
+        "R82",
+        "R83",
+        "R84",
+        "U13"
+      ]
+    },
+    {
+      "name": "no removed baseline components",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "all inherited pin groups preserved except J9 split",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "local and host supply rails differ",
+      "pass": true,
+      "evidence": {
+        "host": "/HOST_3V3",
+        "local": "+3V3"
+      }
+    },
+    {
+      "name": "local and host SDA differ",
+      "pass": true,
+      "evidence": {
+        "host": "/HOST_SDA",
+        "local": "/SDA"
+      }
+    },
+    {
+      "name": "local and host SCL differ",
+      "pass": true,
+      "evidence": {
+        "host": "/HOST_SCL",
+        "local": "/SCL"
+      }
+    },
+    {
+      "name": "three local Qwiic ports pin 1 consistent",
+      "pass": true,
+      "evidence": {
+        "J1": "GND",
+        "J12": "GND",
+        "J17": "GND"
+      }
+    },
+    {
+      "name": "three local Qwiic ports pin 2 consistent",
+      "pass": true,
+      "evidence": {
+        "J1": "+3V3",
+        "J12": "+3V3",
+        "J17": "+3V3"
+      }
+    },
+    {
+      "name": "three local Qwiic ports pin 3 consistent",
+      "pass": true,
+      "evidence": {
+        "J1": "/SDA",
+        "J12": "/SDA",
+        "J17": "/SDA"
+      }
+    },
+    {
+      "name": "three local Qwiic ports pin 4 consistent",
+      "pass": true,
+      "evidence": {
+        "J1": "/SCL",
+        "J12": "/SCL",
+        "J17": "/SCL"
+      }
+    },
+    {
+      "name": "U13 pin 1 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "+3V3",
+        "peer": [
+          "J1",
+          2
+        ],
+        "peer_net": "+3V3"
+      }
+    },
+    {
+      "name": "U13 pin 2 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "/SCL",
+        "peer": [
+          "J1",
+          4
+        ],
+        "peer_net": "/SCL"
+      }
+    },
+    {
+      "name": "U13 pin 3 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "/SDA",
+        "peer": [
+          "J1",
+          3
+        ],
+        "peer_net": "/SDA"
+      }
+    },
+    {
+      "name": "U13 pin 4 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "GND",
+        "peer": [
+          "J1",
+          1
+        ],
+        "peer_net": "GND"
+      }
+    },
+    {
+      "name": "U13 pin 5 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "/HOST_3V3",
+        "peer": [
+          "J9",
+          2
+        ],
+        "peer_net": "/HOST_3V3"
+      }
+    },
+    {
+      "name": "U13 pin 6 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "/HOST_SDA",
+        "peer": [
+          "J9",
+          3
+        ],
+        "peer_net": "/HOST_SDA"
+      }
+    },
+    {
+      "name": "U13 pin 7 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "/HOST_SCL",
+        "peer": [
+          "J9",
+          4
+        ],
+        "peer_net": "/HOST_SCL"
+      }
+    },
+    {
+      "name": "U13 pin 8 correct physical function",
+      "pass": true,
+      "evidence": {
+        "U13": "/HOST_3V3",
+        "peer": [
+          "J9",
+          2
+        ],
+        "peer_net": "/HOST_3V3"
+      }
+    },
+    {
+      "name": "common ground J9 and local",
+      "pass": true,
+      "evidence": "GND"
+    },
+    {
+      "name": "C68 domain connection",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          "+3V3",
+          "GND"
+        ],
+        "expected": [
+          "+3V3",
+          "GND"
+        ]
+      }
+    },
+    {
+      "name": "C69 domain connection",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          "/HOST_3V3",
+          "GND"
+        ],
+        "expected": [
+          "/HOST_3V3",
+          "GND"
+        ]
+      }
+    },
+    {
+      "name": "R84 domain connection",
+      "pass": true,
+      "evidence": {
+        "actual": [
+          "/HOST_3V3",
+          "GND"
+        ],
+        "expected": [
+          "/HOST_3V3",
+          "GND"
+        ]
+      }
+    },
+    {
+      "name": "host SDA and SCL pullups each to host supply",
+      "pass": true,
+      "evidence": [
+        [
+          "/HOST_3V3",
+          "/HOST_SDA"
+        ],
+        [
+          "/HOST_3V3",
+          "/HOST_SCL"
+        ]
+      ]
+    },
+    {
+      "name": "J1 standard SH footprint retained",
+      "pass": true,
+      "evidence": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal"
+    },
+    {
+      "name": "J9 standard SH footprint retained",
+      "pass": true,
+      "evidence": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal"
+    },
+    {
+      "name": "J12 standard SH footprint retained",
+      "pass": true,
+      "evidence": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal"
+    },
+    {
+      "name": "J17 standard SH footprint retained",
+      "pass": true,
+      "evidence": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal"
+    },
+    {
+      "name": "C32 bulk capacitor unchanged",
+      "pass": true,
+      "evidence": {
+        "value": "22uF 50V \u00b120%",
+        "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8"
+      }
+    },
+    {
+      "name": "C34 bulk capacitor unchanged",
+      "pass": true,
+      "evidence": {
+        "value": "22uF 50V \u00b120%",
+        "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8"
+      }
+    },
+    {
+      "name": "C43 bulk capacitor unchanged",
+      "pass": true,
+      "evidence": {
+        "value": "22uF 50V \u00b120%",
+        "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8"
+      }
+    },
+    {
+      "name": "C45 bulk capacitor unchanged",
+      "pass": true,
+      "evidence": {
+        "value": "22uF 50V \u00b120%",
+        "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8"
+      }
+    },
+    {
+      "name": "U5 reset remains explicitly unchanged",
+      "pass": true,
+      "evidence": [
+        [
+          "R22",
+          "2"
+        ],
+        [
+          "TP3",
+          "1"
+        ],
+        [
+          "U5",
+          "9"
+        ]
+      ]
+    },
+    {
+      "name": "J18 local service bus retained",
+      "pass": true,
+      "evidence": {
+        "1": "GND",
+        "2": "/SDA",
+        "3": "/SCL"
+      }
+    },
+    {
+      "name": "every schematic pin agrees with fresh IPC board net",
+      "pass": true,
+      "evidence": {
+        "count": 416,
+        "mismatches": []
+      }
+    }
+  ],
+  "passed": 34,
+  "failed": 0,
+  "component_count": 166,
+  "net_count": 89,
+  "schematic_pins": 416,
+  "new_parts": {
+    "U13": {
+      "value": "TCA9517ADGKR",
+      "footprint": "RheoBoard:TI_DGK0008A_VSSOP_3x3mm_P0.65mm",
+      "pins": {
+        "1": "+3V3",
+        "8": "/HOST_3V3",
+        "5": "/HOST_3V3",
+        "7": "/HOST_SCL",
+        "6": "/HOST_SDA",
+        "2": "/SCL",
+        "3": "/SDA",
+        "4": "GND"
+      }
+    },
+    "C68": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "C69": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pins": {
+        "1": "/HOST_3V3",
+        "2": "GND"
+      }
+    },
+    "R82": {
+      "value": "4K7/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pins": {
+        "1": "/HOST_3V3",
+        "2": "/HOST_SDA"
+      }
+    },
+    "R83": {
+      "value": "4K7/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pins": {
+        "1": "/HOST_3V3",
+        "2": "/HOST_SCL"
+      }
+    },
+    "R84": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pins": {
+        "1": "/HOST_3V3",
+        "2": "GND"
+      }
+    }
+  },
+  "source_exports": {
+    "/Users/charlievuong/Documents/RheoBoard/.private/v105-full-recheck/review/native/1.net": "3e317c5eb313679d55f21500eb218cc4e1c6f91c4a3940938e8559a9bdc507ff",
+    "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/review/final.net": "7b4059fe9f56054c393558281b4324863b2be3c5f1c0e36329985c9aa08c3670",
+    "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/review/final-board.xml": "49c46cf3394019909f81f74d4ac502759ecef37059b75ed80b446dd1527fda6a"
+  }
+}

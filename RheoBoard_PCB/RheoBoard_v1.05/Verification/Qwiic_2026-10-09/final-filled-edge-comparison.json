@@ -1,0 +1,26 @@
+[
+  {
+    "layer": "B.Cu",
+    "net": "GND",
+    "removed_edges": 172,
+    "added_edges": 581,
+    "changed_endpoint_extent_mm": [
+      115.79046,
+      194.9505,
+      -136.909309,
+      -100.835438
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "net": "GND",
+    "removed_edges": 268,
+    "added_edges": 1109,
+    "changed_endpoint_extent_mm": [
+      91.4245,
+      196.1755,
+      -135.423779,
+      -99.269615
+    ]
+  }
+]

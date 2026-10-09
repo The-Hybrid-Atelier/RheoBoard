@@ -71,9 +71,8 @@ recommendation limits run time, not the instantaneous PWM setting; see
 inputs (connector or bare leads).
 
 USB uploads firmware to the ESP32 Thing Plus. After upload, USB may be disconnected. Portable
-power is a single-cell LiPo on that board's JST connector (schematic V_BATT, 4.2 V maximum).
-TODO: the maintainer said 3–5 V; the datasheet maximum is 4.2 V. Confirm. See
-[Power](../../README.md#power) in the build guide.
+power is the SparkFun PRT-26059 named in [Power](../../README.md#power) (nominal 3.7 V). It plugs
+into that board's JST battery connector (schematic V_BATT, 4.2 V maximum).
 
 **You should now have:** both `5V-EN` jumpers ON, the used ENA/ENB jumper caps removed, L298N #2
 Motor A NC, all grounds common, and each L298N +5 V output local to its own module. Then

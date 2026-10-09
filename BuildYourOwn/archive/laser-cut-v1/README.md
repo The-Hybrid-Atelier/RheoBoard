@@ -1,7 +1,7 @@
 # Laser-cut panel (archived, version 1)
 
-> **Archived.** RheoBoard no longer uses a laser-cut panel. Version 2 uses a 3D-printed panel and
-> enclosure; see [`../../cad/encloser/README.md`](../../cad/encloser/README.md). These files are the
+> **Archived.** RheoBoard no longer uses a laser-cut panel. Version 2 uses a 3D-printed panel;
+> see [`../../cad/encloser/README.md`](../../cad/encloser/README.md). These files are the
 > laser-cut panel of version 1, the build certified by OSHWA as US002865. They are kept for
 > reference only; the full version 1 documentation is at the `v1` git tag:
 > https://github.com/The-Hybrid-Atelier/RheoBoard/tree/v1
@@ -65,8 +65,8 @@ acrylic. Record the verified settings after the first successful cut.
 3. Install the four feet.
 4. Position components using `panel-placement-map.png`; version 1 has no VALVE1 or chamber position.
 5. Loosely install the zip ties, confirm cable and tube clearance, then tighten and trim them.
-6. Continue with
-   [Step 02 — Connect electronics and tubing](../../README.md#step-02-connect-electronics-and-tubing).
+6. Continue with version 1
+   [Step 02 — Connect electronics and tubing](https://github.com/The-Hybrid-Atelier/RheoBoard/blob/v1/BuildYourOwn/README.md#step-02-connect-electronics-and-tubing).
 
 ## Modify or regenerate the design
 

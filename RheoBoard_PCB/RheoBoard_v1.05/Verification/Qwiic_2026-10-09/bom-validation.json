@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "147_unique_fitted_parts": true,
+    "cached_priced_subtotal": true,
+    "totals_include_new_row": true,
+    "native_tables_retained_and_extended": true,
+    "new_IC_price_unquoted": true,
+    "bulk_caps_unchanged": true,
+    "new_IC_exact_part": true,
+    "new_passives_exact_parts": true,
+    "all_prior_part_selections_sources_prices_preserved": true,
+    "all_prior_formula_text_preserved": true,
+    "140_unique_SMT_parts": true,
+    "csv_matches_workbook_selections": true,
+    "seven_manual_parts_unchanged": true
+  },
+  "fitted_parts": 147,
+  "SMT_parts": 140,
+  "manual_parts": 7,
+  "incomplete_legacy_priced_subtotal_USD": 55.618,
+  "scope": "Saved XLSX values/formulas/caches/native tables, preservation of existing selections and CSV parity. PCB/CPL reconciliation is separate."
+}

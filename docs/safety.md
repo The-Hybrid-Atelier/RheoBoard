@@ -22,9 +22,7 @@ Everyday wall power for the DIY build and for the PCB is that 12 V plug.
 
 ## Portable battery
 
-Portable power for the SparkFun ESP32 Thing Plus is a single-cell LiPo on its JST connector. The vendored schematic says V_BATT should be a single-cell LiPo, 4.2 V maximum. The graphical datasheet labels that connector "JST Connector for single cell LiPo" and says VBAT is direct to the battery and the charger.
-
-TODO: the maintainer said 3–5 V for this battery. The datasheet maximum is 4.2 V. Confirm before using another voltage.
+Portable power for the SparkFun ESP32 Thing Plus is the [SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (PRT-26059)](https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html) plugged into its JST battery connector (nominal 3.7 V; vendored schematic V_BATT, 4.2 V maximum).
 
 ## Soldering
 

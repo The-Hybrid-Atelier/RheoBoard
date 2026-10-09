@@ -1,0 +1,13 @@
+{
+  "before": {
+    "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch": "c26c8a5906ef6aa97c755f093305a93b8d07b3d63cab79ff7d8aa2651e08197d",
+    "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pcb": "76c2c04afb9eea620176247bf0e1c04467b684a02cfef930b7f0cb7164c337da",
+    "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pro": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085"
+  },
+  "after": {
+    "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch": "c26c8a5906ef6aa97c755f093305a93b8d07b3d63cab79ff7d8aa2651e08197d",
+    "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pcb": "76c2c04afb9eea620176247bf0e1c04467b684a02cfef930b7f0cb7164c337da",
+    "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pro": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085"
+  },
+  "unchanged_during_checks": true
+}

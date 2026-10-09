@@ -1,0 +1,48 @@
+{
+  "J9": {
+    "placement": {},
+    "pad_count_before": 6,
+    "pad_count_after": 6,
+    "pad_differences": [
+      {
+        "number": "2",
+        "at": [
+          189.925,
+          124.325001
+        ],
+        "changes": {
+          "net": [
+            "+3V3",
+            "/HOST_3V3"
+          ]
+        }
+      },
+      {
+        "number": "3",
+        "at": [
+          189.925,
+          123.325001
+        ],
+        "changes": {
+          "net": [
+            "/SDA",
+            "/HOST_SDA"
+          ]
+        }
+      },
+      {
+        "number": "4",
+        "at": [
+          189.925,
+          122.325001
+        ],
+        "changes": {
+          "net": [
+            "/SCL",
+            "/HOST_SCL"
+          ]
+        }
+      }
+    ]
+  }
+}

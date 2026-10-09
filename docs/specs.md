@@ -8,26 +8,26 @@ Figures on this page are already written in the [bill of materials](../BuildYour
 
 From the build guide:
 
-This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a 3D-printed panel inside a 3D-printed enclosure, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
+This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a 3D-printed panel, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
 
 The sensing routine runs a REP (retraction-extrusion pulse) on command and streams a pressure trace.
 
 Basic soldering is not required if the boards already have headers and the actuator leads are prepared.
 
-## Panel and enclosure
+## Panel
 
 From the [print notes](../BuildYourOwn/cad/encloser/README.md):
 
 - Material: PLA, printed on a Bambu Lab printer with the normal profile
 - Parts: base panel about 170 × 170 × 4 mm with 4 mm holes, pump holders about 42.5 × 45 × 81 mm,
-  a small bracket, the enclosure body about 195 mm wide, and a lid about 195 × 195 × 29 mm
-  (sizes approximate, from the STEP geometry)
-- Placement, from the renders: the two pumps stand upright in printed holders, with the valve
-  between them and the L298N drivers behind the pumps
+  and a small bracket (sizes approximate, from the STEP geometry). `part_04.STEP` is about 195 mm
+  wide and `part_05.STEP` is about 195 × 195 × 29 mm. The annotated photo does not label those two files.
+- Placement is the annotated panel photo
+  [`BuildYourOwn/cad/encloser/panel-annotated.pdf`](../BuildYourOwn/cad/encloser/panel-annotated.pdf).
+  See [Panel layout](panel-layout.md).
 
-Fasteners are 4 mm zip ties. A count is not stated. TODO: overall assembled size, and placement of
-the MPRLS, seesaw, ESP32, and Button. Those board positions stay open until the enclosure CAD is
-updated. The files stay in [`BuildYourOwn/cad/encloser/`](../BuildYourOwn/cad/encloser/).
+Fasteners are 4 mm zip ties. A count is not stated. TODO: overall assembled size. The files stay in
+[`BuildYourOwn/cad/encloser/`](../BuildYourOwn/cad/encloser/).
 
 Component sizes, from the bill of materials and the component datasheets:
 

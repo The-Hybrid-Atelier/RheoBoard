@@ -4,7 +4,7 @@ License: CC BY-SA 4.0 — see [`LICENSE`](LICENSE).
 
 ## Version 2 (in progress on `main`)
 
-The panel and enclosure are now 3D printed in PLA (Bambu Lab printer, normal profile). Files and
+The panel is now 3D printed in PLA (Bambu Lab printer, normal profile). Files and
 notes are in [`BuildYourOwn/cad/encloser/`](BuildYourOwn/cad/encloser/). There are no laser-cut
 parts; the version 1 laser-cut panel is archived in
 [`BuildYourOwn/archive/laser-cut-v1/`](BuildYourOwn/archive/laser-cut-v1/). Version 2 is not

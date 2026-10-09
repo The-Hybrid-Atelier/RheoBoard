@@ -1,7 +1,7 @@
 {
   "date": "2026-10-09",
-  "review_verdict": "NEEDS ATTENTION: unresolved U5 sensor startup/reset requirement; not production-qualified.",
-  "scope": "Current v1.05 sources, libraries/models, BOM, manufacturing files and review evidence. No design changes in latest recheck. Excludes original archive and UI session files.",
+  "review_verdict": "Qwiic correction passes saved CAD checks; U5 startup/reset, supplier acceptance and physical qualification remain open. Not production-qualified.",
+  "scope": "Current v1.05 Qwiic revision: sources, libraries/models, BOM, manufacturing files and review evidence. Qwiic_2026-10-09 contains current evidence; other retained review evidence is historical. Excludes original archive, UI session files and this manifest.",
   "files": [
     {
       "path": "3D/3518P.STEP",
@@ -85,23 +85,23 @@
     },
     {
       "path": "ASSEMBLY_AND_BRINGUP.md",
-      "bytes": 10686,
-      "sha256": "05bef337ea20685e0a3dcfdd5e2011eb0c1788dece376066d7cb2f4b33b038ee"
+      "bytes": 13781,
+      "sha256": "87ab5bb1363a16cd86a1d684da1dea69e61257e65ac7df09098ecefa89203734"
     },
     {
       "path": "BOM/BOM_RheoBoard_v1.05.xlsx",
-      "bytes": 17906,
-      "sha256": "d9962f90719243bb4a7a1eae5900d0adbf555acc850e352749f910a26858e0ab"
+      "bytes": 18921,
+      "sha256": "06433a52ab33427508d9510cc7d63ab95e57beef69c55350f60096902b94bcfc"
     },
     {
       "path": "BOM/BOM_RheoBoard_v1.05_JLCPCB.csv",
-      "bytes": 3717,
-      "sha256": "e3fb22617a8898e008f8d9a60933e7fd36228b9563b4458853424ebb5259bb2f"
+      "bytes": 3853,
+      "sha256": "799ee2b5b258325c40583d29ce49154e3026539d94161cde8c4667f4c8fee223"
     },
     {
       "path": "BOM/README.md",
-      "bytes": 1177,
-      "sha256": "3f0432c32d717f95a73b84477495fd36ebc1a4ac02a67993af66aa2b72b17b44"
+      "bytes": 1587,
+      "sha256": "781cff164c730bc798aa98ab952ad4b5bb60c1466dabf76c1ec1c0ecd7409dd8"
     },
     {
       "path": "Footprint/4.7uH_2A.kicad_mod",
@@ -149,6 +149,11 @@
       "sha256": "36b0fa78c91561f6b5dabbc5cc0a2034b7755534c95e987a22af36f7b25dba7b"
     },
     {
+      "path": "Footprint/TI_DGK0008A_VSSOP_3x3mm_P0.65mm.kicad_mod",
+      "bytes": 2287,
+      "sha256": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4"
+    },
+    {
       "path": "Footprint/TI_RPW0010A_VQFN-HR_2x2mm.kicad_mod",
       "bytes": 4085,
       "sha256": "a3f1d5c75aed15fcb3ace734f9d9e8b826be122530734bca8bbbcf9dd505667a"
@@ -185,133 +190,133 @@
     },
     {
       "path": "Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv",
-      "bytes": 5552,
-      "sha256": "5effca69073d7a35f32b9cb245cb3e6c3d9fe7695365d1e79e2dc9b5e5023da9"
+      "bytes": 5803,
+      "sha256": "1d82d06b6da7e6cedd75f17d65fa06a5267f458b6ec6b1a889d80f211783a79f"
     },
     {
       "path": "Manufacturing/CPL/RheoBoard_v1.05_native_positions.csv",
-      "bytes": 15040,
-      "sha256": "555882c746c5e2bc52b473fbf7695da78bec6d2a111eed51b59265bde25a0291"
+      "bytes": 15662,
+      "sha256": "b0aaace88b50210edf6200bfa4269a1394d6c18a9d45d69903be749fbf8fc926"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_assembly.pdf",
-      "bytes": 204733,
-      "sha256": "41380d6215a9dbdb45425259c36b2c7428c77e5a8d4f3b3f3796e0a10669a490"
+      "bytes": 202494,
+      "sha256": "9ef8fc4d189b47d69b77e6ec9fa44cb3855d41f89fa8609df9be9d3eadf63d07"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_back_copper.pdf",
-      "bytes": 200558,
-      "sha256": "b37dbaf03dbe88ec0032e9bac44c39bfc13a42c973b3b53cf01eead5b6650389"
+      "bytes": 208899,
+      "sha256": "087eaa10eee0eef5e616249f3f95727913cf97b74e0d8c3c69dd7c3721d18b89"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_front_copper.pdf",
-      "bytes": 381863,
-      "sha256": "d417d401e20d5dbf9a6d8c67bac1a052df7435e84c580d5b2e0f34cb0cd326d5"
+      "bytes": 363047,
+      "sha256": "f8d4e8dc1154bed15f79120123368c535a296c84e4bbf8971641e719c0f1d140"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_schematic.pdf",
-      "bytes": 1934458,
-      "sha256": "8d796a6819c990e21c5dfd980b9b9eb941313e13565724c47e35255df1eae2f7"
+      "bytes": 1960930,
+      "sha256": "aa2129982ede0e938c9abaceef07d44532c2bc59ae45af7758770e59f07bfe72"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_soldermask.pdf",
-      "bytes": 182055,
-      "sha256": "24a20e009fe2abe9ce0c5bf2d62a7b523c5cfd286525d137421546633b3edf1f"
+      "bytes": 189885,
+      "sha256": "95577ec7c8fe51f2a9b163e14d924a30c8679b9ad773e0c2799b99fb5dbd0557"
     },
     {
       "path": "Manufacturing/Gerber/1-B_Cu.gbl",
-      "bytes": 164654,
-      "sha256": "a74ef27f249f33debd4e65cbf478a6031eb41de5306f1583671e04c851da9945"
+      "bytes": 175917,
+      "sha256": "3562dd02112197698016fe4f16889c7fde6f7c760ffcf322eead1ee63cbbd62d"
     },
     {
       "path": "Manufacturing/Gerber/1-B_Mask.gbs",
       "bytes": 2953,
-      "sha256": "930335bb5be436bbcd5d4b8120116e7d0f14e7b1ad8f8e375f020b8b81aa11ce"
+      "sha256": "16710774c76232a6e31964d76c7f566e51883633d7cd63ac3d558eff34d06495"
     },
     {
       "path": "Manufacturing/Gerber/1-B_Paste.gbp",
       "bytes": 446,
-      "sha256": "d70dfd7515bb20d805f137e02bef3ac3173bee63e70eee52ce702bc2504ad4fe"
+      "sha256": "5d7e7b2c0e134158e8c6eafac086ba65a5e039b7ab26552d8ce1f755dd4a815e"
     },
     {
       "path": "Manufacturing/Gerber/1-B_Silkscreen.gbo",
       "bytes": 447,
-      "sha256": "6f23eac3da663eaa97117f7451a45eea42e4b238664af1088b0f9068b5701b4f"
+      "sha256": "e0bee653e3257d8ef711b4a5a7ae7bc358c3eef486a47d72305798efc69ffd53"
     },
     {
       "path": "Manufacturing/Gerber/1-Edge_Cuts.gm1",
       "bytes": 826,
-      "sha256": "c4f304984509787d6417362e69b878e624b18f6b2657fe771c6a43fbda1a9a88"
+      "sha256": "8574b9d5e0abe000e92a4021257c6293f6f013bd05bfe277340ab1a3d08d0a18"
     },
     {
       "path": "Manufacturing/Gerber/1-F_Cu.gtl",
-      "bytes": 680909,
-      "sha256": "d4bcc297c6876f65732c8e08529bc6483d55f9bd4753082532c14eac7af5d3ae"
+      "bytes": 706142,
+      "sha256": "f4f7c7589c344c6d7213813a2dea9405683b784ff11faee9aa3e3328215a5a7d"
     },
     {
       "path": "Manufacturing/Gerber/1-F_Mask.gts",
-      "bytes": 21171,
-      "sha256": "1bef8eae2d5b4c198b37d2f4affaa5f0f30462d847b86164881eeb545493bbef"
+      "bytes": 21882,
+      "sha256": "4496c322393d78d867edebedc63a5c92de3028f67d8456b68a147f8f5fd9ef0f"
     },
     {
       "path": "Manufacturing/Gerber/1-F_Paste.gtp",
-      "bytes": 17532,
-      "sha256": "767538adae8ffaaf9ed131b2b5b66b87a3443d9cf7b7e1fe3a849fea0f243d2c"
+      "bytes": 18248,
+      "sha256": "5da3cefc3b29d37d3a9320b4409a60fecdad34f42e90de2167ed0ae82ff1e3d5"
     },
     {
       "path": "Manufacturing/Gerber/1-F_Silkscreen.gto",
-      "bytes": 116072,
-      "sha256": "e2a252782b230aabfcb8218cef7d03314bf2c1cc8f940eadd2f19c7343ba65f7"
+      "bytes": 151379,
+      "sha256": "6b2de2a2a9d54be601063e291121b1c6c6783ba600d32276cc847fa6702bc001"
     },
     {
       "path": "Manufacturing/Gerber/1-NPTH.drl",
       "bytes": 437,
-      "sha256": "5696ddc61761b4a49c4ca31096cd9bc7aa9eb8c2d43c2e58ff3a48c280b48061"
+      "sha256": "1dc01a8e0843beade5357b5010da48a8ae1c92d1384a3e7b7c2cd6fcfdd942a3"
     },
     {
       "path": "Manufacturing/Gerber/1-PTH.drl",
-      "bytes": 5953,
-      "sha256": "282719e91e85db3a7e0e04737f2f51728af502cb2e52f93f679b4923ab041d52"
+      "bytes": 6003,
+      "sha256": "f4596f506745e9dfa6059a0f7c07277acf47175084604b1835603bf8410f5ab6"
     },
     {
       "path": "Manufacturing/Gerber/1-job.gbrjob",
       "bytes": 2620,
-      "sha256": "5791b2ca4307f58c1428589294d0e98aaa6bee222f5dbc43d59ba4204c456115"
+      "sha256": "1ec3383981bb5c53029e2afcf3bf33f3a24999aa208292f275ad8636bcf2224b"
     },
     {
       "path": "Manufacturing/README.md",
-      "bytes": 3299,
-      "sha256": "237935cf5f931aee78ad72b678236bd05395f85dec61bcb37d8755c204b989dc"
+      "bytes": 3513,
+      "sha256": "5918aa954099a3c292fa28cd34486784d8e5728c55d30ed5b25b619a6bcbb060"
     },
     {
       "path": "Manufacturing/RheoBoard_v1.05_fabrication.zip",
-      "bytes": 270446,
-      "sha256": "020d5504a48da44c4cb01437727e26fa590f24ac923ff609695acf7b53d90a95"
+      "bytes": 285479,
+      "sha256": "6d117ca9cb705e69ae42f994de63f895dd15eb54b1b9f0b41bddc3dea1c47e19"
     },
     {
       "path": "README.md",
-      "bytes": 1949,
-      "sha256": "3c29fec3d3b97adf8e67f2a45bb432cde1518ebf0e1e7403a98ec78f98d009f3"
+      "bytes": 1986,
+      "sha256": "fe7949c81d74d848bad36f8d5ba7cf0dd7173f1cbb755985ef9e9d3b32341b4e"
     },
     {
       "path": "REVISION_NOTES.md",
-      "bytes": 7924,
-      "sha256": "1e612758883d245be93a69e564e742fe1344b99d08891441c94a4106e69f987f"
+      "bytes": 10975,
+      "sha256": "7f6d244ce632ca4ae8887857469a42bd84af3e94b484027cc218e99a2adeaff7"
     },
     {
       "path": "RheoboardV1/1.kicad_pcb",
-      "bytes": 2006088,
-      "sha256": "1c323e9198e0e097183a71e6cdce57e170df9ffd160bdf7ccf0f774ddd09b96d"
+      "bytes": 2078241,
+      "sha256": "76c2c04afb9eea620176247bf0e1c04467b684a02cfef930b7f0cb7164c337da"
     },
     {
       "path": "RheoboardV1/1.kicad_pro",
-      "bytes": 31110,
-      "sha256": "f576df1dabc271c85dfa3b2ea566a34aad1e2ca2ecd75dcda1ce863c0051d576"
+      "bytes": 31104,
+      "sha256": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085"
     },
     {
       "path": "RheoboardV1/1.kicad_sch",
-      "bytes": 2974621,
-      "sha256": "dd20899a4dd6f8e2b72af6ca06ea210414269a999c2f26e814e26ab37531f784"
+      "bytes": 3004446,
+      "sha256": "c26c8a5906ef6aa97c755f093305a93b8d07b3d63cab79ff7d8aa2651e08197d"
     },
     {
       "path": "RheoboardV1/1_Power.kicad_sch",
@@ -409,9 +414,149 @@
       "sha256": "6385d5d471cc95664700fc173a80d0bc16b7e0a01c148b171be479bc5c7f397b"
     },
     {
+      "path": "Verification/Qwiic_2026-10-09/assembly-export-evidence.json",
+      "bytes": 265,
+      "sha256": "6db74cc6df9212ff1d386e63d705fc14c449a28e3c70767f4710f9a19387a26b"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/bom-validation.json",
+      "bytes": 813,
+      "sha256": "5e213dab2a250b10637bbfe61249559be0d5ef04632708cb2572fc7ed3698834"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/check-source-hashes.json",
+      "bytes": 1087,
+      "sha256": "e3222619562b6c2ead6d4552949268a4fa41ed2f29dcea6b5d6d26486d5d5bf1"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/drawing-export-validation.json",
+      "bytes": 1053,
+      "sha256": "5c25424d9f018de10b6031964fe3a6fc8f93dff3f4f2fbb1329e49d61d19b4d3"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-complete-board-manifest.json",
+      "bytes": 637042,
+      "sha256": "d9767545bebf6b4fba493f9c67aa21258fe464f2d7bbd7c54bd2e4f334e2b502"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-connectivity-review.json",
+      "bytes": 8599,
+      "sha256": "637a219ea9ec3ce0c9539dfcfa56de763806920779f6244ba66f41b5c8ff3f3d"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-copper-visual-comparison.json",
+      "bytes": 1092,
+      "sha256": "a1be6702d157ce96b9b3bee39c3cdf8af9dda9d0c710d4369a60b48d5db7b77b"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-drc-decoded.json",
+      "bytes": 437,
+      "sha256": "3663c5aa2eaea5c71beb88e7afcc4470ff4f302d643b65a350cc0dafef26bf02"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-drc-native.json",
+      "bytes": 75,
+      "sha256": "a1717e3fdd86cf90fb308d285781a4e6806afe661422b21bcd8d37185d490a02"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-erc-decoded.json",
+      "bytes": 431,
+      "sha256": "e93aa1f81bab979ed015a5a7656f0fdede0fde7dd7065a05f68fa58814513fcc"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-filled-edge-comparison.json",
+      "bytes": 420,
+      "sha256": "f495138a568038138d7857b00747ca899d2daf136ed930c78b736445e061f564"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-hashes.json",
+      "bytes": 538,
+      "sha256": "4b189ec1c35a006532e8759f722a53f03aaaeb009443c6d6a0deeebdc683a2e8"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-layout-comparison.json",
+      "bytes": 35492,
+      "sha256": "337526c922c3a8ff6d020ad57c923df8aef5a9f022b9513a320506ccfe2159d6"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-manufacturing-decoded.json",
+      "bytes": 134334,
+      "sha256": "081a3218bbfb90f87ebfb641e2eb88085319ba4c53c6c0c3bbe475d00c7cfb14"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-schematic-spacing-checks.json",
+      "bytes": 860,
+      "sha256": "f7168a5a1072c7bd469998f7f9a01c872fe0e1e00541de942c6c21cf8ce9bcc3"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/final-source-hashes.json",
+      "bytes": 539,
+      "sha256": "2090407428d274707c60232882a7c9a063b10084b26ac7f1747caa337b5e3e60"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/find_orphan_items.json",
+      "bytes": 62,
+      "sha256": "bbbf026bc025ed77be36ed7ae151b6d43687ab6bd900e6bdb1f1112ab090de0c"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/find_shorted_nets.json",
+      "bytes": 39,
+      "sha256": "7931ba2466354c73669a8f3e9cb9c1eddb808bd2d822c095f4439cd73d249683"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/find_single_pin_nets.json",
+      "bytes": 46,
+      "sha256": "12032cfa955c06818ec7e728b9068cbce11360aeaa6ab76987ff64cc554d5f47"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/independent-drc.json",
+      "bytes": 355,
+      "sha256": "fa90a6dbd02eebad3affdf6c2bb5138b8d980e919a5b8eaee6d2ae16d66b9c79"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/independent-erc.json",
+      "bytes": 431,
+      "sha256": "e93aa1f81bab979ed015a5a7656f0fdede0fde7dd7065a05f68fa58814513fcc"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/independent-review.json",
+      "bytes": 6834,
+      "sha256": "9944c1726ebcc38fdf1497100f8b9b6ead63513520445cc99e2abd99726654d5"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/interface-engineering-review.json",
+      "bytes": 6228,
+      "sha256": "363a6eb73fcc5ab916eeb4253ed353423b636b3d009ebd544e77513cfe009f9b"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/manufacturing-reconciliation.json",
+      "bytes": 3158,
+      "sha256": "1fdf81719bcebadc50268bbbab7afe8fac4359f501dd991f893c7e2984c6d5ee"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/model-path-validation.json",
+      "bytes": 20522,
+      "sha256": "4f3785f532c6a8466e11f121c1374d1f5b36537fb851f5af2a173b0857478c4b"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/original-component-comparison.json",
+      "bytes": 760,
+      "sha256": "96cfa111d398a7bae292afca8e1dee69a934f146d029ee18ef0f8c105660b2b6"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/run_design_review.json",
+      "bytes": 4289,
+      "sha256": "867b9c49ce2a9a50e5bde753cb3298fea2fc114c82bdf488f551837b4368fad0"
+    },
+    {
+      "path": "Verification/Qwiic_2026-10-09/validate_for_manufacturing.json",
+      "bytes": 377,
+      "sha256": "a83370762899d8364097c5024ff8c3f9bafa5679c09f8e6661f8783e6502cc15"
+    },
+    {
       "path": "Verification/REVIEW_REPORT.md",
-      "bytes": 12976,
-      "sha256": "a281c79bf875158096da0c7de59ff3736acf4dc11f9ee044f6062a9e6a3f21c7"
+      "bytes": 8757,
+      "sha256": "a4b8d268d88a4fe9978501f2be4888183052bd98f84557873ba63841ae12fe6c"
     },
     {
       "path": "Verification/Recheck_2026-10-09/aggregate-adjudication.json",
@@ -484,6 +629,16 @@
       "sha256": "87eccdbfa7ea70d7ba2449d20b2a40c9156c4497eef8f559885cb1eb849f32fe"
     },
     {
+      "path": "Verification/Recheck_2026-10-09/native-position-comparison.json",
+      "bytes": 273,
+      "sha256": "d11722af22a1d6231098d99fa07732a503fdb440e91b43da4030a16312f6e9a0"
+    },
+    {
+      "path": "Verification/Recheck_2026-10-09/native-positions.csv",
+      "bytes": 15040,
+      "sha256": "555882c746c5e2bc52b473fbf7695da78bec6d2a111eed51b59265bde25a0291"
+    },
+    {
       "path": "Verification/Recheck_2026-10-09/native/1-drc.json",
       "bytes": 804,
       "sha256": "c0795aa890d93dad26dd342ae442e8d80f0dde289dc311db5ddeb3ef6a058c3e"
@@ -507,16 +662,6 @@
       "path": "Verification/Recheck_2026-10-09/native/board.xml",
       "bytes": 6529755,
       "sha256": "393b04a7e5cb65477f9f623c9e26d97770153da45fa9a22ec2fa84c0ee0132b0"
-    },
-    {
-      "path": "Verification/Recheck_2026-10-09/native-position-comparison.json",
-      "bytes": 273,
-      "sha256": "d11722af22a1d6231098d99fa07732a503fdb440e91b43da4030a16312f6e9a0"
-    },
-    {
-      "path": "Verification/Recheck_2026-10-09/native-positions.csv",
-      "bytes": 15040,
-      "sha256": "555882c746c5e2bc52b473fbf7695da78bec6d2a111eed51b59265bde25a0291"
     },
     {
       "path": "Verification/Recheck_2026-10-09/power-3V3.png",

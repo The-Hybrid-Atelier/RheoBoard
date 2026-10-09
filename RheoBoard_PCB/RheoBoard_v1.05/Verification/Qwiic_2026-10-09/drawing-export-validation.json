@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Manufacturing/Drawings/RheoBoard_v1.05_schematic.pdf",
+    "pages": 1,
+    "sha256": "aa2129982ede0e938c9abaceef07d44532c2bc59ae45af7758770e59f07bfe72",
+    "matches_native_source": true
+  },
+  {
+    "path": "Manufacturing/Drawings/RheoBoard_v1.05_assembly.pdf",
+    "pages": 1,
+    "sha256": "9ef8fc4d189b47d69b77e6ec9fa44cb3855d41f89fa8609df9be9d3eadf63d07",
+    "matches_native_source": true
+  },
+  {
+    "path": "Manufacturing/Drawings/RheoBoard_v1.05_front_copper.pdf",
+    "pages": 1,
+    "sha256": "f8d4e8dc1154bed15f79120123368c535a296c84e4bbf8971641e719c0f1d140",
+    "matches_native_source": true
+  },
+  {
+    "path": "Manufacturing/Drawings/RheoBoard_v1.05_back_copper.pdf",
+    "pages": 1,
+    "sha256": "087eaa10eee0eef5e616249f3f95727913cf97b74e0d8c3c69dd7c3721d18b89",
+    "matches_native_source": true
+  },
+  {
+    "path": "Manufacturing/Drawings/RheoBoard_v1.05_soldermask.pdf",
+    "pages": 1,
+    "sha256": "95577ec7c8fe51f2a9b163e14d924a30c8679b9ad773e0c2799b99fb5dbd0557",
+    "matches_native_source": true
+  }
+]

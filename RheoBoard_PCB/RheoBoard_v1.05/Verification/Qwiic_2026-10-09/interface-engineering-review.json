@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-09",
+  "reviewer": "independent kicad_qwiic_review agent",
+  "stage": "proposed-circuit review; final saved CAD not yet handed off",
+  "scope": "Four standard Qwiic connectors: J9 to separately powered SparkFun WRL-15663 master, other three to locally powered sensor expansion. Read-only; no CAD mutations.",
+  "part": "Texas Instruments TCA9517ADGKR, DGK 8-pin VSSOP",
+  "initial_orientation_finding": {
+    "severity": "must correct before acceptance",
+    "description": "Local MPR sensor on buffer B side lacks guaranteed logic-low compatibility.",
+    "mpr_vol_max_v_at_3v3": 0.66,
+    "buffer_b_vilc_limit_v": 0.45,
+    "resolution": "Put local sensor bus on A and specified ESP32 master on B. Root and owner notified."
+  },
+  "accepted_proposed_pinmap_top_view": {
+    "1": "VCCA: local +3V3",
+    "2": "SCLA: local SCL",
+    "3": "SDAA: local SDA",
+    "4": "GND: common ground",
+    "5": "EN: HOST_3V3 (same as VCCB)",
+    "6": "SDAB: HOST_SDA",
+    "7": "SCLB: HOST_SCL",
+    "8": "VCCB: HOST_3V3"
+  },
+  "required_passives": [
+    "100 nF local VCCA bypass and 100 nF host VCCB bypass close to physical pins",
+    "One 4.7 kohm pullup per host signal to HOST_3V3; existing local R15/R20 pullups remain",
+    "Optional 10 kohm HOST_3V3-to-GND discharge resistor is compatible; adds 0.33 mA nominal host load"
+  ],
+  "logic_checks": {
+    "local_MPR_to_buffer_A": "0.2*local VDD maximum sensor low < 0.3*local VCCA buffer input threshold",
+    "buffer_A_to_local": "0.2 V maximum at 6 mA; acceptable to local PCA9685/TCA9534A inputs",
+    "ESP32_to_buffer_B": "ESP32 published VOL maximum 0.1*VDD = 0.33 V nominal < 0.45 V input contention limit",
+    "buffer_B_to_ESP32": "0.60 V maximum < ESP32 VIL maximum 0.25*VDD = 0.825 V nominal",
+    "ESP32_current_caveat": "Do not describe 28 mA as guaranteed at VOL 0.33 V: the separate 28 mA typical sink-current line is tested at 0.495 V. Keep modest pullup loading.",
+    "unrelated_local_startup": "U5 sensor reset/ramp finding remains open; this interface does not repair it"
+  },
+  "power_states": [
+    {"host": "off", "board": "off", "expected": "No powered interface; disconnected supplies remain separate"},
+    {"host": "on", "board": "off", "expected": "VCCB powered, VCCA zero: buffer outputs high impedance; host cannot drive local unpowered bus through buffer"},
+    {"host": "off", "board": "on", "expected": "VCCB and EN zero: buffer outputs high impedance; local bus stays powered independently and no watchdog change resets outputs"},
+    {"host": "on", "board": "on", "expected": "Bidirectional I2C operation with two independently powered pullup domains and common ground"}
+  ],
+  "power_state_limit": "These are datasheet-backed circuit expectations, not measured leakage, hot-plug, brownout or transient results. Power-up driver thresholds are not a guarantee of valid communication during rail ramps.",
+  "external_multiplexer": {
+    "supported_plan": "TCA9548A with only one RheoBoard channel enabled at a time",
+    "reason": "Simultaneous branches connect B-side buffers together, which TI prohibits, and duplicate sensor addresses also collide",
+    "required": "No upstream B-side repeater or rise-time accelerator. Total selected host-segment pullup current should stay within 3 mA and preserve rise-time limits. Selected branch effective pullup resistance must be at least 2.2 kohm including module resistors and tolerances, at host 3.0-3.6 V.",
+    "pass_switch_check": "TCA9548A RON maximum 30 ohm at 3.0-3.6 V; branch 4.7 kohm contributes about 21 mV worst conservative drop at 3.3 V. Its own 0.4 V/3 mA ACK plus branch drop remains below 0.45 V.",
+    "branch_pullup_derivation": "At VDD=3.6 V, allow less than 0.05 V added drop beyond the mux's 0.40 V ACK: R_branch > (3.6-0.4)*30/0.05 = 1920 ohm. Require at least 2200 ohm effective including resistor tolerances for margin; at that lower bound, drop <=43.64 mV and low <=0.44364 V. Total pullup current <=3 mA alone does not establish this branch-specific bound. Existing 4.7 kohm board pullups meet it; extra module resistors must be combined in parallel before acceptance.",
+    "caveat": "Unknown mux module pullups, cable capacitance and other upstream modules require system-level checking. No blanket arbitrary-Qwiic-chain compatibility claim."
+  },
+  "host_identity": {
+    "board": "SparkFun Thing Plus ESP32 WROOM Micro-B WRL-15663, v20 schematic",
+    "qwiic": "Pin 1 GND, pin 2 3.3 V, pin 3 SDA (GPIO23), pin 4 SCL (GPIO22)",
+    "pullups": "No discrete SDA/SCL pullups shown in the manufacturer schematic",
+    "regulator": "AP2112K-3.3; Qwiic power directly connected to its output"
+  },
+  "sources": [
+    {"url": "https://www.ti.com/lit/ds/symlink/tca9517a.pdf", "document": "SCPS245E, October 2025", "sections": "4 pinout; 5.3/5.5 logic; 8.2.2.2 contention; 9 sequencing; 12 removal of VCCA<VCCB restriction"},
+    {"url": "https://automation.honeywell.com/content/dam/honeywell-edam/sps/ast/en-us/campaigns/pressure-sensors/documents/sps-siot-mpr-series-datasheet-32332628-ciid-172626.pdf", "sections": "Table 17 p15: output low maximum 0.2 VDD"},
+    {"url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf", "document": "ESP32 v5.2", "sections": "5.3 p52: DC logic thresholds"},
+    {"url": "https://www.ti.com/lit/ds/symlink/tca9548a.pdf", "document": "SCPS207H", "sections": "5.5: SDA sink and RON; one-channel software constraint"},
+    {"url": "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf", "sections": "Table 14 p38: local input/sink thresholds"},
+    {"url": "https://www.ti.com/lit/ds/symlink/tca9534a.pdf", "sections": "6.3 and 6.5: local input/sink thresholds"},
+    {"url": "https://cdn.sparkfun.com/assets/6/d/c/6/c/ESP32_Thing_Plus_Schematic.pdf", "document": "v20, 2020-01-09", "method": "Rendered and inspected complete schematic; local source BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf"},
+    {"url": "https://www.sparkfun.com/qwiic", "sections": "Qwiic connector standard"}
+  ],
+  "final_CAD_acceptance": "Pending owner saved-design handoff, fresh native ERC/DRC, netlist and IPC pin reconciliation, layout/pad review and manufacturing synchronization"
+}

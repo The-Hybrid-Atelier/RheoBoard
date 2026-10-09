@@ -1,0 +1,4365 @@
+{
+  "board_source": "stable_live_ipc_snapshot",
+  "complete": false,
+  "fab_house": "jlcpcb",
+  "files": [
+    "BOM-1.csv",
+    "CPL-1.csv",
+    "gerbers/1-B_Cu.gbl",
+    "gerbers/1-B_Mask.gbs",
+    "gerbers/1-B_Paste.gbp",
+    "gerbers/1-B_Silkscreen.gbo",
+    "gerbers/1-Edge_Cuts.gm1",
+    "gerbers/1-F_Cu.gtl",
+    "gerbers/1-F_Mask.gts",
+    "gerbers/1-F_Paste.gtp",
+    "gerbers/1-F_Silkscreen.gto",
+    "gerbers/1-NPTH.drl",
+    "gerbers/1-PTH.drl",
+    "gerbers/1-job.gbrjob"
+  ],
+  "files_generated": [
+    {
+      "files": [
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-B_Cu.gbl",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-B_Mask.gbs",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-B_Paste.gbp",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-B_Silkscreen.gbo",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-Edge_Cuts.gm1",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-F_Cu.gtl",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-F_Mask.gts",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-F_Paste.gtp",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-F_Silkscreen.gto",
+        "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-job.gbrjob"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu",
+        "F.Mask",
+        "B.Mask",
+        "F.SilkS",
+        "B.SilkS",
+        "F.Paste",
+        "B.Paste",
+        "Edge.Cuts"
+      ],
+      "path": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers",
+      "type": "gerber"
+    },
+    {
+      "path": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-NPTH.drl",
+      "type": "drill"
+    },
+    {
+      "path": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/gerbers/1-PTH.drl",
+      "type": "drill"
+    },
+    {
+      "format": "csv",
+      "path": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/CPL-1.csv",
+      "placement_orientation": {
+        "applied_corrections": [],
+        "geometry": [
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 70.664255,
+            "designator": "C1",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 70.664255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 72.8,
+            "designator": "C2",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 72.8
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 134.2644,
+            "anchor_y_mm": 77.4192,
+            "designator": "C3",
+            "midpoint_x_mm": 134.2644,
+            "midpoint_y_mm": 77.4192
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 134.435624,
+            "anchor_y_mm": 64.818255,
+            "designator": "C4",
+            "midpoint_x_mm": 134.435624,
+            "midpoint_y_mm": 64.818255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 106.813362,
+            "anchor_y_mm": 70.3652,
+            "designator": "C5",
+            "midpoint_x_mm": 106.813362,
+            "midpoint_y_mm": 70.3652
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 58.018255,
+            "designator": "C8",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 58.018255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 60.19175,
+            "designator": "C9",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 60.19175
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 103.0,
+            "anchor_y_mm": 63.71,
+            "designator": "C15",
+            "midpoint_x_mm": 103.0,
+            "midpoint_y_mm": 63.71
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 103.0,
+            "anchor_y_mm": 65.865712,
+            "designator": "C16",
+            "midpoint_x_mm": 103.0,
+            "midpoint_y_mm": 65.865712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 164.3875,
+            "anchor_y_mm": 83.1,
+            "designator": "C22",
+            "midpoint_x_mm": 164.3875,
+            "midpoint_y_mm": 83.1
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 94.766,
+            "anchor_y_mm": 106.143901,
+            "designator": "C23",
+            "midpoint_x_mm": 94.766,
+            "midpoint_y_mm": 106.143901
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 94.4506,
+            "anchor_y_mm": 90.398501,
+            "designator": "C24",
+            "midpoint_x_mm": 94.4506,
+            "midpoint_y_mm": 90.398501
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 107.815,
+            "anchor_y_mm": 106.0366,
+            "designator": "C25",
+            "midpoint_x_mm": 107.815,
+            "midpoint_y_mm": 106.0366
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 107.8772,
+            "anchor_y_mm": 90.500101,
+            "designator": "C26",
+            "midpoint_x_mm": 107.8772,
+            "midpoint_y_mm": 90.500101
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 149.562793,
+            "anchor_y_mm": 84.812169,
+            "designator": "C27",
+            "midpoint_x_mm": 149.562793,
+            "midpoint_y_mm": 84.812169
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 143.4875,
+            "anchor_y_mm": 81.1,
+            "designator": "C28",
+            "midpoint_x_mm": 143.4875,
+            "midpoint_y_mm": 81.1
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 162.15,
+            "anchor_y_mm": 67.619364,
+            "designator": "C29",
+            "midpoint_x_mm": 162.15,
+            "midpoint_y_mm": 67.619364
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 160.65,
+            "anchor_y_mm": 67.622,
+            "designator": "C30",
+            "midpoint_x_mm": 160.65,
+            "midpoint_y_mm": 67.622
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 179.05,
+            "anchor_y_mm": 109.675,
+            "designator": "C31",
+            "midpoint_x_mm": 179.05,
+            "midpoint_y_mm": 109.675
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 179.2,
+            "anchor_y_mm": 104.6,
+            "designator": "C32",
+            "midpoint_x_mm": 179.2,
+            "midpoint_y_mm": 104.6
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 146.8,
+            "anchor_y_mm": 109.5,
+            "designator": "C33",
+            "midpoint_x_mm": 146.8,
+            "midpoint_y_mm": 109.5
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 146.8,
+            "anchor_y_mm": 105.2,
+            "designator": "C34",
+            "midpoint_x_mm": 146.8,
+            "midpoint_y_mm": 105.2
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 127.419042,
+            "anchor_y_mm": 137.8712,
+            "designator": "C42",
+            "midpoint_x_mm": 127.419042,
+            "midpoint_y_mm": 137.8712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 140.0915,
+            "anchor_y_mm": 145.600005,
+            "designator": "C43",
+            "midpoint_x_mm": 140.0915,
+            "midpoint_y_mm": 145.600005
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 159.3088,
+            "anchor_y_mm": 137.8712,
+            "designator": "C44",
+            "midpoint_x_mm": 159.3088,
+            "midpoint_y_mm": 137.8712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 172.2915,
+            "anchor_y_mm": 145.400005,
+            "designator": "C45",
+            "midpoint_x_mm": 172.2915,
+            "midpoint_y_mm": 145.400005
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 143.4875,
+            "anchor_y_mm": 79.45,
+            "designator": "C46",
+            "midpoint_x_mm": 143.4875,
+            "midpoint_y_mm": 79.45
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 164.3875,
+            "anchor_y_mm": 81.576,
+            "designator": "C47",
+            "midpoint_x_mm": 164.3875,
+            "midpoint_y_mm": 81.576
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 77.554255,
+            "designator": "C52",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 77.554255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 79.664255,
+            "designator": "C53",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 79.664255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 64.908255,
+            "designator": "C54",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 64.908255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 137.716707,
+            "anchor_y_mm": 74.722565,
+            "designator": "C55",
+            "midpoint_x_mm": 137.716707,
+            "midpoint_y_mm": 74.722565
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 135.180977,
+            "anchor_y_mm": 79.887874,
+            "designator": "C56",
+            "midpoint_x_mm": 135.180977,
+            "midpoint_y_mm": 79.887874
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.7625,
+            "anchor_y_mm": 67.018255,
+            "designator": "C57",
+            "midpoint_x_mm": 130.7625,
+            "midpoint_y_mm": 67.018255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 137.710928,
+            "anchor_y_mm": 62.076565,
+            "designator": "C58",
+            "midpoint_x_mm": 137.710928,
+            "midpoint_y_mm": 62.076565
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 135.352201,
+            "anchor_y_mm": 67.286929,
+            "designator": "C59",
+            "midpoint_x_mm": 135.352201,
+            "midpoint_y_mm": 67.286929
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 103.0,
+            "anchor_y_mm": 70.6,
+            "designator": "C60",
+            "midpoint_x_mm": 103.0,
+            "midpoint_y_mm": 70.6
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 103.0,
+            "anchor_y_mm": 72.71,
+            "designator": "C61",
+            "midpoint_x_mm": 103.0,
+            "midpoint_y_mm": 72.71
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 110.15,
+            "anchor_y_mm": 67.76831,
+            "designator": "C62",
+            "midpoint_x_mm": 110.15,
+            "midpoint_y_mm": 67.76831
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 107.089701,
+            "anchor_y_mm": 73.05,
+            "designator": "C63",
+            "midpoint_x_mm": 107.089701,
+            "midpoint_y_mm": 73.05
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 148.0,
+            "anchor_y_mm": 52.5,
+            "designator": "C64",
+            "midpoint_x_mm": 148.0,
+            "midpoint_y_mm": 52.5
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 140.5,
+            "anchor_y_mm": 43.5,
+            "designator": "C65",
+            "midpoint_x_mm": 140.5,
+            "midpoint_y_mm": 43.5
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 144.25,
+            "anchor_y_mm": 46.6,
+            "designator": "C66",
+            "midpoint_x_mm": 144.25,
+            "midpoint_y_mm": 46.6
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 146.8,
+            "anchor_y_mm": 55.3,
+            "designator": "C67",
+            "midpoint_x_mm": 146.8,
+            "midpoint_y_mm": 55.3
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 189.0,
+            "anchor_y_mm": 109.0,
+            "designator": "C68",
+            "midpoint_x_mm": 189.0,
+            "midpoint_y_mm": 109.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 193.0,
+            "anchor_y_mm": 109.0,
+            "designator": "C69",
+            "midpoint_x_mm": 193.0,
+            "midpoint_y_mm": 109.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 133.8,
+            "anchor_y_mm": 47.4,
+            "designator": "D1",
+            "midpoint_x_mm": 133.8,
+            "midpoint_y_mm": 47.4
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 158.445,
+            "anchor_y_mm": 53.132377,
+            "designator": "D6",
+            "midpoint_x_mm": 158.445,
+            "midpoint_y_mm": 53.132377
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 155.075,
+            "anchor_y_mm": 53.132377,
+            "designator": "D7",
+            "midpoint_x_mm": 155.075,
+            "midpoint_y_mm": 53.132377
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 151.8,
+            "anchor_y_mm": 53.132377,
+            "designator": "D8",
+            "midpoint_x_mm": 151.8,
+            "midpoint_y_mm": 53.132377
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 169.8244,
+            "anchor_y_mm": 95.7834,
+            "designator": "D11",
+            "midpoint_x_mm": 169.8244,
+            "midpoint_y_mm": 95.7834
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 137.795,
+            "anchor_y_mm": 95.7834,
+            "designator": "D12",
+            "midpoint_x_mm": 137.795,
+            "midpoint_y_mm": 95.7834
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 170.28,
+            "anchor_y_mm": 100.75,
+            "designator": "D13",
+            "midpoint_x_mm": 170.28,
+            "midpoint_y_mm": 100.75
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 138.3125,
+            "anchor_y_mm": 100.75,
+            "designator": "D14",
+            "midpoint_x_mm": 138.3125,
+            "midpoint_y_mm": 100.75
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 162.15,
+            "anchor_y_mm": 71.178,
+            "designator": "D15",
+            "midpoint_x_mm": 162.15,
+            "midpoint_y_mm": 71.178
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 125.175,
+            "anchor_y_mm": 132.9944,
+            "designator": "D16",
+            "midpoint_x_mm": 125.175,
+            "midpoint_y_mm": 132.9944
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 125.715283,
+            "anchor_y_mm": 137.8262,
+            "designator": "D17",
+            "midpoint_x_mm": 125.715283,
+            "midpoint_y_mm": 137.8262
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 157.675,
+            "anchor_y_mm": 133.4516,
+            "designator": "D18",
+            "midpoint_x_mm": 157.675,
+            "midpoint_y_mm": 133.4516
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 157.6832,
+            "anchor_y_mm": 137.9162,
+            "designator": "D19",
+            "midpoint_x_mm": 157.6832,
+            "midpoint_y_mm": 137.9162
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 134.480436,
+            "anchor_y_mm": 71.43591,
+            "designator": "D33",
+            "midpoint_x_mm": 134.480436,
+            "midpoint_y_mm": 71.43591
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 134.506258,
+            "anchor_y_mm": 58.808263,
+            "designator": "D34",
+            "midpoint_x_mm": 134.506258,
+            "midpoint_y_mm": 58.808263
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 106.731895,
+            "anchor_y_mm": 64.459454,
+            "designator": "D35",
+            "midpoint_x_mm": 106.731895,
+            "midpoint_y_mm": 64.459454
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 146.0,
+            "anchor_y_mm": 42.3,
+            "designator": "D36",
+            "midpoint_x_mm": 146.0,
+            "midpoint_y_mm": 42.3
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 123.4,
+            "anchor_y_mm": 48.01,
+            "designator": "F1",
+            "midpoint_x_mm": 123.4,
+            "midpoint_y_mm": 48.01
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 95.2,
+            "anchor_y_mm": 44.6,
+            "designator": "H1",
+            "midpoint_x_mm": 95.2,
+            "midpoint_y_mm": 44.6
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 192.4,
+            "anchor_y_mm": 44.6,
+            "designator": "H2",
+            "midpoint_x_mm": 192.4,
+            "midpoint_y_mm": 44.6
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 192.4,
+            "anchor_y_mm": 159.0,
+            "designator": "H3",
+            "midpoint_x_mm": 192.4,
+            "midpoint_y_mm": 159.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 95.2,
+            "anchor_y_mm": 159.0,
+            "designator": "H4",
+            "midpoint_x_mm": 95.2,
+            "midpoint_y_mm": 159.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 98.0,
+            "anchor_y_mm": 136.375,
+            "designator": "J1",
+            "midpoint_x_mm": 98.0,
+            "midpoint_y_mm": 136.375
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 111.48825,
+            "anchor_y_mm": 41.947999,
+            "designator": "J2",
+            "midpoint_x_mm": 111.48825,
+            "midpoint_y_mm": 46.735499
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 191.925,
+            "anchor_y_mm": 88.85,
+            "designator": "J3",
+            "midpoint_x_mm": 191.925,
+            "midpoint_y_mm": 92.6
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 191.925,
+            "anchor_y_mm": 123.825001,
+            "designator": "J9",
+            "midpoint_x_mm": 191.925,
+            "midpoint_y_mm": 123.825001
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 191.925,
+            "anchor_y_mm": 136.375,
+            "designator": "J12",
+            "midpoint_x_mm": 191.925,
+            "midpoint_y_mm": 136.375
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 98.0,
+            "anchor_y_mm": 123.825001,
+            "designator": "J17",
+            "midpoint_x_mm": 98.0,
+            "midpoint_y_mm": 123.825001
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 179.0,
+            "anchor_y_mm": 46.0,
+            "designator": "J18",
+            "midpoint_x_mm": 181.5,
+            "midpoint_y_mm": 46.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 193.179999,
+            "anchor_y_mm": 79.0194,
+            "designator": "JP2",
+            "midpoint_x_mm": 193.179999,
+            "midpoint_y_mm": 79.0194
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 193.179999,
+            "anchor_y_mm": 74.7268,
+            "designator": "JP3",
+            "midpoint_x_mm": 193.179999,
+            "midpoint_y_mm": 74.7268
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 193.179999,
+            "anchor_y_mm": 70.530386,
+            "designator": "JP4",
+            "midpoint_x_mm": 193.179999,
+            "midpoint_y_mm": 70.530386
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 193.167,
+            "anchor_y_mm": 66.5226,
+            "designator": "JP5",
+            "midpoint_x_mm": 193.167,
+            "midpoint_y_mm": 66.5226
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 193.167,
+            "anchor_y_mm": 62.1284,
+            "designator": "JP6",
+            "midpoint_x_mm": 193.167,
+            "midpoint_y_mm": 62.1284
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 193.2178,
+            "anchor_y_mm": 83.7184,
+            "designator": "JP7",
+            "midpoint_x_mm": 193.2178,
+            "midpoint_y_mm": 83.7184
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 125.130622,
+            "anchor_y_mm": 75.486411,
+            "designator": "L1",
+            "midpoint_x_mm": 125.130622,
+            "midpoint_y_mm": 75.486411
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 97.3,
+            "anchor_y_mm": 68.41,
+            "designator": "L2",
+            "midpoint_x_mm": 97.3,
+            "midpoint_y_mm": 68.41
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 125.0819,
+            "anchor_y_mm": 62.836141,
+            "designator": "L5",
+            "midpoint_x_mm": 125.0819,
+            "midpoint_y_mm": 62.836141
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 166.255,
+            "anchor_y_mm": 101.25,
+            "designator": "Q3",
+            "midpoint_x_mm": 166.255,
+            "midpoint_y_mm": 101.25
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 134.3125,
+            "anchor_y_mm": 101.4,
+            "designator": "Q4",
+            "midpoint_x_mm": 134.3125,
+            "midpoint_y_mm": 101.4
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 124.9651,
+            "anchor_y_mm": 142.360005,
+            "designator": "Q8",
+            "midpoint_x_mm": 124.9651,
+            "midpoint_y_mm": 142.360005
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 157.0915,
+            "anchor_y_mm": 142.0875,
+            "designator": "Q10",
+            "midpoint_x_mm": 157.0915,
+            "midpoint_y_mm": 142.0875
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 135.788776,
+            "anchor_y_mm": 77.394945,
+            "designator": "R1",
+            "midpoint_x_mm": 135.788776,
+            "midpoint_y_mm": 77.394945
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 135.975,
+            "anchor_y_mm": 64.825,
+            "designator": "R4",
+            "midpoint_x_mm": 135.975,
+            "midpoint_y_mm": 64.825
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 108.340238,
+            "anchor_y_mm": 70.3652,
+            "designator": "R7",
+            "midpoint_x_mm": 108.340238,
+            "midpoint_y_mm": 70.3652
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 169.457763,
+            "anchor_y_mm": 79.97245,
+            "designator": "R10",
+            "midpoint_x_mm": 169.457763,
+            "midpoint_y_mm": 79.97245
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 166.9,
+            "anchor_y_mm": 82.2,
+            "designator": "R11",
+            "midpoint_x_mm": 166.9,
+            "midpoint_y_mm": 82.2
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 158.0875,
+            "anchor_y_mm": 87.276,
+            "designator": "R13",
+            "midpoint_x_mm": 158.0875,
+            "midpoint_y_mm": 87.276
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 158.0875,
+            "anchor_y_mm": 88.8,
+            "designator": "R14",
+            "midpoint_x_mm": 158.0875,
+            "midpoint_y_mm": 88.8
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 169.4447,
+            "anchor_y_mm": 83.0834,
+            "designator": "R15",
+            "midpoint_x_mm": 169.4447,
+            "midpoint_y_mm": 83.0834
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 94.778754,
+            "anchor_y_mm": 102.76737,
+            "designator": "R16",
+            "midpoint_x_mm": 94.778754,
+            "midpoint_y_mm": 102.76737
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 94.453786,
+            "anchor_y_mm": 86.982572,
+            "designator": "R17",
+            "midpoint_x_mm": 94.453786,
+            "midpoint_y_mm": 86.982572
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 107.801458,
+            "anchor_y_mm": 102.659899,
+            "designator": "R18",
+            "midpoint_x_mm": 107.801458,
+            "midpoint_y_mm": 102.659899
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 107.8992,
+            "anchor_y_mm": 87.087109,
+            "designator": "R19",
+            "midpoint_x_mm": 107.8992,
+            "midpoint_y_mm": 87.087109
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 169.4688,
+            "anchor_y_mm": 81.5594,
+            "designator": "R20",
+            "midpoint_x_mm": 169.4688,
+            "midpoint_y_mm": 81.5594
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 143.2052,
+            "anchor_y_mm": 88.5698,
+            "designator": "R22",
+            "midpoint_x_mm": 143.2052,
+            "midpoint_y_mm": 88.5698
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 148.5646,
+            "anchor_y_mm": 72.2376,
+            "designator": "R23",
+            "midpoint_x_mm": 148.5646,
+            "midpoint_y_mm": 72.2376
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 158.45,
+            "anchor_y_mm": 46.507377,
+            "designator": "R24",
+            "midpoint_x_mm": 158.45,
+            "midpoint_y_mm": 46.507377
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 155.115455,
+            "anchor_y_mm": 46.507377,
+            "designator": "R25",
+            "midpoint_x_mm": 155.115455,
+            "midpoint_y_mm": 46.507377
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 151.8,
+            "anchor_y_mm": 46.507377,
+            "designator": "R26",
+            "midpoint_x_mm": 151.8,
+            "midpoint_y_mm": 46.507377
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 181.5975,
+            "anchor_y_mm": 79.15,
+            "designator": "R29",
+            "midpoint_x_mm": 181.5975,
+            "midpoint_y_mm": 79.15
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 181.5975,
+            "anchor_y_mm": 74.720386,
+            "designator": "R30",
+            "midpoint_x_mm": 181.5975,
+            "midpoint_y_mm": 74.720386
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 181.5975,
+            "anchor_y_mm": 70.597109,
+            "designator": "R31",
+            "midpoint_x_mm": 181.5975,
+            "midpoint_y_mm": 70.597109
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 181.5975,
+            "anchor_y_mm": 66.45,
+            "designator": "R32",
+            "midpoint_x_mm": 181.5975,
+            "midpoint_y_mm": 66.45
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 181.5975,
+            "anchor_y_mm": 62.15,
+            "designator": "R33",
+            "midpoint_x_mm": 181.5975,
+            "midpoint_y_mm": 62.15
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 181.637501,
+            "anchor_y_mm": 83.62728,
+            "designator": "R34",
+            "midpoint_x_mm": 181.637501,
+            "midpoint_y_mm": 83.62728
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 162.2044,
+            "anchor_y_mm": 102.362,
+            "designator": "R35",
+            "midpoint_x_mm": 162.2044,
+            "midpoint_y_mm": 102.362
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.746558,
+            "anchor_y_mm": 137.8712,
+            "designator": "R36",
+            "midpoint_x_mm": 130.746558,
+            "midpoint_y_mm": 137.8712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 162.2298,
+            "anchor_y_mm": 100.8126,
+            "designator": "R37",
+            "midpoint_x_mm": 162.2298,
+            "midpoint_y_mm": 100.8126
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.1242,
+            "anchor_y_mm": 100.9396,
+            "designator": "R38",
+            "midpoint_x_mm": 130.1242,
+            "midpoint_y_mm": 100.9396
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 170.28,
+            "anchor_y_mm": 102.318918,
+            "designator": "R39",
+            "midpoint_x_mm": 170.28,
+            "midpoint_y_mm": 102.318918
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 138.3125,
+            "anchor_y_mm": 102.4,
+            "designator": "R40",
+            "midpoint_x_mm": 138.3125,
+            "midpoint_y_mm": 102.4
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 130.1496,
+            "anchor_y_mm": 102.4128,
+            "designator": "R42",
+            "midpoint_x_mm": 130.1496,
+            "midpoint_y_mm": 102.4128
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 160.65,
+            "anchor_y_mm": 71.178,
+            "designator": "R44",
+            "midpoint_x_mm": 160.65,
+            "midpoint_y_mm": 71.178
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 137.716707,
+            "anchor_y_mm": 73.05,
+            "designator": "R45",
+            "midpoint_x_mm": 137.716707,
+            "midpoint_y_mm": 73.05
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 134.346679,
+            "anchor_y_mm": 73.05,
+            "designator": "R46",
+            "midpoint_x_mm": 134.346679,
+            "midpoint_y_mm": 73.05
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 129.0828,
+            "anchor_y_mm": 137.8712,
+            "designator": "R51",
+            "midpoint_x_mm": 129.0828,
+            "midpoint_y_mm": 137.8712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 124.0028,
+            "anchor_y_mm": 137.795,
+            "designator": "R54",
+            "midpoint_x_mm": 124.0028,
+            "midpoint_y_mm": 137.795
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 163.2,
+            "anchor_y_mm": 137.8,
+            "designator": "R55",
+            "midpoint_x_mm": 163.2,
+            "midpoint_y_mm": 137.8
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 161.16,
+            "anchor_y_mm": 137.8,
+            "designator": "R56",
+            "midpoint_x_mm": 161.16,
+            "midpoint_y_mm": 137.8
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 156.0576,
+            "anchor_y_mm": 137.8712,
+            "designator": "R59",
+            "midpoint_x_mm": 156.0576,
+            "midpoint_y_mm": 137.8712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 137.710928,
+            "anchor_y_mm": 60.44175,
+            "designator": "R60",
+            "midpoint_x_mm": 137.710928,
+            "midpoint_y_mm": 60.44175
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 110.15,
+            "anchor_y_mm": 66.115712,
+            "designator": "R61",
+            "midpoint_x_mm": 110.15,
+            "midpoint_y_mm": 66.115712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 137.716707,
+            "anchor_y_mm": 71.422699,
+            "designator": "R73",
+            "midpoint_x_mm": 137.716707,
+            "midpoint_y_mm": 71.422699
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 134.346679,
+            "anchor_y_mm": 60.44175,
+            "designator": "R74",
+            "midpoint_x_mm": 134.346679,
+            "midpoint_y_mm": 60.44175
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 137.710928,
+            "anchor_y_mm": 58.806935,
+            "designator": "R75",
+            "midpoint_x_mm": 137.710928,
+            "midpoint_y_mm": 58.806935
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 106.584179,
+            "anchor_y_mm": 66.115712,
+            "designator": "R76",
+            "midpoint_x_mm": 106.584179,
+            "midpoint_y_mm": 66.115712
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 110.15,
+            "anchor_y_mm": 64.463114,
+            "designator": "R77",
+            "midpoint_x_mm": 110.15,
+            "midpoint_y_mm": 64.463114
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 139.0,
+            "anchor_y_mm": 46.5,
+            "designator": "R78",
+            "midpoint_x_mm": 139.0,
+            "midpoint_y_mm": 46.5
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 140.0,
+            "anchor_y_mm": 50.5,
+            "designator": "R79",
+            "midpoint_x_mm": 140.0,
+            "midpoint_y_mm": 50.5
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 141.5,
+            "anchor_y_mm": 53.7,
+            "designator": "R80",
+            "midpoint_x_mm": 141.5,
+            "midpoint_y_mm": 53.7
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 148.5,
+            "anchor_y_mm": 50.0,
+            "designator": "R81",
+            "midpoint_x_mm": 148.5,
+            "midpoint_y_mm": 50.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 190.0,
+            "anchor_y_mm": 117.0,
+            "designator": "R82",
+            "midpoint_x_mm": 190.0,
+            "midpoint_y_mm": 117.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 192.5,
+            "anchor_y_mm": 117.0,
+            "designator": "R83",
+            "midpoint_x_mm": 192.5,
+            "midpoint_y_mm": 117.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 195.5,
+            "anchor_y_mm": 114.0,
+            "designator": "R84",
+            "midpoint_x_mm": 195.5,
+            "midpoint_y_mm": 114.0
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 98.842,
+            "anchor_y_mm": 106.9814,
+            "designator": "SW1",
+            "midpoint_x_mm": 98.842,
+            "midpoint_y_mm": 106.9814
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 98.5266,
+            "anchor_y_mm": 91.186,
+            "designator": "SW2",
+            "midpoint_x_mm": 98.5266,
+            "midpoint_y_mm": 91.186
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 111.851,
+            "anchor_y_mm": 106.8866,
+            "designator": "SW3",
+            "midpoint_x_mm": 111.851,
+            "midpoint_y_mm": 106.8866
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 111.9632,
+            "anchor_y_mm": 91.2876,
+            "designator": "SW4",
+            "midpoint_x_mm": 111.9632,
+            "midpoint_y_mm": 91.2876
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 148.45,
+            "anchor_y_mm": 88.7222,
+            "designator": "TP2",
+            "midpoint_x_mm": 148.45,
+            "midpoint_y_mm": 88.7222
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 146.084758,
+            "anchor_y_mm": 88.725664,
+            "designator": "TP3",
+            "midpoint_x_mm": 146.084758,
+            "midpoint_y_mm": 88.725664
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 184.787499,
+            "anchor_y_mm": 79.0448,
+            "designator": "TP4",
+            "midpoint_x_mm": 184.787499,
+            "midpoint_y_mm": 79.0448
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 184.787499,
+            "anchor_y_mm": 74.7014,
+            "designator": "TP5",
+            "midpoint_x_mm": 184.787499,
+            "midpoint_y_mm": 74.7014
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 184.787499,
+            "anchor_y_mm": 70.5358,
+            "designator": "TP6",
+            "midpoint_x_mm": 184.787499,
+            "midpoint_y_mm": 70.5358
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 184.787499,
+            "anchor_y_mm": 66.548,
+            "designator": "TP7",
+            "midpoint_x_mm": 184.787499,
+            "midpoint_y_mm": 66.548
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 184.7875,
+            "anchor_y_mm": 62.144646,
+            "designator": "TP8",
+            "midpoint_x_mm": 184.7875,
+            "midpoint_y_mm": 62.144646
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 184.827501,
+            "anchor_y_mm": 83.548126,
+            "designator": "TP9",
+            "midpoint_x_mm": 184.827501,
+            "midpoint_y_mm": 83.548126
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 131.9625,
+            "anchor_y_mm": 75.164255,
+            "designator": "U1",
+            "midpoint_x_mm": 131.9625,
+            "midpoint_y_mm": 75.164255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 131.9625,
+            "anchor_y_mm": 62.518255,
+            "designator": "U2",
+            "midpoint_x_mm": 131.9625,
+            "midpoint_y_mm": 62.518255
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 104.2,
+            "anchor_y_mm": 68.21,
+            "designator": "U3",
+            "midpoint_x_mm": 104.2,
+            "midpoint_y_mm": 68.21
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 165.07,
+            "anchor_y_mm": 86.735,
+            "designator": "U4",
+            "midpoint_x_mm": 165.07,
+            "midpoint_y_mm": 86.735
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 145.67,
+            "anchor_y_mm": 84.9,
+            "designator": "U5",
+            "midpoint_x_mm": 145.67,
+            "midpoint_y_mm": 84.9
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 154.6,
+            "anchor_y_mm": 69.4,
+            "designator": "U7",
+            "midpoint_x_mm": 154.6,
+            "midpoint_y_mm": 69.4
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 144.083,
+            "anchor_y_mm": 156.76,
+            "designator": "U9",
+            "midpoint_x_mm": 134.798,
+            "midpoint_y_mm": 156.21875
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 176.283,
+            "anchor_y_mm": 156.76,
+            "designator": "U10",
+            "midpoint_x_mm": 166.998,
+            "midpoint_y_mm": 156.21875
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 144.5,
+            "anchor_y_mm": 50.5,
+            "designator": "U12",
+            "midpoint_x_mm": 144.5,
+            "midpoint_y_mm": 50.5
+          },
+          {
+            "algorithm": "kicad_native_board_pad_boxes_union_center",
+            "anchor_x_mm": 190.75,
+            "anchor_y_mm": 112.0,
+            "designator": "U13",
+            "midpoint_x_mm": 190.75,
+            "midpoint_y_mm": 112.0
+          }
+        ],
+        "note": "Structural export does not prove physical placement orientation. Inspect every component in JLCPCB Component Placements before ordering.",
+        "physical_validation": false,
+        "policies": [
+          {
+            "policy_id": "konnect-jlcpcb-cpl-v1",
+            "precedence": "built-in footprint first-match after project policy",
+            "provenance": "Konnect issue #518: independently observed KiCad 10 export and JLCPCB Component Placements evidence, 2026-09-10",
+            "schema_version": 1
+          }
+        ],
+        "status": "PREVIEW_REQUIRED",
+        "unmatched_footprints": [
+          {
+            "designator": "C1",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C2",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C3",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C4",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C5",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C8",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C9",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C15",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C16",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C22",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C23",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C24",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C25",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C26",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C27",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C28",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C29",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C30",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C31",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C32",
+            "footprint": "CP_Elec_6.3x5.8",
+            "side": "top"
+          },
+          {
+            "designator": "C33",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C34",
+            "footprint": "CP_Elec_6.3x5.8",
+            "side": "top"
+          },
+          {
+            "designator": "C42",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C43",
+            "footprint": "CP_Elec_6.3x5.8",
+            "side": "top"
+          },
+          {
+            "designator": "C44",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C45",
+            "footprint": "CP_Elec_6.3x5.8",
+            "side": "top"
+          },
+          {
+            "designator": "C46",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C47",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C52",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C53",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C54",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C55",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C56",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C57",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C58",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C59",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C60",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C61",
+            "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C62",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C63",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C64",
+            "footprint": "C_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "C65",
+            "footprint": "C_0805_2012Metric",
+            "side": "top"
+          },
+          {
+            "designator": "C66",
+            "footprint": "C_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "C67",
+            "footprint": "C_1206_3216Metric",
+            "side": "top"
+          },
+          {
+            "designator": "C68",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "C69",
+            "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D1",
+            "footprint": "D_SMC",
+            "side": "top"
+          },
+          {
+            "designator": "D6",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D7",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D8",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D11",
+            "footprint": "D_SMA",
+            "side": "top"
+          },
+          {
+            "designator": "D12",
+            "footprint": "D_SMA",
+            "side": "top"
+          },
+          {
+            "designator": "D13",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D14",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D15",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D16",
+            "footprint": "D_SMA",
+            "side": "top"
+          },
+          {
+            "designator": "D17",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D18",
+            "footprint": "D_SMA",
+            "side": "top"
+          },
+          {
+            "designator": "D19",
+            "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "D33",
+            "footprint": "LED_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "D34",
+            "footprint": "LED_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "D35",
+            "footprint": "LED_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "D36",
+            "footprint": "D_SMB",
+            "side": "top"
+          },
+          {
+            "designator": "F1",
+            "footprint": "Fuse_JDT_JFC1032TS_10.25x3.2mm",
+            "side": "top"
+          },
+          {
+            "designator": "H1",
+            "footprint": "MountingHole_3.5mm_Pad",
+            "side": "top"
+          },
+          {
+            "designator": "H2",
+            "footprint": "MountingHole_3.5mm_Pad",
+            "side": "top"
+          },
+          {
+            "designator": "H3",
+            "footprint": "MountingHole_3.5mm_Pad",
+            "side": "top"
+          },
+          {
+            "designator": "H4",
+            "footprint": "MountingHole_3.5mm_Pad",
+            "side": "top"
+          },
+          {
+            "designator": "J1",
+            "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+            "side": "top"
+          },
+          {
+            "designator": "J2",
+            "footprint": "PJ-082BH",
+            "side": "top"
+          },
+          {
+            "designator": "J3",
+            "footprint": "JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical",
+            "side": "top"
+          },
+          {
+            "designator": "J9",
+            "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+            "side": "top"
+          },
+          {
+            "designator": "J12",
+            "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+            "side": "top"
+          },
+          {
+            "designator": "J17",
+            "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+            "side": "top"
+          },
+          {
+            "designator": "J18",
+            "footprint": "JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical",
+            "side": "top"
+          },
+          {
+            "designator": "JP2",
+            "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+            "side": "top"
+          },
+          {
+            "designator": "JP3",
+            "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+            "side": "top"
+          },
+          {
+            "designator": "JP4",
+            "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+            "side": "top"
+          },
+          {
+            "designator": "JP5",
+            "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+            "side": "top"
+          },
+          {
+            "designator": "JP6",
+            "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+            "side": "top"
+          },
+          {
+            "designator": "JP7",
+            "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+            "side": "top"
+          },
+          {
+            "designator": "L1",
+            "footprint": "L_Changjiang_FXL0530",
+            "side": "top"
+          },
+          {
+            "designator": "L2",
+            "footprint": "L_Changjiang_FXL0530",
+            "side": "top"
+          },
+          {
+            "designator": "L5",
+            "footprint": "L_Changjiang_FXL0530",
+            "side": "top"
+          },
+          {
+            "designator": "Q3",
+            "footprint": "AO3400A",
+            "side": "top"
+          },
+          {
+            "designator": "Q4",
+            "footprint": "AO3400A",
+            "side": "top"
+          },
+          {
+            "designator": "Q8",
+            "footprint": "AO3400A",
+            "side": "top"
+          },
+          {
+            "designator": "Q10",
+            "footprint": "AO3400A",
+            "side": "top"
+          },
+          {
+            "designator": "R1",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R4",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R7",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R10",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R11",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R13",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R14",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R15",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R16",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R17",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R18",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R19",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R20",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R22",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R23",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R24",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R25",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R26",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R29",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R30",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R31",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R32",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R33",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R34",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R35",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R36",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R37",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R38",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R39",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R40",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R42",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R44",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R45",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R46",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R51",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R54",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R55",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R56",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R59",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R60",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R61",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R73",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R74",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R75",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R76",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R77",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R78",
+            "footprint": "R_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "R79",
+            "footprint": "R_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "R80",
+            "footprint": "R_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "R81",
+            "footprint": "R_0603_1608Metric",
+            "side": "top"
+          },
+          {
+            "designator": "R82",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R83",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "R84",
+            "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+            "side": "top"
+          },
+          {
+            "designator": "SW1",
+            "footprint": "Tactile_Switch_4pad",
+            "side": "top"
+          },
+          {
+            "designator": "SW2",
+            "footprint": "Tactile_Switch_4pad",
+            "side": "top"
+          },
+          {
+            "designator": "SW3",
+            "footprint": "Tactile_Switch_4pad",
+            "side": "top"
+          },
+          {
+            "designator": "SW4",
+            "footprint": "Tactile_Switch_4pad",
+            "side": "top"
+          },
+          {
+            "designator": "TP2",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "TP3",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "TP4",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "TP5",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "TP6",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "TP7",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "TP8",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "TP9",
+            "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+            "side": "top"
+          },
+          {
+            "designator": "U1",
+            "footprint": "TPS563203DRLR",
+            "side": "top"
+          },
+          {
+            "designator": "U2",
+            "footprint": "TPS563203DRLR",
+            "side": "top"
+          },
+          {
+            "designator": "U3",
+            "footprint": "TPS563203DRLR",
+            "side": "top"
+          },
+          {
+            "designator": "U4",
+            "footprint": "TCA9534APWR",
+            "side": "top"
+          },
+          {
+            "designator": "U5",
+            "footprint": "MPRLS0025PA00001A",
+            "side": "top"
+          },
+          {
+            "designator": "U7",
+            "footprint": "PCA9685",
+            "side": "top"
+          },
+          {
+            "designator": "U9",
+            "footprint": "VALVE_v105",
+            "side": "top"
+          },
+          {
+            "designator": "U10",
+            "footprint": "VALVE_v105",
+            "side": "top"
+          },
+          {
+            "designator": "U12",
+            "footprint": "TI_RPW0010A_VQFN-HR_2x2mm",
+            "side": "top"
+          },
+          {
+            "designator": "U13",
+            "footprint": "TI_DGK0008A_VSSOP_3x3mm_P0.65mm",
+            "side": "top"
+          }
+        ]
+      },
+      "side": "both",
+      "type": "pick_and_place",
+      "units": "mm"
+    },
+    {
+      "fields": "Reference,Value,Footprint,LCSC,MPN,Manufacturer,Assembly,${QUANTITY}",
+      "format": "csv",
+      "path": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging/BOM-1.csv",
+      "type": "bom"
+    }
+  ],
+  "gerber_layers": [
+    "F.Cu",
+    "B.Cu",
+    "F.Mask",
+    "B.Mask",
+    "F.SilkS",
+    "B.SilkS",
+    "F.Paste",
+    "B.Paste",
+    "Edge.Cuts"
+  ],
+  "next_steps": "Do not upload this package. Resolve every warning and export again.",
+  "output_dir": "/Users/charlievuong/Documents/RheoBoard/.private/v105-qwiic-fix/owner/manufacturing-staging",
+  "placement_orientation": {
+    "applied_corrections": [],
+    "geometry": [
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 70.664255,
+        "designator": "C1",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 70.664255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 72.8,
+        "designator": "C2",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 72.8
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 134.2644,
+        "anchor_y_mm": 77.4192,
+        "designator": "C3",
+        "midpoint_x_mm": 134.2644,
+        "midpoint_y_mm": 77.4192
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 134.435624,
+        "anchor_y_mm": 64.818255,
+        "designator": "C4",
+        "midpoint_x_mm": 134.435624,
+        "midpoint_y_mm": 64.818255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 106.813362,
+        "anchor_y_mm": 70.3652,
+        "designator": "C5",
+        "midpoint_x_mm": 106.813362,
+        "midpoint_y_mm": 70.3652
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 58.018255,
+        "designator": "C8",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 58.018255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 60.19175,
+        "designator": "C9",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 60.19175
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 103.0,
+        "anchor_y_mm": 63.71,
+        "designator": "C15",
+        "midpoint_x_mm": 103.0,
+        "midpoint_y_mm": 63.71
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 103.0,
+        "anchor_y_mm": 65.865712,
+        "designator": "C16",
+        "midpoint_x_mm": 103.0,
+        "midpoint_y_mm": 65.865712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 164.3875,
+        "anchor_y_mm": 83.1,
+        "designator": "C22",
+        "midpoint_x_mm": 164.3875,
+        "midpoint_y_mm": 83.1
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 94.766,
+        "anchor_y_mm": 106.143901,
+        "designator": "C23",
+        "midpoint_x_mm": 94.766,
+        "midpoint_y_mm": 106.143901
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 94.4506,
+        "anchor_y_mm": 90.398501,
+        "designator": "C24",
+        "midpoint_x_mm": 94.4506,
+        "midpoint_y_mm": 90.398501
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 107.815,
+        "anchor_y_mm": 106.0366,
+        "designator": "C25",
+        "midpoint_x_mm": 107.815,
+        "midpoint_y_mm": 106.0366
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 107.8772,
+        "anchor_y_mm": 90.500101,
+        "designator": "C26",
+        "midpoint_x_mm": 107.8772,
+        "midpoint_y_mm": 90.500101
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 149.562793,
+        "anchor_y_mm": 84.812169,
+        "designator": "C27",
+        "midpoint_x_mm": 149.562793,
+        "midpoint_y_mm": 84.812169
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 143.4875,
+        "anchor_y_mm": 81.1,
+        "designator": "C28",
+        "midpoint_x_mm": 143.4875,
+        "midpoint_y_mm": 81.1
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 162.15,
+        "anchor_y_mm": 67.619364,
+        "designator": "C29",
+        "midpoint_x_mm": 162.15,
+        "midpoint_y_mm": 67.619364
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 160.65,
+        "anchor_y_mm": 67.622,
+        "designator": "C30",
+        "midpoint_x_mm": 160.65,
+        "midpoint_y_mm": 67.622
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 179.05,
+        "anchor_y_mm": 109.675,
+        "designator": "C31",
+        "midpoint_x_mm": 179.05,
+        "midpoint_y_mm": 109.675
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 179.2,
+        "anchor_y_mm": 104.6,
+        "designator": "C32",
+        "midpoint_x_mm": 179.2,
+        "midpoint_y_mm": 104.6
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 146.8,
+        "anchor_y_mm": 109.5,
+        "designator": "C33",
+        "midpoint_x_mm": 146.8,
+        "midpoint_y_mm": 109.5
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 146.8,
+        "anchor_y_mm": 105.2,
+        "designator": "C34",
+        "midpoint_x_mm": 146.8,
+        "midpoint_y_mm": 105.2
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 127.419042,
+        "anchor_y_mm": 137.8712,
+        "designator": "C42",
+        "midpoint_x_mm": 127.419042,
+        "midpoint_y_mm": 137.8712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 140.0915,
+        "anchor_y_mm": 145.600005,
+        "designator": "C43",
+        "midpoint_x_mm": 140.0915,
+        "midpoint_y_mm": 145.600005
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 159.3088,
+        "anchor_y_mm": 137.8712,
+        "designator": "C44",
+        "midpoint_x_mm": 159.3088,
+        "midpoint_y_mm": 137.8712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 172.2915,
+        "anchor_y_mm": 145.400005,
+        "designator": "C45",
+        "midpoint_x_mm": 172.2915,
+        "midpoint_y_mm": 145.400005
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 143.4875,
+        "anchor_y_mm": 79.45,
+        "designator": "C46",
+        "midpoint_x_mm": 143.4875,
+        "midpoint_y_mm": 79.45
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 164.3875,
+        "anchor_y_mm": 81.576,
+        "designator": "C47",
+        "midpoint_x_mm": 164.3875,
+        "midpoint_y_mm": 81.576
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 77.554255,
+        "designator": "C52",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 77.554255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 79.664255,
+        "designator": "C53",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 79.664255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 64.908255,
+        "designator": "C54",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 64.908255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 137.716707,
+        "anchor_y_mm": 74.722565,
+        "designator": "C55",
+        "midpoint_x_mm": 137.716707,
+        "midpoint_y_mm": 74.722565
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 135.180977,
+        "anchor_y_mm": 79.887874,
+        "designator": "C56",
+        "midpoint_x_mm": 135.180977,
+        "midpoint_y_mm": 79.887874
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.7625,
+        "anchor_y_mm": 67.018255,
+        "designator": "C57",
+        "midpoint_x_mm": 130.7625,
+        "midpoint_y_mm": 67.018255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 137.710928,
+        "anchor_y_mm": 62.076565,
+        "designator": "C58",
+        "midpoint_x_mm": 137.710928,
+        "midpoint_y_mm": 62.076565
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 135.352201,
+        "anchor_y_mm": 67.286929,
+        "designator": "C59",
+        "midpoint_x_mm": 135.352201,
+        "midpoint_y_mm": 67.286929
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 103.0,
+        "anchor_y_mm": 70.6,
+        "designator": "C60",
+        "midpoint_x_mm": 103.0,
+        "midpoint_y_mm": 70.6
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 103.0,
+        "anchor_y_mm": 72.71,
+        "designator": "C61",
+        "midpoint_x_mm": 103.0,
+        "midpoint_y_mm": 72.71
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 110.15,
+        "anchor_y_mm": 67.76831,
+        "designator": "C62",
+        "midpoint_x_mm": 110.15,
+        "midpoint_y_mm": 67.76831
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 107.089701,
+        "anchor_y_mm": 73.05,
+        "designator": "C63",
+        "midpoint_x_mm": 107.089701,
+        "midpoint_y_mm": 73.05
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 148.0,
+        "anchor_y_mm": 52.5,
+        "designator": "C64",
+        "midpoint_x_mm": 148.0,
+        "midpoint_y_mm": 52.5
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 140.5,
+        "anchor_y_mm": 43.5,
+        "designator": "C65",
+        "midpoint_x_mm": 140.5,
+        "midpoint_y_mm": 43.5
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 144.25,
+        "anchor_y_mm": 46.6,
+        "designator": "C66",
+        "midpoint_x_mm": 144.25,
+        "midpoint_y_mm": 46.6
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 146.8,
+        "anchor_y_mm": 55.3,
+        "designator": "C67",
+        "midpoint_x_mm": 146.8,
+        "midpoint_y_mm": 55.3
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 189.0,
+        "anchor_y_mm": 109.0,
+        "designator": "C68",
+        "midpoint_x_mm": 189.0,
+        "midpoint_y_mm": 109.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 193.0,
+        "anchor_y_mm": 109.0,
+        "designator": "C69",
+        "midpoint_x_mm": 193.0,
+        "midpoint_y_mm": 109.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 133.8,
+        "anchor_y_mm": 47.4,
+        "designator": "D1",
+        "midpoint_x_mm": 133.8,
+        "midpoint_y_mm": 47.4
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 158.445,
+        "anchor_y_mm": 53.132377,
+        "designator": "D6",
+        "midpoint_x_mm": 158.445,
+        "midpoint_y_mm": 53.132377
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 155.075,
+        "anchor_y_mm": 53.132377,
+        "designator": "D7",
+        "midpoint_x_mm": 155.075,
+        "midpoint_y_mm": 53.132377
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 151.8,
+        "anchor_y_mm": 53.132377,
+        "designator": "D8",
+        "midpoint_x_mm": 151.8,
+        "midpoint_y_mm": 53.132377
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 169.8244,
+        "anchor_y_mm": 95.7834,
+        "designator": "D11",
+        "midpoint_x_mm": 169.8244,
+        "midpoint_y_mm": 95.7834
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 137.795,
+        "anchor_y_mm": 95.7834,
+        "designator": "D12",
+        "midpoint_x_mm": 137.795,
+        "midpoint_y_mm": 95.7834
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 170.28,
+        "anchor_y_mm": 100.75,
+        "designator": "D13",
+        "midpoint_x_mm": 170.28,
+        "midpoint_y_mm": 100.75
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 138.3125,
+        "anchor_y_mm": 100.75,
+        "designator": "D14",
+        "midpoint_x_mm": 138.3125,
+        "midpoint_y_mm": 100.75
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 162.15,
+        "anchor_y_mm": 71.178,
+        "designator": "D15",
+        "midpoint_x_mm": 162.15,
+        "midpoint_y_mm": 71.178
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 125.175,
+        "anchor_y_mm": 132.9944,
+        "designator": "D16",
+        "midpoint_x_mm": 125.175,
+        "midpoint_y_mm": 132.9944
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 125.715283,
+        "anchor_y_mm": 137.8262,
+        "designator": "D17",
+        "midpoint_x_mm": 125.715283,
+        "midpoint_y_mm": 137.8262
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 157.675,
+        "anchor_y_mm": 133.4516,
+        "designator": "D18",
+        "midpoint_x_mm": 157.675,
+        "midpoint_y_mm": 133.4516
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 157.6832,
+        "anchor_y_mm": 137.9162,
+        "designator": "D19",
+        "midpoint_x_mm": 157.6832,
+        "midpoint_y_mm": 137.9162
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 134.480436,
+        "anchor_y_mm": 71.43591,
+        "designator": "D33",
+        "midpoint_x_mm": 134.480436,
+        "midpoint_y_mm": 71.43591
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 134.506258,
+        "anchor_y_mm": 58.808263,
+        "designator": "D34",
+        "midpoint_x_mm": 134.506258,
+        "midpoint_y_mm": 58.808263
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 106.731895,
+        "anchor_y_mm": 64.459454,
+        "designator": "D35",
+        "midpoint_x_mm": 106.731895,
+        "midpoint_y_mm": 64.459454
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 146.0,
+        "anchor_y_mm": 42.3,
+        "designator": "D36",
+        "midpoint_x_mm": 146.0,
+        "midpoint_y_mm": 42.3
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 123.4,
+        "anchor_y_mm": 48.01,
+        "designator": "F1",
+        "midpoint_x_mm": 123.4,
+        "midpoint_y_mm": 48.01
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 95.2,
+        "anchor_y_mm": 44.6,
+        "designator": "H1",
+        "midpoint_x_mm": 95.2,
+        "midpoint_y_mm": 44.6
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 192.4,
+        "anchor_y_mm": 44.6,
+        "designator": "H2",
+        "midpoint_x_mm": 192.4,
+        "midpoint_y_mm": 44.6
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 192.4,
+        "anchor_y_mm": 159.0,
+        "designator": "H3",
+        "midpoint_x_mm": 192.4,
+        "midpoint_y_mm": 159.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 95.2,
+        "anchor_y_mm": 159.0,
+        "designator": "H4",
+        "midpoint_x_mm": 95.2,
+        "midpoint_y_mm": 159.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 98.0,
+        "anchor_y_mm": 136.375,
+        "designator": "J1",
+        "midpoint_x_mm": 98.0,
+        "midpoint_y_mm": 136.375
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 111.48825,
+        "anchor_y_mm": 41.947999,
+        "designator": "J2",
+        "midpoint_x_mm": 111.48825,
+        "midpoint_y_mm": 46.735499
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 191.925,
+        "anchor_y_mm": 88.85,
+        "designator": "J3",
+        "midpoint_x_mm": 191.925,
+        "midpoint_y_mm": 92.6
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 191.925,
+        "anchor_y_mm": 123.825001,
+        "designator": "J9",
+        "midpoint_x_mm": 191.925,
+        "midpoint_y_mm": 123.825001
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 191.925,
+        "anchor_y_mm": 136.375,
+        "designator": "J12",
+        "midpoint_x_mm": 191.925,
+        "midpoint_y_mm": 136.375
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 98.0,
+        "anchor_y_mm": 123.825001,
+        "designator": "J17",
+        "midpoint_x_mm": 98.0,
+        "midpoint_y_mm": 123.825001
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 179.0,
+        "anchor_y_mm": 46.0,
+        "designator": "J18",
+        "midpoint_x_mm": 181.5,
+        "midpoint_y_mm": 46.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 193.179999,
+        "anchor_y_mm": 79.0194,
+        "designator": "JP2",
+        "midpoint_x_mm": 193.179999,
+        "midpoint_y_mm": 79.0194
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 193.179999,
+        "anchor_y_mm": 74.7268,
+        "designator": "JP3",
+        "midpoint_x_mm": 193.179999,
+        "midpoint_y_mm": 74.7268
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 193.179999,
+        "anchor_y_mm": 70.530386,
+        "designator": "JP4",
+        "midpoint_x_mm": 193.179999,
+        "midpoint_y_mm": 70.530386
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 193.167,
+        "anchor_y_mm": 66.5226,
+        "designator": "JP5",
+        "midpoint_x_mm": 193.167,
+        "midpoint_y_mm": 66.5226
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 193.167,
+        "anchor_y_mm": 62.1284,
+        "designator": "JP6",
+        "midpoint_x_mm": 193.167,
+        "midpoint_y_mm": 62.1284
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 193.2178,
+        "anchor_y_mm": 83.7184,
+        "designator": "JP7",
+        "midpoint_x_mm": 193.2178,
+        "midpoint_y_mm": 83.7184
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 125.130622,
+        "anchor_y_mm": 75.486411,
+        "designator": "L1",
+        "midpoint_x_mm": 125.130622,
+        "midpoint_y_mm": 75.486411
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 97.3,
+        "anchor_y_mm": 68.41,
+        "designator": "L2",
+        "midpoint_x_mm": 97.3,
+        "midpoint_y_mm": 68.41
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 125.0819,
+        "anchor_y_mm": 62.836141,
+        "designator": "L5",
+        "midpoint_x_mm": 125.0819,
+        "midpoint_y_mm": 62.836141
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 166.255,
+        "anchor_y_mm": 101.25,
+        "designator": "Q3",
+        "midpoint_x_mm": 166.255,
+        "midpoint_y_mm": 101.25
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 134.3125,
+        "anchor_y_mm": 101.4,
+        "designator": "Q4",
+        "midpoint_x_mm": 134.3125,
+        "midpoint_y_mm": 101.4
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 124.9651,
+        "anchor_y_mm": 142.360005,
+        "designator": "Q8",
+        "midpoint_x_mm": 124.9651,
+        "midpoint_y_mm": 142.360005
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 157.0915,
+        "anchor_y_mm": 142.0875,
+        "designator": "Q10",
+        "midpoint_x_mm": 157.0915,
+        "midpoint_y_mm": 142.0875
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 135.788776,
+        "anchor_y_mm": 77.394945,
+        "designator": "R1",
+        "midpoint_x_mm": 135.788776,
+        "midpoint_y_mm": 77.394945
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 135.975,
+        "anchor_y_mm": 64.825,
+        "designator": "R4",
+        "midpoint_x_mm": 135.975,
+        "midpoint_y_mm": 64.825
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 108.340238,
+        "anchor_y_mm": 70.3652,
+        "designator": "R7",
+        "midpoint_x_mm": 108.340238,
+        "midpoint_y_mm": 70.3652
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 169.457763,
+        "anchor_y_mm": 79.97245,
+        "designator": "R10",
+        "midpoint_x_mm": 169.457763,
+        "midpoint_y_mm": 79.97245
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 166.9,
+        "anchor_y_mm": 82.2,
+        "designator": "R11",
+        "midpoint_x_mm": 166.9,
+        "midpoint_y_mm": 82.2
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 158.0875,
+        "anchor_y_mm": 87.276,
+        "designator": "R13",
+        "midpoint_x_mm": 158.0875,
+        "midpoint_y_mm": 87.276
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 158.0875,
+        "anchor_y_mm": 88.8,
+        "designator": "R14",
+        "midpoint_x_mm": 158.0875,
+        "midpoint_y_mm": 88.8
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 169.4447,
+        "anchor_y_mm": 83.0834,
+        "designator": "R15",
+        "midpoint_x_mm": 169.4447,
+        "midpoint_y_mm": 83.0834
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 94.778754,
+        "anchor_y_mm": 102.76737,
+        "designator": "R16",
+        "midpoint_x_mm": 94.778754,
+        "midpoint_y_mm": 102.76737
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 94.453786,
+        "anchor_y_mm": 86.982572,
+        "designator": "R17",
+        "midpoint_x_mm": 94.453786,
+        "midpoint_y_mm": 86.982572
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 107.801458,
+        "anchor_y_mm": 102.659899,
+        "designator": "R18",
+        "midpoint_x_mm": 107.801458,
+        "midpoint_y_mm": 102.659899
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 107.8992,
+        "anchor_y_mm": 87.087109,
+        "designator": "R19",
+        "midpoint_x_mm": 107.8992,
+        "midpoint_y_mm": 87.087109
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 169.4688,
+        "anchor_y_mm": 81.5594,
+        "designator": "R20",
+        "midpoint_x_mm": 169.4688,
+        "midpoint_y_mm": 81.5594
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 143.2052,
+        "anchor_y_mm": 88.5698,
+        "designator": "R22",
+        "midpoint_x_mm": 143.2052,
+        "midpoint_y_mm": 88.5698
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 148.5646,
+        "anchor_y_mm": 72.2376,
+        "designator": "R23",
+        "midpoint_x_mm": 148.5646,
+        "midpoint_y_mm": 72.2376
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 158.45,
+        "anchor_y_mm": 46.507377,
+        "designator": "R24",
+        "midpoint_x_mm": 158.45,
+        "midpoint_y_mm": 46.507377
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 155.115455,
+        "anchor_y_mm": 46.507377,
+        "designator": "R25",
+        "midpoint_x_mm": 155.115455,
+        "midpoint_y_mm": 46.507377
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 151.8,
+        "anchor_y_mm": 46.507377,
+        "designator": "R26",
+        "midpoint_x_mm": 151.8,
+        "midpoint_y_mm": 46.507377
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 181.5975,
+        "anchor_y_mm": 79.15,
+        "designator": "R29",
+        "midpoint_x_mm": 181.5975,
+        "midpoint_y_mm": 79.15
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 181.5975,
+        "anchor_y_mm": 74.720386,
+        "designator": "R30",
+        "midpoint_x_mm": 181.5975,
+        "midpoint_y_mm": 74.720386
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 181.5975,
+        "anchor_y_mm": 70.597109,
+        "designator": "R31",
+        "midpoint_x_mm": 181.5975,
+        "midpoint_y_mm": 70.597109
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 181.5975,
+        "anchor_y_mm": 66.45,
+        "designator": "R32",
+        "midpoint_x_mm": 181.5975,
+        "midpoint_y_mm": 66.45
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 181.5975,
+        "anchor_y_mm": 62.15,
+        "designator": "R33",
+        "midpoint_x_mm": 181.5975,
+        "midpoint_y_mm": 62.15
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 181.637501,
+        "anchor_y_mm": 83.62728,
+        "designator": "R34",
+        "midpoint_x_mm": 181.637501,
+        "midpoint_y_mm": 83.62728
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 162.2044,
+        "anchor_y_mm": 102.362,
+        "designator": "R35",
+        "midpoint_x_mm": 162.2044,
+        "midpoint_y_mm": 102.362
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.746558,
+        "anchor_y_mm": 137.8712,
+        "designator": "R36",
+        "midpoint_x_mm": 130.746558,
+        "midpoint_y_mm": 137.8712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 162.2298,
+        "anchor_y_mm": 100.8126,
+        "designator": "R37",
+        "midpoint_x_mm": 162.2298,
+        "midpoint_y_mm": 100.8126
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.1242,
+        "anchor_y_mm": 100.9396,
+        "designator": "R38",
+        "midpoint_x_mm": 130.1242,
+        "midpoint_y_mm": 100.9396
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 170.28,
+        "anchor_y_mm": 102.318918,
+        "designator": "R39",
+        "midpoint_x_mm": 170.28,
+        "midpoint_y_mm": 102.318918
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 138.3125,
+        "anchor_y_mm": 102.4,
+        "designator": "R40",
+        "midpoint_x_mm": 138.3125,
+        "midpoint_y_mm": 102.4
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 130.1496,
+        "anchor_y_mm": 102.4128,
+        "designator": "R42",
+        "midpoint_x_mm": 130.1496,
+        "midpoint_y_mm": 102.4128
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 160.65,
+        "anchor_y_mm": 71.178,
+        "designator": "R44",
+        "midpoint_x_mm": 160.65,
+        "midpoint_y_mm": 71.178
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 137.716707,
+        "anchor_y_mm": 73.05,
+        "designator": "R45",
+        "midpoint_x_mm": 137.716707,
+        "midpoint_y_mm": 73.05
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 134.346679,
+        "anchor_y_mm": 73.05,
+        "designator": "R46",
+        "midpoint_x_mm": 134.346679,
+        "midpoint_y_mm": 73.05
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 129.0828,
+        "anchor_y_mm": 137.8712,
+        "designator": "R51",
+        "midpoint_x_mm": 129.0828,
+        "midpoint_y_mm": 137.8712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 124.0028,
+        "anchor_y_mm": 137.795,
+        "designator": "R54",
+        "midpoint_x_mm": 124.0028,
+        "midpoint_y_mm": 137.795
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 163.2,
+        "anchor_y_mm": 137.8,
+        "designator": "R55",
+        "midpoint_x_mm": 163.2,
+        "midpoint_y_mm": 137.8
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 161.16,
+        "anchor_y_mm": 137.8,
+        "designator": "R56",
+        "midpoint_x_mm": 161.16,
+        "midpoint_y_mm": 137.8
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 156.0576,
+        "anchor_y_mm": 137.8712,
+        "designator": "R59",
+        "midpoint_x_mm": 156.0576,
+        "midpoint_y_mm": 137.8712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 137.710928,
+        "anchor_y_mm": 60.44175,
+        "designator": "R60",
+        "midpoint_x_mm": 137.710928,
+        "midpoint_y_mm": 60.44175
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 110.15,
+        "anchor_y_mm": 66.115712,
+        "designator": "R61",
+        "midpoint_x_mm": 110.15,
+        "midpoint_y_mm": 66.115712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 137.716707,
+        "anchor_y_mm": 71.422699,
+        "designator": "R73",
+        "midpoint_x_mm": 137.716707,
+        "midpoint_y_mm": 71.422699
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 134.346679,
+        "anchor_y_mm": 60.44175,
+        "designator": "R74",
+        "midpoint_x_mm": 134.346679,
+        "midpoint_y_mm": 60.44175
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 137.710928,
+        "anchor_y_mm": 58.806935,
+        "designator": "R75",
+        "midpoint_x_mm": 137.710928,
+        "midpoint_y_mm": 58.806935
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 106.584179,
+        "anchor_y_mm": 66.115712,
+        "designator": "R76",
+        "midpoint_x_mm": 106.584179,
+        "midpoint_y_mm": 66.115712
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 110.15,
+        "anchor_y_mm": 64.463114,
+        "designator": "R77",
+        "midpoint_x_mm": 110.15,
+        "midpoint_y_mm": 64.463114
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 139.0,
+        "anchor_y_mm": 46.5,
+        "designator": "R78",
+        "midpoint_x_mm": 139.0,
+        "midpoint_y_mm": 46.5
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 140.0,
+        "anchor_y_mm": 50.5,
+        "designator": "R79",
+        "midpoint_x_mm": 140.0,
+        "midpoint_y_mm": 50.5
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 141.5,
+        "anchor_y_mm": 53.7,
+        "designator": "R80",
+        "midpoint_x_mm": 141.5,
+        "midpoint_y_mm": 53.7
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 148.5,
+        "anchor_y_mm": 50.0,
+        "designator": "R81",
+        "midpoint_x_mm": 148.5,
+        "midpoint_y_mm": 50.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 190.0,
+        "anchor_y_mm": 117.0,
+        "designator": "R82",
+        "midpoint_x_mm": 190.0,
+        "midpoint_y_mm": 117.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 192.5,
+        "anchor_y_mm": 117.0,
+        "designator": "R83",
+        "midpoint_x_mm": 192.5,
+        "midpoint_y_mm": 117.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 195.5,
+        "anchor_y_mm": 114.0,
+        "designator": "R84",
+        "midpoint_x_mm": 195.5,
+        "midpoint_y_mm": 114.0
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 98.842,
+        "anchor_y_mm": 106.9814,
+        "designator": "SW1",
+        "midpoint_x_mm": 98.842,
+        "midpoint_y_mm": 106.9814
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 98.5266,
+        "anchor_y_mm": 91.186,
+        "designator": "SW2",
+        "midpoint_x_mm": 98.5266,
+        "midpoint_y_mm": 91.186
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 111.851,
+        "anchor_y_mm": 106.8866,
+        "designator": "SW3",
+        "midpoint_x_mm": 111.851,
+        "midpoint_y_mm": 106.8866
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 111.9632,
+        "anchor_y_mm": 91.2876,
+        "designator": "SW4",
+        "midpoint_x_mm": 111.9632,
+        "midpoint_y_mm": 91.2876
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 148.45,
+        "anchor_y_mm": 88.7222,
+        "designator": "TP2",
+        "midpoint_x_mm": 148.45,
+        "midpoint_y_mm": 88.7222
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 146.084758,
+        "anchor_y_mm": 88.725664,
+        "designator": "TP3",
+        "midpoint_x_mm": 146.084758,
+        "midpoint_y_mm": 88.725664
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 184.787499,
+        "anchor_y_mm": 79.0448,
+        "designator": "TP4",
+        "midpoint_x_mm": 184.787499,
+        "midpoint_y_mm": 79.0448
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 184.787499,
+        "anchor_y_mm": 74.7014,
+        "designator": "TP5",
+        "midpoint_x_mm": 184.787499,
+        "midpoint_y_mm": 74.7014
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 184.787499,
+        "anchor_y_mm": 70.5358,
+        "designator": "TP6",
+        "midpoint_x_mm": 184.787499,
+        "midpoint_y_mm": 70.5358
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 184.787499,
+        "anchor_y_mm": 66.548,
+        "designator": "TP7",
+        "midpoint_x_mm": 184.787499,
+        "midpoint_y_mm": 66.548
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 184.7875,
+        "anchor_y_mm": 62.144646,
+        "designator": "TP8",
+        "midpoint_x_mm": 184.7875,
+        "midpoint_y_mm": 62.144646
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 184.827501,
+        "anchor_y_mm": 83.548126,
+        "designator": "TP9",
+        "midpoint_x_mm": 184.827501,
+        "midpoint_y_mm": 83.548126
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 131.9625,
+        "anchor_y_mm": 75.164255,
+        "designator": "U1",
+        "midpoint_x_mm": 131.9625,
+        "midpoint_y_mm": 75.164255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 131.9625,
+        "anchor_y_mm": 62.518255,
+        "designator": "U2",
+        "midpoint_x_mm": 131.9625,
+        "midpoint_y_mm": 62.518255
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 104.2,
+        "anchor_y_mm": 68.21,
+        "designator": "U3",
+        "midpoint_x_mm": 104.2,
+        "midpoint_y_mm": 68.21
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 165.07,
+        "anchor_y_mm": 86.735,
+        "designator": "U4",
+        "midpoint_x_mm": 165.07,
+        "midpoint_y_mm": 86.735
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 145.67,
+        "anchor_y_mm": 84.9,
+        "designator": "U5",
+        "midpoint_x_mm": 145.67,
+        "midpoint_y_mm": 84.9
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 154.6,
+        "anchor_y_mm": 69.4,
+        "designator": "U7",
+        "midpoint_x_mm": 154.6,
+        "midpoint_y_mm": 69.4
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 144.083,
+        "anchor_y_mm": 156.76,
+        "designator": "U9",
+        "midpoint_x_mm": 134.798,
+        "midpoint_y_mm": 156.21875
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 176.283,
+        "anchor_y_mm": 156.76,
+        "designator": "U10",
+        "midpoint_x_mm": 166.998,
+        "midpoint_y_mm": 156.21875
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 144.5,
+        "anchor_y_mm": 50.5,
+        "designator": "U12",
+        "midpoint_x_mm": 144.5,
+        "midpoint_y_mm": 50.5
+      },
+      {
+        "algorithm": "kicad_native_board_pad_boxes_union_center",
+        "anchor_x_mm": 190.75,
+        "anchor_y_mm": 112.0,
+        "designator": "U13",
+        "midpoint_x_mm": 190.75,
+        "midpoint_y_mm": 112.0
+      }
+    ],
+    "note": "Structural export does not prove physical placement orientation. Inspect every component in JLCPCB Component Placements before ordering.",
+    "physical_validation": false,
+    "policies": [
+      {
+        "policy_id": "konnect-jlcpcb-cpl-v1",
+        "precedence": "built-in footprint first-match after project policy",
+        "provenance": "Konnect issue #518: independently observed KiCad 10 export and JLCPCB Component Placements evidence, 2026-09-10",
+        "schema_version": 1
+      }
+    ],
+    "status": "PREVIEW_REQUIRED",
+    "unmatched_footprints": [
+      {
+        "designator": "C1",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C2",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C3",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C4",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C5",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C8",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C9",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C15",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C16",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C22",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C23",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C24",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C25",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C26",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C27",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C28",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C29",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C30",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C31",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C32",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C33",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C34",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C42",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C43",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C44",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C45",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C46",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C47",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C52",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C53",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C54",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C55",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C56",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C57",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C58",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C59",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C60",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C61",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C62",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C63",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C64",
+        "footprint": "C_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "C65",
+        "footprint": "C_0805_2012Metric",
+        "side": "top"
+      },
+      {
+        "designator": "C66",
+        "footprint": "C_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "C67",
+        "footprint": "C_1206_3216Metric",
+        "side": "top"
+      },
+      {
+        "designator": "C68",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C69",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D1",
+        "footprint": "D_SMC",
+        "side": "top"
+      },
+      {
+        "designator": "D6",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D7",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D8",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D11",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D12",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D13",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D14",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D15",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D16",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D17",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D18",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D19",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D33",
+        "footprint": "LED_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "D34",
+        "footprint": "LED_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "D35",
+        "footprint": "LED_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "D36",
+        "footprint": "D_SMB",
+        "side": "top"
+      },
+      {
+        "designator": "F1",
+        "footprint": "Fuse_JDT_JFC1032TS_10.25x3.2mm",
+        "side": "top"
+      },
+      {
+        "designator": "H1",
+        "footprint": "MountingHole_3.5mm_Pad",
+        "side": "top"
+      },
+      {
+        "designator": "H2",
+        "footprint": "MountingHole_3.5mm_Pad",
+        "side": "top"
+      },
+      {
+        "designator": "H3",
+        "footprint": "MountingHole_3.5mm_Pad",
+        "side": "top"
+      },
+      {
+        "designator": "H4",
+        "footprint": "MountingHole_3.5mm_Pad",
+        "side": "top"
+      },
+      {
+        "designator": "J1",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "J2",
+        "footprint": "PJ-082BH",
+        "side": "top"
+      },
+      {
+        "designator": "J3",
+        "footprint": "JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical",
+        "side": "top"
+      },
+      {
+        "designator": "J9",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "J12",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "J17",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "J18",
+        "footprint": "JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical",
+        "side": "top"
+      },
+      {
+        "designator": "JP2",
+        "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+        "side": "top"
+      },
+      {
+        "designator": "JP3",
+        "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+        "side": "top"
+      },
+      {
+        "designator": "JP4",
+        "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+        "side": "top"
+      },
+      {
+        "designator": "JP5",
+        "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+        "side": "top"
+      },
+      {
+        "designator": "JP6",
+        "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+        "side": "top"
+      },
+      {
+        "designator": "JP7",
+        "footprint": "SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+        "side": "top"
+      },
+      {
+        "designator": "L1",
+        "footprint": "L_Changjiang_FXL0530",
+        "side": "top"
+      },
+      {
+        "designator": "L2",
+        "footprint": "L_Changjiang_FXL0530",
+        "side": "top"
+      },
+      {
+        "designator": "L5",
+        "footprint": "L_Changjiang_FXL0530",
+        "side": "top"
+      },
+      {
+        "designator": "Q3",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "Q4",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "Q8",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "Q10",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "R1",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R4",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R7",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R10",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R11",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R13",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R14",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R15",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R16",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R17",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R18",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R19",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R20",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R22",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R23",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R24",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R25",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R26",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R29",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R30",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R31",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R32",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R33",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R34",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R35",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R36",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R37",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R38",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R39",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R40",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R42",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R44",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R45",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R46",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R51",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R54",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R55",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R56",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R59",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R60",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R61",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R73",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R74",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R75",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R76",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R77",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R78",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "R79",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "R80",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "R81",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "R82",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R83",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R84",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "SW1",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "SW2",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "SW3",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "SW4",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "TP2",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "TP3",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "TP4",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "TP5",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "TP6",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "TP7",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "TP8",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "TP9",
+        "footprint": "TestPoint_Plated_D1.0_Drill0.5",
+        "side": "top"
+      },
+      {
+        "designator": "U1",
+        "footprint": "TPS563203DRLR",
+        "side": "top"
+      },
+      {
+        "designator": "U2",
+        "footprint": "TPS563203DRLR",
+        "side": "top"
+      },
+      {
+        "designator": "U3",
+        "footprint": "TPS563203DRLR",
+        "side": "top"
+      },
+      {
+        "designator": "U4",
+        "footprint": "TCA9534APWR",
+        "side": "top"
+      },
+      {
+        "designator": "U5",
+        "footprint": "MPRLS0025PA00001A",
+        "side": "top"
+      },
+      {
+        "designator": "U7",
+        "footprint": "PCA9685",
+        "side": "top"
+      },
+      {
+        "designator": "U9",
+        "footprint": "VALVE_v105",
+        "side": "top"
+      },
+      {
+        "designator": "U10",
+        "footprint": "VALVE_v105",
+        "side": "top"
+      },
+      {
+        "designator": "U12",
+        "footprint": "TI_RPW0010A_VQFN-HR_2x2mm",
+        "side": "top"
+      },
+      {
+        "designator": "U13",
+        "footprint": "TI_DGK0008A_VSSOP_3x3mm_P0.65mm",
+        "side": "top"
+      }
+    ]
+  },
+  "position_side": "both",
+  "position_units": "mm",
+  "project_settings_source": "saved_kicad_pro_if_present",
+  "summary": "INCOMPLETE package for JLCPCB. 14 verified non-empty files. 1 warnings.",
+  "warnings": [
+    "JLCPCB BOM/CPL designators do not match: missing from BOM [H1, H2, H3, H4]; missing from CPL [TP1, U11, U8]"
+  ]
+}

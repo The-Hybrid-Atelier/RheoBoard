@@ -1,6 +1,6 @@
 # RheoBoard v1.05
 
-The v1.05 CAD revision is saved and its manufacturing exports have been reconciled. The schematic cleanup resolves all 759 inherited warnings. KiCad reports zero schematic ERC errors or warnings and zero PCB DRC errors, warnings, unrouted connections or schematic/PCB mismatches. See the [review report](Verification/REVIEW_REPORT.md) for evidence and coverage limits.
+The v1.05 revision includes a dedicated **J9 Qwiic master port** for the USB/battery-powered ESP32 Thing Plus, with a buffer separating the host supply and signals from the local bus. **J1, J12 and J17** remain Qwiic sensor ports powered by RheoBoard. All four keep the standard four-pin Qwiic order. See the [review report](Verification/REVIEW_REPORT.md) for the current check status and coverage limits.
 
 This is an untested hardware revision. Supplier placement review, final order settings and physical electrical/thermal/mechanical qualification remain open; it is not approved for repeated production.
 

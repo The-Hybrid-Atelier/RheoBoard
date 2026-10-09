@@ -25,30 +25,30 @@ uses whose exact type, size, or quantity is not documented yet.
 | <img src="../images/adafruit-4699-air-pump.jpg" width="100" alt="Adafruit 4699 air pump"> | Air pump / vacuum motor (Adafruit 4699, ZR370-02PM) | 2 | https://www.adafruit.com/product/4699 | [`references/datasheets/ZR370-02PM_4.5V.pdf`](references/datasheets/ZR370-02PM_4.5V.pdf) | ~4.5 V / ~500 mA each; 2.5 LPM; 58.2 × Ø27.0 mm nominal |
 | <img src="../images/adafruit-4663-air-valve.jpg" width="100" alt="Adafruit 4663 air valve"> | 6 V air valve (Adafruit 4663, FA0520E) | 1 | https://www.adafruit.com/product/4663 | [`references/datasheets/4663_C14660_DC_6V.pdf`](references/datasheets/4663_C14660_DC_6V.pdf) | 3-port flip selector |
 | — | DC power adapter 12 V | 1 | — | — | Everyday wall power for this DIY build and for the PCB. On this build, external supply for both L298N motor rails; ≥ 2 A recommended; share GND with ESP32. Pump and valve current does not go through the ESP32 5 V pin. |
-| — | Single-cell LiPo | 1 | — | [`references/datasheets/ESP32_Thing_Plus_Schematic.pdf`](references/datasheets/ESP32_Thing_Plus_Schematic.pdf), [`ESP32_Thing_Plus_Graphical_Datasheet.pdf`](references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf) | Portable power for the ESP32 Thing Plus. Graphical datasheet: JST connector for a single-cell LiPo; VBAT direct to the battery and the charger. Schematic: V_BATT, single cell, 4.2 V maximum. No battery part number is specified. TODO: the maintainer said 3–5 V; the datasheet maximum is 4.2 V. Confirm. |
+| — | SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (PRT-26059) | 1 | https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html | [`references/datasheets/ESP32_Thing_Plus_Schematic.pdf`](references/datasheets/ESP32_Thing_Plus_Schematic.pdf), [`ESP32_Thing_Plus_Graphical_Datasheet.pdf`](references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf) | Nominal 3.7 V, 1500 mAh, terminated with a 2-pin JST-PH connector (2 mm pin spacing), with built-in protection; it plugs into the ESP32 Thing Plus JST battery connector (schematic V_BATT, 4.2 V maximum). |
 | — | Silicone tubing, Adafruit 4661 | 1 | https://www.adafruit.com/product/4661 | — | 1 m, 3 mm ID, 5 mm OD, for air only. See `tube-wiring/README.md`. TODO: length of each run. |
 | — | Qwiic cables | 3 | https://www.sparkfun.com/cables.html | — | Four Qwiic boards daisy-chained on one I2C bus |
 | — | micro-USB cable | 1 | — | — | Flash `2P1V_Adafruit.ino`; also powers the ESP32 during upload/bench use |
 | — | Value Plastics FTLLB220-6005 female luer-thread panel-mount fitting | 1 | — | — | Named in [`../cad/connector/README.md`](../cad/connector/README.md). The sensing tube's luer is intended to mate with it. TODO: where to buy it. |
 | — | Tee | TODO | — | — | TODO: the part that tees the pressure sensor into the shared line. [`tube-wiring/README.md`](tube-wiring/README.md) says the sensor is "Teed into shared line". |
 | — | Hookup wire | TODO | — | — | TODO: type and gauge. [`electronic-wiring/README.md`](electronic-wiring/README.md) uses discrete point-to-point wires for the seesaw-to-L298N signals. |
-| — | 4 mm zip ties | TODO | — | — | Fasteners for the enclosure. A count is not stated. Board positions on the enclosure stay TODO until the enclosure CAD is updated. Files stay in [`../cad/encloser/`](../cad/encloser/). |
+| — | 4 mm zip ties | TODO | — | — | Fasteners for the panel. A count is not stated. Placement is the annotated panel photo [`../cad/encloser/panel-annotated.pdf`](../cad/encloser/panel-annotated.pdf). |
 
 ## Parts to 3D print
 
 | Photo | Part | Qty | Source/link | Datasheet | Notes |
 |---|---|---|---|---|---|
-| — | 3D-printed panel, pump holders, bracket, enclosure body, and lid (PLA) | 1 set | — | — | See [`../cad/encloser/`](../cad/encloser/); Bambu Lab printer, normal PLA profile. TODO: number of copies of each part. |
+| — | 3D-printed panel (PLA) | 1 set | — | — | See [`../cad/encloser/`](../cad/encloser/); Bambu Lab printer, normal PLA profile. TODO: number of copies of each part. The annotated photo does not label `part_04.STEP` or `part_05.STEP`. |
 | — | Printed sensing tube (`sensing_tube.stl`) | TODO | — | — | [`../cad/connector/sensing_tube.stl`](../cad/connector/sensing_tube.stl); about 12 mm diameter × 113.2 mm tall; male luer-lock. Import at 100% scale. |
 | — | Printed small connector (`connector_small.stl`) | TODO | — | — | [`../cad/connector/connector_small.stl`](../cad/connector/connector_small.stl); about 6.35 × 7.33 × 15.54 mm. Import at 100% scale. |
-| — | 3D-printed GL45 two-port cap | TODO | — | — | Probe part. Print file is not in this repository yet. TODO. This is not `sensing_tube.stl` or `connector_small.stl`. |
-| — | 3D-printed tube that fits GL45 | TODO | — | — | Probe part, used with the Adafruit 4661 tube and the GL45 two-port cap. Print file is not in this repository yet. TODO. This is not `sensing_tube.stl` or `connector_small.stl`. |
+| — | 3D-printed GL45 two-port cap | TODO | — | — | One of exactly two models still to be added. The print file is not in this repository yet. This is not `sensing_tube.stl` or `connector_small.stl`. |
+| — | 3D-printed tube that connects to the GL45 two-port cap | TODO | — | — | The other model still to be added. The print file is not in this repository yet. Used with the Adafruit 4661 tube and the GL45 two-port cap. This is not `sensing_tube.stl` or `connector_small.stl`. |
 
 ## Notes
 
 - Sample container: a GL45 lab reagent bottle is recommended. A beaker, cup, or any other fluid
   container is also fine.
-- Between samples, clean the tube. TODO: how.
+- Between samples, rinse the tube with water.
 - Pumps are rated ~4.5–5 V and the valve ~6 V. Adafruit's ~50% pump duty-cycle recommendation
   describes intermittent run time, not a 50% PWM ceiling; firmware may use brief higher-PWM pulses,
   but the pumps should not run continuously.

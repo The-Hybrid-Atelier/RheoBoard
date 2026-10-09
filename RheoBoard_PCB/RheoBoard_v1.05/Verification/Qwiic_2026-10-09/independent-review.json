@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-09",
+  "reviewer": "independent kicad_qwiic_review agent",
+  "scope": "Read-only acceptance review of the v1.05 Qwiic master correction; no CAD mutations by reviewer.",
+  "verdict": "PASS for the scoped Qwiic correction in saved CAD. No unresolved new Qwiic CAD blocker found. This is not full-board production qualification.",
+  "source_sha256": {
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pcb": "76c2c04afb9eea620176247bf0e1c04467b684a02cfef930b7f0cb7164c337da",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch": "c26c8a5906ef6aa97c755f093305a93b8d07b3d63cab79ff7d8aa2651e08197d",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pro": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TI_DGK0008A_VSSOP_3x3mm_P0.65mm.kicad_mod": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4"
+  },
+  "fresh_native_checks": {
+    "ERC": {
+      "errors": 0,
+      "warnings": 0,
+      "total": 0,
+      "artifact": "final-erc-decoded.json"
+    },
+    "DRC": {
+      "design_rule_violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0,
+      "total": 0,
+      "artifact": "final-drc-decoded.json"
+    },
+    "final_cosmetic_edit": {
+      "change": "R83 schematic-only spacing",
+      "semantic_comparison": {
+        "networks": true,
+        "components": true
+      },
+      "ERC_netlist_PDF_refreshed_after_edit": true,
+      "PCB_unchanged": true,
+      "DRC_retained_reason": "Unchanged PCB and unchanged schematic connectivity/component values and footprints after cosmetic edit."
+    }
+  },
+  "connectivity": {
+    "checks_passed": 34,
+    "checks_failed": 0,
+    "components": 166,
+    "schematic_pins_reconciled_to_board": 416,
+    "artifact": "final-connectivity-review.json"
+  },
+  "interface": {
+    "master": "J9 standard four-wire Qwiic to specified SparkFun WRL-15663 USB/battery-powered ESP32 Thing Plus",
+    "sensors": "J1, J12, J17 standard Qwiic powered from local +3V3",
+    "U13": "TCA9517ADGKR: local A, host B; EN to host VCCB; independently powered signal domains; common GND",
+    "supply_rails_separate": true,
+    "pin_map": {
+      "1": "+3V3",
+      "2": "/SCL",
+      "3": "/SDA",
+      "4": "GND",
+      "5": "/HOST_3V3",
+      "6": "/HOST_SDA",
+      "7": "/HOST_SCL",
+      "8": "/HOST_3V3"
+    },
+    "engineering_basis": "interface-engineering-review.json"
+  },
+  "footprint": {
+    "part": "TI DGK0008A VSSOP-8",
+    "eight_pads_checked": true,
+    "copper_size_mm": [
+      1.4,
+      0.45
+    ],
+    "pitch_mm": 0.65,
+    "row_center_span_mm": 4.4,
+    "adjacent_copper_gap_mm": 0.2,
+    "pin1": "upper-left, top component view",
+    "evidence": "Fresh independent IPC-2581 plus owner native placed-pad/library readback; TI SCPS245E DGK0008A land pattern pages 23-24."
+  },
+  "preservation": {
+    "inherited_footprints": 160,
+    "inherited_positions_rotation_side_unchanged": true,
+    "inherited_copper_pad_geometry_unchanged": true,
+    "board_outline_unchanged": true,
+    "new_footprints": [
+      "C68",
+      "C69",
+      "R82",
+      "R83",
+      "R84",
+      "U13"
+    ],
+    "changed_routing_nets_only": [
+      "+3V3",
+      "/SDA",
+      "/SCL",
+      "GND",
+      "/HOST_3V3",
+      "/HOST_SDA",
+      "/HOST_SCL"
+    ],
+    "changed_track_and_via_endpoint_bounds_mm": {
+      "x": [
+        186.698956,
+        195.5
+      ],
+      "y": [
+        109,
+        125.4
+      ]
+    },
+    "C32_C34_C43_C45": "22uF/50V retained",
+    "J18": "local service bus retained",
+    "artifact": "final-layout-comparison.json"
+  },
+  "rules": {
+    "design_rules_netclasses_severities_exclusions_unchanged": true,
+    "method": "Supported native rule/netclass exports, plus read-only .kicad_pro board.design_settings, erc and net_settings metadata fallback because exports omit severity/exclusion fields. No source editing.",
+    "clearance_mm": 0.2,
+    "new_exclusions": 0,
+    "relaxed_severities": 0
+  },
+  "visual_verdict": {
+    "result": "No new visual layout defect found in reviewed Qwiic block. Pads/pin-one orientation, front/back routing, mask/paste openings, local bypass placement, QWIIC MASTER/HOST 3V3 IN and sensor +3V3 OUT labeling inspected. Final schematic text is clear after R83 spacing change.",
+    "bypass_pad_distance_to_supply_pin_mm": {
+      "C68": 2.0666,
+      "C69": 2.2211
+    },
+    "copper_comparison": "Independent native copper-only PDFs before/after, rasterized at about 49.5um/pixel, show significant front/back copper differences localized to the new Qwiic block. Outside it, observed front-image changes were low-level antialiasing/segmentation noise. Filled polygon edges are not byte-identical and visual comparison does not prove exact continuous geometry.",
+    "artifacts": [
+      "final-copper-visual-comparison.json",
+      "difference-F.Cu.png",
+      "difference-B.Cu.png",
+      "front-qwiic.png",
+      "back-qwiic.png",
+      "mask-paste-qwiic.png",
+      "final-schematic.png",
+      "../owner/silkscreen-qwiic-crop.png",
+      "../owner/schematic-final-crop.png"
+    ]
+  },
+  "conditions_and_remaining_validation": [
+    "Use the specified direct ESP32 master topology. No arbitrary upstream B-side buffer or rise-time accelerator compatibility is asserted.",
+    "If using TCA9548A for multiple RheoBoards, enable only one branch at a time. Keep selected branch effective pullup resistance at least 2.2 kohm including tolerances/module parallel resistors, and total selected host pullup current at most 3 mA. See derivation in engineering review.",
+    "Confirm actual harness rise time, low levels, all four host/board power combinations, hot-plug and brownout behavior on hardware. Datasheet expectations are not measurements.",
+    "Existing U5 reset/startup finding remains open and was deliberately not changed. Pump/valve supply startup, transient and thermal qualification remains outside this Qwiic correction."
+  ],
+  "manufacturing_scope": "BOM/CPL/fabrication-package reconciliation is owned by the root agent; this independent review does not substitute for those checks.",
+  "evidence_exports_sha256": {
+    "final.net": "7b4059fe9f56054c393558281b4324863b2be3c5f1c0e36329985c9aa08c3670",
+    "final-board.xml": "49c46cf3394019909f81f74d4ac502759ecef37059b75ed80b446dd1527fda6a",
+    "final-drc-decoded.json": "fa90a6dbd02eebad3affdf6c2bb5138b8d980e919a5b8eaee6d2ae16d66b9c79",
+    "final-erc-decoded.json": "e93aa1f81bab979ed015a5a7656f0fdede0fde7dd7065a05f68fa58814513fcc",
+    "final-schematic.pdf": "2346ea2494e2cf83915c53d03d3a772b5b41e3e3277e2bc89b818a48f0f0b349",
+    "final-layout-comparison.json": "337526c922c3a8ff6d020ad57c923df8aef5a9f022b9513a320506ccfe2159d6",
+    "final-connectivity-review.json": "637a219ea9ec3ce0c9539dfcfa56de763806920779f6244ba66f41b5c8ff3f3d"
+  }
+}

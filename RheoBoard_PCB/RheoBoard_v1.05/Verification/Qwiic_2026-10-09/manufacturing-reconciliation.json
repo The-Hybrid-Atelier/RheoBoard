@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-09",
+  "checks": {
+    "166_unique_board_footprints": true,
+    "147_fitted_parts_present": true,
+    "all_fitted_footprints_match_BOM": true,
+    "140_SMT_parts_in_native_CPL": true,
+    "native_CPL_unique": true,
+    "all_SMT_top_side": true,
+    "all_SMT_placement_geometry_present": true,
+    "native_pad_union_midpoint_coordinates": true,
+    "native_rotation_modulo_360": true,
+    "manual_refs_unchanged": true,
+    "all_present_3D_links_resolve_portably": true,
+    "sources_match_final_owner_handoff": true,
+    "delivered_CPL_exact_140_refs": true,
+    "delivered_CPL_values_unchanged_from_native": true,
+    "fabrication_zip_exact_native_12_files": true,
+    "original_v1_68_files_unchanged": true
+  },
+  "board_footprints": 166,
+  "board_pad_records": 449,
+  "fitted_parts": 147,
+  "SMT_placements": 140,
+  "manual_refs": [
+    "J18",
+    "J2",
+    "J3",
+    "U10",
+    "U11",
+    "U8",
+    "U9"
+  ],
+  "resolved_3D_models": 137,
+  "native_package_complete": false,
+  "native_package_warnings": [
+    "JLCPCB BOM/CPL designators do not match: missing from BOM [H1, H2, H3, H4]; missing from CPL [TP1, U11, U8]"
+  ],
+  "native_package_source": "stable_live_ipc_snapshot",
+  "excluded_native_CPL_refs": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "J18",
+    "J2",
+    "J3",
+    "JP2",
+    "JP3",
+    "JP4",
+    "JP5",
+    "JP6",
+    "JP7",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9",
+    "U10",
+    "U9"
+  ],
+  "value_format_equivalences": [
+    {
+      "ref": "R24",
+      "BOM": "1k/0603/1%",
+      "board": "1K/0603/1%"
+    },
+    {
+      "ref": "R25",
+      "BOM": "1k/0603/1%",
+      "board": "1K/0603/1%"
+    },
+    {
+      "ref": "R26",
+      "BOM": "1k/0603/1%",
+      "board": "1K/0603/1%"
+    },
+    {
+      "ref": "R39",
+      "BOM": "1k/0603/1%",
+      "board": "1K/0603/1%"
+    },
+    {
+      "ref": "R40",
+      "BOM": "1k/0603/1%",
+      "board": "1K/0603/1%"
+    },
+    {
+      "ref": "R54",
+      "BOM": "1k/0603/1%",
+      "board": "1K/0603/1%"
+    },
+    {
+      "ref": "R59",
+      "BOM": "1k/0603/1%",
+      "board": "1K/0603/1%"
+    },
+    {
+      "ref": "R79",
+      "BOM": "100K/0603/1%",
+      "board": "100k \u00b11%"
+    }
+  ],
+  "orientation": {
+    "status": "PREVIEW_REQUIRED",
+    "applied_corrections": [],
+    "physical_validation": false
+  },
+  "source_hashes": {
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pcb": "76c2c04afb9eea620176247bf0e1c04467b684a02cfef930b7f0cb7164c337da",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch": "c26c8a5906ef6aa97c755f093305a93b8d07b3d63cab79ff7d8aa2651e08197d",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pro": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TI_DGK0008A_VSSOP_3x3mm_P0.65mm.kicad_mod": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4"
+  },
+  "scope": "Derived SMT population and coordinates, exact native fabrication file copying, saved-source binding, original v1 integrity and model path resolution. Supplier placement acceptance and physical qualification remain open."
+}

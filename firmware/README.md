@@ -11,7 +11,8 @@ This firmware is shared by the DIY build, the PCB, and the portable version. Ske
 in `2P1V_Adafruit/` so the sketch folder matches the primary `.ino` filename as Arduino requires.
 Firmware is MIT-licensed; the license notice and full text are in the repository-root
 [`LICENSE`](../LICENSE). RheoData, the app used with this firmware, is noted in
-[`../software/README.md`](../software/README.md).
+[`../software/README.md`](../software/README.md). Download, pairing, the connected indicator, and
+how to start and name a REP stay TODO and will be specified later in that file and in these notes.
 
 ## Toolchain
 
@@ -68,15 +69,7 @@ does not go through the ESP32 5 V pin.
 
 USB uploads this firmware to the SparkFun ESP32 Thing Plus. After upload, USB may be disconnected.
 
-Portable power is a single-cell LiPo on that board's JST connector. The vendored
-[schematic](../BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf)
-says V_BATT should be a single-cell LiPo, 4.2 V maximum. The
-[graphical datasheet](../BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf)
-labels that connector "JST Connector for single cell LiPo" and says VBAT is direct to the battery
-and the charger.
-
-TODO: the maintainer said 3–5 V for this battery. The datasheet maximum is 4.2 V. Confirm before
-using another voltage.
+Portable power is a [SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (SKU PRT-26059)](https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html): nominal 3.7 V, 1500 mAh, terminated with a 2-pin JST-PH connector (2 mm pin spacing), with built-in protection, and it plugs into the ESP32 Thing Plus JST battery connector ([schematic](../BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf) V_BATT, 4.2 V maximum).
 
 ## Connect and use (summary)
 

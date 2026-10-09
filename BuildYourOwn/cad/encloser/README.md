@@ -1,13 +1,27 @@
-# 3D-printed panel and enclosure
+# 3D-printed panel
 
 License: hardware CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
-Version 2 of RheoBoard mounts the pumps, valve, and electronics on a 3D-printed panel inside a
-3D-printed enclosure. There are no laser-cut parts. The version 1 laser-cut panel is archived in
-[`../../archive/laser-cut-v1/`](../../archive/laser-cut-v1/).
+Version 2 of RheoBoard mounts the pumps, valve, and electronics on a flat 3D-printed panel.
+There are no laser-cut parts. The version 1 laser-cut panel is archived in
+[`../../archive/laser-cut-v1/`](../../archive/laser-cut-v1/). The folder name stays
+`BuildYourOwn/cad/encloser/`.
 
-<img src="encloser_pic1.jpg" alt="Version 2 enclosure render: two upright pumps in printed holders on the printed panel" width="480">
-<img src="encloser_pic2.jpg" alt="Version 2 enclosure render, top view with the lid removed" width="480">
+The placement reference is the annotated panel photo [`panel-annotated.pdf`](panel-annotated.pdf).
+
+Readable labels in that photo, and where they point:
+
+- "3-D-printed panel" points at the flat panel.
+- "Air pump" appears twice, once on each pump along the top of the photo.
+- "Pressure sensor" points at the board between those pumps.
+- "ESP32 Thing Plus" points at the board on the left side of the photo.
+- "Qwiic Button" points at the board on the right side of the photo.
+- "Valve" points at the part in the center of the photo.
+- "L298N drivers" points at the two boards along the bottom of the photo. The callout does not say which board is which.
+
+Hole positions are not labeled. TODO: which L298N board is the pump driver and which is the valve driver.
+
+`encloser_pic1.jpg`, `encloser_pic2.jpg`, and `encloser_pic3.jpg` are CAD views stored in this folder.
 
 ## Files
 
@@ -17,12 +31,12 @@ are in [`part/`](part/). Sizes below are approximate, measured from the STEP geo
 | File | Approx. size (mm) | Likely role |
 |---|---|---|
 | [`part/part_01_holes_4mm.STEP`](part/part_01_holes_4mm.STEP) | 170 × 170 × 4 | Base panel, with 4 mm holes |
-| [`part/part_2.STEP`](part/part_2.STEP) | 42.5 × 45 × 81 | Pump holder (the renders show two) |
+| [`part/part_2.STEP`](part/part_2.STEP) | 42.5 × 45 × 81 | Pump holder |
 | [`part/part_03.STEP`](part/part_03.STEP) | 45 × 12 × 15 | Small bracket, likely for the valve |
-| [`part/part_04.STEP`](part/part_04.STEP) | about 195 wide | Enclosure body |
-| [`part/part_05.STEP`](part/part_05.STEP) | 195 × 195 × 29 | Lid |
+| [`part/part_04.STEP`](part/part_04.STEP) | about 195 wide | TODO |
+| [`part/part_05.STEP`](part/part_05.STEP) | 195 × 195 × 29 | TODO |
 
-TODO: confirm each part's role and the number of copies to print.
+TODO: confirm each part's role and the number of copies to print. The annotated photo does not label `part_04.STEP` or `part_05.STEP`.
 
 ## Printing
 
@@ -36,10 +50,6 @@ The sensing tube and small connector are printed from [`../connector/`](../conne
 
 ## Assembly
 
-Fasteners are 4 mm zip ties. A count is not stated. TODO: where the MPRLS, seesaw, ESP32, and
-Button sit, how the panel mounts in the enclosure, and how the lid attaches. Those board positions
-stay open until this enclosure CAD is updated. The files stay in this folder
-(`BuildYourOwn/cad/encloser/`). The renders above show the two pumps upright in printed holders
-with the valve between them and the L298N drivers behind the pumps.
+Fasteners are 4 mm zip ties. A count is not stated. Place the labeled parts as in [`panel-annotated.pdf`](panel-annotated.pdf). The files stay in this folder (`BuildYourOwn/cad/encloser/`).
 
 The editable CAD project that produced these STEP files is not in this repository yet.

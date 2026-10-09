@@ -1,0 +1,12 @@
+{
+  "source": "native kicad-cli 10.0.6 saved PCB",
+  "layers": [
+    "F.Fab",
+    "F.SilkS",
+    "Edge.Cuts"
+  ],
+  "exclude_value": true,
+  "black_and_white": true,
+  "page_count": 1,
+  "sha256": "9ef8fc4d189b47d69b77e6ec9fa44cb3855d41f89fa8609df9be9d3eadf63d07"
+}

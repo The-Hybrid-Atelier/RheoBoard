@@ -16,7 +16,7 @@ the same tools before Step 01. The [Tools](tools.md) page points here.
 
 ## Also named for those steps
 
-- **Bambu Studio**, for the enclosure STEP files. The [print notes](../BuildYourOwn/cad/encloser/README.md) say Bambu Studio opens STEP files directly, and that there are no STL or slicer project files for those parts yet.
+- **Bambu Studio**, for the panel STEP files. The [print notes](../BuildYourOwn/cad/encloser/README.md) say Bambu Studio opens STEP files directly, and that there are no STL or slicer project files for those parts yet.
 - **A slicer or mesh viewer**, for the sensing-tube STL files. The [connector README](../BuildYourOwn/cad/connector/README.md) says to open the STL in your preferred slicer or mesh viewer.
 - **Arduino IDE 2.x**, for Step 03. The [firmware reference](../firmware/README.md#toolchain) toolchain table names Arduino IDE 2.x.
 - **git**, for the manual library install in that same firmware reference (`git clone` of ThingPlusBLEOSC).

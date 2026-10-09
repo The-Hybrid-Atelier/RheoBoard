@@ -551,7 +551,7 @@
   "pcbnew": {
     "last_paths": {
       "idf": "",
-      "netlist": "../../../.private/v105-erc-cleanup/owner/final-clean.net",
+      "netlist": "../../../.private/v105-qwiic-fix/owner/ti-sync.net",
       "plot": "../../Gerber/",
       "specctra_dsn": "",
       "step": "",
