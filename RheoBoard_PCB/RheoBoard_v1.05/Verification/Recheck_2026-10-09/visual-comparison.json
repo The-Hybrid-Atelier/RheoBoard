@@ -1,0 +1,9 @@
+{
+  "method": "Fresh native PDF rendered at2x; all page pixels compared to independently reviewed final cleanup PDF",
+  "image_size": [
+    4768,
+    3368
+  ],
+  "pixels_identical": true,
+  "prior_review": "/tmp/rheoboard-v105-erc-cleanup-review-20261009/cleanup-visual-review.json"
+}

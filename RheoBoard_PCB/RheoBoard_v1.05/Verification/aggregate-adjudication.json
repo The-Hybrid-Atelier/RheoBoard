@@ -1,0 +1,75 @@
+{
+  "source": "aggregate-review-raw.json",
+  "coverage": {
+    "requested_audits": 6,
+    "completed": 6,
+    "failed": 0,
+    "diagnostics": 0,
+    "schematic_files": 1,
+    "resolved_symbol_instances": 245,
+    "unresolved_symbol_instances": 0,
+    "footprints": 160,
+    "pads": 431
+  },
+  "raw_verdict_preserved": "NOT READY \u2014 critical issues must be fixed before manufacturing",
+  "raw_findings": {
+    "errors": 1,
+    "warnings": 0,
+    "info": 5
+  },
+  "adjudications": [
+    {
+      "finding": "Power rail '+12V' has no decoupling capacitors",
+      "classification": "Heuristic false positive as an electrical blocker",
+      "evidence": "Fresh exported +12V has exactly J2.1 and F1.1, and no IC supply pin. U12's actual IN rail VIN_RAW has C65 1uF and C66 100nF; protected VIN has C67 4.7uF plus C1/C2/C8/C9/C15/C16. The required IC-local bypassing is present; a capacitor before F1 is not demanded by that requirement. Hot-plug/EMI behavior still needs normal qualification."
+    },
+    {
+      "finding": "Power rail '+12V' has no test point",
+      "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+      "existing_probe_nodes": [
+        "J2.1",
+        "F1.1"
+      ],
+      "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+    },
+    {
+      "finding": "Power rail '+3V3' has no test point",
+      "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+      "existing_probe_nodes": [
+        "J3.2"
+      ],
+      "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+    },
+    {
+      "finding": "Power rail '+4V5' has no test point",
+      "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+      "existing_probe_nodes": [
+        "U8.1",
+        "C32.1",
+        "C34.1"
+      ],
+      "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+    },
+    {
+      "finding": "Power rail '+6V' has no test point",
+      "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+      "existing_probe_nodes": [
+        "U9.1",
+        "C43.1",
+        "C45.1"
+      ],
+      "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+    },
+    {
+      "finding": "Power rail 'VIN' has no test point",
+      "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+      "existing_probe_nodes": [
+        "C67.1",
+        "C1.1"
+      ],
+      "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+    }
+  ],
+  "reviewed_disposition": "All six findings adjudicated; none demonstrates a present circuit or layout blocker. This does not establish hardware qualification or unconditional production readiness.",
+  "source_state": "Current saved post-cleanup schematic and board; six audits complete. Electrical equivalence verified against the prior reviewed netlist."
+}

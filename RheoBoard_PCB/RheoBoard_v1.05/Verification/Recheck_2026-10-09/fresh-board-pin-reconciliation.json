@@ -1,0 +1,24 @@
+{
+  "source": "Fresh native schematic netlist and native IPC-2581 saved-board export",
+  "schematic_nets": 86,
+  "schematic_nodes": 398,
+  "pcb_pin_keys": 423,
+  "nodes_present": 398,
+  "missing": [],
+  "mismatches": [],
+  "multiple_pcb_names": [
+    {
+      "pin": [
+        "U12",
+        "10"
+      ],
+      "schematic": "unconnected-(U12-ITIMER-Pad10)",
+      "pcb": [
+        "unconnected-(U12-ITIMER-Pad10)",
+        "unconnected-(U12-ITIMER-Pad10)_1"
+      ]
+    }
+  ],
+  "pass": true,
+  "normalization": "KiCad {slash} escape normalized to slash. Multiple physical primitives with same ref/pin collapsed; U12 pin10 reviewed NC alias separately. Omit unnamed mask/paste/document layer references; compare named copper nets."
+}

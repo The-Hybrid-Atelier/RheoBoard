@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-09",
+  "status": "Published JLCPCB requirements rechecked; selected order/service and supplier acceptance still unconfirmed.",
+  "basis": "Two-layer 1 oz FR-4",
+  "published_track_spacing_mm": [
+    0.1,
+    0.1
+  ],
+  "published_PTH_ring_min_recommended_mm": [
+    0.18,
+    0.25
+  ],
+  "published_via_pad_minus_hole_min_preferred_mm": [
+    0.1,
+    0.15
+  ],
+  "CPL_units": "mm, rotation degrees positive counterclockwise",
+  "BOM_header_note": "Official KiCad guide shows both JLCPCB Part # and LCSC Part # naming in its two export examples; delivered LCSC column needs final portal mapping/acceptance.",
+  "sources": [
+    "https://jlcpcb.com/capabilities/Capabilities",
+    "https://jlcpcb.com/help/article/how-to-generate-the-bom-and-centroid-file-from-kicad",
+    "https://jlcpcb.com/help/article/pick-place-file-for-pcb-assembly"
+  ]
+}

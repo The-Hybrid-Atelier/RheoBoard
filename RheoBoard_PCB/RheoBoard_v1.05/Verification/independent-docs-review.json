@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-09",
+  "scope": "Read-only final-review preparation using saved documentation, delivered BOM workbook/CSV, root connectivity report and exported with-protection.net. No live session or KiCad source read. Final PCB, CPL, Gerbers, ERC/DRC and manufacturing reconciliation are outside this phase.",
+  "conclusion": "No new concrete documentation, channel-map, connector-pin or BOM-selection blocker found. The documents accurately describe pending fabrication checks and hardware acceptance; they do not claim completed production qualification.",
+  "new_actionable_findings": [],
+  "bom_checks": {
+    "source_workbook": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05.xlsx",
+    "source_csv": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05_JLCPCB.csv",
+    "unique_fitted_references": 141,
+    "SMT_references": 134,
+    "manual_references": ["J2", "J3", "J18", "U8", "U9", "U10", "U11"],
+    "verified": [
+      "No duplicate designators or quantity-to-designator-count mismatch.",
+      "SMT CSV rows equal the workbook's JLCPCB SMT only tab. Its designator set exactly equals the main sheet's SMT set.",
+      "All fitted BOM designators are present in the exported netlist; omitted netlist items are exactly holes, test points and solder jumpers.",
+      "Every fitted footprint string matches the exported netlist. Eight value-string differences are electrically equivalent capitalization/formatting only.",
+      "C67 is consistently 4.7 uF / 50 V / 1206, CC1206KKX7R9BB475, C132170 in workbook, CSV, revision notes and saved netlist.",
+      "U9/U10 are fitted headers; the two external valves appear separately as accessories.",
+      "The fitted total's cached 141 and incomplete priced subtotal's cached 55.456 match independent calculations. No cached formula error found. Native Excel recalculation was not performed or implied.",
+      "The seven manual items are excluded from SMT CSV. Final physical placement exclusion has not yet been checked."
+    ],
+    "evidence": "saved-export-audit.json"
+  },
+  "connectivity_checks": {
+    "passed": 17,
+    "evidence": "document-connectivity-checks.json",
+    "scope": [
+      "Pump1 LED0 through R35/Q3 to U8; pump2 LED1 through R42/Q4 to U11.",
+      "Valve1 P0 through R55/Q10 to U10; valve2 P1 through R36/Q8 to U9.",
+      "SW1/SW2 map to P4/P5; SW3/SW4 to P6/P7; switch common sides are grounded.",
+      "J18 pins1/2/3 are GND/SDA/SCL. J1,J3,J9,J12,J17 pins1/2/3/4 are GND/3V3/SDA/SCL.",
+      "SDA/SCL pull-ups are 4.7k to local3V3. TCA9534A address pins pull high for0x3F; PCA9685 address pins pull low for0x40 with jumpers open.",
+      "Load pin1 is its positive rail; pin2 is the low-side switched return.",
+      "All original pin-group connectivity is preserved excluding the intended D1 output split. Root's supplied connectivity comparison is independently corroborated."
+    ]
+  },
+  "primary_reference_checks": [
+    {
+      "source": "https://www.ti.com/lit/ds/symlink/tca9534a.pdf",
+      "result": "Documented register sequence is appropriate: clear output latch before enabling P0/P1 outputs, configuration0xFC. Output latches reset HIGH while directions reset to inputs."
+    },
+    {
+      "source": "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+      "result": "All Call0x70 is enabled after reset; default Sub1 address0x71 is disabled. Keeping Sub Call disabled avoids collision with mux0x71. Documented 500us oscillator stabilization and shared PWM frequency are correct."
+    },
+    {
+      "source": "https://www.ti.com/lit/ds/symlink/tca9548a.pdf",
+      "result": "One-hot channel selection followed by STOP, upstream pull-ups and hardware RESET recovery are correctly described."
+    },
+    {
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eEH.pdf",
+      "result": "EHR-3 housing and SEH-001T-P0.6 contacts belong to the selected EH family. Wire/crimp and end-to-end pin verification are appropriately required."
+    },
+    {
+      "source": "https://www.adafruit.com/product/4663",
+      "result": "Current product text names a6V valve with an XH-compatible2.5mm cable. Some image alt text still says PH; document's requirement to verify actual connector fit/polarity remains appropriate. No proven header mismatch."
+    }
+  ],
+  "known_open_items_already_documented": [
+    "Exact SMBJ13A identity must be checked despite contradictory distributor attributes. This is visible in the BOM and notes, not silently accepted.",
+    "12V2A is an initial single-board supply selection, not a verified simultaneous-start capability or total system supply budget.",
+    "Intermittent pumps and keep-last commands are explicit accepted operating choices; no new watchdog requirement is introduced.",
+    "Bench acceptance, controller firmware implementation, cable polarity, actual pump mounting and final fabrication/CPL reconciliation remain open."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "completed_audits": 6,
+  "requested_audits": 6,
+  "coverage": {
+    "board": {
+      "footprints": 160,
+      "named_nets": 87,
+      "pads": 431
+    },
+    "schematic": {
+      "multi_unit_symbols": 0,
+      "named_nets": 32,
+      "resolved_symbols": 245,
+      "schematic_files": 1,
+      "sheet_instances": 1,
+      "symbol_instances": 245,
+      "unresolved_symbols": 0
+    }
+  },
+  "diagnostics": [],
+  "raw_verdict": "NOT READY \u2014 critical issues must be fixed before manufacturing",
+  "adjudications": [
+    {
+      "finding": "+12V has no decoupling",
+      "raw_severity": "error",
+      "disposition": "Not a demonstrated defect. +12V joins only J2.1 and F1.1; no IC draws from that node. U12 IN VIN_RAW has C65/C66; protected VIN has C67 and six10uF converter input caps.",
+      "evidence": "Fresh netlist assertion input_fuse_diode_chain,raw_input,protected_input and U1/U2/U3_input_bulk."
+    },
+    {
+      "finding": "No dedicated test points on+12V,+3V3,+4V5,+6V,VIN",
+      "raw_severity": "5 info",
+      "disposition": "Optional production-fixture improvement; electrical access exists at jack/fuse/connector/capacitor pads. Existing access does not prove automated fixture accessibility."
+    }
+  ]
+}

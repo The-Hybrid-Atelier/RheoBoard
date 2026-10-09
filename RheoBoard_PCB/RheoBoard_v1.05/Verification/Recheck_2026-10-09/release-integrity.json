@@ -1,0 +1,11 @@
+{
+  "release_files_checked": 123,
+  "modified_release_files": [],
+  "protected_sources_checked": 38,
+  "modified_sources": [],
+  "fabrication_zip_files": 12,
+  "zip_matches_standalone_files": true,
+  "SMT_BOM_refs": 134,
+  "SMT_CPL_refs": 134,
+  "exact_unique_SMT_population_match": true
+}

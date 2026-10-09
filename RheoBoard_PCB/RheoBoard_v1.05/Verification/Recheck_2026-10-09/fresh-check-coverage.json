@@ -1,0 +1,43 @@
+{
+  "erc": {
+    "source": "Fresh native saved-file run, KiCad10.0.6",
+    "ignored_check_keys": [
+      "single_global_label",
+      "four_way_junction",
+      "simulation_model_issue",
+      "footprint_filter"
+    ],
+    "included_severities": [
+      "error",
+      "warning",
+      "exclusion"
+    ],
+    "coverage_unchanged": true,
+    "violations": 0
+  },
+  "drc": {
+    "source": "Fresh native saved-file run, KiCad10.0.6",
+    "ignored_check_keys": [
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries",
+      "footprint_filters_mismatch"
+    ],
+    "included_severities": [
+      "error",
+      "warning",
+      "exclusion"
+    ],
+    "coverage_unchanged": true,
+    "violations": 0,
+    "unconnected": 0,
+    "schematic_parity": 0
+  },
+  "design_rules": {
+    "min_clearance": 0.2,
+    "min_hole_to_hole": 0.25,
+    "min_trace_width": 0.2,
+    "min_via_drill": 0.3,
+    "min_via_size": 0.5
+  },
+  "project_hash_unchanged_from_cleanup": true
+}

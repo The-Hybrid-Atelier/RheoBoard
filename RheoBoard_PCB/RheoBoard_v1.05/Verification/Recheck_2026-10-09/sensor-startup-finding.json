@@ -1,0 +1,51 @@
+{
+  "id": "U5-POWERON-RESET",
+  "severity": "warning-high-priority",
+  "classification": "Production-readiness gap requiring a guaranteed reset strategy or demonstrated compliant supply ramp",
+  "location": [
+    "U5 pin12 VDD",
+    "U5 pin9 RES",
+    "U3 TPS563203",
+    "R22",
+    "TP3"
+  ],
+  "facts": {
+    "sensor_requirement": "Honeywell MPR datasheet issueK \u00a74.0 p11 requires at least10V/ms VDD rising slope; otherwise use RES after supply stabilized.",
+    "regulator": "TI TPS563203 revA \u00a76.3.3 specifies typical1.4ms internal soft-start.",
+    "reset_net": [
+      [
+        "R22",
+        "2"
+      ],
+      [
+        "TP3",
+        "1"
+      ],
+      [
+        "U5",
+        "9"
+      ]
+    ],
+    "reset_pullup": "R22=10k fromRES to3V3; TP3probeaccess; no active resetcontroller attached.",
+    "supply": "U5VDD connected directly toU3+3V3 rail.",
+    "illustrative_mean_ramp_V_per_ms": 2.357142857142857
+  },
+  "inference": "Nominal buck soft-start is substantially slower than sensor power-on slope requirement. The present pull-up alone does not create an active low-to-high reset after3V3 stabilizes; sensor startup is therefore not guaranteed by design. Average ramp estimate is not an oscilloscope measurement of the actual waveform.",
+  "possible_symptom": "Sensor may fail or behave inconsistently after cold start or brownout; no claim that every board will fail.",
+  "action": "Before production approval, provide a guaranteed post-stable reset (e.g. suitable voltage supervisor, or properly sequenced host-controlled connection viaTP3) or obtain measured/manufacturer-accepted proof of compliance. Scope3V3 atU5 andRES during cold/hot starts and brownouts. No design modification performed.",
+  "sources": [
+    {
+      "url": "https://automation.honeywell.com/content/dam/honeywell-edam/sps/ast/en-us/campaigns/pressure-sensors/documents/sps-siot-mpr-series-datasheet-32332628-ciid-172626.pdf",
+      "section": "4.0 Power Supply Requirement,p11; Table13 pinout,p11"
+    },
+    {
+      "url": "https://www.ti.com/lit/gpn/tps563203",
+      "section": "ElectricalCharacteristics tSS,p6; \u00a76.3.3,p12"
+    }
+  ],
+  "evidence": [
+    "native/1.net",
+    "pressure-sensor.png",
+    "expanded-electrical-assertions.json"
+  ]
+}

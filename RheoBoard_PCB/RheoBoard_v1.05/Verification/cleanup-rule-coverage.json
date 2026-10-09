@@ -1,0 +1,40 @@
+{
+  "erc": {
+    "ignored_checks_unchanged": true,
+    "included_severities_unchanged": true,
+    "ignored_check_keys": [
+      "single_global_label",
+      "four_way_junction",
+      "simulation_model_issue",
+      "footprint_filter"
+    ],
+    "included_severities": [
+      "error",
+      "warning",
+      "exclusion"
+    ],
+    "violation_count": 0
+  },
+  "drc": {
+    "ignored_checks_unchanged": true,
+    "included_severities_unchanged": true,
+    "ignored_check_keys": [
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries",
+      "footprint_filters_mismatch"
+    ],
+    "included_severities": [
+      "error",
+      "warning",
+      "exclusion"
+    ],
+    "violation_count": 0,
+    "unconnected_count": 0,
+    "schematic_parity_count": 0
+  },
+  "project_bookkeeping": {
+    "project_bytes_changed": true,
+    "owner_scoped_comparison": "Owner reports only pcbnew.last_paths.netlist changed to current final-clean.net; checking settings, exclusions and connection grid unchanged.",
+    "independent_corroboration": "Native final ERC/DRC reports retain identical ignored_checks and included_severities; pin electrical types and no-connect statuses preserved. No checking settings were modified by this reviewer."
+  }
+}

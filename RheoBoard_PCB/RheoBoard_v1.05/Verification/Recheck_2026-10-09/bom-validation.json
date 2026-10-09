@@ -1,0 +1,21 @@
+{
+  "workbook": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05.xlsx",
+  "csv": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05_JLCPCB.csv",
+  "checks": {
+    "no_obsolete_hidden_hyperlinks": true,
+    "all_BOM_rows_match_reconciled_manifest": true,
+    "total_quantity_141": true,
+    "cached_subtotal_correct": true,
+    "no_formula_error_cells": true,
+    "C67_corrected_bias_margin_part": true,
+    "four_bulk_caps_corrected": true,
+    "SMT_csv_exact_134_unique_parts": true,
+    "CSV_part_and_footprint_match_workbook": true,
+    "manual_parts_excluded_from_SMT_csv": true
+  },
+  "findings": [],
+  "fitted_parts": 141,
+  "SMT_parts": 134,
+  "legacy_priced_subtotal_USD": 55.456,
+  "not_covered": "Final saved PCB/CPL comparison and hardware acceptance are separate checks."
+}

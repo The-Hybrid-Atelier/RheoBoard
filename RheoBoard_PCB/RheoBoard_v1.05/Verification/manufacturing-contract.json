@@ -1,0 +1,27 @@
+{
+  "checked_date": "2026-10-09",
+  "status": "Engineering export assumptions; no new order or selected portal contract",
+  "fabricator": "JLCPCB",
+  "intended_workflow": "Fabrication plus top-side SMT assembly; seven parts fitted manually",
+  "design": {"copper_layers": 2, "nominal_thickness_mm": 1.6, "outline_mm": [109.0, 126.4]},
+  "rule_basis": "Two-layer 1 oz FR-4; confirm copper weight and all selected order constraints in the portal before ordering",
+  "not_selected_or_confirmed": ["service tier", "final quantity", "copper weight", "surface finish", "soldermask colour", "panelization and tooling rails", "stencil order/options", "current stock and approved substitutions", "price"],
+  "reference_constraints": {
+    "track_width_and_spacing_mm_1oz": [0.10, 0.10],
+    "via_diameter_excess_over_hole_min_mm": 0.10,
+    "via_diameter_excess_preferred_mm": 0.15,
+    "component_PTH_annular_ring_absolute_min_mm_1oz": 0.18,
+    "component_PTH_annular_ring_recommended_mm_1oz": 0.25,
+    "silk_height_mm": 1.0,
+    "silk_stroke_and_pad_clearance_mm": 0.15
+  },
+  "CPL_schema": ["Designator", "Mid X", "Mid Y", "Layer", "Rotation"],
+  "CPL_units": "mm; rotation in degrees, positive counterclockwise",
+  "BOM_schema": ["Comment", "Designator", "Footprint", "LCSC Part #"],
+  "sources": [
+    "https://jlcpcb.com/capabilities/Capabilities",
+    "https://jlcpcb.com/help/article/how-to-generate-the-bom-and-centroid-file-from-kicad",
+    "https://jlcpcb.com/help/article/pick-place-file-for-pcb-assembly"
+  ],
+  "release_verdict": "INCOMPLETE: selected order settings, supplier placement preview and physical hardware acceptance remain open. No files uploaded and no order placed."
+}

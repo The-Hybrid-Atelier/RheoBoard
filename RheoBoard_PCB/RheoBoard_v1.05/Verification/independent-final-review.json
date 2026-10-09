@@ -1,0 +1,143 @@
+{
+  "review": "Independent verification of759-warning schematic cleanup",
+  "reviewed_at": "2026-10-09T12:04:04.346229-05:00",
+  "scope": "Read-only saved-file verification of current v1.05 warning cleanup, plus preservation of prior validated design. No design changes, native UI manipulation, or live session use by reviewer.",
+  "verdict": "PASS for requested warning cleanup and circuit/fabrication preservation; IPC drawing representation limitation recorded. Not a blanket production certification or hardware test.",
+  "baseline_erc": {
+    "errors": 0,
+    "warnings": 759,
+    "warning_categories": {
+      "endpoint_off_grid": 757,
+      "lib_symbol_mismatch": 2
+    }
+  },
+  "final_erc": {
+    "errors": 0,
+    "warnings": 0,
+    "native_version": "10.0.6"
+  },
+  "final_drc": {
+    "errors": 0,
+    "warnings": 0,
+    "unconnected": 0,
+    "schematic_parity": 0,
+    "native_version": "10.0.6"
+  },
+  "source_sha256": {
+    "RheoboardV1/1.kicad_sch": "dd20899a4dd6f8e2b72af6ca06ea210414269a999c2f26e814e26ab37531f784",
+    "RheoboardV1/1.kicad_pcb": "1c323e9198e0e097183a71e6cdce57e170df9ffd160bdf7ccf0f774ddd09b96d",
+    "RheoboardV1/1.kicad_pro": "f576df1dabc271c85dfa3b2ea566a34aad1e2ca2ecd75dcda1ce863c0051d576",
+    "Symbol/RheoBoard_Fixes.kicad_sym": "b33dfaad79f82e9b1cc916b95bea25266d5ff4ea4cde5d1dbb89479152a17cfe",
+    "Footprint/TestPoint_Plated_D1.0_Drill0.5.kicad_mod": "34c4f3de7605056f2bf10d5328c7d5c45315801f5757bdb5b5068f3afd108a9c"
+  },
+  "connectivity": {
+    "nets": 86,
+    "pin_nodes": 398,
+    "components": 160,
+    "named_nets_and_pin_partitions_unchanged": true,
+    "all_pin_inventories_functions_types_nc_states_unchanged": true,
+    "procurement_references_values_footprints_and_assembly_metadata_preserved": true,
+    "accepted_uuid_changes": [
+      "U8",
+      "U11"
+    ],
+    "pcb_identity_link": "Owner relinked two pump UUIDs; independent final DRC schematic parity is zero."
+  },
+  "checking_coverage": {
+    "erc": {
+      "ignored_checks_unchanged": true,
+      "included_severities_unchanged": true,
+      "ignored_check_keys": [
+        "single_global_label",
+        "four_way_junction",
+        "simulation_model_issue",
+        "footprint_filter"
+      ],
+      "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+      ],
+      "violation_count": 0
+    },
+    "drc": {
+      "ignored_checks_unchanged": true,
+      "included_severities_unchanged": true,
+      "ignored_check_keys": [
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries",
+        "footprint_filters_mismatch"
+      ],
+      "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+      ],
+      "violation_count": 0,
+      "unconnected_count": 0,
+      "schematic_parity_count": 0
+    },
+    "project_bookkeeping": {
+      "project_bytes_changed": true,
+      "owner_scoped_comparison": "Owner reports only pcbnew.last_paths.netlist changed to current final-clean.net; checking settings, exclusions and connection grid unchanged.",
+      "independent_corroboration": "Native final ERC/DRC reports retain identical ignored_checks and included_severities; pin electrical types and no-connect statuses preserved. No checking settings were modified by this reviewer."
+    }
+  },
+  "physical_preservation": {
+    "fabrication_geometry_equivalent": true,
+    "components_resolved_packages_and_profile_equivalent": true,
+    "all_compared_BOM_CPL_Gerber_drill_zip_and_non_schematic_drawing_files_byte_identical": true,
+    "limitation": {
+      "layer": "F.Fab",
+      "affected_refs": [
+        "C22",
+        "C28",
+        "C46",
+        "C5",
+        "C58",
+        "C59",
+        "C62",
+        "C63",
+        "C64",
+        "C66",
+        "R39",
+        "R40",
+        "R45",
+        "R46",
+        "R60",
+        "R61",
+        "R74",
+        "R75",
+        "R76",
+        "R77",
+        "R78",
+        "R79",
+        "R80",
+        "R81"
+      ],
+      "observed_difference": "24 exported instance rectangles exchange width and height, with identical instance locations. Resolved component/package geometry is identical.",
+      "classification": "Drawing export representation ambiguity; not a demonstrated manufacturing or circuit change. Do not claim all IPC drawing primitives are identical.",
+      "repeatability_evidence": "Repeated native IPC exports from byte-identical final PCB also change 9 F.Courtyard rectangle representations (C64,C66,D33,D34,D35,R78,R79,R80,R81), while all fabrication layers, placements and resolved packages remain identical. Final PCB SHA256 stayed 1c323e9198e0e097183a71e6cdce57e170df9ffd160bdf7ccf0f774ddd09b96d.",
+      "supplement": "Root independently compared complete native board manifests and reports unchanged160placements,pads/nets,attributes,footprint/valueIDs,modelpaths/referencegraphics; owner final-Fab-<REF>-decoded.json records native current F.Fab rectangles."
+    }
+  },
+  "visual_review_pass": true,
+  "current_actionable_cleanup_defects": [],
+  "remaining_limits": [
+    "Existing prototype bring-up, adapter/load/thermal/mechanical qualifications from prior engineering review still apply.",
+    "No physical-board operation, manufacturer upload/acceptance or assembly preview is claimed.",
+    "Prior full-design aggregate audit remains labeled pre-cleanup; this follow-up verifies warning resolution and unchanged engineering content."
+  ],
+  "supporting_reports": [
+    "cleanup-connectivity-comparison.json",
+    "cleanup-physical-comparison.json",
+    "cleanup-rule-coverage.json",
+    "cleanup-procurement-fabrication-output-preservation.json",
+    "cleanup-visual-review.json",
+    "cleanup-independent-source-hashes.json",
+    "native-final3/1-erc.json",
+    "native-final3/1-drc.json",
+    "native-final3/1.net",
+    "native-final3/1.pdf"
+  ]
+}

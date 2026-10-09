@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "net_count": 86,
+    "pin_node_count": 398,
+    "component_count": 160
+  },
+  "digests": {
+    "pin_partitions": "e1319b2de9d0fdd9babdc7e301e0903d0b432687bb99ec946b410b42aa99f20b",
+    "named_nets": "ed17fe05500796d3463fcbb986c7613513d08daad82424bffa3942263c845147",
+    "protected_component_metadata": "bec84a688f37fe1a809e1bbefa4db72250deaaa64f9683237b86c26c428a77ad"
+  },
+  "all_digests_match_cleanup": true,
+  "pin_semantics_match_cleanup": true,
+  "pin_semantic_digests": {
+    "pin_inventory": "b9929f9d1761a7421c75e713395dbcbd16b83e775a74aebed38fa8bd4c49288b",
+    "node_semantics": "6890baa36902e98771ddf89ee548e7f95e14203c4356f9ceb85bd195c00f6f9c"
+  }
+}

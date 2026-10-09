@@ -1,0 +1,27 @@
+{
+  "method": "Compare bytes to independent baseline snapshots. README and schematic drawing intentionally updated by parent.",
+  "unchanged": {
+    "BOM/BOM_RheoBoard_v1.05_JLCPCB.csv": true,
+    "BOM/BOM_RheoBoard_v1.05.xlsx": true,
+    "Manufacturing/RheoBoard_v1.05_fabrication.zip": true,
+    "Manufacturing/Drawings/RheoBoard_v1.05_soldermask.pdf": true,
+    "Manufacturing/Drawings/RheoBoard_v1.05_assembly.pdf": true,
+    "Manufacturing/Drawings/RheoBoard_v1.05_back_copper.pdf": true,
+    "Manufacturing/Drawings/RheoBoard_v1.05_front_copper.pdf": true,
+    "Manufacturing/CPL/RheoBoard_v1.05_native_positions.csv": true,
+    "Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv": true,
+    "Manufacturing/Gerber/1-B_Cu.gbl": true,
+    "Manufacturing/Gerber/1-F_Cu.gtl": true,
+    "Manufacturing/Gerber/1-NPTH.drl": true,
+    "Manufacturing/Gerber/1-F_Paste.gtp": true,
+    "Manufacturing/Gerber/1-B_Mask.gbs": true,
+    "Manufacturing/Gerber/1-PTH.drl": true,
+    "Manufacturing/Gerber/1-F_Silkscreen.gto": true,
+    "Manufacturing/Gerber/1-B_Silkscreen.gbo": true,
+    "Manufacturing/Gerber/1-B_Paste.gbp": true,
+    "Manufacturing/Gerber/1-F_Mask.gts": true,
+    "Manufacturing/Gerber/1-Edge_Cuts.gm1": true,
+    "Manufacturing/Gerber/1-job.gbrjob": true
+  },
+  "all_compared_unchanged": true
+}

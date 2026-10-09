@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-09",
+  "scope": "Independent read-only assessment of proposed values and part selections. No live schematic, PCB, ERC, DRC, parity or manufacturing audit of v1.05 performed in this phase. No design mutation.",
+  "result": "C67's earlier 100 nF and then 2.2 uF 0805 selections should not be retained as the sole local OUT bypass. The verified 4.7 uF 1206 alternative below resolves the identified selection issue in principle; final saved implementation and placement remain to be checked. No other demonstrated circuit-value blocker found in the reviewed intent. Bench qualification remains necessary.",
+  "input_protection": {
+    "source": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "revision": "C, May 2026",
+    "pin_intent_matches": {
+      "1": "EN/UVLO, 680k to VIN_RAW and 100k to GND",
+      "2": "OVCSEL, 390k to GND",
+      "3": "PG, unused",
+      "4": "PGTH, GND for unused status",
+      "5": "IN, VIN_RAW",
+      "6": "OUT, VIN",
+      "7": "DVDT, 3.3 nF to GND",
+      "8": "GND",
+      "9": "ILM, 1.65k to GND",
+      "10": "ITIMER, open"
+    },
+    "calculated_uvlo_V_at_raw_node": {"nominal_on": 9.36, "nominal_off": 8.502, "on_corner_range": [9.001,9.777], "off_corner_range": [8.180,8.927]},
+    "uvlo_basis": "Independent extrema of threshold, 1% resistors and +/-0.1 uA pin leakage; jack voltage additionally includes D1 drop.",
+    "current_limit_A": {"nominal": 2.028, "conservative_range_including_1_percent_resistor": [1.782,2.223]},
+    "clamp": "390k selects approximately 13.8 V; specified output upper value is 14.6 V at 10 mA. Dynamic overshoot is not bounded by this static figure.",
+    "timing": "3.3 nF gives 0.61 V/ms and 17.72 ms turn-on in TI's 12 V typical test. Actual loaded-board behavior remains unmeasured. ITIMER open minimizes blanking; it does not make protection instantaneous. A variant retries automatically.",
+    "layout_pending": "Close bypass loops; quiet analog ground and short ILM/DVDT wiring; correct RPW lands; substantial IN/OUT copper and thermal vias. Local input recommendation >=0.1 uF, local output >=1 uF."
+  },
+  "capacitor_bias_checks": {
+    "C67_rejected": {
+      "mpn": "CC0805KKX7R9BB225",
+      "lcsc": "C125847",
+      "nominal_uF": 2.2,
+      "approx_typical_effective_uF": {"12V": 0.86, "14.6V": 0.70},
+      "source": "https://www.yageogroup.com/download/specsheet/CC0805KKX7R9BB225",
+      "evidence": ["C67-Yageo-2u2.pdf", "C67-curve-2.png"]
+    },
+    "C67_recommended": {
+      "mpn": "CC1206KKX7R9BB475",
+      "lcsc": "C132170",
+      "rating": "4.7 uF, 50 V, X7R, +/-10%, 1206",
+      "source": "https://www.yageogroup.com/download/specsheet/CC1206KKX7R9BB475",
+      "supplier_mapping": "https://www.lcsc.com/product-detail/C132170.html",
+      "approx_typical_effective_uF": {"12V": 2.1, "14.6V": 1.8},
+      "conservative_illustrative_uF": 1.258,
+      "calculation": "4.7 * 0.35 * 0.90 * 0.85; uses worse-than-read -65% DC bias, -10% initial tolerance, -15% temperature. Excludes aging. This is a margin estimate, not a guaranteed minimum.",
+      "evidence": ["C67-Yageo-4u7-1206.pdf", "C67-4u7-curve-2.png"]
+    },
+    "C65_retained": {
+      "mpn": "CC0805KKX7R9BB105",
+      "lcsc": "C91185",
+      "rating": "1 uF, 50 V, X7R, +/-10%, 0805",
+      "source": "https://www.yageogroup.com/download/specsheet/CC0805KKX7R9BB105",
+      "approx_typical_effective_uF": {"12V": 0.79, "21.5V": 0.57},
+      "assessment": "No analogous selection blocker: substantial margin above 0.1 uF close-input recommendation, with separate C66 100 nF. Hot-plug ringing remains a measurement requirement.",
+      "evidence": ["C65-Yageo-1u.pdf", "C65-curve-2.png"]
+    },
+    "curve_limit": "Values estimated visually from manufacturer page-2 simulation graphs. Yageo states these typical curves are not guaranteed specifications."
+  },
+  "revised_motor_rail_capacitors": {
+    "refs": ["C32", "C34", "C43", "C45"],
+    "mpn": "EEEFK1H220P",
+    "source": "https://industrial.panasonic.com/tw/products/pt/aluminum-cap-smd/models/EEEFK1H220P",
+    "buck_source": "https://www.ti.com/lit/gpn/tps563203",
+    "verified_rating": "22 uF +/-20%, 50 V, 6.3 x 5.8 mm, 165 mArms at 100 kHz, 880 mOhm maximum impedance at 100 kHz. Impedance is not a guaranteed ESR figure.",
+    "assessment": "Each motor rail has 88.3 uF nominal. Simple maximum positive tolerance gives 105.93 uF, below TI's 110 uF recommended maximum. Existing two 22 uF ceramics per rail remain essential low-ESR components. This resolves the prior nominal-capacitance excess; it does not demonstrate loop stability or ripple-life qualification.",
+    "qualification": "Scope cold start, brownout recovery with retained load state, pump starts and PWM transitions. Check capacitor and regulator temperature/ripple. Exact CCTC ceramic DC-bias curves were not verified in this static phase."
+  },
+  "external_mux": {
+    "source": "https://www.ti.com/lit/ds/symlink/tca9548a.pdf",
+    "address": "0x71 with A2=0, A1=0, A0=1",
+    "assessment": "One board per channel and separately powered 3.3 V logic with J18 GND/SDA/SCL is valid. Firmware must select exactly one channel (1 << channel), issue STOP before the board transaction, and serialize mux selection plus transactions. Provide upstream pull-ups and RESET pull-up/recovery; downstream pull-ups already belong to each board. Keep board addresses away from 0x71. Begin at 100 kHz and verify rise time on actual cables. Keep-last state is an accepted user preference, not a new review defect."
+  },
+  "remaining_bench_and_release_requirements": [
+    "Use a regulated 12 V source; adapter current and simultaneous load budget remain unspecified. Input protection does not authorize 24 V operation.",
+    "Measure VIN_RAW and protected VIN during hot-plug, intended simultaneous motor starts, brownout and controlled overload. Finite clamp response and wiring inductance require actual waveform evidence below buck limits.",
+    "Normal eFuse loss is approximately 0.112 W at 2 A using 28 mOhm typical resistance; sustained clamping or current limiting dissipates much more. Validate actual two-layer thermal layout and retry behavior.",
+    "Verify exact SMBJ13A procurement despite supplier attribute mismatch, polarization, input fuse/diode continuity, all U12 lands, near bypassing and final BOM/footprint consistency.",
+    "Final saved design requires independent ERC, DRC, schematic/PCB parity, physical layout and manufacturing audit before release. This report does not declare production ready."
+  ]
+}

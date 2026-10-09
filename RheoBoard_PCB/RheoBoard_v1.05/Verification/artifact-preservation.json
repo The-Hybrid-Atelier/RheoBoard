@@ -1,0 +1,12 @@
+{
+  "scope": "Byte preservation of delivered BOM/CPL/fabrication/board PDFs and all original v1 files. Current physical PCB equivalence is separately established from native IPC2581 exports.",
+  "baseline_output_files": 24,
+  "changed_outputs": [
+    "Manufacturing/README.md",
+    "Manufacturing/Drawings/RheoBoard_v1.05_schematic.pdf"
+  ],
+  "unexpected_output_changes": [],
+  "original_v1_files_checked": 68,
+  "original_v1_changes": [],
+  "passed": true
+}

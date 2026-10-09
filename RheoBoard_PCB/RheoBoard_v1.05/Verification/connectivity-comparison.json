@@ -1,0 +1,22 @@
+{
+  "old_export": "/Users/charlievuong/Documents/Codex/2026-10-08/c/work/rheoboard-recheck-2026-10-09/evidence/agent/schematic.net",
+  "new_export": ".private/v105-erc-cleanup/owner/final-clean.net",
+  "checks": {
+    "original_connectivity_preserved_except_D1_output": true,
+    "raw_input_net": true,
+    "protected_input_net": true,
+    "raw_and_protected_are_distinct": true,
+    "UVLO_divider": true,
+    "clamp_resistor": true,
+    "current_limit": true,
+    "startup_capacitor": true,
+    "grounding": true,
+    "master_SDA": true,
+    "master_SCL": true,
+    "no_master_power_pin": true
+  },
+  "old_net_count": 79,
+  "new_net_count": 86,
+  "missing_original_connectivity_groups": [],
+  "unexpected_original_connectivity_groups": []
+}

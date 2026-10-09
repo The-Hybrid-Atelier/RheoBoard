@@ -1,0 +1,57 @@
+{
+  "counts_before": {
+    "net_count": 86,
+    "pin_node_count": 398,
+    "component_count": 160
+  },
+  "counts_after": {
+    "net_count": 86,
+    "pin_node_count": 398,
+    "component_count": 160
+  },
+  "pin_partitions_unchanged": true,
+  "named_nets_unchanged": true,
+  "digests_before": {
+    "pin_partitions": "e1319b2de9d0fdd9babdc7e301e0903d0b432687bb99ec946b410b42aa99f20b",
+    "named_nets": "ed17fe05500796d3463fcbb986c7613513d08daad82424bffa3942263c845147",
+    "protected_component_metadata": "7d254b4ca6d6b47764fd2745d497595a5bb83545c2ec29702658fc74a39cab95"
+  },
+  "digests_after": {
+    "pin_partitions": "e1319b2de9d0fdd9babdc7e301e0903d0b432687bb99ec946b410b42aa99f20b",
+    "named_nets": "ed17fe05500796d3463fcbb986c7613513d08daad82424bffa3942263c845147",
+    "protected_component_metadata": "bec84a688f37fe1a809e1bbefa4db72250deaaa64f9683237b86c26c428a77ad"
+  },
+  "protected_metadata_changes": {
+    "U11": {
+      "uuid": {
+        "before": "62c02104-0e33-467c-ac51-704ff1edd6ab",
+        "after": "355e78b1-55e2-4e50-8f22-e8755b3f04ca"
+      }
+    },
+    "U8": {
+      "uuid": {
+        "before": "13bee960-afbf-47dd-8d44-c170afa3debb",
+        "after": "f040b9f4-abe2-456d-884a-4ca49a3b6578"
+      }
+    }
+  },
+  "all_other_reference_value_footprint_procurement_assembly_metadata_preserved": true,
+  "component_pin_inventory_unchanged": true,
+  "exported_node_pin_function_type_and_nc_status_unchanged": true,
+  "pin_semantic_digests": {
+    "pin_inventory": "b9929f9d1761a7421c75e713395dbcbd16b83e775a74aebed38fa8bd4c49288b",
+    "node_semantics": "6890baa36902e98771ddf89ee548e7f95e14203c4356f9ceb85bd195c00f6f9c"
+  },
+  "unresolved_symbol_definitions": [],
+  "legitimate_library_or_descriptive_changes": [
+    "U7 normalized PCA9685 local symbol, original UUID preserved",
+    "U8/U11 fresh pump symbols remove inherited stale cache identity; descriptions corrected; refs/polarities/pins/types/value/footprint/purchasing metadata retained"
+  ],
+  "sources": [
+    "baseline-final.net",
+    "native-final3/1.net",
+    "candidate-comparison.json",
+    "baseline-pin-semantics.json",
+    "final-pin-semantics.json"
+  ]
+}

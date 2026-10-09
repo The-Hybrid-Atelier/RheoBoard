@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-09",
+  "scope": "Independent read-only audit of frozen saved RheoBoard v1.05 after TP2\u2013TP9 annular fix and TP1 BOM parity correction. No source edits, live UI, hardware tests or vendor upload.",
+  "summary": "No new demonstrated electrical or PCB-layout blocker found. Saved-file DRC/parity and narrow JLC preflight pass. The design is suitable for controlled prototype bring-up, subject to exact assembly preview/CAM and the physical qualifications below; production operation is not established by these file checks.",
+  "source_sha256": {
+    "1.kicad_sch": "ef5cc9410017f0d39ef7b79cf89a6b3766e3f5236bb962181e82cbb587edd316",
+    "1.kicad_pcb": "27b034735b91ec775bf0c048da28b2fb1bdc4b4996b0dd6ae269663dfc353175",
+    "1.kicad_pro": "9b7729a3aee98b49c00b32ec02460af15911989528b061777004ff7bf92e55cb"
+  },
+  "source_unchanged_during_review": true,
+  "direct_checks": {
+    "saved_DRC": {
+      "errors": 0,
+      "warnings": 0,
+      "geometry_violations": 0,
+      "unconnected": 0,
+      "schematic_parity": 0,
+      "independent_sources": [
+        "legacy-drc/1-drc.json",
+        "snapshot-drc-saved-decoded.json"
+      ],
+      "scope": "No truncated or unreported output categories. Three inherited disabled checks remain outside coverage: track_not_centered_on_via, tuning_profile_track_geometries, footprint_filters_mismatch. Owner supplied persisted IPC-refill/save before freeze; independent analysis-only refill failed as a tool subprocess and was not counted."
+    },
+    "ERC": {
+      "errors": 0,
+      "warnings": 759,
+      "classification": {
+        "endpoint_off_grid": 757,
+        "lib_symbol_mismatch": 2
+      },
+      "library_mismatch_refs": [
+        "U8",
+        "U11"
+      ],
+      "assessment": "Inherited grid warnings and retained pump library-name metadata mismatch; not proof of a functional defect. Fresh netlist and direct connectivity tools show no unintended dangling/shorted network. Library mismatch remains visible, not suppressed.",
+      "ignored_checks": [
+        "single_global_label",
+        "four_way_junction",
+        "simulation_model_issue",
+        "footprint_filter"
+      ],
+      "source": "legacy-erc/1-erc.json"
+    },
+    "shorts_orphans_single_pin": {
+      "source": "owner dedicated Konnect runner, exact saved source; raw JSON copied alongside review",
+      "shorted_nets": 0,
+      "orphan_items": 0,
+      "suspicious_single_pin_nets": 0,
+      "export_netlist_intended_single_pin_NC_count": 15
+    },
+    "electrical_connectivity": {
+      "net_count": 86,
+      "pin_nodes": 398,
+      "independent_assertions": 24,
+      "all_pass": true,
+      "source": "electrical-assertions.json"
+    },
+    "manufacturing_preflight": {
+      "result": "0 issues in implemented JLC checks",
+      "limits": "No vendor CAM acceptance, stencil/rotation preview, supply/load or functional qualification.",
+      "sources": [
+        "snapshot-validate_for_manufacturing-decoded.json",
+        "owner-final-manufacturing-validation-decoded.json"
+      ]
+    }
+  },
+  "physical_and_exports": {
+    "annular": {
+      "TP2_TP9": "All eight 1.00 mm copper /0.50 mm drill, 0.25 mm radial ring on both copper layers. Meets current JLC 2-layer 1oz PTH minimum0.18 and recommended0.25 without a via exemption.",
+      "fitted_PTH_minimum_mm": 0.3,
+      "vias": "297 vias: minimum 0.50 mm copper /0.30 mm drill (0.10 radial, 0.20 diametric difference); evaluate by separate via rule.",
+      "evidence": [
+        "annular-gerber-final.json",
+        "testpoints-export-registration.json"
+      ],
+      "source_url": "https://jlcpcb.com/capabilities/Capabilities"
+    },
+    "registration": "Nine Gerber layers;330 plated entries including5slots all match front/back copper within0.001mm;3NPTH match front/back mask. EnlargedTP drill-coordinate rounding error <=0.00064mm. Closed109x126.4mm outline visually retained; exports alone do not constitute full independent CAM acceptance.",
+    "visual": "Inspected final protection and J18 schematic crops, whole-board front/back copper/drill/mask overlays, U12 copper/mask/paste aperture detail, native TP2\u2013TP9 copper crops and assembly/markings. No new visible clash. Schematic block labels are legible.",
+    "reviewed_footprints": "U12, C64\u2013C67, D1/D36, F1, revised C32/C34/C43/C45, L1/L2/L5, pumps and valves, J18 final exported pad geometry exactly matches the previously independently reviewed geometry. Polarity and pin assignment checked against fresh netlist. See reviewed-footprint-geometry-continuity.json.",
+    "U12_pin10": "The two generated NC names are overlapping horizontal/vertical primitives of the same L-shaped pin10 footprint, not two separate circuit nodes. Both are intentionally unused, no external copper connection; this accounts for 87 board net names versus86 schematic nets.",
+    "U12_layout": "Short0.30mm IN/OUT necks to wider copper are retained; backside return plane is continuous locally. IN/OUT bypass, ILM/DVDT routing and RPW land/paste reviewed. Thermal and hot-plug behavior remain measured qualifications, not established by DRC.",
+    "pump_fit": "Maximum pump-head courtyard separation remains5.075mm, but nearby C34/body clearance is tight (~0.22mm conservative rectangular bound); actual pump head, hoses, wiring and capacitors require physical dry-fit. No shown footprint overlap."
+  },
+  "electrical_assessment": {
+    "input": "J2\u2192F1\u2192D1\u2192VIN_RAW\u2192TPS259472ARPWR\u2192VIN. U12 pins/programming match TI. UVLO nominal9.36V rising/8.502V falling at raw node; jack threshold includes D1 drop. 1.65k gives~2.03A nominal, conservative~1.78\u20132.22A. 390k selects13.8V clamp; typical3.3nF slew gives~18ms start. These values do not prove dynamic protection or allow24V operation.",
+    "bypass": "C65 1uF50V0805 plusC66 100nF at raw input; C67 correct4.7uF50V1206 CC1206KKX7R9BB475 at output. Prior primary typical DC-bias assessment gives C67~2.1uF at12V/~1.8uF at14.6V, not guaranteed minima; selected value resolves prior too-small local output bypass concern.",
+    "rails": "TPS563203 nominal outputs4.52V,6.00V,3.30V from196k/30k,270k/30k,135k/30k. Revised22uF electrolytics retain two22uF ceramics on each motor rail.88.3uF nominal and105.93uF simple positive-tolerance total are below110uF recommended max; load response/stability and ripple life require bench checks.",
+    "drivers": "AO3400A source grounded, gate via100ohm with10k pulldown, drain to load negative; four flybacks cathode to positive rail/anode to drain. Pump1=U7LED0/Q3/U8,pump2=LED1/Q4/U11; valve1=U4P0/Q10/U10,valve2=P1/Q8/U9.",
+    "host": "J18 pins1GND,2SDA,3SCL; four-wire peripheral ports carry board3.3V output. Default addressesPCA9685=0x40,TCA9534A=0x3F,MPR=0x18. ExternalTCA9548A at0x71, one board per selected channel, coherent with accepted requirements. Use one-hot channel selection/STOP, upstream pullups, initialization before outputs. Preserve intentional keep-last state; test resulting brownout recovery."
+  },
+  "remaining_qualification": [
+    "Exact regulated12V adapter rating/model, wiring voltage drop, simultaneous load budget and pump stall/valve current remain unmeasured.",
+    "Scope raw/protected input and4.5/6/3.3V rails during hot-plug, cold start, simultaneous pump/valve actuation, PWM and brownout with retained state. Verify transients below IC limits.",
+    "Measure eFuse, D1, MOSFET, regulators/inductors and capacitors under intended intermittent duty and overload/retry. Clamping dissipates far more than normal~0.112W eFuse loss at2A.",
+    "Dry-fit actual pumps/hoses/connectors and polarized capacitors. Confirm harness polarity, actual purchased parts, vendor placement rotations and U12 paste/stencil approval.",
+    "Exercise actual mux/controller firmware, startup output states and cable rise times. TCA9534 output latch should be cleared before changing valve pins to outputs; PCA wake delay required. User accepts keep-last behavior; this is not an added watchdog requirement."
+  ],
+  "primary_sources": [
+    "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "https://www.ti.com/lit/gpn/tps563203",
+    "https://www.yageogroup.com/download/specsheet/CC1206KKX7R9BB475",
+    "https://www.yageogroup.com/download/specsheet/CC0805KKX7R9BB105",
+    "https://industrial.panasonic.com/tw/products/pt/aluminum-cap-smd/models/EEEFK1H220P",
+    "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+    "https://www.ti.com/lit/ds/symlink/tca9534a.pdf",
+    "https://www.ti.com/lit/ds/symlink/tca9548a.pdf",
+    "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+    "https://www.adafruit.com/product/4699",
+    "https://www.adafruit.com/product/4663",
+    "https://jlcpcb.com/capabilities/Capabilities"
+  ],
+  "aggregate_adjudication": {
+    "source": "owner-final-aggregate-review-info-decoded.json",
+    "coverage": {
+      "requested_audits": 6,
+      "completed": 6,
+      "failed": 0,
+      "diagnostics": 0,
+      "schematic_files": 1,
+      "resolved_symbol_instances": 245,
+      "unresolved_symbol_instances": 0,
+      "footprints": 160,
+      "pads": 431
+    },
+    "raw_verdict_preserved": "NOT READY \u2014 critical issues must be fixed before manufacturing",
+    "raw_findings": {
+      "errors": 1,
+      "warnings": 0,
+      "info": 5
+    },
+    "adjudications": [
+      {
+        "finding": "Power rail '+12V' has no decoupling capacitors",
+        "classification": "Heuristic false positive as an electrical blocker",
+        "evidence": "Fresh exported +12V has exactly J2.1 and F1.1, and no IC supply pin. U12's actual IN rail VIN_RAW has C65 1uF and C66 100nF; protected VIN has C67 4.7uF plus C1/C2/C8/C9/C15/C16. The required IC-local bypassing is present; a capacitor before F1 is not demanded by that requirement. Hot-plug/EMI behavior still needs normal qualification."
+      },
+      {
+        "finding": "Power rail '+12V' has no test point",
+        "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+        "existing_probe_nodes": [
+          "J2.1",
+          "F1.1"
+        ],
+        "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+      },
+      {
+        "finding": "Power rail '+3V3' has no test point",
+        "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+        "existing_probe_nodes": [
+          "J3.2"
+        ],
+        "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+      },
+      {
+        "finding": "Power rail '+4V5' has no test point",
+        "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+        "existing_probe_nodes": [
+          "U8.1",
+          "C32.1",
+          "C34.1"
+        ],
+        "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+      },
+      {
+        "finding": "Power rail '+6V' has no test point",
+        "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+        "existing_probe_nodes": [
+          "U9.1",
+          "C43.1",
+          "C45.1"
+        ],
+        "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+      },
+      {
+        "finding": "Power rail 'VIN' has no test point",
+        "classification": "Valid optional test-access observation; no dedicated test-point footprint, not an electrical failure",
+        "existing_probe_nodes": [
+          "C67.1",
+          "C1.1"
+        ],
+        "evidence": "Verified nodes in fresh netlist. Existing connector/fuse/capacitor pads provide bring-up access; physical probe or production-fixture accessibility remains a bench/test-process consideration."
+      }
+    ],
+    "reviewed_disposition": "All six findings adjudicated; none demonstrates a present circuit or layout blocker. This does not establish hardware qualification or unconditional production readiness."
+  }
+}

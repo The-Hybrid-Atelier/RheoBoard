@@ -1,0 +1,117 @@
+{
+  "method": "Native file-based IPC-2581 export, 6-digit precision; definitions resolved and only independent Set/UserSpecial child ordering normalized. Polygon point order retained.",
+  "fresh_baseline_file_sha256": "ece580144b1468cea325be9e684e7265fd09233ac52c877c69c95bdf6fae2979",
+  "repeat_final_file_sha256": "3566425421c4c1c1c42ff2373532cf5a373d68008dac2ab7fae8a95e449d9700",
+  "components_and_resolved_packages_equivalent": true,
+  "board_profiles_equivalent": true,
+  "layer_results": [
+    {
+      "layer": "B.Cu",
+      "equivalent": true,
+      "baseline_sha256": "737df9b1726d457aa6d6bc77a6e233122ff9e622d3e0426d7897bdbccd297c1b",
+      "final_sha256": "737df9b1726d457aa6d6bc77a6e233122ff9e622d3e0426d7897bdbccd297c1b"
+    },
+    {
+      "layer": "B.Mask",
+      "equivalent": true,
+      "baseline_sha256": "364ed0a7710bdc8ef814fba7e257fa01d32467de5810f988d2bc7d32de9de00d",
+      "final_sha256": "364ed0a7710bdc8ef814fba7e257fa01d32467de5810f988d2bc7d32de9de00d"
+    },
+    {
+      "layer": "Edge.Cuts",
+      "equivalent": true,
+      "baseline_sha256": "9e95c465b1ddb0d4a818637695acc231d5e969ba0a636ba377c1daa3a44d1862",
+      "final_sha256": "9e95c465b1ddb0d4a818637695acc231d5e969ba0a636ba377c1daa3a44d1862"
+    },
+    {
+      "layer": "F.Courtyard",
+      "equivalent": true,
+      "baseline_sha256": "20e77f25a9a62f67752c28abbd280f041cb69aac7f0082d032041f4293b3bc9f",
+      "final_sha256": "20e77f25a9a62f67752c28abbd280f041cb69aac7f0082d032041f4293b3bc9f"
+    },
+    {
+      "layer": "F.Cu",
+      "equivalent": true,
+      "baseline_sha256": "e80622b4401ae7d5896ce846bd7129b7f091debddfa142ec95b92fa1ca7f4388",
+      "final_sha256": "e80622b4401ae7d5896ce846bd7129b7f091debddfa142ec95b92fa1ca7f4388"
+    },
+    {
+      "layer": "F.Cu_B.Cu",
+      "equivalent": true,
+      "baseline_sha256": "dc36120939ce34a4dd92b9a3ab45e9554aab145a54fd24f29a195a3c1aa509e8",
+      "final_sha256": "dc36120939ce34a4dd92b9a3ab45e9554aab145a54fd24f29a195a3c1aa509e8"
+    },
+    {
+      "layer": "F.Cu_B.Cu_1",
+      "equivalent": true,
+      "baseline_sha256": "c16506aabec0dc1bd8c934639550b9305b7d6db4b745b549e23a9941eaca03a3",
+      "final_sha256": "c16506aabec0dc1bd8c934639550b9305b7d6db4b745b549e23a9941eaca03a3"
+    },
+    {
+      "layer": "F.Fab",
+      "equivalent": false,
+      "baseline_sha256": "5cf04d263cbd8ee47774c7d6b165b2a67d5502e61399a4a17751a23bcc71a663",
+      "final_sha256": "51c273be1c0cb03529c41b20d3e0d381c1c5e3322a1f8e6d6290f4ea58355f8d"
+    },
+    {
+      "layer": "F.Mask",
+      "equivalent": true,
+      "baseline_sha256": "571d51dc55a08d005e38ade7e3f1deee505597482124c7bf9a95262be480cd1c",
+      "final_sha256": "571d51dc55a08d005e38ade7e3f1deee505597482124c7bf9a95262be480cd1c"
+    },
+    {
+      "layer": "F.Paste",
+      "equivalent": true,
+      "baseline_sha256": "31e2c26769c1aed2b6d590a0c72bd97934dd82ae1a45b578bf6710f391beb4bd",
+      "final_sha256": "31e2c26769c1aed2b6d590a0c72bd97934dd82ae1a45b578bf6710f391beb4bd"
+    },
+    {
+      "layer": "F.Silkscreen",
+      "equivalent": true,
+      "baseline_sha256": "938d76c7bc745320e87a2ccdd964742ded8da2438d5340219b1df4699b16dd04",
+      "final_sha256": "938d76c7bc745320e87a2ccdd964742ded8da2438d5340219b1df4699b16dd04"
+    },
+    {
+      "layer": "User.Comments",
+      "equivalent": true,
+      "baseline_sha256": "43bb73d480941d396e22014ae104f2d485ba4fd6f2d564d27e00289dd27fe527",
+      "final_sha256": "43bb73d480941d396e22014ae104f2d485ba4fd6f2d564d27e00289dd27fe527"
+    }
+  ],
+  "raw_current_repeat_geometry_equal": false,
+  "baseline_source_matches_saved_digest": true,
+  "fabrication_geometry_equivalent": true,
+  "drawing_export_limitation": {
+    "layer": "F.Fab",
+    "affected_refs": [
+      "C22",
+      "C28",
+      "C46",
+      "C5",
+      "C58",
+      "C59",
+      "C62",
+      "C63",
+      "C64",
+      "C66",
+      "R39",
+      "R40",
+      "R45",
+      "R46",
+      "R60",
+      "R61",
+      "R74",
+      "R75",
+      "R76",
+      "R77",
+      "R78",
+      "R79",
+      "R80",
+      "R81"
+    ],
+    "observed_difference": "24 exported instance rectangles exchange width and height, with identical instance locations. Resolved component/package geometry is identical.",
+    "classification": "Drawing export representation ambiguity; not a demonstrated manufacturing or circuit change. Do not claim all IPC drawing primitives are identical.",
+    "repeatability_evidence": "Repeated native IPC exports from byte-identical final PCB also change 9 F.Courtyard rectangle representations (C64,C66,D33,D34,D35,R78,R79,R80,R81), while all fabrication layers, placements and resolved packages remain identical. Final PCB SHA256 stayed 1c323e9198e0e097183a71e6cdce57e170df9ffd160bdf7ccf0f774ddd09b96d.",
+    "supplement": "Root independently compared complete native board manifests and reports unchanged160placements,pads/nets,attributes,footprint/valueIDs,modelpaths/referencegraphics; owner final-Fab-<REF>-decoded.json records native current F.Fab rectangles."
+  }
+}

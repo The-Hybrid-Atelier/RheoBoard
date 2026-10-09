@@ -1,0 +1,7 @@
+{
+  "current_native_position_rows": 157,
+  "delivered_native_position_rows": 157,
+  "rows_identical": true,
+  "bytes_identical": true,
+  "note": "Native file retains non-SMT board features; the submitted SMT CPL is the separately reconciled 134-reference filtered file."
+}

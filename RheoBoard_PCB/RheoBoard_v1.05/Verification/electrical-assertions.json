@@ -1,0 +1,33 @@
+{
+  "scope": "Exported netlist connectivity/value checks, not electrical simulation",
+  "checks": {
+    "input_fuse_diode_chain": true,
+    "raw_input": true,
+    "protected_input": true,
+    "raw_protected_distinct": true,
+    "UVLO": true,
+    "OVC": true,
+    "ILM": true,
+    "DVDT": true,
+    "protection_grounds": true,
+    "protection_NC": true,
+    "C67_final_value": true,
+    "programming_values": true,
+    "J18_three_wire": true,
+    "peripheral_4wire": true,
+    "expander_address_0x3F": true,
+    "pca_default_address_0x40": true,
+    "pca_OE_low": true,
+    "bus_pullups": true,
+    "bulk_caps_polarity": true,
+    "no_accidental_single_pin_nets": true,
+    "pump1": true,
+    "pump2": true,
+    "valve1": true,
+    "valve2": true
+  },
+  "net_count": 86,
+  "node_count": 398,
+  "single_pin_count": 15,
+  "all_pass": true
+}

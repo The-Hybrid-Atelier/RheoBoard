@@ -1,0 +1,10 @@
+(sym_lib_table
+  (version 7)
+
+  (lib (name "Rheo_TPS563203DRLR") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/TPS563203DRLR.kicad_sym") (options "") (descr ""))
+  (lib (name "Rheo_PCA9685") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/PCA9685.kicad_sym") (options "") (descr ""))
+  (lib (name "Rheo_TCA9534APWR") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/TCA9534APWR.kicad_sym") (options "") (descr ""))
+  (lib (name "Rheo_MPRLS0025PA00001A") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/MPRLS0025PA00001A.kicad_sym") (options "") (descr ""))
+  (lib (name "Rheo_PJ-082BH") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/PJ-082BH.kicad_sym") (options "") (descr ""))
+  (lib (name "Rheo_Fuse_Khach") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/Fuse_Khach.kicad_sym") (options "") (descr ""))
+  (lib (name "RheoBoard_Fixes") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/RheoBoard_Fixes.kicad_sym") (options "") (descr "")))

@@ -1,0 +1,3317 @@
+{
+  "source": "Final exported Gerber/Excellon; nearest same-center copper flash on both sides; capsule slot bounding dimensions included.",
+  "rows": [
+    {
+      "ref": "VIA",
+      "xy": [
+        92.2,
+        129.45
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        92.7,
+        65.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        92.7,
+        66.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        92.7,
+        67.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        95.9,
+        60.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        96.45,
+        115.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        97.175,
+        99.65
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        97.55,
+        54.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        98.625,
+        137.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        100.55,
+        128.175
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        100.55,
+        129.175
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        100.55,
+        130.175
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        101.067,
+        98.806
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        101.075,
+        68.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        101.3,
+        124.325
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        101.325,
+        125.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        101.643,
+        67.127
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        101.675,
+        68.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        102.275,
+        67.075
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        102.514,
+        95.834
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        102.875,
+        67.075
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        104.875,
+        152.975
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        105.05,
+        54.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        105.05,
+        55.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        105.05,
+        56.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        105.919,
+        70.985
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        105.919,
+        71.585
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        106.15,
+        112.325
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        106.525,
+        92.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        107.1,
+        114.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        107.1,
+        115.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        107.1,
+        116.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        107.2,
+        93.158
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        107.825,
+        46.575
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        109.315,
+        70.99
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        109.315,
+        71.665
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        110.95,
+        82.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        111.062,
+        155.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        111.15,
+        139.475
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        111.775,
+        155.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        112.0,
+        82.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        112.487,
+        155.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        113.2,
+        155.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        113.912,
+        155.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        114.2,
+        84.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        114.925,
+        74.525
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        122.775,
+        91.725
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        126.0,
+        109.1
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        126.025,
+        109.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        126.025,
+        110.65
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        127.325,
+        40.325
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        128.875,
+        61.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.07,
+        75.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.125,
+        74.075
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.235,
+        103.378
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.5,
+        61.45
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.5,
+        62.625
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.575,
+        97.175
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.7,
+        75.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        129.8,
+        74.05
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        130.1,
+        61.45
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        130.1,
+        62.625
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        130.1,
+        121.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        130.1,
+        122.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        130.1,
+        123.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        130.44,
+        74.07
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        131.625,
+        142.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        131.759,
+        136.959
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        132.7,
+        84.025
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        132.975,
+        77.927
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        133.0,
+        78.627
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        133.412,
+        84.025
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        133.604,
+        65.405
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        133.604,
+        66.03
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        134.125,
+        84.025
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        134.838,
+        84.025
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        135.0,
+        138.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        135.55,
+        84.025
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        135.8,
+        138.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        136.125,
+        123.125
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        136.6,
+        138.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        136.754,
+        77.978
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        136.754,
+        78.653
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        136.875,
+        65.25
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        136.9,
+        66.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        137.4,
+        138.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        137.5,
+        48.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        140.0,
+        52.3
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        140.275,
+        160.825
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        140.5,
+        41.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        140.8,
+        46.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        141.5,
+        55.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        141.8,
+        70.7
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        141.8,
+        71.7
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        141.8,
+        72.7
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        142.2,
+        49.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        142.291,
+        87.833
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        142.6,
+        93.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        142.625,
+        82.685
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        142.7,
+        48.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        143.0,
+        55.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        143.1,
+        51.7
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        144.7,
+        55.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        145.1,
+        159.925
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        145.3,
+        45.825
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        145.67,
+        83.605
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        145.796,
+        79.756
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        145.812,
+        159.925
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        145.9,
+        91.008
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        145.925,
+        62.7
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        146.4,
+        51.3
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        146.45,
+        90.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        146.525,
+        159.925
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        146.75,
+        50.725
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        146.812,
+        78.74
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        146.94,
+        83.575
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        147.237,
+        159.925
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        147.32,
+        81.28
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        147.828,
+        77.724
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        147.95,
+        159.925
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        148.0,
+        92.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        148.336,
+        80.264
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        148.675,
+        95.825
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        148.844,
+        76.708
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        149.05,
+        91.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        149.352,
+        79.248
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        149.5,
+        42.3
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        149.5,
+        55.3
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        149.75,
+        52.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        149.86,
+        75.692
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        150.3,
+        50.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        150.368,
+        78.232
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        150.5,
+        79.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        151.05,
+        70.225
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        151.213,
+        79.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        151.384,
+        77.216
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        151.925,
+        79.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        152.0,
+        157.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        152.15,
+        69.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        152.637,
+        79.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        153.0,
+        84.475
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        153.35,
+        79.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        154.931,
+        63.088
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        155.95,
+        109.75
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        155.95,
+        110.75
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        155.95,
+        111.75
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        155.975,
+        63.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        157.518,
+        74.03
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        157.525,
+        76.3
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        158.225,
+        75.609
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        158.375,
+        77.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        158.525,
+        73.975
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        158.525,
+        82.225
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        158.775,
+        85.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        158.8,
+        86.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        159.25,
+        68.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        159.25,
+        69.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        159.25,
+        70.85
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        160.325,
+        77.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        161.29,
+        103.251
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        161.95,
+        77.175
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        162.45,
+        73.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        163.525,
+        44.75
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        163.7,
+        84.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        163.725,
+        85.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        163.725,
+        86.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        163.75,
+        73.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        163.975,
+        144.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        164.312,
+        136.887
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        164.412,
+        84.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        164.438,
+        85.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        164.438,
+        86.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.125,
+        84.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.15,
+        85.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.15,
+        86.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.45,
+        77.025
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.525,
+        70.775
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.55,
+        73.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.75,
+        108.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.838,
+        84.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.862,
+        85.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        165.862,
+        86.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        166.55,
+        84.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        166.575,
+        85.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        166.575,
+        86.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        167.095,
+        78.595
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        167.375,
+        77.05
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        167.6,
+        73.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        167.6,
+        138.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        167.675,
+        78.595
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        168.4,
+        138.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        168.5,
+        93.65
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        168.545,
+        78.595
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        168.975,
+        56.675
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        169.2,
+        138.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        169.55,
+        73.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        170.0,
+        138.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        170.85,
+        89.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        171.125,
+        51.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        171.325,
+        83.075
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        171.5,
+        74.45
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        171.65,
+        89.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        171.838,
+        51.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        172.45,
+        89.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        172.55,
+        51.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        172.55,
+        75.725
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        172.875,
+        67.625
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        173.25,
+        89.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        173.262,
+        51.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        173.925,
+        159.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        173.975,
+        51.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        174.075,
+        40.95
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        174.45,
+        83.075
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        174.637,
+        159.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        174.9,
+        86.65
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        175.35,
+        159.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        175.775,
+        87.475
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        175.925,
+        84.075
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        176.062,
+        159.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        176.775,
+        159.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        177.35,
+        88.925
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        178.1,
+        86.225
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        179.7,
+        91.225
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        180.175,
+        88.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        180.75,
+        49.75
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        181.1,
+        86.25
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        181.3,
+        98.025
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        181.725,
+        93.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        182.925,
+        90.975
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        183.55,
+        115.05
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        184.525,
+        92.325
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        185.25,
+        95.15
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        185.275,
+        144.7
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        185.537,
+        151.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        185.562,
+        151.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        185.562,
+        152.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        185.85,
+        97.1
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.05,
+        94.375
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.25,
+        68.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.25,
+        76.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.4,
+        58.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.562,
+        87.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.699,
+        124.331
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.75,
+        65.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.775,
+        71.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.963,
+        68.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.963,
+        76.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        186.975,
+        93.175
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        187.112,
+        58.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        187.275,
+        87.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        187.675,
+        68.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        187.675,
+        76.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        187.725,
+        81.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        187.825,
+        58.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        187.987,
+        87.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.0,
+        82.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.387,
+        68.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.387,
+        76.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.4,
+        99.65
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.5,
+        95.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.525,
+        64.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.537,
+        58.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.7,
+        87.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        188.775,
+        73.225
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.1,
+        68.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.1,
+        76.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.15,
+        72.2
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.25,
+        58.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.412,
+        87.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.45,
+        81.125
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.65,
+        129.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.65,
+        130.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.65,
+        131.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.9,
+        120.3
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        189.925,
+        64.175
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.0,
+        113.25
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.0,
+        117.5
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.05,
+        110.1
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.3,
+        102.25
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.3,
+        105.05
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.3,
+        107.4
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.45,
+        129.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.45,
+        130.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.45,
+        131.55
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.5,
+        139.7
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        190.5,
+        146.05
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        191.275,
+        124.325
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        191.425,
+        122.325
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        192.2,
+        99.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        192.325,
+        123.325
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.15
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        193.2,
+        108.1
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        193.25,
+        102.75
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        193.3,
+        105.9
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        193.3,
+        111.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        193.35,
+        114.8
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        193.55,
+        119.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "VIA",
+      "xy": [
+        195.05,
+        109.225
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.3,
+      "min_annular_mm": 0.1
+    },
+    {
+      "ref": "TP3",
+      "xy": [
+        146.085,
+        88.726
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "TP2",
+      "xy": [
+        148.45,
+        88.722
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "TP7",
+      "xy": [
+        184.787,
+        66.548
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "TP6",
+      "xy": [
+        184.787,
+        70.536
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "TP5",
+      "xy": [
+        184.787,
+        74.701
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "TP4",
+      "xy": [
+        184.787,
+        79.045
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "TP8",
+      "xy": [
+        184.787,
+        62.145
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "TP9",
+      "xy": [
+        184.828,
+        83.548
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.5,
+      "min_annular_mm": 0.25
+    },
+    {
+      "ref": "J18",
+      "xy": [
+        179.0,
+        46.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.95,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "J18",
+      "xy": [
+        181.5,
+        46.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.95,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "J18",
+      "xy": [
+        184.0,
+        46.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.95,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "J3",
+      "xy": [
+        191.925,
+        88.85
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.95,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "J3",
+      "xy": [
+        191.925,
+        91.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.95,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "J3",
+      "xy": [
+        191.925,
+        93.85
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.95,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "J3",
+      "xy": [
+        191.925,
+        96.35
+      ],
+      "slot": false,
+      "hole_tool_mm": 0.95,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "U9",
+      "xy": [
+        141.253,
+        152.79
+      ],
+      "slot": false,
+      "hole_tool_mm": 1.0,
+      "min_annular_mm": 0.4525
+    },
+    {
+      "ref": "U9",
+      "xy": [
+        141.253,
+        155.29
+      ],
+      "slot": false,
+      "hole_tool_mm": 1.0,
+      "min_annular_mm": 0.4525
+    },
+    {
+      "ref": "U10",
+      "xy": [
+        173.453,
+        152.79
+      ],
+      "slot": false,
+      "hole_tool_mm": 1.0,
+      "min_annular_mm": 0.4525
+    },
+    {
+      "ref": "U10",
+      "xy": [
+        173.453,
+        155.29
+      ],
+      "slot": false,
+      "hole_tool_mm": 1.0,
+      "min_annular_mm": 0.4525
+    },
+    {
+      "ref": "J2",
+      "xy": [
+        111.488,
+        51.198
+      ],
+      "slot": false,
+      "hole_tool_mm": 1.5,
+      "min_annular_mm": 0.375
+    },
+    {
+      "ref": "H1",
+      "xy": [
+        95.2,
+        44.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 3.5,
+      "min_annular_mm": 1.75
+    },
+    {
+      "ref": "H4",
+      "xy": [
+        95.2,
+        159.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 3.5,
+      "min_annular_mm": 1.75
+    },
+    {
+      "ref": "H2",
+      "xy": [
+        192.4,
+        44.6
+      ],
+      "slot": false,
+      "hole_tool_mm": 3.5,
+      "min_annular_mm": 1.75
+    },
+    {
+      "ref": "H3",
+      "xy": [
+        192.4,
+        159.0
+      ],
+      "slot": false,
+      "hole_tool_mm": 3.5,
+      "min_annular_mm": 1.75
+    },
+    {
+      "ref": "U11",
+      "xy": [
+        123.83,
+        117.537
+      ],
+      "slot": false,
+      "hole_tool_mm": 4.0,
+      "min_annular_mm": 0.5
+    },
+    {
+      "ref": "U11",
+      "xy": [
+        142.07,
+        117.537
+      ],
+      "slot": false,
+      "hole_tool_mm": 4.0,
+      "min_annular_mm": 0.5
+    },
+    {
+      "ref": "U8",
+      "xy": [
+        156.105,
+        117.537
+      ],
+      "slot": false,
+      "hole_tool_mm": 4.0,
+      "min_annular_mm": 0.5
+    },
+    {
+      "ref": "U8",
+      "xy": [
+        174.345,
+        117.537
+      ],
+      "slot": false,
+      "hole_tool_mm": 4.0,
+      "min_annular_mm": 0.5
+    },
+    {
+      "ref": "J2",
+      "xy": [
+        106.638,
+        44.698
+      ],
+      "slot": true,
+      "hole_tool_mm": 0.8,
+      "min_annular_mm": 0.3
+    },
+    {
+      "ref": "J2",
+      "xy": [
+        106.638,
+        49.397999999999996
+      ],
+      "slot": true,
+      "hole_tool_mm": 0.8,
+      "min_annular_mm": 0.3
+    },
+    {
+      "ref": "J2",
+      "xy": [
+        111.488,
+        45.198
+      ],
+      "slot": true,
+      "hole_tool_mm": 0.8,
+      "min_annular_mm": 0.3
+    },
+    {
+      "ref": "J2",
+      "xy": [
+        116.338,
+        44.698
+      ],
+      "slot": true,
+      "hole_tool_mm": 0.8,
+      "min_annular_mm": 0.3
+    },
+    {
+      "ref": "J2",
+      "xy": [
+        116.338,
+        49.397999999999996
+      ],
+      "slot": true,
+      "hole_tool_mm": 0.8,
+      "min_annular_mm": 0.3
+    }
+  ],
+  "minimum_radial_via_mm": 0.1,
+  "minimum_radial_component_PTH_mm": 0.3,
+  "testpoints_radial_mm": {
+    "TP3": 0.25,
+    "TP2": 0.25,
+    "TP7": 0.25,
+    "TP6": 0.25,
+    "TP5": 0.25,
+    "TP4": 0.25,
+    "TP8": 0.25,
+    "TP9": 0.25
+  }
+}

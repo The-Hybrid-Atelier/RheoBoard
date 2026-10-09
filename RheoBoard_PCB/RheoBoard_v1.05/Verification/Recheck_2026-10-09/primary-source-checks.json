@@ -1,0 +1,38 @@
+[
+  {
+    "part": "TPS259472ARPWR",
+    "url": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "fresh_review": "Pinout1\u201310 and selected-variant behavior; protection network values rechecked against fresh netlist.",
+    "preserved_evidence": "Prior detailed UVLO/current-limit/timing/DCbias calculations remain applicable to identical parts and nets."
+  },
+  {
+    "part": "TPS563203DRLR",
+    "url": "https://www.ti.com/lit/gpn/tps563203",
+    "fresh_review": "VIN/SW/GND/BST/EN/FB pins,0.6V feedback equation,100nF bootstrap,4.7uH/output-cap range,1.4ms typical soft-start."
+  },
+  {
+    "part": "PCA9685PW,118",
+    "url": "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+    "fresh_review": "TSSOP28 power/ground/I2C/OE/address/EXTCLK/output pins; address0x40 by open jumpers,0x70 allcall enabled atpower-up; subcall0x71 disabled bydefault."
+  },
+  {
+    "part": "TCA9534APWR",
+    "url": "https://www.ti.com/lit/ds/symlink/tca9534a.pdf",
+    "fresh_review": "TSSOP16 pins,address0x3F,power-on input ports and INTpullup."
+  },
+  {
+    "part": "MPRLS0025PA00001A",
+    "url": "https://automation.honeywell.com/content/dam/honeywell-edam/sps/ast/en-us/campaigns/pressure-sensors/documents/sps-siot-mpr-series-datasheet-32332628-ciid-172626.pdf",
+    "fresh_review": "12-pad functions,I2C0x18,1nF differential filter,3V3decoupling,reset and minimum supply-rise requirement. New startup finding documented."
+  },
+  {
+    "part": "AO3400A",
+    "url": "https://www.aosmd.com/res/data_sheets/AO3400A.pdf",
+    "fresh_review": "Nchannel30V logic-level behavior characterized at2.5V; gate/source/drain assignments and allfour low-side driver nets checked."
+  },
+  {
+    "part": "External TCA9548A",
+    "url": "https://www.ti.com/lit/ds/symlink/tca9548a.pdf",
+    "fresh_review": "External plan0x71 withA2/A1low,A0high; one selected board/channel and3wireJ18. External master/mux hardware and firmware not present inboardfile."
+  }
+]

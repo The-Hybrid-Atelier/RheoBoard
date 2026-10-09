@@ -1,0 +1,769 @@
+{
+  "source_CPL": "/Users/charlievuong/Documents/RheoBoard/.private/v105-finalization/owner/jlc-manufacturing/CPL-1.csv",
+  "delivered_CPL": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv",
+  "source_package_complete": false,
+  "source_package_warnings": [
+    "JLCPCB BOM/CPL designators do not match: missing from BOM [H1, H2, H3, H4]; missing from CPL [TP1, U11, U8]"
+  ],
+  "checks": {
+    "unique_160_board_footprints": true,
+    "all_141_fitted_parts_on_board": true,
+    "all_BOM_footprints_match_board": true,
+    "all_134_SMT_parts_in_native_JLC_export": true,
+    "native_JLC_export_unique_designators": true,
+    "all_SMT_top_side": true,
+    "all_SMT_have_native_pad_box_geometry": true,
+    "CPL_uses_observed_native_pad_centers": true,
+    "CPL_rotation_matches_native_modulo_360": true,
+    "F1_centered_origin_preserved": true,
+    "existing_3D_links_resolve": true,
+    "delivered_CPL_exact_134_SMT_refs": true,
+    "CPL_values_preserved_from_native_JLC_export": true
+  },
+  "board_footprints": 160,
+  "board_pad_records": 431,
+  "fitted_parts": 141,
+  "SMT_placements": 134,
+  "manual_refs": [
+    "J18",
+    "J2",
+    "J3",
+    "U10",
+    "U11",
+    "U8",
+    "U9"
+  ],
+  "excluded_native_export_refs": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "J18",
+    "J2",
+    "J3",
+    "JP2",
+    "JP3",
+    "JP4",
+    "JP5",
+    "JP6",
+    "JP7",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9",
+    "U10",
+    "U9"
+  ],
+  "non_purchased_board_features": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "JP2",
+    "JP3",
+    "JP4",
+    "JP5",
+    "JP6",
+    "JP7",
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9"
+  ],
+  "coordinates": "Native pad-box union centers; mm, unchanged exported X/-Y convention, top side; rotations normalized modulo 360 by native export.",
+  "orientation": {
+    "status": "PREVIEW_REQUIRED",
+    "physical_validation": false,
+    "applied_corrections": [],
+    "unmatched_SMT_footprints": [
+      {
+        "designator": "C1",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C2",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C3",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C4",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C5",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C8",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C9",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C15",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C16",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C22",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C23",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C24",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C25",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C26",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C27",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C28",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C29",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C30",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C31",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C32",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C33",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C34",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C42",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C43",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C44",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C45",
+        "footprint": "CP_Elec_6.3x5.8",
+        "side": "top"
+      },
+      {
+        "designator": "C46",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C47",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C52",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C53",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C54",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C55",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C56",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C57",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C58",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C59",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C60",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C61",
+        "footprint": "C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C62",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C63",
+        "footprint": "C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "C64",
+        "footprint": "C_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "C65",
+        "footprint": "C_0805_2012Metric",
+        "side": "top"
+      },
+      {
+        "designator": "C66",
+        "footprint": "C_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "C67",
+        "footprint": "C_1206_3216Metric",
+        "side": "top"
+      },
+      {
+        "designator": "D1",
+        "footprint": "D_SMC",
+        "side": "top"
+      },
+      {
+        "designator": "D6",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D7",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D8",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D11",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D12",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D13",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D14",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D15",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D16",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D17",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D18",
+        "footprint": "D_SMA",
+        "side": "top"
+      },
+      {
+        "designator": "D19",
+        "footprint": "LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "D33",
+        "footprint": "LED_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "D34",
+        "footprint": "LED_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "D35",
+        "footprint": "LED_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "D36",
+        "footprint": "D_SMB",
+        "side": "top"
+      },
+      {
+        "designator": "F1",
+        "footprint": "Fuse_JDT_JFC1032TS_10.25x3.2mm",
+        "side": "top"
+      },
+      {
+        "designator": "J1",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "J9",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "J12",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "J17",
+        "footprint": "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+        "side": "top"
+      },
+      {
+        "designator": "L1",
+        "footprint": "L_Changjiang_FXL0530",
+        "side": "top"
+      },
+      {
+        "designator": "L2",
+        "footprint": "L_Changjiang_FXL0530",
+        "side": "top"
+      },
+      {
+        "designator": "L5",
+        "footprint": "L_Changjiang_FXL0530",
+        "side": "top"
+      },
+      {
+        "designator": "Q3",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "Q4",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "Q8",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "Q10",
+        "footprint": "AO3400A",
+        "side": "top"
+      },
+      {
+        "designator": "R1",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R4",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R7",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R10",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R11",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R13",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R14",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R15",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R16",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R17",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R18",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R19",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R20",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R22",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R23",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R24",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R25",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R26",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R29",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R30",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R31",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R32",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R33",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R34",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R35",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R36",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R37",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R38",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R39",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R40",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R42",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R44",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R45",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R46",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R51",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R54",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R55",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R56",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R59",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R60",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R61",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R73",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R74",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R75",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R76",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R77",
+        "footprint": "R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+        "side": "top"
+      },
+      {
+        "designator": "R78",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "R79",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "R80",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "R81",
+        "footprint": "R_0603_1608Metric",
+        "side": "top"
+      },
+      {
+        "designator": "SW1",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "SW2",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "SW3",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "SW4",
+        "footprint": "Tactile_Switch_4pad",
+        "side": "top"
+      },
+      {
+        "designator": "U1",
+        "footprint": "TPS563203DRLR",
+        "side": "top"
+      },
+      {
+        "designator": "U2",
+        "footprint": "TPS563203DRLR",
+        "side": "top"
+      },
+      {
+        "designator": "U3",
+        "footprint": "TPS563203DRLR",
+        "side": "top"
+      },
+      {
+        "designator": "U4",
+        "footprint": "TCA9534APWR",
+        "side": "top"
+      },
+      {
+        "designator": "U5",
+        "footprint": "MPRLS0025PA00001A",
+        "side": "top"
+      },
+      {
+        "designator": "U7",
+        "footprint": "PCA9685",
+        "side": "top"
+      },
+      {
+        "designator": "U12",
+        "footprint": "TI_RPW0010A_VQFN-HR_2x2mm",
+        "side": "top"
+      }
+    ]
+  },
+  "scope": "The derived SMT pair resolves population mismatch by excluding manual fitting and non-purchased PCB features. It does not change the raw tool package verdict or prove physical placement rotation, supplier acceptance, order settings, or hardware qualification.",
+  "sha256": "5effca69073d7a35f32b9cb245cb3e6c3d9fe7695365d1e79e2dc9b5e5023da9",
+  "cleanup_revalidation": {
+    "date": "2026-10-09",
+    "same_board_placement_pad_geometry_nets_attributes_footprint_values": true,
+    "BOM_CPL_Gerbers_drills_board_drawings_byte_preserved": true,
+    "current_schematic_pin_map_pass": true,
+    "scope": "Prior native-export population/rotation reconciliation remains applicable through unchanged fabrication geometry and assembly metadata. Schematic PDF refreshed. No new vendor acceptance or physical test."
+  }
+}

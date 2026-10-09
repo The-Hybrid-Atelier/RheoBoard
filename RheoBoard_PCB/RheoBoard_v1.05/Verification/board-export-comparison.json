@@ -1,0 +1,9 @@
+{
+  "scope": "All exported placement, pad geometry, nets, footprint IDs, values, attributes, model-link paths and reference graphics; excludes UUID/schematic-path identity. Model transforms are outside the common baseline export fields. Routing continuity and geometry additionally require DRC and unchanged source or independent fabrication comparison.",
+  "baseline_count": 160,
+  "candidate_count": 160,
+  "changed_references": [],
+  "changes": {},
+  "passed": true,
+  "candidate_digest": "99540e5ec4e3c4d4497bdb6a93243a5f8376758cb2fc98a5b9875bb23ab20e3e"
+}

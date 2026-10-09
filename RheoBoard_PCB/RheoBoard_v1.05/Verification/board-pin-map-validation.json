@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "all_398_exported_schematic_pin_nodes_on_board": true,
+    "net_names_match_or_only_reviewed_unused_pin_10_alias": true
+  },
+  "missing_nodes": [],
+  "name_differences": [
+    {
+      "reference": "U12",
+      "pin": "10",
+      "schematic_net": "unconnected-(U12-ITIMER-Pad10)",
+      "board_names": [
+        "unconnected-(U12-ITIMER-Pad10)",
+        "unconnected-(U12-ITIMER-Pad10)_1"
+      ]
+    }
+  ],
+  "adjudication": "Independent IPC, GENCAD and Gerber review confirms both pin-10 primitives overlap as the intended continuous L-shaped RPW0010A land, have no external route, and remain 0.20 mm from adjacent pads. The extra generated NC name is a naming artifact, not an additional functional connection.",
+  "scope": "Pad assignments and naming checked from exports. Physical continuity is additionally covered by saved DRC/zone refill; assembled-board behavior remains untested."
+}

@@ -1,0 +1,111 @@
+{
+  "scope": "Native KiCad millimetre 4.6 Gerber export; absolute modal geometry, aperture definitions and macro bodies resolved. All-dark independent primitives compared as multisets. Drill/job exports compared after date removal. Unsupported drawing commands are errors.",
+  "files": {
+    "1-B_Cu.gbl": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 463,
+      "fresh_primitives": 463,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-B_Mask.gbs": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 36,
+      "fresh_primitives": 36,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-B_Paste.gbp": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 0,
+      "fresh_primitives": 0,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-B_Silkscreen.gbo": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 0,
+      "fresh_primitives": 0,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-Edge_Cuts.gm1": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 9,
+      "fresh_primitives": 9,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-F_Cu.gtl": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 1395,
+      "fresh_primitives": 1395,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-F_Mask.gts": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 425,
+      "fresh_primitives": 425,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-F_Paste.gtp": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 372,
+      "fresh_primitives": 372,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-F_Silkscreen.gto": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "resolved dark geometry",
+      "prior_primitives": 2207,
+      "fresh_primitives": 2207,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "macros_equal": true
+    },
+    "1-NPTH.drl": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "all drill commands except date comment"
+    },
+    "1-PTH.drl": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "all drill commands except date comment"
+    },
+    "1-job.gbrjob": {
+      "equivalent": true,
+      "nonempty": true,
+      "method": "job fields except CreationDate"
+    }
+  },
+  "all_12_files_equivalent": true
+}

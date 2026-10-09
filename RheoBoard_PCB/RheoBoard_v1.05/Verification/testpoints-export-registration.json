@@ -1,0 +1,258 @@
+[
+  {
+    "ref": "TP4",
+    "net": "/A0",
+    "xy": [
+      184.787499,
+      79.0448
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0005375881323033235,
+    "drill_mm": 0.5
+  },
+  {
+    "ref": "TP5",
+    "net": "/A1",
+    "xy": [
+      184.787499,
+      74.7014
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0006395318600361852,
+    "drill_mm": 0.5
+  },
+  {
+    "ref": "TP6",
+    "net": "/A2",
+    "xy": [
+      184.787499,
+      70.5358
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0005375881323033235,
+    "drill_mm": 0.5
+  },
+  {
+    "ref": "TP7",
+    "net": "/A3",
+    "xy": [
+      184.787499,
+      66.548
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0004989999999907013,
+    "drill_mm": 0.5
+  },
+  {
+    "ref": "TP8",
+    "net": "/A4",
+    "xy": [
+      184.7875,
+      62.144646
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0006126303942747638,
+    "drill_mm": 0.5
+  },
+  {
+    "ref": "TP9",
+    "net": "/A5",
+    "xy": [
+      184.827501,
+      83.548126
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0005146620250118895,
+    "drill_mm": 0.5
+  },
+  {
+    "ref": "TP3",
+    "net": "/RES",
+    "xy": [
+      146.084758,
+      88.725664
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0004140772874836608,
+    "drill_mm": 0.5
+  },
+  {
+    "ref": "TP2",
+    "net": "Net-(U5-EOC)",
+    "xy": [
+      148.45,
+      88.7222
+    ],
+    "layers": {
+      ".gtl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbl": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gts": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      },
+      ".gbs": {
+        "center_error_mm": 0.0,
+        "width_mm": 1.0,
+        "height_mm": 1.0
+      }
+    },
+    "drill_center_error_mm": 0.0002000000000066393,
+    "drill_mm": 0.5
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "method": "Independent native PDF export rendered at2x, 13crops compared to baseline; final input/pump/address crops reinspected after last bounded text edits.",
+  "pass": true,
+  "regions": [
+    "power-4V5",
+    "power-6V",
+    "power-3V3",
+    "input-protection",
+    "pump-drivers",
+    "valve-drivers",
+    "gpio-expander",
+    "pca-and-peripheral-headers",
+    "address-straps",
+    "master-and-LEDs",
+    "switch-inputs",
+    "pressure-sensor",
+    "title-and-mounts"
+  ],
+  "corrected_captions": [
+    "2_Pump / Valve Drivers",
+    "4_Switch Inputs",
+    "5_Pressure Sensor"
+  ],
+  "observations": [
+    "U7 normalized symbol and attached wires/pin labels readable",
+    "U8/U11 refs and horizontal exact Values readable; no Q3 overlap",
+    "F1 value and D1 field separated; +12V, VIN and VIN_RAW text readable and distinct",
+    "Correct PCA9685 seven-bit address note, R/W separate",
+    "No new page-frame clipping or group collisions observed"
+  ],
+  "final_evidence": [
+    "native-final3/1.pdf",
+    "final3-schematic.png",
+    "final3-power-4V5.png",
+    "final3-pump-drivers.png",
+    "final3-address-straps.png"
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "reviewed_at": "2026-10-09T12:12:47.979745-05:00",
+  "target": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pro",
+  "mode": "Independent read-only audit of saved design; exports stored outside release directories. No source/UI/library/checking-rule/fabrication mutations.",
+  "verdict": "NEEDS ATTENTION \u2014 pressure-sensor startup/reset requirement is not guaranteed. Do not declare production-ready.",
+  "coverage_status": "complete for requested saved-file checks; physical and external-system qualification remains outstanding",
+  "checked_source_sha256": {
+    "RheoboardV1/1.kicad_sch": "dd20899a4dd6f8e2b72af6ca06ea210414269a999c2f26e814e26ab37531f784",
+    "RheoboardV1/1.kicad_pcb": "1c323e9198e0e097183a71e6cdce57e170df9ffd160bdf7ccf0f774ddd09b96d",
+    "RheoboardV1/1.kicad_pro": "f576df1dabc271c85dfa3b2ea566a34aad1e2ca2ecd75dcda1ce863c0051d576",
+    "Symbol/RheoBoard_Fixes.kicad_sym": "b33dfaad79f82e9b1cc916b95bea25266d5ff4ea4cde5d1dbb89479152a17cfe",
+    "Footprint/TestPoint_Plated_D1.0_Drill0.5.kicad_mod": "34c4f3de7605056f2bf10d5328c7d5c45315801f5757bdb5b5068f3afd108a9c"
+  },
+  "sources_unchanged_during_review": true,
+  "counts": {
+    "components": 160,
+    "schematic_nets": 86,
+    "schematic_pin_nodes": 398,
+    "pcb_nets": 87,
+    "pcb_native_pad_primitives": 431,
+    "tracks": 581,
+    "vias": 297,
+    "zones": 163,
+    "thickness_mm": 1.6,
+    "electrical_assertions_passed": 61,
+    "electrical_assertions_total": 61
+  },
+  "direct_checks": {
+    "erc": {
+      "source": "Fresh native saved-file run, KiCad10.0.6",
+      "ignored_check_keys": [
+        "single_global_label",
+        "four_way_junction",
+        "simulation_model_issue",
+        "footprint_filter"
+      ],
+      "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+      ],
+      "coverage_unchanged": true,
+      "violations": 0
+    },
+    "drc": {
+      "source": "Fresh native saved-file run, KiCad10.0.6",
+      "ignored_check_keys": [
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries",
+        "footprint_filters_mismatch"
+      ],
+      "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+      ],
+      "coverage_unchanged": true,
+      "violations": 0,
+      "unconnected": 0,
+      "schematic_parity": 0
+    },
+    "design_rules": {
+      "min_clearance": 0.2,
+      "min_hole_to_hole": 0.25,
+      "min_trace_width": 0.2,
+      "min_via_drill": 0.3,
+      "min_via_size": 0.5
+    },
+    "project_hash_unchanged_from_cleanup": true
+  },
+  "connectivity": {
+    "source": "Fresh native schematic netlist and native IPC-2581 saved-board export",
+    "schematic_nets": 86,
+    "schematic_nodes": 398,
+    "pcb_pin_keys": 423,
+    "nodes_present": 398,
+    "missing": [],
+    "mismatches": [],
+    "multiple_pcb_names": [
+      {
+        "pin": [
+          "U12",
+          "10"
+        ],
+        "schematic": "unconnected-(U12-ITIMER-Pad10)",
+        "pcb": [
+          "unconnected-(U12-ITIMER-Pad10)",
+          "unconnected-(U12-ITIMER-Pad10)_1"
+        ]
+      }
+    ],
+    "pass": true,
+    "normalization": "KiCad {slash} escape normalized to slash. Multiple physical primitives with same ref/pin collapsed; U12 pin10 reviewed NC alias separately. Omit unnamed mask/paste/document layer references; compare named copper nets."
+  },
+  "all_connectivity_and_procurement_semantics_match_completed_cleanup": true,
+  "root_current_direct_checks": {
+    "find_shorted_nets": {
+      "short_count": 0,
+      "shorts": []
+    },
+    "find_orphan_items": {
+      "orphan_count": 0,
+      "orphans": [],
+      "tolerance": 0.05
+    },
+    "find_single_pin_nets": {
+      "nets": [],
+      "single_pin_net_count": 0
+    }
+  },
+  "aggregate": {
+    "complete": true,
+    "completed_audits": 6,
+    "requested_audits": 6,
+    "coverage": {
+      "board": {
+        "footprints": 160,
+        "named_nets": 87,
+        "pads": 431
+      },
+      "schematic": {
+        "multi_unit_symbols": 0,
+        "named_nets": 32,
+        "resolved_symbols": 245,
+        "schematic_files": 1,
+        "sheet_instances": 1,
+        "symbol_instances": 245,
+        "unresolved_symbols": 0
+      }
+    },
+    "diagnostics": [],
+    "raw_verdict": "NOT READY \u2014 critical issues must be fixed before manufacturing",
+    "adjudications": [
+      {
+        "finding": "+12V has no decoupling",
+        "raw_severity": "error",
+        "disposition": "Not a demonstrated defect. +12V joins only J2.1 and F1.1; no IC draws from that node. U12 IN VIN_RAW has C65/C66; protected VIN has C67 and six10uF converter input caps.",
+        "evidence": "Fresh netlist assertion input_fuse_diode_chain,raw_input,protected_input and U1/U2/U3_input_bulk."
+      },
+      {
+        "finding": "No dedicated test points on+12V,+3V3,+4V5,+6V,VIN",
+        "raw_severity": "5 info",
+        "disposition": "Optional production-fixture improvement; electrical access exists at jack/fuse/connector/capacitor pads. Existing access does not prove automated fixture accessibility."
+      }
+    ]
+  },
+  "manufacturing_preflight": {
+    "source": "Root fresh saved-file Konnect validate_for_manufacturing",
+    "raw": {
+      "board_info": {
+        "copper_layers": 2,
+        "footprint_count": 160,
+        "net_count": 87,
+        "track_count": 878
+      },
+      "drc": {
+        "design_rule_violations": 0,
+        "errors": 0,
+        "schematic_parity": 0,
+        "unconnected_items": 0
+      },
+      "fab_house": "jlcpcb",
+      "issues": [],
+      "summary": "READY: 0 issues found. 160 footprints, 2 copper layers.",
+      "verdict": "READY"
+    },
+    "limitation": "Narrow rule/inventory preflight; does not validate dynamic electrical behavior or JLC assembly/order acceptance."
+  },
+  "fresh_visual": {
+    "method": "Fresh native PDF rendered at2x; all page pixels compared to independently reviewed final cleanup PDF",
+    "image_size": [
+      4768,
+      3368
+    ],
+    "pixels_identical": true,
+    "prior_review": "/tmp/rheoboard-v105-erc-cleanup-review-20261009/cleanup-visual-review.json"
+  },
+  "fresh_visual_regions_inspected": [
+    "U12 protection",
+    "U4 expander",
+    "U7 PCA and bus headers",
+    "U5 pressure sensor"
+  ],
+  "prior_evidence_used_with_exact_hash_binding": [
+    "Independent all-layer fabrication geometry comparison and scoped F.Fab IPC representation caveat from cleanup review. PCB SHA256 identical; no repeateddrawing-export debugging.",
+    "Previous manufacturer curve assessment of C65 and C67 DCbias,polarized bulk capacitor selection,mechanical/pump clearances. Fresh netlist confirms exact values/procurement identities.",
+    "Previous13-region schematic visual review; fresh fullpage rendered pixels identical."
+  ],
+  "findings": [
+    {
+      "id": "U5-POWERON-RESET",
+      "severity": "warning-high-priority",
+      "classification": "Production-readiness gap requiring a guaranteed reset strategy or demonstrated compliant supply ramp",
+      "location": [
+        "U5 pin12 VDD",
+        "U5 pin9 RES",
+        "U3 TPS563203",
+        "R22",
+        "TP3"
+      ],
+      "facts": {
+        "sensor_requirement": "Honeywell MPR datasheet issueK \u00a74.0 p11 requires at least10V/ms VDD rising slope; otherwise use RES after supply stabilized.",
+        "regulator": "TI TPS563203 revA \u00a76.3.3 specifies typical1.4ms internal soft-start.",
+        "reset_net": [
+          [
+            "R22",
+            "2"
+          ],
+          [
+            "TP3",
+            "1"
+          ],
+          [
+            "U5",
+            "9"
+          ]
+        ],
+        "reset_pullup": "R22=10k fromRES to3V3; TP3probeaccess; no active resetcontroller attached.",
+        "supply": "U5VDD connected directly toU3+3V3 rail.",
+        "illustrative_mean_ramp_V_per_ms": 2.357142857142857
+      },
+      "inference": "Nominal buck soft-start is substantially slower than sensor power-on slope requirement. The present pull-up alone does not create an active low-to-high reset after3V3 stabilizes; sensor startup is therefore not guaranteed by design. Average ramp estimate is not an oscilloscope measurement of the actual waveform.",
+      "possible_symptom": "Sensor may fail or behave inconsistently after cold start or brownout; no claim that every board will fail.",
+      "action": "Before production approval, provide a guaranteed post-stable reset (e.g. suitable voltage supervisor, or properly sequenced host-controlled connection viaTP3) or obtain measured/manufacturer-accepted proof of compliance. Scope3V3 atU5 andRES during cold/hot starts and brownouts. No design modification performed.",
+      "sources": [
+        {
+          "url": "https://automation.honeywell.com/content/dam/honeywell-edam/sps/ast/en-us/campaigns/pressure-sensors/documents/sps-siot-mpr-series-datasheet-32332628-ciid-172626.pdf",
+          "section": "4.0 Power Supply Requirement,p11; Table13 pinout,p11"
+        },
+        {
+          "url": "https://www.ti.com/lit/gpn/tps563203",
+          "section": "ElectricalCharacteristics tSS,p6; \u00a76.3.3,p12"
+        }
+      ],
+      "evidence": [
+        "native/1.net",
+        "pressure-sensor.png",
+        "expanded-electrical-assertions.json"
+      ]
+    }
+  ],
+  "summary_counts": {
+    "confirmed_shorts_or_pin_mismatches": 0,
+    "new_high_priority_engineering_findings": 1,
+    "aggregate_error_heuristics_adjudicated_nondefect": 1,
+    "optional_testpoint_suggestions": 5
+  },
+  "operating_assumptions": [
+    "Regulated12V input. Actual adapter/combined start/stall load budget still requires validation.",
+    "External3V3master/mux throughJ18 GND/SDA/SCL; do not connect independently powered3V3rails together.",
+    "One board per selectedTCA9548Achannel,address0x71; keep PCA hardware/subcall settings fromcolliding with0x71. Start100kHz and verify actualcable risetime.",
+    "Keep-laststate is accepted user behavior. Coldpowerup differs fromhostdisconnect; firmware startup should preset valve outputlatchlow before switching ports tooutputs and initialize PCA before drivingloads."
+  ],
+  "remaining_qualifications": [
+    "Resolve or demonstrate compliant U5 startup/reset across coldstart andbrownout.",
+    "Measure protectedVIN hotplug/overshoot,simultaneous motorstarts/stalls,railripple and thermalrise; eFuse currentlimit/13.8Vclamp are not proof ofloadtransient behavior.",
+    "Verify exactmechanical pump/valve fit,assembly polarity/rotation,and JLCproductionpreview for exactsubmittedpackage.",
+    "Externalhost/muxfirmware/pullups/powersequence are not reviewable fromthisPCB alone.",
+    "Nohardware test,manufactureracceptance or physicaloperationclaim."
+  ],
+  "evidence": [
+    "native/1-erc.json",
+    "native/1-drc.json",
+    "native/1.net",
+    "native/1.pdf",
+    "native/board.xml",
+    "fresh-board-pin-reconciliation.json",
+    "expanded-electrical-assertions.json",
+    "fresh-check-coverage.json",
+    "fresh-semantic-preservation.json",
+    "aggregate-adjudication.json",
+    "sensor-startup-finding.json",
+    "primary-source-checks.json",
+    "source-before.json",
+    "source-after.json"
+  ]
+}
