@@ -51,7 +51,7 @@ Inspect the fuse, all three inductors, diode bands, IC pin-1 marks and electroly
 
 The specified pump's drawing gives a 27.0 ±0.2 mm plastic-head diameter and 24.0 ±0.3 mm motor-can diameter. Its body length is 58.2 ±0.1 mm, with a further 6.1 ±0.2 mm axial nozzle projection. Reserve additional room for tubing and its bend radius. The drawing does not dimension the side nozzle's radial reach or guarantee the PCB terminal-hole fit, so check the supplied pumps and hose routing physically. [Pump dimension drawing](https://cdn-shop.adafruit.com/product-files/4699/4699_C14656_diagram.jpg).
 
-The old JLCPCB image belongs to the v1 order. A new v1.05 order requires a new placement preview matching the revised BOM and placement export.
+The [JLCPCB top placement interpretation](../interpretation/8815214A_Y73_SMT026093063736_top.png) belongs to v1 order 8815214A_Y73 / SMT026093063736. A new v1.05 order requires a new placement preview matching the revised BOM and placement export.
 
 ## Controller initialization and channel map
 

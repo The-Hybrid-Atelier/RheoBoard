@@ -2,7 +2,7 @@
 
 KiCad 10 design for the custom RheoBoard. This is a separate board from the DIY module build in
 [`BuildYourOwn/`](../BuildYourOwn/). Everyday wall power for this board is a 12 V plug. The
-firmware in [`../firmware/`](../firmware/) and the RheoData notes in [`../software/`](../software/)
+firmware in [`../code/firmware/`](../code/firmware/) and the RheoData notes in [`../code/software/`](../code/software/)
 apply to the DIY build, this PCB, and the portable version.
 
 License: hardware CERN-OHL-W-2.0 — see [`../LICENSE`](../LICENSE).
@@ -31,7 +31,14 @@ layout change.
 |---|---|
 | Gerbers | [`RheoBoard_v1/Gerber/`](RheoBoard_v1/Gerber/) |
 | Drills | [`RheoBoard_v1/Drill/`](RheoBoard_v1/Drill/) |
-| Assembly BOM | [`BOM/BOM_RheoboardV1_JLCSMT.xlsx`](BOM/BOM_RheoboardV1_JLCSMT.xlsx) |
+| Assembly BOM | [`RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx`](RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx) |
 | Pick-and-place | [`RheoBoard_v1/CPL/CPL.csv`](RheoBoard_v1/CPL/CPL.csv) |
+
+## Supplier placement interpretation
+
+JLCPCB's corrected top-side part placement for the submitted Rheoboard V1 assembly is
+[`interpretation/8815214A_Y73_SMT026093063736_top.png`](interpretation/8815214A_Y73_SMT026093063736_top.png).
+Order 8815214A_Y73, SMT job SMT026093063736, stamp 20261008110423663. See
+[`interpretation/README.md`](interpretation/README.md).
 
 This board is a prototype.

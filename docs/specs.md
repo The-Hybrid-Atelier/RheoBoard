@@ -2,7 +2,7 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [build guide](../BuildYourOwn/README.md), the [print notes](../BuildYourOwn/cad/encloser/README.md), and the [firmware reference](../firmware/README.md).
+Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [build guide](../BuildYourOwn/README.md), the [print notes](../BuildYourOwn/cad/encloser/README.md), and the [firmware reference](../code/firmware/README.md).
 
 ## System
 

@@ -1,0 +1,46 @@
+{
+  "board": [
+    {
+      "path": "/design_settings/rule_severities/missing_courtyard",
+      "v1": "ignore",
+      "v105": "warning"
+    },
+    {
+      "path": "/design_settings/rule_severities/silk_edge_clearance",
+      "v1": "ignore",
+      "v105": "warning"
+    },
+    {
+      "path": "/design_settings/rule_severities/text_height",
+      "v1": "ignore",
+      "v105": "warning"
+    },
+    {
+      "path": "/design_settings/rule_severities/lib_footprint_mismatch",
+      "v1": "ignore",
+      "v105": "warning"
+    },
+    {
+      "path": "/design_settings/rule_severities/footprint_type_mismatch",
+      "v1": "ignore",
+      "v105": "warning"
+    },
+    {
+      "path": "/design_settings/rule_severities/courtyards_overlap",
+      "v1": "ignore",
+      "v105": "error"
+    },
+    {
+      "path": "/design_settings/rule_severities/lib_footprint_issues",
+      "v1": "ignore",
+      "v105": "warning"
+    },
+    {
+      "path": "/design_settings/rule_severities/silk_over_copper",
+      "v1": "ignore",
+      "v105": "warning"
+    }
+  ],
+  "erc": [],
+  "net_settings": []
+}

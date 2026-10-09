@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "185_release_files_match_manifest": true,
+    "all_12_fabrication_files_match_fresh_native_export_except_dates": true,
+    "zip_matches_packaged_12_files": true,
+    "all_native_position_rows_match_saved_export": true,
+    "140_unique_SMT_BOM_CPL_refs_match": true,
+    "all_140_CPL_midpoints_and_rotations_verified": true,
+    "SMT_BOM_footprints_match_fresh_schematic": true,
+    "147_unique_fitted_workbook_parts": true,
+    "workbook_SMT_equals_CSV": true
+  },
+  "fabrication_files": {
+    "1-B_Cu.gbl": true,
+    "1-F_Cu.gtl": true,
+    "1-NPTH.drl": true,
+    "1-F_Paste.gtp": true,
+    "1-B_Mask.gbs": true,
+    "1-PTH.drl": true,
+    "1-F_Silkscreen.gto": true,
+    "1-B_Silkscreen.gbo": true,
+    "1-B_Paste.gbp": true,
+    "1-F_Mask.gts": true,
+    "1-Edge_Cuts.gm1": true,
+    "1-job.gbrjob": true
+  },
+  "scope": "Fresh native fabrication/position exports and fresh schematic netlist; pad-center geometry from prior native export tied to same PCB hash; workbook read-only XML audit. No supply-chain or JLC-preview acceptance implied.",
+  "passed": true
+}

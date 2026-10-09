@@ -7,7 +7,7 @@ This repository uses one root license file with terms scoped by content:
 
 - Hardware design files (including wiring, 3D-print files, BOM, and PCB design files) are
   licensed under CERN-OHL-W-2.0. The complete, unmodified license text appears below.
-- Firmware in firmware/ is licensed under the MIT License. The complete license
+- Firmware in code/firmware/ is licensed under the MIT License. The complete license
   text appears after the CERN-OHL-W-2.0 text.
 - Documentation (including READMEs and the build guide) is licensed under CC BY-SA 4.0:
   https://creativecommons.org/licenses/by-sa/4.0/

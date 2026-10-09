@@ -1,0 +1,128 @@
+{
+  "U1": {
+    "1": {
+      "v1": {
+        "name": "VIN",
+        "type": "input"
+      },
+      "v105": {
+        "name": "VIN",
+        "type": "power_in"
+      }
+    },
+    "3": {
+      "v1": {
+        "name": "GND",
+        "type": "power_out"
+      },
+      "v105": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "4": {
+      "v1": {
+        "name": "BST",
+        "type": "output"
+      },
+      "v105": {
+        "name": "BST",
+        "type": "passive"
+      }
+    },
+    "2": {
+      "v1": {
+        "name": "SW",
+        "type": "output"
+      },
+      "v105": {
+        "name": "SW",
+        "type": "power_out"
+      }
+    }
+  },
+  "U2": {
+    "1": {
+      "v1": {
+        "name": "VIN",
+        "type": "input"
+      },
+      "v105": {
+        "name": "VIN",
+        "type": "power_in"
+      }
+    },
+    "3": {
+      "v1": {
+        "name": "GND",
+        "type": "power_out"
+      },
+      "v105": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "4": {
+      "v1": {
+        "name": "BST",
+        "type": "output"
+      },
+      "v105": {
+        "name": "BST",
+        "type": "passive"
+      }
+    },
+    "2": {
+      "v1": {
+        "name": "SW",
+        "type": "output"
+      },
+      "v105": {
+        "name": "SW",
+        "type": "power_out"
+      }
+    }
+  },
+  "U3": {
+    "1": {
+      "v1": {
+        "name": "VIN",
+        "type": "input"
+      },
+      "v105": {
+        "name": "VIN",
+        "type": "power_in"
+      }
+    },
+    "3": {
+      "v1": {
+        "name": "GND",
+        "type": "power_out"
+      },
+      "v105": {
+        "name": "GND",
+        "type": "power_in"
+      }
+    },
+    "4": {
+      "v1": {
+        "name": "BST",
+        "type": "output"
+      },
+      "v105": {
+        "name": "BST",
+        "type": "passive"
+      }
+    },
+    "2": {
+      "v1": {
+        "name": "SW",
+        "type": "output"
+      },
+      "v105": {
+        "name": "SW",
+        "type": "power_out"
+      }
+    }
+  }
+}

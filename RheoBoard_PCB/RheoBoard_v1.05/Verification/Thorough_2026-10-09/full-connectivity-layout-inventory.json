@@ -1,0 +1,4222 @@
+{
+  "source": "Fresh native netlist and IPC2581 exports",
+  "schematic_components": 166,
+  "board_components": 166,
+  "schematic_pins": 416,
+  "component_set_equal": true,
+  "extra_board_pad_keys": [
+    {
+      "ref": "J12",
+      "pin": "MP",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "J9",
+      "pin": "MP",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "H1",
+      "pin": "1",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "J17",
+      "pin": "MP",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "H3",
+      "pin": "1",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "U10",
+      "pin": "NPTH0",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "U5",
+      "pin": "5",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "U5",
+      "pin": "11",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "H2",
+      "pin": "1",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "U9",
+      "pin": "NPTH0",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "J1",
+      "pin": "MP",
+      "nets": [
+        ""
+      ]
+    },
+    {
+      "ref": "H4",
+      "pin": "1",
+      "nets": [
+        ""
+      ]
+    }
+  ],
+  "part_inventory": {
+    "C1": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "C2": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "C3": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(U1-BST)",
+          "board": [
+            "Net-(U1-BST)"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U1-SW)",
+          "board": [
+            "Net-(U1-SW)"
+          ]
+        }
+      }
+    },
+    "C4": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(U2-BST)",
+          "board": [
+            "Net-(U2-BST)"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U2-SW)",
+          "board": [
+            "Net-(U2-SW)"
+          ]
+        }
+      }
+    },
+    "C5": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(U3-BST)",
+          "board": [
+            "Net-(U3-BST)"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U3-SW)",
+          "board": [
+            "Net-(U3-SW)"
+          ]
+        }
+      }
+    },
+    "C8": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "C9": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "C15": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "C16": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "C22": {
+      "value": "10nF 50V \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C23": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VALVE1_IN",
+          "board": [
+            "VALVE1_IN"
+          ]
+        }
+      }
+    },
+    "C24": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VALVE2_IN",
+          "board": [
+            "VALVE2_IN"
+          ]
+        }
+      }
+    },
+    "C25": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "PUMP1_IN",
+          "board": [
+            "PUMP1_IN"
+          ]
+        }
+      }
+    },
+    "C26": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "PUMP2_IN",
+          "board": [
+            "PUMP2_IN"
+          ]
+        }
+      }
+    },
+    "C27": {
+      "value": "1nF 50V X7R \u00b15%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(U5-VO+)",
+          "board": [
+            "Net-(U5-VO+)"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U5-VO-)",
+          "board": [
+            "Net-(U5-VO-)"
+          ]
+        }
+      }
+    },
+    "C28": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C29": {
+      "value": "10uF 25V X5R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C30": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C31": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C32": {
+      "value": "22uF 50V \u00b120%",
+      "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C33": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C34": {
+      "value": "22uF 50V \u00b120%",
+      "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C42": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C43": {
+      "value": "22uF 50V \u00b120%",
+      "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C44": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C45": {
+      "value": "22uF 50V \u00b120%",
+      "footprint": "Capacitor_SMD:CP_Elec_6.3x5.8",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C46": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C47": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C52": {
+      "value": "22uF 25V X5R \u00b120%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C53": {
+      "value": "22uF 25V X5R \u00b120%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C54": {
+      "value": "22uF 25V X5R \u00b120%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C55": {
+      "value": "18pF 50V C0G \u00b12%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U1-FB)",
+          "board": [
+            "Net-(U1-FB)"
+          ]
+        }
+      }
+    },
+    "C56": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C57": {
+      "value": "22uF 25V X5R \u00b120%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C58": {
+      "value": "18pF 50V C0G \u00b12%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U2-FB)",
+          "board": [
+            "Net-(U2-FB)"
+          ]
+        }
+      }
+    },
+    "C59": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C60": {
+      "value": "22uF 25V X5R \u00b120%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C61": {
+      "value": "22uF 25V X5R \u00b120%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C62": {
+      "value": "18pF 50V C0G \u00b12%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U3-FB)",
+          "board": [
+            "Net-(U3-FB)"
+          ]
+        }
+      }
+    },
+    "C63": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C64": {
+      "value": "3.3nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/EF_DVDT",
+          "board": [
+            "/EF_DVDT"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C65": {
+      "value": "1uF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN_RAW",
+          "board": [
+            "VIN_RAW"
+          ]
+        }
+      }
+    },
+    "C66": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN_RAW",
+          "board": [
+            "VIN_RAW"
+          ]
+        }
+      }
+    },
+    "C67": {
+      "value": "4.7uF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "C68": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "C69": {
+      "value": "100nF 50V X7R \u00b110%",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/HOST_3V3",
+          "board": [
+            "/HOST_3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "D1": {
+      "value": "B540C-13-F",
+      "footprint": "Diode_SMD:D_SMC",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(D1-A)",
+          "board": [
+            "Net-(D1-A)"
+          ]
+        },
+        "1": {
+          "schematic": "VIN_RAW",
+          "board": [
+            "VIN_RAW"
+          ]
+        }
+      }
+    },
+    "D6": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/PUMP2_PWM",
+          "board": [
+            "/PUMP2_PWM"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D6-K)",
+          "board": [
+            "Net-(D6-K)"
+          ]
+        }
+      }
+    },
+    "D7": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/PUMP3_PWM",
+          "board": [
+            "/PUMP3_PWM"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D7-K)",
+          "board": [
+            "Net-(D7-K)"
+          ]
+        }
+      }
+    },
+    "D8": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/PUMP4_PWM",
+          "board": [
+            "/PUMP4_PWM"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D8-K)",
+          "board": [
+            "Net-(D8-K)"
+          ]
+        }
+      }
+    },
+    "D11": {
+      "value": "SS34",
+      "footprint": "Diode_SMD:D_SMA",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D11-A)",
+          "board": [
+            "Net-(D11-A)"
+          ]
+        }
+      }
+    },
+    "D12": {
+      "value": "SS34",
+      "footprint": "Diode_SMD:D_SMA",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D12-A)",
+          "board": [
+            "Net-(D12-A)"
+          ]
+        }
+      }
+    },
+    "D13": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D13-K)",
+          "board": [
+            "Net-(D13-K)"
+          ]
+        }
+      }
+    },
+    "D14": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D14-K)",
+          "board": [
+            "Net-(D14-K)"
+          ]
+        }
+      }
+    },
+    "D15": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D15-A)",
+          "board": [
+            "Net-(D15-A)"
+          ]
+        }
+      }
+    },
+    "D16": {
+      "value": "SS34",
+      "footprint": "Diode_SMD:D_SMA",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D16-A)",
+          "board": [
+            "Net-(D16-A)"
+          ]
+        }
+      }
+    },
+    "D17": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D17-K)",
+          "board": [
+            "Net-(D17-K)"
+          ]
+        }
+      }
+    },
+    "D18": {
+      "value": "SS34",
+      "footprint": "Diode_SMD:D_SMA",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D18-A)",
+          "board": [
+            "Net-(D18-A)"
+          ]
+        }
+      }
+    },
+    "D19": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D19-K)",
+          "board": [
+            "Net-(D19-K)"
+          ]
+        }
+      }
+    },
+    "D33": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D33-A)",
+          "board": [
+            "Net-(D33-A)"
+          ]
+        }
+      }
+    },
+    "D34": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D34-A)",
+          "board": [
+            "Net-(D34-A)"
+          ]
+        }
+      }
+    },
+    "D35": {
+      "value": "LED_Red",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D35-A)",
+          "board": [
+            "Net-(D35-A)"
+          ]
+        }
+      }
+    },
+    "D36": {
+      "value": "SMBJ13A",
+      "footprint": "Diode_SMD:D_SMB",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VIN_RAW",
+          "board": [
+            "VIN_RAW"
+          ]
+        }
+      }
+    },
+    "F1": {
+      "value": "2A time-delay JFC1032-1200TS",
+      "footprint": "RheoBoard:Fuse_JDT_JFC1032TS_10.25x3.2mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+12V",
+          "board": [
+            "+12V"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D1-A)",
+          "board": [
+            "Net-(D1-A)"
+          ]
+        }
+      }
+    },
+    "H1": {
+      "value": "MountingHole",
+      "footprint": "MountingHole:MountingHole_3.5mm_Pad",
+      "pcb_present": true,
+      "pins": {}
+    },
+    "H2": {
+      "value": "MountingHole",
+      "footprint": "MountingHole:MountingHole_3.5mm_Pad",
+      "pcb_present": true,
+      "pins": {}
+    },
+    "H3": {
+      "value": "MountingHole",
+      "footprint": "MountingHole:MountingHole_3.5mm_Pad",
+      "pcb_present": true,
+      "pins": {}
+    },
+    "H4": {
+      "value": "MountingHole",
+      "footprint": "MountingHole:MountingHole_3.5mm_Pad",
+      "pcb_present": true,
+      "pins": {}
+    },
+    "J1": {
+      "value": "JST SH 4-pin 1.00mm",
+      "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "4": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "3": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "J2": {
+      "value": "PJ-082BH",
+      "footprint": "RheoBoard:PJ-082BH",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+12V",
+          "board": [
+            "+12V"
+          ]
+        },
+        "SH2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "SH1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "SH3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "SH4": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "J3": {
+      "value": "JST EH 4-pin 2.50mm",
+      "footprint": "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "4": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "3": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "J9": {
+      "value": "JST SH 4-pin 1.00mm",
+      "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/HOST_3V3",
+          "board": [
+            "/HOST_3V3"
+          ]
+        },
+        "4": {
+          "schematic": "/HOST_SCL",
+          "board": [
+            "/HOST_SCL"
+          ]
+        },
+        "3": {
+          "schematic": "/HOST_SDA",
+          "board": [
+            "/HOST_SDA"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "J12": {
+      "value": "JST SH 4-pin 1.00mm",
+      "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "4": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "3": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "J17": {
+      "value": "JST SH 4-pin 1.00mm",
+      "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "4": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "3": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "J18": {
+      "value": "JST EH 3-pin 2.50mm",
+      "footprint": "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "2": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "JP2": {
+      "value": "SolderJumper_2_Open",
+      "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/A0",
+          "board": [
+            "/A0"
+          ]
+        }
+      }
+    },
+    "JP3": {
+      "value": "SolderJumper_2_Open",
+      "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/A1",
+          "board": [
+            "/A1"
+          ]
+        }
+      }
+    },
+    "JP4": {
+      "value": "SolderJumper_2_Open",
+      "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/A2",
+          "board": [
+            "/A2"
+          ]
+        }
+      }
+    },
+    "JP5": {
+      "value": "SolderJumper_2_Open",
+      "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/A3",
+          "board": [
+            "/A3"
+          ]
+        }
+      }
+    },
+    "JP6": {
+      "value": "SolderJumper_2_Open",
+      "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/A4",
+          "board": [
+            "/A4"
+          ]
+        }
+      }
+    },
+    "JP7": {
+      "value": "SolderJumper_2_Open",
+      "footprint": "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/A5",
+          "board": [
+            "/A5"
+          ]
+        }
+      }
+    },
+    "L1": {
+      "value": "4.7uH FXL0530-4R7-M",
+      "footprint": "Inductor_SMD:L_Changjiang_FXL0530",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U1-SW)",
+          "board": [
+            "Net-(U1-SW)"
+          ]
+        }
+      }
+    },
+    "L2": {
+      "value": "4.7uH FXL0530-4R7-M",
+      "footprint": "Inductor_SMD:L_Changjiang_FXL0530",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U3-SW)",
+          "board": [
+            "Net-(U3-SW)"
+          ]
+        }
+      }
+    },
+    "L5": {
+      "value": "4.7uH FXL0530-4R7-M",
+      "footprint": "Inductor_SMD:L_Changjiang_FXL0530",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U2-SW)",
+          "board": [
+            "Net-(U2-SW)"
+          ]
+        }
+      }
+    },
+    "Q3": {
+      "value": "AO3400A",
+      "footprint": "RheoBoard:AO3400A",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "3": {
+          "schematic": "Net-(D11-A)",
+          "board": [
+            "Net-(D11-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q3-G)",
+          "board": [
+            "Net-(Q3-G)"
+          ]
+        }
+      }
+    },
+    "Q4": {
+      "value": "AO3400A",
+      "footprint": "RheoBoard:AO3400A",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "3": {
+          "schematic": "Net-(D12-A)",
+          "board": [
+            "Net-(D12-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q4-G)",
+          "board": [
+            "Net-(Q4-G)"
+          ]
+        }
+      }
+    },
+    "Q8": {
+      "value": "AO3400A",
+      "footprint": "RheoBoard:AO3400A",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "3": {
+          "schematic": "Net-(D16-A)",
+          "board": [
+            "Net-(D16-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q8-G)",
+          "board": [
+            "Net-(Q8-G)"
+          ]
+        }
+      }
+    },
+    "Q10": {
+      "value": "AO3400A",
+      "footprint": "RheoBoard:AO3400A",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "3": {
+          "schematic": "Net-(D18-A)",
+          "board": [
+            "Net-(D18-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q10-G)",
+          "board": [
+            "Net-(Q10-G)"
+          ]
+        }
+      }
+    },
+    "R1": {
+      "value": "100K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(U1-EN)",
+          "board": [
+            "Net-(U1-EN)"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "R4": {
+      "value": "100K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(U2-EN)",
+          "board": [
+            "Net-(U2-EN)"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "R7": {
+      "value": "100K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(U3-EN)",
+          "board": [
+            "Net-(U3-EN)"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "R10": {
+      "value": "2K2/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U4-{slash}INT)",
+          "board": [
+            "Net-(U4-{slash}INT)"
+          ]
+        }
+      }
+    },
+    "R11": {
+      "value": "4K7/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U4-A0)",
+          "board": [
+            "Net-(U4-A0)"
+          ]
+        }
+      }
+    },
+    "R13": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U4-P2)",
+          "board": [
+            "Net-(U4-P2)"
+          ]
+        }
+      }
+    },
+    "R14": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U4-P3)",
+          "board": [
+            "Net-(U4-P3)"
+          ]
+        }
+      }
+    },
+    "R15": {
+      "value": "4K7/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        }
+      }
+    },
+    "R16": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "VALVE1_IN",
+          "board": [
+            "VALVE1_IN"
+          ]
+        }
+      }
+    },
+    "R17": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "VALVE2_IN",
+          "board": [
+            "VALVE2_IN"
+          ]
+        }
+      }
+    },
+    "R18": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "PUMP1_IN",
+          "board": [
+            "PUMP1_IN"
+          ]
+        }
+      }
+    },
+    "R19": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "PUMP2_IN",
+          "board": [
+            "PUMP2_IN"
+          ]
+        }
+      }
+    },
+    "R20": {
+      "value": "4K7/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        }
+      }
+    },
+    "R22": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/RES",
+          "board": [
+            "/RES"
+          ]
+        }
+      }
+    },
+    "R23": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/OE",
+          "board": [
+            "/OE"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R24": {
+      "value": "1K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D6-K)",
+          "board": [
+            "Net-(D6-K)"
+          ]
+        }
+      }
+    },
+    "R25": {
+      "value": "1K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D7-K)",
+          "board": [
+            "Net-(D7-K)"
+          ]
+        }
+      }
+    },
+    "R26": {
+      "value": "1K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D8-K)",
+          "board": [
+            "Net-(D8-K)"
+          ]
+        }
+      }
+    },
+    "R29": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/A0",
+          "board": [
+            "/A0"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R30": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/A1",
+          "board": [
+            "/A1"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R31": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/A2",
+          "board": [
+            "/A2"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R32": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/A3",
+          "board": [
+            "/A3"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R33": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/A4",
+          "board": [
+            "/A4"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R34": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/A5",
+          "board": [
+            "/A5"
+          ]
+        },
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R35": {
+      "value": "100R/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(Q3-G)",
+          "board": [
+            "Net-(Q3-G)"
+          ]
+        },
+        "2": {
+          "schematic": "PUMP0_PWM",
+          "board": [
+            "PUMP0_PWM"
+          ]
+        }
+      }
+    },
+    "R36": {
+      "value": "100R/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(Q8-G)",
+          "board": [
+            "Net-(Q8-G)"
+          ]
+        },
+        "2": {
+          "schematic": "VALVE2",
+          "board": [
+            "VALVE2"
+          ]
+        }
+      }
+    },
+    "R37": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q3-G)",
+          "board": [
+            "Net-(Q3-G)"
+          ]
+        }
+      }
+    },
+    "R38": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q4-G)",
+          "board": [
+            "Net-(Q4-G)"
+          ]
+        }
+      }
+    },
+    "R39": {
+      "value": "1K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(D11-A)",
+          "board": [
+            "Net-(D11-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D13-K)",
+          "board": [
+            "Net-(D13-K)"
+          ]
+        }
+      }
+    },
+    "R40": {
+      "value": "1K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(D12-A)",
+          "board": [
+            "Net-(D12-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D14-K)",
+          "board": [
+            "Net-(D14-K)"
+          ]
+        }
+      }
+    },
+    "R42": {
+      "value": "100R/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(Q4-G)",
+          "board": [
+            "Net-(Q4-G)"
+          ]
+        },
+        "2": {
+          "schematic": "PUMP1_PWM",
+          "board": [
+            "PUMP1_PWM"
+          ]
+        }
+      }
+    },
+    "R44": {
+      "value": "330/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D15-A)",
+          "board": [
+            "Net-(D15-A)"
+          ]
+        }
+      }
+    },
+    "R45": {
+      "value": "196k \u00b11%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U1-FB)",
+          "board": [
+            "Net-(U1-FB)"
+          ]
+        }
+      }
+    },
+    "R46": {
+      "value": "30K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U1-FB)",
+          "board": [
+            "Net-(U1-FB)"
+          ]
+        }
+      }
+    },
+    "R51": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q8-G)",
+          "board": [
+            "Net-(Q8-G)"
+          ]
+        }
+      }
+    },
+    "R54": {
+      "value": "1K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(D16-A)",
+          "board": [
+            "Net-(D16-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D17-K)",
+          "board": [
+            "Net-(D17-K)"
+          ]
+        }
+      }
+    },
+    "R55": {
+      "value": "100R/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(Q10-G)",
+          "board": [
+            "Net-(Q10-G)"
+          ]
+        },
+        "2": {
+          "schematic": "VALVE1",
+          "board": [
+            "VALVE1"
+          ]
+        }
+      }
+    },
+    "R56": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(Q10-G)",
+          "board": [
+            "Net-(Q10-G)"
+          ]
+        }
+      }
+    },
+    "R59": {
+      "value": "1K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "Net-(D18-A)",
+          "board": [
+            "Net-(D18-A)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D19-K)",
+          "board": [
+            "Net-(D19-K)"
+          ]
+        }
+      }
+    },
+    "R60": {
+      "value": "270K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U2-FB)",
+          "board": [
+            "Net-(U2-FB)"
+          ]
+        }
+      }
+    },
+    "R61": {
+      "value": "135k \u00b10.1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U3-FB)",
+          "board": [
+            "Net-(U3-FB)"
+          ]
+        }
+      }
+    },
+    "R73": {
+      "value": "549R \u00b11%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D33-A)",
+          "board": [
+            "Net-(D33-A)"
+          ]
+        }
+      }
+    },
+    "R74": {
+      "value": "30K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U2-FB)",
+          "board": [
+            "Net-(U2-FB)"
+          ]
+        }
+      }
+    },
+    "R75": {
+      "value": "1k/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D34-A)",
+          "board": [
+            "Net-(D34-A)"
+          ]
+        }
+      }
+    },
+    "R76": {
+      "value": "30K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U3-FB)",
+          "board": [
+            "Net-(U3-FB)"
+          ]
+        }
+      }
+    },
+    "R77": {
+      "value": "330/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(D35-A)",
+          "board": [
+            "Net-(D35-A)"
+          ]
+        }
+      }
+    },
+    "R78": {
+      "value": "680k \u00b11%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "2": {
+          "schematic": "/EF_EN",
+          "board": [
+            "/EF_EN"
+          ]
+        },
+        "1": {
+          "schematic": "VIN_RAW",
+          "board": [
+            "VIN_RAW"
+          ]
+        }
+      }
+    },
+    "R79": {
+      "value": "100k \u00b11%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/EF_EN",
+          "board": [
+            "/EF_EN"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R80": {
+      "value": "390k \u00b11%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/EF_OVC",
+          "board": [
+            "/EF_OVC"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R81": {
+      "value": "1.65k \u00b11%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/EF_ILIM",
+          "board": [
+            "/EF_ILIM"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "R82": {
+      "value": "4K7/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/HOST_3V3",
+          "board": [
+            "/HOST_3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/HOST_SDA",
+          "board": [
+            "/HOST_SDA"
+          ]
+        }
+      }
+    },
+    "R83": {
+      "value": "4K7/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/HOST_3V3",
+          "board": [
+            "/HOST_3V3"
+          ]
+        },
+        "2": {
+          "schematic": "/HOST_SCL",
+          "board": [
+            "/HOST_SCL"
+          ]
+        }
+      }
+    },
+    "R84": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/HOST_3V3",
+          "board": [
+            "/HOST_3V3"
+          ]
+        },
+        "2": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    },
+    "SW1": {
+      "value": "TL3301NF160QG/P010515",
+      "footprint": "RheoBoard:Tactile_Switch_4pad",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "VALVE1_IN",
+          "board": [
+            "VALVE1_IN"
+          ]
+        },
+        "1": {
+          "schematic": "VALVE1_IN",
+          "board": [
+            "VALVE1_IN"
+          ]
+        }
+      }
+    },
+    "SW2": {
+      "value": "TL3301NF160QG/P010515",
+      "footprint": "RheoBoard:Tactile_Switch_4pad",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "VALVE2_IN",
+          "board": [
+            "VALVE2_IN"
+          ]
+        },
+        "2": {
+          "schematic": "VALVE2_IN",
+          "board": [
+            "VALVE2_IN"
+          ]
+        }
+      }
+    },
+    "SW3": {
+      "value": "TL3301NF160QG/P010515",
+      "footprint": "RheoBoard:Tactile_Switch_4pad",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "1": {
+          "schematic": "PUMP1_IN",
+          "board": [
+            "PUMP1_IN"
+          ]
+        },
+        "2": {
+          "schematic": "PUMP1_IN",
+          "board": [
+            "PUMP1_IN"
+          ]
+        }
+      }
+    },
+    "SW4": {
+      "value": "TL3301NF160QG/P010515",
+      "footprint": "RheoBoard:Tactile_Switch_4pad",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "PUMP2_IN",
+          "board": [
+            "PUMP2_IN"
+          ]
+        },
+        "1": {
+          "schematic": "PUMP2_IN",
+          "board": [
+            "PUMP2_IN"
+          ]
+        }
+      }
+    },
+    "TP1": {
+      "value": "TestPoint",
+      "footprint": "TestPoint:TestPoint_Pad_D1.0mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(U4-{slash}INT)",
+          "board": [
+            "Net-(U4-{slash}INT)"
+          ]
+        }
+      }
+    },
+    "TP2": {
+      "value": "TestPoint_EOC",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "Net-(U5-EOC)",
+          "board": [
+            "Net-(U5-EOC)"
+          ]
+        }
+      }
+    },
+    "TP3": {
+      "value": "TestPoint_RES",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/RES",
+          "board": [
+            "/RES"
+          ]
+        }
+      }
+    },
+    "TP4": {
+      "value": "TestPoint",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/A0",
+          "board": [
+            "/A0"
+          ]
+        }
+      }
+    },
+    "TP5": {
+      "value": "TestPoint",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/A1",
+          "board": [
+            "/A1"
+          ]
+        }
+      }
+    },
+    "TP6": {
+      "value": "TestPoint",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/A2",
+          "board": [
+            "/A2"
+          ]
+        }
+      }
+    },
+    "TP7": {
+      "value": "TestPoint",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/A3",
+          "board": [
+            "/A3"
+          ]
+        }
+      }
+    },
+    "TP8": {
+      "value": "TestPoint",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/A4",
+          "board": [
+            "/A4"
+          ]
+        }
+      }
+    },
+    "TP9": {
+      "value": "TestPoint",
+      "footprint": "RheoBoard:TestPoint_Plated_D1.0_Drill0.5",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "/A5",
+          "board": [
+            "/A5"
+          ]
+        }
+      }
+    },
+    "U1": {
+      "value": "TPS563203DRLR",
+      "footprint": "RheoBoard:TPS563203DRLR",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "Net-(U1-BST)",
+          "board": [
+            "Net-(U1-BST)"
+          ]
+        },
+        "5": {
+          "schematic": "Net-(U1-EN)",
+          "board": [
+            "Net-(U1-EN)"
+          ]
+        },
+        "6": {
+          "schematic": "Net-(U1-FB)",
+          "board": [
+            "Net-(U1-FB)"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U1-SW)",
+          "board": [
+            "Net-(U1-SW)"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "U2": {
+      "value": "TPS563203DRLR",
+      "footprint": "RheoBoard:TPS563203DRLR",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "Net-(U2-BST)",
+          "board": [
+            "Net-(U2-BST)"
+          ]
+        },
+        "5": {
+          "schematic": "Net-(U2-EN)",
+          "board": [
+            "Net-(U2-EN)"
+          ]
+        },
+        "6": {
+          "schematic": "Net-(U2-FB)",
+          "board": [
+            "Net-(U2-FB)"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U2-SW)",
+          "board": [
+            "Net-(U2-SW)"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "U3": {
+      "value": "TPS563203DRLR",
+      "footprint": "RheoBoard:TPS563203DRLR",
+      "pcb_present": true,
+      "pins": {
+        "3": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "Net-(U3-BST)",
+          "board": [
+            "Net-(U3-BST)"
+          ]
+        },
+        "5": {
+          "schematic": "Net-(U3-EN)",
+          "board": [
+            "Net-(U3-EN)"
+          ]
+        },
+        "6": {
+          "schematic": "Net-(U3-FB)",
+          "board": [
+            "Net-(U3-FB)"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U3-SW)",
+          "board": [
+            "Net-(U3-SW)"
+          ]
+        },
+        "1": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        }
+      }
+    },
+    "U4": {
+      "value": "TCA9534APWR",
+      "footprint": "RheoBoard:TCA9534APWR",
+      "pcb_present": true,
+      "pins": {
+        "16": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "14": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "15": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "8": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(U4-A0)",
+          "board": [
+            "Net-(U4-A0)"
+          ]
+        },
+        "1": {
+          "schematic": "Net-(U4-A0)",
+          "board": [
+            "Net-(U4-A0)"
+          ]
+        },
+        "3": {
+          "schematic": "Net-(U4-A0)",
+          "board": [
+            "Net-(U4-A0)"
+          ]
+        },
+        "6": {
+          "schematic": "Net-(U4-P2)",
+          "board": [
+            "Net-(U4-P2)"
+          ]
+        },
+        "7": {
+          "schematic": "Net-(U4-P3)",
+          "board": [
+            "Net-(U4-P3)"
+          ]
+        },
+        "13": {
+          "schematic": "Net-(U4-{slash}INT)",
+          "board": [
+            "Net-(U4-{slash}INT)"
+          ]
+        },
+        "11": {
+          "schematic": "PUMP1_IN",
+          "board": [
+            "PUMP1_IN"
+          ]
+        },
+        "12": {
+          "schematic": "PUMP2_IN",
+          "board": [
+            "PUMP2_IN"
+          ]
+        },
+        "4": {
+          "schematic": "VALVE1",
+          "board": [
+            "VALVE1"
+          ]
+        },
+        "9": {
+          "schematic": "VALVE1_IN",
+          "board": [
+            "VALVE1_IN"
+          ]
+        },
+        "5": {
+          "schematic": "VALVE2",
+          "board": [
+            "VALVE2"
+          ]
+        },
+        "10": {
+          "schematic": "VALVE2_IN",
+          "board": [
+            "VALVE2_IN"
+          ]
+        }
+      }
+    },
+    "U5": {
+      "value": "MPRLS0025PA00001A",
+      "footprint": "RheoBoard:MPRLS0025PA00001A",
+      "pcb_present": true,
+      "pins": {
+        "12": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "9": {
+          "schematic": "/RES",
+          "board": [
+            "/RES"
+          ]
+        },
+        "3": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "2": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "10": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "8": {
+          "schematic": "Net-(U5-EOC)",
+          "board": [
+            "Net-(U5-EOC)"
+          ]
+        },
+        "4": {
+          "schematic": "Net-(U5-VO+)",
+          "board": [
+            "Net-(U5-VO+)"
+          ]
+        },
+        "6": {
+          "schematic": "Net-(U5-VO-)",
+          "board": [
+            "Net-(U5-VO-)"
+          ]
+        },
+        "7": {
+          "schematic": "unconnected-(U5-MISO-Pad7)",
+          "board": [
+            "unconnected-(U5-MISO-Pad7)"
+          ]
+        },
+        "1": {
+          "schematic": "unconnected-(U5-SS-Pad1)",
+          "board": [
+            "unconnected-(U5-SS-Pad1)"
+          ]
+        }
+      }
+    },
+    "U7": {
+      "value": "PCA9685PW,118",
+      "footprint": "RheoBoard:PCA9685",
+      "pcb_present": true,
+      "pins": {
+        "28": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "1": {
+          "schematic": "/A0",
+          "board": [
+            "/A0"
+          ]
+        },
+        "2": {
+          "schematic": "/A1",
+          "board": [
+            "/A1"
+          ]
+        },
+        "3": {
+          "schematic": "/A2",
+          "board": [
+            "/A2"
+          ]
+        },
+        "4": {
+          "schematic": "/A3",
+          "board": [
+            "/A3"
+          ]
+        },
+        "5": {
+          "schematic": "/A4",
+          "board": [
+            "/A4"
+          ]
+        },
+        "24": {
+          "schematic": "/A5",
+          "board": [
+            "/A5"
+          ]
+        },
+        "23": {
+          "schematic": "/OE",
+          "board": [
+            "/OE"
+          ]
+        },
+        "8": {
+          "schematic": "/PUMP2_PWM",
+          "board": [
+            "/PUMP2_PWM"
+          ]
+        },
+        "9": {
+          "schematic": "/PUMP3_PWM",
+          "board": [
+            "/PUMP3_PWM"
+          ]
+        },
+        "10": {
+          "schematic": "/PUMP4_PWM",
+          "board": [
+            "/PUMP4_PWM"
+          ]
+        },
+        "26": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "27": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "14": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "25": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "6": {
+          "schematic": "PUMP0_PWM",
+          "board": [
+            "PUMP0_PWM"
+          ]
+        },
+        "7": {
+          "schematic": "PUMP1_PWM",
+          "board": [
+            "PUMP1_PWM"
+          ]
+        },
+        "11": {
+          "schematic": "unconnected-(U7-PWM5-Pad11)",
+          "board": [
+            "unconnected-(U7-PWM5-Pad11)"
+          ]
+        },
+        "12": {
+          "schematic": "unconnected-(U7-PWM6-Pad12)",
+          "board": [
+            "unconnected-(U7-PWM6-Pad12)"
+          ]
+        },
+        "13": {
+          "schematic": "unconnected-(U7-PWM7-Pad13)",
+          "board": [
+            "unconnected-(U7-PWM7-Pad13)"
+          ]
+        },
+        "15": {
+          "schematic": "unconnected-(U7-PWM8-Pad15)",
+          "board": [
+            "unconnected-(U7-PWM8-Pad15)"
+          ]
+        },
+        "16": {
+          "schematic": "unconnected-(U7-PWM9-Pad16)",
+          "board": [
+            "unconnected-(U7-PWM9-Pad16)"
+          ]
+        },
+        "17": {
+          "schematic": "unconnected-(U7-PWM10-Pad17)",
+          "board": [
+            "unconnected-(U7-PWM10-Pad17)"
+          ]
+        },
+        "18": {
+          "schematic": "unconnected-(U7-PWM11-Pad18)",
+          "board": [
+            "unconnected-(U7-PWM11-Pad18)"
+          ]
+        },
+        "19": {
+          "schematic": "unconnected-(U7-PWM12-Pad19)",
+          "board": [
+            "unconnected-(U7-PWM12-Pad19)"
+          ]
+        },
+        "20": {
+          "schematic": "unconnected-(U7-PWM13-Pad20)",
+          "board": [
+            "unconnected-(U7-PWM13-Pad20)"
+          ]
+        },
+        "21": {
+          "schematic": "unconnected-(U7-PWM14-Pad21)",
+          "board": [
+            "unconnected-(U7-PWM14-Pad21)"
+          ]
+        },
+        "22": {
+          "schematic": "unconnected-(U7-PWM15-Pad22)",
+          "board": [
+            "unconnected-(U7-PWM15-Pad22)"
+          ]
+        }
+      }
+    },
+    "U8": {
+      "value": "ZR370-02PM / 4.5V / 2.5 LPM / ~500 mA",
+      "footprint": "RheoBoard:PUMP",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D11-A)",
+          "board": [
+            "Net-(D11-A)"
+          ]
+        }
+      }
+    },
+    "U9": {
+      "value": "JST XH 2-pin 2.50mm",
+      "footprint": "RheoBoard:VALVE_v105",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D16-A)",
+          "board": [
+            "Net-(D16-A)"
+          ]
+        }
+      }
+    },
+    "U10": {
+      "value": "JST XH 2-pin 2.50mm",
+      "footprint": "RheoBoard:VALVE_v105",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+6V",
+          "board": [
+            "+6V"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D18-A)",
+          "board": [
+            "Net-(D18-A)"
+          ]
+        }
+      }
+    },
+    "U11": {
+      "value": "ZR370-02PM / 4.5V / 2.5 LPM / ~500 mA",
+      "footprint": "RheoBoard:PUMP",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+4V5",
+          "board": [
+            "+4V5"
+          ]
+        },
+        "2": {
+          "schematic": "Net-(D12-A)",
+          "board": [
+            "Net-(D12-A)"
+          ]
+        }
+      }
+    },
+    "U12": {
+      "value": "TPS259472ARPWR",
+      "footprint": "RheoBoard:TI_RPW0010A_VQFN-HR_2x2mm",
+      "pcb_present": true,
+      "pins": {
+        "7": {
+          "schematic": "/EF_DVDT",
+          "board": [
+            "/EF_DVDT"
+          ]
+        },
+        "1": {
+          "schematic": "/EF_EN",
+          "board": [
+            "/EF_EN"
+          ]
+        },
+        "9": {
+          "schematic": "/EF_ILIM",
+          "board": [
+            "/EF_ILIM"
+          ]
+        },
+        "2": {
+          "schematic": "/EF_OVC",
+          "board": [
+            "/EF_OVC"
+          ]
+        },
+        "8": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "4": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        },
+        "6": {
+          "schematic": "VIN",
+          "board": [
+            "VIN"
+          ]
+        },
+        "5": {
+          "schematic": "VIN_RAW",
+          "board": [
+            "VIN_RAW"
+          ]
+        },
+        "10": {
+          "schematic": "unconnected-(U12-ITIMER-Pad10)",
+          "board": [
+            "unconnected-(U12-ITIMER-Pad10)",
+            "unconnected-(U12-ITIMER-Pad10)_1"
+          ]
+        },
+        "3": {
+          "schematic": "unconnected-(U12-PG-Pad3)",
+          "board": [
+            "unconnected-(U12-PG-Pad3)"
+          ]
+        }
+      }
+    },
+    "U13": {
+      "value": "TCA9517ADGKR",
+      "footprint": "RheoBoard:TI_DGK0008A_VSSOP_3x3mm_P0.65mm",
+      "pcb_present": true,
+      "pins": {
+        "1": {
+          "schematic": "+3V3",
+          "board": [
+            "+3V3"
+          ]
+        },
+        "8": {
+          "schematic": "/HOST_3V3",
+          "board": [
+            "/HOST_3V3"
+          ]
+        },
+        "5": {
+          "schematic": "/HOST_3V3",
+          "board": [
+            "/HOST_3V3"
+          ]
+        },
+        "7": {
+          "schematic": "/HOST_SCL",
+          "board": [
+            "/HOST_SCL"
+          ]
+        },
+        "6": {
+          "schematic": "/HOST_SDA",
+          "board": [
+            "/HOST_SDA"
+          ]
+        },
+        "2": {
+          "schematic": "/SCL",
+          "board": [
+            "/SCL"
+          ]
+        },
+        "3": {
+          "schematic": "/SDA",
+          "board": [
+            "/SDA"
+          ]
+        },
+        "4": {
+          "schematic": "GND",
+          "board": [
+            "GND"
+          ]
+        }
+      }
+    }
+  },
+  "decoupling_distances": [
+    {
+      "ref": "U1",
+      "supply_pin": "1",
+      "net": "VIN",
+      "caps": [
+        {
+          "ref": "C2",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 2.354
+        },
+        {
+          "ref": "C1",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 4.2503
+        },
+        {
+          "ref": "C9",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 14.5436
+        },
+        {
+          "ref": "C8",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 16.7078
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "supply_pin": "1",
+      "net": "VIN",
+      "caps": [
+        {
+          "ref": "C9",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 2.3242
+        },
+        {
+          "ref": "C8",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 4.2503
+        },
+        {
+          "ref": "C1",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 8.7648
+        },
+        {
+          "ref": "C2",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 10.8773
+        }
+      ]
+    },
+    {
+      "ref": "U3",
+      "supply_pin": "1",
+      "net": "VIN",
+      "caps": [
+        {
+          "ref": "C16",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 2.3382
+        },
+        {
+          "ref": "C15",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 4.2503
+        },
+        {
+          "ref": "C1",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 26.4904
+        },
+        {
+          "ref": "C2",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 26.8127
+        }
+      ]
+    },
+    {
+      "ref": "U4",
+      "supply_pin": "16",
+      "net": "+3V3",
+      "caps": [
+        {
+          "ref": "C22",
+          "value": "10nF 50V \u00b110%",
+          "supply_pad_distance_mm": 3.0142
+        },
+        {
+          "ref": "C47",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 3.9438
+        },
+        {
+          "ref": "C29",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 16.9948
+        },
+        {
+          "ref": "C30",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 17.5602
+        }
+      ]
+    },
+    {
+      "ref": "U5",
+      "supply_pin": "12",
+      "net": "+3V3",
+      "caps": [
+        {
+          "ref": "C28",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 2.7007
+        },
+        {
+          "ref": "C46",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 4.2855
+        },
+        {
+          "ref": "C22",
+          "value": "10nF 50V \u00b110%",
+          "supply_pad_distance_mm": 21.6865
+        },
+        {
+          "ref": "C47",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 21.7771
+        }
+      ]
+    },
+    {
+      "ref": "U7",
+      "supply_pin": "28",
+      "net": "+3V3",
+      "caps": [
+        {
+          "ref": "C30",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 4.2522
+        },
+        {
+          "ref": "C29",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 5.0845
+        },
+        {
+          "ref": "C47",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 11.2715
+        },
+        {
+          "ref": "C22",
+          "value": "10nF 50V \u00b110%",
+          "supply_pad_distance_mm": 12.553
+        }
+      ]
+    },
+    {
+      "ref": "U12",
+      "supply_pin": "5",
+      "net": "VIN_RAW",
+      "caps": [
+        {
+          "ref": "C66",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 3.125
+        },
+        {
+          "ref": "C65",
+          "value": "1uF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 7.1179
+        }
+      ]
+    },
+    {
+      "ref": "U12",
+      "supply_pin": "6",
+      "net": "VIN",
+      "caps": [
+        {
+          "ref": "C67",
+          "value": "4.7uF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 4.8343
+        },
+        {
+          "ref": "C8",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 16.801
+        },
+        {
+          "ref": "C9",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 17.8796
+        },
+        {
+          "ref": "C1",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 25.1465
+        }
+      ]
+    },
+    {
+      "ref": "U13",
+      "supply_pin": "1",
+      "net": "+3V3",
+      "caps": [
+        {
+          "ref": "C68",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 2.0666
+        },
+        {
+          "ref": "C22",
+          "value": "10nF 50V \u00b110%",
+          "supply_pad_distance_mm": 36.3689
+        },
+        {
+          "ref": "C47",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 37.5517
+        },
+        {
+          "ref": "C29",
+          "value": "10uF 25V X5R \u00b110%",
+          "supply_pad_distance_mm": 50.0687
+        }
+      ]
+    },
+    {
+      "ref": "U13",
+      "supply_pin": "8",
+      "net": "/HOST_3V3",
+      "caps": [
+        {
+          "ref": "C69",
+          "value": "100nF 50V X7R \u00b110%",
+          "supply_pad_distance_mm": 2.2211
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "polygon_closed": true,
+    "bounds_mm": [
+      89.2,
+      -165.0,
+      198.2,
+      -38.6
+    ],
+    "width_mm": 108.99999999999999,
+    "height_mm": 126.4
+  },
+  "hole_inventory": [
+    {
+      "diameter_mm": 0.3,
+      "plating": "VIA",
+      "count": 301
+    },
+    {
+      "diameter_mm": 0.5,
+      "plating": "PLATED",
+      "count": 8
+    },
+    {
+      "diameter_mm": 0.95,
+      "plating": "PLATED",
+      "count": 7
+    },
+    {
+      "diameter_mm": 1.0,
+      "plating": "PLATED",
+      "count": 4
+    },
+    {
+      "diameter_mm": 1.5,
+      "plating": "PLATED",
+      "count": 1
+    },
+    {
+      "diameter_mm": 1.6,
+      "plating": "NONPLATED",
+      "count": 1
+    },
+    {
+      "diameter_mm": 3.5,
+      "plating": "NONPLATED",
+      "count": 2
+    },
+    {
+      "diameter_mm": 3.5,
+      "plating": "PLATED",
+      "count": 4
+    },
+    {
+      "diameter_mm": 4.0,
+      "plating": "PLATED",
+      "count": 4
+    }
+  ],
+  "power_tracks": {
+    "+12V": {
+      "count": 0,
+      "widths_mm": [],
+      "narrow_segments": []
+    },
+    "VIN_RAW": {
+      "count": 10,
+      "widths_mm": [
+        0.3,
+        0.5,
+        0.65,
+        1.0
+      ],
+      "narrow_segments": [
+        {
+          "layer": "F.Cu",
+          "width": 0.3,
+          "length": 1.1000000000000014,
+          "start": [
+            138.175,
+            -46.5
+          ],
+          "end": [
+            138.175,
+            -47.6
+          ]
+        },
+        {
+          "layer": "F.Cu",
+          "width": 0.3,
+          "length": 0.7999999999999972,
+          "start": [
+            144.25,
+            -48.5
+          ],
+          "end": [
+            144.25,
+            -49.3
+          ]
+        }
+      ]
+    },
+    "VIN": {
+      "count": 3,
+      "widths_mm": [
+        0.3,
+        0.8
+      ],
+      "narrow_segments": [
+        {
+          "layer": "F.Cu",
+          "width": 0.3,
+          "length": 2.0,
+          "start": [
+            144.75,
+            -51.7
+          ],
+          "end": [
+            144.75,
+            -53.7
+          ]
+        }
+      ]
+    },
+    "+4V5": {
+      "count": 0,
+      "widths_mm": [],
+      "narrow_segments": []
+    },
+    "+6V": {
+      "count": 0,
+      "widths_mm": [],
+      "narrow_segments": []
+    },
+    "+3V3": {
+      "count": 82,
+      "widths_mm": [
+        0.25,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "narrow_segments": [
+        {
+          "layer": "F.Cu",
+          "width": 0.25,
+          "length": 1.5250000000000057,
+          "start": [
+            188.1375,
+            -109.0
+          ],
+          "end": [
+            188.1375,
+            -110.525
+          ]
+        },
+        {
+          "layer": "F.Cu",
+          "width": 0.25,
+          "length": 1.4124999999999943,
+          "start": [
+            186.725,
+            -109.0
+          ],
+          "end": [
+            188.1375,
+            -109.0
+          ]
+        },
+        {
+          "layer": "F.Cu",
+          "width": 0.25,
+          "length": 0.7071067811865476,
+          "start": [
+            188.1375,
+            -110.525
+          ],
+          "end": [
+            188.6375,
+            -111.025
+          ]
+        }
+      ]
+    },
+    "Net-(D11-A)": {
+      "count": 0,
+      "widths_mm": [],
+      "narrow_segments": []
+    },
+    "Net-(D12-A)": {
+      "count": 1,
+      "widths_mm": [
+        2.0
+      ],
+      "narrow_segments": []
+    },
+    "Net-(D16-A)": {
+      "count": 0,
+      "widths_mm": [],
+      "narrow_segments": []
+    },
+    "Net-(D18-A)": {
+      "count": 0,
+      "widths_mm": [],
+      "narrow_segments": []
+    }
+  },
+  "limits": "Track widths alone cannot establish current or thermal capacity; zones and pad necks contribute. Straight pad distance does not measure routed loop inductance. Extra mechanical pads have no schematic pins by design.",
+  "raw_net_name_mismatches": [
+    {
+      "ref": "U12",
+      "pin": "10",
+      "schematic": "unconnected-(U12-ITIMER-Pad10)",
+      "board": [
+        "unconnected-(U12-ITIMER-Pad10)",
+        "unconnected-(U12-ITIMER-Pad10)_1"
+      ]
+    }
+  ],
+  "electrical_mismatches": [],
+  "alias_adjudication": {
+    "reference": "U12",
+    "pin": "10",
+    "result": "Intentional floating ITIMER pin represented by two overlapping same-number copper primitives, native generated unconnected aliases. No routed external connection or other component uses the suffixed alias. DRC and schematic parity both zero. This name difference does not change electrical intent.",
+    "evidence": "Fresh IPC and pads-U12-decoded.json; two same-pin rectangles overlap at the L-shaped corner."
+  }
+}

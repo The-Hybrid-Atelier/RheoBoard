@@ -1,0 +1,614 @@
+{
+  "passed": 85,
+  "failed": 0,
+  "checks": [
+    {
+      "block": "Input",
+      "name": "jack-fuse-diode-eFuse chain",
+      "pass": true,
+      "evidence": "J2.1 -> F1.1/2 -> D1.A/K -> U12.5/6 -> U1/U2/U3 VIN"
+    },
+    {
+      "block": "Input",
+      "name": "TVS polarity",
+      "pass": true,
+      "evidence": "D36 cathode VIN_RAW / anode GND"
+    },
+    {
+      "block": "Input",
+      "name": "C65 input bypass",
+      "pass": true,
+      "evidence": "1uF 50V X7R \u00b110%"
+    },
+    {
+      "block": "Input",
+      "name": "C66 input bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "Input",
+      "name": "C67 output bypass",
+      "pass": true,
+      "evidence": "4.7uF 50V X7R \u00b110%"
+    },
+    {
+      "block": "Input",
+      "name": "R80 control to GND",
+      "pass": true,
+      "evidence": "390k \u00b11%"
+    },
+    {
+      "block": "Input",
+      "name": "R81 control to GND",
+      "pass": true,
+      "evidence": "1.65k \u00b11%"
+    },
+    {
+      "block": "Input",
+      "name": "C64 control to GND",
+      "pass": true,
+      "evidence": "3.3nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "Input",
+      "name": "eFuse ground pins",
+      "pass": true,
+      "evidence": "U12.4 and .8 GND"
+    },
+    {
+      "block": "U1",
+      "name": "VIN and GND",
+      "pass": true,
+      "evidence": "VIN protected input, GND common"
+    },
+    {
+      "block": "U1",
+      "name": "switch-inductor-output",
+      "pass": true,
+      "evidence": "4.7uH FXL0530-4R7-M"
+    },
+    {
+      "block": "U1",
+      "name": "bootstrap capacitor",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U1",
+      "name": "feedback divider",
+      "pass": true,
+      "evidence": [
+        "196k \u00b11%",
+        "30K/0603/1%"
+      ]
+    },
+    {
+      "block": "U1",
+      "name": "feed-forward",
+      "pass": true,
+      "evidence": "18pF 50V C0G \u00b12%"
+    },
+    {
+      "block": "U1",
+      "name": "C52 rail bypass",
+      "pass": true,
+      "evidence": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "block": "U1",
+      "name": "C53 rail bypass",
+      "pass": true,
+      "evidence": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "block": "U1",
+      "name": "C56 rail bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U2",
+      "name": "VIN and GND",
+      "pass": true,
+      "evidence": "VIN protected input, GND common"
+    },
+    {
+      "block": "U2",
+      "name": "switch-inductor-output",
+      "pass": true,
+      "evidence": "4.7uH FXL0530-4R7-M"
+    },
+    {
+      "block": "U2",
+      "name": "bootstrap capacitor",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U2",
+      "name": "feedback divider",
+      "pass": true,
+      "evidence": [
+        "270K/0603/1%",
+        "30K/0603/1%"
+      ]
+    },
+    {
+      "block": "U2",
+      "name": "feed-forward",
+      "pass": true,
+      "evidence": "18pF 50V C0G \u00b12%"
+    },
+    {
+      "block": "U2",
+      "name": "C54 rail bypass",
+      "pass": true,
+      "evidence": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "block": "U2",
+      "name": "C57 rail bypass",
+      "pass": true,
+      "evidence": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "block": "U2",
+      "name": "C59 rail bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U3",
+      "name": "VIN and GND",
+      "pass": true,
+      "evidence": "VIN protected input, GND common"
+    },
+    {
+      "block": "U3",
+      "name": "switch-inductor-output",
+      "pass": true,
+      "evidence": "4.7uH FXL0530-4R7-M"
+    },
+    {
+      "block": "U3",
+      "name": "bootstrap capacitor",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U3",
+      "name": "feedback divider",
+      "pass": true,
+      "evidence": [
+        "135k \u00b10.1%",
+        "30K/0603/1%"
+      ]
+    },
+    {
+      "block": "U3",
+      "name": "feed-forward",
+      "pass": true,
+      "evidence": "18pF 50V C0G \u00b12%"
+    },
+    {
+      "block": "U3",
+      "name": "C60 rail bypass",
+      "pass": true,
+      "evidence": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "block": "U3",
+      "name": "C61 rail bypass",
+      "pass": true,
+      "evidence": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "block": "U3",
+      "name": "C63 rail bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U8",
+      "name": "load and flyback polarity",
+      "pass": true,
+      "evidence": {
+        "positive": "+4V5",
+        "switched_negative": "Net-(D11-A)"
+      }
+    },
+    {
+      "block": "U8",
+      "name": "low-side source",
+      "pass": true,
+      "evidence": "Q3.2 GND"
+    },
+    {
+      "block": "U8",
+      "name": "gate resistor and pulldown",
+      "pass": true,
+      "evidence": [
+        "100R/0603/1%",
+        "10K/0603/1%"
+      ]
+    },
+    {
+      "block": "U8",
+      "name": "C32 rail bypass",
+      "pass": true,
+      "evidence": "22uF 50V \u00b120%"
+    },
+    {
+      "block": "U8",
+      "name": "C31 rail bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U11",
+      "name": "load and flyback polarity",
+      "pass": true,
+      "evidence": {
+        "positive": "+4V5",
+        "switched_negative": "Net-(D12-A)"
+      }
+    },
+    {
+      "block": "U11",
+      "name": "low-side source",
+      "pass": true,
+      "evidence": "Q4.2 GND"
+    },
+    {
+      "block": "U11",
+      "name": "gate resistor and pulldown",
+      "pass": true,
+      "evidence": [
+        "100R/0603/1%",
+        "10K/0603/1%"
+      ]
+    },
+    {
+      "block": "U11",
+      "name": "C34 rail bypass",
+      "pass": true,
+      "evidence": "22uF 50V \u00b120%"
+    },
+    {
+      "block": "U11",
+      "name": "C33 rail bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U9",
+      "name": "load and flyback polarity",
+      "pass": true,
+      "evidence": {
+        "positive": "+6V",
+        "switched_negative": "Net-(D16-A)"
+      }
+    },
+    {
+      "block": "U9",
+      "name": "low-side source",
+      "pass": true,
+      "evidence": "Q8.2 GND"
+    },
+    {
+      "block": "U9",
+      "name": "gate resistor and pulldown",
+      "pass": true,
+      "evidence": [
+        "100R/0603/1%",
+        "10K/0603/1%"
+      ]
+    },
+    {
+      "block": "U9",
+      "name": "C43 rail bypass",
+      "pass": true,
+      "evidence": "22uF 50V \u00b120%"
+    },
+    {
+      "block": "U9",
+      "name": "C42 rail bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "U10",
+      "name": "load and flyback polarity",
+      "pass": true,
+      "evidence": {
+        "positive": "+6V",
+        "switched_negative": "Net-(D18-A)"
+      }
+    },
+    {
+      "block": "U10",
+      "name": "low-side source",
+      "pass": true,
+      "evidence": "Q10.2 GND"
+    },
+    {
+      "block": "U10",
+      "name": "gate resistor and pulldown",
+      "pass": true,
+      "evidence": [
+        "100R/0603/1%",
+        "10K/0603/1%"
+      ]
+    },
+    {
+      "block": "U10",
+      "name": "C45 rail bypass",
+      "pass": true,
+      "evidence": "22uF 50V \u00b120%"
+    },
+    {
+      "block": "U10",
+      "name": "C44 rail bypass",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "Logic",
+      "name": "U4 supply",
+      "pass": true,
+      "evidence": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "block": "Logic",
+      "name": "U5 supply",
+      "pass": true,
+      "evidence": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "block": "Logic",
+      "name": "U7 supply",
+      "pass": true,
+      "evidence": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    {
+      "block": "Logic",
+      "name": "U4 I2C signals",
+      "pass": true,
+      "evidence": [
+        "/SDA",
+        "/SCL"
+      ]
+    },
+    {
+      "block": "Logic",
+      "name": "U5 I2C signals",
+      "pass": true,
+      "evidence": [
+        "/SDA",
+        "/SCL"
+      ]
+    },
+    {
+      "block": "Logic",
+      "name": "U7 I2C signals",
+      "pass": true,
+      "evidence": [
+        "/SDA",
+        "/SCL"
+      ]
+    },
+    {
+      "block": "U5",
+      "name": "VO filter",
+      "pass": true,
+      "evidence": "1nF 50V X7R \u00b15%"
+    },
+    {
+      "block": "U5",
+      "name": "reset topology (finding, not acceptance)",
+      "pass": true,
+      "evidence": "Only10k pullup and TP3; no commanded reset or supervisor"
+    },
+    {
+      "block": "U7",
+      "name": "OE and EXTCLK defaults",
+      "pass": true,
+      "evidence": "OE10k low; EXTCLK grounded"
+    },
+    {
+      "block": "U7",
+      "name": "JP2 address default",
+      "pass": true,
+      "evidence": "Open=0, closed=1"
+    },
+    {
+      "block": "U7",
+      "name": "JP3 address default",
+      "pass": true,
+      "evidence": "Open=0, closed=1"
+    },
+    {
+      "block": "U7",
+      "name": "JP4 address default",
+      "pass": true,
+      "evidence": "Open=0, closed=1"
+    },
+    {
+      "block": "U7",
+      "name": "JP5 address default",
+      "pass": true,
+      "evidence": "Open=0, closed=1"
+    },
+    {
+      "block": "U7",
+      "name": "JP6 address default",
+      "pass": true,
+      "evidence": "Open=0, closed=1"
+    },
+    {
+      "block": "U7",
+      "name": "JP7 address default",
+      "pass": true,
+      "evidence": "Open=0, closed=1"
+    },
+    {
+      "block": "Switches",
+      "name": "SW1 signal/pullup/filter",
+      "pass": true,
+      "evidence": [
+        "10K/0603/1%",
+        "100nF 50V X7R \u00b110%"
+      ]
+    },
+    {
+      "block": "Switches",
+      "name": "SW2 signal/pullup/filter",
+      "pass": true,
+      "evidence": [
+        "10K/0603/1%",
+        "100nF 50V X7R \u00b110%"
+      ]
+    },
+    {
+      "block": "Switches",
+      "name": "SW3 signal/pullup/filter",
+      "pass": true,
+      "evidence": [
+        "10K/0603/1%",
+        "100nF 50V X7R \u00b110%"
+      ]
+    },
+    {
+      "block": "Switches",
+      "name": "SW4 signal/pullup/filter",
+      "pass": true,
+      "evidence": [
+        "10K/0603/1%",
+        "100nF 50V X7R \u00b110%"
+      ]
+    },
+    {
+      "block": "Connectors",
+      "name": "J1 local pinout",
+      "pass": true,
+      "evidence": [
+        "GND",
+        "+3V3",
+        "/SDA",
+        "/SCL"
+      ]
+    },
+    {
+      "block": "Connectors",
+      "name": "J12 local pinout",
+      "pass": true,
+      "evidence": [
+        "GND",
+        "+3V3",
+        "/SDA",
+        "/SCL"
+      ]
+    },
+    {
+      "block": "Connectors",
+      "name": "J17 local pinout",
+      "pass": true,
+      "evidence": [
+        "GND",
+        "+3V3",
+        "/SDA",
+        "/SCL"
+      ]
+    },
+    {
+      "block": "Connectors",
+      "name": "J3 local pinout",
+      "pass": true,
+      "evidence": [
+        "GND",
+        "+3V3",
+        "/SDA",
+        "/SCL"
+      ]
+    },
+    {
+      "block": "Qwiic",
+      "name": "J9 host pinout",
+      "pass": true,
+      "evidence": [
+        "GND",
+        "/HOST_3V3",
+        "/HOST_SDA",
+        "/HOST_SCL"
+      ]
+    },
+    {
+      "block": "Qwiic",
+      "name": "U13 buffer orientation",
+      "pass": true,
+      "evidence": [
+        "+3V3",
+        "/SCL",
+        "/SDA",
+        "GND",
+        "/HOST_3V3",
+        "/HOST_SDA",
+        "/HOST_SCL",
+        "/HOST_3V3"
+      ]
+    },
+    {
+      "block": "Qwiic",
+      "name": "R15 domain",
+      "pass": true,
+      "evidence": "4K7/0603/1%"
+    },
+    {
+      "block": "Qwiic",
+      "name": "R20 domain",
+      "pass": true,
+      "evidence": "4K7/0603/1%"
+    },
+    {
+      "block": "Qwiic",
+      "name": "R82 domain",
+      "pass": true,
+      "evidence": "4K7/0603/1%"
+    },
+    {
+      "block": "Qwiic",
+      "name": "R83 domain",
+      "pass": true,
+      "evidence": "4K7/0603/1%"
+    },
+    {
+      "block": "Qwiic",
+      "name": "C68 domain",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "Qwiic",
+      "name": "C69 domain",
+      "pass": true,
+      "evidence": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "block": "Qwiic",
+      "name": "R84 domain",
+      "pass": true,
+      "evidence": "10K/0603/1%"
+    }
+  ],
+  "scope": "Connectivity design-intent assertions, not component tolerances or measured behavior"
+}

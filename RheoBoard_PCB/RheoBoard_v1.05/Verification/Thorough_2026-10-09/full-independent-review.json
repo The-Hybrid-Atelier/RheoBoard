@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-09",
+  "reviewer": "Independent kicad_qwiic_review agent",
+  "review_type": "Fresh full saved v1.05 schematic and PCB audit, read-only",
+  "verdict": "NEEDS ATTENTION. Native CAD checks are clear, but U5 startup/reset and valve-supply tolerance margin remain engineering issues; whole-system production readiness is not established.",
+  "coverage_status": "complete for the executable saved-CAD checks requested in this review; physical/system qualification remains open",
+  "source_hashes": {
+    "unchanged": true,
+    "hashes": {
+      "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pcb": "76c2c04afb9eea620176247bf0e1c04467b684a02cfef930b7f0cb7164c337da",
+      "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch": "c26c8a5906ef6aa97c755f093305a93b8d07b3d63cab79ff7d8aa2651e08197d",
+      "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pro": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085",
+      "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TI_DGK0008A_VSSOP_3x3mm_P0.65mm.kicad_mod": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4"
+    }
+  },
+  "scope": {
+    "root_schematic": "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_sch",
+    "board": "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pcb",
+    "hierarchy": "Fresh native hierarchy reports no child sheets. Other standalone block drawings beside main schematic are not constituent hierarchy sheets.",
+    "blocks_reviewed": [
+      "J2/F1/D1 input chain, D36 surge clamp, U12 eFuse",
+      "U1/U2/U3 buck circuits, local input/output/feedback/bootstrap capacitors and inductors",
+      "U4 TCA9534A inputs, address, unused inputs, output controls",
+      "U7 PCA9685 address/OE/clock and pump PWM",
+      "U5 MPR pressure sensor, bypass/filter/reset/unused pins",
+      "Q3/Q4/Q8/Q10 pump/valve drivers, gate resistors/pulldowns, flyback and bulk caps",
+      "J1/J9/J12/J17 Qwiic, J3/J18 local interfaces and U13 power domains",
+      "Mechanical board outline, holes, connector placement, markings, solder mask/paste, ground pours and routed copper"
+    ],
+    "all_part_connectivity": {
+      "schematic_components": 166,
+      "pcb_components": 166,
+      "schematic_pin_nodes": 416,
+      "electrical_mismatches": 0,
+      "raw_NC_name_exception": "U12.10 split same-number L-pad has NC and NC_1 net aliases, isolated and intentionally floating; fully documented in inventory.",
+      "block_assertions_passed": 85,
+      "block_assertions_failed": 0
+    },
+    "aggregate": {
+      "completed": 6,
+      "requested": 6,
+      "diagnostics": [],
+      "source": "saved_schematic_hierarchy_and_optional_saved_board",
+      "coverage": {
+        "board": {
+          "footprints": 166,
+          "named_nets": 90,
+          "pads": 449
+        },
+        "schematic": {
+          "multi_unit_symbols": 0,
+          "named_nets": 35,
+          "resolved_symbols": 257,
+          "schematic_files": 1,
+          "sheet_instances": 1,
+          "symbol_instances": 257,
+          "unresolved_symbols": 0
+        }
+      }
+    }
+  },
+  "native_results": {
+    "ERC": {
+      "errors": 0,
+      "warnings": 0,
+      "total": 0,
+      "artifact": "run_erc-decoded.json"
+    },
+    "DRC_saved": {
+      "design_rule": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "total": 0,
+      "artifact": "get_drc_violations-decoded.json"
+    },
+    "DRC_analysis_refill": {
+      "design_rule": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "total": 0,
+      "refill": "CLI analysis-only; saved source unchanged",
+      "artifact": "drc-refill-decoded.json"
+    },
+    "shorts": 0,
+    "orphans": 0,
+    "single_pin_candidates": 0,
+    "manufacturing_preflight": {
+      "returned": "READY with no issues",
+      "limit": "Limited tool contract; not final engineering or process approval."
+    }
+  },
+  "rule_coverage": {
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "drc_ignored": {
+      "footprint_filters_mismatch": "ignore",
+      "track_not_centered_on_via": "ignore",
+      "tuning_profile_track_geometries": "ignore"
+    },
+    "erc_ignored": {
+      "footprint_filter": "ignore",
+      "four_way_junction": "ignore",
+      "simulation_model_issue": "ignore",
+      "single_global_label": "ignore"
+    },
+    "minimums_mm": {
+      "clearance": 0.2,
+      "track": 0.2,
+      "via_diameter": 0.5,
+      "via_drill": 0.3,
+      "hole_to_hole": 0.25
+    },
+    "evidence": "Fresh supported rule/netclass reads plus read-only .kicad_pro metadata fallback for omitted severity/exclusion fields. No rules changed or suppressions added."
+  },
+  "confirmed_engineering_findings": [
+    {
+      "id": "E1",
+      "rank": 1,
+      "severity": "warning / reliability design issue",
+      "title": "U5 has no guaranteed reset after a slow rail rise",
+      "references": [
+        "U5",
+        "R22",
+        "TP3",
+        "U3"
+      ],
+      "observed": "Fresh netlist and schematic show RES connected only to a 10k pullup and TP3. No reset controller or commanded reset connection exists.",
+      "requirement": "Honeywell requires VDD rise at least10V/ms or use RES after power stabilizes. TPS563203 typical soft-start1.4ms implies approximately2.36V/ms average for3.3V; this is a datasheet-based expectation, not a measured waveform.",
+      "impact": "Reliable cold start and brownout recovery are not established; not proof every prototype fails. Firmware waiting alone does not generate RES.",
+      "action": "Implement and qualify a valid sensor reset strategy, or supply measured/vendored evidence meeting the required startup conditions. No fix performed in this read-only review.",
+      "sources": [
+        "https://automation.honeywell.com/content/dam/honeywell-edam/sps/ast/en-us/campaigns/pressure-sensors/documents/sps-siot-mpr-series-datasheet-32332628-ciid-172626.pdf \u00a74",
+        "https://www.ti.com/lit/gpn/tps563203 \u00a75.5"
+      ]
+    },
+    {
+      "id": "E2",
+      "rank": 2,
+      "severity": "warning / tolerance margin",
+      "title": "Nominal6V valve rail has no margin below valve operating maximum",
+      "references": [
+        "U2",
+        "R60",
+        "R74",
+        "U9",
+        "U10"
+      ],
+      "observed": "Fresh netlist:270k\u00b11%/30k\u00b11% divider. FA0520E manufacturer specification operating5\u20136V.",
+      "calculation": {
+        "nominal_V": 6.0,
+        "lower_corner_V": 5.775207920792079,
+        "upper_corner_V": 6.231272727272727,
+        "assumptions": "0.600V reference\u00b12%, divider resistor\u00b11%, before ripple/transients; ignores resistor thermal drift and FB bias effects."
+      },
+      "impact": "Upper tolerances can exceed the published operating range. This establishes absent guaranteed margin, not immediate destructive failure.",
+      "action": "Lower target with full corner/transient verification, or obtain explicit vendor qualification for actual applied range.",
+      "sources": [
+        "https://cdn-shop.adafruit.com/product-files/4663/4663_C14660_DC_6V.pdf \u00a73-2",
+        "https://www.ti.com/lit/gpn/tps563203 \u00a75.5"
+      ],
+      "duty_note": "10s on/10s off endurance and8h6V abnormal no-burning/no-smoking tests do not establish continuous functional life."
+    }
+  ],
+  "bench_and_system_risks": [
+    {
+      "id": "B1",
+      "title": "U12/input current and thermal qualification",
+      "evidence": "VIN output includes0.3mm-wide2mm-long approach; VIN_RAW has0.3mm-wide0.8mm power approach and1.1mm capacitor branch. Input bypass C66 is3.125mm pad distance; output C67 is4.834mm.",
+      "status": "No thermal failure established from geometry. Validate load/startup current, fuse/eFuse behavior, short circuit and sustained-temperature performance on actual copper stack and adapter. Widening short power necks is a reasonable refinement if revising."
+    },
+    {
+      "id": "B2",
+      "title": "Buck stability, startup and inductive load switching",
+      "evidence": "Fresh circuit assertions confirm each4.7uH,18pF feed-forward and local capacitors. Pump/valve nominal output total88.3uF each. Inputs nearest10uF pads2.32\u20132.35mm; output/FB remain local. SW traces use short back-layer runs and vias.",
+      "status": "Effective capacitor bias/temperature/ESR, inductor current, simultaneous motor starting, stall, PWM ripple, ground noise, flyback and thermal margin require measurements. No claim of failure or validated stability from nominal values."
+    },
+    {
+      "id": "B3",
+      "title": "Actual Qwiic expansion budget is unspecified",
+      "evidence": "Local3V3 has64.51uF nominal onboard bypass/bulk. Additional sensor-module capacitance, pullups, current, addresses and cable lengths were not specified.",
+      "status": "Cannot certify arbitrary module combinations. Review aggregate current, effective Cout, bus capacitance/rise time and pullup sink current. Master confirmed WRL-15663."
+    },
+    {
+      "id": "B4",
+      "title": "Qwiic power-state and multi-board qualification",
+      "evidence": "Fresh J9 and U13 pin assertions confirm separate host/local rails, local A/host B,EN tiedHOST3V3, common GND.",
+      "status": "Qualify host/board independently on/off, brownouts, hot-plug/leakage. For TCA9548A enable exactly one channel, selected branch effective pullup\u22652.2k including all parallel resistors/tolerances, total selected host current\u22643mA. No upstream B-side buffer/rise accelerator."
+    },
+    {
+      "id": "B5",
+      "title": "External connector ESD/environment",
+      "evidence": "No dedicated SDA/SCL TVS or port current limiting identified in fresh netlist. D36 protects input power domain, not external data pins.",
+      "status": "Conditional field/handling qualification risk, not a proven basic-function fault. Decide required ESD/hot-plug robustness from operating environment."
+    },
+    {
+      "id": "B6",
+      "title": "Physical assembly and mechanics",
+      "evidence": "Native closed outline109\u00d7126.4mm; four3.5mm plated corner mounting holes, two3.5mm nonplated valve-area holes, four4mm pump terminal holes; connector/access markings shown.",
+      "status": "Actual pumps/nozzles, cables, valve attachment, standoffs, solder joints, restraint and enclosure/hose clearance remain physical checks. 2D CAD does not validate physical fit."
+    },
+    {
+      "id": "B7",
+      "title": "Firmware and loss-of-master behavior",
+      "evidence": "Fresh topology retains output state without watchdog; buttons go to GPIO inputs, not direct load-interlock. Documented channel map matches observed nets.",
+      "status": "User explicitly selected keep-last-command and intermittent fixed-direction pumps. Firmware must preserve safe cold initialization, correct register/channel mapping and multi-board mux discipline; no firmware execution performed."
+    }
+  ],
+  "heuristic_adjudication": {
+    "aggregate_error": "+12V has no decoupling",
+    "result": "Not an IC-supply decoupling defect: fresh netlist shows+12V only between jack and fuse. Protected VIN_RAW hasC65/C66, VIN hasC67 and three10uF pairs. Do not treat aggregate NOT READY string as stronger evidence than this topology.",
+    "optional_suggestions": [
+      "Dedicated testpoints on+12V,+3V3,+4V5,+6V,VIN would aid production probes; currently rail access through component/connector pads.",
+      "No dedicated board fiducial footprint appears in166-part inventory; assembler panel/tooling fiducials require process acceptance."
+    ],
+    "raw_report_preserved": "run_design_review-decoded.json"
+  },
+  "visual_review": {
+    "method": "Fresh native schematic and front/back copper, silkscreen, assembly and mask/paste PDFs, rendered6500px wide; six board regions and six schematic regions inspected. No editor document switch.",
+    "result": "No additional gross layout, routing, polarity-mark or solder-opening defect found beyond engineering items above. All signal/power connectivity reconciled. Bulk polarity marks, diode body/cathode markings, pin1 marks, master-versus-sensor power labels and revision marking are present in reviewed drawings.",
+    "layout_notes": [
+      "Bypass pads are within approximately4.3mm of local logic supply pads; this is straight-pad distance, not loop inductance.",
+      "All three feedback networks are compact local front-layer routes; power-ground pours and stitching are present. No automatic EMI or thermal certification inferred.",
+      "Mask drawings do not expose switch-node track runs beyond intended component-pad openings.",
+      "Board-reference text is not uniformly present in the simple silk export; use the supplied assembly drawing for dense reference identification. This is not a connectivity failure."
+    ],
+    "limits": "2D visual inspection cannot prove solderability,3D interference, EMI, thermal performance, assembly orientation after manufacturer processing, or delivered board quality."
+  },
+  "checklist_status": {
+    "schematic_power": "covered by fresh nets/visuals; operating margins E1/E2 and bench risks remain",
+    "signal_defaults_and_protection": "covered; externalESD/system requirements conditional",
+    "connectivity": "85 assertions pass;416pin nodes electrically reconcile with one documented floating-NC alias",
+    "mechanical": "outline/hole/placement evidence collected; enclosure/mating qualification open",
+    "routing": "nativeDRC/zone-refill and visual/net review complete; current/thermal qualification open",
+    "DFM": "native checks clear under reported settings; supplier acceptance open",
+    "assembly": "2Dpad/polarity/mask/paste reviewed; root owns BOM/CPL/Gerber reconciliation and part-datasheet procurement details",
+    "not_applicable": [
+      "No onboard crystal",
+      "No differential USB/Ethernet traces",
+      "No op amps",
+      "No onboard RF antenna"
+    ]
+  },
+  "execution_provenance": {
+    "saved_file": "Main ERC/DRC/netlist/IPC/PDF/aggregate and fallback pad reads",
+    "live_IPC": "Component-list read only, crosschecked against saved IPC inventory",
+    "initial_sandbox_failures": "Preserved under first-sandbox-attempt; retries outside sandbox completed. Initial failed/partial results are not counted as passes.",
+    "mutations": "None to CAD, rules, libraries, BOM, or manufacturing data. Source before/after hashes identical."
+  },
+  "limitations": [
+    "Physical tests were not performed.",
+    "This review is not a blanket validation of unknown sensor modules or the assembled v1 board already at JLCPCB.",
+    "Root separately performs exact BOM/CPL/fabrication-artifact and component/datasheet calculations; refer to its report for those results.",
+    "No live3D viewer/model-clearance simulation, circuit transient simulation, formal EMC/ESD test or field lifetime test was performed."
+  ],
+  "evidence_files": [
+    "source-hashes-before.json",
+    "source-hashes-after.json",
+    "fresh.net",
+    "fresh-board.xml",
+    "full-connectivity-layout-inventory.json",
+    "full-block-checks.json",
+    "rule-coverage-metadata.json",
+    "run_erc-decoded.json",
+    "get_drc_violations-decoded.json",
+    "drc-refill-decoded.json",
+    "get_sheet_hierarchy-decoded.json",
+    "run_design_review-decoded.json",
+    "validate_for_manufacturing-decoded.json",
+    "schematic.pdf",
+    "front.pdf",
+    "back.pdf",
+    "mask-paste.pdf",
+    "silk.pdf",
+    "assembly.pdf"
+  ]
+}

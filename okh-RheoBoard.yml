@@ -116,19 +116,21 @@ manufacturing-files:
     title: Printable panel STEP files (PLA, Bambu Lab normal profile)
   - path: RheoBoard_PCB/RheoBoard_v1/Gerber/1-job.gbrjob
     title: PCB fabrication job (Gerbers in this folder; drills in ../Drill)
-  - path: RheoBoard_PCB/BOM/BOM_RheoboardV1_JLCSMT.xlsx
+  - path: RheoBoard_PCB/RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx
     title: PCB assembly BOM
+  - path: RheoBoard_PCB/interpretation/8815214A_Y73_SMT026093063736_top.png
+    title: JLCPCB corrected top placement for Rheoboard V1 order 8815214A_Y73 / SMT026093063736
   - path: RheoBoard_PCB/RheoBoard_v1/CPL/CPL.csv
     title: PCB pick-and-place
 
 operating-instructions:
-  - path: firmware/README.md
+  - path: code/firmware/README.md
     title: Firmware / OSC API reference and operation
-  - path: software/README.md
+  - path: code/software/README.md
     title: RheoData notes (download, pairing, and REP start are TODO)
 
 software:
-  - path: firmware/2P1V_Adafruit
+  - path: code/firmware/2P1V_Adafruit
     title: ESP32 rheometer firmware (Arduino/C++), shared by the DIY build, the PCB, and the portable version
 
 # Real documentation pages. TODO-only pages are not listed.

@@ -3,8 +3,8 @@
 Parts list for the **2 pumps + 1 valve** DIY bench rig. Wiring:
 [`electronic-wiring/wiring-diagram.png`](electronic-wiring/wiring-diagram.png) and
 [`tube-wiring/`](tube-wiring/). Firmware:
-[`../../firmware/`](../../firmware/) (shared by the DIY build, the PCB, and the portable version).
-RheoData notes: [`../../software/`](../../software/). Component photo sources/licenses:
+[`../../code/firmware/`](../../code/firmware/) (shared by the DIY build, the PCB, and the portable version).
+RheoData notes: [`../../code/software/`](../../code/software/). Component photo sources/licenses:
 [`../images/README.md`](../images/README.md).
 
 License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).

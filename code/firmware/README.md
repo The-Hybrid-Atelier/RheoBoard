@@ -10,7 +10,7 @@ file/BLE device name in code: `2P1V_Adafruit`.
 This firmware is shared by the DIY build, the PCB, and the portable version. Sketch sources live
 in `2P1V_Adafruit/` so the sketch folder matches the primary `.ino` filename as Arduino requires.
 Firmware is MIT-licensed; the license notice and full text are in the repository-root
-[`LICENSE`](../LICENSE). RheoData, the app used with this firmware, is noted in
+[`LICENSE`](../../LICENSE). RheoData, the app used with this firmware, is noted in
 [`../software/README.md`](../software/README.md). Download, pairing, the connected indicator, and
 how to start and name a REP stay TODO and will be specified later in that file and in these notes.
 
@@ -58,7 +58,7 @@ Restart the Arduino IDE afterward so it picks up the new library.
 1. Open `2P1V_Adafruit/2P1V_Adafruit.ino` in Arduino IDE (from this repo, or your sketchbook copy).
 2. Select board **SparkFun ESP32 Thing Plus** (or **ESP32 Dev Module**) and the micro-USB port.
 3. Upload. Serial Monitor @ 115200 should print `2P1V_Adafruit initialized`.
-4. Builder walkthrough: [`../BuildYourOwn/README.md`](../BuildYourOwn/README.md) → Step 03.
+4. Builder walkthrough: [`../../BuildYourOwn/README.md`](../../BuildYourOwn/README.md) → Step 03.
 
 After upload, USB may be disconnected. Portable power is in [Power](#power) below.
 
@@ -69,7 +69,7 @@ does not go through the ESP32 5 V pin.
 
 USB uploads this firmware to the SparkFun ESP32 Thing Plus. After upload, USB may be disconnected.
 
-Portable power is a [SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (SKU PRT-26059)](https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html): nominal 3.7 V, 1500 mAh, terminated with a 2-pin JST-PH connector (2 mm pin spacing), with built-in protection, and it plugs into the ESP32 Thing Plus JST battery connector ([schematic](../BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf) V_BATT, 4.2 V maximum).
+Portable power is a [SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (SKU PRT-26059)](https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html): nominal 3.7 V, 1500 mAh, terminated with a 2-pin JST-PH connector (2 mm pin spacing), with built-in protection, and it plugs into the ESP32 Thing Plus JST battery connector ([schematic](../../BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf) V_BATT, 4.2 V maximum).
 
 ## Connect and use (summary)
 
@@ -78,7 +78,7 @@ Portable power is a [SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (
   is enabled (default).
 - **Qwiic button:** 1-click = REP, 2-click = latched vacuum, hold = momentary pressure.
 
-Builder workflow: [Step 05 — Calibrate and use](../BuildYourOwn/README.md#step-05-calibrate-and-use).
+Builder workflow: [Step 05 — Calibrate and use](../../BuildYourOwn/README.md#step-05-calibrate-and-use).
 
 ## Firmware pin map
 
@@ -97,7 +97,7 @@ The firmware expects these I2C addresses:
 
 These constants are defined in `2P1V_Adafruit/PneumaticSystem.h`. Physical connections and power
 rules are maintained in
-[`../BuildYourOwn/hardware/electronic-wiring/README.md`](../BuildYourOwn/hardware/electronic-wiring/README.md).
+[`../../BuildYourOwn/hardware/electronic-wiring/README.md`](../../BuildYourOwn/hardware/electronic-wiring/README.md).
 
 ## Control API
 

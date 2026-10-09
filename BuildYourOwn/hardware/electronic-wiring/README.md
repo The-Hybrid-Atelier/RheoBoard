@@ -1,7 +1,7 @@
 # Electronic wiring
 
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
-[`../../../firmware/2P1V_Adafruit/2P1V_Adafruit.ino`](../../../firmware/2P1V_Adafruit/2P1V_Adafruit.ino).
+[`../../../code/firmware/2P1V_Adafruit/2P1V_Adafruit.ino`](../../../code/firmware/2P1V_Adafruit/2P1V_Adafruit.ino).
 The same firmware applies to the DIY build, the PCB, and the portable version.
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
@@ -92,7 +92,7 @@ signal path.
 - Electronic wiring is drawn as a labeled schematic with component blocks, named pins,
   orthogonal wire routing, junction dots, and a net-color legend.
 - When updating wiring, update the image **and** the pin defines in
-  `../../../firmware/2P1V_Adafruit/PneumaticSystem.h`
+  `../../../code/firmware/2P1V_Adafruit/PneumaticSystem.h`
   together — keep them in sync.
 
 ## Regenerating the electrical diagram

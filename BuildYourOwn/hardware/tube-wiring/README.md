@@ -49,7 +49,7 @@ The tube paths change with the firmware phases:
 4. **Relax** — both pumps stop.
 
 Timing, controls, and parameter defaults are documented in
-[`../../../firmware/README.md`](../../../firmware/README.md).
+[`../../../code/firmware/README.md`](../../../code/firmware/README.md).
 
 ## Diagram source
 

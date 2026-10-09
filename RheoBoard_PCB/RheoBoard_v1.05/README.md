@@ -14,6 +14,6 @@ Open [the KiCad project](RheoboardV1/1.kicad_pro). Its main schematic and PCB ar
 - [Manufacturing files](Manufacturing/README.md) contain the matching fabrication archive, SMT placements and drawings.
 - `Archive_v1_outputs/` contains the copied v1 manufacturing outputs and images for reference only. They are not v1.05 production files.
 
-The original `RheoBoard_v1` project and shared original BOM remain preserved. This revision retains fixed-direction pumps for intermittent use and the last commanded state during communication loss. Multiple boards use an external I²C multiplexer, one board per channel.
+The original `RheoBoard_v1` project remains preserved. The original assembly workbook is [BOM_RheoboardV1_JLCSMT.xlsx](Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx). This revision retains fixed-direction pumps for intermittent use and the last commanded state during communication loss. Multiple boards use an external I²C multiplexer, one board per channel.
 
 Hardware design licensing follows the repository root LICENSE, CERN-OHL-W-2.0. Documentation is CC BY-SA 4.0.

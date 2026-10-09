@@ -1,3 +1,3 @@
 ARCHIVED VERSION 1 OUTPUTS — NOT FOR RHEOBOARD v1.05
 
-These unchanged files were copied from v1 when the v1.05 working folder was created. They describe the earlier design and include the old placement data. Do not submit them for the revised board. Current v1.05 fabrication and assembly outputs belong in ../Manufacturing/ and the revised purchasing workbook in ../BOM/.
+These unchanged files were copied from v1 when the v1.05 working folder was created. They describe the earlier design and include the old placement data. BOM/BOM_RheoboardV1_JLCSMT.xlsx is the original v1 assembly workbook, moved here from RheoBoard_PCB/BOM. The JLCPCB corrected top placement for that order is ../../interpretation/8815214A_Y73_SMT026093063736_top.png (order 8815214A_Y73 / SMT026093063736). Do not submit them for the revised board. Current v1.05 fabrication and assembly outputs belong in ../Manufacturing/ and the revised purchasing workbook in ../BOM/.

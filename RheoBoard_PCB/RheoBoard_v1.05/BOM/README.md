@@ -7,6 +7,8 @@ Updated for the dedicated J9 Qwiic master interface on 2026-10-09. The BOM conta
 
 The Qwiic update adds U13 TCA9517ADGKR (C201698), C68/C69 100 nF (C14663), R82/R83 4.7 kΩ (C23162) and R84 10 kΩ (C25804). J9 connects the separately powered master; J1/J12/J17 remain locally powered sensor ports. J18 is a local service connector. The four bulk capacitors remain Panasonic EEEFK1H220P, 22 µF / 50 V. Earlier purchased-part selections are retained.
 
+The original v1 workbook, [BOM_RheoboardV1_JLCSMT.xlsx](../Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx), is archived with the other v1 outputs. It is not the v1.05 order file.
+
 The seven manually fitted parts are J2, J3, J18, U8, U9, U10 and U11. U9/U10 are valve headers; the external valves are listed separately on the workbook's Manual accessories tab. Mounting holes, test points and open solder jumpers are PCB features, not purchased components.
 
 Prices are historical estimates retained only for unchanged selected parts. Blank prices are unquoted. The displayed subtotal is incomplete and is not an assembly quotation. Review exact part numbers and the new supplier placement preview before approving an order.

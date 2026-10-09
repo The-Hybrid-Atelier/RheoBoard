@@ -18,7 +18,7 @@ Version 2 uses a 3D-printed panel ([print files and notes](../BuildYourOwn/cad/e
 
 [`RheoBoard_PCB/`](../RheoBoard_PCB/) is a separate KiCad 10 board: schematic, layout, libraries, Gerbers, assembly BOM, and pick-and-place. Everyday wall power for this board is a 12 V plug. Read [`RheoBoard_PCB/README.md`](../RheoBoard_PCB/README.md) before ordering boards.
 
-From that README: this is a separate board from the DIY module build in `BuildYourOwn/`. The firmware in [`firmware/`](../firmware/) and the RheoData notes in [`software/`](../software/) apply to the DIY build, this PCB, and the portable version. Open `RheoBoard_v1/RheoboardV1/1.kicad_pro` in KiCad 10. The board is a 1.6 mm, two-copper-layer layout. This board is a prototype.
+From that README: this is a separate board from the DIY module build in `BuildYourOwn/`. The firmware in [`code/firmware/`](../code/firmware/) and the RheoData notes in [`code/software/`](../code/software/) apply to the DIY build, this PCB, and the portable version. Open `RheoBoard_v1/RheoboardV1/1.kicad_pro` in KiCad 10. The board is a 1.6 mm, two-copper-layer layout. This board is a prototype.
 
 ## Portable
 

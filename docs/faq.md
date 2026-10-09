@@ -16,7 +16,7 @@ See [Before you start](../BuildYourOwn/README.md#before-you-start). The parts li
 
 ## What tools does the build guide name?
 
-See [Tools you need](assembly-tools.md).
+See [Tools you may need](assembly-tools.md).
 
 ## How is the panel assembled?
 
@@ -46,7 +46,7 @@ TODO
 
 ## What tools are required beyond the build guide?
 
-See [Tools you need](assembly-tools.md). TODO: tools the build needs that are not named in the
+See [Tools you may need](assembly-tools.md). TODO: tools the build needs that are not named in the
 repository yet.
 
 ## What modifications are documented?

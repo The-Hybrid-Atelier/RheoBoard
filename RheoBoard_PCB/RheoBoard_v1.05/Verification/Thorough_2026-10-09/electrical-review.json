@@ -1,0 +1,226 @@
+{
+  "sources": {
+    "buck": "https://www.ti.com/lit/gpn/tps563203",
+    "efuse": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "valve": "https://cdn-shop.adafruit.com/product-files/4663/4663_C14660_DC_6V.pdf",
+    "sensor": "https://automation.honeywell.com/content/dam/honeywell-edam/sps/ast/en-us/campaigns/pressure-sensors/documents/sps-siot-mpr-series-datasheet-32332628-ciid-172626.pdf",
+    "MOSFET": "https://www.aosmd.com/res/data_sheets/AO3400A.pdf"
+  },
+  "rails": [
+    {
+      "IC": "U1",
+      "top": "R45",
+      "bottom": "R46",
+      "nominal_V": 4.52,
+      "min_reference_and_initial_resistor_V": 4.353528712871287,
+      "max_reference_and_initial_resistor_V": 4.691175757575758,
+      "EN_resistor_100k_allowed_by_TI": true,
+      "output_net": "+4V5",
+      "direct_output_caps": [
+        {
+          "reference": "C31",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C32",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C33",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C34",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C52",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C53",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C56",
+          "value_uF": 0.1
+        }
+      ],
+      "nominal_Cout_uF": 88.3,
+      "ripple_pp_A_at14_6Vin_3_76uH_600kHz": 1.3832701836199361
+    },
+    {
+      "IC": "U2",
+      "top": "R60",
+      "bottom": "R74",
+      "nominal_V": 6.0,
+      "min_reference_and_initial_resistor_V": 5.775207920792079,
+      "max_reference_and_initial_resistor_V": 6.231272727272727,
+      "EN_resistor_100k_allowed_by_TI": true,
+      "output_net": "+6V",
+      "direct_output_caps": [
+        {
+          "reference": "C42",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C43",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C44",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C45",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C54",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C57",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C59",
+          "value_uF": 0.1
+        }
+      ],
+      "nominal_Cout_uF": 88.3,
+      "ripple_pp_A_at14_6Vin_3_76uH_600kHz": 1.566598659283008
+    },
+    {
+      "IC": "U3",
+      "top": "R61",
+      "bottom": "R76",
+      "nominal_V": 3.3,
+      "min_reference_and_initial_resistor_V": 3.2051821782178216,
+      "max_reference_and_initial_resistor_V": 3.3965999999999994,
+      "EN_resistor_100k_allowed_by_TI": true,
+      "output_net": "+3V3",
+      "direct_output_caps": [
+        {
+          "reference": "C22",
+          "value_uF": 0.01
+        },
+        {
+          "reference": "C28",
+          "value_uF": 10.0
+        },
+        {
+          "reference": "C29",
+          "value_uF": 10.0
+        },
+        {
+          "reference": "C30",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C46",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C47",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C60",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C61",
+          "value_uF": 22.0
+        },
+        {
+          "reference": "C63",
+          "value_uF": 0.1
+        },
+        {
+          "reference": "C68",
+          "value_uF": 0.1
+        }
+      ],
+      "nominal_Cout_uF": 64.50999999999999,
+      "ripple_pp_A_at14_6Vin_3_76uH_600kHz": 1.132140775284174
+    }
+  ],
+  "input": {
+    "efuse_ilimit_A_nominal": 2.0206060606060605,
+    "efuse_datasheet_at1650ohm_min_typ_max_A": [
+      1.8,
+      2.028,
+      2.2
+    ],
+    "efuse_clamp_threshold_min_typ_max_V": [
+      13.2,
+      13.85,
+      14.5
+    ],
+    "efuse_max_clamp_10mA_V": 14.6,
+    "uvlo_nominal_VIN_RAW_V": 9.36,
+    "DVDT_typ_V_per_ms_at12V": 0.61,
+    "input_cap_charge_only_typ_A": 0.039467,
+    "limitation": "Typical values or tabulated component conditions; ignores dynamics and thermal SOA. Regulated12V input assumed."
+  },
+  "load_budget": {
+    "two_pumps_typ_A_at4_52V": 1.0,
+    "two_valves_max_A_at6V": 0.5519999999999999,
+    "illustrative_load_power_W": 7.831999999999999,
+    "illustrative_12V_input_A_at85pct": 0.7678431372549019,
+    "exclusions": [
+      "logic and attached sensors",
+      "pump startup/stall current",
+      "actual conversion efficiency",
+      "diode loss and thermal rise"
+    ]
+  },
+  "findings": [
+    {
+      "id": "VALVE-RAIL-TOLERANCE",
+      "severity": "warning",
+      "confirmed": "Nominal6V sits at upper manufacturer operating limit; positive reference/resistor tolerance gives6.2313V before ripple.",
+      "refs": [
+        "U2",
+        "R60",
+        "R74",
+        "U9",
+        "U10"
+      ],
+      "voltage_range_manufacturer_V": [
+        5,
+        6
+      ],
+      "recommendation": "Lower nominal valve rail target with tolerance/transient margin (around5.5\u20135.7V), or obtain manufacturer acceptance of higher voltage; do not assume measured failure."
+    },
+    {
+      "id": "U5-STARTUP",
+      "severity": "warning-high-priority",
+      "confirmed": "U5RES onlyR22pullup+TP3; Honeywell requires >=10V/ms VDD or reset after stable power.",
+      "typical_buck_mean_V_per_ms": 2.357142857142857,
+      "recommendation": "Guaranteed post-stable reset or demonstrated compliant ramp; physical measurement required."
+    },
+    {
+      "id": "EXTERNAL-SENSOR-BUDGET",
+      "severity": "qualification-boundary",
+      "onboard_3V3_capacitance_uF": 64.50999999999999,
+      "note": "Unspecified sensor-module current, added capacitance, pullups, addresses and cables cannot be qualified. Nominal capacitor headroom is not a guaranteed budget."
+    }
+  ],
+  "MOSFET_note": "AO3400A has RDSon max48mohm at2.5V gate; gate-resistor100ohm and10k pulldown topology correct. Thermal/edge behavior under actual PWM remains unmeasured.",
+  "limitations": [
+    "Voltage ranges include full-temperature reference error and initial resistor tolerance only, not resistor temperature coefficients, ripple or load/line dynamics.",
+    "Inductor current figure is a nominal-frequency illustrative calculation, not worst-case certification.",
+    "No scope, current, thermal, pressure or physical-fit measurement performed."
+  ],
+  "confirmed_master": {
+    "part": "SparkFun WRL-15663 ESP32 WROOM Micro-B",
+    "user_confirmed": true,
+    "product_url": "https://www.sparkfun.com/sparkfun-thing-plus-esp32-wroom-micro-b.html",
+    "schematic_url": "https://cdn.sparkfun.com/assets/6/d/c/6/c/ESP32_Thing_Plus_Schematic.pdf",
+    "schematic_visual_review": "Current product page links same v20 schematic; Qwiic pins1GND2localESP3V3 3SDA(GPIO23)4SCL(GPIO22); AP2112K host supply. Viewed cached render of same linked schematic.",
+    "target_port": "J9",
+    "attached_sensor_modules": "Unspecified; qualification open"
+  }
+}

@@ -33,7 +33,7 @@ custom PCB work.
   [`cad/connector/`](cad/connector/) (sensing tube and small connector),
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
-- **Firmware and software:** [`../firmware/`](../firmware/) and [`../software/`](../software/).
+- **Firmware and software:** [`../code/firmware/`](../code/firmware/) and [`../code/software/`](../code/software/).
   Both apply to this DIY build, the PCB, and the portable version.
 - **Tools** (the one tools list, with where each extra tool is named:
   [`docs/assembly-tools.md`](../docs/assembly-tools.md)):
@@ -178,11 +178,11 @@ finished wiring.
 ## Step 03: Install firmware
 
 **You need:** a data-capable micro-USB cable. Tools: a computer with Arduino IDE 2.x and git
-(toolchain and manual library install in [`../firmware/README.md`](../firmware/README.md#toolchain)).
+(toolchain and manual library install in [`../code/firmware/README.md`](../code/firmware/README.md#toolchain)).
 
 1. Follow the toolchain, library, and upload instructions in
-   [`../firmware/README.md`](../firmware/README.md#toolchain).
-2. Upload [`2P1V_Adafruit.ino`](../firmware/2P1V_Adafruit/2P1V_Adafruit.ino) using a data-capable
+   [`../code/firmware/README.md`](../code/firmware/README.md#toolchain).
+2. Upload [`2P1V_Adafruit.ino`](../code/firmware/2P1V_Adafruit/2P1V_Adafruit.ino) using a data-capable
    micro-USB cable.
 3. Open Serial Monitor at 115200 and confirm `2P1V_Adafruit initialized`.
 4. After upload, USB may be disconnected. Portable power is the battery on the JST
@@ -199,7 +199,7 @@ finished wiring.
 **You need:** the 12 V adapter and the micro-USB cable. Tools: a computer with Serial Monitor; a
 multimeter; a phone, tablet, or computer running RheoData. Download, pairing, the connected
 indicator, and how to start and name a REP stay TODO in
-[`../software/README.md`](../software/README.md) and the firmware notes. They will be specified later.
+[`../code/software/README.md`](../code/software/README.md) and the firmware notes. They will be specified later.
 
 1. Place the unit on a stable surface; inspect tubing and leave slack in both power cables.
 2. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
@@ -212,7 +212,7 @@ indicator, and how to start and name a REP stay TODO in
 6. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`. TODO: how to
    read the MPRLS at idle, and what value to expect. TODO: how to pair RheoData, and what it
    shows when it is connected
-   ([`../software/README.md`](../software/README.md)).
+   ([`../code/software/README.md`](../code/software/README.md)).
 
 **You should now see:** the MPRLS, Qwiic Button, and seesaw board found, with no "not found on
 Qwiic bus" or HAL-init error, and no unexpected pump or valve movement, excessive current draw, or
@@ -227,7 +227,7 @@ heat after the 12 V adapter is plugged in.
 <img src="images/teaser.jpg" alt="Assembled RheoBoard bench prototype" width="480">
 
 RheoBoard uses runtime BLE parameters rather than a one-shot calibration. Parameter definitions
-and defaults are maintained in [`../firmware/README.md`](../firmware/README.md).
+and defaults are maintained in [`../code/firmware/README.md`](../code/firmware/README.md).
 
 **You need:** a sample in a GL45 lab reagent bottle (recommended). A beaker, cup, or any other
 fluid container is also fine. TODO: what to prepare, and the amount. Exactly two probe models
@@ -235,7 +235,7 @@ are still to be added, both TODO because the files are not in the repo: one GL45
 and one tube that connects to that GL45 cap (see Step 01). The probe also uses the Adafruit 4661
 tube. The chamber/nozzle is held at one fixture position. Tools: a
 phone, tablet, or computer running RheoData; a computer with Serial Monitor for the serial
-controls in [`../firmware/README.md`](../firmware/README.md).
+controls in [`../code/firmware/README.md`](../code/firmware/README.md).
 
 ### Calibrate
 
@@ -249,8 +249,8 @@ controls in [`../firmware/README.md`](../firmware/README.md).
 
 4. Measure the sample and confirm its pressure trace appears in RheoData. TODO: how to prepare
    the specimen. TODO: how to start and name a REP, in
-   [`../software/README.md`](../software/README.md). How to save a trial is still TODO.
-5. Use [`../firmware/README.md`](../firmware/README.md) for BLE, button, serial, and debug controls.
+   [`../code/software/README.md`](../code/software/README.md). How to save a trial is still TODO.
+5. Use [`../code/firmware/README.md`](../code/firmware/README.md) for BLE, button, serial, and debug controls.
 6. Save the verified settings and use the same fixture position for comparable measurements.
 
 **You should now see:** three repeatable traces from a triad, then the sample's pressure trace in
