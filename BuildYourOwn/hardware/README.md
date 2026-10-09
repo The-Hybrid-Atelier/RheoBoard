@@ -8,6 +8,12 @@ Parts list for the **2 pumps + 1 valve** DIY bench rig. Wiring:
 
 License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 
+This is the one parts list for the build. Tools are listed in
+[`../../docs/assembly-tools.md`](../../docs/assembly-tools.md). A TODO row names a part the build
+uses whose exact type, size, or quantity is not documented yet.
+
+## Parts to buy
+
 | Photo | Part | Qty | Source/link | Datasheet | Notes |
 |---|---|---|---|---|---|
 | <img src="../images/esp32-thing-plus.jpg" width="100" alt="ESP32 Thing Plus"> | SparkFun ESP32 Thing Plus (micro-USB, WRL-15663) | 1 | https://www.sparkfun.com/sparkfun-esp32-thing-plus.html | [`references/datasheets/ESP32_Thing_Plus_Schematic.pdf`](references/datasheets/ESP32_Thing_Plus_Schematic.pdf), [`ESP32_Thing_Plus_Graphical_Datasheet.pdf`](references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf) | MCU; plain ESP32-WROOM-32D/E (not S2/S3); powers + programs over micro-USB; Qwiic port for sensor chain |
@@ -18,11 +24,21 @@ License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 | <img src="../images/adafruit-4699-air-pump.jpg" width="100" alt="Adafruit 4699 air pump"> | Air pump / vacuum motor (Adafruit 4699, ZR370-02PM) | 2 | https://www.adafruit.com/product/4699 | [`references/datasheets/ZR370-02PM_4.5V.pdf`](references/datasheets/ZR370-02PM_4.5V.pdf) | ~4.5 V / ~500 mA each; 2.5 LPM; 58.2 × Ø27.0 mm nominal |
 | <img src="../images/adafruit-4663-air-valve.jpg" width="100" alt="Adafruit 4663 air valve"> | 6 V air valve (Adafruit 4663, FA0520E) | 1 | https://www.adafruit.com/product/4663 | [`references/datasheets/4663_C14660_DC_6V.pdf`](references/datasheets/4663_C14660_DC_6V.pdf) | 3-port flip selector |
 | — | DC power adapter 12 V | 1 | — | — | External supply for both L298N motor rails; ≥ 2 A recommended; share GND with ESP32 |
-| — | Silicone tubing 3 mm ID | 1 | https://www.adafruit.com/product/4664 | — | Pneumatic plumbing; see `tube-wiring/README.md` |
+| — | Silicone tubing 3 mm ID | 1 | https://www.adafruit.com/product/4664 | — | Pneumatic plumbing; see `tube-wiring/README.md`. TODO: length of each run. |
 | — | Qwiic cables | 3 | https://www.sparkfun.com/cables.html | — | Four Qwiic boards daisy-chained on one I2C bus |
 | — | micro-USB cable | 1 | — | — | Flash `2P1V_Adafruit.ino`; also powers the ESP32 during upload/bench use |
-| — | 3D-printed panel, pump holders, bracket, enclosure body, and lid (PLA) | 1 set | — | — | See [`../cad/encloser/`](../cad/encloser/); Bambu Lab printer, normal PLA profile |
+| — | Value Plastics FTLLB220-6005 female luer-thread panel-mount fitting | 1 | — | — | Named in [`../cad/connector/README.md`](../cad/connector/README.md). The sensing tube's luer is intended to mate with it. TODO: where to buy it. |
+| — | Tee | TODO | — | — | TODO: the part that tees the pressure sensor into the shared line. [`tube-wiring/README.md`](tube-wiring/README.md) says the sensor is "Teed into shared line". |
+| — | Hookup wire | TODO | — | — | TODO: type and gauge. [`electronic-wiring/README.md`](electronic-wiring/README.md) uses discrete point-to-point wires for the seesaw-to-L298N signals. |
 | — | Fastening hardware | TODO | — | — | TODO: screw size and count for the 4 mm panel holes and the lid |
+
+## Parts to 3D print
+
+| Photo | Part | Qty | Source/link | Datasheet | Notes |
+|---|---|---|---|---|---|
+| — | 3D-printed panel, pump holders, bracket, enclosure body, and lid (PLA) | 1 set | — | — | See [`../cad/encloser/`](../cad/encloser/); Bambu Lab printer, normal PLA profile. TODO: number of copies of each part. |
+| — | Printed sensing tube (`sensing_tube.stl`) | TODO | — | — | [`../cad/connector/sensing_tube.stl`](../cad/connector/sensing_tube.stl); about 12 mm diameter × 113.2 mm tall; male luer-lock. Import at 100% scale. |
+| — | Printed small connector (`connector_small.stl`) | TODO | — | — | [`../cad/connector/connector_small.stl`](../cad/connector/connector_small.stl); about 6.35 × 7.33 × 15.54 mm. Import at 100% scale. |
 
 ## Notes
 

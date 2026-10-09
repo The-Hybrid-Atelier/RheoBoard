@@ -2,65 +2,43 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-Answers restate the [build guide](../BuildYourOwn/README.md). Other questions are headings only.
+Answers point at the [build guide](../BuildYourOwn/README.md). They do not restate its steps.
+Other questions are headings only.
 
 ## Do I need soldering, CAD, or a custom PCB?
 
-Basic soldering is not required if the boards already have headers and the actuator leads are prepared. You need Arduino IDE familiarity and the ability to read a wiring diagram — no CAD or custom PCB work.
+See the build guide [overview](../BuildYourOwn/README.md#overview).
 
 ## Where are the parts, design files, and software?
 
-Check the bill of materials before ordering or substituting parts: [`hardware/README.md`](../BuildYourOwn/hardware/README.md).
-
-Design files named in the build guide:
-
-- [`cad/encloser/`](../BuildYourOwn/cad/encloser/) (3D-printed panel and enclosure)
-- [`cad/connector/`](../BuildYourOwn/cad/connector/) (sensing tube)
-- [`hardware/electronic-wiring/`](../BuildYourOwn/hardware/electronic-wiring/) (electronics)
-- [`hardware/tube-wiring/`](../BuildYourOwn/hardware/tube-wiring/) (tubing)
-
-Software: [`software/`](../BuildYourOwn/software/).
+See [Before you start](../BuildYourOwn/README.md#before-you-start). The parts list is
+[`hardware/README.md`](../BuildYourOwn/hardware/README.md).
 
 ## What tools does the build guide name?
 
-- 3D printer: Bambu Lab, PLA, normal profile (see the [print notes](../BuildYourOwn/cad/encloser/README.md))
-- Flush cutters
-- Wire strippers, small screwdriver, and multimeter
-- Soldering iron and solder only if headers or wire leads are not already fitted
-- Computer with a data-capable micro-USB cable
-- Phone/tablet or computer running **RheoData** for BLE control
+See [Tools you need](assembly-tools.md).
 
 ## How is the panel assembled?
 
-Print the panel, pump holders, bracket, enclosure body, and lid in PLA with the normal Bambu profile, following the print notes. Mount the two pumps upright in the printed holders and the valve between them, as in the renders. Fastening hardware and the positions of the remaining boards are still TODO. Confirm cable and tube clearance, then continue to wiring. There are no laser-cut parts.
-
-See [Step 01](../BuildYourOwn/README.md#step-01-assemble-the-platform).
+See [Step 01 — Assemble the platform](../BuildYourOwn/README.md#step-01-assemble-the-platform).
 
 ## What has to be true before power is applied?
 
-Leave micro-USB and the 12 V adapter disconnected. Wire every electrical connection as shown in the electronic-wiring notes. Confirm both L298N `5V-EN` jumpers are ON, their used ENA/ENB jumper caps are removed, and the unused L298N #2 Motor A channel remains NC. Confirm all grounds are common, each L298N +5 V output remains local to its own module, and no pump or valve is powered from the ESP32. Continuity-check the completed electrical wiring before applying power. Connect the pneumatic tubing as shown in the tube-wiring notes.
-
-See [Step 02](../BuildYourOwn/README.md#step-02-connect-electronics-and-tubing).
+See [Step 02 — Connect electronics and tubing](../BuildYourOwn/README.md#step-02-connect-electronics-and-tubing).
 
 ## How does the power-on test proceed?
 
-Place the unit on a stable surface; inspect tubing and leave slack in both power cables. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are tied together; confirm adapter (+) reaches both L298N motor power inputs. Power the ESP32 via micro-USB. Never back-feed 12 V into it. Open Serial Monitor at 115200 and confirm the MPRLS, Qwiic Button, and seesaw board are found (no "not found on Qwiic bus" or HAL-init error). With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/valve movement, excessive current draw, or heat. Disconnect immediately if any appears. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`.
-
-See [Step 04](../BuildYourOwn/README.md#step-04-power-on-test).
+See [Step 04 — Power-on test](../BuildYourOwn/README.md#step-04-power-on-test).
 
 ## Which sketch is uploaded?
 
-Follow the toolchain, library, and upload instructions in the [firmware reference](../BuildYourOwn/software/README.md). Upload [`2P1V_Adafruit.ino`](../BuildYourOwn/software/2P1V_Adafruit/2P1V_Adafruit.ino) using a data-capable micro-USB cable. Open Serial Monitor at 115200 and confirm `2P1V_Adafruit initialized`.
-
-See [Step 03](../BuildYourOwn/README.md#step-03-install-firmware).
+See [Step 03 — Install firmware](../BuildYourOwn/README.md#step-03-install-firmware).
 
 ## How do I calibrate and measure?
 
-RheoBoard uses runtime BLE parameters rather than a one-shot calibration. Parameter definitions and defaults are maintained in the firmware reference.
-
-Position the chamber/nozzle repeatably at the sample. Let the MPRLS stabilize, then run several REPs with no sample. Tune baseline, retract, extrude, ramp, and sampling parameters until a triad produces three repeatable traces. Measure the sample and confirm its pressure trace appears in RheoData. Use the firmware reference for BLE, button, serial, and debug controls. Save the verified settings and use the same fixture position for comparable measurements.
-
-See [Step 05](../BuildYourOwn/README.md#step-05-calibrate-and-use).
+See [Step 05 — Calibrate and use](../BuildYourOwn/README.md#step-05-calibrate-and-use). Calibrate
+is [one section](../BuildYourOwn/README.md#calibrate); measuring is the
+[next](../BuildYourOwn/README.md#measure).
 
 ## Where are the assembly packets?
 
@@ -68,7 +46,8 @@ TODO
 
 ## What tools are required beyond the build guide?
 
-TODO
+See [Tools you need](assembly-tools.md). TODO: tools the build needs that are not named in the
+repository yet.
 
 ## What modifications are documented?
 

@@ -39,21 +39,7 @@ Component sizes, from the bill of materials and the component datasheets:
 
 ## Bill of materials
 
-Quantities and ratings below are the bill of materials. Part sources and datasheets stay in that file.
-
-| Part | Qty | Rating or note already in the bill of materials |
-|---|---|---|
-| SparkFun ESP32 Thing Plus (micro-USB, WRL-15663) | 1 | MCU; plain ESP32-WROOM-32D/E (not S2/S3); powers + programs over micro-USB; Qwiic port for sensor chain |
-| SparkFun Qwiic MicroPressure (MPRLS) | 1 | I2C `0x18`; Qwiic |
-| SparkFun Qwiic Button, red (BOB-15932) | 1 | I2C `0x6F`; Qwiic |
-| Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | 1 | I2C `0x49`; 3.3 V Qwiic logic; PWM/GPIO output |
-| L298N dual H-bridge module | 2 | #1 drives two pumps; #2 drives one valve |
-| Air pump / vacuum motor (Adafruit 4699, ZR370-02PM) | 2 | ~4.5 V / ~500 mA each; 2.5 LPM; 58.2 × Ø27.0 mm nominal |
-| 6 V air valve (Adafruit 4663, FA0520E) | 1 | 3-port flip selector |
-| DC power adapter 12 V | 1 | External supply for both L298N motor rails; ≥ 2 A recommended; share GND with ESP32 |
-| Silicone tubing 3 mm ID | 1 | Pneumatic plumbing |
-| Qwiic cables | 3 | Four Qwiic boards daisy-chained on one I2C bus |
-| micro-USB cable | 1 | Flash `2P1V_Adafruit.ino`; also powers the ESP32 during upload/bench use |
+Quantities, sources, and datasheets are in the [parts list](../BuildYourOwn/hardware/README.md). That file is the one parts list (parts to buy and parts to 3D print).
 
 From the bill of materials notes: pumps are rated ~4.5–5 V and the valve ~6 V. Adafruit's ~50% pump duty-cycle recommendation describes intermittent run time, not a 50% PWM ceiling; firmware may use brief higher-PWM pulses, but the pumps should not run continuously.
 

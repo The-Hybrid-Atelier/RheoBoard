@@ -7,8 +7,4 @@ From the [firmware reference](../BuildYourOwn/software/README.md):
 - BLE: the device advertises as `2P1V_Adafruit`; control via RheoData bridge / OSC (`rheo/rep`, etc.).
 - Serial baud is 115200.
 
-From the [build guide](../BuildYourOwn/README.md):
-
-- Phone, tablet, or computer running RheoData for BLE control.
-- Open Serial Monitor at 115200 and confirm `2P1V_Adafruit initialized`.
-- Connect RheoData to `2P1V_Adafruit`.
+From [Step 04 of the build guide](../BuildYourOwn/README.md#step-04-power-on-test): connect RheoData to `2P1V_Adafruit` after the power-on checks. TODO: where to get RheoData, how to pair it, and what it shows when it is connected.

@@ -1,7 +1,8 @@
 # Build Your Own Rheometer — Step-by-Step Guide
 
-The [repo root README](../README.md) is the project overview. This file is only the step-by-step
-build guide; each linked subfolder owns its detailed reference information.
+The [repo root README](../README.md) is the project overview. This file is the step-by-step build
+guide, and it is the main copy: the wiki and `docs/` pages link here instead of repeating it. Each
+linked subfolder owns its detailed reference information.
 
 License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
 [repo root README](../README.md) → License, or [`../LICENSE`](../LICENSE).
@@ -20,19 +21,27 @@ Basic soldering is not required if the boards already have headers and the actua
 prepared. You need Arduino IDE familiarity and the ability to read a wiring diagram — no CAD or
 custom PCB work.
 
+**Which version to build:** version 2, the 3D-printed panel and enclosure in this guide, on
+`main`. Version 2 is in progress; open items are marked TODO below. Version 1 is at the
+[`v1` tag](https://github.com/The-Hybrid-Atelier/RheoBoard/tree/v1).
+
 ## Before you start
 
-- Check the [`hardware/README.md`](hardware/README.md) BOM before ordering or substituting parts.
+- **Parts:** the one parts list is [`hardware/README.md`](hardware/README.md) (parts to buy and
+  parts to 3D print). Check it before ordering or substituting parts.
 - **Design files:** [`cad/encloser/`](cad/encloser/) (3D-printed panel and enclosure),
-  [`cad/connector/`](cad/connector/) (sensing tube),
+  [`cad/connector/`](cad/connector/) (sensing tube and small connector),
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
 - **Software:** [`software/`](software/)
-- **Tools:** 3D printer (Bambu Lab, PLA, normal profile; see
-  [`cad/encloser/README.md`](cad/encloser/README.md)); flush
-  cutters; wire strippers, small screwdriver, and multimeter; soldering iron + solder only if
-  headers or wire leads are not already fitted; computer with data-capable micro-USB cable;
-  phone/tablet or computer running **RheoData** for BLE control
+- **Tools** (the one tools list, with where each extra tool is named:
+  [`docs/assembly-tools.md`](../docs/assembly-tools.md)):
+  - 3D printer (Bambu Lab, PLA, normal profile); Bambu Studio for the STEP files; a slicer or mesh
+    viewer for the STL files
+  - Flush cutters; wire strippers, small screwdriver, and multimeter; soldering iron + solder only
+    if headers or wire leads are not already fitted
+  - Computer with a data-capable micro-USB cable; Arduino IDE 2.x; git
+  - Phone, tablet, or computer running **RheoData** for BLE control
 
 ## Steps
 
@@ -48,13 +57,43 @@ custom PCB work.
 
 <a href="cad/encloser/encloser_pic1.jpg"><img src="cad/encloser/encloser_pic1.jpg" alt="3D-printed panel and enclosure render" width="700"></a>
 
-1. Print the panel, pump holders, bracket, enclosure body, and lid in PLA with the normal Bambu
-   profile, following [`cad/encloser/README.md`](cad/encloser/README.md).
-2. Mount the two pumps upright in the printed holders and the valve between them, as in the
+**You need:** PLA for the panel and enclosure; the two pumps and the valve from the parts list; a
+Value Plastics FTLLB220-6005 fitting and 3 mm ID silicone tubing for the sensing-tube test fit;
+fastening hardware (TODO: screw size and count). Tools: a 3D printer; Bambu Studio for the STEP
+files; a slicer for the STL files. TODO: tools for the fastening hardware, and the material and
+print settings for the sensing tube and small connector.
+
+### Print
+
+1. Print the panel, pump holders, bracket, enclosure body, and lid (the STEP files in
+   [`cad/encloser/part/`](cad/encloser/part/)) in PLA with the normal Bambu profile, following
+   [`cad/encloser/README.md`](cad/encloser/README.md). Bambu Studio opens STEP files directly.
+   TODO: number of copies of each part, print orientation, and supports.
+2. Print the sensing tube [`sensing_tube.stl`](cad/connector/sensing_tube.stl) and the small
+   connector [`connector_small.stl`](cad/connector/connector_small.stl) from
+   [`cad/connector/`](cad/connector/). Import them at 100% scale (dimensions are in millimetres).
+   TODO: material, print settings, and number of copies for these two parts.
+3. Test-print check, from [`cad/connector/README.md`](cad/connector/README.md): verify the thread,
+   luer, tubing, airflow, and leak-tight fit with the real hardware. The sensing tube's luer is
+   intended to mate with the FTLLB220-6005 fitting; confirm the fit with the actual fitting.
+
+File names, sizes, and likely roles are listed under "Print these" in
+[`docs/parts-to-3d-print.md`](../docs/parts-to-3d-print.md).
+
+### Mount
+
+4. Mount the two pumps upright in the printed holders and the valve between them, as in the
    renders.
-3. TODO: fastening hardware, and where the L298N drivers, MPRLS, seesaw, ESP32, and Button mount
-   on the printed panel.
-4. Confirm cable and tube clearance, then continue to wiring.
+5. TODO: fastening hardware, and where the L298N drivers, MPRLS, seesaw, ESP32, and Button mount
+   on the printed panel. The three enclosure renders are on
+   [`docs/panel-layout.md`](../docs/panel-layout.md).
+6. Confirm cable and tube clearance.
+
+**You should now have:** the thread, luer, tubing, airflow, and leak-tight fit checked on the
+printed sensing tube and small connector, and cable and tube clearance confirmed after the pumps
+and valve are mounted as in the renders. TODO: a photo of a mounted panel.
+
+**Next:** [Step 02 — Connect electronics and tubing](#step-02-connect-electronics-and-tubing).
 
 ---
 
@@ -64,30 +103,71 @@ custom PCB work.
 
 <a href="hardware/tube-wiring/tube-connection.png"><img src="hardware/tube-wiring/tube-connection.png" alt="Pneumatic tube-connection diagram" width="600"></a>
 
-1. Leave micro-USB and the 12 V adapter disconnected.
-2. Wire every electrical connection exactly as shown in
-   [`hardware/electronic-wiring/README.md`](hardware/electronic-wiring/README.md).
-3. Confirm both L298N `5V-EN` jumpers are ON, their used ENA/ENB jumper caps are removed, and the
+**You need:** 3 Qwiic cables; discrete point-to-point wire for the seesaw-to-driver signals
+(TODO: wire type and gauge); the 12 V adapter, left unplugged; 3 mm ID silicone tubing
+(TODO: length); a tee for the sensor (TODO: the part); the printed sensing tube, small connector,
+and FTLLB220-6005 fitting from Step 01. Tools: flush cutters; wire strippers; small screwdriver;
+multimeter; soldering iron and solder only if headers or wire leads are not already fitted.
+TODO: a tool to cut the silicone tubing is not named in the repository.
+
+### Wire the electronics
+
+Leave micro-USB and the 12 V adapter disconnected. Each sub-step is one section of
+[`hardware/electronic-wiring/README.md`](hardware/electronic-wiring/README.md). Wire every
+connection exactly as shown there and in the diagram.
+
+1. [Qwiic chain](hardware/electronic-wiring/README.md#qwiic-chain)
+2. [Seesaw to the drivers](hardware/electronic-wiring/README.md#seesaw-to-the-drivers)
+3. [L298N #1 (pumps)](hardware/electronic-wiring/README.md#l298n-1-pumps)
+4. [L298N #2 (valve)](hardware/electronic-wiring/README.md#l298n-2-valve)
+5. [Power](hardware/electronic-wiring/README.md#power). Do not plug the adapter in yet.
+   TODO: how the 12 V adapter connects to the L298N inputs (connector or bare leads).
+6. Confirm both L298N `5V-EN` jumpers are ON, their used ENA/ENB jumper caps are removed, and the
    unused L298N #2 Motor A channel remains NC.
-4. Confirm all grounds are common, each L298N +5 V output remains local to its own module, and no
+7. Confirm all grounds are common, each L298N +5 V output remains local to its own module, and no
    pump or valve is powered from the ESP32.
-5. Continuity-check the completed electrical wiring before applying power.
-6. Connect the pneumatic tubing exactly as shown in
-   [`hardware/tube-wiring/README.md`](hardware/tube-wiring/README.md).
+8. Continuity-check the completed electrical wiring before applying power. TODO: which connections
+   to check, and the expected result for each.
+
+### Connect the tubing
+
+9. Connect the pneumatic tubing exactly as shown in
+   [`hardware/tube-wiring/README.md`](hardware/tube-wiring/README.md). TODO: how the sensor is
+   teed into the shared line, and how the sensing tube, small connector, and FTLLB220-6005
+   fitting join that line. TODO (maintainer): confirm whether the diagram's "chamber/nozzle" is
+   the printed sensing tube.
+
+**You should now have:** both `5V-EN` jumpers ON, the used ENA/ENB jumper caps removed, L298N #2
+Motor A NC, all grounds common, each L298N +5 V output local to its own module, no pump or valve
+powered from the ESP32, a continuity check done, and tubing connected as in the tube diagram.
+Micro-USB and the 12 V adapter are still disconnected. TODO: a leak check, and a photo of the
+finished wiring.
+
+**Next:** [Step 03 — Install firmware](#step-03-install-firmware).
 
 ---
 
 ## Step 03: Install firmware
 
+**You need:** a data-capable micro-USB cable. Tools: a computer with Arduino IDE 2.x and git
+(toolchain and manual library install in [`software/README.md`](software/README.md#toolchain)).
+
 1. Follow the toolchain, library, and upload instructions in
-   [`software/README.md`](software/README.md).
+   [`software/README.md`](software/README.md#toolchain).
 2. Upload [`2P1V_Adafruit.ino`](software/2P1V_Adafruit/2P1V_Adafruit.ino) using a data-capable
    micro-USB cable.
 3. Open Serial Monitor at 115200 and confirm `2P1V_Adafruit initialized`.
 
+**You should now see:** `2P1V_Adafruit initialized` in Serial Monitor at 115200.
+
+**Next:** [Step 04 — Power-on test](#step-04-power-on-test).
+
 ---
 
 ## Step 04: Power-on test
+
+**You need:** the 12 V adapter and the micro-USB cable. Tools: a computer with Serial Monitor; a
+multimeter; a phone, tablet, or computer running RheoData. TODO: where to get RheoData.
 
 1. Place the unit on a stable surface; inspect tubing and leave slack in both power cables.
 2. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
@@ -97,7 +177,15 @@ custom PCB work.
    found (no "not found on Qwiic bus" or HAL-init error).
 5. With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/
    valve movement, excessive current draw, or heat. Disconnect immediately if any appears.
-6. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`.
+6. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`. TODO: how to
+   read the MPRLS at idle, and what value to expect. TODO: how to pair RheoData, and what it
+   shows when it is connected.
+
+**You should now see:** the MPRLS, Qwiic Button, and seesaw board found, with no "not found on
+Qwiic bus" or HAL-init error, and no unexpected pump or valve movement, excessive current draw, or
+heat after the 12 V adapter is plugged in.
+
+**Next:** [Step 05 — Calibrate and use](#step-05-calibrate-and-use).
 
 ---
 
@@ -108,10 +196,28 @@ custom PCB work.
 RheoBoard uses runtime BLE parameters rather than a one-shot calibration. Parameter definitions
 and defaults are maintained in [`software/README.md`](software/README.md).
 
-1. Position the chamber/nozzle repeatably at the sample.
+**You need:** a sample (TODO: what to prepare, the container, and the amount); the chamber/nozzle
+held at one fixture position (TODO: what holds it, and where it sits in the sample). Tools: a
+phone, tablet, or computer running RheoData; a computer with Serial Monitor for the serial
+controls in [`software/README.md`](software/README.md).
+
+### Calibrate
+
+1. Position the chamber/nozzle repeatably at the sample. TODO (maintainer): confirm whether the
+   chamber/nozzle is the printed sensing tube. TODO: depth and location in the sample.
 2. Let the MPRLS stabilize, then run several REPs with no sample.
 3. Tune baseline, retract, extrude, ramp, and sampling parameters until a triad produces three
    repeatable traces.
-4. Measure the sample and confirm its pressure trace appears in RheoData.
+
+### Measure
+
+4. Measure the sample and confirm its pressure trace appears in RheoData. TODO: how to prepare
+   the specimen, and how to start, name, and save a trial in RheoData.
 5. Use [`software/README.md`](software/README.md) for BLE, button, serial, and debug controls.
 6. Save the verified settings and use the same fixture position for comparable measurements.
+
+**You should now see:** three repeatable traces from a triad, then the sample's pressure trace in
+RheoData. TODO: an example of a good trace.
+
+**Next:** TODO: power off and clean. [`docs/maintenance.md`](../docs/maintenance.md) does not have
+those steps yet.

@@ -20,6 +20,10 @@ equivalent).
 | Sensor | [SparkFun Qwiic MicroPressure](https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html) (MPRLS) | Teed into shared line |
 | Output | Chamber / nozzle | Bottom of shared line — "the line we sense" |
 
+TODO (maintainer): confirm whether the chamber / nozzle is the printed sensing tube in
+[`../../cad/connector/`](../../cad/connector/). TODO: how the sensing tube, small connector, and
+FTLLB220-6005 fitting join the shared line; the tee part; and the length of each tube run.
+
 ### Pump note (4699)
 
 The ZR370-02PM always draws air in through the **side port** and pushes it out the **tubing port**.

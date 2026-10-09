@@ -32,6 +32,8 @@ TODO: confirm each part's role and the number of copies to print.
 
 TODO: print orientation, supports, and any non-default settings per part.
 
+The sensing tube and small connector are printed from [`../connector/`](../connector/), in Step 01 of the [build guide](../../README.md#step-01-assemble-the-platform).
+
 ## Assembly
 
 TODO: how the components fasten to the panel (screw size and count for the 4 mm holes), how the

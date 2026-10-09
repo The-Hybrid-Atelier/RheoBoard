@@ -11,14 +11,13 @@ a REP (retraction-extrusion pulse) and streams the pressure trace.
 ## Start here
 
 1. [Step-by-step DIY build guide](BuildYourOwn/README.md)
-2. [Custom PCB](RheoBoard_PCB/README.md)
+2. [RheoBoard wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
+3. [Custom PCB](RheoBoard_PCB/README.md)
 
 The firmware in `BuildYourOwn/software/` drives the DIY module build.
 
 The panel and enclosure are 3D printed (PLA); print files and notes are in
 [`BuildYourOwn/cad/encloser/`](BuildYourOwn/cad/encloser/). There are no laser-cut parts.
-
-The detailed guide is the [RheoBoard wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki).
 
 ## License
 

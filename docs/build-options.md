@@ -6,6 +6,8 @@ The DIY build comes first and the custom PCB comes second, matching [`README.md`
 
 ## DIY
 
+Build version 2 on `main` (3D-printed panel and enclosure). It is in progress, and [Step 01](../BuildYourOwn/README.md#step-01-assemble-the-platform) of the build guide has TODOs. Version 1 is at the [`v1` tag](https://github.com/The-Hybrid-Atelier/RheoBoard/tree/v1).
+
 Start with the [step-by-step DIY build guide](../BuildYourOwn/README.md).
 
 The DIY version uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
