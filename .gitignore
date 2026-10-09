@@ -21,6 +21,13 @@ Status\ Report.txt
 *.PcbDocPreview
 .~lock.*
 
+# KiCad — local history (a nested git repo), lock files, backups, caches
+.history/
+*.lck
+*-backups/
+_autosave-*
+fp-info-cache
+
 # Altium backup/lock files
 *.~*
 *.Bak
