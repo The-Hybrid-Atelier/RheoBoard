@@ -36,9 +36,10 @@ The sensing tube and small connector are printed from [`../connector/`](../conne
 
 ## Assembly
 
-TODO: how the components fasten to the panel (screw size and count for the 4 mm holes), how the
-panel mounts in the enclosure, how the lid attaches, and where the MPRLS, seesaw, ESP32, and
-Button sit. The renders above show the two pumps upright in printed holders with the valve
-between them and the L298N drivers behind the pumps.
+Fasteners are 4 mm zip ties. A count is not stated. TODO: where the MPRLS, seesaw, ESP32, and
+Button sit, how the panel mounts in the enclosure, and how the lid attaches. Those board positions
+stay open until this enclosure CAD is updated. The files stay in this folder
+(`BuildYourOwn/cad/encloser/`). The renders above show the two pumps upright in printed holders
+with the valve between them and the L298N drivers behind the pumps.
 
 The editable CAD project that produced these STEP files is not in this repository yet.

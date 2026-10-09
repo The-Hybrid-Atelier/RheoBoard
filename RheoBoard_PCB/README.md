@@ -1,9 +1,9 @@
 # RheoBoard PCB
 
 KiCad 10 design for the custom RheoBoard. This is a separate board from the DIY module build in
-[`BuildYourOwn/`](../BuildYourOwn/). The ESP32 firmware in
-[`BuildYourOwn/software/`](../BuildYourOwn/software/) drives that DIY rig. This PCB does not yet
-have its own sketch in the repository.
+[`BuildYourOwn/`](../BuildYourOwn/). Everyday wall power for this board is a 12 V plug. The
+firmware in [`../firmware/`](../firmware/) and the RheoData notes in [`../software/`](../software/)
+apply to the DIY build, this PCB, and the portable version.
 
 License: hardware CERN-OHL-W-2.0 — see [`../LICENSE`](../LICENSE).
 

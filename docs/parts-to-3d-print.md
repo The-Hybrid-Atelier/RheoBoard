@@ -48,6 +48,10 @@ build instructions specify otherwise.
 Printing both groups is [Step 01](../BuildYourOwn/README.md#step-01-assemble-the-platform) of the
 build guide.
 
+### Probe (print files not in the repo yet)
+
+The probe is a 3D-printed GL45 two-port cap, the [Adafruit 4661](https://www.adafruit.com/product/4661) tube, and a 3D-printed tube that fits GL45. Those two print files are not in this repository yet. TODO. [`sensing_tube.stl`](../BuildYourOwn/cad/connector/sensing_tube.stl) and [`connector_small.stl`](../BuildYourOwn/cad/connector/connector_small.stl) are not those GL45 parts.
+
 ## Meshes without an editable source
 
 From the connector README: `sensing_tube.scad` is the preferred format for changing the sensing

@@ -20,7 +20,7 @@ with:
 
 Wiring facts here must stay in sync with:
   - README.md (this folder) -- prose description of the same connections
-  - ../../software/2P1V_Adafruit/PneumaticSystem.h -- seesaw pin #defines (source of truth)
+  - ../../../firmware/2P1V_Adafruit/PneumaticSystem.h -- seesaw pin #defines (source of truth)
 
 If you change a connection, update all three together.
 """

@@ -33,7 +33,8 @@ custom PCB work.
   [`cad/connector/`](cad/connector/) (sensing tube and small connector),
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
-- **Software:** [`software/`](software/)
+- **Firmware and software:** [`../firmware/`](../firmware/) and [`../software/`](../software/).
+  Both apply to this DIY build, the PCB, and the portable version.
 - **Tools** (the one tools list, with where each extra tool is named:
   [`docs/assembly-tools.md`](../docs/assembly-tools.md)):
   - 3D printer (Bambu Lab, PLA, normal profile); Bambu Studio for the STEP files; a slicer or mesh
@@ -42,6 +43,24 @@ custom PCB work.
     if headers or wire leads are not already fitted
   - Computer with a data-capable micro-USB cable; Arduino IDE 2.x; git
   - Phone, tablet, or computer running **RheoData** for BLE control
+
+## Power
+
+Everyday wall power for this DIY build and for the PCB is a 12 V plug. On this DIY build it feeds
+the pump and valve supplies. Pump and valve current does not go through the ESP32 5 V pin.
+
+USB uploads firmware to the SparkFun ESP32 Thing Plus ([Step 03](#step-03-install-firmware)). After
+upload, USB may be disconnected.
+
+Portable power for that board is a single-cell LiPo on its JST connector. The vendored
+[schematic](hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf) says V_BATT should be a
+single-cell LiPo, 4.2 V maximum. The
+[graphical datasheet](hardware/references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf)
+labels that connector "JST Connector for single cell LiPo" and says VBAT is direct to the battery
+and the charger.
+
+TODO: the maintainer said 3–5 V for this battery. The datasheet maximum is 4.2 V. Confirm before
+using another voltage.
 
 ## Steps
 
@@ -58,9 +77,10 @@ custom PCB work.
 <a href="cad/encloser/encloser_pic1.jpg"><img src="cad/encloser/encloser_pic1.jpg" alt="3D-printed panel and enclosure render" width="700"></a>
 
 **You need:** PLA for the panel and enclosure; the two pumps and the valve from the parts list; a
-Value Plastics FTLLB220-6005 fitting and 3 mm ID silicone tubing for the sensing-tube test fit;
-fastening hardware (TODO: screw size and count). Tools: a 3D printer; Bambu Studio for the STEP
-files; a slicer for the STL files. TODO: tools for the fastening hardware, and the material and
+Value Plastics FTLLB220-6005 fitting and [Adafruit 4661](https://www.adafruit.com/product/4661)
+silicone tubing (1 m, 3 mm ID, 5 mm OD, for air only) for the sensing-tube test fit; 4 mm zip ties
+(a count is not stated). Tools: a 3D printer; Bambu Studio for the STEP
+files; a slicer for the STL files. TODO: the material and
 print settings for the sensing tube and small connector.
 
 ### Print
@@ -76,18 +96,23 @@ print settings for the sensing tube and small connector.
 3. Test-print check, from [`cad/connector/README.md`](cad/connector/README.md): verify the thread,
    luer, tubing, airflow, and leak-tight fit with the real hardware. The sensing tube's luer is
    intended to mate with the FTLLB220-6005 fitting; confirm the fit with the actual fitting.
+4. The probe is separate from those two files. It is a 3D-printed GL45 two-port cap, the Adafruit
+   4661 tube, and a 3D-printed tube that fits GL45. Those two print files are not in this
+   repository yet. TODO. [`sensing_tube.stl`](cad/connector/sensing_tube.stl) and
+   [`connector_small.stl`](cad/connector/connector_small.stl) are not those GL45 parts.
 
 File names, sizes, and likely roles are listed under "Print these" in
 [`docs/parts-to-3d-print.md`](../docs/parts-to-3d-print.md).
 
 ### Mount
 
-4. Mount the two pumps upright in the printed holders and the valve between them, as in the
+5. Mount the two pumps upright in the printed holders and the valve between them, as in the
    renders.
-5. TODO: fastening hardware, and where the L298N drivers, MPRLS, seesaw, ESP32, and Button mount
-   on the printed panel. The three enclosure renders are on
-   [`docs/panel-layout.md`](../docs/panel-layout.md).
-6. Confirm cable and tube clearance.
+6. Fasten with 4 mm zip ties. A count is not stated. TODO: where the L298N drivers, MPRLS, seesaw,
+   ESP32, and Button mount on the printed panel. Those positions stay open until the enclosure CAD
+   is updated. The files stay in [`cad/encloser/`](cad/encloser/). The three enclosure renders are
+   on [`docs/panel-layout.md`](../docs/panel-layout.md).
+7. Confirm cable and tube clearance.
 
 **You should now have:** the thread, luer, tubing, airflow, and leak-tight fit checked on the
 printed sensing tube and small connector, and cable and tube clearance confirmed after the pumps
@@ -104,9 +129,11 @@ and valve are mounted as in the renders. TODO: a photo of a mounted panel.
 <a href="hardware/tube-wiring/tube-connection.png"><img src="hardware/tube-wiring/tube-connection.png" alt="Pneumatic tube-connection diagram" width="600"></a>
 
 **You need:** 3 Qwiic cables; discrete point-to-point wire for the seesaw-to-driver signals
-(TODO: wire type and gauge); the 12 V adapter, left unplugged; 3 mm ID silicone tubing
-(TODO: length); a tee for the sensor (TODO: the part); the printed sensing tube, small connector,
-and FTLLB220-6005 fitting from Step 01. Tools: flush cutters; wire strippers; small screwdriver;
+(TODO: wire type and gauge); the 12 V adapter, left unplugged;
+[Adafruit 4661](https://www.adafruit.com/product/4661) silicone tubing (1 m, 3 mm ID, 5 mm OD, for
+air only; TODO: length of each run); a tee for the sensor (TODO: the part); the printed sensing
+tube, small connector, and FTLLB220-6005 fitting from Step 01. Tools: flush cutters; wire
+strippers; small screwdriver;
 multimeter; soldering iron and solder only if headers or wire leads are not already fitted.
 TODO: a tool to cut the silicone tubing is not named in the repository.
 
@@ -150,13 +177,15 @@ finished wiring.
 ## Step 03: Install firmware
 
 **You need:** a data-capable micro-USB cable. Tools: a computer with Arduino IDE 2.x and git
-(toolchain and manual library install in [`software/README.md`](software/README.md#toolchain)).
+(toolchain and manual library install in [`../firmware/README.md`](../firmware/README.md#toolchain)).
 
 1. Follow the toolchain, library, and upload instructions in
-   [`software/README.md`](software/README.md#toolchain).
-2. Upload [`2P1V_Adafruit.ino`](software/2P1V_Adafruit/2P1V_Adafruit.ino) using a data-capable
+   [`../firmware/README.md`](../firmware/README.md#toolchain).
+2. Upload [`2P1V_Adafruit.ino`](../firmware/2P1V_Adafruit/2P1V_Adafruit.ino) using a data-capable
    micro-USB cable.
 3. Open Serial Monitor at 115200 and confirm `2P1V_Adafruit initialized`.
+4. After upload, USB may be disconnected. Portable power is the single-cell LiPo on the JST
+   connector described in [Power](#power).
 
 **You should now see:** `2P1V_Adafruit initialized` in Serial Monitor at 115200.
 
@@ -167,7 +196,9 @@ finished wiring.
 ## Step 04: Power-on test
 
 **You need:** the 12 V adapter and the micro-USB cable. Tools: a computer with Serial Monitor; a
-multimeter; a phone, tablet, or computer running RheoData. TODO: where to get RheoData.
+multimeter; a phone, tablet, or computer running RheoData. Download, pairing, the connected
+indicator, and how to start and name a REP are TODO in
+[`../software/README.md`](../software/README.md).
 
 1. Place the unit on a stable surface; inspect tubing and leave slack in both power cables.
 2. Leave the 12 V adapter unplugged. Confirm ESP32 GND, both L298N GNDs, and the adapter (−) are
@@ -179,7 +210,8 @@ multimeter; a phone, tablet, or computer running RheoData. TODO: where to get Rh
    valve movement, excessive current draw, or heat. Disconnect immediately if any appears.
 6. Confirm the MPRLS reads near ambient, then connect RheoData to `2P1V_Adafruit`. TODO: how to
    read the MPRLS at idle, and what value to expect. TODO: how to pair RheoData, and what it
-   shows when it is connected.
+   shows when it is connected
+   ([`../software/README.md`](../software/README.md)).
 
 **You should now see:** the MPRLS, Qwiic Button, and seesaw board found, with no "not found on
 Qwiic bus" or HAL-init error, and no unexpected pump or valve movement, excessive current draw, or
@@ -194,12 +226,15 @@ heat after the 12 V adapter is plugged in.
 <img src="images/teaser.jpg" alt="Assembled RheoBoard bench prototype" width="480">
 
 RheoBoard uses runtime BLE parameters rather than a one-shot calibration. Parameter definitions
-and defaults are maintained in [`software/README.md`](software/README.md).
+and defaults are maintained in [`../firmware/README.md`](../firmware/README.md).
 
-**You need:** a sample (TODO: what to prepare, the container, and the amount); the chamber/nozzle
-held at one fixture position (TODO: what holds it, and where it sits in the sample). Tools: a
+**You need:** a sample in a GL45 lab reagent bottle (recommended). A beaker, cup, or any other
+fluid container is also fine. TODO: what to prepare, and the amount. The probe is a 3D-printed
+GL45 two-port cap, the Adafruit 4661 tube, and a 3D-printed tube that fits GL45 (those print
+files are not in the repo yet; see Step 01). The chamber/nozzle is held at one fixture position
+(TODO: what holds it, and where it sits in the sample). Tools: a
 phone, tablet, or computer running RheoData; a computer with Serial Monitor for the serial
-controls in [`software/README.md`](software/README.md).
+controls in [`../firmware/README.md`](../firmware/README.md).
 
 ### Calibrate
 
@@ -212,12 +247,14 @@ controls in [`software/README.md`](software/README.md).
 ### Measure
 
 4. Measure the sample and confirm its pressure trace appears in RheoData. TODO: how to prepare
-   the specimen, and how to start, name, and save a trial in RheoData.
-5. Use [`software/README.md`](software/README.md) for BLE, button, serial, and debug controls.
+   the specimen. TODO: how to start and name a REP, in
+   [`../software/README.md`](../software/README.md). How to save a trial is still TODO.
+5. Use [`../firmware/README.md`](../firmware/README.md) for BLE, button, serial, and debug controls.
 6. Save the verified settings and use the same fixture position for comparable measurements.
 
 **You should now see:** three repeatable traces from a triad, then the sample's pressure trace in
 RheoData. TODO: an example of a good trace.
 
-**Next:** TODO: power off and clean. [`docs/maintenance.md`](../docs/maintenance.md) does not have
-those steps yet.
+**Next:** Between samples, clean the tube. TODO: how. TODO: power off.
+[`docs/maintenance.md`](../docs/maintenance.md) records that cleaning fact and does not have a
+method yet.

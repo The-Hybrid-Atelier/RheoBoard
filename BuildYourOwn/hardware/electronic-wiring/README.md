@@ -1,7 +1,8 @@
 # Electronic wiring
 
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
-[`../../software/2P1V_Adafruit/2P1V_Adafruit.ino`](../../software/2P1V_Adafruit/2P1V_Adafruit.ino).
+[`../../../firmware/2P1V_Adafruit/2P1V_Adafruit.ino`](../../../firmware/2P1V_Adafruit/2P1V_Adafruit.ino).
+The same firmware applies to the DIY build, the PCB, and the portable version.
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
@@ -61,11 +62,18 @@ or feed external 5 V while `5V-EN` is installed.
 ### Power
 
 External **12 V DC adapter** (≥ 2 A recommended) to both L298N motor power inputs; common GND
-with ESP32. PWM on ENA/ENB limits effective voltage to pumps (~4.5 V rated) and valve (~6 V
-rated). The pump manufacturer's intermittent-duty recommendation limits run time, not the
-instantaneous PWM setting; see [`../README.md`](../README.md). Do not plug the adapter in until
+with ESP32. That 12 V plug is everyday wall power for this DIY build and for the PCB. Pump and
+valve current does not go through the ESP32 5 V pin. PWM on ENA/ENB limits effective voltage to
+pumps (~4.5 V rated) and valve (~6 V rated). The pump manufacturer's intermittent-duty
+recommendation limits run time, not the instantaneous PWM setting; see
+[`../README.md`](../README.md). Do not plug the adapter in until
 [Step 04](../../README.md#step-04-power-on-test). TODO: how the adapter connects to the L298N
 inputs (connector or bare leads).
+
+USB uploads firmware to the ESP32 Thing Plus. After upload, USB may be disconnected. Portable
+power is a single-cell LiPo on that board's JST connector (schematic V_BATT, 4.2 V maximum).
+TODO: the maintainer said 3–5 V; the datasheet maximum is 4.2 V. Confirm. See
+[Power](../../README.md#power) in the build guide.
 
 **You should now have:** both `5V-EN` jumpers ON, the used ENA/ENB jumper caps removed, L298N #2
 Motor A NC, all grounds common, and each L298N +5 V output local to its own module. Then
@@ -85,7 +93,7 @@ signal path.
 - Electronic wiring is drawn as a labeled schematic with component blocks, named pins,
   orthogonal wire routing, junction dots, and a net-color legend.
 - When updating wiring, update the image **and** the pin defines in
-  `../../software/2P1V_Adafruit/PneumaticSystem.h`
+  `../../../firmware/2P1V_Adafruit/PneumaticSystem.h`
   together — keep them in sync.
 
 ## Regenerating the electrical diagram

@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-08
+date-updated: 2026-10-09
 # OSHWA certified version 1 on 2026-10-08, UID US002865: https://certification.oshwa.org/us002865.html
 # Version 2 (this manifest) is not certified yet.
 # (OKH 1.0 has no certification field.)
@@ -122,12 +122,14 @@ manufacturing-files:
     title: PCB pick-and-place
 
 operating-instructions:
-  - path: BuildYourOwn/software/README.md
+  - path: firmware/README.md
     title: Firmware / OSC API reference and operation
+  - path: software/README.md
+    title: RheoData notes (download, pairing, and REP start are TODO)
 
 software:
-  - path: BuildYourOwn/software/2P1V_Adafruit
-    title: ESP32 rheometer firmware (Arduino/C++)
+  - path: firmware/2P1V_Adafruit
+    title: ESP32 rheometer firmware (Arduino/C++), shared by the DIY build, the PCB, and the portable version
 
 # Real documentation pages. TODO-only pages are not listed.
 documentation:

@@ -14,8 +14,17 @@ From the build guide:
 
 - Leave micro-USB and the 12 V adapter disconnected while connecting electronics and tubing.
 - Leave the 12 V adapter unplugged until the Step 04 ground and motor-power checks.
-- Power the ESP32 via micro-USB. Never back-feed 12 V into it.
+- Power the ESP32 via micro-USB for upload and for the Step 04 test. Never back-feed 12 V into it.
+- After upload, USB may be disconnected.
 - With the firmware at safe idle, plug in the 12 V adapter while watching for unexpected pump/valve movement, excessive current draw, or heat. Disconnect immediately if any appears.
+
+Everyday wall power for the DIY build and for the PCB is that 12 V plug.
+
+## Portable battery
+
+Portable power for the SparkFun ESP32 Thing Plus is a single-cell LiPo on its JST connector. The vendored schematic says V_BATT should be a single-cell LiPo, 4.2 V maximum. The graphical datasheet labels that connector "JST Connector for single cell LiPo" and says VBAT is direct to the battery and the charger.
+
+TODO: the maintainer said 3–5 V for this battery. The datasheet maximum is 4.2 V. Confirm before using another voltage.
 
 ## Soldering
 

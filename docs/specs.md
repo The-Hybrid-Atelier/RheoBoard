@@ -2,7 +2,7 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [build guide](../BuildYourOwn/README.md), the [print notes](../BuildYourOwn/cad/encloser/README.md), and the [firmware reference](../BuildYourOwn/software/README.md).
+Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [build guide](../BuildYourOwn/README.md), the [print notes](../BuildYourOwn/cad/encloser/README.md), and the [firmware reference](../firmware/README.md).
 
 ## System
 
@@ -25,8 +25,9 @@ From the [print notes](../BuildYourOwn/cad/encloser/README.md):
 - Placement, from the renders: the two pumps stand upright in printed holders, with the valve
   between them and the L298N drivers behind the pumps
 
-TODO: fastening hardware, overall assembled size, and placement of the MPRLS, seesaw, ESP32, and
-Button.
+Fasteners are 4 mm zip ties. A count is not stated. TODO: overall assembled size, and placement of
+the MPRLS, seesaw, ESP32, and Button. Those board positions stay open until the enclosure CAD is
+updated. The files stay in [`BuildYourOwn/cad/encloser/`](../BuildYourOwn/cad/encloser/).
 
 Component sizes, from the bill of materials and the component datasheets:
 

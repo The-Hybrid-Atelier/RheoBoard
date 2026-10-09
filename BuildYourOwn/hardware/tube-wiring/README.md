@@ -7,8 +7,8 @@ License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
 <a href="tube-connection.png"><img src="tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
-Tubing: **3 mm ID silicone** ([Adafruit 4664](https://www.adafruit.com/product/4664) or
-equivalent).
+Tubing: [Adafruit 4661](https://www.adafruit.com/product/4661), 1 m silicone, 3 mm ID, 5 mm OD,
+for air only. TODO: length of each run.
 
 ## Components
 
@@ -49,7 +49,7 @@ The tube paths change with the firmware phases:
 4. **Relax** — both pumps stop.
 
 Timing, controls, and parameter defaults are documented in
-[`../../software/README.md`](../../software/README.md).
+[`../../../firmware/README.md`](../../../firmware/README.md).
 
 ## Diagram source
 

@@ -15,5 +15,7 @@ Version 2 uses a 3D-printed panel inside a 3D-printed enclosure. The files and p
 From the renders: the two pumps stand upright in printed holders, with the valve between them and
 the L298N drivers behind the pumps.
 
-TODO: placement of the MPRLS, seesaw, ESP32, and Button on the printed panel, and a placement
-diagram. TODO: describe `encloser_pic3.jpg`.
+Fasteners are 4 mm zip ties. A count is not stated. TODO: placement of the MPRLS, seesaw, ESP32,
+and Button on the printed panel, and a placement diagram. Those board positions stay open until
+the enclosure CAD is updated. The files stay in
+[`BuildYourOwn/cad/encloser/`](../BuildYourOwn/cad/encloser/). TODO: describe `encloser_pic3.jpg`.
