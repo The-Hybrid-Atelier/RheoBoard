@@ -1,6 +1,6 @@
 # Parts to 3D print
 
-Print files, sizes, and likely roles are on the [Parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-3D-print) wiki page. Folder notes are [`../BuildYourOwn/cad/encloser/README.md`](../BuildYourOwn/cad/encloser/README.md) and [`../BuildYourOwn/cad/connector/README.md`](../BuildYourOwn/cad/connector/README.md).
+Print files, sizes, and likely roles are on the [Parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-3D-print) wiki page. The files are in `BuildYourOwn/cad/encloser/` and `BuildYourOwn/cad/connector/`.
 
 Open gaps:
 

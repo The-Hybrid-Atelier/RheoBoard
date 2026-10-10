@@ -2,21 +2,9 @@
 
 **Entry point:** `2P1V_Adafruit/2P1V_Adafruit.ino`. Arduino requires the sketch folder name to match the `.ino` file. The sketch file and BLE device name are `2P1V_Adafruit`.
 
-This firmware is shared by the DIY build, the PCB, and the portable version. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. Assembly instructions Step 03 is that same install. RheoData notes are in `../software/README.md`. Download, pairing, the connected indicator, and how to start and name a REP stay TODO in that file.
+This firmware is shared by the DIY build, the PCB, and the portable version. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
 
-Firmware is MIT-licensed; the license notice and full text are in the repository-root `../../LICENSE`.
-
-## Toolchain
-
-The Code page and Step 03 name Arduino IDE 2.x, board **SparkFun ESP32 Thing Plus**, the Espressif `esp32` boards package (`https://espressif.github.io/arduino-esp32/package_esp32_index.json`), baud 115200, and micro-USB upload.
-
-- A plain ESP32-WROOM-32D/E (not S2/S3) can use the generic **ESP32 Dev Module** board.
-- Some core versions document `https://dl.espressif.com/dl/package_esp32_index.json` instead. Use whichever that core version documents.
-- ThingPlusBLEOSC is not on Library Manager. ESP32 BLE Arduino is usually bundled with the `esp32` core.
-- Everyday wall power for the DIY build and for the PCB is a 12 V plug. Pump and valve current does not go through the ESP32 5 V pin.
-- The portable battery connector is schematic V_BATT in `BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf` (4.2 V maximum).
-
-Qwiic button: 1-click = REP, 2-click = latched vacuum, hold = momentary pressure. Builder workflow: Assembly instructions Step 05.
+Firmware is MIT-licensed. The license notice and full text are in [`../../LICENSE`](../../LICENSE).
 
 ## Firmware pin map
 
@@ -33,7 +21,7 @@ The firmware expects these I2C addresses:
 | `4` | `VALVE1_EN` | Reserved for L298N #2 `ENA`; physically NC | digital |
 | `5` | `VALVE2_EN` | L298N #2 `ENB` — the only valve driven | digital |
 
-These constants are defined in `2P1V_Adafruit/PneumaticSystem.h`. Physical connections and power rules are maintained in `BuildYourOwn/hardware/electronic-wiring/README.md`.
+These constants are defined in `2P1V_Adafruit/PneumaticSystem.h`. Physical connections are in `BuildYourOwn/hardware/electronic-wiring/` and on the Assembly instructions page.
 
 ## Control API
 

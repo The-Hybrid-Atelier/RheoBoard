@@ -1,12 +1,12 @@
 # Tube wiring
 
-This simple rheometer uses pneumatic connections for 2 pumps, 1 switched-port valve, the pressure sensor, and the chamber/nozzle. Step 02 of the [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions) page summarizes these ports. This file is the port table for that step.
+This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one switched-port valve, the pressure sensor, and the chamber or nozzle. Step 02 of the [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions) page summarizes these ports.
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
-<a href="tube-connection.png"><img src="tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
+![Pneumatic tube connection diagram](tube-connection.png)
 
-Tubing: Adafruit 4661, 1 m silicone, 3 mm ID, 5 mm OD, for air only. TODO: length of each run. TODO: a tool to cut the silicone tubing is not named in the repository.
+Tubing is Adafruit 4661, 1 m silicone, 3 mm ID, 5 mm OD, for air only. The length of each run is not stated. A tool to cut the silicone tubing is not named in the repository.
 
 ## Components
 
@@ -18,7 +18,7 @@ Tubing: Adafruit 4661, 1 m silicone, 3 mm ID, 5 mm OD, for air only. TODO: lengt
 | Sensor | SparkFun Qwiic MicroPressure (MPRLS) | Teed into shared line |
 | Output | Chamber / nozzle | Bottom of shared line — "the line we sense" |
 
-TODO (maintainer): confirm whether the chamber / nozzle is the printed sensing tube in `BuildYourOwn/cad/connector/`. TODO: how the sensing tube, small connector, and FTLLB220-6005 fitting join the shared line; the tee part; and the length of each tube run.
+It is not confirmed whether the chamber or nozzle is the printed sensing tube in `BuildYourOwn/cad/connector/`. How the sensing tube, the small connector, and the FTLLB220-6005 fitting join the shared line, which tee to use, and the length of each tube run are not written yet.
 
 ### Pump note (4699)
 
@@ -42,8 +42,8 @@ The tube paths change with the firmware phases:
 3. **Extrude** — VALVE2 ON, PUMP2 on (pressure, with optional ramp).
 4. **Relax** — both pumps stop.
 
-Timing, controls, and parameter defaults are documented in `code/firmware/README.md`.
+Timing, controls, and parameter defaults are in `code/firmware/README.md`.
 
 ## Diagram source
 
-`tube-connection.png` is a photo/pictogram-style diagram and has no editable generator script yet.
+`tube-connection.png` is a photo-style diagram and has no editable generator script yet.
