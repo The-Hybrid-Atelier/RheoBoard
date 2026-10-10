@@ -1,5 +1,7 @@
 # RheoBoard v1.05 review — 2026-10-09
 
+Filename update, 2026-10-10: open [RheoBoard_v1.05.kicad_pro](../RheoboardV1/RheoBoard_v1.05.kicad_pro). Main schematic/PCB names now match that project. [Rename validation](Rename_2026-10-10/validation.json) proves all schematic netlists and all PCB/library bytes were preserved; native ERC/DRC results are unchanged. Earlier source paths and hashes below describe their original checkpoints. The current release manifest records the new paths and source hashes. This is a filename change, not a new hardware qualification.
+
 **Latest change: J18 removed; fresh ERC and saved/refilled DRC pass with zero errors, warnings, unconnected items or parity findings. J3 remains the local debug header and J9 remains the Qwiic master port. The maintainer accepted the U5 startup/reset and valve-rail voltage-margin risks for this prototype on 2026-10-09 and requested no further action on them. Supplier acceptance and physical qualification remain open.**
 
 The [J18 removal verification](Remove_J18_2026-10-09/README.md) binds the current saved sources and regenerated manufacturing outputs. It confirms 165 components, 413 schematic pin nodes, 146 fitted parts, 140 SMT parts and six manually fitted parts. All retained component values, pad geometry, placements and pin connections are unchanged. The earlier full-board review below remains supporting evidence for the retained circuitry; its pre-removal source hashes and counts are historical.

@@ -1,0 +1,14 @@
+[
+  {
+    "from": "RheoBoard_PCB/RheoBoard_v1/Footprint/UCC27511A-Q1 .kicad_mod",
+    "to": "RheoBoard_PCB/RheoBoard_v1/Footprint/DBV0006A_N.kicad_mod",
+    "sha256": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d",
+    "content_changed": false
+  },
+  {
+    "from": "RheoBoard_PCB/RheoBoard_v1.05/Footprint/UCC27511A-Q1 .kicad_mod",
+    "to": "RheoBoard_PCB/RheoBoard_v1.05/Footprint/DBV0006A_N.kicad_mod",
+    "sha256": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d",
+    "content_changed": false
+  }
+]

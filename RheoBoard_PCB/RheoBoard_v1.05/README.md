@@ -6,7 +6,9 @@ This is an untested hardware revision. Supplier placement review, final order se
 
 The latest full recheck found a pressure-sensor startup/reset risk at U5. Resolve that requirement before production approval; see the [current finding and checks](Verification/REVIEW_REPORT.md).
 
-Open [the KiCad project](RheoboardV1/1.kicad_pro). Its main schematic and PCB are both named `1`; the other schematic files beside them are retained standalone block references or stubs, not the project hierarchy.
+Open [the KiCad project](RheoboardV1/RheoBoard_v1.05.kicad_pro). Its main schematic and PCB are both named `RheoBoard_v1.05`; the other schematic files beside them are retained standalone block references or stubs, not the project hierarchy.
+
+The 2026-10-10 filename cleanup preserved every net, component reference and value, PCB byte and footprint geometry in both revisions. Main schematic/project references were updated through Konnect. v1.05 still has zero ERC/DRC findings under its existing rules; v1 retains its pre-existing ERC findings. See the [rename validation](Verification/Rename_2026-10-10/validation.json). Manufacturing copper, drills, BOM and placement contents are unchanged.
 
 The redundant J18 service header has been removed. **J3 remains the four-pin local debug header**, and J9 remains the Qwiic master port. The updated schematic and refilled PCB pass ERC/DRC with zero errors or warnings; BOM, drawings and fabrication files match this change. See the [removal verification](Verification/Remove_J18_2026-10-09/README.md).
 

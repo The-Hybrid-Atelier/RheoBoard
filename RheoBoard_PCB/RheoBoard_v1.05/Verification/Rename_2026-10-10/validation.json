@@ -1,0 +1,348 @@
+{
+  "v1": {
+    "schematics": {
+      "RheoBoard_v1": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 149,
+        "net_count": 79
+      },
+      "1_Power": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 45,
+        "net_count": 22
+      },
+      "2_MCU": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 45,
+        "net_count": 41
+      },
+      "3_MICROPROCESSOR": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 0,
+        "net_count": 0
+      },
+      "3_PERIPHERAL": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 48,
+        "net_count": 24
+      },
+      "4_MPRLS0025PA00001A": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 7,
+        "net_count": 10
+      },
+      "5_Switch TCA9534": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 12,
+        "net_count": 6
+      },
+      "Switch TCA9534": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 0,
+        "net_count": 0
+      }
+    },
+    "checks": {
+      "erc": {
+        "unchanged": true,
+        "severity_counts": {
+          "error": 18,
+          "warning": 775
+        },
+        "violations": 793
+      },
+      "drc": {
+        "unchanged": true,
+        "severity_counts": {},
+        "violations": 0,
+        "unconnected": 0,
+        "schematic_parity": 0,
+        "ignored_checks": [
+          {
+            "description": "Courtyards overlap",
+            "key": "courtyards_overlap"
+          },
+          {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+          },
+          {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+          },
+          {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+          },
+          {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+          },
+          {
+            "description": "Silkscreen clipped by solder mask",
+            "key": "silk_over_copper"
+          },
+          {
+            "description": "Silkscreen clipped by board edge",
+            "key": "silk_edge_clearance"
+          },
+          {
+            "description": "Text height out of range",
+            "key": "text_height"
+          },
+          {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+          },
+          {
+            "description": "Footprint not found in libraries",
+            "key": "lib_footprint_issues"
+          },
+          {
+            "description": "Footprint doesn't match copy in library",
+            "key": "lib_footprint_mismatch"
+          }
+        ]
+      }
+    },
+    "board_and_library_bytes_unchanged": true,
+    "schematic_edits_only_project_instance_names": true,
+    "renamed_footprint_metadata_and_pads_unchanged": true,
+    "source_sha256": {
+      "Footprint/AO3400A.kicad_mod": "a30b81d034a77f8f85fb9e6a5505c3255bd60c7fbc3a08a32e482c1b5342f1cf",
+      "Footprint/4.7uH_2A.kicad_mod": "1f6b2771db11bb0aa21eaa7b49a4be29ba9d2d2bce200853b08ae4eebf04e9d2",
+      "Footprint/TPS563203DRLR.kicad_mod": "85f8274eae11b49e7dd500fedc64c799ebefb70a7b42d30b0b3406e5912cc875",
+      "Footprint/PCA9685.kicad_mod": "f8bf1efb2dde5e5e893c860db8135e9ea2f4b243c1c7e7bddfffb52e2e6bd64a",
+      "Footprint/SS34.kicad_mod": "3bf2f00384daa523543c6c9410292afcd3442871ce90415ad696f993bfdf0ef8",
+      "Footprint/DBV0006A_N.kicad_mod": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d",
+      "Footprint/PJ-082BH.kicad_mod": "4ba1bec1e965965f9a3b07b2a8f96838e03ca41207b0fff5fcba257f3d55427b",
+      "Footprint/VALVE.kicad_mod": "dc575897b26eef874e5cf55cbd07abb6b589d9d10e232ea7c63066dc044b8334",
+      "Footprint/PUMP.kicad_mod": "78b236575f268b291d3d560d16eb536aa389189d635cb4fa58b1d945f046a48b",
+      "Footprint/MPRLS0025PA00001A.kicad_mod": "ae24016bcb31b9b41f0edf5028137968d99d35870edc8cab2164d8561b3227e8",
+      "Footprint/TCA9534APWR.kicad_mod": "091525a0ccad5afc1cb2422d5d41c1508b16944ee0c8be5e6f157662dda830e4",
+      "Symbol/TCA9534APWR.kicad_sym": "c3f8ab4b4294b90fcdea372965c710e60f96c3f29502fa8b47ca469413ea5671",
+      "Symbol/MPRLS0025PA00001A.kicad_sym": "befc5d54c01166b0ba4ceca8295b843c6da3da9328f62b95ceae4323fad10b71",
+      "Symbol/UCC27511A-Q1 .kicad_sym": "6385d5d471cc95664700fc173a80d0bc16b7e0a01c148b171be479bc5c7f397b",
+      "Symbol/IAUCP04P4L020.kicad_sym": "a9176df1a5cf539d3057b4103ad16ad428c4045615c77561e1a26db99e7b6e1d",
+      "Symbol/PJ-082BH.kicad_sym": "92f9b2692d577df0685ae0a87eb8b68c25a589e80628e7e4a6c34982eed90577",
+      "Symbol/Fuse_Khach.kicad_sym": "b5b334796a0566bc12ee09e829e1e83024fd6a1486acab59f4bf43c56717250d",
+      "Symbol/PCA9685.kicad_sym": "ee9e131237f669391d424d6310befec3ee00a3c380de5ae3849e718f2c353566",
+      "Symbol/TPS563203DRLR.kicad_sym": "ed2733c0402f4cf434a2ae06965105394f4238cbd9dfdfafc43897d4a4ea34d8",
+      "Symbol/4.7uH_2A.kicad_sym": "0d17d6596dc8bb2aa4629169b8d4aab07454f1504febee65b10f69f300cf8319",
+      "RheoboardV1/3_PERIPHERAL.kicad_sch": "03e36edda689a9d404e57980cb256976b24eedf696349a7cd76ea869a88c3bd0",
+      "RheoboardV1/5_Switch TCA9534.kicad_sch": "fab03c88ce469497fd47bb63a59c4d8439ea83ac28a2c627944f53409650d55a",
+      "RheoboardV1/Switch TCA9534.kicad_sch": "7ff6cd4e10d966d5032b24e56d24c02bfcbe59c874b880453a2947087599846e",
+      "RheoboardV1/1_Power.kicad_sch": "4f8ed24ad4dd35415ce2a5a086f8708f583b1d1af6545bded9503ad28052a95b",
+      "RheoboardV1/RheoBoard_v1.kicad_pro": "d29964d0b03c851b90fd8eb643648252a264607355823e37c7a508fc35501e63",
+      "RheoboardV1/RheoBoard_v1.kicad_sch": "9e3f18a4f0bd85b427c80a7b3e3ef170385958296de0f1efb973a65bb2fee970",
+      "RheoboardV1/2_MCU.kicad_sch": "fb6856044eccc58d14f91da8434d9a8af4a4b27080d7d6b0696fbb248a1770e2",
+      "RheoboardV1/RheoBoard_v1.kicad_pcb": "deea7461e1bf7eafa668f80cd3dbc1cf8e294515e2115ec3becb265ae07f8d17",
+      "RheoboardV1/3_MICROPROCESSOR.kicad_sch": "36b1baeee3df39cd19267c0a1c1c34a4a5c10f83641f7af5903790ca88e04cdf",
+      "RheoboardV1/4_MPRLS0025PA00001A.kicad_sch": "08afd4da6688c164a228868469f14ecf68da8eaf827c8a61ac5088e8684a88bd"
+    }
+  },
+  "v1.05": {
+    "schematics": {
+      "RheoBoard_v1.05": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 165,
+        "net_count": 89
+      },
+      "1_Power": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 45,
+        "net_count": 22
+      },
+      "2_MCU": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 45,
+        "net_count": 41
+      },
+      "3_MICROPROCESSOR": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 0,
+        "net_count": 0
+      },
+      "3_PERIPHERAL": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 48,
+        "net_count": 24
+      },
+      "4_MPRLS0025PA00001A": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 7,
+        "net_count": 10
+      },
+      "5_Switch TCA9534": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 12,
+        "net_count": 6
+      },
+      "Switch TCA9534": {
+        "components": true,
+        "libparts": true,
+        "libraries": true,
+        "nets": true,
+        "component_count": 0,
+        "net_count": 0
+      }
+    },
+    "checks": {
+      "erc": {
+        "unchanged": true,
+        "severity_counts": {},
+        "violations": 0
+      },
+      "drc": {
+        "unchanged": true,
+        "severity_counts": {},
+        "violations": 0,
+        "unconnected": 0,
+        "schematic_parity": 0,
+        "ignored_checks": [
+          {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+          },
+          {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+          },
+          {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+          }
+        ]
+      }
+    },
+    "board_and_library_bytes_unchanged": true,
+    "schematic_edits_only_project_instance_names": true,
+    "renamed_footprint_metadata_and_pads_unchanged": true,
+    "source_sha256": {
+      "Footprint/TI_RPW0010A_VQFN-HR_2x2mm.kicad_mod": "a3f1d5c75aed15fcb3ace734f9d9e8b826be122530734bca8bbbcf9dd505667a",
+      "Footprint/AO3400A.kicad_mod": "6ed508c535915a9ee26a0e826fd58a97ec480b1ed8402a53c34355a55572fbc5",
+      "Footprint/4.7uH_2A.kicad_mod": "1f6b2771db11bb0aa21eaa7b49a4be29ba9d2d2bce200853b08ae4eebf04e9d2",
+      "Footprint/TPS563203DRLR.kicad_mod": "f76b790f3fd9bbb0dba9b4def2883f3343e5cfb0310c72183b2ac0c400a762a6",
+      "Footprint/PCA9685.kicad_mod": "e597be95eed0715738a71187de20fbc20768412cb13c124ecf9d8833f4c3b2d1",
+      "Footprint/TI_DGK0008A_VSSOP_3x3mm_P0.65mm.kicad_mod": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4",
+      "Footprint/TestPoint_Plated_D1.0_Drill0.5.kicad_mod": "34c4f3de7605056f2bf10d5328c7d5c45315801f5757bdb5b5068f3afd108a9c",
+      "Footprint/SS34.kicad_mod": "3bf2f00384daa523543c6c9410292afcd3442871ce90415ad696f993bfdf0ef8",
+      "Footprint/Fuse_JDT_JFC1032TS_10.25x3.2mm.kicad_mod": "0ffefc8fb07cd2a3b41c0d2807097fd164c74c844359525679776bbf1c704f77",
+      "Footprint/VALVE_v105.kicad_mod": "b393f8f053f28403c55bd5933943e21374014df46559e1d3d2d3dfa3cbde9990",
+      "Footprint/DBV0006A_N.kicad_mod": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d",
+      "Footprint/PJ-082BH.kicad_mod": "a72fd06343d3ba8a5535cd05c380be23beca38fcd2424490dab950cf33d2267b",
+      "Footprint/VALVE.kicad_mod": "dc575897b26eef874e5cf55cbd07abb6b589d9d10e232ea7c63066dc044b8334",
+      "Footprint/Tactile_Switch_4pad.kicad_mod": "6bb348d80c22ac7dcefa1b6dc245362c8fab9a99f39bb3b43a79a0aea130779f",
+      "Footprint/PUMP.kicad_mod": "8d65de5c70b3208751639c05513d23349a9b49e8b210a5c51d3b2dc95a8ead5d",
+      "Footprint/MPRLS0025PA00001A.kicad_mod": "a8584f44f47026344868d2106e66e33aa0f69e26fdaec418e96f8a6f55b128c0",
+      "Footprint/TCA9534APWR.kicad_mod": "36b0fa78c91561f6b5dabbc5cc0a2034b7755534c95e987a22af36f7b25dba7b",
+      "Symbol/TCA9534APWR.kicad_sym": "c3f8ab4b4294b90fcdea372965c710e60f96c3f29502fa8b47ca469413ea5671",
+      "Symbol/MPRLS0025PA00001A.kicad_sym": "befc5d54c01166b0ba4ceca8295b843c6da3da9328f62b95ceae4323fad10b71",
+      "Symbol/UCC27511A-Q1 .kicad_sym": "6385d5d471cc95664700fc173a80d0bc16b7e0a01c148b171be479bc5c7f397b",
+      "Symbol/IAUCP04P4L020.kicad_sym": "a9176df1a5cf539d3057b4103ad16ad428c4045615c77561e1a26db99e7b6e1d",
+      "Symbol/PJ-082BH.kicad_sym": "92f9b2692d577df0685ae0a87eb8b68c25a589e80628e7e4a6c34982eed90577",
+      "Symbol/Fuse_Khach.kicad_sym": "b5b334796a0566bc12ee09e829e1e83024fd6a1486acab59f4bf43c56717250d",
+      "Symbol/PCA9685.kicad_sym": "ee9e131237f669391d424d6310befec3ee00a3c380de5ae3849e718f2c353566",
+      "Symbol/RheoBoard_Fixes.kicad_sym": "b33dfaad79f82e9b1cc916b95bea25266d5ff4ea4cde5d1dbb89479152a17cfe",
+      "Symbol/TPS563203DRLR.kicad_sym": "ed2733c0402f4cf434a2ae06965105394f4238cbd9dfdfafc43897d4a4ea34d8",
+      "Symbol/4.7uH_2A.kicad_sym": "0d17d6596dc8bb2aa4629169b8d4aab07454f1504febee65b10f69f300cf8319",
+      "RheoboardV1/3_PERIPHERAL.kicad_sch": "ff9b7659e593ca82cbcbb4912c4cf0e8c24e810b8ee63dcdb21faac5ecc34522",
+      "RheoboardV1/5_Switch TCA9534.kicad_sch": "7989922e5f4af6bfce74abfc368af8e31f42a5cdc94af7794e067c5dbf57b7a7",
+      "RheoboardV1/Switch TCA9534.kicad_sch": "7ff6cd4e10d966d5032b24e56d24c02bfcbe59c874b880453a2947087599846e",
+      "RheoboardV1/1_Power.kicad_sch": "c1ff36fb1685f53ba3c27a57f396a40c329962c96deee35758550eb6826cc06f",
+      "RheoboardV1/RheoBoard_v1.05.kicad_sch": "bb174b88bee7400bfb9abbe4036084351deb70683c2cba743e534b6feb8dd584",
+      "RheoboardV1/fp-lib-table": "f49ed2595a272922f8aa84b2670346cae9677f0610aae3654585d6594b332dd8",
+      "RheoboardV1/RheoBoard_v1.05.kicad_pro": "d970ea23eac5380fef1208e3b0a7624a9c9271b5c6865d82d554ca6fefb4dfc6",
+      "RheoboardV1/2_MCU.kicad_sch": "7e63f7547058d03c061be3e5d6295899dfca3c19cf85a4d6214d17e0616be0be",
+      "RheoboardV1/3_MICROPROCESSOR.kicad_sch": "36b1baeee3df39cd19267c0a1c1c34a4a5c10f83641f7af5903790ca88e04cdf",
+      "RheoboardV1/4_MPRLS0025PA00001A.kicad_sch": "855f3f2caf16aa571159689fb7c610180492a7f2e6e5f44c8ee0cec01bbcb8df",
+      "RheoboardV1/sym-lib-table": "2be086cecce4337a1c1342297b71ec8bd0d3c484b3c376158b778a68b3c5fa26",
+      "RheoboardV1/RheoBoard_v1.05.kicad_pcb": "d1d865dddc365c0cd161c1140b6fab173875163d59a5db6ba88a2da7e5a4fa0b"
+    }
+  },
+  "project_config_edits": [
+    {
+      "version": "v1",
+      "field": "/meta/filename",
+      "before": "1.kicad_pro",
+      "after": "RheoBoard_v1.kicad_pro"
+    },
+    {
+      "version": "v1",
+      "field": "/schematic/top_level_sheets/0/filename",
+      "before": "1.kicad_sch",
+      "after": "RheoBoard_v1.kicad_sch"
+    },
+    {
+      "version": "v1",
+      "field": "/schematic/used_designators",
+      "before": "R1-84,H1-4,JP1-13,J1-18,L1-6,#PWR1-168,D1-38,Q1-18,U1-15,C1-75,SW1-4,F1-2,TP1-16",
+      "after": "JP1-13,J1-18,L1-6,H1-4,R1-84,#PWR1-168,D1-38,Q1-18,SW1-4,U1-15,C1-75,TP1-16,F1-2"
+    },
+    {
+      "version": "v1.05",
+      "field": "/meta/filename",
+      "before": "1.kicad_pro",
+      "after": "RheoBoard_v1.05.kicad_pro"
+    },
+    {
+      "version": "v1.05",
+      "field": "/schematic/top_level_sheets/0/filename",
+      "before": "1.kicad_sch",
+      "after": "RheoBoard_v1.05.kicad_sch"
+    }
+  ],
+  "comparison_notes": [
+    "Only exported main Sheetfile filenames were normalized when comparing component records.",
+    "The native v1 same_local_global_label warning for VALVE1_IN selected a different equivalent label occurrence; type, severity, description and label name are unchanged. Other diagnostic item identities and settings are unchanged.",
+    "Saved-board DRC was run before and after with schematic parity and all severities. Existing rule exclusions/ignored checks were preserved; no zones were refilled or board files saved by this rename task.",
+    "Konnect ERC ownership detection refused the legacy multi-drawing folder before execution; native KiCad CLI ERC was used for both before and after instead.",
+    "Both DBV0006A_N footprint files are unused by these exported schematics; there are no old filename references to retarget.",
+    "Opening v1 in the schematic editor reordered the cached used_designators string in its project configuration. The designator set is identical; all actual schematic references and board/library bytes are unchanged."
+  ]
+}

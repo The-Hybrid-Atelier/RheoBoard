@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-09
+date-updated: 2026-10-10
 # OSHWA certified version 1 on 2026-10-08, UID US002865: https://certification.oshwa.org/us002865.html
 # Version 2 (this manifest) is not certified yet.
 # (OKH 1.0 has no certification field.)
@@ -88,11 +88,11 @@ design-files:
     title: Printable sensing-tube mesh exported from sensing_tube.scad (physical fit required)
   - path: BuildYourOwn/cad/connector/connector_small.stl
     title: Small connector mesh export; editable source not yet published (physical fit required)
-  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/1.kicad_pro
+  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro
     title: KiCad 10 project for the custom PCB prototype
-  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/1.kicad_sch
+  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch
     title: KiCad root schematic for the custom PCB
-  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/1.kicad_pcb
+  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pcb
     title: KiCad board layout for the custom PCB
 
 schematics:

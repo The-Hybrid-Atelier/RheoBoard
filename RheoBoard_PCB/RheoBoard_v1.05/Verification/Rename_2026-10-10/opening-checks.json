@@ -1,0 +1,16 @@
+{
+  "v1": {
+    "project_manager_opened": true,
+    "main_schematic_opened": true,
+    "pcb_native_load_and_svg_export": true,
+    "pcb_desktop_open_observed": false
+  },
+  "v1.05": {
+    "project_manager_opened": true,
+    "main_schematic_opened": true,
+    "pcb_native_load_and_svg_export": true,
+    "pcb_desktop_open_observed": true
+  },
+  "load_error_dialogs_observed": false,
+  "cad_saved_from_ui": false
+}

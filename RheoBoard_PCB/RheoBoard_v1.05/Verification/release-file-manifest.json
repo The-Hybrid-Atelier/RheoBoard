@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-09",
-  "review_verdict": "J18 removal verified: fresh saved/refilled DRC and ERC clean; all retained circuit nets and placements preserved. Maintainer-accepted U5 startup/reset and valve-margin risks unchanged. Supplier acceptance and physical qualification remain open.",
-  "scope": "Current v1.05 after removal of J18: sources, libraries/models, BOM, fabrication files and review evidence. Remove_J18_2026-10-09 binds the current change and exports. Thorough_2026-10-09, Qwiic_2026-10-09 and Comparison_2026-10-09 are retained pre-removal checkpoints; older hashes/counts are historical. Excludes original archive, UI session files and this manifest.",
+  "date": "2026-10-10",
+  "review_verdict": "Filename-only cleanup verified for both revisions: schematic components/nets preserved, PCB and library bytes unchanged, no new ERC/DRC findings. v1.05 remains ERC/DRC clean under its existing configuration. Accepted hardware risks and supplier/physical qualification remain unchanged.",
+  "scope": "Current v1.05 after J18 removal and filename cleanup. Rename_2026-10-10 binds the new paths and source hashes; manufacturing board geometry, BOM and placements are unchanged. Older evidence retains the filenames and hashes observed at its original checkpoint. Excludes original archive, UI session files and this manifest.",
   "files": [
     {
       "path": "3D/3518P.STEP",
@@ -114,6 +114,11 @@
       "sha256": "6ed508c535915a9ee26a0e826fd58a97ec480b1ed8402a53c34355a55572fbc5"
     },
     {
+      "path": "Footprint/DBV0006A_N.kicad_mod",
+      "bytes": 10177,
+      "sha256": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d"
+    },
+    {
       "path": "Footprint/Fuse_JDT_JFC1032TS_10.25x3.2mm.kicad_mod",
       "bytes": 1291,
       "sha256": "0ffefc8fb07cd2a3b41c0d2807097fd164c74c844359525679776bbf1c704f77"
@@ -172,11 +177,6 @@
       "path": "Footprint/TestPoint_Plated_D1.0_Drill0.5.kicad_mod",
       "bytes": 1146,
       "sha256": "34c4f3de7605056f2bf10d5328c7d5c45315801f5757bdb5b5068f3afd108a9c"
-    },
-    {
-      "path": "Footprint/UCC27511A-Q1 .kicad_mod",
-      "bytes": 10177,
-      "sha256": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d"
     },
     {
       "path": "Footprint/VALVE.kicad_mod",
@@ -295,8 +295,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2433,
-      "sha256": "ab81f2a7f1007653d021f04fc3a64d3a5bc74bb74cb8a2713a6ec059387704b2"
+      "bytes": 2916,
+      "sha256": "4e3ed968b0f68a42a27504aee247aa4b72adeff694c6bc7f2599981447abf898"
     },
     {
       "path": "REVISION_NOTES.md",
@@ -304,29 +304,14 @@
       "sha256": "6dad082641f0c5348b98af60c43f104382757c594ea5f27db9e46a12d022c105"
     },
     {
-      "path": "RheoboardV1/1.kicad_pcb",
-      "bytes": 2057985,
-      "sha256": "d1d865dddc365c0cd161c1140b6fab173875163d59a5db6ba88a2da7e5a4fa0b"
-    },
-    {
-      "path": "RheoboardV1/1.kicad_pro",
-      "bytes": 31104,
-      "sha256": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085"
-    },
-    {
-      "path": "RheoboardV1/1.kicad_sch",
-      "bytes": 3001513,
-      "sha256": "4398b7053aca3734680662892f8756fa263881cc472572411321eb455d4c5c77"
-    },
-    {
       "path": "RheoboardV1/1_Power.kicad_sch",
-      "bytes": 160708,
-      "sha256": "32750184994dd3f2f9d45c39d0e4a7cb346c8a89b2657a0c304aa45fd7cfcb8f"
+      "bytes": 161618,
+      "sha256": "c1ff36fb1685f53ba3c27a57f396a40c329962c96deee35758550eb6826cc06f"
     },
     {
       "path": "RheoboardV1/2_MCU.kicad_sch",
-      "bytes": 204421,
-      "sha256": "4ffc6f7420deff1e1b28f17951ab2e2c432f7077954d6aab88528977ac5e69bc"
+      "bytes": 205569,
+      "sha256": "7e63f7547058d03c061be3e5d6295899dfca3c19cf85a4d6214d17e0616be0be"
     },
     {
       "path": "RheoboardV1/3_MICROPROCESSOR.kicad_sch",
@@ -335,18 +320,33 @@
     },
     {
       "path": "RheoboardV1/3_PERIPHERAL.kicad_sch",
-      "bytes": 2541384,
-      "sha256": "5ab94a47a42598709a4a463fde86acf823a38330a8feacac76fbfe8c42b8bed9"
+      "bytes": 2542224,
+      "sha256": "ff9b7659e593ca82cbcbb4912c4cf0e8c24e810b8ee63dcdb21faac5ecc34522"
     },
     {
       "path": "RheoboardV1/4_MPRLS0025PA00001A.kicad_sch",
-      "bytes": 42312,
-      "sha256": "19ad9cf81e0a8aa1922d388687cebdd23535d0b3dd8e3317963c7b6dc0d6a7cd"
+      "bytes": 42494,
+      "sha256": "855f3f2caf16aa571159689fb7c610180492a7f2e6e5f44c8ee0cec01bbcb8df"
     },
     {
       "path": "RheoboardV1/5_Switch TCA9534.kicad_sch",
-      "bytes": 57471,
-      "sha256": "944c3f1420334159b94507eb322acd477e41e4d4e565962398ab142e6620056f"
+      "bytes": 57751,
+      "sha256": "7989922e5f4af6bfce74abfc368af8e31f42a5cdc94af7794e067c5dbf57b7a7"
+    },
+    {
+      "path": "RheoboardV1/RheoBoard_v1.05.kicad_pcb",
+      "bytes": 2057985,
+      "sha256": "d1d865dddc365c0cd161c1140b6fab173875163d59a5db6ba88a2da7e5a4fa0b"
+    },
+    {
+      "path": "RheoboardV1/RheoBoard_v1.05.kicad_pro",
+      "bytes": 31132,
+      "sha256": "d970ea23eac5380fef1208e3b0a7624a9c9271b5c6865d82d554ca6fefb4dfc6"
+    },
+    {
+      "path": "RheoboardV1/RheoBoard_v1.05.kicad_sch",
+      "bytes": 3005097,
+      "sha256": "bb174b88bee7400bfb9abbe4036084351deb70683c2cba743e534b6feb8dd584"
     },
     {
       "path": "RheoboardV1/Switch TCA9534.kicad_sch",
@@ -645,8 +645,8 @@
     },
     {
       "path": "Verification/REVIEW_REPORT.md",
-      "bytes": 15872,
-      "sha256": "77727ff65ef60f6e282cd2f19957f8691390c13cdcd8ed4f57b83ef804d8308c"
+      "bytes": 16398,
+      "sha256": "4b6dde3411c5a3a6479a3f60397d1641565db49dc15cda9698f3e032099a53cf"
     },
     {
       "path": "Verification/Recheck_2026-10-09/aggregate-adjudication.json",
@@ -907,6 +907,61 @@
       "path": "Verification/Remove_J18_2026-10-09/workbook-saved-comparison.json",
       "bytes": 204,
       "sha256": "f5f0719505f191a17597b2f1d6c3aea65453524307e8f367b3eead6f029cabc7"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/footprint-filename-renames.json",
+      "bytes": 542,
+      "sha256": "73a1a5d79558ed6a3bbd5e6dc9dbb1f8a830e6e18ee1b567926c1571a76f7926"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/opening-checks.json",
+      "bytes": 413,
+      "sha256": "06a263ddb66db84a84269224605c6fd27a9e3a5d5199ca80fcec7e130e43d35b"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1-after-drc-native.json",
+      "bytes": 1818,
+      "sha256": "16b61ff888f29871a328d6dfce9db53fbdad47e675860ffe18959a031e27b87f"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1-after-erc-native.json",
+      "bytes": 503377,
+      "sha256": "198d097e2c4f0828ea9b580ada193147af95ca9e9cdf09ef344eed5190116bec"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1-before-drc-native.json",
+      "bytes": 1807,
+      "sha256": "641543dbd24e957b34194aef318370aa9750e13463c870c36d0de98f5e90fef1"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1-before-erc-native.json",
+      "bytes": 503366,
+      "sha256": "26f347ec617ff8049ce83e115e345d0afac656916d6c842545996c49ca8fab8e"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1.05-after-drc-native.json",
+      "bytes": 818,
+      "sha256": "68c622c4854b54334354794f4ea81b3d13fe185f2f68704ac9926800b33f9828"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1.05-after-erc-native.json",
+      "bytes": 1009,
+      "sha256": "60d99051449b6f01296dfea0d8eeb796084ca0cc8bf5724e2412e679134aeeb2"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1.05-before-drc-native.json",
+      "bytes": 804,
+      "sha256": "3251b57f0b374096e390893a5fc5082238a9dfdc9cf294931514f6cd751511fb"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/v1.05-before-erc-native.json",
+      "bytes": 995,
+      "sha256": "5aae47b1e1caaf20af855939da8dea75fbc610ab3b1d7386661d441b93e2b8bb"
+    },
+    {
+      "path": "Verification/Rename_2026-10-10/validation.json",
+      "bytes": 15720,
+      "sha256": "ee441150585aac3fc5729649826210d4ad7c3f051d9654b76d717d1afe084e6d"
     },
     {
       "path": "Verification/Thorough_2026-10-09/artifact-review.json",

@@ -9,22 +9,24 @@ License: hardware CERN-OHL-W-2.0 — see [`../LICENSE`](../LICENSE).
 
 ## Open the design
 
-Open [`RheoBoard_v1/RheoboardV1/1.kicad_pro`](RheoBoard_v1/RheoboardV1/1.kicad_pro) in KiCad 10.
+Open [`RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro) in KiCad 10.
 
-- [`1.kicad_sch`](RheoBoard_v1/RheoboardV1/1.kicad_sch) is the root schematic.
-- [`1.kicad_pcb`](RheoBoard_v1/RheoboardV1/1.kicad_pcb) is the board. It is a 1.6 mm, two-copper-layer layout.
+- [`RheoBoard_v1.kicad_sch`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch) is the root schematic.
+- [`RheoBoard_v1.kicad_pcb`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pcb) is the board. It is a 1.6 mm, two-copper-layer layout.
 - Symbol, footprint, and 3D sources sit beside the project in
   [`RheoBoard_v1/Symbol/`](RheoBoard_v1/Symbol/),
   [`RheoBoard_v1/Footprint/`](RheoBoard_v1/Footprint/), and
   [`RheoBoard_v1/3D/`](RheoBoard_v1/3D/).
 
 The other `.kicad_sch` files in `RheoboardV1/` are separate block drawings (power, MCU,
-peripheral, MPRLS, and the TCA9534 switch). They are not hierarchical sheets of `1.kicad_pro`.
+peripheral, MPRLS, and the TCA9534 switch). They are not hierarchical sheets of `RheoBoard_v1.kicad_pro`.
 `3_MICROPROCESSOR.kicad_sch` and `Switch TCA9534.kicad_sch` are empty stubs.
+
+Both projects now use versioned main filenames: `RheoBoard_v1.*` and `RheoBoard_v1.05.*`. The v1.05 project is [here](RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_pro). On 2026-10-10, the project-instance references were renamed with the files; all circuit connections, PCB bytes and footprint geometry were preserved. Both copies of the mismatched `UCC27511A-Q1 .kicad_mod` filename are now `DBV0006A_N.kicad_mod`, matching their existing internal footprint name. Other footprint filenames already match their internal names. [Rename validation](RheoBoard_v1.05/Verification/Rename_2026-10-10/validation.json) covers both versions.
 
 ## Manufacturing files
 
-These outputs match the current KiCad board. Re-export them from `1.kicad_pcb` after any
+These outputs match the current KiCad board. Re-export them from `RheoBoard_v1.kicad_pcb` after any
 layout change.
 
 | Output | Path |

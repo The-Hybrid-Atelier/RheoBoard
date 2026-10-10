@@ -26,7 +26,7 @@ JLCPCB's corrected top placement for the submitted Rheoboard V1 assembly. Order 
 
 Block diagram of that board. 12 V comes in at the top. The ESP32 Thing Plus sits in the center. The pressure sensor and Qwiic devices are on the left. The valve rail is 6 V and the pump rail is 4.5 V.
 
-From that README: this is a separate board from the DIY module build in `BuildYourOwn/`. The firmware in [`code/firmware/`](../code/firmware/) and the RheoData notes in [`code/software/`](../code/software/) apply to the DIY build, this PCB, and the portable version. Open `RheoBoard_v1/RheoboardV1/1.kicad_pro` in KiCad 10. The v1.05 project is `RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1.kicad_pro`. The board is a 1.6 mm, two-copper-layer layout. This board is a prototype. The block diagram is not a full v1.05 qualification.
+From that README: this is a separate board from the DIY module build in `BuildYourOwn/`. The firmware in [`code/firmware/`](../code/firmware/) and the RheoData notes in [`code/software/`](../code/software/) apply to the DIY build, this PCB, and the portable version. Open `RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro` in KiCad 10. The v1.05 project is `RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_pro`. The board is a 1.6 mm, two-copper-layer layout. This board is a prototype. The block diagram is not a full v1.05 qualification.
 
 The wiki PCB path is the bill of materials, then the KiCad design, then firmware and software. Current v1.05 purchasing files are in [`RheoBoard_PCB/RheoBoard_v1.05/BOM/`](../RheoBoard_PCB/RheoBoard_v1.05/BOM/). The original v1 workbook is [`BOM_RheoboardV1_JLCSMT.xlsx`](../RheoBoard_PCB/RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx).
 
