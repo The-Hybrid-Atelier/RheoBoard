@@ -4,21 +4,11 @@ Maintained by [Charlie Vuong](https://charlie-vuong.com) (The Hybrid Atelier at 
 
 <img src="BuildYourOwn/images/teaser.jpg" alt="RheoBoard assembled bench prototype" width="480">
 
-RheoBoard is open hardware for pneumatic retraction-extrusion measurements. RheoBoardOTS - DIY uses
-two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs
-a REP (retraction-extrusion pulse) and streams the pressure trace.
+RheoBoard is open hardware for pneumatic retraction-extrusion measurements. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 
 ## Start here
 
-RheoBoardOTS - DIY is the flat 3D-printed panel: two air pumps, one valve, an ESP32 with BLE, and a
-Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse).
-
-RheoBoard_v1 - PCB is the separate KiCad board. Everyday power is a 12 V plug.
-
-RheoBoardPipette - Portable uses the SparkFun ESP32 Thing Plus and the PRT-26059 battery (nominal
-3.7 V, JST, schematic V_BATT, 4.2 V maximum).
-
-- [RheoBoard wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
+[Wiki Page](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
 
 ## License
 
