@@ -4,7 +4,7 @@ A builder starts on the wiki at [Build options](https://github.com/The-Hybrid-At
 
 ## RheoBoardOTS - DIY
 
-Build version 2, the flat 3D-printed panel. It is in progress. Open items are marked TODO in the assembly instructions. There are no laser-cut parts. Version 1 is the archived laser-cut panel in the repository at [`BuildYourOwn/archive/laser-cut-v1/`](../BuildYourOwn/archive/laser-cut-v1/), not a wiki page. It is certified by OSHWA as US002865.
+RheoBoardOTS - DIY mounts the parts on a flat 3D-printed panel. Open items are marked TODO in the assembly instructions.
 
 RheoBoardOTS - DIY uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 

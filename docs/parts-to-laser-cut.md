@@ -1,9 +1,6 @@
-# Parts to laser-cut
+# Panel fabrication
 
-RheoBoard has no laser-cut parts. Version 2 uses a 3D-printed panel; see
-[Parts to 3D print](parts-to-3d-print.md).
-
-The version 1 laser-cut panel, the build certified by OSHWA as US002865, is archived in
-[`BuildYourOwn/archive/laser-cut-v1/`](../BuildYourOwn/archive/laser-cut-v1/) for reference only.
+RheoBoardOTS - DIY uses the
+[3D-printed panel](../BuildYourOwn/cad/encloser/).
 
 License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

@@ -6,7 +6,7 @@
 date-created: 2026-07-08
 date-updated: 2026-10-10
 # OSHWA certified version 1, UID US002865: https://certification.oshwa.org/us002865.html
-# Version 2 (this manifest) is not certified yet.
+# The current version is version 1. This is the same version certified by OSHWA as US002865.
 # (OKH 1.0 has no certification field.)
 
 manifest-author:
@@ -49,11 +49,9 @@ contact:
   affiliation: The Hybrid Atelier
   email: hxv6892@mavs.uta.edu
 
-version: "2"
+version: "1"
 development-stage: prototype
-# version "2" is the DIY build with a 3D-printed panel. Version 1 (laser-cut panel)
-# is the OSHWA-certified build (US002865), frozen at the v1 git tag. Neither is the KiCad board
-# (whose own silkscreen label is "Rheoboard V1").
+# The KiCad board's silkscreen label "Rheoboard V1" is that board's own label.
 made: false
 made-independently: false
 

@@ -1,6 +1,6 @@
 # Panel layout
 
-Version 2 mounts the parts on a flat 3D-printed panel. Print files and notes are in
+The parts mount on a flat 3D-printed panel. Print files and notes are in
 [`BuildYourOwn/cad/encloser/README.md`](../BuildYourOwn/cad/encloser/README.md). That folder name
 stays `BuildYourOwn/cad/encloser/`. Assembly is
 [Step 01 of the build guide](../BuildYourOwn/README.md#step-01-assemble-the-platform).

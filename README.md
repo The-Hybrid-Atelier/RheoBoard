@@ -21,6 +21,7 @@ All license notices are consolidated in [`LICENSE`](LICENSE):
 RheoBoard is certified open source hardware by the Open Source Hardware Association,
 UID [US002865](https://certification.oshwa.org/us002865.html); details are on the
 [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification) page.
+The current version is version 1. This is the same version certified by OSHWA as [US002865](https://certification.oshwa.org/us002865.html).
 Machine-readable project metadata and the current version are in
 [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 

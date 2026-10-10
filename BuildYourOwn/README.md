@@ -12,18 +12,13 @@ License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
 ## Overview
 
 This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a
-3D-printed panel, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor. There
-are no laser-cut parts.
+3D-printed panel, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
 
 The sensing routine runs a REP (retraction-extrusion pulse) on command and streams a pressure trace.
 
 Basic soldering is not required if the boards already have headers and the actuator leads are
 prepared. You need Arduino IDE familiarity and the ability to read a wiring diagram — no CAD or
 custom PCB work.
-
-**Which version to build:** version 2, the 3D-printed panel in this guide, on
-`main`. Version 2 is in progress; open items are marked TODO below. Version 1 is at the
-[`v1` tag](https://github.com/The-Hybrid-Atelier/RheoBoard/tree/v1).
 
 ## Before you start
 

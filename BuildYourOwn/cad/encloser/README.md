@@ -2,10 +2,8 @@
 
 License: hardware CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
-Version 2 of RheoBoard mounts the pumps, valve, and electronics on a flat 3D-printed panel.
-There are no laser-cut parts. The version 1 laser-cut panel is archived in
-[`../../archive/laser-cut-v1/`](../../archive/laser-cut-v1/). The folder name stays
-`BuildYourOwn/cad/encloser/`.
+The pumps, valve, and electronics mount on a flat 3D-printed panel.
+The folder name stays `BuildYourOwn/cad/encloser/`.
 
 The placement reference is the annotated panel photo [`panel-annotated.pdf`](panel-annotated.pdf).
 

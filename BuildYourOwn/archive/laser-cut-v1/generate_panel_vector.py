@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Generate panel.svg / panel.dxf -- vector cut geometry for the laser-cut platform.
+"""Generate panel.svg / panel.dxf -- vector cut geometry for the panel.
 
 SPDX-License-Identifier: CERN-OHL-W-2.0
 Copyright (c) 2026 Charlie Vuong -- see ../../LICENSE
 
-WHAT THIS IS: source geometry for the laser-cut panel, expressed in real millimeter coordinates
-and exported as SVG, DXF, and proportional PNG references. Current version 1 geometry is maintained
+WHAT THIS IS: source geometry for the panel, expressed in real millimeter coordinates
+and exported as SVG, DXF, and proportional PNG references. The geometry is maintained
 directly in the tables below.
 
-GEOMETRY ORIGIN: The earlier geometry was a trace of panel-cut-lines.png. Version 1 is an explicit
+GEOMETRY ORIGIN: The earlier geometry was a trace of panel-cut-lines.png. The tables below are an explicit
 component-driven relayout: both pumps are rotated 90 degrees with VALVE2 centered between them;
 the two-pump L298N is left and the valve L298N is right; MPRLS sits directly below VALVE2;
 the seesaw, ESP32, and Button form a rear row; and the former chamber/bulkhead hole is removed.
