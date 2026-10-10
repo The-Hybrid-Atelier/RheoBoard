@@ -6,7 +6,7 @@ The current package includes the dedicated J9 Qwiic master interface, U13 and it
 
 - [Fabrication archive](RheoBoard_v1.05_fabrication.zip): nine Gerber layers, matching plated/non-plated drill files and Gerber job file. The same twelve files are in `Gerber/`; drill files are in that folder too.
 - [SMT placement file](CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv) and [SMT BOM](../BOM/BOM_RheoBoard_v1.05_JLCPCB.csv): 140 matching references, all on top. Placement values are preserved from the native JLC export. The separate native positions file is an unfiltered reference, not the SMT order file.
-- [Complete BOM](../BOM/BOM_RheoBoard_v1.05.xlsx): 147 fitted parts and separate accessories. Manually fit J2, J3, J18, U8, U9, U10 and U11.
+- [Complete BOM](../BOM/BOM_RheoBoard_v1.05.xlsx): 146 fitted parts and separate accessories. Manually fit J2, J3, U8, U9, U10 and U11. J18 has been removed; the fabrication archive and drawings have been regenerated.
 - [Assembly drawing](Drawings/RheoBoard_v1.05_assembly.pdf), [schematic](Drawings/RheoBoard_v1.05_schematic.pdf), [front copper](Drawings/RheoBoard_v1.05_front_copper.pdf), [back copper](Drawings/RheoBoard_v1.05_back_copper.pdf) and [solder mask](Drawings/RheoBoard_v1.05_soldermask.pdf).
 - [Review report](../Verification/REVIEW_REPORT.md) records checks and remaining limitations. The release manifest binds sources and exports by SHA-256.
 

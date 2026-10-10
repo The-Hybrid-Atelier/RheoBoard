@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-09",
+  "change": "Remove J18 only, preserve J3 debug and J9 Qwiic master",
+  "checks": {
+    "only_J18_removed": true,
+    "remaining_component_values_footprints_unchanged": true,
+    "only_J18_pins_removed": true,
+    "all_413_remaining_pin_nets_unchanged": true,
+    "all_165_remaining_placements_unchanged": true,
+    "all_remaining_pad_geometry_unchanged": true,
+    "all_vias_unchanged": true,
+    "board_outline_unchanged": true,
+    "only_ten_J18_branch_traces_removed": true,
+    "all_schematic_pins_reconcile_with_board": true,
+    "saved_refilled_DRC_clean": true,
+    "ERC_clean": true,
+    "BOM_146_fitted_140_SMT": true,
+    "all_BOM_footprints_match": true,
+    "all_fitted_LCSC_MPN_match_native_BOM": true,
+    "CPL_unique_all_SMT_present": true,
+    "CPL_uses_native_geometry": true,
+    "all_SMT_placements_unchanged": true,
+    "SMT_CSV_matches_140_refs": true,
+    "only_three_J18_drills_removed": true,
+    "nonplated_drills_unchanged": true,
+    "original_v1_all_files_unchanged": true
+  },
+  "components": 165,
+  "schematic_pin_nodes": 413,
+  "schematic_nets": 89,
+  "tracks": 611,
+  "vias": 301,
+  "fitted": 146,
+  "smt": 140,
+  "manual": [
+    "J2",
+    "J3",
+    "U10",
+    "U11",
+    "U8",
+    "U9"
+  ],
+  "port_pin_nets": {
+    "J3": {
+      "2": "+3V3",
+      "4": "/SCL",
+      "3": "/SDA",
+      "1": "GND"
+    },
+    "J9": {
+      "2": "/HOST_3V3",
+      "4": "/HOST_SCL",
+      "3": "/HOST_SDA",
+      "1": "GND"
+    },
+    "J1": {
+      "2": "+3V3",
+      "4": "/SCL",
+      "3": "/SDA",
+      "1": "GND"
+    },
+    "J12": {
+      "2": "+3V3",
+      "4": "/SCL",
+      "3": "/SDA",
+      "1": "GND"
+    },
+    "J17": {
+      "2": "+3V3",
+      "4": "/SCL",
+      "3": "/SDA",
+      "1": "GND"
+    }
+  },
+  "native_package_complete": false,
+  "native_package_warnings": [
+    "JLCPCB BOM/CPL designators do not match: missing from BOM [H1, H2, H3, H4]; missing from CPL [TP1, U11, U8]"
+  ],
+  "delivered_SMT_pair_reconciled": true,
+  "supplier_preview_required": true,
+  "physical_tests_performed": false,
+  "source_hashes": {
+    "1.kicad_sch": "4398b7053aca3734680662892f8756fa263881cc472572411321eb455d4c5c77",
+    "1.kicad_pcb": "d1d865dddc365c0cd161c1140b6fab173875163d59a5db6ba88a2da7e5a4fa0b",
+    "1.kicad_pro": "ac114c952b60073d844719f89f0e5f8a960d8fcadcfb334c311c6b2847947085"
+  }
+}

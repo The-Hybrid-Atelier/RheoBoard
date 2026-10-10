@@ -15,11 +15,10 @@ The board makes its own 3.3 V logic supply from the 12 V input. It also makes ap
 | J9 QWIIC MASTER, JST SH | GND | Host 3.3 V input | HOST_SDA | HOST_SCL |
 | J1, J12, J17 QWIIC SENSOR, JST SH | GND | Local 3.3 V output | SDA | SCL |
 | J3, JST EH 4-pin peripheral | GND | Local 3.3 V output | SDA | SCL |
-| J18 LOCAL BUS SERVICE, JST EH 3-pin | GND | SDA | SCL | — |
 
 All four JST SH connectors retain the standard Qwiic order: pin 1 GND, pin 2 3.3 V, pin 3 SDA, pin 4 SCL. Read the PCB pin-1 mark and connector drawing; a cable viewed from its mating end reverses the apparent left-to-right order. Standard Qwiic cable colors are black, red, blue and yellow in that order. [SparkFun Qwiic](https://www.sparkfun.com/qwiic).
 
-Connect the ESP32 to **J9**, using an ordinary four-wire Qwiic cable. J1, J12 and J17 power local sensor modules from RheoBoard and share its local bus. Do not plug another independently powered controller or RheoBoard into these sensor ports. J18 is retained for local service access and bypasses U13; it is no longer the preferred master/mux port.
+Connect the ESP32 to **J9**, using an ordinary four-wire Qwiic cable. J1, J12 and J17 power local sensor modules from RheoBoard and share its local bus. Do not plug another independently powered controller or RheoBoard into these sensor ports. J3 provides local debug access with onboard 3.3 V and bypasses U13. The redundant J18 header has been removed.
 
 The checked controller is SparkFun's ESP32 Thing Plus Micro-B **WRL-15663**: Qwiic SDA is GPIO23 and SCL is GPIO22, and the Qwiic power pin connects to its onboard 3.3 V regulator. Other Thing Plus variants require their own power/pin check. U13 is TCA9517ADGKR, with the RheoBoard bus on its A side and the ESP32 on its B side. Both sides have their own supply bypass and 4.7 kΩ pullups. EN follows host power. TI specifies high-impedance bus outputs when either supply is off; verify power sequencing and leakage on the assembled system. [SparkFun schematic](https://cdn.sparkfun.com/assets/6/d/c/6/c/ESP32_Thing_Plus_Schematic.pdf), [TI TCA9517A](https://www.ti.com/lit/ds/symlink/tca9517a.pdf).
 
@@ -45,7 +44,7 @@ Provide pullups on the master side of the mux and keep its active-low RESET inpu
 
 ## Assembly completion
 
-Use the revised BOM's exact manufacturer part numbers and footprints. The SMT placement file excludes through-hole and manually fitted parts. J2, J3, J18, the two valve headers and the pumps require the manual assembly steps shown in the BOM. U9 and U10 identify the fitted valve headers; the two external FA0520E valves are separately listed accessories.
+Use the revised BOM's exact manufacturer part numbers and footprints. The SMT placement file excludes through-hole and manually fitted parts. J2, J3, the two valve headers and the pumps require the manual assembly steps shown in the BOM. U9 and U10 identify the fitted valve headers; the two external FA0520E valves are separately listed accessories.
 
 Inspect the fuse, all three inductors, diode bands, IC pin-1 marks and electrolytic polarities. Confirm the valve cable polarity against the header markings before insertion. Check pump terminal polarity and support the pump bodies mechanically; soldered wires are not mechanical mounts. Fit the valve bodies and hoses without loading the connectors or sensor port.
 

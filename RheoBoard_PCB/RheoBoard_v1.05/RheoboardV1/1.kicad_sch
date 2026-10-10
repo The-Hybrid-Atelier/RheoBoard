@@ -15767,34 +15767,6 @@
 	)
 	(wire
 		(pts
-			(xy 756.92 210.82)
-			(xy 754.38 210.82)
-		)
-		(uuid "cfee0c6c-dd0e-4efe-b469-22e62405f472")
-	)
-	(wire
-		(pts
-			(xy 756.92 213.36)
-			(xy 754.38 213.36)
-		)
-		(uuid "a64d288e-a84c-4c13-b0f0-1bdf236b7a47")
-	)
-	(wire
-		(pts
-			(xy 756.92 215.9)
-			(xy 754.38 215.9)
-		)
-		(uuid "56e491d5-5a5a-4df6-8021-9e4305c9334c")
-	)
-	(wire
-		(pts
-			(xy 754.38 210.82)
-			(xy 754.38 207.01)
-		)
-		(uuid "cb1177ba-3b1a-4a96-a5ea-4cd16a7aa075")
-	)
-	(wire
-		(pts
 			(xy 529.59 426.72)
 			(xy 529.59 434.34)
 		)
@@ -16612,16 +16584,6 @@
 		)
 		(uuid "2129a431-ce07-4873-9589-6062556dc741")
 	)
-	(text "LOCAL A: RheoBoard +3V3 and sensor bus\nHOST B: ESP32-supplied +3V3; regulators never paralleled\n100 kHz initial bring-up; cable/module pull-ups share a current budget\nJ1 / J12 / J17 remain powered Qwiic sensor ports\nJ18 = LOCAL BUS SERVICE; no master-power isolation at that header"
-		(at 643.89 340.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7cd2b3eb-ea7d-4874-991f-c2a663fca251")
-	)
 	(text "QWIIC MASTER: J9 TO USB / BATTERY ESP32"
 		(at 643.89 285.75 0)
 		(effects
@@ -16632,36 +16594,6 @@
 			(justify left bottom)
 		)
 		(uuid "c1f66db5-a5d2-4101-90f7-45b22fe447cb")
-	)
-	(text "J18: LOCAL SERVICE BUS (GND / SDA / SCL); no power-domain isolation.\nJ9: dedicated standard Qwiic master port. J1 / J12 / J17: powered sensors.\nMultiple boards: external TCA9548A at 0x71; one channel active.\nDisable PCA9685 ALLCALL after initialization."
-		(at 640.08 254 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "279edd16-7eff-4c51-b539-b17d367643a8")
-	)
-	(label "SDA"
-		(at 754.38 213.36 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7e7cfef3-e0dd-4c63-8f82-792cc32640c6")
-	)
-	(label "SCL"
-		(at 754.38 215.9 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9585c509-ad10-4560-89d0-d8fa1db4fa50")
 	)
 	(label "EF_EN"
 		(at 358.14 162.56 180)
@@ -17537,17 +17469,6 @@
 		)
 		(uuid "d8a0e7ac-6d75-45e4-9c58-33e1a19ea235")
 	)
-	(global_label "GND"
-		(shape input)
-		(at 754.38 207.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0b8637d1-7968-483a-8bf9-2edff55f776c")
-	)
 	(global_label "PUMP1_PWM"
 		(shape input)
 		(at 64.77 443.23 180)
@@ -17724,6 +17645,16 @@
 		)
 		(uuid "454cf453-9118-4e61-84ac-cf813acf5887")
 	)
+  (text "J3: LOCAL DEBUG BUS (GND / +3V3 / SDA / SCL); onboard supply.\nJ9: dedicated standard Qwiic master port. J1 / J12 / J17: powered sensors.\nMultiple boards: external TCA9548A at 0x71; one channel active.\nDisable PCA9685 ALLCALL after initialization."
+    (at 640.08 254 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid "037bbb2f-fba8-4efd-972c-b436bbf0745a")
+  )
+  (text "LOCAL A: RheoBoard +3V3 and sensor bus\nHOST B: ESP32-supplied +3V3; regulators never paralleled\n100 kHz initial bring-up; cable/module pull-ups share a current budget\nJ1 / J12 / J17 remain powered Qwiic sensor ports\nJ3 = LOCAL DEBUG BUS; no master-power isolation at that header"
+    (at 643.89 340.36 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid "436423bd-8c01-4d0e-a201-868018e3417c")
+  )
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 751.586 541.02 0)
@@ -44899,120 +44830,6 @@
 			(project "1"
 				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
 					(reference "C67")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 762 213.36 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b73a2cdc-37da-44a4-a1dc-1654e72cc601")
-		(property "Reference" "J18"
-			(at 769.62 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "JST EH 3-pin 2.50mm"
-			(at 762 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eEH.pdf"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Assembly" "Manual THT"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C160259"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "B3B-EH-A(LF)(SN)"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "JST"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "https://www.lcsc.com/product-detail/C160259.html"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Role" "LOCAL BUS SERVICE: GND/SDA/SCL; no supply pin"
-			(at 762 213.36 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "1"
-				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
-					(reference "J18")
 					(unit 1)
 				)
 			)

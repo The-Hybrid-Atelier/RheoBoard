@@ -1,0 +1,19 @@
+{
+  "categories_not_reported": [],
+  "design_rule_violations": 0,
+  "errors": 0,
+  "filtered_count": 0,
+  "live_board_synced": true,
+  "schematic_parity": 0,
+  "schematic_parity_diagnostic": null,
+  "severity_filter": "info",
+  "shown": 0,
+  "source": "saved_file",
+  "total_violations": 0,
+  "truncated": false,
+  "unconnected_items": 0,
+  "violations": [],
+  "warnings": 0,
+  "zone_refill_source": "ipc",
+  "zones_refilled": true
+}

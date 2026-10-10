@@ -8,6 +8,8 @@ The latest full recheck found a pressure-sensor startup/reset risk at U5. Resolv
 
 Open [the KiCad project](RheoboardV1/1.kicad_pro). Its main schematic and PCB are both named `1`; the other schematic files beside them are retained standalone block references or stubs, not the project hierarchy.
 
+The redundant J18 service header has been removed. **J3 remains the four-pin local debug header**, and J9 remains the Qwiic master port. The updated schematic and refilled PCB pass ERC/DRC with zero errors or warnings; BOM, drawings and fabrication files match this change. See the [removal verification](Verification/Remove_J18_2026-10-09/README.md).
+
 - [Revision notes](REVISION_NOTES.md) explain the circuit, footprint and assembly changes.
 - [BOM](BOM/README.md) contains the complete workbook and SMT-only assembly list.
 - [Assembly and bringup](ASSEMBLY_AND_BRINGUP.md) covers power, the external multiplexer, control mapping and open hardware checks.

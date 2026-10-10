@@ -4,7 +4,7 @@ The saved v1.05 design adds input protection, separates the Qwiic master interfa
 
 This comparison is between the saved KiCad projects on 2026-10-09. The previously assembled v1 may already contain JLCPCB component substitutions that differ from its schematic labels. A changed CAD value or purchasing label does not by itself establish which part JLCPCB fitted to v1.
 
-Neither design was modified for this comparison. The pressure-sensor startup/reset and valve voltage-margin findings remain accepted prototype risks, as instructed by the maintainer.
+Updated after the authorized J18 removal on 2026-10-09. The original v1 remains unchanged. Current v1.05 exports are compared with the preserved native v1 exports; the removal check also verifies that all remaining v1.05 component values, placements and pin nets are unchanged. The pressure-sensor startup/reset and valve voltage-margin findings remain accepted prototype risks, as instructed by the maintainer.
 
 ## Schematic changes by circuit
 
@@ -23,7 +23,7 @@ Neither design was modified for this comparison. The pressure-sensor startup/res
 | U13 and supporting parts | Absent | TCA9517ADGKR, C68/C69 100 nF, R82/R83 4.7 kΩ, R84 10 kΩ | Adds the host/local I²C interface, bypassing, host pullups and host-rail discharge. Local bus is A; host is B. |
 | J1/J12/J17 sensor ports | Local 3.3 V, SDA, SCL and GND | Same connections | Continue powering local Qwiic sensor modules. |
 | J3 four-pin EH port | Local bus and 3.3 V | Same connections | Retained local bus connection; this larger connector is not an SH Qwiic socket. |
-| J18 local service port | Absent | Three pins: GND, SDA, SCL | Adds local bus access without a power pin; it bypasses U13. |
+| J18 service header | Absent | Removed from the intermediate v1.05 design | Existing J3 already provides local debug access. |
 | D1 | SS54 schematic value/custom footprint | B540C-13-F / SMC | Aligns the CAD definition with the selected diode. Its cathode now feeds VIN_RAW. |
 | F1 | Generic 2 A label | 2 A time-delay JFC1032-1200TS | Makes the selected fuse explicit. |
 | L1/L2/L5 | 4.7 µH / 4 A generic label | 4.7 µH FXL0530-4R7-M | Inductance unchanged; specific purchasing identity and footprint corrected. |
@@ -43,7 +43,7 @@ All 367 original schematic pin identities remain. Only four existing pins change
 | Main arrangement | Input/converters at top, controls near centre, pumps and valve connectors below | Same arrangement; 140 of 149 existing footprint origins are unchanged. Eight parts/testpoints move and F1 gets a corrected origin. |
 | New input protection | No U12 cluster | U12/D36/R78–R81/C64–C67 near the input; VIN_RAW/protected VIN routed separately. |
 | New host interface | J9 tied directly into local bus | U13/C68/C69/R82–R84 near the right-side master connector, with separate host routing. |
-| New service header | No J18 | J18 placed near the upper-right edge with ground and bus routing. |
+| Service header | No J18 | No J18; its three holes, two dedicated bus branches and service labels were removed. J3 is retained. |
 | F1 lands and origin | Off-centre origin; two 5.00 × 3.81 mm lands with 7.18 mm centre spacing | Centred origin; 3.40 × 3.43 mm lands with 9.20 mm spacing. The pad-pair midpoint stays at (123.40, 48.01) mm. SMT classification corrected. |
 | L1/L2/L5 lands | Custom pattern with 1.8 × 2.0 mm lands | FXL0530 pattern with 1.9 × 2.5 mm lands and corrected spacing/orientation. Component origins unchanged. |
 | D1 footprint | Custom SS54 lands | Standard SMC pattern with cathode marking. Component origin unchanged. |
@@ -56,9 +56,9 @@ All 367 original schematic pin identities remain. Only four existing pins change
 | Existing Qwiic bodies | Four SH sockets | Same positions, orientation, pin order and pad geometry. J9 has different net assignments and MASTER labeling; other SH sockets are SENSOR ports. |
 | Pump footprint locations | U8/U11 positions and 4 mm terminal holes | Retained. A 0.000001 mm native-export coordinate difference is treated as numerical normalization. Assembly category changes from SMT to through-hole. |
 | Mounting holes | H1–H4 | Same centres, copper and drills. Other unchanged mechanical geometry is preserved in the exported profile/pads. |
-| Routing | 527 exported copper line/arc primitives; 281 vias | 621 primitives; 301 vias. Added routing serves input protection, J18, U13 and the moved TP1; host routing is split from local routing. |
+| Routing | 527 exported copper line/arc primitives; 281 vias | 611 primitives; 301 vias. Added routing serves input protection, U13 and the moved TP1; host routing is split from local routing. |
 | Filled copper | Original filled contours and teardrops | Recomputed around revised pads and routing. Contour changes include teardrops, so they must not be interpreted as entire zones being deleted. |
-| Silkscreen/artwork | Rheoboard V1, generic connector/part labels | RheoBoard v1.05, MASTER/SENSOR/SERVICE labels and corrected footprint artwork/polarity identification. |
+| Silkscreen/artwork | Rheoboard V1, generic connector/part labels | RheoBoard v1.05, MASTER/SENSOR labels and corrected footprint artwork/polarity identification. |
 | Library portability | Khach Footprint/Sensor_Pressure dependencies | Standard or project-local RheoBoard library links. A library-name change does not necessarily change the physical pads. |
 
 ## Exact placement changes
@@ -79,7 +79,7 @@ Coordinates below are KiCad board millimetres, with positive Y downward. All inh
 
 ## Added components
 
-The 17 additions comprise ten input-protection parts, six Qwiic-interface parts and J18. No original component reference was removed.
+The 16 additions comprise ten input-protection parts and six Qwiic-interface parts. The redundant J18 was removed from the intermediate v1.05 design. No original component reference was removed.
 
 | Reference | Value/part | Board position in mm |
 | --- | --- | --- |
@@ -90,7 +90,6 @@ The 17 additions comprise ten input-protection parts, six Qwiic-interface parts 
 | C68 | 100nF 50V X7R ±10% | (189.0000, 109.0000) |
 | C69 | 100nF 50V X7R ±10% | (193.0000, 109.0000) |
 | D36 | SMBJ13A | (146.0000, 42.3000) |
-| J18 | JST EH 3-pin 2.50mm | (179.0000, 46.0000) |
 | R78 | 680k ±1% | (139.0000, 46.5000) |
 | R79 | 100k ±1% | (140.0000, 50.5000) |
 | R80 | 390k ±1% | (141.5000, 53.7000) |
@@ -105,7 +104,7 @@ The 17 additions comprise ten input-protection parts, six Qwiic-interface parts 
 
 Eight PCB checks that v1 ignored are enabled in v1.05: courtyard overlap is an error; missing courtyard, silkscreen-to-edge, text height, footprint-library mismatch, footprint type mismatch, footprint-library issues and silkscreen-over-copper are warnings. Other board settings, numerical clearances, ERC settings and netclass settings are unchanged. No explicit rule exclusions were added.
 
-The last full v1.05 review reported zero ERC errors/warnings and zero DRC violations, unrouted connections or schematic-parity findings, including an analysis-only refill. Source hashes still match that reviewed design. This comparison does not claim a fresh v1 ERC/DRC run.
+Fresh post-removal v1.05 ERC reports zero errors/warnings. Saved/refilled DRC reports zero violations, unrouted connections or schematic-parity findings. Project rule settings are unchanged; current source hashes are recorded in the removal evidence. This comparison does not claim a fresh v1 ERC/DRC run.
 
 ## Functions retained
 
@@ -113,7 +112,7 @@ Two fixed-direction, intermittent-use pumps and two valve channels remain. The f
 
 ## Full component comparison
 
-Every one of the 166 current references is included below. “Value/spec” can mean a label, tolerance or procurement correction; it does not imply that a different part was actually assembled on v1. “Pads” includes shape, size, drill or position changes. Artwork is assessed separately from connectivity. Sub-0.00001 mm export rounding is normalized.
+Every one of the 165 current references is included below. “Value/spec” can mean a label, tolerance or procurement correction; it does not imply that a different part was actually assembled on v1. “Pads” includes shape, size, drill or position changes. Artwork is assessed separately from connectivity. Sub-0.00001 mm export rounding is normalized.
 
 | Reference | v1 value | v1.05 value | Schematic/library change | Layout change |
 | --- | --- | --- | --- | --- |
@@ -191,7 +190,6 @@ Every one of the 166 current references is included below. “Value/spec” can 
 | J9 | I2C_1 | JST SH 4-pin 1.00mm | Value/spec; pin 2: +3V3 → /HOST_3V3; pin 3: /SDA → /HOST_SDA; pin 4: /SCL → /HOST_SCL | Artwork |
 | J12 | I2C_2 | JST SH 4-pin 1.00mm | Value/spec | Artwork |
 | J17 | I2C_3 | JST SH 4-pin 1.00mm | Value/spec | Artwork |
-| J18 | Absent | JST EH 3-pin 2.50mm | Added | New footprint and routing |
 | JP2 | SolderJumper_2_Open | SolderJumper_2_Open | Unchanged | Unchanged |
 | JP3 | SolderJumper_2_Open | SolderJumper_2_Open | Unchanged | Unchanged |
 | JP4 | SolderJumper_2_Open | SolderJumper_2_Open | Unchanged | Unchanged |
@@ -308,10 +306,10 @@ Every one of the 166 current references is included below. “Value/spec” can 
 
 | View | v1 | v1.05 |
 | --- | --- | --- |
-| Schematic | [v1](Comparison_2026-10-09/v1-schematic.pdf) | [v1.05](Comparison_2026-10-09/v105-schematic.pdf) |
-| Front copper and silkscreen | [v1](Comparison_2026-10-09/v1-F.pdf) | [v1.05](Comparison_2026-10-09/v105-F.pdf) |
-| Back copper and silkscreen | [v1](Comparison_2026-10-09/v1-B.pdf) | [v1.05](Comparison_2026-10-09/v105-B.pdf) |
+| Schematic | [v1](Comparison_2026-10-09/v1-schematic.pdf) | [v1.05](../Manufacturing/Drawings/RheoBoard_v1.05_schematic.pdf) |
+| Front copper (v1 view includes silkscreen) | [v1](Comparison_2026-10-09/v1-F.pdf) | [v1.05](../Manufacturing/Drawings/RheoBoard_v1.05_front_copper.pdf) |
+| Back copper (v1 view includes silkscreen) | [v1](Comparison_2026-10-09/v1-B.pdf) | [v1.05](../Manufacturing/Drawings/RheoBoard_v1.05_back_copper.pdf) |
 
-[Complete structured comparison](Comparison_2026-10-09/comparison.json), [symbol pin classifications](Comparison_2026-10-09/symbol-pin-definition-changes.json), [rule-setting comparison](Comparison_2026-10-09/rule-metadata-comparison.json), [source integrity](Comparison_2026-10-09/source-integrity.json). The native netlists and IPC-2581 exports are retained in the same evidence folder.
+[Current structured comparison](Remove_J18_2026-10-09/v1-comparison.json), [symbol pin classifications](Comparison_2026-10-09/symbol-pin-definition-changes.json), [rule-setting comparison](Comparison_2026-10-09/rule-metadata-comparison.json), [current source integrity](Remove_J18_2026-10-09/validation.json). Current v1.05 before/after netlists and IPC-2581 exports are in Remove_J18_2026-10-09. Comparison_2026-10-09 retains original v1 exports and the historical pre-removal v1.05 checkpoint; its v1.05 drawings and hashes are superseded. [Current silkscreen](Remove_J18_2026-10-09/silkscreen.pdf).
 
 Hardware design licensing follows the repository root LICENSE, CERN-OHL-W-2.0. Documentation is CC BY-SA 4.0.

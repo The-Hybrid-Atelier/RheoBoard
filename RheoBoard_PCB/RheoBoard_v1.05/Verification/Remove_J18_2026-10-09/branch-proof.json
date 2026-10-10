@@ -1,0 +1,141 @@
+{
+  "method": "Walk from each J18 pad to J3 through unique contiguous B.Cu segments; reject interior connections to retained same-net traces, pads or vias. Width is not used to select traces.",
+  "branches": [
+    {
+      "net": "/SDA",
+      "from": "J18",
+      "to": "J3",
+      "start": [
+        181.5,
+        46.0
+      ],
+      "end": [
+        191.925,
+        93.85
+      ],
+      "trace_count": 5,
+      "traces": [
+        {
+          "layer": "B.Cu",
+          "net": "/SDA",
+          "uuid": "4d11b98a-459d-4c1a-8749-71a0c18a9674",
+          "width": 0.25,
+          "x1": 181.5,
+          "x2": 181.5,
+          "y1": 46.0,
+          "y2": 49.5
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SDA",
+          "uuid": "829ac134-4c4d-4a75-9f99-2996892a53a1",
+          "width": 0.25,
+          "x1": 181.5,
+          "x2": 195.0,
+          "y1": 49.5,
+          "y2": 63.0
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SDA",
+          "uuid": "132cd426-6612-4e26-b660-abb64f3a72e8",
+          "width": 0.25,
+          "x1": 195.0,
+          "x2": 195.0,
+          "y1": 63.0,
+          "y2": 92.0
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SDA",
+          "uuid": "af18066c-438d-408b-a128-c3a2101915bd",
+          "width": 0.25,
+          "x1": 195.0,
+          "x2": 193.15,
+          "y1": 92.0,
+          "y2": 93.85
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SDA",
+          "uuid": "5ff04f95-c5e3-47f3-85d8-64f226481798",
+          "width": 0.25,
+          "x1": 193.15,
+          "x2": 191.925,
+          "y1": 93.85,
+          "y2": 93.85
+        }
+      ],
+      "interior_shared_track_junctions": 0,
+      "interior_other_pads_or_vias": 0
+    },
+    {
+      "net": "/SCL",
+      "from": "J18",
+      "to": "J3",
+      "start": [
+        184.0,
+        46.0
+      ],
+      "end": [
+        191.925,
+        96.35
+      ],
+      "trace_count": 5,
+      "traces": [
+        {
+          "layer": "B.Cu",
+          "net": "/SCL",
+          "uuid": "51ecae67-6abb-497a-b583-3b14e11620f0",
+          "width": 0.25,
+          "x1": 184.0,
+          "x2": 184.0,
+          "y1": 46.0,
+          "y2": 49.0
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SCL",
+          "uuid": "8173cf73-4615-4953-9b0d-29c8d27eb0e6",
+          "width": 0.25,
+          "x1": 184.0,
+          "x2": 196.0,
+          "y1": 49.0,
+          "y2": 61.0
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SCL",
+          "uuid": "fe12400f-e108-45b9-9f88-81a25fff9e9a",
+          "width": 0.25,
+          "x1": 196.0,
+          "x2": 196.0,
+          "y1": 61.0,
+          "y2": 97.5
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SCL",
+          "uuid": "f5216c94-a4ba-4d93-b175-4679ef723b12",
+          "width": 0.25,
+          "x1": 196.0,
+          "x2": 193.075,
+          "y1": 97.5,
+          "y2": 97.5
+        },
+        {
+          "layer": "B.Cu",
+          "net": "/SCL",
+          "uuid": "b4c1dae0-78a2-4c70-b7e2-eaa080535e32",
+          "width": 0.25,
+          "x1": 193.075,
+          "x2": 191.925,
+          "y1": 97.5,
+          "y2": 96.35
+        }
+      ],
+      "interior_shared_track_junctions": 0,
+      "interior_other_pads_or_vias": 0
+    }
+  ]
+}

@@ -73,7 +73,6 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "J9","JST SH 4-pin 1.00mm","JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",191.925000,-123.825001,90.000000,top
 "J12","JST SH 4-pin 1.00mm","JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",191.925000,-136.375000,90.000000,top
 "J17","JST SH 4-pin 1.00mm","JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",98.000000,-123.825001,-90.000000,top
-"J18","JST EH 3-pin 2.50mm","JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical",179.000000,-46.000000,0.000000,top
 "JP2","SolderJumper_2_Open","SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",193.179999,-79.019400,180.000000,top
 "JP3","SolderJumper_2_Open","SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",193.179999,-74.726800,180.000000,top
 "JP4","SolderJumper_2_Open","SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",193.179999,-70.530386,180.000000,top

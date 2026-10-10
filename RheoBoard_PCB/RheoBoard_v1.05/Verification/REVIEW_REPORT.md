@@ -1,6 +1,8 @@
 # RheoBoard v1.05 review — 2026-10-09
 
-**Full-board recheck: fresh ERC and DRC pass, including an analysis-only copper refill. The maintainer accepted the U5 startup/reset and valve-rail voltage-margin risks for this prototype on 2026-10-09 and requested no further action on them. They are not outstanding prototype redesign requests. Supplier acceptance and physical qualification remain open.**
+**Latest change: J18 removed; fresh ERC and saved/refilled DRC pass with zero errors, warnings, unconnected items or parity findings. J3 remains the local debug header and J9 remains the Qwiic master port. The maintainer accepted the U5 startup/reset and valve-rail voltage-margin risks for this prototype on 2026-10-09 and requested no further action on them. Supplier acceptance and physical qualification remain open.**
+
+The [J18 removal verification](Remove_J18_2026-10-09/README.md) binds the current saved sources and regenerated manufacturing outputs. It confirms 165 components, 413 schematic pin nodes, 146 fitted parts, 140 SMT parts and six manually fitted parts. All retained component values, pad geometry, placements and pin connections are unchanged. The earlier full-board review below remains supporting evidence for the retained circuitry; its pre-removal source hashes and counts are historical.
 
 The two findings below are retained as engineering evidence; acceptance does not record a circuit correction or a successful hardware test. If the valve voltage is adjusted later, the feedback-divider values must be selected appropriately; simply removing a divider resistor is not an equivalent voltage adjustment. No CAD or manufacturing files were changed for this disposition.
 
@@ -10,15 +12,15 @@ Reviewed project: RheoboardV1/1.kicad_pro, main schematic/PCB 1, KiCad 10.0.6 an
 
 **J9 is the Qwiic MASTER port**, with standard pins GND, HOST_3V3, HOST_SDA and HOST_SCL. A normal four-wire Qwiic cable connects the USB/battery-powered ESP32 Thing Plus. Host 3.3 V powers only the host side of U13; it is separate from RheoBoard's regulator output. Grounds are common, so this is not galvanic isolation.
 
-**J1, J12 and J17 remain Qwiic SENSOR ports**, with GND, local 3.3 V, SDA and SCL. Their connector bodies, pin order and positions are unchanged. **J18 is LOCAL BUS SERVICE**, bypassing the buffer. Use J9 for the intended master connection. [SparkFun Qwiic](https://www.sparkfun.com/qwiic).
+**J1, J12 and J17 remain Qwiic SENSOR ports**, with GND, local 3.3 V, SDA and SCL. Their connector bodies, pin order and positions are unchanged. **J3 remains the four-pin local debug header**, bypassing the buffer; J18 has been removed. Use J9 for the intended master connection. [SparkFun Qwiic](https://www.sparkfun.com/qwiic).
 
 Added U13 TCA9517ADGKR, C68/C69 100 nF bypass capacitors, R82/R83 4.7 kΩ host pullups and R84 10 kΩ host-rail discharge. Local bus uses U13 A; host uses B; EN follows host power. The local footprint follows TI's DGK recommended pattern: 1.4 × 0.45 mm pads, 0.65 mm pitch, 4.4 mm row-center span. Copper, mask, paste and pin numbering were checked. [TI TCA9517A](https://www.ti.com/lit/ds/symlink/tca9517a.pdf).
 
 C32, C34, C43 and C45 remain **22 µF / 50 V**: approximately **88.3 µF nominal** per pump/valve rail. The earlier 105.9 µF estimate includes positive initial tolerance only, not combined temperature/DC-bias worst case. This follows TI's recommended range but does not establish measured startup or transient stability. [TI TPS563203](https://www.ti.com/lit/gpn/tps563203).
 
-## Current verification
+## Pre-removal full-board verification
 
-Fresh results are saved in **Thorough_2026-10-09**. Qwiic_2026-10-09 remains the implementation and baseline-comparison evidence; its source hashes still match this design.
+The pre-removal full-board results are saved in **Thorough_2026-10-09**. Qwiic_2026-10-09 remains implementation evidence. The following table records that historical 166-component checkpoint; current removal checks are linked above.
 
 | Check | Result |
 | --- | --- |
@@ -86,13 +88,14 @@ No board was powered or physically measured during this work. The [JLCPCB v1 top
 
 - [Complete v1 versus v1.05 schematic and layout comparison](V1_TO_V105_COMPARISON.md), including every current component reference and fresh drawings.
 - [Full independent findings and checklist coverage](Thorough_2026-10-09/full-independent-review.json), [85 circuit assertions](Thorough_2026-10-09/full-block-checks.json), [connectivity and layout inventory](Thorough_2026-10-09/full-connectivity-layout-inventory.json).
-- Current full-board check: [ERC](Thorough_2026-10-09/run_erc-decoded.json), [DRC](Thorough_2026-10-09/get_drc_violations-decoded.json), [DRC with analysis-only refill](Thorough_2026-10-09/drc-refill-decoded.json), [aggregate and coverage](Thorough_2026-10-09/run_design_review-decoded.json).
-- Current [electrical calculations](Thorough_2026-10-09/electrical-review.json), [BOM/placement/fabrication reconciliation](Thorough_2026-10-09/artifact-review.json), [all CAD/library hashes](Thorough_2026-10-09/design-integrity.json).
+- Current [J18 removal checks and source binding](Remove_J18_2026-10-09/README.md).
+- Pre-removal full-board check: [ERC](Thorough_2026-10-09/run_erc-decoded.json), [DRC](Thorough_2026-10-09/get_drc_violations-decoded.json), [DRC with analysis-only refill](Thorough_2026-10-09/drc-refill-decoded.json), [aggregate and coverage](Thorough_2026-10-09/run_design_review-decoded.json).
+- Retained [electrical calculations](Thorough_2026-10-09/electrical-review.json), historical [BOM/placement/fabrication reconciliation](Thorough_2026-10-09/artifact-review.json), historical [CAD/library hashes](Thorough_2026-10-09/design-integrity.json).
 
 - [Independent review](Qwiic_2026-10-09/independent-review.json), [connectivity](Qwiic_2026-10-09/final-connectivity-review.json), [layout](Qwiic_2026-10-09/final-layout-comparison.json), [copper comparison](Qwiic_2026-10-09/final-copper-visual-comparison.json).
 - [Independent ERC](Qwiic_2026-10-09/independent-erc.json), [independent DRC](Qwiic_2026-10-09/independent-drc.json), [native DRC](Qwiic_2026-10-09/final-drc-native.json), [aggregate](Qwiic_2026-10-09/run_design_review.json).
 - [BOM validation](Qwiic_2026-10-09/bom-validation.json), [manufacturing reconciliation](Qwiic_2026-10-09/manufacturing-reconciliation.json), [drawing validation](Qwiic_2026-10-09/drawing-export-validation.json), [source hashes](Qwiic_2026-10-09/final-hashes.json).
 
-Thorough_2026-10-09 contains the current full-board review; Qwiic_2026-10-09 records the implementation baseline for the same unchanged design. The previous [full review](Recheck_2026-10-09/full-independent-review.json) and earlier evidence describe historical checkpoints. Their 160-component/398-pin/134-SMT counts do not describe the current revision. The release manifest binds current sources, libraries, BOM, exports and reports.
+Remove_J18_2026-10-09 contains the current change verification. Thorough_2026-10-09, Qwiic_2026-10-09 and the previous [full review](Recheck_2026-10-09/full-independent-review.json) describe historical checkpoints. Their differing component/pin counts do not describe the current revision. The release manifest binds current sources, libraries, BOM, exports and reports.
 
 Hardware design licensing follows the repository root LICENSE, CERN-OHL-W-2.0. Documentation is CC BY-SA 4.0.
