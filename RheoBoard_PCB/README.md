@@ -1,9 +1,9 @@
-# RheoBoard PCB
+# RheoBoard_v1 - PCB
 
-KiCad 10 design for the custom RheoBoard. This is a separate board from the DIY module build in
+KiCad 10 design for the custom RheoBoard. This is a separate board from RheoBoardOTS - DIY in
 [`BuildYourOwn/`](../BuildYourOwn/). Everyday wall power for this board is a 12 V plug. The
 firmware in [`../code/firmware/`](../code/firmware/) and the RheoData notes in [`../code/software/`](../code/software/)
-apply to the DIY build, this PCB, and the portable version.
+apply to RheoBoardOTS - DIY, RheoBoard_v1 - PCB, and RheoBoardPipette - Portable.
 
 License: hardware CERN-OHL-W-2.0 — see [`../LICENSE`](../LICENSE).
 

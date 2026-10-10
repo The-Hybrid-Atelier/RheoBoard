@@ -1,7 +1,7 @@
 # Build Your Own Rheometer — Step-by-Step Guide
 
-The [repo root README](../README.md) is the project overview. This file is the step-by-step DIY build
-guide. The wiki repeats these steps on the DIY path (Parts to buy, Parts to 3D print, and Assembly
+The [repo root README](../README.md) is the project overview. This file is the step-by-step RheoBoardOTS - DIY build
+guide. The wiki repeats these steps on RheoBoardOTS - DIY (Parts to buy, Parts to 3D print, and Assembly
 instructions). Each linked subfolder owns its detailed reference information.
 
 License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
@@ -34,7 +34,7 @@ custom PCB work.
   [`hardware/electronic-wiring/`](hardware/electronic-wiring/) (electronics), and
   [`hardware/tube-wiring/`](hardware/tube-wiring/) (tubing)
 - **Firmware and software:** [`../code/firmware/`](../code/firmware/) and [`../code/software/`](../code/software/).
-  Both apply to this DIY build, the PCB, and the portable version.
+  Both apply to RheoBoardOTS - DIY, RheoBoard_v1 - PCB, and RheoBoardPipette - Portable.
 - **Tools** (the one tools list, with where each extra tool is named:
   [`docs/assembly-tools.md`](../docs/assembly-tools.md)):
   - 3D printer (Bambu Lab, PLA, normal profile); Bambu Studio for the STEP files; a slicer or mesh
@@ -46,7 +46,7 @@ custom PCB work.
 
 ## Power
 
-Everyday wall power for this DIY build and for the PCB is a 12 V plug. On this DIY build it feeds
+Everyday wall power for RheoBoardOTS - DIY and for RheoBoard_v1 - PCB is a 12 V plug. On RheoBoardOTS - DIY it feeds
 the pump and valve supplies. Pump and valve current does not go through the ESP32 5 V pin.
 
 USB uploads firmware to the SparkFun ESP32 Thing Plus ([Step 03](#step-03-install-firmware)). After

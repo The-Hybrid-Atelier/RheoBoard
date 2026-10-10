@@ -2,7 +2,7 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-The current DIY build has no machined parts. It uses the
+RheoBoardOTS - DIY has no machined parts. It uses the
 [3D-printed panel](../BuildYourOwn/cad/encloser/).
 
 From [`BuildYourOwn/cad/encloser/README.md`](../BuildYourOwn/cad/encloser/README.md): the editable

@@ -2,7 +2,7 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-This is the one tools list for the DIY build. The [build guide](../BuildYourOwn/README.md) lists
+This is the one tools list for RheoBoardOTS - DIY. The [build guide](../BuildYourOwn/README.md) lists
 the same tools before Step 01. The [Tools](tools.md) page points here.
 
 ## Named in the build guide

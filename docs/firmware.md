@@ -5,8 +5,8 @@ License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 The ESP32 sketch is [`2P1V_Adafruit.ino`](../code/firmware/2P1V_Adafruit/2P1V_Adafruit.ino).
 Install steps are in the [Toolchain section](../code/firmware/README.md#toolchain) of the
 firmware reference, [`code/firmware/README.md`](../code/firmware/README.md). That firmware, and the RheoData
-notes in [`code/software/README.md`](../code/software/README.md), apply to the DIY build, the PCB, and the
-portable version.
+notes in [`code/software/README.md`](../code/software/README.md), apply to RheoBoardOTS - DIY, RheoBoard_v1 - PCB, and
+RheoBoardPipette - Portable.
 
 From that README: the entry point is `2P1V_Adafruit/2P1V_Adafruit.ino`, this design's 2 pumps, 1
 valve bench firmware for RheoData (SparkFun ESP32 Thing Plus, micro-USB, WRL-15663 + 2× L298N +

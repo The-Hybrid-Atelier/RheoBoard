@@ -1,9 +1,9 @@
 # Hardware and bill of materials
 
-Parts list for the **2 pumps + 1 valve** DIY bench rig. Wiring:
+Parts list for the **2 pumps + 1 valve** RheoBoardOTS - DIY bench rig. Wiring:
 [`electronic-wiring/wiring-diagram.png`](electronic-wiring/wiring-diagram.png) and
 [`tube-wiring/`](tube-wiring/). Firmware:
-[`../../code/firmware/`](../../code/firmware/) (shared by the DIY build, the PCB, and the portable version).
+[`../../code/firmware/`](../../code/firmware/) (shared by RheoBoardOTS - DIY, RheoBoard_v1 - PCB, and RheoBoardPipette - Portable).
 RheoData notes: [`../../code/software/`](../../code/software/). Component photo sources/licenses:
 [`../images/README.md`](../images/README.md).
 
@@ -24,7 +24,7 @@ uses whose exact type, size, or quantity is not documented yet.
 | <img src="../images/l298n-motor-driver.jpg" width="100" alt="L298N module"> | L298N dual H-bridge module | 2 | https://www.amazon.com/s?k=L298N+motor+driver | https://www.st.com/resource/en/datasheet/l298.pdf | #1 drives two pumps; #2 drives one valve |
 | <img src="../images/adafruit-4699-air-pump.jpg" width="100" alt="Adafruit 4699 air pump"> | Air pump / vacuum motor (Adafruit 4699, ZR370-02PM) | 2 | https://www.adafruit.com/product/4699 | [`references/datasheets/ZR370-02PM_4.5V.pdf`](references/datasheets/ZR370-02PM_4.5V.pdf) | ~4.5 V / ~500 mA each; 2.5 LPM; 58.2 × Ø27.0 mm nominal |
 | <img src="../images/adafruit-4663-air-valve.jpg" width="100" alt="Adafruit 4663 air valve"> | 6 V air valve (Adafruit 4663, FA0520E) | 1 | https://www.adafruit.com/product/4663 | [`references/datasheets/4663_C14660_DC_6V.pdf`](references/datasheets/4663_C14660_DC_6V.pdf) | 3-port flip selector |
-| — | DC power adapter 12 V | 1 | — | — | Everyday wall power for this DIY build and for the PCB. On this build, external supply for both L298N motor rails; ≥ 2 A recommended; share GND with ESP32. Pump and valve current does not go through the ESP32 5 V pin. |
+| — | DC power adapter 12 V | 1 | — | — | Everyday wall power for RheoBoardOTS - DIY and for RheoBoard_v1 - PCB. On this build, external supply for both L298N motor rails; ≥ 2 A recommended; share GND with ESP32. Pump and valve current does not go through the ESP32 5 V pin. |
 | — | SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (PRT-26059) | 1 | https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html | [`references/datasheets/ESP32_Thing_Plus_Schematic.pdf`](references/datasheets/ESP32_Thing_Plus_Schematic.pdf), [`ESP32_Thing_Plus_Graphical_Datasheet.pdf`](references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf) | Nominal 3.7 V, 1500 mAh, terminated with a 2-pin JST-PH connector (2 mm pin spacing), with built-in protection; it plugs into the ESP32 Thing Plus JST battery connector (schematic V_BATT, 4.2 V maximum). |
 | — | Silicone tubing, Adafruit 4661 | 1 | https://www.adafruit.com/product/4661 | — | 1 m, 3 mm ID, 5 mm OD, for air only. See `tube-wiring/README.md`. TODO: length of each run. |
 | — | Qwiic cables | 3 | https://www.sparkfun.com/cables.html | — | Four Qwiic boards daisy-chained on one I2C bus |

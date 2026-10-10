@@ -2,7 +2,7 @@
 
 **This simple rheometer** — 2 pumps, 1 valve (switched-port "flip" plumbing). Firmware:
 [`../../../code/firmware/2P1V_Adafruit/2P1V_Adafruit.ino`](../../../code/firmware/2P1V_Adafruit/2P1V_Adafruit.ino).
-The same firmware applies to the DIY build, the PCB, and the portable version.
+The same firmware applies to RheoBoardOTS - DIY, RheoBoard_v1 - PCB, and RheoBoardPipette - Portable.
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
@@ -62,7 +62,7 @@ or feed external 5 V while `5V-EN` is installed.
 ### Power
 
 External **12 V DC adapter** (≥ 2 A recommended) to both L298N motor power inputs; common GND
-with ESP32. That 12 V plug is everyday wall power for this DIY build and for the PCB. Pump and
+with ESP32. That 12 V plug is everyday wall power for RheoBoardOTS - DIY and for RheoBoard_v1 - PCB. Pump and
 valve current does not go through the ESP32 5 V pin. PWM on ENA/ENB limits effective voltage to
 pumps (~4.5 V rated) and valve (~6 V rated). The pump manufacturer's intermittent-duty
 recommendation limits run time, not the instantaneous PWM setting; see
