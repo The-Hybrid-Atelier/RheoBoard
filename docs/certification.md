@@ -6,7 +6,6 @@ RheoBoard is certified open source hardware by the
 [Open Source Hardware Association](https://www.oshwa.org/) (OSHWA).
 
 - UID: **US002865**
-- Certification date: 2026-10-08
 - Certified version: 1 (the laser-cut panel build; docs frozen at the
   [`v1` tag](https://github.com/The-Hybrid-Atelier/RheoBoard/tree/v1))
 - Directory listing: https://certification.oshwa.org/us002865.html

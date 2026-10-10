@@ -16,7 +16,7 @@ Documentation frozen at the [`v1` tag](https://github.com/The-Hybrid-Atelier/Rhe
 
 Version 1 is the version certified by OSHWA.
 
-2026-10-08: certified as open source hardware by OSHWA, UID
+Certified as open source hardware by OSHWA, UID
 [US002865](https://certification.oshwa.org/us002865.html). See
 [`docs/certification.md`](docs/certification.md).
 
