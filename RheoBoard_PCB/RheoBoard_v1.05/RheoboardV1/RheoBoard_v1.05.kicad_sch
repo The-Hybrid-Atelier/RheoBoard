@@ -12690,6 +12690,11 @@
 		(diameter 0)
 		(uuid "75b077cc-6ff1-40a4-96fe-06c4d51e1a33")
 	)
+	(junction
+		(at 87.63 66.04)
+		(diameter 0)
+		(uuid "5e1ac463-3f13-4327-a8c8-c0a152d82263")
+	)
 	(no_connect
 		(at 683.26 419.1)
 		(uuid "5ee1854a-ca73-477f-88ed-6567dba3861d")
@@ -16757,16 +16762,16 @@
 	(wire
 		(pts
 			(xy 100.33 66.04)
-			(xy 100.33 60.96)
-		)
-		(uuid "1ba0e6f0-2a02-4714-8b3c-e5b23219f170")
-	)
-	(wire
-		(pts
-			(xy 100.33 66.04)
 			(xy 100.33 53.34)
 		)
 		(uuid "80d0c241-a721-4183-a34b-33dcb414482d")
+	)
+	(wire
+		(pts
+			(xy 87.63 66.04)
+			(xy 87.63 74.93)
+		)
+		(uuid "3f531f1f-4993-478b-ba8d-e72d13a84f8a")
 	)
 	(text "BUCK 12V - 3V3\n\n"
 		(at 168.656 206.502 0)
@@ -17001,6 +17006,16 @@
 			(justify left bottom)
 		)
 		(uuid "436423bd-8c01-4d0e-a201-868018e3417c")
+	)
+	(text "Fused 12 V input: legacy net name retained for existing copper."
+		(at 43.18 110.49 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "11fe58f9-a994-4518-9ffa-3485a93acb0d")
 	)
 	(label "EF_EN"
 		(at 358.14 162.56 180)
@@ -18041,17 +18056,6 @@
 		)
 		(uuid "13139587-9b2d-417f-97aa-6ae6760cace2")
 	)
-	(global_label "Net-(D1-A)"
-		(shape input)
-		(at 87.63 66.04 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a87f6ea0-de60-47db-a112-f4666d470475")
-	)
 	(global_label "VIN_RAW"
 		(shape input)
 		(at 100.33 53.34 0)
@@ -18063,11 +18067,17 @@
 		)
 		(uuid "c202f457-4110-4b45-a569-eb0f1bca8df1")
 	)
-  (text "Fused 12 V input\nLegacy net name retained for existing copper."
-    (at 57.15 54.61 0)
-    (effects (font (size 1 1)) (justify left bottom))
-    (uuid "1c22d4db-ac6c-4f7c-84b5-ee88c39793ef")
-  )
+	(global_label "Net-(D1-A)"
+		(shape input)
+		(at 87.63 74.93 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "334ec59d-23f1-4bc1-b6b7-2be94b12cbc3")
+	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 751.586 541.02 0)
@@ -48300,7 +48310,7 @@
 			)
 		)
 		(property "Value" "DMP6023LE-13"
-			(at 95.25 58.54 90)
+			(at 104.14 58.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48503,7 +48513,7 @@
 		(dnp no)
 		(uuid "6e796c37-90a6-4e4b-8321-205302398da3")
 		(property "Reference" "R85"
-			(at 81.28 90.17 0)
+			(at 80.01 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48511,7 +48521,7 @@
 			)
 		)
 		(property "Value" "10K/0603/1%"
-			(at 86.36 107.95 0)
+			(at 75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
