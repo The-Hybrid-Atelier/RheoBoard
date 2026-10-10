@@ -84,7 +84,7 @@ The additional sensor modules are unspecified. Their parallel pullups, addresses
 
 Communication loss intentionally retains commanded outputs while board power stays stable. Pumps remain fixed-direction and intermittent-use. The repository's DIY firmware is not automatically compatible with this PCB.
 
-No board was powered or physically measured during this work. The [JLCPCB v1 top placement interpretation](../../interpretation/8815214A_Y73_SMT026093063736_top.png) (order 8815214A_Y73 / SMT026093063736) does not validate v1.05. No manufacturing upload or new order was made.
+No board was powered or physically measured during this work. The [JLCPCB v1 top placement](../Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png) (order 8815214A_Y73 / SMT026093063736) does not validate v1.05. No manufacturing upload or new order was made.
 
 ## Evidence
 

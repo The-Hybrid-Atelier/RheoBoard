@@ -8,7 +8,7 @@ Hardware design licensing follows the repository root LICENSE, CERN-OHL-W-2.0. D
 
 ## Scope and operating decisions
 
-This revision updates the cloned v1.05 project. The previously submitted v1 design remains preserved. The original assembly workbook is [BOM_RheoboardV1_JLCSMT.xlsx](Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx). The [JLCPCB corrected top placement](../interpretation/8815214A_Y73_SMT026093063736_top.png) is evidence for order 8815214A_Y73 / SMT026093063736 only.
+This revision updates the cloned v1.05 project. The previously submitted v1 design remains preserved. The original assembly workbook is [BOM_RheoboardV1_JLCSMT.xlsx](Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx). The [JLCPCB corrected top placement](Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png) is evidence for order 8815214A_Y73 / SMT026093063736 only.
 
 The owner chose to retain the last commanded pump and valve states when master communication stops, retain the current pumps for intermittent use, and operate multiple boards. The working system arrangement uses one board per channel of an external TCA9548A multiplexer. No communication watchdog or reversible motor driver is added. The board continues to generate its own 3.3 V, approximately 4.52 V and 6.0 V rails from 12 V.
 

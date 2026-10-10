@@ -1,6 +1,6 @@
 # RheoBoard v1.05 manufacturing files
 
-The current package includes the dedicated J9 Qwiic master interface, U13 and its five supporting components, as well as the earlier input-protection and footprint corrections. Use the sources, BOM and manufacturing exports in this revision together; the [current review](../Verification/REVIEW_REPORT.md) records their verification. The copied files in `../Archive_v1_outputs/` and the [v1 JLCPCB placement interpretation](../../interpretation/8815214A_Y73_SMT026093063736_top.png) belong to v1.
+The current package includes the dedicated J9 Qwiic master interface, U13 and its five supporting components, as well as the earlier input-protection and footprint corrections. Use the sources, BOM and manufacturing exports in this revision together; the [current review](../Verification/REVIEW_REPORT.md) records their verification. The copied files in `../Archive_v1_outputs/` and the [v1 JLCPCB placement](../Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png) belong to v1.
 
 ## Files
 

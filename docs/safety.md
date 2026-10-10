@@ -21,14 +21,14 @@ The adapter supplies the pumps and the valve. On the DIY panel it feeds both L29
 
 On the DIY diagram, the orange **12 V DC** box is that adapter. Its line enters **L298N #1 (Pumps)** and **L298N #2 (Valve)**.
 
-<a href="../RheoBoard_PCB/interpretation/custom-pcb-block-diagram.png"><img src="../RheoBoard_PCB/interpretation/custom-pcb-block-diagram.png" alt="Custom PCB block diagram. 12 V feeds the board regulators." width="576"></a>
+<a href="../RheoBoard_PCB/images/custom-pcb-block-diagram.png"><img src="../RheoBoard_PCB/images/custom-pcb-block-diagram.png" alt="Custom PCB block diagram. 12 V feeds the board regulators." width="576"></a>
 
 On the custom PCB, 12 V enters at the top and feeds the regulators. The valve rail is 6 V and the pump rail is 4.5 V.
 
 ## Portable battery
 
 <img src="../BuildYourOwn/images/esp32-thing-plus.jpg" width="384" alt="SparkFun ESP32 Thing Plus, with the micro-USB connector and the JST battery socket">
-<img src="../img/battery-prt-26059/battery-prt-26059.jpg" width="384" alt="SparkFun Lithium Ion Battery PRT-26059 with its 2-pin plug">
+<img src="img/battery-prt-26059/battery-prt-26059.jpg" width="384" alt="SparkFun Lithium Ion Battery PRT-26059 with its 2-pin plug">
 
 Portable power, on the DIY build and on the PCB, is the [SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (PRT-26059)](https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html) plugged into the ESP32 Thing Plus JST battery connector (nominal 3.7 V; schematic V_BATT, 4.2 V maximum).
 

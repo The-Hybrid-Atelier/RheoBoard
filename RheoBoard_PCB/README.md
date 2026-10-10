@@ -36,11 +36,13 @@ layout change.
 | Assembly BOM | [`RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx`](RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx) |
 | Pick-and-place | [`RheoBoard_v1/CPL/CPL.csv`](RheoBoard_v1/CPL/CPL.csv) |
 
-## Supplier placement interpretation
+## Supplier placement
 
 JLCPCB's corrected top-side part placement for the submitted Rheoboard V1 assembly is
-[`interpretation/8815214A_Y73_SMT026093063736_top.png`](interpretation/8815214A_Y73_SMT026093063736_top.png).
+[`RheoBoard_v1.05/Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png`](RheoBoard_v1.05/Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png).
 Order 8815214A_Y73, SMT job SMT026093063736, stamp 20261008110423663. See
-[`interpretation/README.md`](interpretation/README.md).
+[`RheoBoard_v1.05/Archive_v1_outputs/README.txt`](RheoBoard_v1.05/Archive_v1_outputs/README.txt).
+
+The custom-board block diagram is [`images/custom-pcb-block-diagram.png`](images/custom-pcb-block-diagram.png). It shows 12 V in, the ESP32 Thing Plus, the Qwiic and I2C devices, a 6 V valve rail, and a 4.5 V pump rail.
 
 This board is a prototype.

@@ -32,7 +32,7 @@ Third-party parts, photos, datasheets, and libraries remain under their original
 are listed in [`BuildYourOwn/images/README.md`](BuildYourOwn/images/README.md) and
 [`BuildYourOwn/hardware/references/README.md`](BuildYourOwn/hardware/references/README.md).
 
-<a href="https://certification.oshwa.org/us002865.html"><img src="docs/images/oshwa-certification-mark-US002865-wide.svg" alt="OSHW certification mark US002865" height="48"></a>
+<a href="https://certification.oshwa.org/us002865.html"><img src="docs/img/oshwa-certification-mark-US002865-wide.svg" alt="OSHW certification mark US002865" height="48"></a>
 
 RheoBoard version 1 is certified open source hardware by the Open Source Hardware Association,
 UID [US002865](https://certification.oshwa.org/us002865.html) (certified 2026-10-08); its docs are

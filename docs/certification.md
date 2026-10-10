@@ -3,7 +3,7 @@
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE). This license does not cover the OSHWA
 certification mark files; see below.
 
-<a href="https://certification.oshwa.org/us002865.html"><img src="images/oshwa-certification-mark-US002865-stacked.svg" alt="OSHW certification mark US002865" width="160"></a>
+<a href="https://certification.oshwa.org/us002865.html"><img src="img/oshwa-certification-mark-US002865-stacked.svg" alt="OSHW certification mark US002865" width="160"></a>
 
 RheoBoard is certified open source hardware by the
 [Open Source Hardware Association](https://www.oshwa.org/) (OSHWA).
@@ -15,13 +15,13 @@ RheoBoard is certified open source hardware by the
 - Directory listing: https://certification.oshwa.org/us002865.html
 - Licenses on file: CERN-OHL-W-2.0 (hardware), MIT (software), CC-BY-SA-4.0 (documentation)
 
-![Open Source Licenses: hardware CERN-OHL-W-2.0, software MIT, documentation CC-BY-SA-4.0](images/oshwa-license-facts.svg)
+![Open Source Licenses: hardware CERN-OHL-W-2.0, software MIT, documentation CC-BY-SA-4.0](img/oshwa-license-facts.svg)
 
 ## Mark files
 
-- [`images/oshwa-certification-mark-US002865-stacked.svg`](images/oshwa-certification-mark-US002865-stacked.svg)
-- [`images/oshwa-certification-mark-US002865-wide.svg`](images/oshwa-certification-mark-US002865-wide.svg)
-- [`images/oshwa-license-facts.svg`](images/oshwa-license-facts.svg) — license label from the
+- [`img/oshwa-certification-mark-US002865-stacked.svg`](img/oshwa-certification-mark-US002865-stacked.svg)
+- [`img/oshwa-certification-mark-US002865-wide.svg`](img/oshwa-certification-mark-US002865-wide.svg)
+- [`img/oshwa-license-facts.svg`](img/oshwa-license-facts.svg) — license label from the
   [OSHWA facts generator](https://oshwa.github.io/certification-mark-generator/facts)
 
 The two mark files are OSHWA's templates from https://certification.oshwa.org with the UID filled

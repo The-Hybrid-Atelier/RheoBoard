@@ -85,8 +85,8 @@
     },
     {
       "path": "ASSEMBLY_AND_BRINGUP.md",
-      "bytes": 13821,
-      "sha256": "183cf9c6b42568f447707f1f081f8a2161ec67f37efeeb3d1b75021245ff1286"
+      "bytes": 13807,
+      "sha256": "1dec3a15645ffdf180b6f5e8b7156e71479bf0b05423a93ff87df04f5d16f578"
     },
     {
       "path": "BOM/BOM_RheoBoard_v1.05.xlsx",
@@ -285,8 +285,8 @@
     },
     {
       "path": "Manufacturing/README.md",
-      "bytes": 3659,
-      "sha256": "87baaad8d255886d3b30cd316a0dee3bd75212e9ead578f35773575619fa9034"
+      "bytes": 3645,
+      "sha256": "837cadc36e76c902a0d0d98b513e3a3843cf720d3f450511c4c8085043e8c1f4"
     },
     {
       "path": "Manufacturing/RheoBoard_v1.05_fabrication.zip",
@@ -300,8 +300,8 @@
     },
     {
       "path": "REVISION_NOTES.md",
-      "bytes": 11259,
-      "sha256": "6dad082641f0c5348b98af60c43f104382757c594ea5f27db9e46a12d022c105"
+      "bytes": 11260,
+      "sha256": "451ea9d01df8b9ee38d2fbddaf405358a63f9d953bbf9b2bafc86ce2fe72fbcb"
     },
     {
       "path": "RheoboardV1/1_Power.kicad_sch",
@@ -645,8 +645,8 @@
     },
     {
       "path": "Verification/REVIEW_REPORT.md",
-      "bytes": 16398,
-      "sha256": "4b6dde3411c5a3a6479a3f60397d1641565db49dc15cda9698f3e032099a53cf"
+      "bytes": 16384,
+      "sha256": "abe7341b7ce7513333b534779447f86676da498e121a00e7d274e078e627d4ba"
     },
     {
       "path": "Verification/Recheck_2026-10-09/aggregate-adjudication.json",
