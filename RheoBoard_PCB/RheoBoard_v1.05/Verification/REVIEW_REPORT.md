@@ -84,6 +84,7 @@ No board was powered or physically measured during this work. The [JLCPCB v1 top
 
 ## Evidence
 
+- [Complete v1 versus v1.05 schematic and layout comparison](V1_TO_V105_COMPARISON.md), including every current component reference and fresh drawings.
 - [Full independent findings and checklist coverage](Thorough_2026-10-09/full-independent-review.json), [85 circuit assertions](Thorough_2026-10-09/full-block-checks.json), [connectivity and layout inventory](Thorough_2026-10-09/full-connectivity-layout-inventory.json).
 - Current full-board check: [ERC](Thorough_2026-10-09/run_erc-decoded.json), [DRC](Thorough_2026-10-09/get_drc_violations-decoded.json), [DRC with analysis-only refill](Thorough_2026-10-09/drc-refill-decoded.json), [aggregate and coverage](Thorough_2026-10-09/run_design_review-decoded.json).
 - Current [electrical calculations](Thorough_2026-10-09/electrical-review.json), [BOM/placement/fabrication reconciliation](Thorough_2026-10-09/artifact-review.json), [all CAD/library hashes](Thorough_2026-10-09/design-integrity.json).

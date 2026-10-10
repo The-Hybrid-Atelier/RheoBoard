@@ -20,14 +20,14 @@ From the build guide:
 
 Everyday wall power for the DIY build and for the PCB is that 12 V plug.
 
-<a href="../BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png"><img src="../BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png" alt="DIY electrical schematic. The 12 V DC box feeds both L298N boards." width="720"></a>
+<a href="../BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png"><img src="../BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png" alt="DIY electrical schematic. The 12 V DC box feeds both L298N boards." width="576"></a>
 
 The orange **12 V DC** box is that adapter. Its line enters **L298N #1 (Pumps)** and **L298N #2 (Valve)**. The ESP32 box is drawn with a Qwiic connector and a ground symbol. The adapter stays unplugged until the Step 04 checks.
 
 ## Portable battery
 
-<img src="../BuildYourOwn/images/esp32-thing-plus.jpg" width="180" alt="SparkFun ESP32 Thing Plus, with the micro-USB connector and the JST battery socket">
-<img src="../img/battery-prt-26059/battery-prt-26059.jpg" width="180" alt="SparkFun Lithium Ion Battery PRT-26059 with its 2-pin plug">
+<img src="../BuildYourOwn/images/esp32-thing-plus.jpg" width="384" alt="SparkFun ESP32 Thing Plus, with the micro-USB connector and the JST battery socket">
+<img src="../img/battery-prt-26059/battery-prt-26059.jpg" width="384" alt="SparkFun Lithium Ion Battery PRT-26059 with its 2-pin plug">
 
 Portable power for the SparkFun ESP32 Thing Plus is the [SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (PRT-26059)](https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html) plugged into its JST battery connector (nominal 3.7 V; vendored schematic V_BATT, 4.2 V maximum).
 
@@ -35,7 +35,7 @@ The first photo is that ESP32 board. Its 2-pin JST socket is the battery connect
 
 ## Soldering
 
-<img src="../BuildYourOwn/images/l298n-motor-driver.jpg" width="220" alt="Generic L298N module with screw terminals and a pin header">
+<img src="../BuildYourOwn/images/l298n-motor-driver.jpg" width="198" alt="Generic L298N module with screw terminals and a pin header">
 
 From the health and safety notice: the build involves soldered wiring. Risk: burns from soldering.
 
@@ -45,7 +45,7 @@ This photo is the generic L298N stand-in from the parts list. The blue screw ter
 
 ## Pneumatic pressure
 
-<a href="../BuildYourOwn/hardware/tube-wiring/tube-connection.png"><img src="../BuildYourOwn/hardware/tube-wiring/tube-connection.png" alt="Tube diagram. The chamber/nozzle is the open end of the sensed line." width="640"></a>
+<a href="../BuildYourOwn/hardware/tube-wiring/tube-connection.png"><img src="../BuildYourOwn/hardware/tube-wiring/tube-connection.png" alt="Tube diagram. The chamber/nozzle is the open end of the sensed line." width="512"></a>
 
 From the health and safety notice: the build involves generated pneumatic pressure/vacuum. Pressurized-air hazards: do not point tubing/nozzles at eyes; keep pressures modest.
 
@@ -61,8 +61,8 @@ On the wiring diagram above, each L298N box labels **+5 V** as that board's own 
 
 ## Pumps on the 12 V rail
 
-<img src="../BuildYourOwn/images/adafruit-4699-air-pump.jpg" width="180" alt="Adafruit 4699 air pump. The silver can is the motor.">
-<img src="../BuildYourOwn/images/adafruit-4663-air-valve.jpg" width="180" alt="Adafruit 4663 6 V air valve">
+<img src="../BuildYourOwn/images/adafruit-4699-air-pump.jpg" width="384" alt="Adafruit 4699 air pump. The silver can is the motor.">
+<img src="../BuildYourOwn/images/adafruit-4663-air-valve.jpg" width="384" alt="Adafruit 4663 6 V air valve">
 
 From the health and safety notice: air pumps are ~4.5 V parts on a 12 V rail — limit duty cycle to avoid overheating.
 
