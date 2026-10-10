@@ -6,7 +6,7 @@ A builder starts on the wiki at [Build options](https://github.com/The-Hybrid-At
 
 ## DIY
 
-Build version 2, the flat 3D-printed panel. It is in progress. Open items are marked TODO in the assembly instructions. Version 1 is the archived laser-cut panel. There are no laser-cut parts. The version 1 laser-cut panel, certified by OSHWA as US002865, is archived in [`BuildYourOwn/archive/laser-cut-v1/`](../BuildYourOwn/archive/laser-cut-v1/). On the wiki it is in the Helpful group of the sidebar.
+Build version 2, the flat 3D-printed panel. It is in progress. Open items are marked TODO in the assembly instructions. There are no laser-cut parts. Version 1 is the archived laser-cut panel in the repository at [`BuildYourOwn/archive/laser-cut-v1/`](../BuildYourOwn/archive/laser-cut-v1/), not a wiki page. It is certified by OSHWA as US002865.
 
 The DIY version uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 

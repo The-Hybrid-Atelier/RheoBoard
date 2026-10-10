@@ -1,0 +1,36 @@
+{
+  "status": "Reconciled with saved CAD and native placement: see manufacturing-reconciliation.json",
+  "fitted_parts": 148,
+  "SMT_parts": 142,
+  "SMT_groups": 45,
+  "manual_accessories_unchanged": true,
+  "cached_quantity_total": 148,
+  "formula_errors": 0,
+  "new_parts": {
+    "Q11": {
+      "value": "DMP6023LE-13",
+      "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "lcsc": "C154901",
+      "mpn": "DMP6023LE-13",
+      "manufacturer": "Diodes Incorporated",
+      "assembly": "SMT"
+    },
+    "D37": {
+      "value": "BZT52C10-7-F",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "lcsc": "C155227",
+      "mpn": "BZT52C10-7-F",
+      "manufacturer": "Diodes Incorporated",
+      "assembly": "SMT"
+    },
+    "R85": {
+      "value": "10K/0603/1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+      "lcsc": "C25804",
+      "mpn": "0603WAF1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "assembly": "SMT"
+    }
+  },
+  "xlsx_sha256": "966478039be5823535555362103af84b576f298977cf1270f2abc9307ae427f4"
+}

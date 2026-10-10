@@ -1,0 +1,452 @@
+{
+  "component_counts": {
+    "baseline": 165,
+    "final": 167,
+    "retained": 164,
+    "removed": [
+      "D1"
+    ],
+    "added": [
+      "D37",
+      "Q11",
+      "R85"
+    ]
+  },
+  "retained_component_value_footprint_differences": [],
+  "retained_exported_component_differences_excluding_sheetfile_metadata": [],
+  "retained_electrical_group_changes": {
+    "removed_groups": [],
+    "added_groups": []
+  },
+  "retained_pin_net_name_changes": [],
+  "pcb_schematic_pin_parity": {
+    "count": 418,
+    "missing": [],
+    "differences": [
+      {
+        "ref": "U12",
+        "pin": "10",
+        "schematic_net": "unconnected-(U12-ITIMER-Pad10)",
+        "board_nets": [
+          "unconnected-(U12-ITIMER-Pad10)",
+          "unconnected-(U12-ITIMER-Pad10)_1"
+        ]
+      }
+    ]
+  },
+  "saved_component_placement_changes": [],
+  "retained_pad_geometry_changes": [],
+  "outline_identical": true,
+  "track_changes_by_net": [
+    {
+      "layer": "F.Cu",
+      "net": "GND",
+      "removed": 0,
+      "added": 1
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(D1-A)",
+      "removed": 0,
+      "added": 1
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(D37-A)",
+      "removed": 0,
+      "added": 6
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN_RAW",
+      "removed": 1,
+      "added": 3
+    }
+  ],
+  "via_changes_by_net": [
+    {
+      "layer": "B.Cu",
+      "net": "GND",
+      "removed": 0,
+      "added": 1
+    },
+    {
+      "layer": "F.Cu",
+      "net": "GND",
+      "removed": 0,
+      "added": 1
+    }
+  ],
+  "zone_changes_by_net": [
+    {
+      "layer": "F.Cu",
+      "net": "GND",
+      "removed": 4,
+      "added": 5
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(D1-A)",
+      "removed": 1,
+      "added": 1
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN",
+      "removed": 1,
+      "added": 1
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN_RAW",
+      "removed": 1,
+      "added": 1
+    }
+  ],
+  "track_geometry_changes": {
+    "removed": [
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 137.0,
+            "endY": -47.6,
+            "startX": 133.8,
+            "startY": -50.8
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 1.0
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      }
+    ],
+    "added": [
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 129.0,
+            "endY": -49.35,
+            "startX": 130.199999,
+            "startY": -48.15
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.25
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 129.0,
+            "endY": -51.8875,
+            "startX": 129.0,
+            "startY": -49.35
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.25
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 130.199999,
+            "endY": -51.8875,
+            "startX": 129.0,
+            "startY": -51.8875
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.25
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 130.199999,
+            "endY": -55.0,
+            "startX": 130.199999,
+            "startY": -53.7125
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.3
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 132.0,
+            "endY": -51.8875,
+            "startX": 130.199999,
+            "startY": -51.8875
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.25
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 132.0,
+            "endY": -53.4,
+            "startX": 132.0,
+            "startY": -51.8875
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.25
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 132.5,
+            "endY": -41.85,
+            "startX": 132.5,
+            "startY": -48.15
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 1.5
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 134.8,
+            "endY": -50.1,
+            "startX": 134.8,
+            "startY": -48.15
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.5
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 134.8,
+            "endY": -53.4,
+            "startX": 132.0,
+            "startY": -53.4
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 0.25
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 136.45,
+            "endY": -48.15,
+            "startX": 134.8,
+            "startY": -48.15
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 1.5
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": [
+          "Line",
+          {
+            "endX": 137.0,
+            "endY": -47.6,
+            "startX": 136.45,
+            "startY": -48.15
+          },
+          [
+            [
+              "LineDesc",
+              {
+                "lineEnd": "ROUND",
+                "lineWidth": 1.5
+              },
+              []
+            ]
+          ]
+        ],
+        "count": 1
+      }
+    ]
+  },
+  "via_geometry_changes": {
+    "removed": [],
+    "added": [
+      {
+        "layer": "B.Cu",
+        "geometry": {
+          "layer": "B.Cu",
+          "location": {
+            "x": 130.199999,
+            "y": -55.0
+          },
+          "shape": [
+            "Circle",
+            {
+              "diameter": 0.6
+            },
+            []
+          ],
+          "transform": {}
+        },
+        "count": 1
+      },
+      {
+        "layer": "F.Cu",
+        "geometry": {
+          "layer": "F.Cu",
+          "location": {
+            "x": 130.199999,
+            "y": -55.0
+          },
+          "shape": [
+            "Circle",
+            {
+              "diameter": 0.6
+            },
+            []
+          ],
+          "transform": {}
+        },
+        "count": 1
+      }
+    ]
+  },
+  "final_new_pin_nets": {
+    "Q11": {
+      "2": "Net-(D1-A)",
+      "1": "Net-(D37-A)",
+      "3": "VIN_RAW"
+    },
+    "D37": {
+      "2": "Net-(D37-A)",
+      "1": "VIN_RAW"
+    },
+    "R85": {
+      "2": "GND",
+      "1": "Net-(D37-A)"
+    }
+  },
+  "evidence_hashes": {
+    "baseline-board.xml": "90ca09289fb8f20a6006c5587d2c1e2675ed2301ceffc18d8645428f58e0c092",
+    "baseline.net": "609f70a980e251147f4b8553f99b94eb5daedb63518e599d8ea87864bb167b4f",
+    "final-board.xml": "b17a5a6673da98aa9e76b92d16eedae437d453aaaa6a71ef3a910111137e4cc8",
+    "final.net": "0b1edea5aae378c9bd741a0611fd710fb604fc3a5cbe238212bf24ddddab8720"
+  }
+}

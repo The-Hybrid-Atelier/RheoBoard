@@ -48310,7 +48310,7 @@
 			)
 		)
 		(property "Value" "DMP6023LE-13"
-			(at 104.14 58.54 90)
+			(at 99.06 58.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)

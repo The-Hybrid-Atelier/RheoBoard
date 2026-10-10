@@ -1,0 +1,54 @@
+{
+  "method": "Compare all exported filled contour boundary segments, independent of polygon start point. All coordinates in mm; output bounds use KiCad positive-down Y. No source graph parsing.",
+  "changes": [
+    {
+      "layer": "F.Cu",
+      "net": "GND",
+      "removed_boundary_segments": 115,
+      "added_boundary_segments": 311,
+      "changed_boundary_bounds_board_mm": [
+        90.109767,
+        40.6495,
+        196.064862,
+        55.597845
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(D1-A)",
+      "removed_boundary_segments": 47,
+      "added_boundary_segments": 116,
+      "changed_boundary_bounds_board_mm": [
+        119.468307,
+        45.982665,
+        139.130908,
+        47.297999
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN",
+      "removed_boundary_segments": 89,
+      "added_boundary_segments": 542,
+      "changed_boundary_bounds_board_mm": [
+        127.739548,
+        47.86,
+        139.574004,
+        61.600002
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN_RAW",
+      "removed_boundary_segments": 20,
+      "added_boundary_segments": 7,
+      "changed_boundary_bounds_board_mm": [
+        136.0,
+        47.285644,
+        138.87236,
+        48.892756
+      ]
+    }
+  ],
+  "unsupported_contour_elements": []
+}

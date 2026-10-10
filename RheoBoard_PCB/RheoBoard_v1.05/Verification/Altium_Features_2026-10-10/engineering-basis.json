@@ -1,0 +1,54 @@
+{
+  "decision": "Retain valve on/off control; replace D1 with Q11 reverse-polarity stage only",
+  "input_path": [
+    "J2",
+    "F1",
+    "Q11 drain/tab",
+    "Q11 source / VIN_RAW",
+    "U12",
+    "three converters"
+  ],
+  "parts": {
+    "Q11": {
+      "mpn": "DMP6023LE-13",
+      "manufacturer": "Diodes Incorporated",
+      "lcsc": "C154901",
+      "datasheet": "https://www.diodes.com/datasheet/download/DMP6023LE.pdf",
+      "Vds_V": 60,
+      "Vgs_abs_V": 20,
+      "rds_at_4p5V_25C_ohm": 0.035
+    },
+    "D37": {
+      "mpn": "BZT52C10-7-F",
+      "lcsc": "C155227",
+      "datasheet": "https://www.diodes.com/datasheet/download/BZT52Cxx.pdf",
+      "connection": "cathode source; anode gate",
+      "nominal_Vz_at_5mA": 10
+    },
+    "R85": {
+      "mpn": "0603WAF1002T5E",
+      "manufacturer": "UNI-ROYAL",
+      "lcsc": "C25804",
+      "ohms": 10000,
+      "connection": "gate to GND"
+    }
+  },
+  "calculated_Q11_loss_W_at_2p03A_25C": 0.14423149999999998,
+  "calculated_drop_V_at_2p03A_25C": 0.07105,
+  "limits": [
+    "Rds increases with junction temperature; board thermal resistance not measured.",
+    "Zener operating current below 5mA means actual gate voltage differs from nominal10V.",
+    "Q11 alone is not a reverse-current blocker. U12 retained for downstream reverse-current blocking.",
+    "Input remains regulated12V; surge/hotplug/reversal behavior requires hardware measurement."
+  ],
+  "valve_basis": [
+    "FA0520E two-position three-way valve has no manufacturer qualified PWM hold current/duty specification.",
+    "PCA9685 has one common PWM frequency for pumps and any added valve channels.",
+    "Retain existing firmware interface and default-off gate pull-downs."
+  ],
+  "sources": [
+    "https://www.adafruit.com/product/4663",
+    "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+    "https://www.ti.com/lit/ds/symlink/tps25947.pdf"
+  ]
+}

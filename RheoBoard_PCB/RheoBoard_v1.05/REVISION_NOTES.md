@@ -1,8 +1,8 @@
 # RheoBoard v1.05 revision record
 
-CAD revision saved and fabrication/assembly exports reconciled on 2026-10-09. Supplier placement acceptance and physical qualification remain open. See the [review report](Verification/REVIEW_REPORT.md).
+CAD revision saved and fabrication/assembly exports reconciled on 2026-10-10. Supplier placement acceptance and physical qualification remain open. See the [review report](Verification/REVIEW_REPORT.md).
 
-The subsequent full recheck identified an unresolved U5 startup/reset risk. No circuit change has yet been made for this finding; production approval remains pending its resolution.
+The maintainer accepted the retained U5 startup/reset and valve-rail voltage-margin risks for this prototype on 2026-10-09. Those circuits are unchanged; their acceptance does not establish measured qualification.
 
 Hardware design licensing follows the repository root LICENSE, CERN-OHL-W-2.0. Documentation is CC BY-SA 4.0.
 
@@ -17,10 +17,10 @@ The owner chose to retain the last commanded pump and valve states when master c
 | Area | v1.05 change | Reason / validation target |
 | --- | --- | --- |
 | Pump and valve bulk capacitors | C32, C34, C43 and C45 become Panasonic EEEFK1H220P, 22 µF / 50 V, C128458. | Reduces each rail from about 244 µF to 88.3 µF nominal. Verify startup and load transients on hardware. |
-| Input protection | Add U12 TPS259472ARPWR, D36 and R78–R81 / C64–C67 between D1 and the converters. | Controlled startup, approximately 2 A current limit and 13.8 V nominal clamp. Explicitly approved by the owner. |
+| Input protection | Add U12 TPS259472ARPWR, D36 and R78–R81 / C64–C67 downstream of the reverse-polarity stage and ahead of the converters. | Controlled startup, approximately 2 A current limit and 13.8 V nominal clamp. Explicitly approved by the owner. |
 | Input fuse | F1 uses a centered project-local JDT JFC1032TS footprint. | Match the selected JFC1032-1200TS fuse and eliminate the old placement-origin offset. |
 | Inductors | L1, L2 and L5 use the FXL0530 footprint. | Match C177246 / FXL0530-4R7-M instead of the old Bourns purchasing link and undersized land pattern. |
-| Diodes | D1 uses B540C-13-F / SMC; D11, D12, D16 and D18 use Jingdao SS34 / SMA. | Align the value, package, procurement code and cathode marks. |
+| Reverse-polarity stage and diodes | Q11/D37/R85 replace D1 with a 60 V P-MOS stage. D11, D12, D16 and D18 retain Jingdao SS34 / SMA. | Reduce series input loss while retaining the fuse and eFuse; verify polarity, transient behavior and temperature. |
 | Qwiic master connection | Make J9 the dedicated four-wire Qwiic MASTER port. Add U13 TCA9517ADGKR, C68/C69 and R82–R84; keep J1/J12/J17 as locally powered Qwiic SENSOR ports. | Preserve standard Qwiic cables while separating the USB/battery-powered ESP32 supply from RheoBoard's regulator. Local bus is on U13 A; master is on B. |
 | Local debug connection | Retain the existing J3 four-pin JST EH header. Remove the redundant J18 three-pin service header, its schematic stubs, two dedicated PCB branches and service labels. | J3 already exposes GND, onboard 3.3 V, SDA and SCL. J9 remains the intended Qwiic master/mux connection. |
 | Valve connectors | U9 and U10 identify JST B2B-XH-A headers with 2.50 mm pitch. External valves are separate accessories. | Correct the footprint pitch/drill and include the missing fitted headers in the BOM. |
@@ -31,9 +31,19 @@ The owner chose to retain the last commanded pump and valve states when master c
 | Assembly metadata | Separate SMT parts from manually fitted headers, jack and pumps. | Keep manual parts out of the SMT placement file and make purchasing quantities explicit. |
 | Manufacturing outputs | Generate a fresh BOM, placement file, Gerbers and Excellon drill files after routing checks. | Prevent the copied v1 outputs from being mistaken for v1.05. |
 
+## Selective Altium features — 2026-10-10
+
+The lower-loss input stage replaces D1 with Q11 DMP6023LE-13 (60 V P-channel MOSFET, SOT-223), D37 BZT52C10-7-F (nominal 10 V gate-source zener) and R85 10 kΩ. Q11 pin 2 and its tab are the drain at the fused input; pin 3 is the source at VIN_RAW. Pin 1 is the gate, pulled to GND by R85. D37's cathode connects to the source and its anode to the gate. F1, the downstream U12 eFuse, D36 TVS, converter values, Qwiic interface and mechanical outline are retained.
+
+The selected manufacturer parts are Q11 C154901, D37 C155227 and R85 C25804. Using the MOSFET's maximum 35 mΩ specification at −4.5 V gate drive and 25 °C gives approximately 71 mV drop and 0.144 W conduction loss at the nominal 2.03 A current limit. Resistance increases with temperature. This estimate does not establish the actual board's thermal limit, and the data-sheet headline current rating is not a board current rating. [Diodes DMP6023LE](https://www.diodes.com/datasheet/download/DMP6023LE.pdf).
+
+D37 is nominally 10 V at 5 mA; its current in this circuit is lower, so do not assume exactly −10 V gate drive or use the MOSFET's lower −10 V on-resistance without measurement. Q11 provides reverse-polarity protection but is not a controlled ideal diode: live polarity reversal or removal can briefly conduct backward. U12's downstream reverse-current blocking is retained. Input hot-plug, reversal, startup and temperature remain physical qualification items. [Diodes BZT52C series](https://www.diodes.com/datasheet/download/BZT52Cxx.pdf), [TI TPS25947](https://www.ti.com/lit/ds/symlink/tps25947.pdf).
+
+Valves retain their existing TCA9534 on/off control. The FA0520E is a two-position valve without a qualified PWM holding duty in its supplier specification. The PCA9685 uses one common PWM frequency for all channels, including the pumps. Adding valve PWM would require a separate hold/release and thermal validation; it is not part of this revision. Pump PWM remains unchanged. [Valve specification](https://cdn-shop.adafruit.com/product-files/4663/4663_C14660_DC_6V.pdf), [NXP PCA9685](https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf).
+
 ## Input-protection design basis
 
-The input path is J2 → F1 → D1 → VIN_RAW → U12 → protected VIN → the three existing buck converters. D36 is a unidirectional SMBJ13A from VIN_RAW to GND, with its cathode on VIN_RAW. The TVS alone is not the buck overvoltage protection.
+The input path is J2 → F1 → Q11 drain/tab → Q11 source / VIN_RAW → U12 → protected VIN → the three existing buck converters. D36 is a unidirectional SMBJ13A from VIN_RAW to GND, with its cathode on VIN_RAW. The TVS alone is not the buck overvoltage protection.
 
 U12 uses TI's 10-pad RPW0010A HotRod land pattern. R78/R79 form the 680 kΩ / 100 kΩ undervoltage divider. R80 is 390 kΩ on OVCSEL; R81 is 1.65 kΩ on ILM. C64 is 3.3 nF on DVDT. PG and ITIMER are intentionally unconnected; PGTH is grounded. Local input and output ceramic capacitors must sit next to the corresponding power and ground connections.
 

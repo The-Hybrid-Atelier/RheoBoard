@@ -1,0 +1,12 @@
+{
+  "input_current_A": 2.03,
+  "copper_assumed_um": 35,
+  "temperature_rise_target_C": 10,
+  "IPC2221_external_min_width_mm": 0.7976509869133379,
+  "new_power_trace_width_mm": 1.5,
+  "new_power_trace_length_mm": 8.727817459305202,
+  "approx_new_power_trace_loss_W_20C": 0.011810701363222775,
+  "Q11_RDSon_basis_ohm_25C_VGSminus4_5": 0.035,
+  "Q11_loss_W_25C": 0.14423149999999998,
+  "limitation": "Empirical trace sizing check only; board copper spreading, actual copper thickness, hot RDS(on), transient and reverse-polarity tests require physical qualification."
+}

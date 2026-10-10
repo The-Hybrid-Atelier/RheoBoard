@@ -1,0 +1,30 @@
+{
+  "scope": "Only U8/U11/TP1 footprint attribute records; read-only Channel 3 last resort explicitly authorized after native netlist/IPC-2581 exports omitted them. No geometry, connectivity or source editing through this fallback.",
+  "baseline": {
+    "U8": [
+      "exclude_from_pos_files",
+      "through_hole"
+    ],
+    "TP1": [
+      "exclude_from_pos_files"
+    ],
+    "U11": [
+      "exclude_from_pos_files",
+      "through_hole"
+    ]
+  },
+  "final": {
+    "U8": [
+      "exclude_from_pos_files",
+      "through_hole"
+    ],
+    "TP1": [
+      "exclude_from_pos_files"
+    ],
+    "U11": [
+      "exclude_from_pos_files",
+      "through_hole"
+    ]
+  },
+  "exactly_preserved": true
+}

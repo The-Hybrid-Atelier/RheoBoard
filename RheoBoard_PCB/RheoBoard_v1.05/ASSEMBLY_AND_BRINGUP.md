@@ -46,7 +46,7 @@ Provide pullups on the master side of the mux and keep its active-low RESET inpu
 
 Use the revised BOM's exact manufacturer part numbers and footprints. The SMT placement file excludes through-hole and manually fitted parts. J2, J3, the two valve headers and the pumps require the manual assembly steps shown in the BOM. U9 and U10 identify the fitted valve headers; the two external FA0520E valves are separately listed accessories.
 
-Inspect the fuse, all three inductors, diode bands, IC pin-1 marks and electrolytic polarities. Confirm the valve cable polarity against the header markings before insertion. Check pump terminal polarity and support the pump bodies mechanically; soldered wires are not mechanical mounts. Fit the valve bodies and hoses without loading the connectors or sensor port.
+Inspect the fuse, all three inductors, diode bands, IC pin-1 marks and electrolytic polarities. Q11 is the SOT-223 input MOSFET: pin 1 gate, pin 2/tab drain to the fused jack input, pin 3 source to VIN_RAW. D37's banded cathode faces VIN_RAW/source, and its anode connects to the gate. Confirm these against the new placement preview; the old v1 preview shows D1 instead. Confirm the valve cable polarity against the header markings before insertion. Check pump terminal polarity and support the pump bodies mechanically; soldered wires are not mechanical mounts. Fit the valve bodies and hoses without loading the connectors or sensor port.
 
 The specified pump's drawing gives a 27.0 ±0.2 mm plastic-head diameter and 24.0 ±0.3 mm motor-can diameter. Its body length is 58.2 ±0.1 mm, with a further 6.1 ±0.2 mm axial nozzle projection. Reserve additional room for tubing and its bend radius. The drawing does not dimension the side nozzle's radial reach or guarantee the PCB terminal-hole fit, so check the supplied pumps and hose routing physically. [Pump dimension drawing](https://cdn-shop.adafruit.com/product-files/4699/4699_C14656_diagram.jpg).
 
@@ -54,7 +54,7 @@ The [JLCPCB top placement](Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.p
 
 ## Controller initialization and channel map
 
-**Open design issue:** U5's reset pin currently has only a pull-up and TP3 access. A guaranteed sensor reset strategy after stable power is still needed; waiting in firmware alone does not supply that reset. Resolve the [startup finding](Verification/REVIEW_REPORT.md) before treating this initialization sequence as qualified.
+**Accepted prototype risk:** U5's reset pin retains a pull-up and TP3 access. The maintainer requested no reset-circuit change. Waiting in firmware alone does not guarantee the required reset; reliable startup and recovery remain unmeasured. See the retained [startup finding](Verification/REVIEW_REPORT.md).
 
 For cold startup, keep all loads OFF until the three rails are stable. On the selected mux channel, write TCA9534A register **0x01 = 0x00 first**, then register **0x02 = 0x00**, then configuration register **0x03 = 0xFC**. This sets P0/P1 as outputs only after their output latches are low; P2–P7 remain inputs. Configuring P0/P1 first would briefly apply their reset latch value of HIGH. [TI GPIO datasheet](https://www.ti.com/lit/ds/symlink/tca9534a.pdf).
 
@@ -83,8 +83,9 @@ These are physical measurements to record on the first assembled v1.05 boards. T
 | --- | --- |
 | Unpowered inspection | Fitted identities and orientation; no bridges; no sustained rail-to-ground short after capacitors settle. |
 | Initial power, host and loads disconnected | Input current and approximately 3.3 V, 4.52 V and 6.0 V rails. Stop for current limiting, unexpected voltage or heating. |
-| Supply startup and hot plug | Scope VIN_RAW, protected VIN and all three outputs. Verify protected VIN remains within the buck's operating range, including transient peaks. |
-| Sensor startup and brownout | Resolve the U5 reset strategy, then measure VDD and RES together and verify reliable initialization across power cycles and supply dips. |
+| Supply startup and hot plug | Scope fused input, VIN_RAW, protected VIN, Q11 gate-source voltage and all three outputs. Verify protected VIN remains within the buck's operating range, including transient peaks. |
+| New reverse-polarity stage | With a current-limited test setup, verify Q11 pinout, gate voltage, voltage drop, temperature and reverse-input behavior. Live reversal needs a controlled bench test; the P-MOS alone is not an ideal-diode reverse-current controller. |
+| Sensor startup and brownout | Record VDD/RES and initialization across power cycles and supply dips; the retained reset circuit is an accepted prototype risk. |
 | Qwiic power states | Test host-only power, board-only power, both powered and each power-up order. Measure both 3.3 V rails for backfeed and both SDA/SCL pairs for valid levels, edges and leakage. |
 | One load at a time | Correct physical channel, pump starting/stall current, valve operation, supply droop and flyback waveform. Keep stall tests brief and current limited. |
 | Combined loads and PWM | Startup, load-step overshoot/undershoot, switching ripple, input current and temperatures over the intended run/rest cycle. |

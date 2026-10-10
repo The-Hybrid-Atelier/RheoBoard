@@ -1,0 +1,125 @@
+{
+  "reviewer": "/root/kicad_qwiic_review",
+  "timestamp_utc": "2026-10-10T16:45:09.835109+00:00",
+  "stage": "proposed-circuit independent review; final CAD not reviewed",
+  "scope": "D1 replacement by Q11/D37/R85; preserve F1, D36, U12, all downstream rail settings and Qwiic; valve-control choice",
+  "verdict": "No confirmed DC topology blocker. Saved implementation, routing, and bench transients remain unverified.",
+  "sources": [
+    {
+      "part": "DMP6023LE-13",
+      "url": "https://www.diodes.com/datasheet/download/DMP6023LE.pdf",
+      "document": "DS37199 Rev 3-2 January 2015",
+      "pages": [
+        1,
+        2,
+        6
+      ],
+      "evidence": [
+        "DMP6023LE.pdf",
+        "DMP6023LE-pinout.png",
+        "DMP6023LE-land.png"
+      ]
+    },
+    {
+      "part": "BZT52C10-7-F",
+      "url": "https://www.diodes.com/datasheet/download/BZT52Cxx.pdf",
+      "document": "DS18004 Rev 38-2 October 2017",
+      "pages": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "part": "TPS259472ARPWR",
+      "url": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+      "document": "TPS25947 Rev C May 2026",
+      "sections": [
+        "Absolute maximum ratings",
+        "7.3.1 Reverse Polarity Protection",
+        "True Reverse Current Blocking"
+      ]
+    },
+    {
+      "part": "FA0520E DC6.0V",
+      "url": "https://cdn-shop.adafruit.com/product-files/4663/4663_C14660_DC_6V.pdf",
+      "document": "Manufacturer specification 2019-06-15 Rev 1.0",
+      "sections": [
+        "3 Pattern",
+        "3-2 Operating voltage",
+        "4-1 Endurance test"
+      ]
+    }
+  ],
+  "proposed_connections": {
+    "Q11.1_GATE": [
+      "D37.A",
+      "R85.1"
+    ],
+    "Q11.2_DRAIN_and_tab": [
+      "F1.output"
+    ],
+    "Q11.3_SOURCE": [
+      "VIN_RAW",
+      "D37.K"
+    ],
+    "R85.2": [
+      "GND"
+    ]
+  },
+  "device_checks": {
+    "Q11_pinout": "Visual manufacturer top view, rotated tab upward: lower leads G/D/S left-to-right; tab drain. Matches pins 1/2/3 G/D/S.",
+    "Q11_voltage_ratings": "60 V drain-source and \u00b120 V gate-source; positive 12 V normal / cold reversed 12 V have static margin.",
+    "Q11_land_pattern_mm": {
+      "lead_pad": [
+        1.2,
+        1.6
+      ],
+      "lead_pitch": 2.3,
+      "tab_pad": [
+        3.3,
+        1.6
+      ],
+      "pad_row_center_span": 6.4
+    },
+    "Q11_thermal_limit": "7 A and 60 \u00b0C/W use a 2 oz, one-inch-square copper test board. Do not transfer to actual layout. Resistance rises with temperature.",
+    "D37_voltage": "10 V nominal, 9.4\u201310.6 V specified at 5 mA. Ten-kilohm pull-down gives about 0.2 mA assuming a 10 V clamp from a 12 V source; exact clamp value is not guaranteed at this current.",
+    "D37_polarity": "Band/cathode to source/VIN_RAW; anode to gate.",
+    "gate_drive_basis": "At 25 \u00b0C, zener leakage maximum 0.2 \u00b5A at 7 V is far below resistor current at that operating point, supporting VSG above 7 V at a normal 12 V input; do not claim a guaranteed 10 V drive across temperature.",
+    "loss_estimate": {
+      "current_A": 2.03,
+      "resistance_ohm_at_25C_VGS_minus4p5": 0.035,
+      "dissipation_W": 0.14423149999999998,
+      "drop_V": 0.07105,
+      "limit": "Device test bound at 25 \u00b0C, not a hot-layout guarantee."
+    }
+  },
+  "state_reasoning": [
+    {
+      "state": "Cold correct polarity",
+      "assessment": "Body diode from incoming drain toward protected source starts charging VIN_RAW; gate pulled toward GND develops negative VGS and turns on. U12 downstream UVLO and controlled slew reduce later startup loading. Need saved layout and startup measurement."
+    },
+    {
+      "state": "Cold reversed input",
+      "assessment": "Source/gate initially near GND, reverse-biased body diode blocks incoming negative drain. Gate-source zener is oriented correctly."
+    },
+    {
+      "state": "Input unplug/drop/live polarity reversal",
+      "assessment": "A single enhanced P-MOS can conduct backward until it turns off. U12 blocks downstream output-to-input current, but local VIN_RAW capacitor discharge and possible D36 forward-current transients depend on source and wiring. This is not an ideal-diode guarantee or qualified live-reversal protection."
+    }
+  ],
+  "remaining_validation": [
+    "Final exported netlist and native PCB pin mapping including duplicate drain tab",
+    "SOT223 pad sizes and orientation against manufacturer land pattern; zener polarity and short source-gate loop",
+    "Native saved and analyzed-refill DRC, ERC, exact retained pin/geometry comparison, unchanged design-rule severity/exclusions",
+    "Bench voltage drop and temperature at intended load/ambient; scope startup/input removal and any required reversed-input transient"
+  ],
+  "valve_decision": {
+    "recommendation": "Retain TCA9534 on/off control",
+    "basis": "Exact FA0520E specification defines two-position three-way operation at 5\u20136 V and an on/off endurance test. It supplies no qualified PWM hold-current duty or proportional characteristic. Introducing PWM would require a new electrical/mechanical qualification. Existing valve voltage-tolerance risk is separately accepted for the prototype and is not resolved by PWM.",
+    "no_control_mutation_requested_by_reviewer": true
+  },
+  "cad_modified": false,
+  "pcb_editor_switched": false,
+  "prior_accepted_risks": "U5 reset timing and valve rail upper-tolerance margin remain user-accepted prototype risks; neither is changed by this proposal."
+}

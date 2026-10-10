@@ -1,0 +1,200 @@
+{
+  "snapshot_checks": [
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/TI_RPW0010A_VQFN-HR_2x2mm.kicad_mod",
+      "sha256": "a3f1d5c75aed15fcb3ace734f9d9e8b826be122530734bca8bbbcf9dd505667a",
+      "baseline_expected": "a3f1d5c75aed15fcb3ace734f9d9e8b826be122530734bca8bbbcf9dd505667a"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/AO3400A.kicad_mod",
+      "sha256": "6ed508c535915a9ee26a0e826fd58a97ec480b1ed8402a53c34355a55572fbc5",
+      "baseline_expected": "6ed508c535915a9ee26a0e826fd58a97ec480b1ed8402a53c34355a55572fbc5"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/4.7uH_2A.kicad_mod",
+      "sha256": "1f6b2771db11bb0aa21eaa7b49a4be29ba9d2d2bce200853b08ae4eebf04e9d2",
+      "baseline_expected": "1f6b2771db11bb0aa21eaa7b49a4be29ba9d2d2bce200853b08ae4eebf04e9d2"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/TPS563203DRLR.kicad_mod",
+      "sha256": "f76b790f3fd9bbb0dba9b4def2883f3343e5cfb0310c72183b2ac0c400a762a6",
+      "baseline_expected": "f76b790f3fd9bbb0dba9b4def2883f3343e5cfb0310c72183b2ac0c400a762a6"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/PCA9685.kicad_mod",
+      "sha256": "e597be95eed0715738a71187de20fbc20768412cb13c124ecf9d8833f4c3b2d1",
+      "baseline_expected": "e597be95eed0715738a71187de20fbc20768412cb13c124ecf9d8833f4c3b2d1"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/TI_DGK0008A_VSSOP_3x3mm_P0.65mm.kicad_mod",
+      "sha256": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4",
+      "baseline_expected": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/TestPoint_Plated_D1.0_Drill0.5.kicad_mod",
+      "sha256": "34c4f3de7605056f2bf10d5328c7d5c45315801f5757bdb5b5068f3afd108a9c",
+      "baseline_expected": "34c4f3de7605056f2bf10d5328c7d5c45315801f5757bdb5b5068f3afd108a9c"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/SS34.kicad_mod",
+      "sha256": "3bf2f00384daa523543c6c9410292afcd3442871ce90415ad696f993bfdf0ef8",
+      "baseline_expected": "3bf2f00384daa523543c6c9410292afcd3442871ce90415ad696f993bfdf0ef8"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/Fuse_JDT_JFC1032TS_10.25x3.2mm.kicad_mod",
+      "sha256": "0ffefc8fb07cd2a3b41c0d2807097fd164c74c844359525679776bbf1c704f77",
+      "baseline_expected": "0ffefc8fb07cd2a3b41c0d2807097fd164c74c844359525679776bbf1c704f77"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/VALVE_v105.kicad_mod",
+      "sha256": "b393f8f053f28403c55bd5933943e21374014df46559e1d3d2d3dfa3cbde9990",
+      "baseline_expected": "b393f8f053f28403c55bd5933943e21374014df46559e1d3d2d3dfa3cbde9990"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/DBV0006A_N.kicad_mod",
+      "sha256": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d",
+      "baseline_expected": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/PJ-082BH.kicad_mod",
+      "sha256": "a72fd06343d3ba8a5535cd05c380be23beca38fcd2424490dab950cf33d2267b",
+      "baseline_expected": "a72fd06343d3ba8a5535cd05c380be23beca38fcd2424490dab950cf33d2267b"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/VALVE.kicad_mod",
+      "sha256": "dc575897b26eef874e5cf55cbd07abb6b589d9d10e232ea7c63066dc044b8334",
+      "baseline_expected": "dc575897b26eef874e5cf55cbd07abb6b589d9d10e232ea7c63066dc044b8334"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/Tactile_Switch_4pad.kicad_mod",
+      "sha256": "6bb348d80c22ac7dcefa1b6dc245362c8fab9a99f39bb3b43a79a0aea130779f",
+      "baseline_expected": "6bb348d80c22ac7dcefa1b6dc245362c8fab9a99f39bb3b43a79a0aea130779f"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/PUMP.kicad_mod",
+      "sha256": "8d65de5c70b3208751639c05513d23349a9b49e8b210a5c51d3b2dc95a8ead5d",
+      "baseline_expected": "8d65de5c70b3208751639c05513d23349a9b49e8b210a5c51d3b2dc95a8ead5d"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/MPRLS0025PA00001A.kicad_mod",
+      "sha256": "a8584f44f47026344868d2106e66e33aa0f69e26fdaec418e96f8a6f55b128c0",
+      "baseline_expected": "a8584f44f47026344868d2106e66e33aa0f69e26fdaec418e96f8a6f55b128c0"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Footprint/TCA9534APWR.kicad_mod",
+      "sha256": "36b0fa78c91561f6b5dabbc5cc0a2034b7755534c95e987a22af36f7b25dba7b",
+      "baseline_expected": "36b0fa78c91561f6b5dabbc5cc0a2034b7755534c95e987a22af36f7b25dba7b"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/TCA9534APWR.kicad_sym",
+      "sha256": "c3f8ab4b4294b90fcdea372965c710e60f96c3f29502fa8b47ca469413ea5671",
+      "baseline_expected": "c3f8ab4b4294b90fcdea372965c710e60f96c3f29502fa8b47ca469413ea5671"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/MPRLS0025PA00001A.kicad_sym",
+      "sha256": "befc5d54c01166b0ba4ceca8295b843c6da3da9328f62b95ceae4323fad10b71",
+      "baseline_expected": "befc5d54c01166b0ba4ceca8295b843c6da3da9328f62b95ceae4323fad10b71"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/UCC27511A-Q1 .kicad_sym",
+      "sha256": "6385d5d471cc95664700fc173a80d0bc16b7e0a01c148b171be479bc5c7f397b",
+      "baseline_expected": "6385d5d471cc95664700fc173a80d0bc16b7e0a01c148b171be479bc5c7f397b"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/IAUCP04P4L020.kicad_sym",
+      "sha256": "a9176df1a5cf539d3057b4103ad16ad428c4045615c77561e1a26db99e7b6e1d",
+      "baseline_expected": "a9176df1a5cf539d3057b4103ad16ad428c4045615c77561e1a26db99e7b6e1d"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/PJ-082BH.kicad_sym",
+      "sha256": "92f9b2692d577df0685ae0a87eb8b68c25a589e80628e7e4a6c34982eed90577",
+      "baseline_expected": "92f9b2692d577df0685ae0a87eb8b68c25a589e80628e7e4a6c34982eed90577"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/Fuse_Khach.kicad_sym",
+      "sha256": "b5b334796a0566bc12ee09e829e1e83024fd6a1486acab59f4bf43c56717250d",
+      "baseline_expected": "b5b334796a0566bc12ee09e829e1e83024fd6a1486acab59f4bf43c56717250d"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/PCA9685.kicad_sym",
+      "sha256": "ee9e131237f669391d424d6310befec3ee00a3c380de5ae3849e718f2c353566",
+      "baseline_expected": "ee9e131237f669391d424d6310befec3ee00a3c380de5ae3849e718f2c353566"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/RheoBoard_Fixes.kicad_sym",
+      "sha256": "b33dfaad79f82e9b1cc916b95bea25266d5ff4ea4cde5d1dbb89479152a17cfe",
+      "baseline_expected": "b33dfaad79f82e9b1cc916b95bea25266d5ff4ea4cde5d1dbb89479152a17cfe"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/TPS563203DRLR.kicad_sym",
+      "sha256": "ed2733c0402f4cf434a2ae06965105394f4238cbd9dfdfafc43897d4a4ea34d8",
+      "baseline_expected": "ed2733c0402f4cf434a2ae06965105394f4238cbd9dfdfafc43897d4a4ea34d8"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/Symbol/4.7uH_2A.kicad_sym",
+      "sha256": "0d17d6596dc8bb2aa4629169b8d4aab07454f1504febee65b10f69f300cf8319",
+      "baseline_expected": "0d17d6596dc8bb2aa4629169b8d4aab07454f1504febee65b10f69f300cf8319"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/3_PERIPHERAL.kicad_sch",
+      "sha256": "ff9b7659e593ca82cbcbb4912c4cf0e8c24e810b8ee63dcdb21faac5ecc34522",
+      "baseline_expected": "ff9b7659e593ca82cbcbb4912c4cf0e8c24e810b8ee63dcdb21faac5ecc34522"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/5_Switch TCA9534.kicad_sch",
+      "sha256": "7989922e5f4af6bfce74abfc368af8e31f42a5cdc94af7794e067c5dbf57b7a7",
+      "baseline_expected": "7989922e5f4af6bfce74abfc368af8e31f42a5cdc94af7794e067c5dbf57b7a7"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/Switch TCA9534.kicad_sch",
+      "sha256": "7ff6cd4e10d966d5032b24e56d24c02bfcbe59c874b880453a2947087599846e",
+      "baseline_expected": "7ff6cd4e10d966d5032b24e56d24c02bfcbe59c874b880453a2947087599846e"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/1_Power.kicad_sch",
+      "sha256": "c1ff36fb1685f53ba3c27a57f396a40c329962c96deee35758550eb6826cc06f",
+      "baseline_expected": "c1ff36fb1685f53ba3c27a57f396a40c329962c96deee35758550eb6826cc06f"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/RheoBoard_v1.05.kicad_sch",
+      "sha256": "bb174b88bee7400bfb9abbe4036084351deb70683c2cba743e534b6feb8dd584",
+      "baseline_expected": "bb174b88bee7400bfb9abbe4036084351deb70683c2cba743e534b6feb8dd584"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/fp-lib-table",
+      "sha256": "f49ed2595a272922f8aa84b2670346cae9677f0610aae3654585d6594b332dd8",
+      "baseline_expected": "f49ed2595a272922f8aa84b2670346cae9677f0610aae3654585d6594b332dd8"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/RheoBoard_v1.05.kicad_pro",
+      "sha256": "3e2637189deb99685131e6e0eb18a810b40263ebfd3356269db8cbdeed289c9e",
+      "baseline_expected": "3e2637189deb99685131e6e0eb18a810b40263ebfd3356269db8cbdeed289c9e"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/2_MCU.kicad_sch",
+      "sha256": "7e63f7547058d03c061be3e5d6295899dfca3c19cf85a4d6214d17e0616be0be",
+      "baseline_expected": "7e63f7547058d03c061be3e5d6295899dfca3c19cf85a4d6214d17e0616be0be"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/3_MICROPROCESSOR.kicad_sch",
+      "sha256": "36b1baeee3df39cd19267c0a1c1c34a4a5c10f83641f7af5903790ca88e04cdf",
+      "baseline_expected": "36b1baeee3df39cd19267c0a1c1c34a4a5c10f83641f7af5903790ca88e04cdf"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/4_MPRLS0025PA00001A.kicad_sch",
+      "sha256": "855f3f2caf16aa571159689fb7c610180492a7f2e6e5f44c8ee0cec01bbcb8df",
+      "baseline_expected": "855f3f2caf16aa571159689fb7c610180492a7f2e6e5f44c8ee0cec01bbcb8df"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/sym-lib-table",
+      "sha256": "2be086cecce4337a1c1342297b71ec8bd0d3c484b3c376158b778a68b3c5fa26",
+      "baseline_expected": "2be086cecce4337a1c1342297b71ec8bd0d3c484b3c376158b778a68b3c5fa26"
+    },
+    {
+      "file": "/Users/charlievuong/Documents/RheoBoard/.private/v105-altium-features-2026-10-10/owner/snapshot/RheoboardV1/RheoBoard_v1.05.kicad_pcb",
+      "sha256": "d1d865dddc365c0cd161c1140b6fab173875163d59a5db6ba88a2da7e5a4fa0b",
+      "baseline_expected": "d1d865dddc365c0cd161c1140b6fab173875163d59a5db6ba88a2da7e5a4fa0b"
+    }
+  ],
+  "all_match": true
+}
