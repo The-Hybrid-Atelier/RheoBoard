@@ -46,8 +46,8 @@ build instructions specify otherwise.
 
 `sensing_tube.stl` and `connector_small.stl` are not the probe.
 
-Printing both groups is [Step 01](../BuildYourOwn/README.md#step-01-assemble-the-platform) of the
-build guide.
+Printing both groups is [Step 01](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-01-assemble-the-platform) of the
+assembly instructions.
 
 ### Probe (print files not in the repo yet)
 

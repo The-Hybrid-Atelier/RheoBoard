@@ -44,7 +44,7 @@ TODO: confirm each part's role and the number of copies to print. The annotated 
 
 TODO: print orientation, supports, and any non-default settings per part.
 
-The sensing tube and small connector are printed from [`../connector/`](../connector/), in Step 01 of the [build guide](../../README.md#step-01-assemble-the-platform).
+The sensing tube and small connector are printed from [`../connector/`](../connector/), in Step 01 of the [assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-01-assemble-the-platform).
 
 ## Assembly
 

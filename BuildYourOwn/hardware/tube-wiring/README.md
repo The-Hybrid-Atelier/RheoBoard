@@ -8,7 +8,7 @@ License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 <a href="tube-connection.png"><img src="tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
 Tubing: [Adafruit 4661](https://www.adafruit.com/product/4661), 1 m silicone, 3 mm ID, 5 mm OD,
-for air only. TODO: length of each run.
+for air only. TODO: length of each run. TODO: a tool to cut the silicone tubing is not named in the repository.
 
 ## Components
 

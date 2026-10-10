@@ -1,6 +1,6 @@
 # Tools you may need
 
-This is the one tools list for RheoBoardOTS - DIY. The [build guide](../BuildYourOwn/README.md) lists
+This is the one tools list for RheoBoardOTS - DIY. The [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#before-you-start) list
 the same tools before Step 01. The [Tools](tools.md) page points here.
 
 ## Named in the build guide

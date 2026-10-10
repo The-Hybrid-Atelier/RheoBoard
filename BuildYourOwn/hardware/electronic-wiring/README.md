@@ -11,7 +11,7 @@ License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 ## Wiring steps
 
 Wire with micro-USB and the 12 V adapter disconnected.
-[Step 02 of the build guide](../../README.md#step-02-connect-electronics-and-tubing)
+[Step 02 of the assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-02-connect-electronics-and-tubing)
 follows these sections. See the diagram for full detail.
 
 **You need:** 3 Qwiic cables; discrete point-to-point wire (TODO: type and gauge); the 12 V
@@ -67,16 +67,17 @@ valve current does not go through the ESP32 5 V pin. PWM on ENA/ENB limits effec
 pumps (~4.5 V rated) and valve (~6 V rated). The pump manufacturer's intermittent-duty
 recommendation limits run time, not the instantaneous PWM setting; see
 [`../README.md`](../README.md). Do not plug the adapter in until
-[Step 04](../../README.md#step-04-power-on-test). TODO: how the adapter connects to the L298N
+[Step 04](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-04-power-on-test). TODO: how the adapter connects to the L298N
 inputs (connector or bare leads).
 
 USB uploads firmware to the ESP32 Thing Plus. After upload, USB may be disconnected. Portable
-power is the SparkFun PRT-26059 named in [Power](../../README.md#power) (nominal 3.7 V). It plugs
+power is the SparkFun PRT-26059 named in [Power](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#power) (nominal 3.7 V). It plugs
 into that board's JST battery connector (schematic V_BATT, 4.2 V maximum).
 
 **You should now have:** both `5V-EN` jumpers ON, the used ENA/ENB jumper caps removed, L298N #2
 Motor A NC, all grounds common, and each L298N +5 V output local to its own module. Then
 continuity-check the wiring (TODO: which connections to check, and the expected result for each).
+TODO: a leak check, and a photo of the finished wiring.
 
 **Next:** connect the tubing ([`../tube-wiring/README.md`](../tube-wiring/README.md)).
 

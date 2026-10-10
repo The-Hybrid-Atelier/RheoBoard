@@ -1,10 +1,10 @@
 # Specifications
 
-Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [build guide](../BuildYourOwn/README.md), the [print notes](../BuildYourOwn/cad/encloser/README.md), and the [firmware reference](../code/firmware/README.md).
+Figures on this page are already written in the [bill of materials](../BuildYourOwn/hardware/README.md), the [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions), the [print notes](../BuildYourOwn/cad/encloser/README.md), and the [firmware reference](../code/firmware/README.md).
 
 ## System
 
-From the build guide:
+From the assembly instructions:
 
 This simple rheometer is a pneumatic retraction-extrusion system with 2 air pumps + 1 valve on a 3D-printed panel, driven by an ESP32 over BLE and sensed by a Qwiic MicroPressure sensor.
 

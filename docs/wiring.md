@@ -6,7 +6,7 @@
 - [Tube wiring](../BuildYourOwn/hardware/tube-wiring/README.md) — pneumatic connections for 2
   pumps, 1 switched-port valve, the pressure sensor, and the chamber/nozzle.
 
-Step 02 of the [build guide](../BuildYourOwn/README.md#step-02-connect-electronics-and-tubing)
+Step 02 of the [assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-02-connect-electronics-and-tubing)
 follows those sections.
 
 License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

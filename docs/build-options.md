@@ -4,13 +4,13 @@ A builder starts on the wiki at [Build options](https://github.com/The-Hybrid-At
 
 ## RheoBoardOTS - DIY
 
-RheoBoardOTS - DIY mounts the parts on a flat 3D-printed panel. Open items are marked TODO in the assembly instructions.
+RheoBoardOTS - DIY mounts the parts on a flat 3D-printed panel.
 
 RheoBoardOTS - DIY uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 
 <img src="img/panel/diy-annotated.jpg" width="480" alt="Annotated photo of the RheoBoardOTS - DIY panel">
 
-**Next:** [Parts to buy](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-buy). Those assembly steps are also in the [RheoBoardOTS - DIY build guide](../BuildYourOwn/README.md).
+**Next:** [Parts to buy](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-buy). The assembly steps are on [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions).
 
 ## RheoBoard_v1 - PCB
 

@@ -3,7 +3,7 @@
 The parts mount on a flat 3D-printed panel. Print files and notes are in
 [`BuildYourOwn/cad/encloser/README.md`](../BuildYourOwn/cad/encloser/README.md). That folder name
 stays `BuildYourOwn/cad/encloser/`. Assembly is
-[Step 01 of the build guide](../BuildYourOwn/README.md#step-01-assemble-the-platform).
+[Step 01 of the assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-01-assemble-the-platform).
 
 The placement reference is the annotated panel photo
 [`BuildYourOwn/cad/encloser/panel-annotated.pdf`](../BuildYourOwn/cad/encloser/panel-annotated.pdf).
