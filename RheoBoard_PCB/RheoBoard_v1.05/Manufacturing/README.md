@@ -1,6 +1,6 @@
 # RheoBoard v1.05 manufacturing files
 
-The current package consolidates pump and valve control in U7, removes U4 and its dedicated support parts, and adds the J19 button GPIO header. The Q11/D37/R85 input stage, eFuse, Qwiic interface and previous corrections remain. Use the saved sources, BOM and manufacturing exports together; the [current review](../Verification/REVIEW_REPORT.md) records their verification. Files in `../Archive_v1_outputs/` and the [v1 JLCPCB placement](../Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png) belong to v1.
+Order from the files named on the [BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/BOM) page. The [current review](../Verification/REVIEW_REPORT.md) records the check of these exports. Files in `../Archive_v1_outputs/` and the [v1 JLCPCB placement](../Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png) belong to v1.
 
 ## Files
 

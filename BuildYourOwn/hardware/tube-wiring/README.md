@@ -1,7 +1,9 @@
 # Tube wiring
 
 **This simple rheometer** — pneumatic connections for 2 pumps, 1 switched-port valve, the
-pressure sensor, and the chamber/nozzle.
+pressure sensor, and the chamber/nozzle. The same connections are in
+[Step 02 of the assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-02-connect-electronics-and-tubing).
+This file is the port table for that step.
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 

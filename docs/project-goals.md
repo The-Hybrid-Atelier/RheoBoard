@@ -1,10 +1,8 @@
 # Project goals
 
-Sentences below are already in [`README.md`](../README.md) or in the `intended-use` field of [`okh-RheoBoard.yml`](../okh-RheoBoard.yml).
+From [`README.md`](../README.md):
 
-From `README.md`:
-
-RheoBoard is open hardware for pneumatic retraction-extrusion measurements. RheoBoardOTS - DIY uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic MicroPressure sensor. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
+RheoBoard is open hardware for pneumatic retraction-extrusion measurements. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 
 From `okh-RheoBoard.yml` `intended-use`:
 

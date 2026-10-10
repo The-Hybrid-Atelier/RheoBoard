@@ -17,8 +17,8 @@ follows these sections. See the diagram for full detail.
 **You need:** 3 Qwiic cables; discrete point-to-point wire (TODO: type and gauge); the 12 V
 adapter, left unplugged. Tools: wire strippers, a small screwdriver, and a multimeter; a soldering
 iron and solder only if headers or wire leads are not already fitted. Lists:
-[`../README.md`](../README.md) (parts) and
-[`../../../docs/assembly-tools.md`](../../../docs/assembly-tools.md) (tools).
+[`../README.md`](../README.md) (parts) and the
+[Assembly tools](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-tools) page.
 
 <a id="qwiic-chain"></a>
 

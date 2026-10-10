@@ -1,7 +1,7 @@
 # Sensing-system tube CAD
 
 This folder contains printable tube and connector models for the rheometer's pneumatic sensing
-system. Open either STL link on GitHub to inspect the model in its interactive 3D viewer.
+system. Print notes are on the [Parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-3D-print) wiki page. Open either STL link on GitHub to inspect the model in its interactive 3D viewer.
 
 License: hardware CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 

@@ -9,9 +9,7 @@ RheoData notes: [`../../code/software/`](../../code/software/). Component photo 
 
 License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
 
-This is the one parts list for the build. Tools are listed in
-[`../../docs/assembly-tools.md`](../../docs/assembly-tools.md). A TODO row names a part the build
-uses whose exact type, size, or quantity is not documented yet.
+This is the one parts list for the build. The purchased-parts table, without the open gaps below, is on the [Parts to buy](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-buy) wiki page. Tools are on the [Assembly tools](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-tools) page. A TODO row names a part the build uses whose exact type, size, or quantity is not documented yet.
 
 ## Parts to buy
 

@@ -1,23 +1,6 @@
 # Tools you may need
 
-This is the one tools list for RheoBoardOTS - DIY. The [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#before-you-start) list
-the same tools before Step 01. The [Tools](tools.md) page points here.
-
-## Named in the build guide
-
-- 3D printer: Bambu Lab, PLA, normal profile (see the [print notes](../BuildYourOwn/cad/encloser/README.md))
-- Flush cutters
-- Wire strippers, small screwdriver, and multimeter
-- Soldering iron and solder only if headers or wire leads are not already fitted
-- Computer with a data-capable micro-USB cable
-- Phone, tablet, or computer running **RheoData** for BLE control
-
-## Also named for those steps
-
-- **Bambu Studio**, for the panel STEP files. The [print notes](../BuildYourOwn/cad/encloser/README.md) say Bambu Studio opens STEP files directly, and that there are no STL or slicer project files for those parts yet.
-- **A slicer or mesh viewer**, for the sensing-tube STL files. The [connector README](../BuildYourOwn/cad/connector/README.md) says to open the STL in your preferred slicer or mesh viewer.
-- **Arduino IDE 2.x**, for Step 03. The [firmware reference](../code/firmware/README.md#toolchain) toolchain table names Arduino IDE 2.x.
-- **git**, for the manual library install in that same firmware reference (`git clone` of ThingPlusBLEOSC).
+The tool list is on the [Assembly tools](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-tools) wiki page. The [assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#before-you-start) list the same tools before Step 01.
 
 TODO: tools the build needs that are not named in the repository yet.
 
