@@ -1,7 +1,5 @@
 # RheoBoard
 
-Maintained by [Charlie Vuong](https://charlie-vuong.com) (The Hybrid Atelier at UT Arlington).
-
 <img src="BuildYourOwn/images/teaser.jpg" alt="RheoBoard assembled bench prototype" width="480">
 
 RheoBoard is open hardware for pneumatic retraction-extrusion measurements. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
@@ -30,3 +28,7 @@ Machine-readable project metadata and the current version are in
 
 If you build or distribute a derived unit, do not imply that it is manufactured, sold, warranted,
 or endorsed by the original designer.
+
+## Author
+
+Created and maintained by Charlie Vuong (The Hybrid Atelier at UT Arlington).
