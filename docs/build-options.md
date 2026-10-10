@@ -18,9 +18,9 @@ The DIY version uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic Mi
 
 This is a separate KiCad 10 board: schematic, layout, libraries, Gerbers, assembly BOM, and pick-and-place. Everyday wall power is a 12 V plug. The board is a 1.6 mm, two-copper-layer layout. It is a prototype.
 
-<img src="../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png" width="480" alt="Top: block diagram, 12 V in, valves at 6 V, pumps at 4.5 V. Bottom: submitted Rheoboard V1 placement, order 8815214A_Y73 / SMT026093063736.">
+<img src="../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png" width="720" alt="Left: block diagram, 12 V in, valves at 6 V, pumps at 4.5 V. Right: submitted Rheoboard V1 placement, order 8815214A_Y73 / SMT026093063736.">
 
-Top is the block diagram (12 V in, valves at 6 V, pumps at 4.5 V). Bottom is the submitted Rheoboard V1 placement, order 8815214A_Y73 / SMT026093063736.
+Left is the block diagram (12 V in, valves at 6 V, pumps at 4.5 V). Right is the submitted Rheoboard V1 placement, order 8815214A_Y73 / SMT026093063736.
 
 **Next:** [BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/BOM).
 
