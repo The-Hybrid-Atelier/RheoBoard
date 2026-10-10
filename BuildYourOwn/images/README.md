@@ -1,7 +1,6 @@
 # Images
 
-Project photos and reference photos for the parts in
-[`../hardware/README.md`](../hardware/README.md). Component images come from manufacturer/vendor
+Project photos and reference photos for the RheoBoardOTS - DIY parts. The purchased-parts list is the wiki Parts to buy page. Component images come from manufacturer/vendor
 photography or a freely licensed source and are for builder identification only.
 
 | File | Part | Source |
@@ -21,5 +20,4 @@ photography or a freely licensed source and are for builder identification only.
 - SparkFun and Adafruit images are used here for **build identification purposes** (this is what
   the part looks like when it arrives) — not redistributed as marketing material. Link to the
   product page for authoritative specs.
-- If a part is substituted, replace the photo here and update
-  [`../hardware/README.md`](../hardware/README.md) accordingly.
+- If a part is substituted, replace the photo here and update the Parts to buy page.

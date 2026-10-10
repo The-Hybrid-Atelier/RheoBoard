@@ -9,10 +9,10 @@ License: hardware CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
 **[Open the sensing tube in GitHub's interactive 3D viewer](sensing_tube.stl)**
 
-[`sensing_tube.stl`](sensing_tube.stl) is the full hanging sensing tube with an internal flow
+`sensing_tube.stl` is the full hanging sensing tube with an internal flow
 passage and a male luer-lock connection. The model is approximately **12 mm in diameter ×
 113.2 mm tall**. Its editable OpenSCAD source is
-[`sensing_tube.scad`](sensing_tube.scad).
+`sensing_tube.scad`.
 
 The luer-lock geometry is intended to mate with a Value Plastics **FTLLB220-6005** female
 luer-thread panel-mount fitting. Confirm the fit with the actual fitting before assembling the
@@ -22,7 +22,7 @@ pneumatic system.
 
 **[Open the small connector in GitHub's interactive 3D viewer](connector_small.stl)**
 
-[`connector_small.stl`](connector_small.stl) is the compact threaded-to-barbed connector used in
+`connector_small.stl` is the compact threaded-to-barbed connector used in
 the sensing tube assembly. Its mesh envelope is approximately **6.35 × 7.33 × 15.54 mm**.
 This file is a mesh export. An editable source for it is not in this folder yet.
 
@@ -42,9 +42,9 @@ This file is a mesh export. An editable source for it is not in this folder yet.
 `sensing_tube.scad` is the preferred format for changing the sensing tube. These files are mesh
 exports only. Treat them as supplementary until a parametric source is added:
 
-- [`connector_small.stl`](connector_small.stl) — current small connector
-- [`connector_big.stl`](connector_big.stl) — alternate larger connector
-- [`sensing_tube_open.stl`](sensing_tube_open.stl) — alternate open tube
+- `connector_small.stl` — current small connector
+- `connector_big.stl` — alternate larger connector
+- `sensing_tube_open.stl` — alternate open tube
 
-Use [`sensing_tube.stl`](sensing_tube.stl) and [`connector_small.stl`](connector_small.stl) for the
+Use `sensing_tube.stl` and `connector_small.stl` for the
 current sensing-system assembly unless the build instructions specify otherwise.

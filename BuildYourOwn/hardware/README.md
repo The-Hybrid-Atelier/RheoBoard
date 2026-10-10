@@ -1,57 +1,5 @@
-# Hardware and bill of materials
+# Hardware
 
-Parts list for the **2 pumps + 1 valve** RheoBoardOTS - DIY bench rig. Wiring:
-[`electronic-wiring/wiring-diagram.png`](electronic-wiring/wiring-diagram.png) and
-[`tube-wiring/`](tube-wiring/). Firmware:
-[`../../code/firmware/`](../../code/firmware/) (shared by RheoBoardOTS - DIY, RheoBoard_v1 - PCB, and RheoBoardPipette - Portable).
-RheoData notes: [`../../code/software/`](../../code/software/). Component photo sources/licenses:
-[`../images/README.md`](../images/README.md).
+This folder is the RheoBoardOTS - DIY parts and wiring notes. The purchased-parts list is on the [Parts to buy](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-buy) wiki page, and printed parts are on the Parts to 3D print page. Wiring is on the Assembly instructions page. Pin notes are in `electronic-wiring/`, tube ports are in `tube-wiring/`, and datasheets are in `references/`.
 
 License: CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
-
-This is the one parts list for the build. The purchased-parts table, without the open gaps below, is on the [Parts to buy](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-buy) wiki page. Tools are on the [Assembly tools](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-tools) page. A TODO row names a part the build uses whose exact type, size, or quantity is not documented yet.
-
-## Parts to buy
-
-| Photo | Part | Qty | Source/link | Datasheet | Notes |
-|---|---|---|---|---|---|
-| <img src="../images/esp32-thing-plus.jpg" width="100" alt="ESP32 Thing Plus"> | SparkFun ESP32 Thing Plus (micro-USB, WRL-15663) | 1 | https://www.sparkfun.com/sparkfun-esp32-thing-plus.html | [`references/datasheets/ESP32_Thing_Plus_Schematic.pdf`](references/datasheets/ESP32_Thing_Plus_Schematic.pdf), [`ESP32_Thing_Plus_Graphical_Datasheet.pdf`](references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf) | MCU; plain ESP32-WROOM-32D/E (not S2/S3); USB uploads firmware; after upload, USB may be disconnected; Qwiic port for sensor chain |
-| <img src="../images/qwiic-micropressure.jpg" width="100" alt="Qwiic MicroPressure"> | SparkFun Qwiic MicroPressure (MPRLS) | 1 | https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html | [`references/datasheets/Honeywell_MPR_Series_Datasheet.pdf`](references/datasheets/Honeywell_MPR_Series_Datasheet.pdf) | I2C `0x18`; Qwiic |
-| <img src="../images/qwiic-button.jpg" width="100" alt="Qwiic Button"> | SparkFun Qwiic Button, red (BOB-15932) | 1 | https://www.sparkfun.com/sparkfun-qwiic-button.html | [`references/datasheets/Qwiic_Button_Schematic.pdf`](references/datasheets/Qwiic_Button_Schematic.pdf) | I2C `0x6F`; Qwiic |
-| <img src="../images/adafruit-attiny1616-seesaw.jpg" width="100" alt="Adafruit ATtiny1616 Breakout with seesaw"> | Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | 1 | https://www.adafruit.com/product/5690 | [Adafruit seesaw guide](https://learn.adafruit.com/adafruit-attiny817-seesaw) | I2C `0x49`; 3.3 V Qwiic logic; PWM/GPIO output |
-| <img src="../images/l298n-motor-driver.jpg" width="100" alt="L298N module"> | L298N dual H-bridge module | 2 | https://www.amazon.com/s?k=L298N+motor+driver | https://www.st.com/resource/en/datasheet/l298.pdf | #1 drives two pumps; #2 drives one valve |
-| <img src="../images/adafruit-4699-air-pump.jpg" width="100" alt="Adafruit 4699 air pump"> | Air pump / vacuum motor (Adafruit 4699, ZR370-02PM) | 2 | https://www.adafruit.com/product/4699 | [`references/datasheets/ZR370-02PM_4.5V.pdf`](references/datasheets/ZR370-02PM_4.5V.pdf) | ~4.5 V / ~500 mA each; 2.5 LPM; 58.2 × Ø27.0 mm nominal |
-| <img src="../images/adafruit-4663-air-valve.jpg" width="100" alt="Adafruit 4663 air valve"> | 6 V air valve (Adafruit 4663, FA0520E) | 1 | https://www.adafruit.com/product/4663 | [`references/datasheets/4663_C14660_DC_6V.pdf`](references/datasheets/4663_C14660_DC_6V.pdf) | 3-port flip selector |
-| <img src="../images/power-adapter-alt-1202.jpg" width="100" alt="Cysljoyful AC/DC adapter, model ALT-1202"> | Cysljoyful AC/DC adapter, model ALT-1202 | 1 | https://www.amazon.com/Supply-Universal-Adapter-100-240-Transformer/dp/B0D269PYK9 | — | The power cable is one Cysljoyful AC/DC adapter, model ALT-1202, output 12 V DC 2 A, input 100–240 V AC 50–60 Hz, with a center-positive barrel plug 5.5 mm outside and 2.5 mm inside (https://www.amazon.com/Supply-Universal-Adapter-100-240-Transformer/dp/B0D269PYK9): the everyday 12 V wall adapter that feeds the pump and valve supplies (DIY via the L298N motor-power inputs, PCB via the board 12 V input), sharing ground with the ESP32. Pump and valve current does not go through the ESP32 5 V pin. |
-| — | SparkFun Lithium Ion Battery 1500 mAh, IEC62133 certified (PRT-26059) | 1 | https://www.sparkfun.com/lithium-ion-battery-1500mah-iec62133-certified.html | [`references/datasheets/ESP32_Thing_Plus_Schematic.pdf`](references/datasheets/ESP32_Thing_Plus_Schematic.pdf), [`ESP32_Thing_Plus_Graphical_Datasheet.pdf`](references/datasheets/ESP32_Thing_Plus_Graphical_Datasheet.pdf) | Nominal 3.7 V, 1500 mAh, terminated with a 2-pin JST-PH connector (2 mm pin spacing), with built-in protection; it plugs into the ESP32 Thing Plus JST battery connector (schematic V_BATT, 4.2 V maximum). |
-| — | Silicone tubing, Adafruit 4661 | 1 | https://www.adafruit.com/product/4661 | — | 1 m, 3 mm ID, 5 mm OD, for air only. See `tube-wiring/README.md`. TODO: length of each run. |
-| — | Qwiic cables | 3 | https://www.sparkfun.com/cables.html | — | Four Qwiic boards daisy-chained on one I2C bus |
-| — | micro-USB cable | 1 | — | — | Flash `2P1V_Adafruit.ino`; also powers the ESP32 during upload/bench use |
-| — | Value Plastics FTLLB220-6005 female luer-thread panel-mount fitting | 1 | — | — | Named in [`../cad/connector/README.md`](../cad/connector/README.md). The sensing tube's luer is intended to mate with it. TODO: where to buy it. |
-| — | Tee | TODO | — | — | TODO: the part that tees the pressure sensor into the shared line. [`tube-wiring/README.md`](tube-wiring/README.md) says the sensor is "Teed into shared line". |
-| — | Hookup wire | TODO | — | — | TODO: type and gauge. [`electronic-wiring/README.md`](electronic-wiring/README.md) uses discrete point-to-point wires for the seesaw-to-L298N signals. |
-| — | 4 mm zip ties | TODO | — | — | Fasteners for the panel. A count is not stated. Placement is the annotated panel photo [`../cad/encloser/panel-annotated.pdf`](../cad/encloser/panel-annotated.pdf). |
-
-## Parts to 3D print
-
-| Photo | Part | Qty | Source/link | Datasheet | Notes |
-|---|---|---|---|---|---|
-| — | 3D-printed panel (PLA) | 1 set | — | — | See [`../cad/encloser/`](../cad/encloser/); Bambu Lab printer, normal PLA profile. TODO: number of copies of each part. The annotated photo does not label `part_04.STEP` or `part_05.STEP`. |
-| — | Printed sensing tube (`sensing_tube.stl`) | TODO | — | — | [`../cad/connector/sensing_tube.stl`](../cad/connector/sensing_tube.stl); about 12 mm diameter × 113.2 mm tall; male luer-lock. Import at 100% scale. |
-| — | Printed small connector (`connector_small.stl`) | TODO | — | — | [`../cad/connector/connector_small.stl`](../cad/connector/connector_small.stl); about 6.35 × 7.33 × 15.54 mm. Import at 100% scale. |
-| — | 3D-printed GL45 two-port cap | TODO | — | — | One of exactly two models still to be added. The print file is not in this repository yet. This is not `sensing_tube.stl` or `connector_small.stl`. |
-| — | 3D-printed tube that connects to the GL45 two-port cap | TODO | — | — | The other model still to be added. The print file is not in this repository yet. Used with the Adafruit 4661 tube and the GL45 two-port cap. This is not `sensing_tube.stl` or `connector_small.stl`. |
-
-## Notes
-
-- Sample container: a GL45 lab reagent bottle is recommended. A beaker, cup, or any other fluid
-  container is also fine.
-- Between samples, rinse the tube with water.
-- Pumps are rated ~4.5–5 V and the valve ~6 V. Adafruit's ~50% pump duty-cycle recommendation
-  describes intermittent run time, not a 50% PWM ceiling; firmware may use brief higher-PWM pulses,
-  but the pumps should not run continuously.
-- The L298N photo is a generic-module stand-in (no single canonical vendor page) — see
-  [`../images/README.md`](../images/README.md) for its source/license. Swap it for
-  a photo of your exact board if it looks different.
-- Before substituting a part, confirm its electrical, pneumatic, mechanical, and firmware
-  compatibility against the linked folder documentation.

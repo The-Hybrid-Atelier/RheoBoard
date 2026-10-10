@@ -1,36 +1,28 @@
 # Tube wiring
 
-**This simple rheometer** — pneumatic connections for 2 pumps, 1 switched-port valve, the
-pressure sensor, and the chamber/nozzle. The same connections are in
-[Step 02 of the assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-02-connect-electronics-and-tubing).
-This file is the port table for that step.
+This simple rheometer uses pneumatic connections for 2 pumps, 1 switched-port valve, the pressure sensor, and the chamber/nozzle. Step 02 of the [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions) page summarizes these ports. This file is the port table for that step.
 
 License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
 
 <a href="tube-connection.png"><img src="tube-connection.png" alt="Pneumatic tube connection diagram" width="600"></a>
 
-Tubing: [Adafruit 4661](https://www.adafruit.com/product/4661), 1 m silicone, 3 mm ID, 5 mm OD,
-for air only. TODO: length of each run. TODO: a tool to cut the silicone tubing is not named in the repository.
+Tubing: Adafruit 4661, 1 m silicone, 3 mm ID, 5 mm OD, for air only. TODO: length of each run. TODO: a tool to cut the silicone tubing is not named in the repository.
 
 ## Components
 
 | Label | Part | Port usage |
 |---|---|---|
-| PUMP1 | [Adafruit 4699](https://www.adafruit.com/product/4699) ZR370-02PM (vacuum) | **Side port** (inlet) → VALVE2 metal pole; **tubing port** (outlet) → atmosphere |
+| PUMP1 | Adafruit 4699 ZR370-02PM (vacuum) | **Side port** (inlet) → VALVE2 metal pole; **tubing port** (outlet) → atmosphere |
 | PUMP2 | Adafruit 4699 ZR370-02PM (pressure) | **Tubing port** (outlet) → VALVE2 plastic pole; **side port** (inlet) → atmosphere |
-| VALVE2 | [Adafruit 4663](https://www.adafruit.com/product/4663) FA0520E | Metal pole (OFF) = vacuum path; plastic pole (ON) = pressure path; common → shared line |
-| Sensor | [SparkFun Qwiic MicroPressure](https://www.sparkfun.com/sparkfun-qwiic-micropressure-sensor.html) (MPRLS) | Teed into shared line |
+| VALVE2 | Adafruit 4663 FA0520E | Metal pole (OFF) = vacuum path; plastic pole (ON) = pressure path; common → shared line |
+| Sensor | SparkFun Qwiic MicroPressure (MPRLS) | Teed into shared line |
 | Output | Chamber / nozzle | Bottom of shared line — "the line we sense" |
 
-TODO (maintainer): confirm whether the chamber / nozzle is the printed sensing tube in
-[`../../cad/connector/`](../../cad/connector/). TODO: how the sensing tube, small connector, and
-FTLLB220-6005 fitting join the shared line; the tee part; and the length of each tube run.
+TODO (maintainer): confirm whether the chamber / nozzle is the printed sensing tube in `BuildYourOwn/cad/connector/`. TODO: how the sensing tube, small connector, and FTLLB220-6005 fitting join the shared line; the tee part; and the length of each tube run.
 
 ### Pump note (4699)
 
-The ZR370-02PM always draws air in through the **side port** and pushes it out the **tubing port**.
-Reversing motor wires does **not** flip flow direction — retract vs extrude is set by **which port
-is plumbed to the valve** and which is open to atmosphere, not by L298N direction wiring.
+The ZR370-02PM always draws air in through the **side port** and pushes it out the **tubing port**. Reversing motor wires does **not** flip flow direction — retract vs extrude is set by **which port is plumbed to the valve** and which is open to atmosphere, not by L298N direction wiring.
 
 ## Valve logic (VALVE2)
 
@@ -50,8 +42,7 @@ The tube paths change with the firmware phases:
 3. **Extrude** — VALVE2 ON, PUMP2 on (pressure, with optional ramp).
 4. **Relax** — both pumps stop.
 
-Timing, controls, and parameter defaults are documented in
-[`../../../code/firmware/README.md`](../../../code/firmware/README.md).
+Timing, controls, and parameter defaults are documented in `code/firmware/README.md`.
 
 ## Diagram source
 

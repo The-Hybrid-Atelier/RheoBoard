@@ -1,7 +1,7 @@
 # Images
 
-Project photos and reference photos for the parts in the
-[parts list](https://github.com/The-Hybrid-Atelier/RheoBoard/blob/main/BuildYourOwn/hardware/README.md).
+Project photos and reference photos for the parts on the
+[Parts to buy](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-buy) page.
 One folder per part. Component images come from manufacturer/vendor photography, a freely licensed
 source, or a file already in this project, and are for builder identification only.
 
@@ -34,6 +34,6 @@ to the product page for authoritative specs.
 ## Notes
 
 - Originals in `BuildYourOwn/images/` and `BuildYourOwn/cad/encloser/` are left in place.
-- If a part is substituted, replace the photo here and update the parts list accordingly.
+- If a part is substituted, replace the photo here and update the Parts to buy page.
 - No photo is stored here for the GL45 bottle, the GL45 two-port cap, or the tube that connects to
   that cap. Those print files are not in the repository, and no project photo of them was on hand.
