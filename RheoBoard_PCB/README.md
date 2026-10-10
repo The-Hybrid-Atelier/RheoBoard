@@ -24,6 +24,11 @@ peripheral, MPRLS, and the TCA9534 switch). They are not hierarchical sheets of 
 
 Both projects now use versioned main filenames: `RheoBoard_v1.*` and `RheoBoard_v1.05.*`. The v1.05 project is [here](RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_pro). On 2026-10-10, the project-instance references were renamed with the files; all circuit connections, PCB bytes and footprint geometry were preserved. Both copies of the mismatched `UCC27511A-Q1 .kicad_mod` filename are now `DBV0006A_N.kicad_mod`, matching their existing internal footprint name. Other footprint filenames already match their internal names. [Rename validation](RheoBoard_v1.05/Verification/Rename_2026-10-10/validation.json) covers both versions.
 
+The retained [Altium import reference](RheoBoard_v0.05-altium/RheoBoard_Altium_Reimport.kicad_pro)
+is stored in `RheoBoard_v0.05-altium/`. Its [import report](RheoBoard_v0.05-altium/IMPORT_REPORT.txt)
+records the recovered schematic sheets and conversion findings. The superseded, incomplete import
+has been removed; the retained project's KiCad filenames and contents are unchanged.
+
 ## Manufacturing files
 
 These outputs match the current KiCad board. Re-export them from `RheoBoard_v1.kicad_pcb` after any

@@ -31,4 +31,4 @@ or endorsed by the original designer.
 
 ## Author
 
-Created and maintained by Charlie Vuong (The Hybrid Atelier at UT Arlington).
+Created and maintained by [Charlie Vuong](https://charlie-vuong.com) (The Hybrid Atelier at UT Arlington).
