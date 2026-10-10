@@ -1,6 +1,6 @@
 # RheoBoard
 
-<img src="BuildYourOwn/images/teaser.jpg" alt="RheoBoard assembled bench prototype" width="480">
+<img src="docs/img/home-versions.png" alt="RheoBoard" width="720">
 
 RheoBoard is open hardware for pneumatic retraction-extrusion measurements. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
 
