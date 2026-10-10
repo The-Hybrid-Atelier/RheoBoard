@@ -1,0 +1,271 @@
+{
+  "pad_count": 8,
+  "pads": [
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "+3V3",
+      "number": "1",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "c2bcf8db-95d3-45f8-b1bb-7931248e38a7",
+      "x": 188.55,
+      "y": 111.025
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "/SCL",
+      "number": "2",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "392564fa-b311-4cc8-8b13-9aeb4fd4bbb2",
+      "x": 188.55,
+      "y": 111.675
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "/SDA",
+      "number": "3",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "703a6839-9b1b-405b-aee0-d512658ce08c",
+      "x": 188.55,
+      "y": 112.325
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "GND",
+      "number": "4",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "6f120e19-c8cc-404b-8b64-cf58246d9096",
+      "x": 188.55,
+      "y": 112.975
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "/HOST_3V3",
+      "number": "5",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "81ec47af-6a6e-424e-a502-74b0426389ce",
+      "x": 192.95,
+      "y": 112.975
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "/HOST_SDA",
+      "number": "6",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "60c9c188-deb3-4475-999b-cba19bf8ffcc",
+      "x": 192.95,
+      "y": 112.325
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "/HOST_SCL",
+      "number": "7",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "aa08cf28-416d-49dd-8c60-803b0ce3e785",
+      "x": 192.95,
+      "y": 111.675
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.1111111111,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.4,
+            "y": 0.45
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "/HOST_3V3",
+      "number": "8",
+      "pad_type": "smd",
+      "rotation_deg": 0.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 1.4,
+        "y": 0.45
+      },
+      "uuid": "8f52d113-9d64-4f5d-8a9f-5dca9ed958da",
+      "x": 192.95,
+      "y": 111.025
+    }
+  ],
+  "reference": "U13",
+  "source": "file"
+}

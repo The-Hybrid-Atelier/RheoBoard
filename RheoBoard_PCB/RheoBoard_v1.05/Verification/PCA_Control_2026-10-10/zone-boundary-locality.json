@@ -1,0 +1,210 @@
+{
+  "method": "Compare all exported filled contour boundary segments, independent of polygon start point. All coordinates in mm; output bounds use KiCad positive-down Y. No source graph parsing.",
+  "changes": [
+    {
+      "layer": "B.Cu",
+      "net": "GND",
+      "removed_boundary_segments": 219,
+      "added_boundary_segments": 1188,
+      "changed_boundary_bounds_board_mm": [
+        106.750158,
+        62.075651,
+        191.130331,
+        117.38584
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "+3V3",
+      "removed_boundary_segments": 148,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        164.776071,
+        79.02245,
+        169.018903,
+        83.586336
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "+4V5",
+      "removed_boundary_segments": 6,
+      "added_boundary_segments": 10,
+      "changed_boundary_bounds_board_mm": [
+        135.057597,
+        79.339062,
+        136.062984,
+        83.812515
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "/SCL",
+      "removed_boundary_segments": 29,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        170.384293,
+        81.107036,
+        171.3438,
+        82.011739
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "/SDA",
+      "removed_boundary_segments": 15,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        169.892039,
+        83.085168,
+        170.822545,
+        84.0334
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "GND",
+      "removed_boundary_segments": 2053,
+      "added_boundary_segments": 2449,
+      "changed_boundary_bounds_board_mm": [
+        91.4495,
+        53.23,
+        194.565908,
+        116.218449
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(U4-A0)",
+      "removed_boundary_segments": 24,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        166.535229,
+        80.333615,
+        167.223393,
+        81.279578
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(U4-P2)",
+      "removed_boundary_segments": 29,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        159.002993,
+        86.823636,
+        159.9625,
+        87.728339
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(U4-P3)",
+      "removed_boundary_segments": 17,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        159.002031,
+        88.346803,
+        159.9625,
+        89.252909
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "Net-(U4-{slash}INT)",
+      "removed_boundary_segments": 33,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        169.937602,
+        79.02245,
+        171.332763,
+        80.425359
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "PUMP1_IN",
+      "removed_boundary_segments": 12,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        107.327599,
+        103.573452,
+        108.275316,
+        104.534899
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "PUMP2_IN",
+      "removed_boundary_segments": 28,
+      "added_boundary_segments": 15,
+      "changed_boundary_bounds_board_mm": [
+        107.425341,
+        88.000662,
+        146.945196,
+        90.393385
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VALVE1",
+      "removed_boundary_segments": 42,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        158.728742,
+        85.328774,
+        159.187354,
+        85.675
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VALVE1_IN",
+      "removed_boundary_segments": 44,
+      "added_boundary_segments": 30,
+      "changed_boundary_bounds_board_mm": [
+        94.304895,
+        92.357071,
+        148.495196,
+        104.64237
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VALVE2",
+      "removed_boundary_segments": 22,
+      "added_boundary_segments": 0,
+      "changed_boundary_bounds_board_mm": [
+        158.753364,
+        85.9,
+        159.212354,
+        86.2467
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VALVE2_IN",
+      "removed_boundary_segments": 27,
+      "added_boundary_segments": 15,
+      "changed_boundary_bounds_board_mm": [
+        93.979927,
+        87.896125,
+        149.545196,
+        92.042777
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN",
+      "removed_boundary_segments": 6,
+      "added_boundary_segments": 7,
+      "changed_boundary_bounds_board_mm": [
+        130.681823,
+        53.083952,
+        133.903329,
+        53.7255
+      ]
+    }
+  ],
+  "unsupported_contour_elements": []
+}

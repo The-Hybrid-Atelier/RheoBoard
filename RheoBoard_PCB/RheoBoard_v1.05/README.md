@@ -1,23 +1,22 @@
 # RheoBoard v1.05
 
-The v1.05 revision includes a dedicated **J9 Qwiic master port** for the USB/battery-powered ESP32 Thing Plus, with a buffer separating the host supply and signals from the local bus. **J1, J12 and J17** remain Qwiic sensor ports powered by RheoBoard. All four keep the standard four-pin Qwiic order. See the [review report](Verification/REVIEW_REPORT.md) for the current check status and coverage limits.
+The current revision uses **U7 PCA9685 for both pumps and valves**. Four buttons connect to the ESP32 through the new **J19 five-pin GPIO header**. U4 TCA9534 and its dedicated support parts are removed. Valves use steady FULL ON/OFF; pumps retain independent duty control at one shared frequency. The BOM has 142 fitted parts, including 135 SMT placements.
 
-This is an untested hardware revision. Supplier placement review, final order settings and physical electrical/thermal/mechanical qualification remain open; it is not approved for repeated production.
+**J9 is the Qwiic master port** for the USB/battery-powered ESP32 Thing Plus. U13 separates the host and local bus supply domains. J1, J12 and J17 remain locally powered Qwiic sensor ports. All four retain standard Qwiic pin order. J19 is a separate button cable, not Qwiic; using the buttons requires both J9 and J19 connections. J3 remains the four-pin local debug port. The redundant J18 remains removed.
 
-The latest full recheck found a pressure-sensor startup/reset risk at U5. Resolve that requirement before production approval; see the [current finding and checks](Verification/REVIEW_REPORT.md).
+Open [the KiCad project](RheoboardV1/RheoBoard_v1.05.kicad_pro). The main schematic and PCB use that same stem. Other schematics beside them are standalone block references or stubs, not the project hierarchy.
 
-Open [the KiCad project](RheoboardV1/RheoBoard_v1.05.kicad_pro). Its main schematic and PCB are both named `RheoBoard_v1.05`; the other schematic files beside them are retained standalone block references or stubs, not the project hierarchy.
+The saved PCA/button update passes ERC and saved/refilled DRC under the retained rule settings. The [current review](Verification/REVIEW_REPORT.md) and [change evidence](Verification/PCA_Control_2026-10-10/README.md) describe coverage, retained circuits and exact source/output hashes. BOM, placement files, drawings and fabrication exports match the updated board.
 
-The 2026-10-10 filename cleanup preserved every net, component reference and value, PCB byte and footprint geometry in both revisions. Main schematic/project references were updated through Konnect. v1.05 still has zero ERC/DRC findings under its existing rules; v1 retains its pre-existing ERC findings. See the [rename validation](Verification/Rename_2026-10-10/validation.json). Manufacturing copper, drills, BOM and placement contents are unchanged.
+This remains an untested hardware revision. Supplier placement review and physical electrical, thermal and mechanical qualification remain open. The maintainer accepted the retained sensor-reset and valve-voltage-margin risks for this prototype; that acceptance is not a measured hardware result or repeated-production approval.
 
-The redundant J18 service header has been removed. **J3 remains the four-pin local debug header**, and J9 remains the Qwiic master port. The updated schematic and refilled PCB pass ERC/DRC with zero errors or warnings; BOM, drawings and fabrication files match this change. See the [removal verification](Verification/Remove_J18_2026-10-09/README.md).
-
-- [Revision notes](REVISION_NOTES.md) explain the circuit, footprint and assembly changes.
-- [BOM](BOM/README.md) contains the complete workbook and SMT-only assembly list.
-- [Assembly and bringup](ASSEMBLY_AND_BRINGUP.md) covers power, the external multiplexer, control mapping and open hardware checks.
+- [Revision notes](REVISION_NOTES.md) explain circuit, footprint and assembly changes.
+- [BOM](BOM/README.md) contains the complete workbook and SMT-only list.
+- [Assembly and bringup](ASSEMBLY_AND_BRINGUP.md) covers the button cable, GPIO map, PCA register settings, power, multiplexer and hardware checks.
 - [Manufacturing files](Manufacturing/README.md) contain the matching fabrication archive, SMT placements and drawings.
-- `Archive_v1_outputs/` contains the copied v1 manufacturing outputs and images for reference only. They are not v1.05 production files.
+- [Filename-cleanup evidence](Verification/Rename_2026-10-10/validation.json) and [J18-removal evidence](Verification/Remove_J18_2026-10-09/README.md) are historical checkpoints.
+- `Archive_v1_outputs/` contains historical v1 outputs, including the original [assembly workbook](Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx); they are not v1.05 production files.
 
-The original `RheoBoard_v1` project remains preserved. The original assembly workbook is [BOM_RheoboardV1_JLCSMT.xlsx](Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx). This revision retains fixed-direction pumps for intermittent use and the last commanded state during communication loss. Multiple boards use an external I²C multiplexer, one board per channel.
+The board retains fixed-direction, intermittent-use pumps and the last commanded state during communication loss. Multiple boards use one selected branch of an external I²C multiplexer. Each connected button bank additionally needs four separate master GPIO inputs. Firmware must implement the revised interface; the repository's DIY sketch is not verified compatible.
 
 Hardware design licensing follows the repository root LICENSE, CERN-OHL-W-2.0. Documentation is CC BY-SA 4.0.

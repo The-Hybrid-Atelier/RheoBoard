@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-10-10T17:35:33.549486+00:00",
+  "scope": "Read-only proposed-control documentation review; no final CAD review yet.",
+  "documents": {
+    ".private/v105-pca-control-2026-10-10/root/docs-draft/ASSEMBLY_AND_BRINGUP.md": "795131065155de4b8ed83b59aea2f85d2174cd215eb5d0295a05b42f3526d521",
+    ".private/v105-pca-control-2026-10-10/root/docs-draft/REVISION_NOTES.md": "072368a9e93fe7173ddfc9f3474086f6e71e3ec540bba4fc28e113f73dd3276b"
+  },
+  "sources": [
+    "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+    "https://cdn.sparkfun.com/assets/6/d/c/6/c/ESP32_Thing_Plus_Schematic.pdf",
+    "https://cdn.sparkfun.com/assets/4/3/1/7/6/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en_v1-6.pdf"
+  ],
+  "checked": {
+    "valve_ON_OFF_register_bytes": true,
+    "LED5_registers": "0x1A-0x1D",
+    "LED6_registers": "0x1E-0x21",
+    "GPIO_mapping": {
+      "32": "GPIO32",
+      "33": "GPIO33",
+      "A1": "GPIO25",
+      "A0": "GPIO26"
+    },
+    "pins_non_strapping_and_Qwiic_separate": true,
+    "buttons_HOST_3V3_and_both_cables": true,
+    "multiple_boards_separate_GPIO_wires_and_optional_unused_J19": true,
+    "cold_start_vs_reconnect_and_keep_state_policy": true
+  },
+  "actionable": [
+    {
+      "severity": "documentation implementation clarification",
+      "location": "ASSEMBLY_AND_BRINGUP.md Controller initialization and channel map",
+      "issue": "Four-byte burst requires MODE1.AI=1; default is0. Require it explicitly or require individually addressed writes. Keep MODE2.OCH=0 for STOP-synchronous block update.",
+      "status": "Sent to root; no document edits by reviewer."
+    }
+  ],
+  "verdict": "Control design and wiring instructions consistent; one firmware transaction clarification recommended."
+}

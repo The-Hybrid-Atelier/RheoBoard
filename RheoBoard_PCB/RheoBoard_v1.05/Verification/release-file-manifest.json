@@ -1,7 +1,7 @@
 {
   "date": "2026-10-10",
-  "review_verdict": "Scoped input-stage change independently passes27checks; ERC0/DRC0/unrouted0/parity0 under unchanged settings. Manufacturing population and native fabrication files reconciled. Supplier preview and physical qualification remain open.",
-  "scope": "Current v1.05 after Q11/D37/R85 replacesD1. All164retainedcomponents preserved; older checkpoint evidence remains historical. Excludes originalarchive, UI/sessionfiles andthismanifest.",
+  "scope": "v1.05 after PCA/button simplification; earlier checkpoint evidence is historical. Excludes UI/session files and this manifest.",
+  "review_verdict": "Scoped CAD audit and native manufacturing reconciliation pass. Supplier placement and physical qualification remain open.",
   "files": [
     {
       "path": "3D/3518P.STEP",
@@ -85,23 +85,23 @@
     },
     {
       "path": "ASSEMBLY_AND_BRINGUP.md",
-      "bytes": 14360,
-      "sha256": "13e85ef06b4b3715b669b8f80d433f9d3120a64212484e7b4ceba31025a0ec4b"
+      "bytes": 17491,
+      "sha256": "883adc35267bea9cb182d89dfc7b225aac7476657f21c9d5ca6ae9dd9df1d24c"
     },
     {
       "path": "BOM/BOM_RheoBoard_v1.05.xlsx",
-      "bytes": 18999,
-      "sha256": "966478039be5823535555362103af84b576f298977cf1270f2abc9307ae427f4"
+      "bytes": 19213,
+      "sha256": "0accd5bb8b8e4189020d96392a000f17da6a5ffdd49c704c1eafafb4102cb792"
     },
     {
       "path": "BOM/BOM_RheoBoard_v1.05_JLCPCB.csv",
-      "bytes": 3613,
-      "sha256": "25551576518b56c98e9696579b525d74695923dcd9a7f63671ec5eaae7c5de32"
+      "bytes": 3438,
+      "sha256": "573a74fea374d881e4c0cc5e69f8ae9acc1efd86598a08c357b264bf74a318ef"
     },
     {
       "path": "BOM/README.md",
-      "bytes": 2095,
-      "sha256": "4f78934bc1490bec54ca51cdca091f7909508f1344b39da08792934bbc09499e"
+      "bytes": 2093,
+      "sha256": "5828733cf2033c3749a19ec7e9854e113265a858eb57ace5ca474f6e729cb2f0"
     },
     {
       "path": "Footprint/4.7uH_2A.kicad_mod",
@@ -190,118 +190,118 @@
     },
     {
       "path": "Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv",
-      "bytes": 5888,
-      "sha256": "f79f63ccdbb8496401cf84a5fa138d9a8327f93a3a414f977ec01021ad585fc1"
+      "bytes": 5599,
+      "sha256": "8d7517f31d4c1c0099cd19ae3a698e264a0e06c86dc67bdca3d1bfe36555a883"
     },
     {
       "path": "Manufacturing/CPL/RheoBoard_v1.05_native_positions.csv",
-      "bytes": 15747,
-      "sha256": "7911912fd21a3689a4eb3af156df32c51d8685435d15cc9c2c4c5964f90e1d55"
+      "bytes": 15052,
+      "sha256": "8ac15846ee39648800a2b78f658fe92d58c798c5037c88b4a80fe3dc98310e2e"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_assembly.pdf",
-      "bytes": 230549,
-      "sha256": "9db4a91190a812365894e8642a0fafff3ebdbd0e8b0a21c827343c516a47fce2"
+      "bytes": 224434,
+      "sha256": "5cd6bc65b6d68eb086543288b14b289e65c5dda828640fa37ab13a353e65a8fc"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_back_copper.pdf",
-      "bytes": 207700,
-      "sha256": "645ce55ee3d0caf7ee92484b76f33256fbd9815c8cfa85609f764c865d20fc6e"
+      "bytes": 207183,
+      "sha256": "4bf45fd54bc41ac3b37537d77bac5aa74581c8ed7cb87a2d9feb1d45ebb14e51"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_front_copper.pdf",
-      "bytes": 367689,
-      "sha256": "a4e70a711cf2f7a0fb3fe17569a5ff2258feb1c8fe9c71ee9e52cbef2c78bdec"
+      "bytes": 356090,
+      "sha256": "384df7c84de37fd16d31fa811d2618bb35e14591e4beb13156ce8e0214af04b5"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_schematic.pdf",
-      "bytes": 1971826,
-      "sha256": "af0cd857e72550445f63a7bef5f94e492464ef45b070d818be762b83c10e7942"
+      "bytes": 1951544,
+      "sha256": "a3da6b2e01f0813880019d84771d89a282ff064c711796ba84ec9c74f352829b"
     },
     {
       "path": "Manufacturing/Drawings/RheoBoard_v1.05_soldermask.pdf",
-      "bytes": 189391,
-      "sha256": "dcdd8bcd1232c740abbd895fc3bcb43e3ee25bbbcaaafc684c5d80d97f97ed1a"
+      "bytes": 180658,
+      "sha256": "5c2076612401668c04ec51f7ac1ad3c46755874943d33f6a301eb575939336f3"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-B_Cu.gbl",
-      "bytes": 167789,
-      "sha256": "e77e0a3dc0945b4681d79d88222e98edc0d9c1dce8481e467025f24a8fa4ebca"
+      "bytes": 193459,
+      "sha256": "16d523c67cf9451bfc4431f995c19841dcf3457a1b30419746180961e39c6316"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-B_Mask.gbs",
-      "bytes": 2731,
-      "sha256": "07a5ffddea7a032eef75c94567bc1cfcf8461026c8ec2a2ce601309a71678a55"
+      "bytes": 2931,
+      "sha256": "3a00f071727c1d150ef7ff5af3d1468ab30e7ed2d0872497b02fe0101cb1efe6"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-B_Paste.gbp",
       "bytes": 460,
-      "sha256": "c01a41c0bb0688dff89fa42b37b73a49bf2f203daa5aaa0ae9f8b7e902c92ee0"
+      "sha256": "f729fde36151c6398c19913541cada3f3aa4e408bb975e173b089c7f135c79aa"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-B_Silkscreen.gbo",
       "bytes": 461,
-      "sha256": "568f6cbf87e3356366df0ffe4039d8bd60a1b9416de53b38cf0dd1aa406fe250"
+      "sha256": "4d493050ea1679554b4b58e063dbe4721f89ba94ff260c01d8a168cb7ebed3df"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-Edge_Cuts.gm1",
       "bytes": 840,
-      "sha256": "8fe40c9c45aa13d9677ea94fb91017bd07d493a235d2941aeada29b1851a3de5"
+      "sha256": "45fa92b12b2ca4a1e1b15438f584fa5f45cfa1bcb3d6718f43ee7e150f5733bb"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-F_Cu.gtl",
-      "bytes": 721296,
-      "sha256": "af5087162d5f5ff3d848952bd3c1467187b6c44d5681f8668b536b68562a99b6"
+      "bytes": 714668,
+      "sha256": "d374728966a7d435fa43b11d61248b205fe6480dfae84b047f108184c0030ed1"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-F_Mask.gts",
-      "bytes": 22072,
-      "sha256": "f6684c1bb7ff6c5925739c8221b50b784e004e4912e4aad43431b875e6cec06b"
+      "bytes": 21269,
+      "sha256": "b93eafb2aeb159ec737c5249e399cd18707361bdf487b49131453f998196dfb0"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-F_Paste.gtp",
-      "bytes": 18674,
-      "sha256": "1696e05c1418016457aa185e8f904ff41d794eadd32131d70fe7e069baffb2c1"
+      "bytes": 17719,
+      "sha256": "8d9e7717a5d1fae625288df55b847c95761cf8c869416d10b158a1aaab1806ff"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-F_Silkscreen.gto",
-      "bytes": 144361,
-      "sha256": "67f237c0422197c0cb8a39d247b0e761fbf66f032b2b9633a197f217cd7c8f33"
+      "bytes": 159675,
+      "sha256": "42ae5cc9c1b49ec3dababebd266489b2eeb764d5055fdd4137dcca8919b81fc9"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-NPTH.drl",
       "bytes": 437,
-      "sha256": "a5775c64293241a96d31a2d96907e33ab84eecbd7940120ce0ef0c58f81f9102"
+      "sha256": "637f010bea24a67b6d31b5e3b86e53d1a0549d9415c15b57336945e1fa385f24"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-PTH.drl",
-      "bytes": 5977,
-      "sha256": "e88945767a50b66f6d6f558a206773c70ec710a282da926c320f4acc0b0bd8e2"
+      "bytes": 5929,
+      "sha256": "342213f94f9df9f2db0a91991cdd1df4dad238b87473eae479c2e6abc8f23be7"
     },
     {
       "path": "Manufacturing/Gerber/RheoBoard_v1.05-job.gbrjob",
       "bytes": 2760,
-      "sha256": "45b1160e6a19b349051ffcb30bf44223dc75a6c366f9a4c1c4a4242c4281537f"
+      "sha256": "a3a7920cc36395f1d7f410952850aaf11787fa6656b1c5586843e9f9ff8670af"
     },
     {
       "path": "Manufacturing/README.md",
-      "bytes": 3236,
-      "sha256": "93f2761ef53b5d36fd3dbb8b56f3c747fd7ce4f0e6601fd45fb27aeb5ea0e28c"
+      "bytes": 3440,
+      "sha256": "a0fa11b0b22b0c8d3ffa3823fa047c09a9a1b1e55fe0a4eccb6dac43e0998405"
     },
     {
       "path": "Manufacturing/RheoBoard_v1.05_fabrication.zip",
-      "bytes": 287263,
-      "sha256": "af9d3cf0f666e02346a128d213d649a53cd12dcb731fd20a9d46a5870c5d3362"
+      "bytes": 293482,
+      "sha256": "a608e431b77c4c402e1fbfb96c9d020b471de3444947b337ee13801b27d24beb"
     },
     {
       "path": "README.md",
-      "bytes": 2916,
-      "sha256": "4e3ed968b0f68a42a27504aee247aa4b72adeff694c6bc7f2599981447abf898"
+      "bytes": 2973,
+      "sha256": "843f770903988882bbb06f2e4ac42557da92af979e64fc6ce1d4be99a08bf78a"
     },
     {
       "path": "REVISION_NOTES.md",
-      "bytes": 13633,
-      "sha256": "3720db28242b5738186e869b2258ad11d783e0cd6ae26fdf4f88a5a48cbaec1d"
+      "bytes": 14532,
+      "sha256": "072368a9e93fe7173ddfc9f3474086f6e71e3ec540bba4fc28e113f73dd3276b"
     },
     {
       "path": "RheoboardV1/1_Power.kicad_sch",
@@ -335,18 +335,18 @@
     },
     {
       "path": "RheoboardV1/RheoBoard_v1.05.kicad_pcb",
-      "bytes": 2091351,
-      "sha256": "1ea7b2561601a02d5194cda453e35430d31502fa29e6b52286ae5894fe1dfcb6"
+      "bytes": 2062216,
+      "sha256": "6d94360ace8ea3809e854c392ac15769a7b1e9592c1fe155131be9e9e1d97f04"
     },
     {
       "path": "RheoboardV1/RheoBoard_v1.05.kicad_pro",
       "bytes": 31132,
-      "sha256": "de65eeadad109add6d36b8c190cedceb47fd2b094e85519c3ac4b8b08577ee44"
+      "sha256": "01be986c2fae4de5accf1d29ab408063f3ecf7d464a3928c891053c73c2b2edb"
     },
     {
       "path": "RheoboardV1/RheoBoard_v1.05.kicad_sch",
-      "bytes": 3015444,
-      "sha256": "611e67355431ac66040f88e67b7564b0d07c66ac48656dda6652e9add2c7456a"
+      "bytes": 2983244,
+      "sha256": "f6242be865363115ea66299fdf5fa0636f741935db3ced000e499b4436933f23"
     },
     {
       "path": "RheoboardV1/Switch TCA9534.kicad_sch",
@@ -415,8 +415,8 @@
     },
     {
       "path": "Verification/Altium_Features_2026-10-10/README.md",
-      "bytes": 5075,
-      "sha256": "1fac726c8a9a1b6f614cfdd07125b5df843aefc2a170281d90f083f0b7a70ba8"
+      "bytes": 5257,
+      "sha256": "465a24ca7c4883aa87cb17c53654d84539c3040dce9a8b7bcb0638931941ff59"
     },
     {
       "path": "Verification/Altium_Features_2026-10-10/assembly-flag-comparison.json",
@@ -684,6 +684,291 @@
       "sha256": "213afc78a46f5b9a1554e799519f2ca9807aecf057e6375d761f1a9a48b7d3a6"
     },
     {
+      "path": "Verification/PCA_Control_2026-10-10/README.md",
+      "bytes": 2813,
+      "sha256": "eab640b418566c2a376a6848eacfe6c4059a9a29643118e124ee5adc522872f2"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/assembly-flag-comparison.json",
+      "bytes": 580,
+      "sha256": "32f9eb699bca3fd6c9404cbcc08fc1c794fcc0dcab7912ed0aa2796123d3c453"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/back_copper-control-final.png",
+      "bytes": 39331,
+      "sha256": "4bd94c7c57a81d0b77578cc22bcabecc0857829e5318af762a9352e3e5ad6d00"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/back_copper-host-feed-final.png",
+      "bytes": 22098,
+      "sha256": "6056950dfef59709f8198f26b324057a029d604ae537c0b9f04fb397beba16d6"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/board.xml",
+      "bytes": 6687467,
+      "sha256": "615de92454a9e13f38ed81dafc7957f255813192fd9cfff7dfe84f43667bcaf2"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/bom-validation.json",
+      "bytes": 761,
+      "sha256": "95046a7fad1226165c4ee316675800e814b7f9ca47eab56c2ae262acc55a78d1"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/connectivity-assertions.json",
+      "bytes": 1414,
+      "sha256": "ea49cc25a31e131d8310f982d912e70ffb92497e730f9dabfcf61f558d2fd8e8"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/control-design-basis.json",
+      "bytes": 2423,
+      "sha256": "1bcf3d8440b141cee2496d2e24db847c5b1da36428b31a90d12315f471bc2ac4"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/docs-draft-review.json",
+      "bytes": 1753,
+      "sha256": "d6e0f39c271deb32046bd65693ea04e9ef15f67c736b6c30eceb34bcfb902a6c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/electrical-delta.json",
+      "bytes": 2508,
+      "sha256": "6786e23e01ddae78a4fd24a22621684ef867d9fc167fbd1eb95a42e4ae63e39c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-aggregate-decoded.json",
+      "bytes": 4386,
+      "sha256": "9701463a9550d39e7ae892df4364abefc356f8f5a963b0d7b428845fa57a845c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-back-control-crop.png",
+      "bytes": 69621,
+      "sha256": "f462af5b4d11cdca2d209a45db0c13bbb55e6991341c05eb70972826759ae1b7"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-back-pdf-decoded.json",
+      "bytes": 163,
+      "sha256": "827e9502ea230d4c4415670a92dfb8a4390814a44f35c2c0611bc61c3eccc75c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-back.png",
+      "bytes": 204266,
+      "sha256": "4889d774b16a6af64f58eaf8a64b0e523d2e8e88045b973ee1e92637478c40b6"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-buttons-schematic.png",
+      "bytes": 30154,
+      "sha256": "6983c4a7da76758b62d2f0691750cfe2844b71efffd539c353bb9cc4a561ade4"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-erc-decoded.json",
+      "bytes": 431,
+      "sha256": "e93aa1f81bab979ed015a5a7656f0fdede0fde7dd7065a05f68fa58814513fcc"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-front-control-crop.png",
+      "bytes": 137359,
+      "sha256": "f1e8432e5cfe72d3e30312bb857c68364e9d49b297230cdc554cfc7bbf2d1676"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-front-pdf-decoded.json",
+      "bytes": 164,
+      "sha256": "6f61f3485393014db7265d4ca3b6d510104b63ccb724a86f9a5dd08b757da0fc"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-front.png",
+      "bytes": 393830,
+      "sha256": "3b7433c50673b89127a76bdca4a20131f83758e6ce3e3706f548434d6dcb1f3b"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-header-layout.png",
+      "bytes": 20195,
+      "sha256": "6938a02e26cda4d28e84c822b3ce3186e7615bf552a6e913daf0b5d650217b72"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-header-schematic.png",
+      "bytes": 19287,
+      "sha256": "e70bc080197bcb14d0f9fe8042bb69d8ee3dabf4317d66aa500e371a8ce36fef"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-independent-review-original.json",
+      "bytes": 21232,
+      "sha256": "7721f933386d78278fae56ab4e5ee4d49cc830b34e88d987e4d7a009a0537aaa"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-independent-review.json",
+      "bytes": 21503,
+      "sha256": "a957e949e327197284b9453be5f366a2797242c40d39d3e61697bb09d9ee5df3"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-ipc-export-decoded.json",
+      "bytes": 176,
+      "sha256": "a3dfa9c6d4d926f0acfa39a6902021141e42fe763acf7a2f3f65e572ec44b580"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-net-export-decoded.json",
+      "bytes": 151,
+      "sha256": "87af73cc872724257ad15abefec5f164267eb7f3a342915795326259ed71057b"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-pca-schematic.png",
+      "bytes": 57513,
+      "sha256": "4aff4f84f149ac78eee482d84ea74b131a3aafebbe686d19299108c39841aa3c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-refilled-drc-decoded.json",
+      "bytes": 361,
+      "sha256": "93e78bcece0201383b9091bb8718527a2add97190dd63c3471150bc4ded5f07a"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-J19-pads-decoded.json",
+      "bytes": 4164,
+      "sha256": "55423b8f636b9735dc40c67d19ff7e481258cf5824fe9ce12e85804517d864a7"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-Q11-pads-decoded.json",
+      "bytes": 2792,
+      "sha256": "2d9fb8c9790375672a46b7a39f278d95aa785bd6701279de32f64d8b78a8e905"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-R16-pads-decoded.json",
+      "bytes": 1454,
+      "sha256": "930a8f6f78b18cc892d12cd43735aa94c388d955d95deb4d307e768fbb04a2fe"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-R17-pads-decoded.json",
+      "bytes": 1452,
+      "sha256": "8cd5dbb9cd9ccdc1b23dae32083350f3b4e999d41038cf47b3288f6bba7ccb52"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-R18-pads-decoded.json",
+      "bytes": 1451,
+      "sha256": "8220b716163009c0b7ae59d314e18ee47f6defa889c2d4a38107898ec62e98d1"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-R19-pads-decoded.json",
+      "bytes": 1451,
+      "sha256": "bb401697149a21a9e8cd4dade7032411ec77b81baeb5025fc9566f5369de714c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-U12-pads-decoded.json",
+      "bytes": 13988,
+      "sha256": "0b0aa78f7e9c5a30976ee48823661d1133d49649b2d9532f1eb3b31a73fa93f2"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-U13-pads-decoded.json",
+      "bytes": 5577,
+      "sha256": "04e331ed595c2b023d099fef669be3f80edf9a55cf446040c864013b7533df38"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-U7-pads-decoded.json",
+      "bytes": 19559,
+      "sha256": "8999714dc9c2a5f541f0ca0491f863a13d972a30ee12e4d96a4917c4de70fc32"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-saved-drc-decoded.json",
+      "bytes": 355,
+      "sha256": "fa90a6dbd02eebad3affdf6c2bb5138b8d980e919a5b8eaee6d2ae16d66b9c79"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-sch-pdf-decoded.json",
+      "bytes": 173,
+      "sha256": "91d32b0a6d29a4a9c6c6d48cefe2a5df6ac7fd08fb577c950819e48db6af64ab"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-schematic.png",
+      "bytes": 1203445,
+      "sha256": "9c186f072108dafc183baf24113fe3589bd82dd5bd3a75f1ce2713f223ed41e4"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/final-short-check-decoded.json",
+      "bytes": 38,
+      "sha256": "728d893a377a9147204846612ed0cafa92a3536b2443a737aeb93daba26220ad"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/front_copper-control-final.png",
+      "bytes": 53878,
+      "sha256": "a2e792ebf99ca0afcacf029fc4bdaaa890981098217b144e78b5dfd2e4ad9ce4"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/front_copper-host-feed-final.png",
+      "bytes": 30824,
+      "sha256": "2eedae20958caeeaffe5f1fa259b5120e1f6c3658317d9d65acb266f4838161c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/geometry-scope-review.json",
+      "bytes": 10095,
+      "sha256": "3b89850f2bf135a1134fc89c0110852931f79bb5d5ef33226291e3c389d46235"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/manufacturing-reconciliation.json",
+      "bytes": 7936,
+      "sha256": "98b3bcd39c5f79254c0712db3822f9fd61636390b553a7fbfe44a9f60f5f9e37"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/model-path-validation.json",
+      "bytes": 19802,
+      "sha256": "01e84ebb4289eca5eee054935772087967780b9354336fa486a815cc94bd80a6"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/proposed-control-review.json",
+      "bytes": 4123,
+      "sha256": "49cfd190db2860e21a0fbd4447ef9dc24869ce8556d9e211d8a45242a9b4372c"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/retained-native-metadata-report.json",
+      "bytes": 21728,
+      "sha256": "0e62190ad20418526c99e3c3948b5a6ca8685160f60f7c098780f9747cadf5d3"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/retention-proof.json",
+      "bytes": 64757,
+      "sha256": "3452e2fd372ff940d678d3abccd8fb8495d650dc3a5c60f70550d808f6a24ddc"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/retention-report.json",
+      "bytes": 36506,
+      "sha256": "cd9c13fe62125d85152da4cfc09e235baeaa943687119d1ea4849240678cb2a4"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/rules-and-U12-comparison.json",
+      "bytes": 26516,
+      "sha256": "51b73552feed4b62e8d98ccb4df6286ffd4dded87b25125eb6b6ba023dbc6c44"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/saved-design-comparison.json",
+      "bytes": 112009,
+      "sha256": "d45db058830c327a8e15bc522f896b559bf5dbb572b871e15012a54c48250c1a"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/schematic.net",
+      "bytes": 348262,
+      "sha256": "faf9c34fda75e7fffd5772f0fe0c47fa6584e6ace004f7b1f4736597af2c223f"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/source-after-final-review.json",
+      "bytes": 5448,
+      "sha256": "2f18a73feee0d9d86925217bb62dd03b671d94ea4b793ce6f32218beb6007ae5"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/source-before-final-review.json",
+      "bytes": 5452,
+      "sha256": "44c737dcd286d973c6c8d0c56a00e25a68ddbb12907ddee642a620d7a02cf640"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/source-hashes.json",
+      "bytes": 5325,
+      "sha256": "12a2daba577ffc1589f17a05de60f07de5cac444dc759880dd33199bf3a9549b"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/zone-boundary-locality.json",
+      "bytes": 4730,
+      "sha256": "8edba88c990726645da39903499ba03efc72a225b4bb254cd998d7baab754fe1"
+    },
+    {
+      "path": "Verification/PCA_Control_2026-10-10/zone-remote-tolerance.json",
+      "bytes": 1124,
+      "sha256": "eeda26a62a5ffc740f7b705345ba7cfb12bb8c53e1cff094e7ef7c20e15ecafe"
+    },
+    {
       "path": "Verification/Qwiic_2026-10-09/assembly-export-evidence.json",
       "bytes": 265,
       "sha256": "6db74cc6df9212ff1d386e63d705fc14c449a28e3c70767f4710f9a19387a26b"
@@ -825,8 +1110,8 @@
     },
     {
       "path": "Verification/REVIEW_REPORT.md",
-      "bytes": 12725,
-      "sha256": "e8a9c8b7bdc18e39553a0a5b5f31bf51f741df5b33a946ca523277c8e9f47c7b"
+      "bytes": 11816,
+      "sha256": "233dee9bd789f91cebc2bab8d3ac9e2e06535919f325518fefcabd9e31e33e80"
     },
     {
       "path": "Verification/Recheck_2026-10-09/aggregate-adjudication.json",
@@ -1280,8 +1565,8 @@
     },
     {
       "path": "Verification/V1_TO_V105_COMPARISON.md",
-      "bytes": 27039,
-      "sha256": "13702419379379fcd4232da2ad0f10a73ec14952d6ca04616afdb39eaa6e569a"
+      "bytes": 27218,
+      "sha256": "a12adbebe8d55ed3fcfa314088b4bc2a7b5613662ebe3f90026bab1a91dce3a0"
     },
     {
       "path": "Verification/aggregate-adjudication.json",

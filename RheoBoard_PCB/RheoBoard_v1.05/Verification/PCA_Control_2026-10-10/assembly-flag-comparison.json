@@ -1,0 +1,29 @@
+{
+  "source": "Read-only narrow KiCad footprint attribute metadata; native exports omit position-exclusion flags.",
+  "baseline": {
+    "U8": [
+      "through_hole",
+      "exclude_from_pos_files"
+    ],
+    "U11": [
+      "through_hole",
+      "exclude_from_pos_files"
+    ]
+  },
+  "final": {
+    "U8": [
+      "through_hole",
+      "exclude_from_pos_files"
+    ],
+    "U11": [
+      "through_hole",
+      "exclude_from_pos_files"
+    ],
+    "J19": [
+      "through_hole",
+      "exclude_from_pos_files"
+    ]
+  },
+  "U8_U11_preserved": true,
+  "J19_manual_THT_excluded": true
+}

@@ -1,0 +1,73 @@
+{
+  "pad_count": 2,
+  "pads": [
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.25,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 0.975,
+            "y": 0.95
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "/HOST_3V3",
+      "number": "1",
+      "pad_type": "smd",
+      "rotation_deg": 180.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 0.975,
+        "y": 0.95
+      },
+      "uuid": "95ffe1ec-6c8a-44a5-94be-f7fe488b3f5f",
+      "x": 169.9125,
+      "y": 87.4
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": 0.25,
+          "layer": "F.Cu",
+          "offset": null,
+          "shape": "roundrect",
+          "size": {
+            "x": 0.975,
+            "y": 0.95
+          }
+        }
+      ],
+      "drill": null,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "net": "VALVE2_IN",
+      "number": "2",
+      "pad_type": "smd",
+      "rotation_deg": 180.0,
+      "shape": "roundrect",
+      "size": {
+        "x": 0.975,
+        "y": 0.95
+      },
+      "uuid": "6f7b6166-3ad1-448f-9ef0-6b7be9d813e4",
+      "x": 168.0875,
+      "y": 87.4
+    }
+  ],
+  "reference": "R17",
+  "source": "file"
+}

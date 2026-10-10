@@ -1,0 +1,35 @@
+{
+  "status": "BOM draft validated; awaiting frozen CAD reconciliation",
+  "fitted_parts": 142,
+  "SMT_parts": 135,
+  "SMT_groups": 42,
+  "manual_refs": [
+    "J19",
+    "J2",
+    "J3",
+    "U10",
+    "U11",
+    "U8",
+    "U9"
+  ],
+  "removed_fitted_refs": [
+    "C22",
+    "C47",
+    "R10",
+    "R11",
+    "R13",
+    "R14",
+    "U4"
+  ],
+  "added_fitted_refs": [
+    "J19"
+  ],
+  "all_retained_part_identities_and_prices_unchanged": true,
+  "original_accessories_preserved_except_master_note": true,
+  "added_button_cable": true,
+  "quantity_formulas_valid": true,
+  "formula_errors": 0,
+  "tabs_tables_styles_freeze_panes_preserved": true,
+  "header_price_unquoted": true,
+  "xlsx_sha256": "0accd5bb8b8e4189020d96392a000f17da6a5ffdd49c704c1eafafb4102cb792"
+}

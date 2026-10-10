@@ -1,0 +1,207 @@
+{
+  "pad_count": 5,
+  "pads": [
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": null,
+          "layer": "*.Cu",
+          "offset": null,
+          "shape": "rect",
+          "size": {
+            "x": 1.7,
+            "y": 1.7
+          }
+        }
+      ],
+      "drill": {
+        "end_layer": null,
+        "shape": "circle",
+        "size": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "start_layer": null
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "net": "GND",
+      "number": "1",
+      "pad_type": "thru_hole",
+      "rotation_deg": 180.0,
+      "shape": "rect",
+      "size": {
+        "x": 1.7,
+        "y": 1.7
+      },
+      "uuid": "38ff26c6-d072-468c-b6c2-c0d88357a365",
+      "x": 165.0,
+      "y": 91.96
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": null,
+          "layer": "*.Cu",
+          "offset": null,
+          "shape": "circle",
+          "size": {
+            "x": 1.7,
+            "y": 1.7
+          }
+        }
+      ],
+      "drill": {
+        "end_layer": null,
+        "shape": "circle",
+        "size": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "start_layer": null
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "net": "VALVE1_IN",
+      "number": "2",
+      "pad_type": "thru_hole",
+      "rotation_deg": 180.0,
+      "shape": "circle",
+      "size": {
+        "x": 1.7,
+        "y": 1.7
+      },
+      "uuid": "e841750c-500d-4f84-a22a-baf0412addf0",
+      "x": 165.0,
+      "y": 89.41999999999999
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": null,
+          "layer": "*.Cu",
+          "offset": null,
+          "shape": "circle",
+          "size": {
+            "x": 1.7,
+            "y": 1.7
+          }
+        }
+      ],
+      "drill": {
+        "end_layer": null,
+        "shape": "circle",
+        "size": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "start_layer": null
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "net": "VALVE2_IN",
+      "number": "3",
+      "pad_type": "thru_hole",
+      "rotation_deg": 180.0,
+      "shape": "circle",
+      "size": {
+        "x": 1.7,
+        "y": 1.7
+      },
+      "uuid": "22a163a5-8b9d-451c-8ccb-772fcbeb47f1",
+      "x": 165.0,
+      "y": 86.88
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": null,
+          "layer": "*.Cu",
+          "offset": null,
+          "shape": "circle",
+          "size": {
+            "x": 1.7,
+            "y": 1.7
+          }
+        }
+      ],
+      "drill": {
+        "end_layer": null,
+        "shape": "circle",
+        "size": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "start_layer": null
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "net": "PUMP1_IN",
+      "number": "4",
+      "pad_type": "thru_hole",
+      "rotation_deg": 180.0,
+      "shape": "circle",
+      "size": {
+        "x": 1.7,
+        "y": 1.7
+      },
+      "uuid": "087c85bc-79c4-4946-ab35-228e1bab7ec2",
+      "x": 165.0,
+      "y": 84.33999999999999
+    },
+    {
+      "copper_layers": [
+        {
+          "chamfer_ratio": null,
+          "corner_rounding_ratio": null,
+          "layer": "*.Cu",
+          "offset": null,
+          "shape": "circle",
+          "size": {
+            "x": 1.7,
+            "y": 1.7
+          }
+        }
+      ],
+      "drill": {
+        "end_layer": null,
+        "shape": "circle",
+        "size": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "start_layer": null
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "net": "PUMP2_IN",
+      "number": "5",
+      "pad_type": "thru_hole",
+      "rotation_deg": 180.0,
+      "shape": "circle",
+      "size": {
+        "x": 1.7,
+        "y": 1.7
+      },
+      "uuid": "6472325c-8dc4-4d71-9017-540fa26e02d8",
+      "x": 165.0,
+      "y": 81.8
+    }
+  ],
+  "reference": "J19",
+  "source": "file"
+}

@@ -1,0 +1,72 @@
+{
+  "expected_whole_netlist_exact": true,
+  "unexpected_connectivity_delta": {},
+  "all_159_retained_properties_preserved": true,
+  "button_pullup_refs": {
+    "R16": {
+      "value": "10K/0603/1%",
+      "net1": "/HOST_3V3",
+      "net2": "VALVE1_IN"
+    },
+    "R17": {
+      "value": "10K/0603/1%",
+      "net1": "/HOST_3V3",
+      "net2": "VALVE2_IN"
+    },
+    "R18": {
+      "value": "10K/0603/1%",
+      "net1": "/HOST_3V3",
+      "net2": "PUMP1_IN"
+    },
+    "R19": {
+      "value": "10K/0603/1%",
+      "net1": "/HOST_3V3",
+      "net2": "PUMP2_IN"
+    }
+  },
+  "local3V3_direct_caps": [
+    {
+      "ref": "C28",
+      "value": "10uF 25V X5R \u00b110%"
+    },
+    {
+      "ref": "C29",
+      "value": "10uF 25V X5R \u00b110%"
+    },
+    {
+      "ref": "C30",
+      "value": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "ref": "C46",
+      "value": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "ref": "C60",
+      "value": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "ref": "C61",
+      "value": "22uF 25V X5R \u00b120%"
+    },
+    {
+      "ref": "C63",
+      "value": "100nF 50V X7R \u00b110%"
+    },
+    {
+      "ref": "C68",
+      "value": "100nF 50V X7R \u00b110%"
+    }
+  ],
+  "track_via_counts": {
+    "baseline": {
+      "track_primitives": 621,
+      "vias_physical": 302
+    },
+    "final": {
+      "track_primitives": 594,
+      "vias_physical": 295
+    }
+  },
+  "unmodified_U12_all26": true
+}

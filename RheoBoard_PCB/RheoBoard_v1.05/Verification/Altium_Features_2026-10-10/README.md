@@ -1,5 +1,6 @@
 # Selective Altium features applied to v1.05 — 2026-10-10
 
+This is a historical checkpoint. The later [PCA/button update](../PCA_Control_2026-10-10/README.md) changes actuator control and adds J19; use the current review for release status.
 **CAD change audit passed: 27/27 independent checks. ERC and saved/refilled DRC report zero findings, unrouted connections and schematic-parity findings.** This verifies the scoped change and preservation of the remaining CAD; it is not physical qualification or supplier acceptance.
 
 ## Implemented change

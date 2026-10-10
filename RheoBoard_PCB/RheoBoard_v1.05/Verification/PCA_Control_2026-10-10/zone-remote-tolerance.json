@@ -1,0 +1,40 @@
+{
+  "control_scope_region_board_mm": [
+    90,
+    61,
+    197,
+    122
+  ],
+  "method": "For changed filled-boundary segments outside the control region, measure five evenly spaced points to the opposite-version complete boundary on the same net/layer; identifies numerical subdivision/rounding changes. This is a geometric tolerance check, not an exact Boolean copper-area proof.",
+  "results": [
+    {
+      "layer": "F.Cu",
+      "net": "GND",
+      "direction": "baseline_to_final",
+      "sample_count": 67,
+      "max_distance_mm": 1.22760105712546e-06
+    },
+    {
+      "layer": "F.Cu",
+      "net": "GND",
+      "direction": "final_to_baseline",
+      "sample_count": 93,
+      "max_distance_mm": 1.6367119699986095e-06
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN",
+      "direction": "baseline_to_final",
+      "sample_count": 30,
+      "max_distance_mm": 7.964353273984521e-07
+    },
+    {
+      "layer": "F.Cu",
+      "net": "VIN",
+      "direction": "final_to_baseline",
+      "sample_count": 35,
+      "max_distance_mm": 5.973352194002584e-07
+    }
+  ],
+  "all_remote_samples_within_0p001mm": true
+}

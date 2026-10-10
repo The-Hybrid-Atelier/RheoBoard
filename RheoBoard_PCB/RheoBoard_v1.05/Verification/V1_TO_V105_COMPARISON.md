@@ -1,5 +1,6 @@
 # RheoBoard v1 versus v1.05 — comparison checkpoint of 2026-10-09
 
+This is a historical checkpoint. The later [PCA/button update](PCA_Control_2026-10-10/README.md) changes actuator control and adds J19; use the current review for release status.
 **This detailed comparison records the 2026-10-09 design.** On 2026-10-10, D1 was subsequently replaced by Q11 DMP6023LE-13, D37 BZT52C10-7-F and R85 10 kΩ. Current totals are 167 components/features, 418 schematic pin nodes, 148 fitted parts and 142 SMT parts. The new input stage adds local routing and one ground via while preserving all 164 retained components and their connections, placement and pad geometry. See the [current review](REVIEW_REPORT.md) and [selective change verification](Altium_Features_2026-10-10/README.md). The tables below, including D1 and the 165-component/611-trace counts, remain historical evidence for the preceding checkpoint.
 
 

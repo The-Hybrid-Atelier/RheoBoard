@@ -1,0 +1,426 @@
+{
+  "reviewer": "/root/kicad_qwiic_review",
+  "timestamp_utc": "2026-10-10T18:11:41.487322+00:00",
+  "verdict": "PASS for the saved PCA9685/button-control change and preserved CAD scope. No new confirmed electrical or layout blocker found. Physical qualification remains open.",
+  "scope": "Independent read-only change audit: remove TCA9534/U4 and seven associated board objects, add J19 host GPIO button header, relocate R16-R19 to HOST_3V3, route valve control to PCA9685 channels5/6. Native whole-design checks plus complete retained component/net/placement/route comparison; this is not a new physical production qualification.",
+  "coverage_status": "complete for declared saved CAD change audit",
+  "checks": {
+    "all39_source_hashes_match_handoff_and_unchanged": true,
+    "other36_libraries_tables_reference_sheets_unchanged": true,
+    "fresh_native_ERC_zero": true,
+    "fresh_saved_DRC_all_reported_categories_zero": true,
+    "fresh_refilled_DRC_all_reported_categories_zero": true,
+    "fresh_direct_short_check_zero": true,
+    "aggregate_completed6of6_no_diagnostics": true,
+    "160components_exactly8removed_J19added": true,
+    "all159_retained_component_fields_preserved": true,
+    "whole_netlist_exactly_matches_independent_expected_change": true,
+    "394_schematic_pin_nodes_match_saved_board_known_alias_only": true,
+    "only_four_button_pullups_moved": true,
+    "all_other_retained_pad_geometry_preserved": true,
+    "U12_all26_saved_pad_records_exact": true,
+    "U12_NC_alias_unchanged": true,
+    "project_rules_severities_exclusions_unchanged": true,
+    "U8_U11_assembly_exclusion_preserved": true,
+    "J19_manual_THT_excluded_from_positions": true,
+    "outline_exactly_preserved": true,
+    "all_nonvia_holes_preserved_only_J19_five1mm_holes_added": true,
+    "track_changes_scoped_to_control_nets_and_region": true,
+    "15_U4_ground_vias_exactly_removed": true,
+    "other_removed_vias_only_two_old_valve_transitions": true,
+    "added_vias_only_host_feed_and_valve_routes": true,
+    "five_obsolete_U4_teardrop_polygons_removed": true,
+    "other_power_fill_difference_only_numeric_tolerance": true,
+    "remote_filled_boundary_change_below1um": true,
+    "J19_pinout_and_2p54_pitch_correct": true,
+    "buttons_10k_HOST_pullups_100nF_filters_active_low_correct": true,
+    "valves_LED5_LED6_preserve_physical_driver_mapping": true,
+    "OE_low_and_pump_LED0_LED1_preserved": true,
+    "Qwiic_host_local_rails_still_separate": true,
+    "logic_direct_capacitance64p40uF": true,
+    "native_visual_review_scoped_layout_schematic_and_header_silk_complete": true,
+    "firmware_doc_auto_increment_STOP_update_clarification_present": true,
+    "header_doc_GPIO32_33_25_26_matches_WRL15663_primary_schematic": true
+  },
+  "passing_checks": 36,
+  "total_checks": 36,
+  "failed_checks": {},
+  "source_hashes": {
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TI_RPW0010A_VQFN-HR_2x2mm.kicad_mod": "a3f1d5c75aed15fcb3ace734f9d9e8b826be122530734bca8bbbcf9dd505667a",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/AO3400A.kicad_mod": "6ed508c535915a9ee26a0e826fd58a97ec480b1ed8402a53c34355a55572fbc5",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/4.7uH_2A.kicad_mod": "1f6b2771db11bb0aa21eaa7b49a4be29ba9d2d2bce200853b08ae4eebf04e9d2",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TPS563203DRLR.kicad_mod": "f76b790f3fd9bbb0dba9b4def2883f3343e5cfb0310c72183b2ac0c400a762a6",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/PCA9685.kicad_mod": "e597be95eed0715738a71187de20fbc20768412cb13c124ecf9d8833f4c3b2d1",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TI_DGK0008A_VSSOP_3x3mm_P0.65mm.kicad_mod": "38e1145860c4adb1b5c3f6c9bea813d6459a6aec56cc02a7d7047abe4bc6afd4",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TestPoint_Plated_D1.0_Drill0.5.kicad_mod": "34c4f3de7605056f2bf10d5328c7d5c45315801f5757bdb5b5068f3afd108a9c",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/SS34.kicad_mod": "3bf2f00384daa523543c6c9410292afcd3442871ce90415ad696f993bfdf0ef8",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/Fuse_JDT_JFC1032TS_10.25x3.2mm.kicad_mod": "0ffefc8fb07cd2a3b41c0d2807097fd164c74c844359525679776bbf1c704f77",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/VALVE_v105.kicad_mod": "b393f8f053f28403c55bd5933943e21374014df46559e1d3d2d3dfa3cbde9990",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/DBV0006A_N.kicad_mod": "cd2e851e2dc43af643070d58daed900dbd9ccb83da985145a051b298d702cd5d",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/PJ-082BH.kicad_mod": "a72fd06343d3ba8a5535cd05c380be23beca38fcd2424490dab950cf33d2267b",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/VALVE.kicad_mod": "dc575897b26eef874e5cf55cbd07abb6b589d9d10e232ea7c63066dc044b8334",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/Tactile_Switch_4pad.kicad_mod": "6bb348d80c22ac7dcefa1b6dc245362c8fab9a99f39bb3b43a79a0aea130779f",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/PUMP.kicad_mod": "8d65de5c70b3208751639c05513d23349a9b49e8b210a5c51d3b2dc95a8ead5d",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/MPRLS0025PA00001A.kicad_mod": "a8584f44f47026344868d2106e66e33aa0f69e26fdaec418e96f8a6f55b128c0",
+    "RheoBoard_PCB/RheoBoard_v1.05/Footprint/TCA9534APWR.kicad_mod": "36b0fa78c91561f6b5dabbc5cc0a2034b7755534c95e987a22af36f7b25dba7b",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/TCA9534APWR.kicad_sym": "c3f8ab4b4294b90fcdea372965c710e60f96c3f29502fa8b47ca469413ea5671",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/MPRLS0025PA00001A.kicad_sym": "befc5d54c01166b0ba4ceca8295b843c6da3da9328f62b95ceae4323fad10b71",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/UCC27511A-Q1 .kicad_sym": "6385d5d471cc95664700fc173a80d0bc16b7e0a01c148b171be479bc5c7f397b",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/IAUCP04P4L020.kicad_sym": "a9176df1a5cf539d3057b4103ad16ad428c4045615c77561e1a26db99e7b6e1d",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/PJ-082BH.kicad_sym": "92f9b2692d577df0685ae0a87eb8b68c25a589e80628e7e4a6c34982eed90577",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/Fuse_Khach.kicad_sym": "b5b334796a0566bc12ee09e829e1e83024fd6a1486acab59f4bf43c56717250d",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/PCA9685.kicad_sym": "ee9e131237f669391d424d6310befec3ee00a3c380de5ae3849e718f2c353566",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/RheoBoard_Fixes.kicad_sym": "b33dfaad79f82e9b1cc916b95bea25266d5ff4ea4cde5d1dbb89479152a17cfe",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/TPS563203DRLR.kicad_sym": "ed2733c0402f4cf434a2ae06965105394f4238cbd9dfdfafc43897d4a4ea34d8",
+    "RheoBoard_PCB/RheoBoard_v1.05/Symbol/4.7uH_2A.kicad_sym": "0d17d6596dc8bb2aa4629169b8d4aab07454f1504febee65b10f69f300cf8319",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/3_PERIPHERAL.kicad_sch": "ff9b7659e593ca82cbcbb4912c4cf0e8c24e810b8ee63dcdb21faac5ecc34522",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/5_Switch TCA9534.kicad_sch": "7989922e5f4af6bfce74abfc368af8e31f42a5cdc94af7794e067c5dbf57b7a7",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/Switch TCA9534.kicad_sch": "7ff6cd4e10d966d5032b24e56d24c02bfcbe59c874b880453a2947087599846e",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/1_Power.kicad_sch": "c1ff36fb1685f53ba3c27a57f396a40c329962c96deee35758550eb6826cc06f",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_sch": "f6242be865363115ea66299fdf5fa0636f741935db3ced000e499b4436933f23",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/fp-lib-table": "f49ed2595a272922f8aa84b2670346cae9677f0610aae3654585d6594b332dd8",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_pro": "01be986c2fae4de5accf1d29ab408063f3ecf7d464a3928c891053c73c2b2edb",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/2_MCU.kicad_sch": "7e63f7547058d03c061be3e5d6295899dfca3c19cf85a4d6214d17e0616be0be",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/3_MICROPROCESSOR.kicad_sch": "36b1baeee3df39cd19267c0a1c1c34a4a5c10f83641f7af5903790ca88e04cdf",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/4_MPRLS0025PA00001A.kicad_sch": "855f3f2caf16aa571159689fb7c610180492a7f2e6e5f44c8ee0cec01bbcb8df",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/sym-lib-table": "2be086cecce4337a1c1342297b71ec8bd0d3c484b3c376158b778a68b3c5fa26",
+    "RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_pcb": "6d94360ace8ea3809e854c392ac15769a7b1e9592c1fe155131be9e9e1d97f04"
+  },
+  "CAD_or_project_modified_by_reviewer": false,
+  "counts": {
+    "schematic_board_components": 160,
+    "retained_components": 159,
+    "schematic_pin_nodes": 394,
+    "native_board_pad_primitives": 428,
+    "tracks": 594,
+    "physical_vias": 295,
+    "fitted_parts_parent_reconciliation": 142,
+    "SMT_parent_reconciliation": 135,
+    "manual_parent_reconciliation": 7
+  },
+  "native_validation": {
+    "ERC": {
+      "coordinates": {
+        "kicad_version": "10.0.6",
+        "reason": "KiCad 10.0.6 writes every ERC JSON coordinate at 1/100 of its true value (kicad#25582, fixed in 10.0.7); Konnect multiplied it back. A length quoted inside KiCad's own violation text is scaled the same way and is left as KiCad wrote it.",
+        "scale_applied": 100.0,
+        "status": "corrected"
+      },
+      "errors": 0,
+      "total": 0,
+      "violations": [],
+      "warnings": 0
+    },
+    "saved_DRC": {
+      "categories_not_reported": [],
+      "design_rule_violations": 0,
+      "filtered_count": 0,
+      "live_board_synced": false,
+      "schematic_parity": 0,
+      "schematic_parity_diagnostic": null,
+      "severity_filter": "info",
+      "source": "saved_file",
+      "total": 0,
+      "unconnected_items": 0,
+      "violations": [],
+      "zone_refill_source": null,
+      "zones_refilled": false
+    },
+    "analysis_refilled_DRC": {
+      "categories_not_reported": [],
+      "design_rule_violations": 0,
+      "filtered_count": 0,
+      "live_board_synced": false,
+      "schematic_parity": 0,
+      "schematic_parity_diagnostic": null,
+      "severity_filter": "info",
+      "source": "saved_file",
+      "total": 0,
+      "unconnected_items": 0,
+      "violations": [],
+      "zone_refill_source": "kicad_cli",
+      "zones_refilled": true
+    },
+    "direct_short_check": {
+      "short_count": 0,
+      "shorts": []
+    }
+  },
+  "connectivity": {
+    "exact_expected_full_netlist": true,
+    "changed_six_pins": [
+      {
+        "ref": "R19",
+        "pin": "1",
+        "before": "+3V3",
+        "after": "/HOST_3V3"
+      },
+      {
+        "ref": "R16",
+        "pin": "1",
+        "before": "+3V3",
+        "after": "/HOST_3V3"
+      },
+      {
+        "ref": "R17",
+        "pin": "1",
+        "before": "+3V3",
+        "after": "/HOST_3V3"
+      },
+      {
+        "ref": "R18",
+        "pin": "1",
+        "before": "+3V3",
+        "after": "/HOST_3V3"
+      },
+      {
+        "ref": "U7",
+        "pin": "11",
+        "before": "unconnected-(U7-PWM5-Pad11)",
+        "after": "VALVE1"
+      },
+      {
+        "ref": "U7",
+        "pin": "12",
+        "before": "unconnected-(U7-PWM6-Pad12)",
+        "after": "VALVE2"
+      }
+    ],
+    "J19": {
+      "1": "GND",
+      "2": "VALVE1_IN",
+      "3": "VALVE2_IN",
+      "4": "PUMP1_IN",
+      "5": "PUMP2_IN"
+    },
+    "raw_parity_alias": "U12 ITIMER pin10 has the same overlapping physical NC primitives with base and _1 net names; all26 saved pad records and native parity prove no new connection. No alias was silently merged."
+  },
+  "layout": {
+    "retained": "All159 retained electrical component fields unchanged. Only R16-R19 placements changed; all other component positions and copper pad geometry retained. U12, Q11 input circuit, Qwiic connectors and mechanics retained.",
+    "routing": "531 original track primitives retained,90 removed and63 added within declared control nets/region. No power-converter or input-stage track changed. Fifteen old U4 ground stitches and two obsolete valve transitions removed;10 new host/valve vias added. Eight trial vias in owner logs are absent from both baseline and final and are not counted as baseline removal.",
+    "ground_and_fills": "Shared ground copper retained and locally refilled around J19, host feed, rerouted valves and removed U4/pullups. Five obsolete U4 teardrop contours removed. VIN/+4V5 native contour changes are sub-nanometer-to-nanometer numeric subdivisions; remoteGND samples below0.000002mm. Sampled boundary equivalence is not an exact Boolean-area proof.",
+    "header": "Saved J19 has five1.0mm plated drills,1.7mm lands and2.54mm pitch; square pad1/GND at bottom, P2 at top in front view. Assembly mask/silk crop matches GND/V1/V2/P1/P2 and BUTTONS marks. Short, mechanically secured cable required; actual mating fit is a physical check.",
+    "visual_evidence": [
+      "final-front.png",
+      "final-back.png",
+      "final-front-control-crop.png",
+      "final-back-control-crop.png",
+      "final-schematic.png",
+      "final-header-layout.png",
+      "final-header-schematic.png",
+      "final-buttons-schematic.png",
+      "final-pca-schematic.png"
+    ]
+  },
+  "rule_coverage": {
+    "settings_unchanged": true,
+    "explicit_DRC_exclusions": [],
+    "explicit_ERC_exclusions": [],
+    "inherited_ignored_DRC": [
+      "footprint_filters_mismatch",
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries"
+    ],
+    "inherited_ignored_ERC": [
+      "footprint_filter",
+      "four_way_junction",
+      "simulation_model_issue",
+      "single_global_label"
+    ],
+    "source": "Native checks use current retained settings. Rules/exclusion and manual-assembly flags read through narrow Channel3 metadata fallback because native exports omit these fields."
+  },
+  "aggregate_adjudication": {
+    "status": "complete",
+    "completed": 6,
+    "coverage": {
+      "board": {
+        "footprints": 160,
+        "named_nets": 85,
+        "pads": 428
+      },
+      "schematic": {
+        "multi_unit_symbols": 0,
+        "named_nets": 36,
+        "resolved_symbols": 239,
+        "schematic_files": 1,
+        "sheet_instances": 1,
+        "symbol_instances": 239,
+        "unresolved_symbols": 0
+      }
+    },
+    "raw_verdict": "NOT READY \u2014 critical issues must be fixed before manufacturing",
+    "raw_findings": [
+      {
+        "audit": "power_rails",
+        "category": "power",
+        "component": null,
+        "issue": "Power rail '+12V' has no decoupling capacitors",
+        "recommendation": "Add at least one 100nF ceramic cap on the '+12V' rail",
+        "severity": "error",
+        "source": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_sch"
+      },
+      {
+        "audit": "power_rails",
+        "category": "power",
+        "component": null,
+        "issue": "Power rail '+12V' has no test point",
+        "recommendation": "Add a test point on '+12V' for debugging",
+        "severity": "info",
+        "source": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_sch"
+      },
+      {
+        "audit": "power_rails",
+        "category": "power",
+        "component": null,
+        "issue": "Power rail '+3V3' has no test point",
+        "recommendation": "Add a test point on '+3V3' for debugging",
+        "severity": "info",
+        "source": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_sch"
+      },
+      {
+        "audit": "power_rails",
+        "category": "power",
+        "component": null,
+        "issue": "Power rail '+4V5' has no test point",
+        "recommendation": "Add a test point on '+4V5' for debugging",
+        "severity": "info",
+        "source": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_sch"
+      },
+      {
+        "audit": "power_rails",
+        "category": "power",
+        "component": null,
+        "issue": "Power rail '+6V' has no test point",
+        "recommendation": "Add a test point on '+6V' for debugging",
+        "severity": "info",
+        "source": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_sch"
+      },
+      {
+        "audit": "power_rails",
+        "category": "power",
+        "component": null,
+        "issue": "Power rail 'VIN' has no test point",
+        "recommendation": "Add a test point on 'VIN' for debugging",
+        "severity": "info",
+        "source": "/Users/charlievuong/Documents/RheoBoard/RheoBoard_PCB/RheoBoard_v1.05/RheoboardV1/RheoBoard_v1.05.kicad_sch"
+      }
+    ],
+    "stronger_evidence": {
+      "+12V": [
+        [
+          "F1",
+          "1"
+        ],
+        [
+          "J2",
+          "1"
+        ]
+      ],
+      "VIN_RAW": [
+        [
+          "C65",
+          "1"
+        ],
+        [
+          "C66",
+          "1"
+        ],
+        [
+          "D36",
+          "1"
+        ],
+        [
+          "D37",
+          "1"
+        ],
+        [
+          "Q11",
+          "3"
+        ],
+        [
+          "R78",
+          "1"
+        ],
+        [
+          "U12",
+          "5"
+        ]
+      ]
+    },
+    "assessment": "One inherited heuristic error requests decoupling directly on jack-to-fuse +12V, which has no IC power pin. C65/C66 remain on protected VIN_RAW. It does not establish a critical defect. Five optional rail-testpoint suggestions remain. Raw heuristic verdict is retained rather than presented as a native ERC/DRC failure."
+  },
+  "firmware_and_system_conditions": [
+    "Valve staticON/OFF uses explicit FULL_ON/FULL_OFF flags with non-inverted totem-pole outputs;4095 is PWM. MODE1.AI=1 for4-byte bursts and MODE2.OCH=0 forSTOP update.",
+    "Cold startup: initialize loadsOFF, select common pumpPWM frequency using sleep/prescaler sequence,wake and wait500us. Pumps and valves share globalreset/OE/SLEEP/ALL_LED effects.",
+    "Host restart: reconcile retained PCA state; no watchdog added and communication loss intentionally preserves outputs while local supply stays stable.",
+    "J19 button signals are active-low inputs; HOST_3V3 comes throughJ9. No local3V3 feed to GPIOs. Both cables required, four distinct GPIOs for each used button bank; never parallel separate board button nets.",
+    "GPIO32,33,25(A1),26(A0) matches WRL15663Micro-B schematic; software debounce remains. Other controller variants need revalidation.",
+    "Existing one-mux-channel-at-a-time and TCA9517A B-side/pullup constraints remain. Sensor modules and long cables are unspecified."
+  ],
+  "remaining_risks": [
+    {
+      "classification": "existing accepted prototype risk",
+      "item": "U5 reset/power-ramp startup qualification remains open."
+    },
+    {
+      "classification": "existing accepted prototype risk",
+      "item": "6V FA0520E rail upper-tolerance margin remains unqualified."
+    },
+    {
+      "classification": "hardware qualification",
+      "item": "Measure startup/loadtransients/temperature,inputstage reverse behavior,buttonpowerstates,bus edges and mechanics. No physical board powered or measured."
+    },
+    {
+      "classification": "firmware implementation",
+      "item": "The existing DIY firmware is not verified compatible with this changed PCB interface."
+    }
+  ],
+  "docs_review": {
+    "drafts": [
+      "README.md",
+      "ASSEMBLY_AND_BRINGUP.md",
+      "REVISION_NOTES.md"
+    ],
+    "draft_hashes": {
+      "README.md": "843f770903988882bbb06f2e4ac42557da92af979e64fc6ce1d4be99a08bf78a",
+      "ASSEMBLY_AND_BRINGUP.md": "883adc35267bea9cb182d89dfc7b225aac7476657f21c9d5ca6ae9dd9df1d24c",
+      "REVISION_NOTES.md": "072368a9e93fe7173ddfc9f3474086f6e71e3ec540bba4fc28e113f73dd3276b"
+    },
+    "verdict": "Wiring,channel mapping,startupvsreconnect,powerdomain and multiple-board requirements are consistent. RequestedAI/OCHclarification is present.",
+    "primary_sources": [
+      "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+      "https://cdn.sparkfun.com/assets/6/d/c/6/c/ESP32_Thing_Plus_Schematic.pdf",
+      "https://cdn.sparkfun.com/assets/4/3/1/7/6/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en_v1-6.pdf"
+    ]
+  },
+  "limits": [
+    "No physical qualification performed.",
+    "BOM/CPL/Gerber/ZIP and model reconciliation performed separately by parent; corresponding counts attributed to parent.",
+    "One reachable main schematic sheet checked; other standalone block references are outside active hierarchy.",
+    "Savedfile nativeexports authoritative. Read-only elevatedKiCad checks used because sandbox has previously interfered with validator ownership; every requestedcheckcompleted.",
+    "No CAD source parsing for connectivity or geometry; native export and savedKonnectpad readers used. Narrowprojectrules andassemblyflagsmetadatafallback documented."
+  ],
+  "evidence": [
+    "proposed-control-review.json",
+    "docs-draft-review.json",
+    "saved-design-comparison.json",
+    "connectivity-assertions.json",
+    "geometry-scope-review.json",
+    "rules-and-U12-comparison.json",
+    "assembly-flag-comparison.json",
+    "zone-boundary-locality.json",
+    "zone-remote-tolerance.json",
+    "source-before-final-review.json",
+    "source-after-final-review.json",
+    "final-erc-decoded.json",
+    "final-saved-drc-decoded.json",
+    "final-refilled-drc-decoded.json",
+    "final-short-check-decoded.json",
+    "final-aggregate-decoded.json"
+  ],
+  "publication_note": {
+    "only_change": "Visual evidence paths flattened to this public evidence directory; review findings unchanged.",
+    "original_report": "final-independent-review-original.json",
+    "original_report_sha256": "7721f933386d78278fae56ab4e5ee4d49cc830b34e88d987e4d7a009a0537aaa"
+  }
+}

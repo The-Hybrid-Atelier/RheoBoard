@@ -1,0 +1,104 @@
+{
+  "scope": "Independent proposed-circuit review only. No final CAD approval; owner working. No live/current CAD read or mutation.",
+  "baseline": {
+    "baseline.net": "04f4c875e768180d140dca7ef2200df69c59f889768c3ffda21c4e0a0a3d1464",
+    "baseline-ipc2581.xml": "9a6e5b180644685ec53fb31940af53db84a7bbf08ade72d5e904a6cfe0eeb348",
+    "baseline-complete-board-manifest.json": "c49e6c59b91e291270e9ed07f5215da6d71f20cb749f1485a91d23b2057bde01"
+  },
+  "baseline_inventory": {
+    "components": 167,
+    "net_pin_nodes": 418
+  },
+  "expected_removals": [
+    "U4",
+    "C22",
+    "C47",
+    "R10",
+    "R11",
+    "R13",
+    "R14",
+    "TP1"
+  ],
+  "expected_addition": {
+    "reference": "J19",
+    "type": "manual through-hole 1x05 2.54 mm",
+    "pins": {
+      "1": "GND",
+      "2": "VALVE1_IN",
+      "3": "VALVE2_IN",
+      "4": "PUMP1_IN",
+      "5": "PUMP2_IN"
+    }
+  },
+  "expected_reassignments": {
+    "R16.1": "/HOST_3V3",
+    "R17.1": "/HOST_3V3",
+    "R18.1": "/HOST_3V3",
+    "R19.1": "/HOST_3V3",
+    "U7.11": "VALVE1",
+    "U7.12": "VALVE2"
+  },
+  "preserve": {
+    "VALVE1": "R55.2 -> Q10 gate through R55; Q10 drives U10",
+    "VALVE2": "R36.2 -> Q8 gate through R36; Q8 drives U9",
+    "button_rc": [
+      "R16-R19=10k",
+      "C23-C26=100nF"
+    ],
+    "important_blocks": [
+      "Q11/D37/R85 reverse-polarity stage",
+      "U12 eFuse + D36",
+      "U13/J9 host/local Qwiic separation",
+      "three power rail dividers",
+      "pump drivers",
+      "board outline and holes"
+    ]
+  },
+  "button_power": {
+    "pullup_supply": "HOST_3V3 from master Qwiic J9; no LOCAL3V3 connection permitted",
+    "all_buttons_pressed_host_mA": 1.32,
+    "nominal_RC_ms": 1.0,
+    "host_off_board_on": "No local3V3 source to buttons; external GPIO controller must be same master powering HOST_3V3.",
+    "host_on_board_off": "Passive button circuit stays host powered; gates only reached through local PCA, not button nets.",
+    "cable_condition": "J19 requires GND and four GPIO inputs; J9 supplies HOST_3V3. Each board requires four distinct GPIO wires; do not parallel J19 signals across boards.",
+    "ESD": "External header is a short internal wiring connection; no system-level exposed-port ESD or long-cable immunity qualified."
+  },
+  "PCA_policy": {
+    "source": "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+    "revision": "Rev 4, 16 April 2015",
+    "channel_mapping": {
+      "5": "VALVE1, physical pin11",
+      "6": "VALVE2, physical pin12"
+    },
+    "on_register_bytes": [
+      "00",
+      "10",
+      "00",
+      "00"
+    ],
+    "off_register_bytes": [
+      "00",
+      "00",
+      "00",
+      "10"
+    ],
+    "mode": "MODE2 INVRT=0, OUTDRV=1 (non-inverted totem pole)",
+    "startup": "POR outputs LOW, FULL_OFF defaults set. SLEEP defaults1; clear SLEEP, wait at least500us for oscillator before active output writes. Initialize all loads off.",
+    "last_state": "OE held low by existingR23=10k. No communication-timeout circuit. Normal last register states remain while local power and clock continue.",
+    "coupling": "Global reset, SLEEP, OE, ALL_LED and prescaler setup affect pumps and valves. Set frequency at startup with loads off; do not periodically reset/reinitialize active controller. FULL_ON/FULL_OFF avoids periodic valve PWM but not shared-controller dependencies.",
+    "caveat": "4095 is nearly100% PWM, not static FULL_ON. FULL_OFF wins if both flags set."
+  },
+  "capacitance_reconciliation": {
+    "local3V3_baseline_nominal_uF": 64.51,
+    "removed_C22_uF": 0.01,
+    "removed_C47_uF": 0.1,
+    "final_expected_nominal_uF": 64.4,
+    "note": "Onboard direct shunt capacitance only; sensor-module capacitance remains unspecified."
+  },
+  "verdict": "Proposed change electrically supported, conditional on final saved connectivity/layout checks and firmware configuration. No new design blocker identified.",
+  "inherited_open_limits": [
+    "U5 sensor reset/power-ramp startup qualification",
+    "FA0520E6V rail worst-case upper operating-margin risk",
+    "Intermittent pumps/valves, load startup/current/thermal and actual cable/module qualification"
+  ]
+}

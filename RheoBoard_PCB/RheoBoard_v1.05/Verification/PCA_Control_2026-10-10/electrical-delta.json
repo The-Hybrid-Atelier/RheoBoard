@@ -1,0 +1,158 @@
+{
+  "baseline_components": 167,
+  "final_components": 160,
+  "baseline_nodes": 418,
+  "final_nodes": 394,
+  "removed_components": [
+    "C22",
+    "C47",
+    "R10",
+    "R11",
+    "R13",
+    "R14",
+    "TP1",
+    "U4"
+  ],
+  "added_components": [
+    "J19"
+  ],
+  "changed_existing_pin_nets": {
+    "R16.1": {
+      "before": "+3V3",
+      "after": "/HOST_3V3"
+    },
+    "R17.1": {
+      "before": "+3V3",
+      "after": "/HOST_3V3"
+    },
+    "R18.1": {
+      "before": "+3V3",
+      "after": "/HOST_3V3"
+    },
+    "R19.1": {
+      "before": "+3V3",
+      "after": "/HOST_3V3"
+    },
+    "U7.11": {
+      "before": "unconnected-(U7-PWM5-Pad11)",
+      "after": "VALVE1"
+    },
+    "U7.12": {
+      "before": "unconnected-(U7-PWM6-Pad12)",
+      "after": "VALVE2"
+    }
+  },
+  "removed_pin_nodes": {
+    "C22.1": "GND",
+    "C22.2": "+3V3",
+    "C47.1": "+3V3",
+    "C47.2": "GND",
+    "R10.1": "Net-(U4-{slash}INT)",
+    "R10.2": "+3V3",
+    "R11.1": "Net-(U4-A0)",
+    "R11.2": "+3V3",
+    "R13.1": "Net-(U4-P2)",
+    "R13.2": "GND",
+    "R14.1": "Net-(U4-P3)",
+    "R14.2": "GND",
+    "TP1.1": "Net-(U4-{slash}INT)",
+    "U4.1": "Net-(U4-A0)",
+    "U4.10": "VALVE2_IN",
+    "U4.11": "PUMP1_IN",
+    "U4.12": "PUMP2_IN",
+    "U4.13": "Net-(U4-{slash}INT)",
+    "U4.14": "/SCL",
+    "U4.15": "/SDA",
+    "U4.16": "+3V3",
+    "U4.2": "Net-(U4-A0)",
+    "U4.3": "Net-(U4-A0)",
+    "U4.4": "VALVE1",
+    "U4.5": "VALVE2",
+    "U4.6": "Net-(U4-P2)",
+    "U4.7": "Net-(U4-P3)",
+    "U4.8": "GND",
+    "U4.9": "VALVE1_IN"
+  },
+  "added_pin_nodes": {
+    "J19.1": "GND",
+    "J19.2": "VALVE1_IN",
+    "J19.3": "VALVE2_IN",
+    "J19.4": "PUMP1_IN",
+    "J19.5": "PUMP2_IN"
+  },
+  "host_3v3_nodes": [
+    [
+      "C69",
+      "1"
+    ],
+    [
+      "J9",
+      "2"
+    ],
+    [
+      "R16",
+      "1"
+    ],
+    [
+      "R17",
+      "1"
+    ],
+    [
+      "R18",
+      "1"
+    ],
+    [
+      "R19",
+      "1"
+    ],
+    [
+      "R82",
+      "1"
+    ],
+    [
+      "R83",
+      "1"
+    ],
+    [
+      "R84",
+      "1"
+    ],
+    [
+      "U13",
+      "5"
+    ],
+    [
+      "U13",
+      "8"
+    ]
+  ],
+  "J19_pinmap": {
+    "J19.1": "GND",
+    "J19.2": "VALVE1_IN",
+    "J19.3": "VALVE2_IN",
+    "J19.4": "PUMP1_IN",
+    "J19.5": "PUMP2_IN"
+  },
+  "valve1_nodes": [
+    [
+      "R55",
+      "2"
+    ],
+    [
+      "U7",
+      "11"
+    ]
+  ],
+  "valve2_nodes": [
+    [
+      "R36",
+      "2"
+    ],
+    [
+      "U7",
+      "12"
+    ]
+  ],
+  "startup_oe_unchanged": true,
+  "expected_electrical_delta_verified": true
+}
