@@ -6,4 +6,4 @@ Hardware discussion is welcome, including criticism of the design.
 
 To raise a concern, open an issue: https://github.com/The-Hybrid-Atelier/RheoBoard/issues
 
-License: CC BY-SA 4.0 — see [`LICENSE`](LICENSE).
+License: CC BY-SA 4.0 — see [`LICENSE`](../LICENSE).
