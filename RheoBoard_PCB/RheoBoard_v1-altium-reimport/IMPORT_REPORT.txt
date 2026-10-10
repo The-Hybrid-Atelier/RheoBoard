@@ -1,0 +1,77 @@
+RheoBoard Altium re-import — 2026-10-10
+
+Open: RheoBoard_Altium_Reimport.kicad_pro in KiCad 10.
+Source: /Users/charlievuong/Downloads/RheoBoard_V1/
+
+CONVERSION RESULT
+The new project is saved separately from the previous Altium import and from
+RheoBoard_v1 / RheoBoard_v1.05. No circuit redesign, rerouting, rule suppression,
+or component substitution was performed. All 37 original design/output files
+remain byte-identical (Finder .DS_Store metadata excluded).
+
+KiCad's native importer recovered all three source sheets:
+- MAIN -> RheoBoard_Altium_Reimport.kicad_sch: 79 physical symbols + 24 power symbols.
+- POWER -> POWER.kicad_sch: 53 physical symbols + 18 power symbols.
+- Block diagram -> RheoBoard_V1.kicad_sch: drawing only, no electrical symbols.
+The PCB contains 132 footprints and 71 named nets on two copper layers.
+The imported footprint library contains 23 footprint files.
+
+The source project and its block-diagram sheet originally share a filename stem.
+A staged copy of the Altium project was given a distinct name before import.
+This avoids the previous collision, which lost the detailed MAIN sheet on disk.
+The Altium schematic and PCB binary files used for import were unchanged copies.
+The three top-level sheet entries now reference three different saved files.
+
+The importer reported eight unavailable PNG illustrations linked to the original
+designer's Windows Screenshots directory. These are not circuit symbols or PCB
+footprints; their appearance was not recovered. See Missing_Illustrations.txt.
+A three-page PDF of the converted sheets is in Verification/Imported_Schematics.pdf.
+
+VERIFICATION
+All three saved schematics exported successfully through native KiCad tooling.
+The MAIN schematic and PCB were also inspected in their native editors.
+An independent IPC-2581 comparison against the previous import found the same
+outline, component positions and values, 32 padstacks, and all 16 physical layer
+feature groups (including copper, pads, net assignments, solder mask and paste).
+Generated package identifiers and four representative package definitions differ;
+the full XML files are therefore not byte-identical. This comparison does not
+prove that every Altium-specific object or design rule is supported by KiCad.
+
+Native saved-board DRC: 718 findings = 72 errors and 646 warnings.
+Analysis-only zone-refill DRC: 679 findings = 47 errors and 632 warnings.
+The analysis refill did not change the saved PCB.
+Both reports include 297 schematic/PCB comparison findings. These include
+53 POWER-sheet footprints missing from the checker’s MAIN-only view, automatic
+net-name differences, 91 missing-corresponding-pin reports, imported field
+differences, and duplicate references. The pin reports need explicit connectivity
+reconciliation; they must not all be dismissed as naming differences.
+They are not 297 newly introduced copper defects. The flat, multiple-top-level
+project must be reconciled before relying on schematic-to-PCB updates.
+
+Per-sheet electrical checks:
+- MAIN: 4 errors / 461 warnings.
+- POWER: 4 errors / 358 warnings.
+- Block diagram: 0 errors / 0 warnings (no electrical components).
+These are per-sheet counts, not a combined project ERC clearance. In particular,
+per-sheet power-drive errors can reflect the separate converter sheet. Konnect's
+project-ownership guard does not support the two secondary flat sheets; direct
+native diagnostic reports were collected for them without modifying source.
+Symbol-library, grid and footprint-link findings remain in the imported design.
+
+IMPORTANT REMAINING FINDINGS
+1. The PCB still has a B.Cu overlap connecting pump 1's switched node (NetD16_1)
+   to valve J8's switched node (NetD10_1). This was also confirmed in the supplied
+   original Altium September 28 Gerber, so re-importing does not remove it.
+2. MAIN confirms U1 pin 11 / LED5 is unconnected. VALE2 contains only R31 pin 1
+   and its test point, consistent with the PCB's missing valve-2 controller drive.
+3. Copper-edge, annular-ring, clearance and solder-mask findings remain.
+   The source also retains three physical symbols/footprints named GND, which
+   must be disambiguated before an engineering-change synchronization.
+
+Status: Circuit sheets and PCB recovered; conversion requires cleanup and the
+remaining design findings require review. This is NOT a production release or
+proof that the supplied Altium circuit is correct. No fabrication package was
+regenerated. This Altium revision is distinct from the later native v1 / v1.05
+and must not be assumed to be the board currently in JLCPCB production.
+
+Hardware design license: see ../../LICENSE in the repository root.

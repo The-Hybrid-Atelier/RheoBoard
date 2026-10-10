@@ -1,0 +1,13 @@
+Unresolved external illustrations reported by the native importer:
+
+Screenshot 2026-09-04 145958.png
+Screenshot 2026-09-03 184246.png
+Screenshot 2026-09-03 184428.png
+Screenshot 2026-09-04 143355.png
+Screenshot 2026-09-03 184420.png
+Screenshot 2026-09-03 184412.png
+Screenshot 2026-09-03 132928.png
+Screenshot 2026-09-03 132545.png
+
+Original location: C:\users\legion\OneDrive\Hình ảnh\Screenshots\
+No replacement illustrations were invented.

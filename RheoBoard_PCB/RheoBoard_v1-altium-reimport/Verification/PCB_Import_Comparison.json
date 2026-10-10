@@ -1,0 +1,45 @@
+{
+  "normalization": "Export-generated primitive/package/padstack IDs resolved to their full definitions; project and library prefixes normalized; unordered XML child records sorted; polygon point order preserved.",
+  "results": {
+    "Profile": {
+      "old_count": 1,
+      "new_count": 1,
+      "equivalent": true,
+      "different_old_elements": 0,
+      "different_new_elements": 0
+    },
+    "Component": {
+      "old_count": 132,
+      "new_count": 132,
+      "equivalent": false,
+      "different_old_elements": 43,
+      "different_new_elements": 43
+    },
+    "Package": {
+      "old_count": 43,
+      "new_count": 43,
+      "equivalent": false,
+      "different_old_elements": 4,
+      "different_new_elements": 4
+    },
+    "PadStackDef": {
+      "old_count": 32,
+      "new_count": 32,
+      "equivalent": true,
+      "different_old_elements": 0,
+      "different_new_elements": 0
+    },
+    "LayerFeature": {
+      "old_count": 16,
+      "new_count": 16,
+      "equivalent": true,
+      "different_old_elements": 0,
+      "different_new_elements": 0
+    },
+    "Component placements and values excluding generated package IDs": {
+      "old_count": 132,
+      "new_count": 132,
+      "equivalent": true
+    }
+  }
+}
