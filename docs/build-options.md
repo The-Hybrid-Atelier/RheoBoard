@@ -2,7 +2,7 @@
 
 License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
-A builder starts on the wiki at [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options). Each section below repeats that path's page. The separate pages stay: [DIY](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/DIY), [PCB](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/PCB), and [Portable](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable). Board details are in [`RheoBoard_PCB/README.md`](../RheoBoard_PCB/README.md).
+A builder starts on the wiki at [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options). The DIY and Portable sections repeat those pages. The PCB section shows the block diagram and the submitted Rheoboard V1 placement. The separate pages stay: [DIY](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/DIY), [PCB](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/PCB), and [Portable](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable). Board details are in [`RheoBoard_PCB/README.md`](../RheoBoard_PCB/README.md).
 
 ## DIY
 
@@ -18,9 +18,9 @@ The DIY version uses two air pumps, one valve, an ESP32 with BLE, and a Qwiic Mi
 
 This is a separate KiCad 10 board: schematic, layout, libraries, Gerbers, assembly BOM, and pick-and-place. Everyday wall power is a 12 V plug. The board is a 1.6 mm, two-copper-layer layout. It is a prototype.
 
-<img src="../RheoBoard_PCB/images/pcb-v105-schematic-and-board.png" width="720" alt="v1.05 schematic on the left and v1.05 board on the right">
+<img src="../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png" width="480" alt="Top: block diagram, 12 V in, valves at 6 V, pumps at 4.5 V. Bottom: submitted Rheoboard V1 placement, order 8815214A_Y73 / SMT026093063736.">
 
-Left is the v1.05 schematic. Right is the v1.05 board.
+Top is the block diagram (12 V in, valves at 6 V, pumps at 4.5 V). Bottom is the submitted Rheoboard V1 placement, order 8815214A_Y73 / SMT026093063736.
 
 **Next:** [BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/BOM).
 

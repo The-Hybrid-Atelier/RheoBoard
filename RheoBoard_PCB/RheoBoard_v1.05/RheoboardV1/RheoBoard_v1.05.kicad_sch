@@ -11620,6 +11620,325 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Transistor_FET:Q_PMOS_GDS"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Q_PMOS_GDS"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "P-MOSFET transistor, gate/drain/source"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transistor PMOS P-MOS P-MOSFET"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Q_PMOS_GDS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905)
+						(xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0)
+						(xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286)
+						(xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778)
+						(xy 3.302 1.778)
+						(xy 3.302 -1.778)
+						(xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508)
+						(xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27)
+						(xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0)
+						(xy 1.27 0.381)
+						(xy 1.27 -0.381)
+						(xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54)
+						(xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54)
+						(xy 2.54 0)
+						(xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 -0.381)
+						(xy 3.683 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.381)
+						(xy 2.921 0.254)
+						(xy 3.683 0.254)
+						(xy 3.302 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Q_PMOS_GDS_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 152.4 347.98)
@@ -14444,13 +14763,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 66.04)
-			(xy 91.44 66.04)
-		)
-		(uuid "16ae578a-a387-43bf-bd3e-73d811265dac")
-	)
-	(wire
-		(pts
 			(xy 218.44 158.75)
 			(xy 218.44 166.37)
 		)
@@ -16285,13 +16597,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 66.04)
-			(xy 99.06 72.39)
-		)
-		(uuid "99fbaff7-c3c4-478c-a9e8-fa773329bdd5")
-	)
-	(wire
-		(pts
 			(xy 697.23 290.83)
 			(xy 697.23 288.29)
 		)
@@ -16380,6 +16685,76 @@
 			(xy 787.4 312.42)
 		)
 		(uuid "5aeed19d-28dd-4a27-8edf-50bb95cc4d10")
+	)
+	(wire
+		(pts
+			(xy 86.36 66.04)
+			(xy 90.17 66.04)
+		)
+		(uuid "b1a7b314-1ef4-4c9a-9568-09d26b64d6da")
+	)
+	(wire
+		(pts
+			(xy 100.33 66.04)
+			(xy 101.6 66.04)
+		)
+		(uuid "7d3bd36a-4294-4684-a8bd-a13e8d2242ed")
+	)
+	(wire
+		(pts
+			(xy 101.6 66.04)
+			(xy 101.6 73.66)
+		)
+		(uuid "5cb24fc7-8e07-4059-b863-3f33d05bf38a")
+	)
+	(wire
+		(pts
+			(xy 101.6 73.66)
+			(xy 99.06 73.66)
+		)
+		(uuid "1aab15a2-db2a-4bf3-9a4a-79d990da2a86")
+	)
+	(wire
+		(pts
+			(xy 95.25 73.66)
+			(xy 95.25 81.28)
+		)
+		(uuid "f26c6371-5a91-4ed6-a730-8db76b45410e")
+	)
+	(wire
+		(pts
+			(xy 95.25 81.28)
+			(xy 99.06 81.28)
+		)
+		(uuid "3987984e-d123-4c6f-8f1d-0c656d2cfeec")
+	)
+	(wire
+		(pts
+			(xy 95.25 81.28)
+			(xy 86.36 81.28)
+		)
+		(uuid "11a82eb6-559f-424c-aab1-e0c7a5419ed4")
+	)
+	(wire
+		(pts
+			(xy 86.36 81.28)
+			(xy 86.36 88.9)
+		)
+		(uuid "db550bc1-4c9a-4a55-88ef-ef57dc0c6847")
+	)
+	(wire
+		(pts
+			(xy 86.36 96.52)
+			(xy 86.36 102.87)
+		)
+		(uuid "470f76e9-1a0c-4d65-b509-c0f554fb971a")
+	)
+	(wire
+		(pts
+			(xy 100.33 66.04)
+			(xy 100.33 60.96)
+		)
+		(uuid "1ba0e6f0-2a02-4714-8b3c-e5b23219f170")
 	)
 	(text "BUCK 12V - 3V3\n\n"
 		(at 168.656 206.502 0)
@@ -16594,6 +16969,26 @@
 			(justify left bottom)
 		)
 		(uuid "c1f66db5-a5d2-4101-90f7-45b22fe447cb")
+	)
+	(text "J3: LOCAL DEBUG BUS (GND / +3V3 / SDA / SCL); onboard supply.\nJ9: dedicated standard Qwiic master port. J1 / J12 / J17: powered sensors.\nMultiple boards: external TCA9548A at 0x71; one channel active.\nDisable PCA9685 ALLCALL after initialization."
+		(at 640.08 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "037bbb2f-fba8-4efd-972c-b436bbf0745a")
+	)
+	(text "LOCAL A: RheoBoard +3V3 and sensor bus\nHOST B: ESP32-supplied +3V3; regulators never paralleled\n100 kHz initial bring-up; cable/module pull-ups share a current budget\nJ1 / J12 / J17 remain powered Qwiic sensor ports\nJ3 = LOCAL DEBUG BUS; no master-power isolation at that header"
+		(at 643.89 340.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "436423bd-8c01-4d0e-a201-868018e3417c")
 	)
 	(label "EF_EN"
 		(at 358.14 162.56 180)
@@ -17636,25 +18031,15 @@
 	)
 	(global_label "VIN_RAW"
 		(shape input)
-		(at 99.06 72.39 180)
+		(at 100.33 60.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "454cf453-9118-4e61-84ac-cf813acf5887")
+		(uuid "ced09504-6889-46f1-96de-443dfefe7ee7")
 	)
-  (text "J3: LOCAL DEBUG BUS (GND / +3V3 / SDA / SCL); onboard supply.\nJ9: dedicated standard Qwiic master port. J1 / J12 / J17: powered sensors.\nMultiple boards: external TCA9548A at 0x71; one channel active.\nDisable PCA9685 ALLCALL after initialization."
-    (at 640.08 254 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid "037bbb2f-fba8-4efd-972c-b436bbf0745a")
-  )
-  (text "LOCAL A: RheoBoard +3V3 and sensor bus\nHOST B: ESP32-supplied +3V3; regulators never paralleled\n100 kHz initial bring-up; cable/module pull-ups share a current budget\nJ1 / J12 / J17 remain powered Qwiic sensor ports\nJ3 = LOCAL DEBUG BUS; no master-power isolation at that header"
-    (at 643.89 340.36 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid "436423bd-8c01-4d0e-a201-868018e3417c")
-  )
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 751.586 541.02 0)
@@ -17976,132 +18361,6 @@
 			(project "RheoBoard_v1.05"
 				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
 					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 95.25 66.04 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced)
-		(uuid "047f5f2a-9aa6-4220-a077-076edb8c0c5a")
-		(property "Reference" "D1"
-			(at 95.5675 59.944 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "B540C-13-F"
-			(at 95.5675 62.484 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMC"
-			(at 95.25 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Schottky diode"
-			(at 95.25 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C72264"
-			(at 95.25 66.04 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "B540C-13-F"
-			(at 95.25 66.04 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Assembly" "SMT"
-			(at 95.25 66.04 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "DIODES"
-			(at 95.25 66.04 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "https://www.lcsc.com/product-detail/C72264.html"
-			(at 95.25 66.04 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "cc2d7682-d090-4021-afd9-702d79c30edb")
-		)
-		(pin "2"
-			(uuid "67f1d8b6-9a30-4dd2-af23-6c602c7adc64")
-		)
-		(instances
-			(project "RheoBoard_v1.05"
-				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -47990,6 +48249,384 @@
 			(project "RheoBoard_v1.05"
 				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_PMOS_GDS")
+		(at 95.25 68.58 90)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9b838220-7841-4177-a3c6-577646fef16c")
+		(property "Reference" "Q11"
+			(at 95.25 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DMP6023LE-13"
+			(at 95.25 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/DMP6023LE.pdf"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "P-MOSFET transistor, gate/drain/source"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "SMT"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C154901"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "DMP6023LE-13"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "DIODES"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Source" "https://www.lcsc.com/product-detail/C154901.html"
+			(at 95.25 68.58 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "Q11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 99.06 77.47 270)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36d5e9be-5e68-4255-9dbc-7fb6c9cc1173")
+		(property "Reference" "D37"
+			(at 98 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BZT52C10-7-F"
+			(at 98 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/BZT52C2V0.pdf"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "SMT"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C155227"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BZT52C10-7-F"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "DIODES"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Source" "https://www.lcsc.com/product-detail/C155227.html"
+			(at 99.06 77.47 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "D37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 86.36 92.71 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e796c37-90a6-4e4b-8321-205302398da3")
+		(property "Reference" "R85"
+			(at 81.28 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K/0603/1%"
+			(at 86.36 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "SMT"
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1002T5E"
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Source" "https://www.lcsc.com/product-detail/C25804.html"
+			(at 86.36 92.71 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "R85")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 86.36 102.87 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b06ee618-cf0a-4927-b1b7-01ca1a0fea31")
+		(property "Reference" "#PWR010"
+			(at 86.36 109.22 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 86.36 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 102.87 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 102.87 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 86.36 102.87 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
