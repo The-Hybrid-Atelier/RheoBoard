@@ -16703,6 +16703,41 @@
 		)
 		(uuid "ba1f7334-6318-49db-8297-3241220cafb4")
 	)
+	(wire
+		(pts
+			(xy 495.3 88.9)
+			(xy 505.46 88.9)
+		)
+		(uuid "87e883c2-5c8d-4508-abab-e29f30f002bd")
+	)
+	(wire
+		(pts
+			(xy 495.3 91.44)
+			(xy 505.46 91.44)
+		)
+		(uuid "38b06319-14e8-463b-9f70-a416fe787acc")
+	)
+	(wire
+		(pts
+			(xy 495.3 93.98)
+			(xy 505.46 93.98)
+		)
+		(uuid "2c4cda46-155c-407c-b7a4-0cd135c7fb89")
+	)
+	(wire
+		(pts
+			(xy 495.3 96.52)
+			(xy 505.46 96.52)
+		)
+		(uuid "432177b8-43e1-455f-919f-e3cc588aaf0e")
+	)
+	(wire
+		(pts
+			(xy 495.3 99.06)
+			(xy 505.46 99.06)
+		)
+		(uuid "ed9fa425-7fef-43af-beda-aa5593ec4521")
+	)
 	(text "BUCK 12V - 3V3\n\n"
 		(at 168.656 206.502 0)
 		(effects
@@ -16946,6 +16981,26 @@
 			(justify left bottom)
 		)
 		(uuid "11fe58f9-a994-4518-9ffa-3485a93acb0d")
+	)
+	(text "BUTTON GPIO TO ESP32"
+		(at 478.79 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "00673551-dba4-472e-a915-bd37cf411384")
+	)
+	(text "J19 pin 1: GND; pins 2-5: SW1, SW2, SW3, SW4.\nActive-low; connect J9 Qwiic cable for HOST_3V3 pull-ups.\nSuggested ESP32 GPIOs: 32, 33, 25, 26 respectively."
+		(at 478.79 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "042f83d5-b477-4d2d-b51e-692709d4511f")
 	)
 	(label "EF_EN"
 		(at 358.14 162.56 180)
@@ -17537,6 +17592,46 @@
 		)
 		(uuid "6779d993-56c6-40ce-aa55-4cf9c56472ed")
 	)
+	(label "HOST_3V3"
+		(at 485.14 393.7 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be17028e-90d6-410f-9340-2a417ad03e71")
+	)
+	(label "HOST_3V3"
+		(at 529.59 393.7 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "18867333-0ee5-4df4-a2be-b3645134b0f0")
+	)
+	(label "HOST_3V3"
+		(at 574.04 393.7 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "43bfa53a-6ee5-4af5-bc0a-0f4a0e8d972f")
+	)
+	(label "HOST_3V3"
+		(at 619.76 393.7 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "241da5a5-87d1-4d5b-9e4e-7d7cdb85bf5a")
+	)
 	(global_label "VALVE2_IN"
 		(shape input)
 		(at 508 403.86 180)
@@ -17922,50 +18017,6 @@
 		)
 		(uuid "334ec59d-23f1-4bc1-b6b7-2be94b12cbc3")
 	)
-	(global_label "HOST_3V3"
-		(shape input)
-		(at 485.14 393.7 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9adeef30-e88e-4e2b-826e-de9610e9a1a1")
-	)
-	(global_label "HOST_3V3"
-		(shape input)
-		(at 529.59 393.7 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "525ca4b3-9350-411a-916d-71997a0db9fc")
-	)
-	(global_label "HOST_3V3"
-		(shape input)
-		(at 574.04 393.7 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e4949780-a0ac-4fac-8f5f-6f095f3a6ad2")
-	)
-	(global_label "HOST_3V3"
-		(shape input)
-		(at 619.76 393.7 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d086bdfc-3835-4f0f-b2dd-c796be356fbe")
-	)
 	(global_label "VALVE1"
 		(shape output)
 		(at 722.63 96.52 0)
@@ -17988,6 +18039,66 @@
 		)
 		(uuid "7f2d03b8-1d93-412f-b626-6650ed77cb9a")
 	)
+	(global_label "GND"
+		(shape input)
+		(at 495.3 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1f1e6d9b-283f-41f5-ace8-5016306bb202")
+	)
+	(global_label "VALVE1_IN"
+		(shape input)
+		(at 495.3 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ba108007-b722-48ba-b30e-28fb3e8875fc")
+	)
+	(global_label "VALVE2_IN"
+		(shape input)
+		(at 495.3 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4cef2f47-0b0b-48c9-8ca6-60b87c10b039")
+	)
+	(global_label "PUMP1_IN"
+		(shape input)
+		(at 495.3 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0edbc5a3-cc31-424d-84fb-4d3631af9454")
+	)
+	(global_label "PUMP2_IN"
+		(shape input)
+		(at 495.3 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "363c591f-18c8-4d01-8e17-1de4fd0a1982")
+	)
+  (text "Valve channels 5/6: full ON / full OFF only."
+    (at 669.29 133.35 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid "f3aace5b-341f-4760-a6ea-ddea195c436e")
+  )
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 751.586 541.02 0)
@@ -46623,15 +46734,6 @@
 				)
 			)
 		)
-		(instances
-			(project "RheoBoard_v1.05"
-				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
-					(reference "J19")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "Assembly" "Manual"
 			(at 510.54 93.98 0)
 			(hide yes)
@@ -46676,7 +46778,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "J19")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(rectangle
 		(start 175.26 314.706)
 		(end 300.355 544.83)

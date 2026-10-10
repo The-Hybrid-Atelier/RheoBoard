@@ -1,7 +1,5 @@
 # Tools you may need
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
-
 This is the one tools list for RheoBoardOTS - DIY. The [build guide](../BuildYourOwn/README.md) lists
 the same tools before Step 01. The [Tools](tools.md) page points here.
 
@@ -22,3 +20,5 @@ the same tools before Step 01. The [Tools](tools.md) page points here.
 - **git**, for the manual library install in that same firmware reference (`git clone` of ThingPlusBLEOSC).
 
 TODO: tools the build needs that are not named in the repository yet.
+
+License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

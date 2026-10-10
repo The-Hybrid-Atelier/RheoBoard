@@ -1,7 +1,5 @@
 # Panel layout
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
-
 Version 2 mounts the parts on a flat 3D-printed panel. Print files and notes are in
 [`BuildYourOwn/cad/encloser/README.md`](../BuildYourOwn/cad/encloser/README.md). That folder name
 stays `BuildYourOwn/cad/encloser/`. Assembly is
@@ -26,3 +24,5 @@ Fasteners are 4 mm zip ties. A count is not stated.
 
 `encloser_pic1.jpg`, `encloser_pic2.jpg`, and `encloser_pic3.jpg` in
 [`BuildYourOwn/cad/encloser/`](../BuildYourOwn/cad/encloser/) are CAD views stored beside the print files.
+
+License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

@@ -1,7 +1,5 @@
 # Safety
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
-
 Read this after the build. These hazards apply to the RheoBoardOTS - DIY panel, RheoBoard_v1 - PCB, and portable power.
 
 ## 12 V adapter
@@ -66,3 +64,5 @@ On the RheoBoardOTS - DIY diagram, each L298N box labels **+5 V** as that board'
 The pumps are rated about 4.5–5 V and the valve about 6 V, on the RheoBoardOTS - DIY panel, RheoBoard_v1 - PCB, and RheoBoardPipette - Portable. Adafruit's about 50% pump duty-cycle recommendation describes intermittent run time, not a 50% PWM ceiling. Firmware may use brief higher-PWM pulses. The pumps should not run continuously.
 
 The silver can on the Adafruit 4699 is that motor. On the RheoBoardOTS - DIY panel the 12 V adapter feeds the L298N that drives it. On RheoBoard_v1 - PCB the block diagram shows the pump rail at 4.5 V and the valve rail at 6 V, both fed from the 12 V input. The second photo is the valve.
+
+License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

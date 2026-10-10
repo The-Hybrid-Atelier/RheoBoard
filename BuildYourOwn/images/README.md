@@ -13,6 +13,7 @@ photography or a freely licensed source and are for builder identification only.
 | `adafruit-attiny1616-seesaw.jpg` | Adafruit ATtiny1616 Breakout with seesaw, STEMMA QT/Qwiic (PID 5690) | [Adafruit product page](https://www.adafruit.com/product/5690), image via `cdn-shop.adafruit.com/970x728/5690-00.jpg` |
 | `adafruit-4699-air-pump.jpg` | Adafruit 4699 — Air Pump and Vacuum DC Motor (ZR370-02PM) | [Adafruit product page](https://www.adafruit.com/product/4699) |
 | `adafruit-4663-air-valve.jpg` | Adafruit 4663 — 6V Air Valve (FA0520E) | [Adafruit product page](https://www.adafruit.com/product/4663) |
+| `power-adapter-alt-1202.jpg` | Cysljoyful AC/DC adapter, model ALT-1202, output 12 V DC 2 A | Product photo for the [Amazon listing](https://www.amazon.com/Supply-Universal-Adapter-100-240-Transformer/dp/B0D269PYK9). The label in the photo reads AC/DC ADAPTER, MODEL ALT-1202, INPUT 100-240V AC 50-60Hz, OUTPUT 12V 2A, MADE IN CHINA. Vendor photo for identification; it stays under the seller's terms. |
 | `l298n-motor-driver.jpg` | Generic L298N dual H-bridge module | Cropped from [Wikimedia Commons: *Dosmotorsl298n.jpg*](https://commons.wikimedia.org/wiki/File:Dosmotorsl298n.jpg) by Quel.soler, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — no single canonical vendor page exists for this generic module, so this is the best-effort stand-in; swap for your exact board's photo if it differs. |
 
 ## Notes

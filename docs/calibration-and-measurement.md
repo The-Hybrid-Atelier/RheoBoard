@@ -1,7 +1,5 @@
 # Calibration and measurement
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
-
 [Step 05 — Calibrate and use](../BuildYourOwn/README.md#step-05-calibrate-and-use) in the build
 guide is split into two headings, using the lines that were already in that step:
 
@@ -14,3 +12,5 @@ added, both TODO because the files are not in the repo: one GL45 two-port cap, a
 connects to that GL45 cap. The probe also uses the Adafruit 4661 tube. `sensing_tube.stl` and
 `connector_small.stl` are not those parts. RheoData download, pairing, the connected indicator,
 and how to start and name a REP stay TODO; they will be specified later in software and firmware.
+
+License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

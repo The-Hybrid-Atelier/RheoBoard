@@ -1,8 +1,5 @@
 # Certification
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE). This license does not cover the OSHWA
-certification mark files; see below.
-
 <a href="https://certification.oshwa.org/us002865.html"><img src="img/oshwa-certification-mark-US002865-stacked.svg" alt="OSHW certification mark US002865" width="160"></a>
 
 RheoBoard is certified open source hardware by the
@@ -34,3 +31,5 @@ it is not printed on the PCB or the 3D-printed parts. Follow the
 The certification covers version 1. Version 2 (the 3D-printed panel on `main`) is
 not certified yet and needs its own OSHWA registration and UID. A derived or modified build is
 not covered by US002865 and should not carry this mark.
+
+License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE). This license does not cover the OSHWA certification mark files; see above.

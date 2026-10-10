@@ -1,7 +1,5 @@
 # FAQ
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
-
 Answers point at the [build guide](../BuildYourOwn/README.md). They do not restate its steps.
 Other questions are headings only.
 
@@ -80,3 +78,5 @@ TODO
 ## Where is the assembly video?
 
 TODO
+
+License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

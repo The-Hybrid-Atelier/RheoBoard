@@ -1,7 +1,5 @@
 # Parts to 3D print
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
-
 ## Print these
 
 Panel sizes and likely roles are from
@@ -64,3 +62,5 @@ added:
 - `connector_small.stl` — current small connector (also in "Print these" above)
 - `connector_big.stl` — alternate larger connector
 - `sensing_tube_open.stl` — alternate open tube
+
+License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

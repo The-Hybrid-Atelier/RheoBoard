@@ -1,7 +1,5 @@
 # Wiring
 
-License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
-
 - [Electronic wiring](../BuildYourOwn/hardware/electronic-wiring/README.md) — 2 pumps, 1 valve
   (switched-port "flip" plumbing). The wiring notes are split into: Qwiic chain; seesaw to the
   drivers; L298N #1 (pumps); L298N #2 (valve); power.
@@ -10,3 +8,5 @@ License: CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
 
 Step 02 of the [build guide](../BuildYourOwn/README.md#step-02-connect-electronics-and-tubing)
 follows those sections.
+
+License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).
