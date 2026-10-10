@@ -1,8 +1,8 @@
 # Build Your Own Rheometer — Step-by-Step Guide
 
-The [repo root README](../README.md) is the project overview. This file is the step-by-step build
-guide, and it is the main copy: the wiki and `docs/` pages link here instead of repeating it. Each
-linked subfolder owns its detailed reference information.
+The [repo root README](../README.md) is the project overview. This file is the step-by-step DIY build
+guide. The wiki repeats these steps on the DIY path (Parts to buy, Parts to 3D print, and Assembly
+instructions). Each linked subfolder owns its detailed reference information.
 
 License: hardware CERN-OHL-W-2.0, firmware MIT, this guide CC BY-SA 4.0 — see
 [repo root README](../README.md) → License, or [`../LICENSE`](../LICENSE).
