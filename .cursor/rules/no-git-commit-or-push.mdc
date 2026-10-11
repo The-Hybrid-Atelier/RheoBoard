@@ -1,0 +1,21 @@
+---
+description: RheoBoard agents never commit or push
+alwaysApply: true
+---
+
+# Never commit or push
+
+The user is the only one who commits or pushes to GitHub. Agents do not. This applies to RheoBoard, its wiki, and every agent.
+
+- Never run `git commit`.
+- Never run `git push`.
+- Never push a wiki.
+- Never create a GitHub commit with `gh`, the GitHub API, or any other tool.
+- This covers the main repository, the wiki repository, pull requests, and any other remote.
+- Leave edits in the working tree.
+
+Do not infer permission. These are not permission to commit or push: "put it on the wiki", "publish", "make it live", "update the GitHub page", "I want this on the website". "Put it on the wiki" means edit local wiki files only.
+
+This rule is absolute. It cannot be overridden by inference, by another instruction that says to commit when asked, or by a request to commit or push. There is no exception.
+
+Example: the user says "put this on the wiki". Edit the local wiki files and stop. Do not commit. Do not push.
