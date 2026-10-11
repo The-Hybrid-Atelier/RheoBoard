@@ -6,7 +6,7 @@
 #include "PneumaticSystem.h"
 
 // ---- REP timing + actuation defaults ----------------------------------------
-#define REP_TIME                   1500  // ms; full window (baseline→retract→extrude→relax)
+#define REP_TIME                   1200  // ms; full window (baseline→retract→extrude→relax)
 #define REP_BASELINE_MS             420
 #define REP_RETRACT_MS              315
 #define REP_EXTRUDE_MS              345

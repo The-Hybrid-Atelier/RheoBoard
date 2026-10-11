@@ -1,0 +1,4 @@
+Tool: built-in ImageGen
+Input: ChatGPT Image Oct 10, 2026, 09_33_14 PM.png
+
+Edit this image with exactly one localized text correction: change the far-right horizontal-axis tick label from “1500” to “1200”. Match the existing italic black font, size, baseline, spacing, and alignment. Preserve every other pixel and all other numbers, labels, curve geometry, axis positions, colored regions, markers, brackets, legend, and background as closely as possible. Do not redraw, crop, reframe, rescale, or restyle the chart.

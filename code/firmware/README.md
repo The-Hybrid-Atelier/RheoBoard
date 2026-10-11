@@ -67,12 +67,12 @@ at `push/power` for the remainder of `push/time`.
 
 ## REP timing
 
-A REP runs `BASELINE → RETRACT → EXTRUDE → RELAX` in a fixed 1500 ms window (`REP_TIME` in
+A REP runs `BASELINE → RETRACT → EXTRUDE → RELAX` in a fixed 1200 ms window (`REP_TIME` in
 `2P1V_Adafruit/RheoSystem.h`). The relax tail is the time remaining after baseline, valve-settle,
 pull, and push.
 
 ```text
-0 ms        baseline       settle + retract       settle + extrude       1500 ms
+0 ms        baseline       settle + retract       settle + extrude       1200 ms
 |──────── pumps off ───────|──── vacuum ────|──────── pressure ────────|─ relax ─|
 ```
 
