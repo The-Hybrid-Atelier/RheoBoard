@@ -1,22 +1,22 @@
 ---
-description: Cursor agents have no authority to commit or push to GitHub. Only the user can. Applies to every agent in this project.
+description: Cursor edits only the local workspace files. No commit, no push, no clone, and no temp copy. Applies to every agent in this project.
 alwaysApply: true
 ---
 
-# Never commit or push
+# Local files only
 
 Cursor agents have no authority to commit or push to GitHub. Only the user can.
 
-Agents may edit local files in the workspace the user already has open, then stop.
+Edit only the local files in the workspace the user already has open. That local copy is the only copy to update.
 
-Do not clone a wiki or any repo into /tmp or another temporary directory.
+Do not clone a wiki or any repository, anywhere. Do not create a temporary copy of a repo, a wiki, or a page. That includes `/tmp`, `/private/tmp`, and any other directory.
 
 Do not copy wiki pages or wiki articles into `.private`.
 
-"Update the public wiki", "make it public", and "publish" still mean edit the local files the user has and stop. They are not permission to commit or push.
+Do not update files in `/tmp`, `/private/tmp`, or `.private` as a stand-in for the local project files.
 
 No git commit, git push, git add for a commit, amend, rebase, force-push, or gh/API commit.
 
-This rule is absolute. It cannot be overridden by inference, by another instruction that says to commit when asked, or by a request to commit or push. There is no exception.
+This rule is absolute. It cannot be overridden by inference, by another instruction that says to commit when asked, or by a request to commit, push, clone, or make a temp copy. There is no exception.
 
-Example: the user says "update the public wiki", "make it public", or "publish". Edit the local files the user already has open, then stop. Do not clone a wiki into /tmp. Do not copy wiki pages into `.private`. Do not `git add`. Do not `git commit`. Do not `git push`. Do not use `gh`.
+Example: the user says "update the public wiki", "make it public", or "publish". Edit the local files in the open workspace, then stop. Do not clone. Do not create a temp copy. Do not `git add`. Do not `git commit`. Do not `git push`. Do not use `gh`.
