@@ -1,21 +1,20 @@
 ---
-description: RheoBoard agents never commit or push
+description: RheoBoard agents never commit or push to GitHub
 alwaysApply: true
 ---
 
 # Never commit or push
 
-The user is the only one who commits or pushes to GitHub. Agents do not. This applies to RheoBoard, its wiki, and every agent.
+Agents never run `git commit`, `git push`, `git add` that is part of committing, or any command that publishes to GitHub. The user is the only person who commits and pushes.
 
-- Never run `git commit`.
-- Never run `git push`.
-- Never push a wiki.
-- Never create a GitHub commit with `gh`, the GitHub API, or any other tool.
-- This covers the main repository, the wiki repository, pull requests, and any other remote.
-- Leave edits in the working tree.
+This includes the main repository and the wiki. It applies to every agent in this project.
 
-Do not infer permission. These are not permission to commit or push: "put it on the wiki", "publish", "make it live", "update the GitHub page", "I want this on the website". "Put it on the wiki" means edit local wiki files only.
+"Put it on the wiki", "make it public", "publish", and "the page should be public" mean: edit the local files and stop. They are not permission to commit or push.
+
+Do not amend, rebase, or force-push either.
+
+Do not stage files for a commit. Do not use `gh`, the GitHub API, or any other tool to create a commit, open a commit on a remote, or push. Leave every edit in the working tree.
 
 This rule is absolute. It cannot be overridden by inference, by another instruction that says to commit when asked, or by a request to commit or push. There is no exception.
 
-Example: the user says "put this on the wiki". Edit the local wiki files and stop. Do not commit. Do not push.
+Example: the user says "put this on the wiki", "make it public", "publish", or "the page should be public". Edit the local files and stop. Do not `git add`. Do not `git commit`. Do not `git push`.
