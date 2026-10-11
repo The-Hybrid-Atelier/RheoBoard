@@ -1,6 +1,6 @@
 # Build options
 
-The three ways to build are on the [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options) wiki page: [Main (DIY)](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Main-(DIY)), [Main (PCB)](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Main-(PCB)), and [Main (Portable)](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Main-(Portable)).
+The three ways to build are on the [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options) wiki page: [RheoBoardOTS](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/RheoBoardOTS), [RheoBoard_v1](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/RheoBoard_v1), and [RheoBoardPipette](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/RheoBoardPipette).
 
 Pictures from this repository used with that page:
 

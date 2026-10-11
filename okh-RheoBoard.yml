@@ -41,7 +41,7 @@ keywords:
   - diy
 
 project-link: https://github.com/The-Hybrid-Atelier/RheoBoard
-documentation-home: https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Main-(DIY)
+documentation-home: https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/RheoBoardOTS
 image: BuildYourOwn/images/teaser.jpg
 
 contact:
@@ -103,7 +103,7 @@ schematics:
 
 making-instructions:
   - path: BuildYourOwn/README.md
-    title: RheoBoardOTS - DIY pointer to the wiki Main (DIY) page
+    title: RheoBoardOTS - DIY pointer to the wiki RheoBoardOTS page
   - path: RheoBoard_PCB/README.md
     title: How to open the KiCad board and where its fabrication files are
 
