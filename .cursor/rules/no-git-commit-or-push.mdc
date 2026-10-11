@@ -1,20 +1,22 @@
 ---
-description: RheoBoard agents never commit or push to GitHub
+description: Cursor agents have no authority to commit or push to GitHub. Only the user can. Applies to every agent in this project.
 alwaysApply: true
 ---
 
 # Never commit or push
 
-Agents never run `git commit`, `git push`, `git add` that is part of committing, or any command that publishes to GitHub. The user is the only person who commits and pushes.
+Cursor agents have no authority to commit or push to GitHub. Only the user can.
 
-This includes the main repository and the wiki. It applies to every agent in this project.
+Agents may edit local files in the workspace the user already has open, then stop.
 
-"Put it on the wiki", "make it public", "publish", and "the page should be public" mean: edit the local files and stop. They are not permission to commit or push.
+Do not clone a wiki or any repo into /tmp or another temporary directory.
 
-Do not amend, rebase, or force-push either.
+Do not copy wiki pages or wiki articles into `.private`.
 
-Do not stage files for a commit. Do not use `gh`, the GitHub API, or any other tool to create a commit, open a commit on a remote, or push. Leave every edit in the working tree.
+"Update the public wiki", "make it public", and "publish" still mean edit the local files the user has and stop. They are not permission to commit or push.
+
+No git commit, git push, git add for a commit, amend, rebase, force-push, or gh/API commit.
 
 This rule is absolute. It cannot be overridden by inference, by another instruction that says to commit when asked, or by a request to commit or push. There is no exception.
 
-Example: the user says "put this on the wiki", "make it public", "publish", or "the page should be public". Edit the local files and stop. Do not `git add`. Do not `git commit`. Do not `git push`.
+Example: the user says "update the public wiki", "make it public", or "publish". Edit the local files the user already has open, then stop. Do not clone a wiki into /tmp. Do not copy wiki pages into `.private`. Do not `git add`. Do not `git commit`. Do not `git push`. Do not use `gh`.
