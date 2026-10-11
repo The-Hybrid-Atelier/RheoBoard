@@ -43,13 +43,13 @@ For a set of pulses from one material, each pulse is compared with the mean puls
 
 MSE(m) is the average squared gap between the pulses and the mean pulse. PSNR(m) is that gap in decibels. max(m) is the maximum intensity of the signal.
 
-<img src="img/rep-sensing-and-bench.jpg" width="720" alt="Sensing method on the left and the bench photo on the right. The diagram shows a pneumatic actuator, F retraction and F extrusion, an air pressure sensor, PV = nRT, a fluid segment, and a beaker with retraction, extrusion, and a pneumatic controller. The photo shows the airtube probe that retracts and extrudes the sample, a 1–2 second sensing routine that captures air pressure, cyclic sensing, an off-the-shelf pneumatic actuator, and an air pressure sensor">
+<img src="images/rep-sensing-and-bench.jpg" width="720" alt="Sensing method on the left and the bench photo on the right. The diagram shows a pneumatic actuator, F retraction and F extrusion, an air pressure sensor, PV = nRT, a fluid segment, and a beaker with retraction, extrusion, and a pneumatic controller. The photo shows the airtube probe that retracts and extrudes the sample, a 1–2 second sensing routine that captures air pressure, cyclic sensing, an off-the-shelf pneumatic actuator, and an air pressure sensor">
 
 *Sensing method.*
 
 *Bench with the probe, actuator, and sensor.*
 
-<img src="img/rep-pressure-trace.jpg" width="720" alt="Pressure versus time from 0 to 1500 ms, with retraction, extrusion, and stabilization. Δpr marks the retraction low point, Δpe the extrusion peak, and decay τ the settling side. The phase lengths are labeled schematic, not measured.">
+<img src="images/rep-pressure-trace.jpg" width="720" alt="Pressure versus time from 0 to 1500 ms, with retraction, extrusion, and stabilization. Δpr marks the retraction low point, Δpe the extrusion peak, and decay τ the settling side. The phase lengths are labeled schematic, not measured.">
 
 *Pressure trace over the REP window.*
 
