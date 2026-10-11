@@ -4,4 +4,4 @@ This folder is the ESP32 sketch. The entry point is `2P1V_Adafruit.ino`. Arduino
 
 The other files are `PneumaticSystem.h`, `PneumaticSystem.cpp`, `RheoSystem.h`, and `RheoSystem.cpp`.
 
-Firmware is MIT-licensed. The license notice and full text are in [`../../../LICENSE`](../../../LICENSE).
+Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](../../../LICENSE).

@@ -4,11 +4,11 @@ The three ways to build are on the [Build options](https://github.com/The-Hybrid
 
 Pictures from this repository used with that page:
 
-- [`img/panel/diy-annotated.jpg`](img/panel/diy-annotated.jpg)
-- [`../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png`](../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png)
-- [`img/portable/portable-concept.jpg`](img/portable/portable-concept.jpg)
+- [`diy-annotated.jpg`](img/panel/diy-annotated.jpg)
+- [`pcb-schematic-and-v1-board.png`](../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png)
+- [`portable-concept.jpg`](img/portable/portable-concept.jpg)
 
-Board files are in [`../RheoBoard_PCB/README.md`](../RheoBoard_PCB/README.md).
+Board files are in [`README.md`](../RheoBoard_PCB/README.md).
 
 The RheoBoardPipette - Portable 3D-printed parts are not in the repository yet. TODO: those print files.
 

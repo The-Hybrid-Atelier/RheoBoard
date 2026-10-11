@@ -8,4 +8,4 @@ The diagram file is `wiring-diagram.png`. It is a labeled schematic with compone
 
 Hookup-wire type and gauge are not stated. How the 12 V adapter connects to the L298N inputs, whether by a connector or bare leads, is not stated. Which connections to continuity-check, and the expected result for each, are not stated. A leak check and a photo of the finished wiring are not in this folder yet.
 
-License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
+License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).

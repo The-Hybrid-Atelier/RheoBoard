@@ -2,7 +2,7 @@
 
 This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one switched-port valve, the pressure sensor, and the chamber or nozzle. Step 02 of the [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions) page summarizes these ports.
 
-License: CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
+License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).
 
 ![Pneumatic tube connection diagram](tube-connection.png)
 

@@ -6,4 +6,4 @@ Start on the [RheoBoardOTS](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki
 
 Design files are in `cad/`, parts and wiring notes are in `hardware/`, and photos are in `images/`.
 
-License: hardware CERN-OHL-W-2.0, firmware MIT, documentation CC BY-SA 4.0 — see [`../LICENSE`](../LICENSE).
+License: hardware CERN-OHL-W-2.0, firmware MIT, documentation CC BY-SA 4.0 — see [`LICENSE`](../LICENSE).

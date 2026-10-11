@@ -4,4 +4,4 @@ Shared firmware and RheoData notes for the DIY build, the PCB, and the portable 
 
 The ESP32 sketch is in `firmware/`. RheoData notes are in `software/`.
 
-Firmware is MIT-licensed. The license notice and full text are in [`../LICENSE`](../LICENSE).
+Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](../LICENSE).

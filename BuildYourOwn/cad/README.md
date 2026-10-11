@@ -4,4 +4,4 @@ Design files for the RheoBoardOTS - DIY flat panel and sensing tube. Print notes
 
 `encloser/` holds the panel. The folder name stays `encloser/`. `connector/` holds the sensing tube and small connector.
 
-License: hardware CERN-OHL-W-2.0 — see [`../../LICENSE`](../../LICENSE).
+License: hardware CERN-OHL-W-2.0 — see [`LICENSE`](../../LICENSE).

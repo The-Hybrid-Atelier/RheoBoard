@@ -4,7 +4,7 @@
 
 This firmware is shared by the DIY build, the PCB, and the portable version. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
 
-Firmware is MIT-licensed. The license notice and full text are in [`../../LICENSE`](../../LICENSE).
+Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](../../LICENSE).
 
 ## Firmware pin map
 

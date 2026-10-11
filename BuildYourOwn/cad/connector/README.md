@@ -4,4 +4,4 @@ Printable tube and connector models for the pneumatic sensing line. Print notes 
 
 `sensing_tube.stl` is the hanging sensing tube. Its editable source is `sensing_tube.scad`. `connector_small.stl` is the small connector used with that tube. `connector_big.stl` and `sensing_tube_open.stl` are alternate meshes. Import the STL files at 100% scale. Dimensions are in millimetres.
 
-License: hardware CERN-OHL-W-2.0 — see [`../../../LICENSE`](../../../LICENSE).
+License: hardware CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).

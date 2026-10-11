@@ -10,14 +10,14 @@ This folder holds the PCB designs. There are three versions: [`RheoBoard_v0.05-a
 
 ## Files in this folder
 
-Open [`RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro) in KiCad 10.
+Open [`RheoBoard_v1.kicad_pro`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro) in KiCad 10.
 
-- Schematic: [`RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch)
-- Board: [`RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pcb`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pcb)
-- Libraries: [`RheoBoard_v1/Symbol/`](RheoBoard_v1/Symbol/), [`RheoBoard_v1/Footprint/`](RheoBoard_v1/Footprint/), [`RheoBoard_v1/3D/`](RheoBoard_v1/3D/)
-- Gerbers: [`RheoBoard_v1/Gerber/`](RheoBoard_v1/Gerber/)
-- Drills: [`RheoBoard_v1/Drill/`](RheoBoard_v1/Drill/)
-- Pick-and-place: [`RheoBoard_v1/CPL/CPL.csv`](RheoBoard_v1/CPL/CPL.csv)
-- Archived v1 assembly workbook: [`RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx`](RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx)
+- Schematic: [`RheoBoard_v1.kicad_sch`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch)
+- Board: [`RheoBoard_v1.kicad_pcb`](RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pcb)
+- Libraries: [`Symbol`](RheoBoard_v1/Symbol/), [`Footprint`](RheoBoard_v1/Footprint/), [`3D`](RheoBoard_v1/3D/)
+- Gerbers: [`Gerber`](RheoBoard_v1/Gerber/)
+- Drills: [`Drill`](RheoBoard_v1/Drill/)
+- Pick-and-place: [`CPL.csv`](RheoBoard_v1/CPL/CPL.csv)
+- Archived v1 assembly workbook: [`BOM_RheoboardV1_JLCSMT.xlsx`](RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx)
 
-License: hardware CERN-OHL-W-2.0 — see [`../LICENSE`](../LICENSE).
+License: hardware CERN-OHL-W-2.0 — see [`LICENSE`](../LICENSE).
