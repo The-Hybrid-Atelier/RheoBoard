@@ -10,6 +10,6 @@ Pictures from this repository used with that page:
 
 Board files are in [`README.md`](../RheoBoard_PCB/README.md).
 
-The RheoBoardPipette - Portable 3D-printed parts are not in the repository yet. TODO: those print files.
+The portable holder STEP files are `Part1.stp`, `Part4.stp`, and `part6.stp` in `BuildYourOwn/cad/portable_holder/`. Print notes are on the [Portable parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable-parts-to-3D-print) wiki page. Role, copy count, orientation, supports, and material for those files are still open.
 
 License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

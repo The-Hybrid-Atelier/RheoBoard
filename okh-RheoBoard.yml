@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-10
+date-updated: 2026-10-11
 # OSHWA certified version 1, UID US002865: https://certification.oshwa.org/us002865.html
 # The current version is version 1. This is the same version certified by OSHWA as US002865.
 # (OKH 1.0 has no certification field.)
@@ -88,6 +88,8 @@ design-files:
     title: Printable sensing-tube mesh exported from sensing_tube.scad (physical fit required)
   - path: BuildYourOwn/cad/connector/connector_small.stl
     title: Small connector mesh export; editable source not yet published (physical fit required)
+  - path: BuildYourOwn/cad/portable_holder
+    title: RheoBoardPipette portable holder STEP files
   - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro
     title: KiCad 10 project for the custom PCB prototype
   - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch
@@ -114,6 +116,8 @@ manufacturing-files:
     title: Small connector STL; editable source not yet published (physical fit required)
   - path: BuildYourOwn/cad/encloser/part
     title: Printable panel STEP files (PLA, Bambu Lab normal profile)
+  - path: BuildYourOwn/cad/portable_holder
+    title: RheoBoardPipette portable holder STEP files
   - path: RheoBoard_PCB/RheoBoard_v1/Gerber/1-job.gbrjob
     title: PCB fabrication job (Gerbers in this folder; drills in ../Drill)
   - path: RheoBoard_PCB/RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx
