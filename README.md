@@ -1,8 +1,9 @@
 # RheoBoard
 
-> [!IMPORTANT]
-> **Start here:** the guide is the **[wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)**.
-> Begin with [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP) and [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options).
+## Start here: [Wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
+
+- [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
+- [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options)
 
 <img src="docs/img/home-versions.png" alt="RheoBoard" width="720">
 
