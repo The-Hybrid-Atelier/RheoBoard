@@ -1,5 +1,3 @@
-<p align="right"><img src="docs/img/hybrid-atelier-logo.png" alt="The Hybrid Atelier, The University of Texas at Arlington" width="96"></p>
-
 ## Start here: [Wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
 
 - [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
@@ -36,3 +34,5 @@ or endorsed by the original designer.
 ## Author
 
 Created and maintained by [Charlie Vuong](https://charlie-vuong.com) (The Hybrid Atelier at UT Arlington).
+
+<img src="docs/img/hybrid-atelier-logo.png" alt="The Hybrid Atelier, The University of Texas at Arlington" width="96">
