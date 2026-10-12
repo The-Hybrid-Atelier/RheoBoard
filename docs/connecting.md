@@ -1,5 +1,5 @@
 # Connecting
 
-Connect steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. After [Step 04 — Power-on test](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-04-power-on-test), connect RheoData to `2P1V_Adafruit`.
+RheoData is on the [Software](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Software) wiki page. Download, pairing, the connected indicator, and how to start and name a REP are not written yet. Notes in this repository are in [`README.md`](../code/software/README.md).
 
-TODO: the download, pairing steps, the connected indicator, and how to start and name a REP ([`README.md`](../code/software/README.md)).
+[Step 05: Check power and idle behavior](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-05-check-power-and-idle-behavior) is the power-on check. The first pressure reading uses USB Serial Monitor in [Step 06: Read pressure](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-06-read-pressure). RheoData is optional for that first reading.

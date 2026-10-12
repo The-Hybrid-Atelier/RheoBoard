@@ -1,10 +1,10 @@
 # Tube wiring
 
-This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one switched-port valve, the pressure sensor, and the sensing tube. Step 02 of the [Assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions) page summarizes these ports.
+This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one switched-port valve, the pressure sensor, and the sensing tube. [Step 03: Connect tubing](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-03-connect-tubing) summarizes these ports.
 
 License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).
 
-> **Drawing to add:** Label the PUMP1 side port to the valve metal pole and the PUMP1 tubing port open to atmosphere. Label the PUMP2 tubing port to the valve plastic pole and the PUMP2 side port open to atmosphere. Label the valve common to the tee, one tee branch to the MicroPressure sensor, and the other tee branch to the sensing tube. Label the phases baseline, retract, extrude, and relax.
+<!-- VISUAL: pneumatic-diagram -->
 
 Tubing is Adafruit 4661, 1 m silicone, 3 mm ID, 5 mm OD, for air only. The length of each run is not stated. A tool to cut the silicone tubing is not named in the repository.
 
