@@ -1,9 +1,9 @@
-# RheoBoard
-
 ## Start here: [Wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
 
 - [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
 - [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options)
+
+# RheoBoard
 
 <img src="docs/img/home-versions.png" alt="RheoBoard" width="720">
 

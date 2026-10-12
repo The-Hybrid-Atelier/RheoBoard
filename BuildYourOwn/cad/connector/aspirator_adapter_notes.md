@@ -6,6 +6,8 @@ This is a photo-based reconstruction of the Fisher/AssayCell pen-shaped adapter.
 
 ## Fit first
 
+![Adapter, cutaway, and fit coupons](aspirator_adapter_preview.png)
+
 Set `part = "fit_tests"`. This produces six separate coupons with through-holes. The front row has three pipette-tip cones; the back row has three tubing stems. Count the notches in each coupon's grip rim:
 
 | Notches | Diameter change from current fit settings |
@@ -35,5 +37,7 @@ PLA is a prototype material here. The commercial product's autoclavability does 
 - [HYKYHT open-source aspiration system, HardwareX (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10848023/): related single/multichannel aspiration architecture and liquid-trap context. Its CAD was not copied.
 
 The reconstruction uses shallow sloped ribs in place of uncertain molded detail and a straight open passage whose original diameter is unknown. No ejector, valve, or vent is added. All geometry in the SCAD file is newly authored.
+
+Validation on 2026-10-12: all three modes rendered with OpenSCAD's WebAssembly engine. The full adapter exported as one closed manifold mesh with an open axial passage; the fit set exported as six separate closed manifold meshes. No mesh-edge or winding errors were found. The full model's bounds are 10.5 × 10.5 × 130 mm including grip rings. This validates CAD geometry, not printed-part sealing or compatibility.
 
 License: hardware CERN-OHL-W-2.0 — see [LICENSE](../../../LICENSE). These notes are documentation under the repository's CC BY-SA 4.0 terms.
