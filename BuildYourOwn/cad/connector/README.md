@@ -5,3 +5,5 @@ Printable tube and connector models for the pneumatic sensing line. Print notes 
 `sensing_tube.stl` is the hanging sensing tube. Its editable source is `sensing_tube.scad`. `connector_small.stl` is the small connector used with that tube. `connector_big.stl` and `sensing_tube_open.stl` are alternate meshes. Import the STL files at 100% scale. Dimensions are in millimetres.
 
 License: hardware CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).
+
+[Pipette-tip aspirator adapter](aspirator_adapter.scad): adjustable photo-based model for a 1 mL tip and 6.35 mm-ID tubing, with optional fit coupons. See the [fit and print notes](aspirator_adapter_notes.md). Physical fit and sealing are unverified.
