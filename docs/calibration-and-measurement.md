@@ -1,16 +1,12 @@
 # Calibration and measurement
 
-[Step 05 — Calibrate and use](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-05-calibrate-and-use) in the assembly
-instructions is split into two headings, using the lines that were already in that step:
+[Step 05 — Read pressure](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-05-read-pressure) is the first pressure reading in the assembly
+instructions. It is not a calibration. A defined pass/fail calibration is not in this guide yet.
 
-- [Calibrate](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#calibrate)
-- [Measure](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#measure)
-
-The assembly instructions name the sample container (a GL45 lab reagent bottle is recommended; a beaker,
-cup, or any other fluid container is also fine) and the probe. Exactly two models are still to be
-added, both TODO because the files are not in the repo: one GL45 two-port cap, and one tube that
-connects to that GL45 cap. The probe also uses the Adafruit 4661 tube. `sensing_tube.stl` and
-`connector_small.stl` are not those parts. RheoData download, pairing, the connected indicator,
-and how to start and name a REP stay TODO; they will be specified later in software and firmware.
+The first mechanical assembly can continue without the GL45 cap files. A sample measurement that uses
+that probe needs one GL45 two-port cap and one tube that connects to that cap. Those files are not in
+the repo. The probe also uses the Adafruit 4661 tube. `sensing_tube.stl` and `connector_small.stl` are
+not those parts. How the sensing line reaches a beaker, cup, or other container is not specified yet.
+RheoData download, pairing, the connected indicator, and how to start and name a REP are not written yet.
 
 License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).
