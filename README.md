@@ -1,3 +1,5 @@
+<p align="right"><img src="docs/img/hybrid-atelier-logo.png" alt="The Hybrid Atelier, The University of Texas at Arlington" width="300"></p>
+
 ## Start here: [Wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
 
 - [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
