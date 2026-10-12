@@ -12,17 +12,14 @@ three connected L298N signals that earlier direct-GPIO builds wired straight to 
 plain digital I2C GPIO expander (no PWM), seesaw exposes real 8-bit PWM over I2C, so pump
 drive stays fully proportional -- see README.md.
 
-This is the editable source for the wiring diagram (OSHWA requires design files in a
-"preferred format for making changes", not just a rendered raster export). Regenerate the PNG
-with:
+This script still draws the earlier single-figure diagram. It is not the source of the
+published wiring-diagram.png. That PNG was replaced on 2026-10-12 with the three-section
+RheoBoardOTS figure; the source was a maintainer-supplied image. Running this script
+writes wiring-diagram.png and would replace that figure. Do not run it to refresh the
+published diagram.
 
-    python3 generate_wiring_diagram.py
-
-Wiring facts here must stay in sync with:
-  - README.md (this folder) -- prose description of the same connections
+Seesaw pin numbers in this script must stay aligned with:
   - ../../../code/firmware/2P1V_Adafruit/PneumaticSystem.h -- seesaw pin #defines (source of truth)
-
-If you change a connection, update all three together.
 """
 
 import matplotlib

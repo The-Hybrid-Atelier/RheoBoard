@@ -4,8 +4,10 @@ This folder is the electronic wiring diagram for RheoBoardOTS - DIY: two pumps, 
 
 ![Electrical wiring diagram](wiring-diagram.png)
 
-The diagram file is `wiring-diagram.png`. It is a labeled schematic with component blocks, named pins, orthogonal wires, junction dots, and a net-color legend. Edit `generate_wiring_diagram.py` and run it to regenerate that image. `matplotlib` is required. `Pillow` is optional and shrinks the PNG. When the wiring changes, update that image and the pin defines in `code/firmware/2P1V_Adafruit/PneumaticSystem.h` together.
+The published file is `wiring-diagram.png`. On 2026-10-12 it was replaced with the three-section RheoBoardOTS figure. The source of that PNG was a maintainer-supplied image, not `generate_wiring_diagram.py`.
 
-Hookup-wire type and gauge are not stated. How the 12 V adapter connects to the L298N inputs, whether by a connector or bare leads, is not stated. Which connections to continuity-check, and the expected result for each, are not stated. A leak check and a photo of the finished wiring are not in this folder yet.
+`generate_wiring_diagram.py` still draws the earlier figure. Running it writes `wiring-diagram.png` and would replace the current image with that earlier figure. `matplotlib` is required to run the script. `Pillow` is optional and shrinks the PNG the script writes. Keep the script. Do not run it to recreate the current diagram. When the wiring changes, update the published PNG and the pin defines in `code/firmware/2P1V_Adafruit/PneumaticSystem.h` together. Changing the script does not update the published PNG.
+
+Hookup-wire type and gauge are not stated. The wall-adapter connection to the L298N inputs is in [4. Connect the power wiring](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#connect-the-power-wiring), and the continuity pairs and expected result are in [5. Check continuity](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#check-continuity). `generate_wiring_diagram.py` draws the earlier figure described above. That script does not draw the PRT-10288. A leak check and a photo of the finished wiring are not in this folder yet.
 
 License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).
