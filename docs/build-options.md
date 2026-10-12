@@ -11,5 +11,3 @@ Pictures from this repository used with that page:
 Board files are in [`README.md`](../RheoBoard_PCB/README.md).
 
 The portable holder STEP files are `thing_plus_tray.stp`, `micropressure_tray.stp`, and `battery_tray.stp` in `BuildYourOwn/cad/portable_holder/`. Print notes are on the [Portable parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable-parts-to-3D-print) wiki page. Copy count, orientation, supports, and material are still open.
-
-License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

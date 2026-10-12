@@ -8,5 +8,3 @@ that probe needs one GL45 two-port cap and one tube that connects to that cap. T
 the repo. The probe also uses the Adafruit 4661 tube. `sensing_tube.stl` and `connector_small.stl` are
 not those parts. How the sensing line reaches a beaker, cup, or other container is not specified yet.
 RheoData download, pairing, the connected indicator, and how to start and name a REP are not written yet.
-
-License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

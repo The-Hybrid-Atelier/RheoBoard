@@ -9,5 +9,3 @@ Open gaps:
 - TODO: print orientation, supports, and any non-default settings per part.
 - TODO: material and print settings for the STL files.
 - TODO: one GL45 two-port cap, and one tube that connects to that GL45 cap. Those files are not in this repository. `sensing_tube.stl` and `connector_small.stl` are not those parts.
-
-License: CC BY-SA 4.0 — see [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification).

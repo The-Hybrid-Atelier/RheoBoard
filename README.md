@@ -1,12 +1,12 @@
 # RheoBoard
 
+> [!IMPORTANT]
+> **Start here:** the guide is the **[wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)**.
+> Begin with [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP) and [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options).
+
 <img src="docs/img/home-versions.png" alt="RheoBoard" width="720">
 
 RheoBoard is open hardware for pneumatic retraction-extrusion measurements. On command, it runs a REP (retraction-extrusion pulse) and streams the pressure trace.
-
-## Start here
-
-[Wiki Page](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
 
 ## License
 
