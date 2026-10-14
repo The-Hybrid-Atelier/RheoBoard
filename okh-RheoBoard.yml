@@ -120,6 +120,8 @@ manufacturing-files:
     title: RheoBoardPipette portable holder STEP files
   - path: RheoBoard_PCB/RheoBoard_v1/Gerber/1-job.gbrjob
     title: PCB fabrication job (Gerbers in this folder; drills in ../Drill)
+  - path: RheoBoard_PCB/RheoBoard_v1/BOM/BOM_RheoboardV1.xlsx
+    title: RheoBoard v1 purchasing BOM with supplier links (28 September 2026)
   - path: RheoBoard_PCB/RheoBoard_v1/BOM/BOM_RheoboardV1_JLCSMT.xlsx
     title: RheoBoard v1 JLCPCB assembly BOM (28 September 2026)
   - path: RheoBoard_PCB/RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx
