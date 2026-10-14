@@ -1,0 +1,22 @@
+{
+  "connector_valid": true,
+  "connector_solids": 1,
+  "stl_watertight": true,
+  "stl_connected_components": 1,
+  "stl_triangles": 14528,
+  "overall_length_mm": 18.6,
+  "thread_length_mm": 6,
+  "major_diameter_mm": 6.35,
+  "pitch_mm": 0.9071428571428571,
+  "stem_tip_od_mm": 3.2,
+  "stem_base_od_mm": 4.5,
+  "lumen_mm": 2.36,
+  "inlet_bore_mm": 4,
+  "cap_changed": false,
+  "seated_interference_mm3": [
+    0.0,
+    0.0
+  ],
+  "screw_motion_positions_checked": 8,
+  "physical_fit_verified": false
+}

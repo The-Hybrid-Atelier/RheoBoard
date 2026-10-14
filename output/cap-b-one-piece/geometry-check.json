@@ -1,0 +1,18 @@
+{
+  "solid_count": 1,
+  "valid_step": true,
+  "stl_triangles": 223530,
+  "stl_watertight": true,
+  "stl_consistent_winding": true,
+  "stl_connected_components": 1,
+  "outer_diameter_mm": 53.8,
+  "height_mm": 30,
+  "port_spacing_mm": 16,
+  "thread_pitch_mm": 0.9071428571428571,
+  "port_radial_allowance_mm": 0.15,
+  "port_crest_diameter_mm": 5.8,
+  "port_root_diameter_mm": 6.6499999999999995,
+  "bottle_thread": "approximate GL45 rounded profile, 4 mm pitch",
+  "stl_orientation": "raised top face down, bottle opening up",
+  "physical_fit_verified": false
+}
