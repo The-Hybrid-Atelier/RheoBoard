@@ -3,8 +3,5 @@
 [Step 06 — Read pressure](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-06-read-pressure) is the first pressure reading in the assembly
 instructions. It is not a calibration. A defined pass/fail calibration is not in this guide yet.
 
-The first mechanical assembly can continue without the GL45 cap files. A sample measurement that uses
-that probe needs one GL45 two-port cap and one tube that connects to that cap. Those files are not in
-the repo. The probe also uses the Adafruit 4661 tube. `sensing_tube.stl` and `connector_small.stl` are
-not those parts. How the sensing line reaches a beaker, cup, or other container is not specified yet.
+The first mechanical assembly can continue without the sensing setup. A sample measurement uses the sensing setup CAD in [`Sensing Setup`](../Sensing Setup/): a GL45 bottle and a tube. The probe also uses the Adafruit 4661 tube. How the sensing line reaches the bottle is not specified yet.
 RheoData download, pairing, the connected indicator, and how to start and name a REP are not written yet.

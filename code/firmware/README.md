@@ -2,7 +2,7 @@
 
 **Entry point:** `2P1V_Adafruit/2P1V_Adafruit.ino`. Arduino requires the sketch folder name to match the `.ino` file. The sketch file and BLE device name are `2P1V_Adafruit`.
 
-This firmware is shared by the DIY build, the PCB, and the portable version. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
+This firmware is shared by RheoBoardOTS, RheoBoardPipette, and the PCB. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
 
 Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](../../LICENSE).
 
@@ -21,7 +21,7 @@ The firmware expects these I2C addresses:
 | `4` | `VALVE1_EN` | Reserved for L298N #2 `ENA`; physically NC | digital |
 | `5` | `VALVE2_EN` | L298N #2 `ENB` — the only valve driven | digital |
 
-These constants are defined in `2P1V_Adafruit/PneumaticSystem.h`. Physical connections are in `BuildYourOwn/hardware/electronic-wiring/` and on the Assembly instructions page.
+These constants are defined in `2P1V_Adafruit/PneumaticSystem.h`. Physical connections are in `BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/` and on the Assembly instructions page.
 
 ## Control API
 

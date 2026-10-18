@@ -62,7 +62,7 @@
     {"url": "https://www.ti.com/lit/ds/symlink/tca9548a.pdf", "document": "SCPS207H", "sections": "5.5: SDA sink and RON; one-channel software constraint"},
     {"url": "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf", "sections": "Table 14 p38: local input/sink thresholds"},
     {"url": "https://www.ti.com/lit/ds/symlink/tca9534a.pdf", "sections": "6.3 and 6.5: local input/sink thresholds"},
-    {"url": "https://cdn.sparkfun.com/assets/6/d/c/6/c/ESP32_Thing_Plus_Schematic.pdf", "document": "v20, 2020-01-09", "method": "Rendered and inspected complete schematic; local source BuildYourOwn/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf"},
+    {"url": "https://cdn.sparkfun.com/assets/6/d/c/6/c/ESP32_Thing_Plus_Schematic.pdf", "document": "v20, 2020-01-09", "method": "Rendered and inspected complete schematic; local source BuildYourOwn/RheoBoardOTS/hardware/references/datasheets/ESP32_Thing_Plus_Schematic.pdf"},
     {"url": "https://www.sparkfun.com/qwiic", "sections": "Qwiic connector standard"}
   ],
   "final_CAD_acceptance": "Pending owner saved-design handoff, fresh native ERC/DRC, netlist and IPC pin reconciliation, layout/pad review and manufacturing synchronization"

@@ -2,7 +2,7 @@
 
 This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one switched-port valve, the pressure sensor, and the sensing tube. [Step 03: Connect tubing](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-03-connect-tubing) summarizes these ports.
 
-License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).
+License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../../LICENSE).
 
 <!-- VISUAL: pneumatic-diagram -->
 
@@ -16,9 +16,9 @@ Tubing is Adafruit 4661, 1 m silicone, 3 mm ID, 5 mm OD, for air only. The lengt
 | PUMP2 | Adafruit 4699 ZR370-02PM (pressure) | **Tubing port** (outlet) → VALVE2 plastic pole; **side port** (inlet) → atmosphere |
 | VALVE2 | Adafruit 4663 FA0520E | Metal pole (OFF) = vacuum path; plastic pole (ON) = pressure path; common → tee |
 | Sensor | SparkFun Qwiic MicroPressure (MPRLS) | One tee branch |
-| Sensing tube | Printed `sensing_tube.stl` | Other tee branch |
+| Sensing tube | Sensing tube | Other tee branch |
 
-The valve common goes to the tee. One tee branch goes to the MicroPressure sensor. The other tee branch goes to the sensing tube. `connector_small.stl` and the FTLLB220-6005 fitting are optional on this path. The tee model is not stated.
+The valve common goes to the tee. One tee branch goes to the MicroPressure sensor. The other tee branch goes to the sensing tube. The FTLLB220-6005 fitting is optional on this path. The sensing setup CAD, using a GL45 bottle and a tube, is in [`Sensing Setup`](../../../../Sensing Setup/). The tee model is not stated.
 
 ### Pump note (4699)
 

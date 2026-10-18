@@ -10,4 +10,4 @@ The published file is `wiring-diagram.png`. On 2026-10-12 it was replaced with t
 
 Hookup-wire type and gauge are not stated. The wall-adapter connection to the L298N inputs is in [4. Connect the power wiring](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#connect-the-power-wiring), and the continuity pairs and expected result are in [5. Check continuity](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#check-continuity). `generate_wiring_diagram.py` draws the earlier figure described above. That script does not draw the PRT-10288. A leak check and a photo of the finished wiring are not in this folder yet.
 
-License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).
+License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../../LICENSE).

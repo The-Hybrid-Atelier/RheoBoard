@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-14
+date-updated: 2026-10-18
 # OSHWA certified version 1, UID US002865: https://certification.oshwa.org/us002865.html
 # The current version is version 1. This is the same version certified by OSHWA as US002865.
 # (OKH 1.0 has no certification field.)
@@ -42,7 +42,7 @@ keywords:
 
 project-link: https://github.com/The-Hybrid-Atelier/RheoBoard
 documentation-home: https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/RheoBoardOTS
-image: BuildYourOwn/images/teaser.jpg
+image: BuildYourOwn/RheoBoardOTS/images/teaser.jpg
 
 contact:
   name: Charlie Vuong
@@ -75,21 +75,17 @@ licensor:
 # ---- Documentation & design-file locations (relative to this manifest) ------
 # Purchased-parts table: https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-buy
 # This path is the in-repo pointer. Printed parts are on the wiki Parts to 3D print page.
-bom: BuildYourOwn/hardware/README.md
+bom: BuildYourOwn/RheoBoardOTS/hardware/README.md
 
 design-files:
-  - path: BuildYourOwn/hardware/electronic-wiring/generate_wiring_diagram.py
+  - path: BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/generate_wiring_diagram.py
     title: Electrical wiring diagram source (regenerates the schematic PNG)
-  - path: BuildYourOwn/cad/encloser/Concept_v2.STEP
-    title: 3D-printed panel, full assembly STEP (editable CAD project not yet published)
-  - path: BuildYourOwn/cad/connector/sensing_tube.scad
-    title: Parametric sensing-tube OpenSCAD source
-  - path: BuildYourOwn/cad/connector/sensing_tube.stl
-    title: Printable sensing-tube mesh exported from sensing_tube.scad (physical fit required)
-  - path: BuildYourOwn/cad/connector/connector_small.stl
-    title: Small connector mesh export; editable source not yet published (physical fit required)
-  - path: BuildYourOwn/cad/portable_holder
-    title: RheoBoardPipette portable holder STEP files
+  - path: BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD
+    title: CAD design for RheoBoardOTS
+  - path: Sensing Setup
+    title: CAD design for the sensing setup, using a GL45 bottle and a tube
+  - path: BuildYourOwn/RheoBoardOTS/cad/concept
+    title: Enclosure concept visuals (no CAD files)
   - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro
     title: KiCad 10 project for the custom PCB prototype
   - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch
@@ -98,26 +94,22 @@ design-files:
     title: KiCad board layout for the custom PCB
 
 schematics:
-  - path: BuildYourOwn/hardware/electronic-wiring/wiring-diagram.png
+  - path: BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/wiring-diagram.png
     title: Electrical schematic
-  - path: BuildYourOwn/hardware/tube-wiring/tube-connection.png
+  - path: BuildYourOwn/RheoBoardOTS/hardware/tube-wiring/tube-connection.png
     title: Pneumatic tube-connection diagram
 
 making-instructions:
-  - path: BuildYourOwn/README.md
+  - path: BuildYourOwn/RheoBoardOTS/README.md
     title: RheoBoardOTS - DIY pointer to the wiki RheoBoardOTS page
   - path: RheoBoard_PCB/README.md
     title: How to open the KiCad board and where its fabrication files are
 
 manufacturing-files:
-  - path: BuildYourOwn/cad/connector/sensing_tube.stl
-    title: Sensing-tube STL exported from OpenSCAD (physical fit required)
-  - path: BuildYourOwn/cad/connector/connector_small.stl
-    title: Small connector STL; editable source not yet published (physical fit required)
-  - path: BuildYourOwn/cad/encloser/part
-    title: Printable panel STEP files (PLA, Bambu Lab normal profile)
-  - path: BuildYourOwn/cad/portable_holder
-    title: RheoBoardPipette portable holder STEP files
+  - path: BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD
+    title: CAD design for RheoBoardOTS
+  - path: Sensing Setup
+    title: CAD design for the sensing setup, using a GL45 bottle and a tube
   - path: RheoBoard_PCB/RheoBoard_v1/Gerber/1-job.gbrjob
     title: PCB fabrication job (Gerbers in this folder; drills in ../Drill)
   - path: RheoBoard_PCB/RheoBoard_v1/BOM/BOM_RheoboardV1.xlsx
@@ -139,7 +131,7 @@ operating-instructions:
 
 software:
   - path: code/firmware/2P1V_Adafruit
-    title: ESP32 rheometer firmware (Arduino/C++), shared by the DIY build, the PCB, and the portable version
+    title: ESP32 rheometer firmware (Arduino/C++), shared by RheoBoardOTS, RheoBoardPipette, and the PCB
 
 # Real documentation pages. TODO-only pages are not listed.
 documentation:
