@@ -1,5 +1,5 @@
 # RheoBoardPipette
 
-This folder is RheoBoardPipette. Design files are in `RheoBoardPipette_CAD/`: `inline_pipette_sensor_prototype.scad`, `inline_pipette_sensor_prototype.stl`, `ESP32_ThingPlus_tray.stl`, and `MicroPressure_tray.stl`.
+This folder is RheoBoardPipette. Design files are in `RheoBoardPipette_CAD/`. `inline_pipette_sensor_prototype.scad` and `inline_pipette_sensor_prototype.stl` are the inline pipette adapter. `ESP32_ThingPlus_tray.stl` is the ESP32 Thing Plus tray. `MicroPressure_tray.stl` is the tray for the SparkFun Qwiic MicroPressure and the SparkFun Qwiic Button, because the boards are the same size.
 
 License: hardware CERN-OHL-W-2.0, firmware MIT, documentation CC BY-SA 4.0 — see [`LICENSE`](../../LICENSE).
