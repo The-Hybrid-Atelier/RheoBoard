@@ -10,4 +10,4 @@ Pictures from this repository used with that page:
 
 Board files are in [`README.md`](../RheoBoard_PCB/README.md).
 
-The portable holder CAD files are not in this repository. Print notes are on the [Portable parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable-parts-to-3D-print) wiki page.
+RheoBoardPipette CAD is in [`RheoBoardPipette_CAD`](../BuildYourOwn/RheoBoardPipette/RheoBoardPipette_CAD/). Print notes are on the [Portable parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable-parts-to-3D-print) wiki page. The trays are for the ESP32 Thing Plus, the SparkFun Qwiic Button, and the SparkFun Qwiic MicroPressure. The button and the MicroPressure use `MicroPressure_tray.stl`, because the boards are the same size.
