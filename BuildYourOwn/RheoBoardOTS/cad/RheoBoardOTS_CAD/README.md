@@ -4,7 +4,7 @@ This is the CAD design for RheoBoardOTS. Print notes and previews are on the [Pa
 
 Layout drawings are in [`images`](../../images/): `plate_one_L298N_top.png` (one L298N) and `plate_two_L298N_top.png` (two L298N modules). The drawings say physical fit is unverified.
 
-Plates to print: `part_01_large_one_L298N.stl` is the one-L298N plate, 190 × 214 × 3 mm. `part_01_large_two_L298N.stl` is the two-L298N plate, 218 × 208 × 3 mm.
+Plates to print: `part_01_large_one_L298N.stl` is the one-L298N plate, 190 × 215 × 3 mm. `part_01_large_two_L298N.stl` is the two-L298N plate, 218 × 208 × 3 mm. The updated drawings place PWM / PCA9685 on the left and the ESP32 on the right. The one-L298N drawing has 42 holes. The two-L298N drawing has 46 holes. Both say the jack is at the edge and physical fit is unverified.
 
 Other parts to print: `pump_holder1.stl` and `pump_holder2.stl` are pump holders. `valve_bracket.stl` is the valve bracket, and `part_03_valve_bracket_1.stl` is the same mesh.
 
