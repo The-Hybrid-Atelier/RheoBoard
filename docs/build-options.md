@@ -6,7 +6,7 @@ Pictures from this repository used with that page:
 
 - [`diy-annotated.jpg`](img/panel/diy-annotated.jpg)
 - [`pcb-schematic-and-v1-board.png`](../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png)
-- [`portable-concept.jpg`](img/portable/portable-concept.jpg)
+- [`rheoboard-pipette.jpg`](../BuildYourOwn/RheoBoardPipette/rheoboard-pipette.jpg)
 
 Board files are in [`README.md`](../RheoBoard_PCB/README.md).
 
