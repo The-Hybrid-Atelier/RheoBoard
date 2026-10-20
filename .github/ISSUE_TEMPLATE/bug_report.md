@@ -10,4 +10,4 @@ title: ""
 
 **Build path, if you know it**
 
-RheoBoardOTS - DIY, RheoBoard_v1 - PCB, or RheoBoardPipette - Portable.
+RheoBoardOTS - DIY, RheoBoard_v1 - PCB, or RheoPipette - Portable.

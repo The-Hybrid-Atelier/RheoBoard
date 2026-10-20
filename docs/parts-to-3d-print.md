@@ -2,7 +2,7 @@
 
 Print files are on the [Parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-3D-print) wiki page. That page opens with the annotated photo of the RheoBoardOTS panel, [`panel-annotated.pdf`](../BuildYourOwn/RheoBoardOTS/cad/concept/panel-annotated.pdf), and the lid-off drawing, [`assembly-open.jpg`](../BuildYourOwn/RheoBoardOTS/cad/concept/assembly-open.jpg).
 
-[`RheoBoardOTS_CAD`](../BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD/) is the CAD design for RheoBoardOTS: a layout drawing, a plate to print, the other parts to print, and a tray for each electronics board. [`Sensing Setup`](../Sensing%20Setup/) is the 3D-printed GL45 cap and tube. The bottle is not a printed part. RheoBoardPipette print files are on the [Portable parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable-parts-to-3D-print) page.
+[`RheoBoardOTS_CAD`](../BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD/) is the CAD design for RheoBoardOTS: a layout drawing, a plate to print, the other parts to print, and a tray for each electronics board. [`Sensing Setup`](../Sensing%20Setup/) is the 3D-printed GL45 cap and tube. The bottle is not a printed part. RheoPipette print files are on the [Portable parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable-parts-to-3D-print) page.
 
 The layout drawing is [`plate_one_L298N_top.png`](../BuildYourOwn/RheoBoardOTS/images/plate_one_L298N_top.png). It is the one-L298N layout, 190 × 215 × 3 mm, with 42 holes. PWM / PCA9685 is on the left and the ESP32 is on the right. The drawing says physical fit is unverified.
 

@@ -2,7 +2,7 @@
 
 **Entry point:** `2P1V_Adafruit/2P1V_Adafruit.ino`. Arduino requires the sketch folder name to match the `.ino` file. The sketch file and BLE device name are `2P1V_Adafruit`.
 
-This firmware is shared by RheoBoardOTS, RheoBoardPipette, and the PCB. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
+This firmware is shared by RheoBoardOTS, RheoPipette, and the PCB. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
 
 Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](../../LICENSE).
 

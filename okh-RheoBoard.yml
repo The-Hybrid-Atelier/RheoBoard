@@ -131,7 +131,7 @@ operating-instructions:
 
 software:
   - path: code/firmware/2P1V_Adafruit
-    title: ESP32 rheometer firmware (Arduino/C++), shared by RheoBoardOTS, RheoBoardPipette, and the PCB
+    title: ESP32 rheometer firmware (Arduino/C++), shared by RheoBoardOTS, RheoPipette, and the PCB
 
 # Real documentation pages. TODO-only pages are not listed.
 documentation:
