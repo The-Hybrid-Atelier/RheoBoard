@@ -542,25 +542,34 @@
       },
       {
         "clearance": 0.2,
-        "name": "Input_Power",
+        "name": "Buck_SW",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": -1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.45,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.2,
+        "name": "Input_Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": -1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.5,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3
       },
       {
         "clearance": 0.2,
         "name": "Load_Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": -1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.25,
-        "via_diameter": 0.6,
-        "via_drill": 0.3
-      },
-      {
-        "clearance": 0.2,
-        "name": "Buck_SW",
-        "priority": -1,
-        "track_width": 0.45,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3
       }

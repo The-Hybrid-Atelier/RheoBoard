@@ -35,3 +35,9 @@ fp-info-cache
 
 # Local design review evidence
 /.local-verification/
+
+# PCB review diagnostics and editor session preferences stay local
+/RheoBoard_PCB/**/Verification/
+/RheoBoard_PCB/**/*.kicad_prl
+/RheoBoard_PCB/**/IMPORT_REPORT.txt
+/RheoBoard_PCB/**/Missing_Illustrations.txt
