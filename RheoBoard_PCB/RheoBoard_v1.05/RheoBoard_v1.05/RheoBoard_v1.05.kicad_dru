@@ -1,0 +1,74 @@
+(version 1)
+# v1.05 prototype width guards; thermal qualification remains open.
+
+(rule "Input trunk floor"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN_RAW' || A.NetName == '+12V')")
+ (constraint track_width (min 1mm)))
+
+(rule "Input auxiliary bypass and Zener"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN_RAW' && (A.intersectsCourtyard('C65') || A.intersectsCourtyard('D37')))")
+ (constraint track_width (min 0.5mm)))
+
+(rule "Input enable resistor branch"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN_RAW' && A.intersectsCourtyard('R78'))")
+ (constraint track_width (min 0.3mm)))
+
+(rule "Input local ceramic approach"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN_RAW' && A.intersectsCourtyard('C66'))")
+ (constraint track_width (min 0.65mm)))
+
+(rule "Input eFuse pin escape"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN_RAW' && A.Origin_X >= 144mm && A.End_X >= 144mm && A.Origin_X <= 144.5mm && A.End_X <= 144.5mm && A.Origin_Y >= 48.4mm && A.End_Y >= 48.4mm && A.Origin_Y <= 49.4mm && A.End_Y <= 49.4mm)")
+ (constraint track_width (min 0.3mm)))
+
+(rule "Protected input rail floor"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN')")
+ (constraint track_width (min 0.8mm)))
+
+(rule "Buck input capacitor approach"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN' && (A.intersectsCourtyard('C2') || A.intersectsCourtyard('C9') || A.intersectsCourtyard('C16')))")
+ (constraint track_width (min 0.4mm)))
+
+(rule "Buck fine pitch VIN escape"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN' && (A.intersectsCourtyard('U1') || A.intersectsCourtyard('U2') || A.intersectsCourtyard('U3')))")
+ (constraint track_width (min 0.3mm)))
+
+(rule "eFuse OUT pin escape"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN' && A.Origin_X >= 144.5mm && A.End_X >= 144.5mm && A.Origin_X <= 145mm && A.End_X <= 145mm && A.Origin_Y >= 51.6mm && A.End_Y >= 51.6mm && A.Origin_Y <= 52.3mm && A.End_Y <= 52.3mm)")
+ (constraint track_width (min 0.3mm)))
+
+(rule "eFuse OUT heat spread tap"
+ (condition "A.Type == 'Track' && (A.NetName == 'VIN' && A.Origin_X >= 144.5mm && A.End_X >= 144.5mm && A.Origin_X <= 145.8mm && A.End_X <= 145.8mm && A.Origin_Y >= 52.7mm && A.End_Y >= 52.7mm && A.Origin_Y <= 53.3mm && A.End_Y <= 53.3mm)")
+ (constraint track_width (min 0.5mm)))
+
+(rule "Pump rail floor"
+ (condition "A.Type == 'Track' && (A.NetName == '+4V5')")
+ (constraint track_width (min 0.8mm)))
+
+(rule "Pump bypass local pad approaches"
+ (condition "A.Type == 'Track' && (A.NetName == '+4V5' && (A.intersectsCourtyard('C31') || A.intersectsCourtyard('C33')))")
+ (constraint track_width (min 0.5mm)))
+
+(rule "Valve rail and switched load floors"
+ (condition "A.Type == 'Track' && (A.NetName == '+6V' || A.NetName == 'Net-(D11-A)' || A.NetName == 'Net-(D12-A)' || A.NetName == 'Net-(D16-A)' || A.NetName == 'Net-(D18-A)')")
+ (constraint track_width (min 1.25mm)))
+
+(rule "Logic supply branches"
+ (condition "A.Type == 'Track' && (A.NetName == '+3V3')")
+ (constraint track_width (min 0.5mm)))
+
+(rule "Local I2C buffer supply escape"
+ (condition "A.Type == 'Track' && (A.NetName == '+3V3' && A.Origin_X >= 186mm && A.End_X >= 186mm && A.Origin_X <= 194mm && A.End_X <= 194mm && A.Origin_Y >= 108mm && A.End_Y >= 108mm && A.Origin_Y <= 113mm && A.End_Y <= 113mm)")
+ (constraint track_width (min 0.25mm)))
+
+(rule "Buck bootstrap backside floor"
+ (condition "A.Type == 'Track' && ((A.NetName == 'Net-(U1-SW)' || A.NetName == 'Net-(U2-SW)' || A.NetName == 'Net-(U3-SW)') && A.Layer == 'B.Cu')")
+ (constraint track_width (min 0.25mm)))
+
+(rule "Buck switch front escape floor"
+ (condition "A.Type == 'Track' && ((A.NetName == 'Net-(U1-SW)' || A.NetName == 'Net-(U2-SW)' || A.NetName == 'Net-(U3-SW)') && A.Layer == 'F.Cu')")
+ (constraint track_width (min 0.3mm)))
+
+(rule "Buck main front path floor"
+ (condition "A.Type == 'Track' && (A.Layer == 'F.Cu' && (((A.NetName == 'Net-(U1-SW)' || A.NetName == 'Net-(U2-SW)') && A.Origin_X < 130.45mm && A.End_X < 130.45mm) || (A.NetName == 'Net-(U3-SW)' && A.Origin_X < 102.69mm && A.End_X < 102.69mm)))")
+ (constraint track_width (min 0.4mm)))

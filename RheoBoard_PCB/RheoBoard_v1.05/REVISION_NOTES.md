@@ -1,6 +1,6 @@
 # RheoBoard v1.05 revision record
 
-CAD revision saved and fabrication/assembly exports reconciled on 2026-10-10. Supplier placement acceptance and physical qualification remain open. See the [review report](Verification/REVIEW_REPORT.md).
+CAD, fabrication outputs, drawings and assembly placement exports updated on 2026-10-22; BOM population and values retained. Supplier placement acceptance and physical qualification remain open.
 
 The maintainer accepted the retained U5 startup/reset and valve-rail voltage-margin risks for this prototype on 2026-10-09. Those circuits are unchanged; their acceptance does not establish measured qualification.
 
@@ -16,6 +16,7 @@ The owner chose to retain the last commanded pump and valve states when master c
 
 | Area | v1.05 change | Reason / validation target |
 | --- | --- | --- |
+| Layout refinement 2026-10-22 | Rework three regulator cells/bootstrap paths, U12 power escape/heat spreading, pump bypass, connector-local valve clamps and U5 bypass. Add assigned power-routing classes. | 19 moved footprints; 160 retained identities/values/sides; ERC/DRC/parity zero. Refresh Gerbers, drawings and 135-row SMT CPL. 18 scoped power minima validated; native Gerber viewing complete. Physical/supplier qualification remains open. |
 | Pump and valve bulk capacitors | C32, C34, C43 and C45 become Panasonic EEEFK1H220P, 22 µF / 50 V, C128458. | Reduces each rail from about 244 µF to 88.3 µF nominal. Verify startup and load transients on hardware. |
 | Input protection | Add U12 TPS259472ARPWR, D36 and R78–R81 / C64–C67 downstream of the reverse-polarity stage and ahead of the converters. | Controlled startup, approximately 2 A current limit and 13.8 V nominal clamp. Explicitly approved by the owner. |
 | Input fuse | F1 uses a centered project-local JDT JFC1032TS footprint. | Match the selected JFC1032-1200TS fuse and eliminate the old placement-origin offset. |
@@ -67,14 +68,28 @@ The intended master is a separately USB/battery-powered ESP32 Thing Plus. All fo
 
 U13's physical pins are 1 VCCA/local +3V3, 2 SCLA/local SCL, 3 SDAA/local SDA, 4 common GND, 5 EN/HOST_3V3, 6 SDAB/HOST_SDA, 7 SCLB/HOST_SCL and 8 VCCB/HOST_3V3. C68/C69 provide 100 nF bypassing. R82/R83 provide host-side 4.7 kΩ pullups, and R84 provides 10 kΩ host-rail discharge. Existing local pullups remain. The IC's powered-off high-impedance behavior prevents a powered host from driving the unpowered local bus through U13; both 3.3 V domains share ground and are not galvanically isolated. [TI TCA9517A, SCPS245E](https://www.ti.com/lit/ds/symlink/tca9517a.pdf).
 
-The local bus must be on A: the MPR sensor's specified low output can be 0.66 V at 3.3 V, above the B-side 0.45 V contention threshold but below A's 0.99 V input threshold. The specified ESP32's maximum 0.33 V low output fits B's input requirement, and B's 0.60 V maximum output low fits the ESP32's 0.825 V input limit. Keep modest pullup loading and verify the actual harness. The checked board is SparkFun WRL-15663 Micro-B, with Qwiic SDA on GPIO23 and SCL on GPIO22. The full source-based interface review is included with the current verification evidence.
+The local bus must be on A: the MPR sensor's specified low output can be 0.66 V at 3.3 V, above the B-side 0.45 V contention threshold but below A's 0.99 V input threshold. The specified ESP32's maximum 0.33 V low output fits B's input requirement, and B's 0.60 V maximum output low fits the ESP32's 0.825 V input limit. Keep modest pullup loading and verify the actual harness. The checked board is SparkFun WRL-15663 Micro-B, with Qwiic SDA on GPIO23 and SCL on GPIO22. The interface still requires testing with the actual harness.
 
 Multiple RheoBoards require one channel at a time through a TCA9548A, supplying master 3.3 V to each J9 host interface. Connecting multiple enabled B sides together is prohibited by TI and also causes address collisions. Upstream B-side repeaters and rise-time accelerators are outside the supported arrangement. Keep total selected host-segment pullup current within 3 mA and selected-branch effective pullups at least 2.2 kΩ after parallel combinations and tolerances. The latter preserves the mux ACK low-level margin through its pass-switch resistance; the board's 4.7 kΩ alone is suitable. The [assembly guide](ASSEMBLY_AND_BRINGUP.md) records the wiring, firmware constraints and power-state measurements.
 
 ## Prior checkpoint evidence
 
-Before the Qwiic interface addition, saved-board checks reported zero DRC errors, warnings, unconnected items and schematic-parity mismatches. ERC reported zero errors and zero warnings after the grid and library cleanup. All 398 schematic pin nodes were represented on the board. The 141-part fitted BOM and 134-part SMT BOM/CPL pair were reconciled. The eight enlarged probe footprints were applied; all 160 component positions were unchanged from that preceding checkpoint. These counts describe the pre-Qwiic design. The current [review report](Verification/REVIEW_REPORT.md) and release manifest govern the updated files.
+Before the Qwiic interface addition, saved-board checks reported zero DRC errors, warnings, unconnected items and schematic-parity mismatches. ERC reported zero errors and zero warnings after the grid and library cleanup. All 398 schematic pin nodes were represented on the board. The 141-part fitted BOM and 134-part SMT BOM/CPL pair were reconciled. The eight enlarged probe footprints were applied; all 160 component positions were unchanged from that preceding checkpoint. These counts describe the pre-Qwiic design. Current manufacturing files include the later Qwiic and layout updates.
 
 The six aggregate audits completed. A generic missing-decoupling finding on the connector-to-fuse +12V segment is adjudicated against the exported connectivity in the review report; the raw result is retained. Three inherited rule keys unavailable in the current KiCad UI remain outside demonstrated rule coverage. The schematic title-block revision remains blank. The warning cleanup did not disable rules or add exclusions; the pre-existing ERC exclusions remain documented in the review report.
 
 Physical acceptance remains open: verify fitted parts and polarity, measure the three rails, startup and load switching, input hot plug, temperature, pump startup, valve behavior, I²C operation through the intended harness, and mechanical fit. Record those results using the assembly and bringup guide before releasing repeated production.
+
+## GND via cleanup — 2026-10-22
+
+Removed the five free GND vias below C52/C53 at Y = 84.025 mm,
+X = 132.7, 133.4125, 134.125, 134.8375 and 135.55 mm. They occupied the
+front +4V5 pour without an attached ground trace. KiCad refilled the copper
+and saved the board; the rail no longer has the row of clearance holes.
+
+The board now has 290 vias (199 on GND). All 160 footprints, 594 track
+segments, retained vias, zone definitions, graphics and board settings are
+unchanged. Only zone fills were recalculated. Fresh DRC, unconnected and
+schematic-parity checks report zero findings. The BOM, placement files and
+schematic are unaffected. Gerbers, drills, fabrication ZIP and copper/mask
+drawings were refreshed.

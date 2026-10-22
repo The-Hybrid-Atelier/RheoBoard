@@ -73,7 +73,7 @@ The [JLCPCB top placement](Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.p
 
 ## Controller initialization and channel map
 
-**Accepted prototype risk:** U5's reset pin retains a pull-up and TP3 access. The maintainer requested no reset-circuit change. Waiting in firmware alone does not guarantee the required reset; reliable startup and recovery remain unmeasured. See the retained [startup finding](Verification/REVIEW_REPORT.md).
+**Accepted prototype risk:** U5's reset pin retains a pull-up and TP3 access. The maintainer requested no reset-circuit change. Waiting in firmware alone does not guarantee the required reset; reliable startup and recovery remain unmeasured.
 
 For cold startup, keep all loads OFF until the three rails are stable. There is no TCA9534 initialization in this revision. Configure U7 for non-inverted totem-pole outputs; initialize its used channels FULL OFF, disable All Call/Sub Call addressing, set its common frequency using the specified sleep/prescaler sequence, wake the oscillator and wait at least 500 µs. [NXP PCA9685 datasheet](https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf).
 

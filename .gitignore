@@ -32,3 +32,6 @@ fp-info-cache
 *.~*
 *.Bak
 *.ldb
+
+# Local design review evidence
+/.local-verification/
