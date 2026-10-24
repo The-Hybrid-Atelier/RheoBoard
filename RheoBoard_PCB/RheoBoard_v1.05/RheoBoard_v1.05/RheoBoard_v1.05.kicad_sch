@@ -65773,7 +65773,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+		(property "Footprint" "RheoBoard:SOT-223-3_TabPin2_DFM"
 			(at 95.25 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -67423,7 +67423,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical"
+		(property "Footprint" "RheoBoard:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical_DFM"
 			(at 840.74 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -72456,7 +72456,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "RheoBoard:AO3400A"
+		(property "Footprint" "RheoBoard:AO3400A_Pin1Offset"
 			(at 110.49 354.33 0)
 			(hide yes)
 			(show_name no)

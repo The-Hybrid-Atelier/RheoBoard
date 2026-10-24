@@ -41,3 +41,12 @@ fp-info-cache
 /RheoBoard_PCB/**/*.kicad_prl
 /RheoBoard_PCB/**/IMPORT_REPORT.txt
 /RheoBoard_PCB/**/Missing_Illustrations.txt
+
+# Agent-generated PCB notes and evaluations belong in ignored local storage
+/RheoBoard_PCB/**/Validation/
+/RheoBoard_PCB/**/REVISION_NOTES.md
+/RheoBoard_PCB/**/ASSEMBLY_AND_BRINGUP.md
+/RheoBoard_PCB/**/FOOTPRINT_REVIEW.md
+/RheoBoard_PCB/**/FOOTPRINT_COVERAGE.csv
+/RheoBoard_PCB/**/LED_PIN_MAP.md
+/RheoBoard_PCB/**/RheoBoard_v1.05_LED_assembly.pdf
