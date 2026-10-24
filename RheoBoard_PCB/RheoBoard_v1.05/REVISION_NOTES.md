@@ -16,6 +16,7 @@ The owner chose to retain the last commanded pump and valve states when master c
 
 | Area | v1.05 change | Reason / validation target |
 | --- | --- | --- |
+| Schematic presentation 2026-10-24 | Give U12 input protection a wider, top-aligned column and U13 Qwiic interface a separate padded row; reposition the peripheral, switch and sensor sections on a 950 × 620 mm sheet and refresh the schematic PDF. | Match the existing blue section styling with clear gaps and room for labels. Connectivity unchanged; ERC zero errors and warnings. PCB layout unchanged. |
 | Layout refinement 2026-10-22 | Rework three regulator cells/bootstrap paths, U12 power escape/heat spreading, pump bypass, connector-local valve clamps and U5 bypass. Add assigned power-routing classes. | 19 moved footprints; 160 retained identities/values/sides; ERC/DRC/parity zero. Refresh Gerbers, drawings and 135-row SMT CPL. 18 scoped power minima validated; native Gerber viewing complete. Physical/supplier qualification remains open. |
 | Pump and valve bulk capacitors | C32, C34, C43 and C45 become Panasonic EEEFK1H220P, 22 µF / 50 V, C128458. | Reduces each rail from about 244 µF to 88.3 µF nominal. Verify startup and load transients on hardware. |
 | Input protection | Add U12 TPS259472ARPWR, D36 and R78–R81 / C64–C67 downstream of the reverse-polarity stage and ahead of the converters. | Controlled startup, approximately 2 A current limit and 13.8 V nominal clamp. Explicitly approved by the owner. |
