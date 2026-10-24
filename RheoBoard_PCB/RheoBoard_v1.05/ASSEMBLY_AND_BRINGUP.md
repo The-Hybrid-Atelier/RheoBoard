@@ -6,17 +6,19 @@ Hardware design licensing follows the repository root LICENSE, CERN-OHL-W-2.0. D
 
 ## Power and connectors
 
+Before assembly, read the [2026-10-24 footprint review](FOOTPRINT_REVIEW.md). U1/U2/U3 lands now match the TI DRL0006A recommendation. U5/U7 mask gaps and silkscreen margins are corrected; use the review’s compatible colored 1 oz process and retain its remaining exact-part and physical acceptance checks. The eleven SZYY0603R LEDs now use manufacturer-matched symbols and footprints: **pin/pad 1 = anode (+), pin/pad 2 = cathode (-)**. The cathode end bar marks pad 2. Use the [LED assembly guide](Manufacturing/Drawings/RheoBoard_v1.05_LED_assembly.pdf) with the actual assembly preview. The original physical polarity and CPL angles are retained; no unverified 180-degree offset was applied. [Pin-map acceptance](LED_PIN_MAP.md).
+
 Use a regulated, center-positive 12 V DC supply with the plug dimensions required by the PJ-082BH jack: 5.5 mm outside and 2.5 mm inside. For initial testing, use a bench supply with adjustable current limiting. A 12 V, 2 A adapter is a starting selection for one board with the specified loads, subject to measured startup and simultaneous-load current. A larger adapter does not increase the board's allowable current. The input fuse is 2 A and the added eFuse has an approximately 2 A current limit.
 
 The board makes its own 3.3 V logic supply from the 12 V input. It also makes approximately 4.52 V for pumps and 6.0 V for valves. J9 is the dedicated Qwiic master connection: its 3.3 V pin receives power from the USB/battery-powered ESP32 Thing Plus and supplies the host side of U13 and the four button pullups. U13 separates the two I²C signal domains without joining the regulated 3.3 V rails. All grounds remain common; this is not galvanic isolation.
 
 | Connection | Pin 1 | Pin 2 | Pin 3 | Pin 4 |
 | --- | --- | --- | --- | --- |
-| J9 QWIIC MASTER, JST SH | GND | Host 3.3 V input | HOST_SDA | HOST_SCL |
-| J1, J12, J17 QWIIC SENSOR, JST SH | GND | Local 3.3 V output | SDA | SCL |
+| J9 Qwiic (host side), JST SH | GND | Host 3.3 V input | HOST_SDA | HOST_SCL |
+| J1, J12, J17 Qwiic (local side), JST SH | GND | Local 3.3 V output | SDA | SCL |
 | J3, JST EH 4-pin peripheral | GND | Local 3.3 V output | SDA | SCL |
 
-All four JST SH connectors retain the standard Qwiic order: pin 1 GND, pin 2 3.3 V, pin 3 SDA, pin 4 SCL. Read the PCB pin-1 mark and connector drawing; a cable viewed from its mating end reverses the apparent left-to-right order. Standard Qwiic cable colors are black, red, blue and yellow in that order. [SparkFun Qwiic](https://www.sparkfun.com/qwiic).
+The role captions and individual Qwiic pin captions are intentionally omitted from the final silkscreen; identify connectors by reference and this table. All four JST SH connectors retain the standard Qwiic order: pin 1 GND, pin 2 3.3 V, pin 3 SDA, pin 4 SCL. Read the PCB pin-1 mark and connector drawing; a cable viewed from its mating end reverses the apparent left-to-right order. Standard Qwiic cable colors are black, red, blue and yellow in that order. [SparkFun Qwiic](https://www.sparkfun.com/qwiic).
 
 Connect the ESP32 to **J9**, using an ordinary four-wire Qwiic cable. J1, J12 and J17 power local sensor modules from RheoBoard and share its local bus. Do not plug another independently powered controller or RheoBoard into these sensor ports. J3 provides local debug access with onboard 3.3 V and bypasses U13. The redundant J18 header has been removed.
 

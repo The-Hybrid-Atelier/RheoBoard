@@ -7,4 +7,5 @@
   (lib (name "Rheo_MPRLS0025PA00001A") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/MPRLS0025PA00001A.kicad_sym") (options "") (descr ""))
   (lib (name "Rheo_PJ-082BH") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/PJ-082BH.kicad_sym") (options "") (descr ""))
   (lib (name "Rheo_Fuse_Khach") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/Fuse_Khach.kicad_sym") (options "") (descr ""))
-  (lib (name "RheoBoard_Fixes") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/RheoBoard_Fixes.kicad_sym") (options "") (descr "")))
+  (lib (name "RheoBoard_Fixes") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/RheoBoard_Fixes.kicad_sym") (options "") (descr ""))
+  (lib (name "RheoBoard_LEDs") (type "KiCad") (uri "${KIPRJMOD}/../Symbol/RheoBoard_LEDs.kicad_sym") (options "") (descr "")))

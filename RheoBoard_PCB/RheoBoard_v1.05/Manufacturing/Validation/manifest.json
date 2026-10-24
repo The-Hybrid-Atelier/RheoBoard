@@ -1,0 +1,119 @@
+{
+  "revision": "1.05",
+  "date": "2026-10-24",
+  "authorization": "User said pass; regenerate outputs. No upload or order authorized.",
+  "source_board_sha256": "60b5e99e64ae840841ccac35274d9538ecb5e087b0a4e12d99025ab130393f2e",
+  "source_schematic_sha256": "86cfe04deb3c94c385c37cc362a9139563bb34cc36aa1a507e917ae07889bb9c",
+  "validation": {
+    "DRC_errors": 0,
+    "DRC_unconnected": 0,
+    "schematic_parity": 0,
+    "DRC_warnings": 23,
+    "warning_type": "lib_footprint_mismatch: documented board-local silkscreen differences",
+    "ERC_errors": 0,
+    "ERC_warnings": 0,
+    "SMT_rows": 135,
+    "archive_exact_match": true
+  },
+  "release_status": "Outputs refreshed; previously documented exact-part, supplier-preview and physical acceptance remain open.",
+  "files": {
+    "CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv": {
+      "bytes": 5598,
+      "sha256": "e740eb326178faa67b8ecc99c03aa32a055550b244a0a7920d0b41a9bcb0f78f"
+    },
+    "CPL/RheoBoard_v1.05_native_positions.csv": {
+      "bytes": 15228,
+      "sha256": "2e5eb04b14ea41dcf0a4c76b645e00ba5729ce6821e4583843d58fe12e11f747"
+    },
+    "Drawings/RheoBoard_v1.05_LED_assembly.pdf": {
+      "bytes": 5066,
+      "sha256": "a18c755d968da242d8600e216acd0c6c0f2b32e16df5aca4245c59b881411b00"
+    },
+    "Drawings/RheoBoard_v1.05_assembly.pdf": {
+      "bytes": 205452,
+      "sha256": "daade617e7f907ff47e210f217587f3ea7d2fa433bc989e5a9e5b21dbe23a7c5"
+    },
+    "Drawings/RheoBoard_v1.05_back_copper.pdf": {
+      "bytes": 229595,
+      "sha256": "7fd8072f17f80e6fbfc5bc39f08854112540f03a727f654ea28cb99afb6f4bc9"
+    },
+    "Drawings/RheoBoard_v1.05_front_copper.pdf": {
+      "bytes": 394083,
+      "sha256": "24198a8c9ca29e4178ef057baa9888174ecfdf3c7cc79e461c9dd398c0ef69f8"
+    },
+    "Drawings/RheoBoard_v1.05_schematic.pdf": {
+      "bytes": 1962105,
+      "sha256": "53620eaf9b539b4b0848a827d31201d5da3ae01f208365ad57ed3b319cc33f5b"
+    },
+    "Drawings/RheoBoard_v1.05_soldermask.pdf": {
+      "bytes": 186271,
+      "sha256": "da6a936e94a73d4e668558d533ec8f0ede43a6d3c8327d12573863ec3964df65"
+    },
+    "Gerber/RheoBoard_v1.05-B_Cu.gbl": {
+      "bytes": 257248,
+      "sha256": "db60a02bddd88af929039a398a2471cad9381bd132a7e603386a5167f635f22b"
+    },
+    "Gerber/RheoBoard_v1.05-B_Mask.gbs": {
+      "bytes": 2931,
+      "sha256": "3a5e81e92e1ca86617345790d43775b231fade29cb44363cf2594c92bdc9134a"
+    },
+    "Gerber/RheoBoard_v1.05-B_Paste.gbp": {
+      "bytes": 460,
+      "sha256": "5a12ba9af49996465e99ac3847c6af90ca1d4bbcc620b48f5078fbabc907b0fa"
+    },
+    "Gerber/RheoBoard_v1.05-B_Silkscreen.gbo": {
+      "bytes": 461,
+      "sha256": "e245df6e3cc2ca477c51e0a6823465cfb8d8268cd64cfd7ac37d8dfc23ccc2b6"
+    },
+    "Gerber/RheoBoard_v1.05-Edge_Cuts.gm1": {
+      "bytes": 840,
+      "sha256": "6740a48b35fec5050caead3f7ec638322d0fa5764d9b57b3ae4d283ed84dbb39"
+    },
+    "Gerber/RheoBoard_v1.05-F_Cu.gtl": {
+      "bytes": 830527,
+      "sha256": "f89122a7745f6382721129e62b12f5beb85768d80929bde2d81ffa67fb862445"
+    },
+    "Gerber/RheoBoard_v1.05-F_Mask.gts": {
+      "bytes": 21439,
+      "sha256": "81e335ccc92114fc062a39a2156fd11b4361eaf0fb3424a5972a5eab7e104431"
+    },
+    "Gerber/RheoBoard_v1.05-F_Paste.gtp": {
+      "bytes": 17889,
+      "sha256": "4d576ab729878b411100da2b69502805af91d323bd8a88901e1bd3396d843d77"
+    },
+    "Gerber/RheoBoard_v1.05-F_Silkscreen.gto": {
+      "bytes": 109689,
+      "sha256": "6e531b0691dc505e09d1c730f27ed1d880df6f894d2bbe013ffe2ff155d30460"
+    },
+    "Gerber/RheoBoard_v1.05-NPTH.drl": {
+      "bytes": 437,
+      "sha256": "ac35ea2465e603c52c3b356c7d8be2abeac85c3c244cf4243031113a49e4ecc5"
+    },
+    "Gerber/RheoBoard_v1.05-PTH.drl": {
+      "bytes": 6951,
+      "sha256": "1ac385f9e5b255561ecaf19c388028b29ac942f3350863ecb1a320dc853ae58c"
+    },
+    "Gerber/RheoBoard_v1.05-job.gbrjob": {
+      "bytes": 2760,
+      "sha256": "ad94c140a7ce3c63a939747b9868e6d66294f3d0c34184f650b3cc24c75d0bc3"
+    },
+    "RheoBoard_v1.05_fabrication.zip": {
+      "bytes": 341247,
+      "sha256": "7126cddc5461823203ac2f3aa401220482db55fe5c0145244c59c392dbc5b02c"
+    },
+    "Validation/DRC.json": {
+      "bytes": 14878,
+      "sha256": "8524baf6f4e2f147cd6fbca6c9336b104bb31cb92f614f0a8705c8ea0f5118de"
+    },
+    "Validation/ERC.json": {
+      "bytes": 431,
+      "sha256": "e93aa1f81bab979ed015a5a7656f0fdede0fde7dd7065a05f68fa58814513fcc"
+    }
+  },
+  "BOM": {
+    "path": "../BOM/BOM_RheoBoard_v1.05_JLCPCB.csv",
+    "sha256": "ede2bf1b423eeea9bfac0f7e11fe9fc7674a5142b086a0e0a32d4c37c9203c31",
+    "status": "Population unchanged and reconciled to fresh native positions."
+  },
+  "LED_guide": "Retained: LED geometry, polarity and placement unchanged."
+}
