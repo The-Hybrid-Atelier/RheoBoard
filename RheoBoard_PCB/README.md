@@ -14,6 +14,5 @@
 - [Fabrication ZIP](RheoBoard_v1.05/Manufacturing/RheoBoard_v1.05_fabrication.zip)
 - [Placement files](RheoBoard_v1.05/Manufacturing/CPL/)
 - [KiCad drawings](RheoBoard_v1.05/Manufacturing/Drawings/)
-- [Archived v1 outputs](RheoBoard_v1.05/Archive_v1_outputs/)
 
 Hardware license: CERN-OHL-W-2.0 — see [LICENSE](../LICENSE).

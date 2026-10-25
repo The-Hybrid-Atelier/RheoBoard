@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-18
+date-updated: 2026-10-25
 # OSHWA certified version 1, UID US002865: https://certification.oshwa.org/us002865.html
 # The current version is version 1. This is the same version certified by OSHWA as US002865.
 # (OKH 1.0 has no certification field.)
@@ -116,9 +116,7 @@ manufacturing-files:
     title: RheoBoard v1 purchasing BOM with supplier links (28 September 2026)
   - path: RheoBoard_PCB/RheoBoard_v1/BOM/BOM_RheoboardV1_JLCSMT.xlsx
     title: RheoBoard v1 JLCPCB assembly BOM (28 September 2026)
-  - path: RheoBoard_PCB/RheoBoard_v1.05/Archive_v1_outputs/BOM/BOM_RheoboardV1_JLCSMT.xlsx
-    title: Archived copy of the RheoBoard v1 JLCPCB assembly BOM
-  - path: RheoBoard_PCB/RheoBoard_v1.05/Archive_v1_outputs/8815214A_Y73_SMT026093063736_top.png
+  - path: RheoBoard_PCB/RheoBoard_v1/8815214A_Y73_SMT026093063736_top.png
     title: JLCPCB corrected top placement for Rheoboard V1 order 8815214A_Y73 / SMT026093063736
   - path: RheoBoard_PCB/RheoBoard_v1/CPL/CPL.csv
     title: PCB pick-and-place
