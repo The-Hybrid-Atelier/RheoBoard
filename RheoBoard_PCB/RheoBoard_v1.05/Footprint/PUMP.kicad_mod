@@ -102,4 +102,8 @@
 		(uuid "14864d73-fd78-442f-b6d7-231d5436aa35")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/../3D/ZR370_02PM_Envelope.step"
+    (offset (xyz 11.041739 -2.220714 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0)))
 )

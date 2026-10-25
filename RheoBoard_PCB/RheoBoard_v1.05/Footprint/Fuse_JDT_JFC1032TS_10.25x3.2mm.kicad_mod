@@ -12,4 +12,8 @@
   (fp_poly (pts (xy -5.1250 -0.8000) (xy -4.3250 -1.6000) (xy 5.1250 -1.6000) (xy 5.1250 1.6000) (xy -5.1250 1.6000)) (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab"))
   (fp_text reference "REF**" (at 0.0000 -2.9650 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
   (fp_text value "Fuse_JDT_JFC1032TS_10.25x3.2mm" (at 0.0000 2.9650 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (model "${KIPRJMOD}/../3D/JFC1032TS_Nominal.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0)))
 )

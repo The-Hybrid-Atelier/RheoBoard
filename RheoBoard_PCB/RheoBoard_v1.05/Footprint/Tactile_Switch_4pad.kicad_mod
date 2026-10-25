@@ -20,4 +20,8 @@
   (fp_circle (center 0 0) (end 1.75 0) (stroke (width 0.12) (type solid)) (fill none) (layer "F.Fab"))
   (fp_text reference "REF**" (at 0.0000 -4.2000 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
   (fp_text value "Tactile_Switch_4pad" (at 0.0000 4.2000 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (model "${KICAD10_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_NO_E-Switch_TL3301NxxxxxG.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0)))
 )

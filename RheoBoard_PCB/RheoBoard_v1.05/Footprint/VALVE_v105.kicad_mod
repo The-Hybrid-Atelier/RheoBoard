@@ -25,4 +25,8 @@
   (fp_poly (pts (xy 1.8775 -3.8400) (xy 16.8830 -3.8400) (xy 16.8830 5.1330) (xy 2.8775 5.1330) (xy 1.8775 4.1330)) (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab"))
   (fp_text reference "REF**" (at 9.3803 -5.3400 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
   (fp_text value "VALVE_v105" (at 9.3803 6.6330 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (model "${KICAD10_3DMODEL_DIR}/Connector_JST.3dshapes/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step"
+    (offset (xyz 2.83 -1.47 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 90)))
 )
