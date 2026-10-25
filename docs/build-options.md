@@ -5,7 +5,7 @@ The three ways to build are on the [Build options](https://github.com/The-Hybrid
 Pictures from this repository used with that page:
 
 - [`diy-annotated.jpg`](img/panel/diy-annotated.jpg)
-- [`pcb-schematic-and-v1-board.png`](../RheoBoard_PCB/images/pcb-schematic-and-v1-board.png)
+- [`pcb-v105-schematic-and-board.png`](../RheoBoard_PCB/images/pcb-v105-schematic-and-board.png)
 - [`rheopipette.jpg`](../BuildYourOwn/RheoPipette/rheopipette.jpg)
 
 Board files are in [`README.md`](../RheoBoard_PCB/README.md).
