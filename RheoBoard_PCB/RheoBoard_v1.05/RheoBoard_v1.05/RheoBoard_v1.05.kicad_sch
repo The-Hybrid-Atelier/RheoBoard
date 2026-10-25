@@ -56579,7 +56579,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.adafruit.com/product/392"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56590,7 +56590,7 @@
 				)
 			)
 		)
-		(property "Description" "5-pin button GPIO header; GND, SW1, SW2, SW3, SW4. Pull-ups powered by HOST_3V3 via J9."
+		(property "Description" "Adafruit 392 straight 2.54 mm breakaway male header, cut to 5 positions. Pins 1-5: GND, VALVE1_IN, VALVE2_IN, PUMP1_IN, PUMP2_IN. Pullups use HOST_3V3 via J9; no power pin."
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56623,7 +56623,7 @@
 				)
 			)
 		)
-		(property "MPN" "1x05_2.54mm_vertical_header"
+		(property "MPN" "392"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56634,7 +56634,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Generic"
+		(property "Manufacturer" "Adafruit Industries LLC"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56645,7 +56645,7 @@
 				)
 			)
 		)
-		(property "Source" ""
+		(property "Source" "https://www.adafruit.com/product/392"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56679,7 +56679,16 @@
 				)
 			)
 		)
-	)
+	
+		(property "Assembly Notes" "Fit one 5-position segment cut from Adafruit 392 36-pin strip (10 strips per retail pack). Pin 1 is square/GND. Manual through-hole assembly; check cut-end integrity and mating cable fit."
+			(at 586.74 93.98 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 793.242 540.766 0)
@@ -62100,7 +62109,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://m.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smbj_datasheet.pdf.pdf"
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/tvs-diodes-smbj-series-datasheet?assetguid=ba555e99-a12d-4f72-a0b6-86b06c67171e"
 			(at 408.94 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -62111,7 +62120,7 @@
 				)
 			)
 		)
-		(property "Description" "Zener diode"
+		(property "Description" "Unidirectional TVS, Littelfuse SMBJ13A, 13 V standoff, 600 W (10/1000 us), DO-214AA (SMB); cathode pad 1 to VIN_RAW, anode pad 2 to GND."
 			(at 408.94 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -62191,7 +62200,43 @@
 				)
 			)
 		)
-	)
+	
+		(property "Assembly Notes" "Exact Littelfuse SMBJ13A (not SMBJ13CA or SMBJ14A); marking LG; cathode band at pad 1 / VIN_RAW. Manufacturer ratings override conflicting distributor headline."
+			(at 408.94 90.17 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VBR" "14.4-15.9 V at 1 mA"
+			(at 408.94 90.17 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VC" "21.5 V max at 28 A (10/1000 us)"
+			(at 408.94 90.17 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VRWM" "13 V"
+			(at 408.94 90.17 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "RheoBoard_LEDs:SZYY0603R")
 		(at 270.51 95.25 90)
