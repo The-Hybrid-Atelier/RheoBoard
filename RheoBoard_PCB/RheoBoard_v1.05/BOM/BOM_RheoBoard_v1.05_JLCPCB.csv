@@ -5,7 +5,8 @@ Comment,Designator,Footprint,LCSC Part #
 10uF 25V X5R ±10%,"C28, C29",Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C7393892
 22uF 50V ±20%,"C32, C34, C43, C45",Capacitor_SMD:CP_Elec_6.3x5.8,C128458
 22uF 25V X5R ±20%,"C52, C53, C54, C57, C60, C61",Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C20416420
-18pF 50V C0G ±2%,"C55, C58, C62",Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C2169079
+18pF 50V C0G ±5%,"C55, C58",Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C107040
+24pF 50V C0G ±5%,C62,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C107044
 3.3nF 50V X7R ±10%,C64,Capacitor_SMD:C_0603_1608Metric,C107088
 1uF 50V X7R ±10%,C65,Capacitor_SMD:C_0805_2012Metric,C91185
 100nF 50V X7R ±10%,C66,Capacitor_SMD:C_0603_1608Metric,C14663
@@ -26,10 +27,11 @@ AO3400A,"Q4, Q8, Q10",RheoBoard:AO3400A,C20917
 100R/0603/1%,"R35, R36, R42, R55",Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C22775
 330/0603/1%,"R44, R77",Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C23138
 196k ±1%,R45,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C4203218
-30K/0603/1%,"R46, R74, R76",Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C22984
+30K/0603/1%,"R46, R74",Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C22984
+22k ±1%,R76,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C31850
 270K/0603/1%,R60,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C22965
-135k ±0.1%,R61,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C861113
-549R ±1%,R73,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C23079
+100k ±1%,R61,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C25803
+560R ±1%,R73,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C23204
 680k ±1%,R78,Resistor_SMD:R_0603_1608Metric,C25822
 100K/0603/1%,R79,Resistor_SMD:R_0603_1608Metric,C25803
 390k ±1%,R80,Resistor_SMD:R_0603_1608Metric,C2759410

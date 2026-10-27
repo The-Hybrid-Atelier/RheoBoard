@@ -49969,7 +49969,7 @@
 				)
 			)
 		)
-		(property "Value" "135k ±0.1%"
+		(property "Value" "100k ±1%"
 			(at 214.122 236.474 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50023,7 +50023,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C861113"
+		(property "LCSC" "C25803"
 			(at 209.55 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -50034,7 +50034,7 @@
 				)
 			)
 		)
-		(property "MPN" "RT0603BRD07135KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 209.55 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -50045,7 +50045,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 209.55 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -50056,7 +50056,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C861113.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C25803.html"
 			(at 209.55 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -56579,7 +56579,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.adafruit.com/product/392"
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/219f7e7eb5f34457895b2c164313179f.pdf?productCode=C124379"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56590,7 +56590,7 @@
 				)
 			)
 		)
-		(property "Description" "Adafruit 392 straight 2.54 mm breakaway male header, cut to 5 positions. Pins 1-5: GND, VALVE1_IN, VALVE2_IN, PUMP1_IN, PUMP2_IN. Pullups use HOST_3V3 via J9; no power pin."
+		(property "Description" "Ckmtw B-2100S05P-A110 straight 1x05 2.54 mm male header. Pins 1-5: GND, VALVE1_IN, VALVE2_IN, PUMP1_IN, PUMP2_IN. Pullups use HOST_3V3 via J9; no power pin."
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56612,7 +56612,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C124379"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56623,7 +56623,7 @@
 				)
 			)
 		)
-		(property "MPN" "392"
+		(property "MPN" "B-2100S05P-A110"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56634,7 +56634,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Adafruit Industries LLC"
+		(property "Manufacturer" "Ckmtw"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56645,7 +56645,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.adafruit.com/product/392"
+		(property "Source" "https://www.lcsc.com/product-detail/C124379.html"
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -56680,7 +56680,7 @@
 			)
 		)
 	
-		(property "Assembly Notes" "Fit one 5-position segment cut from Adafruit 392 36-pin strip (10 strips per retail pack). Pin 1 is square/GND. Manual through-hole assembly; check cut-end integrity and mating cable fit."
+		(property "Assembly Notes" "Fit complete five-pin header C124379. Pin 1 is square/GND. Manual through-hole assembly; 0.60 mm square pins, 3 mm tails, 6 mm mating pins. Existing footprint retained."
 			(at 586.74 93.98 0)
 			(hide yes)
 			(effects
@@ -56865,7 +56865,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "18pF 50V C0G ±2%"
+		(property "Value" "18pF 50V C0G ±5%"
 			(at 223.266 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56920,7 +56920,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2169079"
+		(property "LCSC" "C107040"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -56931,7 +56931,7 @@
 				)
 			)
 		)
-		(property "MPN" "VJ0603A180GXACW1BC"
+		(property "MPN" "CC0603JRNPO9BN180"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -56942,7 +56942,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "VISHAY"
+		(property "Manufacturer" "YAGEO"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -56953,7 +56953,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C2169079.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C107040.html"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -58574,7 +58574,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "18pF 50V C0G ±2%"
+		(property "Value" "24pF 50V C0G ±5%"
 			(at 227.076 246.38 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -58629,7 +58629,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2169079"
+		(property "LCSC" "C107044"
 			(at 222.25 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -58640,7 +58640,7 @@
 				)
 			)
 		)
-		(property "MPN" "VJ0603A180GXACW1BC"
+		(property "MPN" "CC0603JRNPO9BN240"
 			(at 222.25 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -58651,7 +58651,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "VISHAY"
+		(property "Manufacturer" "YAGEO"
 			(at 222.25 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -58662,7 +58662,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C2169079.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C107044.html"
 			(at 222.25 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -63441,7 +63441,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "18pF 50V C0G ±2%"
+		(property "Value" "18pF 50V C0G ±5%"
 			(at 249.428 94.488 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -63496,7 +63496,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2169079"
+		(property "LCSC" "C107040"
 			(at 243.84 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -63507,7 +63507,7 @@
 				)
 			)
 		)
-		(property "MPN" "VJ0603A180GXACW1BC"
+		(property "MPN" "CC0603JRNPO9BN180"
 			(at 243.84 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -63518,7 +63518,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "VISHAY"
+		(property "Manufacturer" "YAGEO"
 			(at 243.84 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -63529,7 +63529,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C2169079.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C107040.html"
 			(at 243.84 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -65945,7 +65945,7 @@
 				)
 			)
 		)
-		(property "Value" "30K/0603/1%"
+		(property "Value" "22k ±1%"
 			(at 220.726 255.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -65999,7 +65999,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C22984"
+		(property "LCSC" "C31850"
 			(at 209.55 255.27 0)
 			(hide yes)
 			(show_name no)
@@ -66010,7 +66010,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF3002T5E"
+		(property "MPN" "0603WAF2202T5E"
 			(at 209.55 255.27 0)
 			(hide yes)
 			(show_name no)
@@ -66032,7 +66032,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C22984.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C31850.html"
 			(at 209.55 255.27 0)
 			(hide yes)
 			(show_name no)
@@ -70715,7 +70715,7 @@
 				)
 			)
 		)
-		(property "Value" "549R ±1%"
+		(property "Value" "560R ±1%"
 			(at 273.812 79.248 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -70758,7 +70758,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23079"
+		(property "LCSC" "C23204"
 			(at 270.51 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -70780,7 +70780,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF5490T5E"
+		(property "MPN" "0603WAF5600T5E"
 			(at 270.51 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -70802,7 +70802,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C23079.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C23204.html"
 			(at 270.51 80.01 0)
 			(hide yes)
 			(show_name no)
