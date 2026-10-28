@@ -631,6 +631,10 @@
       {
         "netclass": "Buck_SW",
         "pattern": "Net-(U3-SW)"
+      },
+      {
+        "netclass": "Load_Power",
+        "pattern": "+5V4"
       }
     ]
   },

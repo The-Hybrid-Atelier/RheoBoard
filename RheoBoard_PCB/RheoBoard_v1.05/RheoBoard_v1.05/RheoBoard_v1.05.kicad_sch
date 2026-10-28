@@ -5868,6 +5868,137 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "RheoBoard_Fixes:TLV803EA29DBZR"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLV803EA29DBZR"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv803e.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLV803EA29DBZR_0_1"
+				(rectangle
+					(start -2.54 -6.35)
+					(end 7.62 6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at 0 -8.89 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 8.89 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "RheoBoard_Fixes:TPS259472ARPWR"
 			(pin_names
 				(offset 1.016)
@@ -6486,6 +6617,181 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "RheoBoard_LEDs:SZYY0603R"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 5.64 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SZYY0603R"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SZYY0603R_0_1"
+				(polyline
+					(pts
+						(xy -2.1 3.1) (xy -1.1 2.8) (xy -1.8 2.1) (xy -2.1 3.1)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.7 1.7) (xy -2.1 3.1)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.6 3.1) (xy 0.4 2.8) (xy -0.3 2.1) (xy -0.6 3.1)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.8 1.7) (xy -0.6 3.1)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -10169,2085 +10475,6 @@
 			)
 			(embedded_fonts no)
 		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
-	
-		(symbol
-		  "RheoBoard_LEDs:SZYY0603R"
-		  (pin_names
-		    (offset 1.016)
-		    (hide yes)
-		  )
-		  (exclude_from_sim no)
-		  (in_bom yes)
-		  (on_board yes)
-		  (in_pos_files yes)
-		  (duplicate_pin_numbers_are_jumpers no)
-		  (property "Reference" "D"
-		    (at 0 5.6400 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Value" "SZYY0603R"
-		    (at 0 -3.8100 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Footprint" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7948f9a4498910c84f6e992ff3fa9e63.pdf"
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (property "Description" ""
-		    (at 0 0 0)
-		    (show_name no)
-		    (do_not_autoplace no)
-		    (hide yes)
-		    (effects
-		      (font
-		        (size 1.27 1.27)
-		      )
-		    )
-		  )
-		  (symbol "SZYY0603R_0_1"
-		    (polyline
-		      (pts
-		        (xy 1.27 1.27)
-		        (xy -1.27 0)
-		        (xy 1.27 -1.27)
-		        (xy 1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -1.27 -1.27)
-		        (xy -1.27 1.27)
-		      )
-		      (stroke
-		        (width 0.254)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.7 1.7)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -2.1 3.1)
-		        (xy -1.1 2.8)
-		        (xy -1.8 2.1)
-		        (xy -2.1 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy 0.8 1.7)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type none)
-		      )
-		    )
-		    (polyline
-		      (pts
-		        (xy -0.6 3.1)
-		        (xy 0.4 2.8)
-		        (xy -0.3 2.1)
-		        (xy -0.6 3.1)
-		      )
-		      (stroke
-		        (width 0.1524)
-		        (type default)
-		      )
-		      (fill
-		        (type outline)
-		      )
-		    )
-		    (pin passive line
-		      (at -3.81 0 0)
-		      (length 2.54)
-		      (name "K"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "2"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		    (pin passive line
-		      (at 3.81 0 180)
-		      (length 2.54)
-		      (name "A"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		      (number "1"
-		        (effects
-		          (font
-		            (size 1.27 1.27)
-		          )
-		        )
-		      )
-		    )
-		  )
-		  (embedded_fonts no)
-		)
 	)
 	(polyline
 		(pts
@@ -12277,7 +10504,7 @@
 	)
 	(polyline
 		(pts
-			(xy 883.666 524.256) (xy 501.904 524.256) (xy 501.904 393.192) (xy 883.666 393.192) (xy 883.666 524.256)
+			(xy 883.666 529.336) (xy 501.904 529.336) (xy 501.904 398.272) (xy 883.666 398.272) (xy 883.666 529.336)
 		)
 		(stroke
 			(width 0.5)
@@ -12393,7 +10620,7 @@
 	)
 	(polyline
 		(pts
-			(xy 865.124 503.428) (xy 729.742 503.428) (xy 729.742 413.004) (xy 865.124 413.004) (xy 865.124 503.428)
+			(xy 865.124 499.618) (xy 729.742 499.618) (xy 729.742 409.194) (xy 865.124 409.194) (xy 865.124 499.618)
 		)
 		(stroke
 			(width 0.254)
@@ -12592,7 +10819,7 @@
 		)
 		(uuid "2a15b2a1-3247-442d-8a1e-f130379554d4")
 	)
-	(text "BUCK 12V - 6V\n"
+	(text "BUCK 12V - 5V4"
 		(exclude_from_sim no)
 		(at 170.5926 125.73 0)
 		(effects
@@ -12695,7 +10922,7 @@
 	)
 	(text "4_Switch Inputs"
 		(exclude_from_sim no)
-		(at 521.2 402.336 0)
+		(at 521.208 405.384 0)
 		(effects
 			(font
 				(size 5 5)
@@ -12730,7 +10957,7 @@
 	)
 	(text "5_Pressure Sensor"
 		(exclude_from_sim no)
-		(at 734.2 401.574 0)
+		(at 734.314 405.384 0)
 		(effects
 			(font
 				(size 5 5)
@@ -16687,6 +14914,16 @@
 			(type default)
 		)
 		(uuid "87136fff-a770-4aae-86ec-b4f27f663442")
+	)
+	(wire
+		(pts
+			(xy 777.24 514.35) (xy 782.32 514.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "878b8d39-ca53-4f18-8c73-5c3b89cb80e7")
 	)
 	(wire
 		(pts
@@ -47300,6 +45537,16 @@
 		)
 		(uuid "5ad39ad7-6843-4630-99ce-3ca12b46d71a")
 	)
+	(label "RES"
+		(at 782.32 514.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "620f6aa6-b755-49a6-8099-9591e5795c03")
+	)
 	(label "HOST_3V3"
 		(at 557.53 320.04 0)
 		(effects
@@ -47682,28 +45929,6 @@
 		(uuid "09a16eb7-54be-48de-b7cc-95809435c75b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 571.5 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "+6V"
-		(shape input)
-		(at 386.08 233.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0b0548fb-fd68-4349-bcc2-6d1a4e91dfa5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 386.08 233.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48386,6 +46611,28 @@
 		(uuid "b01931f1-b29f-4009-8192-55247687675a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 538.48 454.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+5V4"
+		(shape input)
+		(at 386.08 233.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b76dd934-5ecc-4236-af3e-ba779f9239b3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 386.08 233.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49149,6 +47396,142 @@
 			(project "RheoBoard_v1.05"
 				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
 					(reference "C53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 740.41 514.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "055a266e-7ce4-4b29-9c2c-58c29610c86e")
+		(property "Reference" "C70"
+			(at 741.045 511.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF 50V X7R ±10%"
+			(at 741.045 516.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "SMT"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Source" "https://www.lcsc.com/product-detail/C14663.html"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "723b1780-f710-41c2-ae6b-49e713967bf2")
+		)
+		(pin "2"
+			(uuid "e02bc707-b19e-4785-9b6d-e45bbde1c324")
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "C70")
 					(unit 1)
 				)
 			)
@@ -56270,6 +54653,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 767.08 505.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "363c2778-97bc-4f17-8f5e-d04dea786b13")
+		(property "Reference" "#PWR011"
+			(at 767.08 509.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 767.08 501.904 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 767.08 505.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 767.08 505.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 767.08 505.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2dea3b3-2b34-4fa9-b18d-d9ed05828e36")
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 347.98 120.65 0)
 		(unit 1)
@@ -56656,6 +55116,17 @@
 				)
 			)
 		)
+		(property "Assembly Notes" "Fit complete five-pin header C124379. Pin 1 is square/GND. Manual through-hole assembly; 0.60 mm square pins, 3 mm tails, 6 mm mating pins. Existing footprint retained."
+			(at 586.74 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "55bd9833-6b43-4d4f-ab4f-e24d779e20b7")
 		)
@@ -56679,16 +55150,7 @@
 				)
 			)
 		)
-	
-		(property "Assembly Notes" "Fit complete five-pin header C124379. Pin 1 is square/GND. Manual through-hole assembly; 0.60 mm square pins, 3 mm tails, 6 mm mating pins. Existing footprint retained."
-			(at 586.74 93.98 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		))
+	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 793.242 540.766 0)
@@ -56865,7 +55327,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "18pF 50V C0G ±5%"
+		(property "Value" "20pF 50V C0G ±5%"
 			(at 223.266 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56920,7 +55382,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C107040"
+		(property "LCSC" "C1648"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -56931,7 +55393,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0603JRNPO9BN180"
+		(property "MPN" "CL10C200JB8NNNC"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -56942,7 +55404,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -56953,7 +55415,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C107040.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C1648.html"
 			(at 218.44 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -59913,6 +58375,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 740.41 518.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5c9b5b1b-1d48-415e-a19e-08ec2cfb70bf")
+		(property "Reference" "#PWR016"
+			(at 740.41 524.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 740.41 521.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 740.41 518.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 740.41 518.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 740.41 518.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bd0c1949-d9d1-41fb-abbf-f6868ad5f028")
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 257.81 401.32 270)
 		(unit 1)
@@ -62186,6 +60725,50 @@
 				)
 			)
 		)
+		(property "Assembly Notes" "Exact Littelfuse SMBJ13A (not SMBJ13CA or SMBJ14A); marking LG; cathode band at pad 1 / VIN_RAW. Manufacturer ratings override conflicting distributor headline."
+			(at 408.94 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VBR" "14.4-15.9 V at 1 mA"
+			(at 408.94 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VC" "21.5 V max at 28 A (10/1000 us)"
+			(at 408.94 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VRWM" "13 V"
+			(at 408.94 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d69ffa9b-2c63-46af-adc7-93d4e3c36074")
 		)
@@ -62200,43 +60783,7 @@
 				)
 			)
 		)
-	
-		(property "Assembly Notes" "Exact Littelfuse SMBJ13A (not SMBJ13CA or SMBJ14A); marking LG; cathode band at pad 1 / VIN_RAW. Manufacturer ratings override conflicting distributor headline."
-			(at 408.94 90.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VBR" "14.4-15.9 V at 1 mA"
-			(at 408.94 90.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VC" "21.5 V max at 28 A (10/1000 us)"
-			(at 408.94 90.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VRWM" "13 V"
-			(at 408.94 90.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		))
+	)
 	(symbol
 		(lib_id "RheoBoard_LEDs:SZYY0603R")
 		(at 270.51 95.25 90)
@@ -62999,7 +61546,7 @@
 				)
 			)
 		)
-		(property "Value" "270K/0603/1%"
+		(property "Value" "240k ±1%"
 			(at 211.582 155.194 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -63053,7 +61600,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C22965"
+		(property "LCSC" "C4197"
 			(at 207.01 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -63064,7 +61611,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF2703T5E"
+		(property "MPN" "0603WAF2403T5E"
 			(at 207.01 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -63086,7 +61633,7 @@
 				)
 			)
 		)
-		(property "Source" "https://www.lcsc.com/product-detail/C22965.html"
+		(property "Source" "https://www.lcsc.com/product-detail/C4197.html"
 			(at 207.01 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -63135,7 +61682,7 @@
 				)
 			)
 		)
-		(property "Value" "+6V"
+		(property "Value" "+5V4"
 			(at 293.37 408.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -67712,6 +66259,143 @@
 		)
 	)
 	(symbol
+		(lib_id "RheoBoard_Fixes:TLV803EA29DBZR")
+		(at 767.08 514.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a9677105-3016-499d-8c35-f036a06ba307")
+		(property "Reference" "U14"
+			(at 775.97 505.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV803EA29DBZR"
+			(at 787.4 523.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv803e.pdf"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2.93V open-drain active-low reset supervisor, 200ms nominal delay; pin1 GND,2 RESET,3 VDD"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly" "SMT"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1852114"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TLV803EA29DBZR"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Source" "https://www.lcsc.com/product-detail/C1852114.html"
+			(at 767.08 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d102ce78-7e4a-4fe0-8250-71cb4734d802")
+		)
+		(pin "2"
+			(uuid "05f0432a-33af-4e19-9150-7b0e41922316")
+		)
+		(pin "3"
+			(uuid "adeab71a-ab2f-4476-8c1a-3c16bffe0f72")
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "U14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 265.43 383.54 90)
 		(unit 1)
@@ -67870,7 +66554,7 @@
 				)
 			)
 		)
-		(property "Value" "+6V"
+		(property "Value" "+5V4"
 			(at 247.65 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -71851,7 +70535,7 @@
 				)
 			)
 		)
-		(property "Value" "+6V"
+		(property "Value" "+5V4"
 			(at 290.83 327.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -75260,6 +73944,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 767.08 523.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d9473d89-c02e-47a4-806a-f46cc7028e09")
+		(property "Reference" "#PWR012"
+			(at 767.08 529.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 767.08 527.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 767.08 523.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 767.08 523.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 767.08 523.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4c598afc-909e-4ce9-ba58-7716a4e74b64")
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Rheo_Fuse_Khach:Fuse_Khach")
 		(at 82.55 66.04 0)
 		(unit 1)
@@ -76855,6 +75616,83 @@
 			(project "RheoBoard_v1.05"
 				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
 					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 740.41 510.54 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e7698bdf-0369-47a8-8e17-0618d3d87e9d")
+		(property "Reference" "#PWR015"
+			(at 740.41 514.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 740.41 506.984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 740.41 510.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 740.41 510.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 740.41 510.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "acefe058-bab3-4fdf-a809-9284544536c4")
+		)
+		(instances
+			(project "RheoBoard_v1.05"
+				(path "/5b05ede3-198a-4bf9-b0d8-5fef5c8d1378"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)

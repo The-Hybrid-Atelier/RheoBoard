@@ -50,7 +50,7 @@
  (constraint track_width (min 0.5mm)))
 
 (rule "Valve rail and switched load floors"
- (condition "A.Type == 'Track' && (A.NetName == '+6V' || A.NetName == 'Net-(D11-A)' || A.NetName == 'Net-(D12-A)' || A.NetName == 'Net-(D16-A)' || A.NetName == 'Net-(D18-A)')")
+ (condition "A.Type == 'Track' && (A.NetName == '+5V4' || A.NetName == 'Net-(D11-A)' || A.NetName == 'Net-(D12-A)' || A.NetName == 'Net-(D16-A)' || A.NetName == 'Net-(D18-A)')")
  (constraint track_width (min 1.25mm)))
 
 (rule "Logic supply branches"
