@@ -1,6 +1,6 @@
 # Code
 
-Shared firmware source and RheoData notes for the DIY build, the PCB, and the portable version. The supplied sketch currently controls DIY seesaw/L298N hardware; PCB and portable firmware compatibility is described in [`firmware/README.md`](firmware/README.md). Install and connect steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page.
+Firmware source and RheoData notes. The sketch in `firmware/RheoBoardOTS/` is the RheoBoardOTS DIY controller. It is not claimed ready for the v1.05 PCB. Install and connect steps are on the [Firmware](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Firmware) wiki page.
 
 The ESP32 sketch is in `firmware/`. RheoData notes are in `software/`.
 

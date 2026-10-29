@@ -26,10 +26,10 @@ The ZR370-02PM always draws air in through the **side port** and pushes it out t
 
 ## Valve logic (VALVE2)
 
-| VALVE2 state | seesaw pin 5 | Path |
+| VALVE2 state | PCA9685 channel 8 | Path |
 |---|---|---|
-| OFF (suck / retract) | LOW | Common → metal pole → PUMP1 vacuum |
-| ON (blow / extrude) | HIGH | Common → plastic pole → PUMP2 pressure |
+| Full-off (suck / retract) | full-off | Common → metal pole (vacuum) → PUMP1 |
+| Full-on (blow / extrude) | full-on | Common → plastic pole (pressure) → PUMP2 |
 
 Idle pump not selected is disconnected through the valve — no plug or seal needed.
 
@@ -39,9 +39,9 @@ A REP is described on [What is REP?](https://github.com/The-Hybrid-Atelier/RheoB
 
 The tube paths change with the firmware phases:
 
-1. **Baseline** — pumps off, ambient pressure sampling.
-2. **Retract** — VALVE2 OFF, PUMP1 on (vacuum).
-3. **Extrude** — VALVE2 ON, PUMP2 on (pressure, with optional ramp).
-4. **Relax** — both pumps stop.
+1. **Baseline** — pumps off. The valve stays where the previous command left it. Boot leaves channel 8 full-off.
+2. **Retract** — channel 8 full-off, PUMP1 on (vacuum, metal pole).
+3. **Extrude** — channel 8 full-on, PUMP2 on (pressure, plastic pole). Factory ramp time is 0.
+4. **Relax** — both pumps stop. Channel 8 stays full-on until the sketch releases it.
 
 Timing, controls, and parameter defaults are on the [Firmware](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Firmware) page.

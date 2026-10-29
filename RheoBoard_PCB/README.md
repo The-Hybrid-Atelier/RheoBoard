@@ -4,7 +4,7 @@
 - [v1](RheoBoard_v1/): earlier native KiCad design and its outputs.
 - [v0.05 Altium import](RheoBoard_v0.05-altium/): historical imported design.
 
-v1.05 uses the PCA9685 for pump/valve control, a nominal 5.4 V valve rail, and a reset supervisor for the MPRLS sensor. The shared sketch currently targets DIY seesaw/L298N hardware; see [firmware compatibility](../code/firmware/README.md). Current circuit descriptions are on [PCB Design](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/PCB-Design).
+v1.05 uses the PCA9685 for pump/valve control, a nominal 5.4 V valve rail, and a reset supervisor for the MPRLS sensor. The sketch in [firmware](../code/firmware/README.md) is the RheoBoardOTS DIY controller. It is not a ready-to-run v1.05 PCB driver: that board uses the PCA9685 for pump and valve outputs and J19 for host GPIO button inputs. PCB control and button handling must be implemented and verified for that hardware. Current circuit descriptions are on [PCB Design](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/PCB-Design).
 
 ## System diagrams
 

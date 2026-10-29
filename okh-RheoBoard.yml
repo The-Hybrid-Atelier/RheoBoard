@@ -22,7 +22,7 @@ description: >
   A low-cost, DIY benchtop pneumatic "pull-push" rheometer head built from off-the-shelf
   modules. Two air pump/vacuum motors and one solenoid air valve, mounted on a 3D-printed
   PLA panel and driven by an ESP32 microcontroller through two L298N H-bridge drivers
-  (controlled via an Adafruit ATtiny1616 seesaw breakout on the Qwiic/I2C bus), run a
+  (controlled via an Adafruit PCA9685 16-channel PWM driver, product 815, I2C 0x40), run a
   retract-extrude pulse (REP) on command while a Qwiic MicroPressure sensor streams the
   pressure trace over BLE. A separate KiCad PCB prototype lives under RheoBoard_PCB and is not
   this DIY build. Open hardware supporting the RheoMap, RheoData, and SlipAtlas projects.
@@ -78,8 +78,8 @@ licensor:
 bom: BuildYourOwn/RheoBoardOTS/hardware/README.md
 
 design-files:
-  - path: BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/generate_wiring_diagram.py
-    title: Earlier electrical wiring diagram generator (does not recreate the current PNG)
+  - path: BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/wiring_diagram.py
+    title: Electrical wiring diagram generator for wiring-diagram.png
   - path: BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD
     title: CAD design for RheoBoardOTS
   - path: BuildYourOwn/RheoPipette/RheoPipette_CAD
@@ -132,8 +132,8 @@ operating-instructions:
     title: RheoData notes (download, pairing, and REP start are TODO)
 
 software:
-  - path: code/firmware/2P1V_Adafruit
-    title: Shared ESP32 firmware source (Arduino/C++); current driver targets DIY seesaw/L298N hardware
+  - path: code/firmware/RheoBoardOTS
+    title: RheoBoardOTS DIY controller (Arduino/C++); PCA9685 product 815 at I2C 0x40
 
 # Real documentation pages. TODO-only pages are not listed.
 documentation:
