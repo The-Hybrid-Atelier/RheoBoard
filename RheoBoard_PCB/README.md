@@ -4,6 +4,8 @@
 - [v1](RheoBoard_v1/): earlier native KiCad design and its outputs.
 - [v0.05 Altium import](RheoBoard_v0.05-altium/): historical imported design.
 
+v1.05 uses the PCA9685 for pump/valve control, a nominal 5.4 V valve rail, and a reset supervisor for the MPRLS sensor. The shared sketch currently targets DIY seesaw/L298N hardware; see [firmware compatibility](../code/firmware/README.md). Current circuit descriptions are on [PCB Design](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/PCB-Design).
+
 ## v1.05 files
 
 - [KiCad project](RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pro)

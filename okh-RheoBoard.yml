@@ -133,7 +133,7 @@ operating-instructions:
 
 software:
   - path: code/firmware/2P1V_Adafruit
-    title: ESP32 rheometer firmware (Arduino/C++), shared by RheoBoardOTS, RheoPipette, and the PCB
+    title: Shared ESP32 firmware source (Arduino/C++); current driver targets DIY seesaw/L298N hardware
 
 # Real documentation pages. TODO-only pages are not listed.
 documentation:

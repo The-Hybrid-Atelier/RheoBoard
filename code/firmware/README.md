@@ -2,7 +2,11 @@
 
 **Entry point:** `2P1V_Adafruit/2P1V_Adafruit.ino`. Arduino requires the sketch folder name to match the `.ino` file. The sketch file and BLE device name are `2P1V_Adafruit`.
 
-This firmware is shared by RheoBoardOTS, RheoPipette, and the PCB. Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
+This is the shared firmware source location for RheoBoardOTS, RheoPipette, and the PCB.
+
+The current sketch targets the DIY ATtiny1616 seesaw/L298N hardware. It is not a ready-to-run v1.05 PCB driver: that board uses the PCA9685 for pump and valve outputs and J19 for host GPIO button inputs. PCB control and button handling must be implemented and verified for that hardware. The portable setup likewise needs firmware matched to its hardware; this sketch requires seesaw and MPRLS initialization.
+
+Install steps are on the [Code](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Code) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
 
 Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](../../LICENSE).
 
