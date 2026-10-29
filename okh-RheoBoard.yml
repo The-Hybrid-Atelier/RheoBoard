@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-25
+date-updated: 2026-10-29
 # OSHWA certified version 1, UID US002865: https://certification.oshwa.org/us002865.html
 # The current version is version 1. This is the same version certified by OSHWA as US002865.
 # (OKH 1.0 has no certification field.)
@@ -79,19 +79,21 @@ bom: BuildYourOwn/RheoBoardOTS/hardware/README.md
 
 design-files:
   - path: BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/generate_wiring_diagram.py
-    title: Electrical wiring diagram source (regenerates the schematic PNG)
+    title: Earlier electrical wiring diagram generator (does not recreate the current PNG)
   - path: BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD
     title: CAD design for RheoBoardOTS
+  - path: BuildYourOwn/RheoPipette/RheoPipette_CAD
+    title: Inline adapter and electronics-tray designs for RheoPipette
   - path: Sensing Setup
     title: CAD design for the sensing setup, using a GL45 bottle and a tube
   - path: BuildYourOwn/RheoBoardOTS/cad/concept
     title: Enclosure concept visuals (no CAD files)
-  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pro
-    title: KiCad 10 project for the custom PCB prototype
-  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_sch
-    title: KiCad root schematic for the custom PCB
-  - path: RheoBoard_PCB/RheoBoard_v1/RheoboardV1/RheoBoard_v1.kicad_pcb
-    title: KiCad board layout for the custom PCB
+  - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pro
+    title: KiCad 10 project for the current v1.05 custom PCB prototype
+  - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_sch
+    title: KiCad schematic for the current v1.05 custom PCB
+  - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pcb
+    title: KiCad board layout for the current v1.05 custom PCB
 
 schematics:
   - path: BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/wiring-diagram.png
@@ -108,18 +110,20 @@ making-instructions:
 manufacturing-files:
   - path: BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD
     title: CAD design for RheoBoardOTS
+  - path: BuildYourOwn/RheoPipette/RheoPipette_CAD
+    title: Inline adapter and electronics-tray designs for RheoPipette
   - path: Sensing Setup
     title: CAD design for the sensing setup, using a GL45 bottle and a tube
-  - path: RheoBoard_PCB/RheoBoard_v1/Gerber/1-job.gbrjob
-    title: PCB fabrication job (Gerbers in this folder; drills in ../Drill)
-  - path: RheoBoard_PCB/RheoBoard_v1/BOM/BOM_RheoboardV1.xlsx
-    title: RheoBoard v1 purchasing BOM with supplier links (28 September 2026)
-  - path: RheoBoard_PCB/RheoBoard_v1/BOM/BOM_RheoboardV1_JLCSMT.xlsx
-    title: RheoBoard v1 JLCPCB assembly BOM (28 September 2026)
+  - path: RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/Gerber/RheoBoard_v1.05-job.gbrjob
+    title: v1.05 PCB fabrication job (Gerbers and drills in this folder)
+  - path: RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05.xlsx
+    title: RheoBoard v1.05 purchasing BOM with supplier links
+  - path: RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05_JLCPCB.csv
+    title: RheoBoard v1.05 JLCPCB assembly BOM
   - path: RheoBoard_PCB/RheoBoard_v1/8815214A_Y73_SMT026093063736_top.png
-    title: JLCPCB corrected top placement for Rheoboard V1 order 8815214A_Y73 / SMT026093063736
-  - path: RheoBoard_PCB/RheoBoard_v1/CPL/CPL.csv
-    title: PCB pick-and-place
+    title: Historical JLCPCB corrected top placement for Rheoboard V1 order 8815214A_Y73 / SMT026093063736
+  - path: RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv
+    title: RheoBoard v1.05 JLCPCB SMT pick-and-place
 
 operating-instructions:
   - path: code/firmware/README.md
