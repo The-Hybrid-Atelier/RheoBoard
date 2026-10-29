@@ -8,15 +8,13 @@ v1.05 uses the PCA9685 for pump/valve control, a nominal 5.4 V valve rail, and a
 
 ## System diagrams
 
-Both diagrams show the same overall RheoBoard system. The original illustrated overview is retained alongside the detailed v1.05 overview.
+The diagrams show the ESP32 controller, pressure sensing, Qwiic devices, pumps, valves, and power supplies.
 
-![Original illustrated RheoBoard system overview](images/custom-pcb-block-diagram.png)
+<img src="images/custom-pcb-block-diagram.png" width="576" alt="RheoBoard system overview with the ESP32 Thing Plus, pressure sensor, Qwiic devices, pumps, and valves">
 
-The original shows TCA9534 valve control and a 6 V valve rail. The v1.05 design below uses PCA9685 control for both pumps and valves and a nominal 5.4 V valve rail; use it and the current schematic for revision-specific connections.
+<img src="images/custom-pcb-block-diagram-v105.png" width="576" alt="RheoBoard block diagram showing power supplies, controller interface, sensor, pumps, valves, and buttons">
 
-![RheoBoard v1.05 detailed system overview](images/custom-pcb-block-diagram-v105.png)
-
-[Editable v1.05 diagram (SVG)](images/custom-pcb-block-diagram-v105.svg).
+[Editable diagram (SVG)](images/custom-pcb-block-diagram-v105.svg).
 
 ## v1.05 files
 
