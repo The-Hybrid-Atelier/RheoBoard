@@ -4,7 +4,7 @@ This folder is the electronic wiring diagram for RheoBoardOTS - DIY. Step 02 of 
 
 ![Electrical wiring diagram](wiring-diagram.png)
 
-The published file is `wiring-diagram.png`. `wiring_diagram.py` generates that PNG. `matplotlib` is required to run the script. Run it from this folder. It writes `wiring-diagram.png`.
+The published file is `wiring-diagram.png`. `wiring_diagram.py` generates that three-section figure. `matplotlib` is required. Run `python3 wiring_diagram.py` from this folder. It writes `wiring-diagram.png`.
 
 The figure shows the ESP32 Thing Plus, the PCA9685 (Adafruit product 815) on four header jumpers, two L298N modules, the pumps, and the valve. Two Qwiic cables join the ESP32, the Qwiic Button, and the MicroPressure sensor. The PCA9685 is not on that chain.
 
