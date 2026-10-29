@@ -1,6 +1,6 @@
 # Sensing Setup
 
-This is the 3D-printed GL45 cap and the tube for that cap. It is used with a GL45 bottle. The bottle is not a printed part. Print notes are on the [Parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-3D-print) wiki page.
+This is the 3D-printed GL45 cap and the tube for that cap. It is used with a GL45 bottle. The bottle is not a printed part. Print notes are on the [Sensing Setup](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Sensing-Setup) wiki page.
 
 - `caps/` — `cap_easier_thread_fit.stl` and `cap_non.stl`.
 - `tubes/` — `tube_100mm.stl`, `tube_150mm.stl`, and `tube_200mm.stl`, the matching `*_barbed.stl` files, and `hose_connector_3mm_tubing.stl`.
