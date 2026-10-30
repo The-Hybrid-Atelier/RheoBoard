@@ -4,7 +4,7 @@ The three ways to build are on the [Build options](https://github.com/The-Hybrid
 
 Pictures from this repository used with that page:
 
-- [`diy-annotated.jpg`](img/panel/diy-annotated.jpg)
+- [Labeled RheoBoardOTS overview](../BuildYourOwn/RheoBoardOTS/images/rheoboardots-labeled-overview.png)
 - [`pcb-v105-schematic-and-board.png`](../RheoBoard_PCB/images/pcb-v105-schematic-and-board.png)
 - [`rheopipette.jpg`](../BuildYourOwn/RheoPipette/rheopipette.jpg)
 

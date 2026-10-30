@@ -1,6 +1,6 @@
 # Parts to 3D print
 
-Print files are on the [Parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-3D-print) wiki page. That page opens with the annotated photo of the RheoBoardOTS panel, [`panel-annotated.pdf`](../BuildYourOwn/RheoBoardOTS/cad/concept/panel-annotated.pdf), and the lid-off drawing, [`assembly-open.jpg`](../BuildYourOwn/RheoBoardOTS/cad/concept/assembly-open.jpg).
+Print files are on the [Parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Parts-to-3D-print) wiki page. That page opens with the labeled overview of the RheoBoardOTS panel (wiring and tubing hidden for clarity), [`panel-annotated.pdf`](../BuildYourOwn/RheoBoardOTS/cad/concept/panel-annotated.pdf), and the lid-off drawing, [`assembly-open.jpg`](../BuildYourOwn/RheoBoardOTS/cad/concept/assembly-open.jpg).
 
 [`RheoBoardOTS_CAD`](../BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD/) is the CAD design for RheoBoardOTS: layout drawings, plates, the other parts to print, and a tray for each electronics board on this build. The GL45 cap and tube are on the [Sensing Setup](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Sensing-Setup) page. RheoPipette print files are on the [Portable parts to 3D print](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Portable-parts-to-3D-print) page.
 
