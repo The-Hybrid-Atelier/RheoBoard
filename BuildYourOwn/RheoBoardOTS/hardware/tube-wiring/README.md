@@ -1,6 +1,6 @@
 # Tube wiring
 
-This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one switched-port valve, the pressure sensor, and the sensing tube. [Step 03: Connect tubing](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#step-03-connect-tubing) summarizes these ports.
+This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one switched-port valve, the pressure sensor, and the sensing tube. [Step 05: Connect tubing](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#connect-tubing) summarizes these ports.
 
 License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../../LICENSE).
 

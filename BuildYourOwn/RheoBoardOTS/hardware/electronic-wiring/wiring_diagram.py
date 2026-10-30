@@ -79,7 +79,7 @@ def _use_font():
         plt.rcParams["font.family"] = "DejaVu Sans"
 
 
-def _render(out_path: Path) -> None:
+def _render(out_path: Path, export_sections: bool = False) -> None:
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -140,14 +140,17 @@ def _render(out_path: Path) -> None:
         ax.text(x, y, text, ha=ha, va=va, fontsize=size, color=color,
                 fontweight=weight, zorder=6)
 
+    section_labels = []
+
     def section(x, y, w, h, number, title):
         rounded(x, y, w, h, SECTION_F, SECTION_E, lw=2.4, radius=1.8, z=0)
         cy = y + h - 4.6
         ax.add_patch(Circle((x + 5.4, cy), 2.65, fc=BADGE, ec="white", lw=1.5, zorder=5))
-        ax.text(x + 5.4, cy, str(number), ha="center", va="center", color="white",
+        badge_text = ax.text(x + 5.4, cy, str(number), ha="center", va="center", color="white",
                 fontsize=18, fontweight="bold", zorder=6)
-        ax.text(x + 9.6, cy, title, ha="left", va="center", color=NAVY,
+        title_text = ax.text(x + 9.6, cy, title, ha="left", va="center", color=NAVY,
                 fontsize=24, fontweight="bold", zorder=4)
+        section_labels.append((badge_text, title_text))
         return cy
 
     # ---- Title ----------------------------------------------------------
@@ -422,6 +425,30 @@ def _render(out_path: Path) -> None:
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_path, dpi=DPI, facecolor="white")
+    if export_sections:
+        from matplotlib.transforms import Bbox
+
+        # Export the same native figure sections for the assembly steps.
+        # Coordinates are in the figure's drawing units, not bitmap pixels.
+        for (badge_text, title_text), number, title in zip(
+                section_labels, (2, 3, 4),
+                ("Control boards", "Drivers and loads", "Power wiring checks")):
+            badge_text.set_text(str(number))
+            title_text.set_text(title)
+        sections = [
+            ("wiring-control-boards.png", s1x, s1y, s1w, s1h),
+            ("wiring-drivers.png", s2x, s2y, s2w, s2h),
+            ("wiring-power-check.png", s3x, s3y, s3w, s3h),
+        ]
+        for name, x, y, width, height in sections:
+            bounds = Bbox.from_extents(
+                (x - 0.5) * FIG_W / W, (y - 0.5) * FIG_H / H,
+                (x + width + 0.5) * FIG_W / W,
+                (y + height + 0.5) * FIG_H / H,
+            )
+            fig.savefig(out_path.parent / name, dpi=DPI, facecolor="white",
+                        bbox_inches=bounds, pad_inches=0)
+            print(f"wrote {out_path.parent / name}")
     plt.close(fig)
     try:
         from PIL import Image
@@ -435,9 +462,10 @@ def _render(out_path: Path) -> None:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--outdir", default=None, help="output directory (default: this script's directory)")
+    parser.add_argument("--sections", action="store_true", help="also export focused assembly figures")
     args = parser.parse_args()
     out_dir = Path(args.outdir).expanduser().resolve() if args.outdir else HERE
-    _render(out_dir / "wiring-diagram.png")
+    _render(out_dir / "wiring-diagram.png", export_sections=args.sections)
 
 
 if __name__ == "__main__":

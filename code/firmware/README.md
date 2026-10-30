@@ -4,7 +4,7 @@
 
 This sketch is the RheoBoardOTS DIY controller. It is not claimed ready for the v1.05 PCB. That board's PCA9685 uses PWM0–PWM4 for pumps and PWM5–PWM6 for valves. PWM8–PWM10 on that board are unconnected.
 
-Install steps are on the [Firmware](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Firmware) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
+Upload, startup checks, and the [First REP test](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Firmware#first-rep-test) are on the [Firmware](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Firmware) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
 
 Libraries: Adafruit PWM Servo Driver and Adafruit BusIO, SparkFun MicroPressure, SparkFun Qwiic Button, and OSC. ThingPlusBLEOSC supplies `BLEHandler.h`, `OSCHandler.h`, and `MemoryStream.h`.
 
