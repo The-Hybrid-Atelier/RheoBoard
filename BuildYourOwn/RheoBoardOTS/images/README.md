@@ -6,7 +6,7 @@ Project and component photos for RheoBoardOTS - DIY. These photos support the pu
 
 The RheoBoardOTS CAD pictures are here as well. `plate_two_L298N_top.png` is the drawing for this build. `plate_one_L298N_top.png` is the one-L298N drawing and is not the current layout. `ESP32_ThingPlus_tray_with_module.png`, `L298N_tray_with_module.png`, `MicroPressure_tray_with_module.png`, and `PCA9685_ServoDriver_tray_with_module.png` show each board in its tray. The print files stay in [`RheoBoardOTS_CAD`](../cad/RheoBoardOTS_CAD/).
 
-<img src="rheoboardots-labeled-overview.png" width="480" alt="Labeled RheoBoardOTS panel overview">
+<img src="rheoboardots-labeled-overview.png?v=b43b52849bda" width="480" alt="Labeled RheoBoardOTS panel overview">
 
 `rheoboardots-labeled-overview.png` is the illustrated component overview, rendered from the built-panel reference with wiring and tubing hidden for clarity. Use the [assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions) for connections.
 
