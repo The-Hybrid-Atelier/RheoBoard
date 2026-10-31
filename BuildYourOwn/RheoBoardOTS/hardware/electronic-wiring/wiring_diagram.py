@@ -340,7 +340,7 @@ def _render(out_path: Path, export_sections: bool = False) -> None:
     card(80.5, pow_y, 24.5, pow_h, BOARD_F, BOARD_E, [
         "Breadboard",
         "+ to motor screws",
-        "− to common ground",
+        "− to driver ground",
     ], body=12.0, title=14.8)
 
     def pair(x1, x2, y_mid, label_plus, label_minus):
@@ -359,14 +359,12 @@ def _render(out_path: Path, export_sections: bool = False) -> None:
     pair(69.0, 80.5, mid, "+12 V", "GND")
 
     # One column of terminals. Red bus feeds the motor screws.
-    # Gray bus is the sleeve-negative common ground.
+    # Gray bus is adapter negative, connected to the two driver grounds.
     pills = [
         (26.55, "Left motor +", L298_F, L298_E, "plus"),
         (23.85, "Right motor +", L298_F, L298_E, "plus"),
         (20.55, "Left GND", "#ECEFF1", GND, "gnd"),
         (17.85, "Right GND", "#ECEFF1", GND, "gnd"),
-        (15.15, "ESP32 GND", ESP_F, ESP_E, "gnd"),
-        (12.45, "PCA9685 GND", PCA_F, PCA_E, "gnd"),
     ]
     pill_x, pill_w, pill_h = 112.2, 22.5, 2.35
     plus_ys = []

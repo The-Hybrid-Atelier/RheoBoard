@@ -7598,15 +7598,9 @@
       <path d="M1743.846,1545.236 L1743.846,1859.771 L1349.857,1859.771" fill="none" stroke="#252930" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M1743.846,1545.236 L1743.846,1859.771 L1349.857,1859.771" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </g>
-    <g data-from="esp.GND" data-to="bb.I13" data-net="gnd">
-      <path d="M395.531,403.600 L395.531,515.000 L30.000,515.000 L30.000,1970.000 L1500.000,1970.000 L1500.000,1879.735 L1349.857,1879.735" fill="none" stroke="#f5f6f7" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M395.531,403.600 L395.531,515.000 L30.000,515.000 L30.000,1970.000 L1500.000,1970.000 L1500.000,1879.735 L1349.857,1879.735" fill="none" stroke="#252930" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M395.531,403.600 L395.531,515.000 L30.000,515.000 L30.000,1970.000 L1500.000,1970.000 L1500.000,1879.735 L1349.857,1879.735" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </g>
     <circle cx="1224.84" cy="400.504" r="4" fill="#1689c4" stroke="#ffffff" stroke-width="1" />
     <circle cx="1224.84" cy="367.384" r="4" fill="#d7ab00" stroke="#ffffff" stroke-width="1" />
     <circle cx="1224.84" cy="433.62399999999997" r="4" fill="#e85845" stroke="#ffffff" stroke-width="1" />
-    <circle cx="395.531" cy="403.600003" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
     <circle cx="1224.84" cy="301.144" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
     <circle cx="307.47200000000004" cy="239.5" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
     <circle cx="607.8536585365854" cy="670.219512195122" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
@@ -7680,8 +7674,6 @@
     <circle cx="1349.856899698858" cy="1839.805528385154" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
     <circle cx="1743.8464632695668" cy="1545.2358790513454" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
     <circle cx="1349.856899698858" cy="1859.7714862252483" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
-    <circle cx="395.531" cy="403.600003" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
-    <circle cx="1349.856899698858" cy="1879.7346714007347" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
     <circle cx="593.8464632695669" cy="1590" r="7" fill="#252930" />
     <circle cx="643.5286055469799" cy="1565" r="7" fill="#ad3c80" />
     <circle cx="752.0144265620529" cy="1590" r="7" fill="#252930" />

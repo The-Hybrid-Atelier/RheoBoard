@@ -4,9 +4,11 @@ This folder contains the electronic wiring diagrams for RheoBoardOTS - DIY. Step
 
 **Component wiring**
 
-<img src="rheoboardots-fritzing.png?v=6546dba0b344" alt="RheoBoardOTS component wiring with the ESP32, PCA9685, two L298N modules, pumps, valve, and power distribution" width="900">
+Current panel connections. PCA9685 GND is supplied through Qwiic; both L298N GND terminals return to adapter negative through the breadboard.
 
-[Full-size image](https://raw.githubusercontent.com/The-Hybrid-Atelier/RheoBoard/main/BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/rheoboardots-fritzing.png?v=6546dba0b344) · [Editable SVG](rheoboardots-fritzing.svg)
+<img src="rheoboardots-fritzing.png?v=3b3a40abf3ba" alt="RheoBoardOTS component wiring with the ESP32, PCA9685, two L298N modules, pumps, valve, and power distribution" width="900">
+
+[Full-size image](https://raw.githubusercontent.com/The-Hybrid-Atelier/RheoBoard/main/BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/rheoboardots-fritzing.png?v=3b3a40abf3ba) · [Editable SVG](rheoboardots-fritzing.svg)
 
 **Step details**
 
@@ -18,7 +20,7 @@ The continuity example is an optional meter reference; Step 04 uses a plain wiri
 
 **Connection reference**
 
-![Electrical wiring diagram](https://raw.githubusercontent.com/The-Hybrid-Atelier/RheoBoard/main/BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/wiring-diagram.png?v=6550de6a5e23)
+![Electrical wiring diagram](https://raw.githubusercontent.com/The-Hybrid-Atelier/RheoBoard/main/BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/wiring-diagram.png?v=2a2f03b8c41f)
 
 The connection reference is `wiring-diagram.png`. `wiring_diagram.py` generates that three-section figure. `matplotlib` is required. Run `python3 wiring_diagram.py` from this folder. It writes `wiring-diagram.png`. Add `--sections` to also export `wiring-control-boards.png`, `wiring-drivers.png`, and `wiring-power-check.png` as optional technical references for assembly.
 
