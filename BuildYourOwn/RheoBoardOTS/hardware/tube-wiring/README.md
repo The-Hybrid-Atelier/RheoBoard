@@ -4,7 +4,13 @@ This folder is the pneumatic port table for RheoBoardOTS - DIY: two pumps, one s
 
 License: CERN-OHL-W-2.0 — see [`LICENSE`](../../../../LICENSE).
 
-<!-- VISUAL: pneumatic-diagram -->
+<img src="tube-connection.png" alt="Photo tubing guide showing the pump inlet and outlet, both ends of the valve, and the common line to the sensor and sensing tube" width="900">
+
+[Full-size figure](tube-connection.png) · [Editable SVG](tube-connection.svg)
+
+The valve is shown from both ends to identify all three ports. Colored lines mark tube connections; gray leaders identify the pump ports left open. `python3 tubing_figure.py` regenerates both files using matplotlib and the component photos in `../../images/`.
+
+Port identification follows the [Adafruit 4699 pump](https://www.adafruit.com/product/4699) and [Adafruit 4663 valve](https://www.adafruit.com/product/4663) descriptions. The valve common is the middle port with the flange. Embedded manufacturer photos retain their owners’ terms; photo sources are listed in [Images](../../images/README.md).
 
 Tubing is Adafruit 4661, 1 m silicone, 3 mm ID, 5 mm OD, for air only. The length of each run is not stated. A tool to cut the silicone tubing is not named in the repository.
 

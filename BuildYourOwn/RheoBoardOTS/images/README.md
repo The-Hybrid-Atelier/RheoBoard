@@ -9,3 +9,5 @@ The RheoBoardOTS CAD pictures are here as well. `plate_two_L298N_top.png` is the
 <img src="rheoboardots-labeled-overview.png" width="480" alt="Labeled RheoBoardOTS panel overview">
 
 `rheoboardots-labeled-overview.png` is the illustrated component overview, rendered from the built-panel reference with wiring and tubing hidden for clarity. Use the [assembly instructions](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions) for connections.
+
+The tubing figure uses these Adafruit port close-ups: [pump inlet and outlet](https://cdn-shop.adafruit.com/970x728/4699-08.jpg) (`adafruit-4699-ports.jpg`), [valve plastic end and common](https://cdn-shop.adafruit.com/970x728/4663-06.jpg) (`adafruit-4663-plastic-ports.jpg`), and [valve metal end](https://cdn-shop.adafruit.com/970x728/4663-07.jpg) (`adafruit-4663-metal-port.jpg`). They are embedded unchanged with connection markers in the [tube-wiring figure](../hardware/tube-wiring/README.md).
