@@ -10,9 +10,11 @@ This folder contains the electronic wiring diagrams for RheoBoardOTS - DIY. Step
 
 **Step details**
 
-[Driver connections and jumper settings](assembly-driver-detail.png) · [Continuity probe example](assembly-continuity-detail.png)
+[Driver connections and jumper settings](assembly-driver-detail.png) · [First power-on](assembly-first-power-on.png) · [Optional continuity probe example](assembly-continuity-detail.png)
 
-The driver visual accompanies Assembly Step 03. The continuity example is an optional meter reference; Step 04 uses a plain wiring checklist. `python3 assembly_details.py` regenerates the PNG and editable SVG files using matplotlib. They show connections by label; use the component wiring picture for the physical layout.
+The photo-based driver and power visuals accompany Assembly Steps 03 and 07. `python3 assembly_photo_figures.py` regenerates their PNG and editable SVG files using matplotlib. Supplier photos identify the jumper caps, PWM pins, USB socket and motor-power terminals; use the component wiring picture for the complete wiring. Embedded photos retain their owners’ terms; sources are listed in [Images](../../images/README.md).
+
+The continuity example is an optional meter reference; Step 04 uses a plain wiring checklist. `python3 assembly_details.py` regenerates that reference.
 
 **Connection reference**
 
