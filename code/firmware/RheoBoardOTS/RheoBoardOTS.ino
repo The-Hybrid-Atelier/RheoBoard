@@ -14,7 +14,8 @@
 // Surface Tension (50 ms / 10% blow, 200 ms capture), /slip/* aliases,
 // deferred BLE OSC, disconnect /db/save. No PA red/blue buttons and no `'z'`
 // watchdog. Calibration knobs remain writable.
-// One build: BLE pipeline ("RheoBoardOTS") + USB serial bench stream (SERIAL_STREAM).
+// HardwareProfile.h selects DIY (default) or the older v1 PCB, not v1.05.
+// Both use the BLE pipeline ("RheoBoardOTS") + USB serial bench stream.
 // Detailed docs: README.md
 //
 // Valve control stays full-on / full-off.
@@ -35,10 +36,13 @@
 #define BTN_LONG_PRESS_MS   600
 
 #include <Arduino.h>
+#include "HardwareProfile.h"
 #include "MemoryStream.h"
 #include "BLEHandler.h"
 #include "OSCHandler.h"
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_DIY
 #include <SparkFun_Qwiic_Button.h>
+#endif
 #include <string.h>
 #include "PneumaticSystem.h"
 #include "RheoSystem.h"
@@ -50,40 +54,76 @@ static char slipOscQueue[SLIP_OSC_Q_DEPTH][SLIP_OSC_MSG_MAX];
 static volatile uint8_t slipOscHead = 0;
 static volatile uint8_t slipOscTail = 0;
 
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+// BLE callbacks and loop can run on different ESP32 cores. Disabling local
+// interrupts alone does not protect this shared queue across the two cores.
+static portMUX_TYPE slipOscMux = portMUX_INITIALIZER_UNLOCKED;
+static volatile bool slipStopRequested = false;
+static void lockOscQueue() { portENTER_CRITICAL(&slipOscMux); }
+static void unlockOscQueue() { portEXIT_CRITICAL(&slipOscMux); }
+#else
+static void lockOscQueue() { noInterrupts(); }
+static void unlockOscQueue() { interrupts(); }
+#endif
+
 class SlipDeferredOSCCallbacks : public BLECharacteristicCallbacks {
   void onWrite(BLECharacteristic *pCharacteristic) override {
     String received = pCharacteristic->getValue().c_str();
     if (received.length() == 0) return;
-    noInterrupts();
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+    OSCMessage command(received.c_str());
+    if (RheoSystem::isStopCommand(command, received.c_str())) {
+      lockOscQueue();
+      slipStopRequested = true;
+      slipOscHead = slipOscTail; // Discard commands queued before this stop.
+      unlockOscQueue();
+      return; // Hardware operations stay in loop, never in the BLE callback.
+    }
+#endif
+    lockOscQueue();
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+    if (slipStopRequested) { unlockOscQueue(); return; }
+#endif
     uint8_t next = (uint8_t)((slipOscTail + 1) % SLIP_OSC_Q_DEPTH);
     if (next == slipOscHead) {
-      interrupts();
+      unlockOscQueue();
       return;
     }
     strncpy(slipOscQueue[slipOscTail], received.c_str(), SLIP_OSC_MSG_MAX - 1);
     slipOscQueue[slipOscTail][SLIP_OSC_MSG_MAX - 1] = '\0';
     slipOscTail = next;
-    interrupts();
+    unlockOscQueue();
   }
 };
 
 static void drainDeferredBLEOSC() {
   while (true) {
-    noInterrupts();
+    lockOscQueue();
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+    if (slipStopRequested) {
+      slipStopRequested = false;
+      slipOscHead = slipOscTail;
+      unlockOscQueue();
+      rheo.systemOff();
+      return;
+    }
+#endif
     if (slipOscHead == slipOscTail) {
-      interrupts();
+      unlockOscQueue();
       return;
     }
     char local[SLIP_OSC_MSG_MAX];
     memcpy(local, slipOscQueue[slipOscHead], SLIP_OSC_MSG_MAX);
     slipOscHead = (uint8_t)((slipOscHead + 1) % SLIP_OSC_Q_DEPTH);
-    interrupts();
+    unlockOscQueue();
     OSCMessage oscReceived(local);
     routeOSC(oscReceived);
   }
 }
 
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_DIY
 QwiicButton   qwiicButton;
+#endif
 bool          qwiicButtonReady = false;
 char          buffer[255];
 
@@ -96,7 +136,7 @@ void routeOSC(OSCMessage &msg) {
   else { Serial.println("Unrecognized OSC address."); }
 }
 
-void handleQwiicButton() {
+void handleControlButton() {
   if (!qwiicButtonReady) return;
   static bool          armed         = false;
   static bool          pressed       = false;
@@ -106,8 +146,27 @@ void handleQwiicButton() {
   static unsigned long lastReleaseMs = 0;
   static unsigned long lastEdgeMs    = 0;
 
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  static uint32_t observedStop = 0;
+  if (observedStop != rheo.stopGeneration) {
+    observedStop = rheo.stopGeneration;
+    armed = false;
+    pressed = false;
+    holdConsumed = false;
+    clickCount = 0;
+    return; // Require a release before accepting another gesture.
+  }
+#endif
+
   unsigned long now     = millis();
-  bool          rawDown = qwiicButton.isPressed();
+  bool rawDown;
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  uint8_t pressedButtons;
+  if (!v1Hardware::buttons(pressedButtons)) return;
+  rawDown = (pressedButtons & 1) != 0; // SW1 replaces the DIY Qwiic Button.
+#else
+  rawDown = qwiicButton.isPressed();
+#endif
   // isPressed() is often true at boot; that used to start blow() after 600 ms
   // and leave the right-pump ENB (channel 9) running. Wait for a real release first.
   if (!armed) {
@@ -150,12 +209,24 @@ void handleSerialCommand() {
     char c = Serial.read();
     if (c == '\n' || c == '\r') {
       cmd[n] = '\0'; n = 0;
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+      if (!strcmp(cmd, "BUTTONS")) {
+        uint8_t pressed;
+        if (v1Hardware::buttons(pressed)) { Serial.print("#BUTTONS,"); Serial.println(pressed, BIN); }
+        continue;
+      }
+#endif
       if      (!strcmp(cmd, "REP"))        { if (!rheo.actuationBusy()) rheo.startRep(); }
       else if (!strcmp(cmd, "STOP")) {
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+        if (rheo.testStreaming) Serial.println("#TEST_END");
+        rheo.systemOff();
+#else
         if (rheo.bubbleActive || rheo.bubbleTriadActive) rheo.stopBubble(true);
         else if (rheo.recording) rheo.stopRep();
         if (rheo.testStreaming) rheo.stopPumpTest();
         if (rheo.purgeActive || rheo.timedAirActive) rheo.systemOff();
+#endif
       }
       else if (!strncmp(cmd, "PUMP1 ", 6)) rheo.startPumpTest(PUMP_1, atoi(cmd + 6));
       else if (!strncmp(cmd, "PUMP2 ", 6)) rheo.startPumpTest(PUMP_2, atoi(cmd + 6));
@@ -176,6 +247,10 @@ void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP);
 
   rheo.setup();
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  qwiicButtonReady = pwmReady();
+  Serial.println("v1 SW1: 1-click=REP, 2-click=suck, hold=blow. BUTTONS reads SW1..SW4; SW2..SW4 are unassigned.");
+#else
   qwiicButtonReady = qwiicButton.begin();
   if (qwiicButtonReady) {
     Serial.print("Qwiic button ready (1-click=REP, 2-click=suck, hold=blow). at-boot pressed=");
@@ -183,6 +258,7 @@ void setup() {
   } else {
     Serial.println("Qwiic button not found (optional, skipping).");
   }
+#endif
   setupBLE(DEVICE_NAME, SERVICE_UUID, CHARACTERISTIC_UUID_RX, CHARACTERISTIC_UUID_TX);
   if (pRxCharacteristic != nullptr) {
     pRxCharacteristic->setCallbacks(new SlipDeferredOSCCallbacks());
@@ -191,6 +267,20 @@ void setup() {
 }
 
 void loop() {
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  // Hardware faults are latched until restart; no queued command may rearm.
+  if (!pwmReady()) {
+    static bool reported = false;
+    if (!reported) {
+      if (rheo.testStreaming) Serial.println("#TEST_END");
+      rheo.systemOff();
+      Serial.println("v1 halted after hardware fault. Remove 12 V, inspect, then restart.");
+      reported = true;
+    }
+    delay(10);
+    return;
+  }
+#endif
   drainDeferredBLEOSC();
 
   static bool buttonPressed = false;
@@ -198,17 +288,22 @@ void loop() {
   bool sw1 = sw1Pressed();
   if ((digitalRead(BUTTON_PIN) == LOW || sw1) && !buttonPressed) {
     buttonPressed = true;
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+    if (rheo.actuationBusy()) rheo.systemOff();
+    else rheo.startRep();
+#else
     if (rheo.purgeActive || rheo.timedAirActive) rheo.systemOff();
     else if (rheo.program.isRunning()) rheo.program.stop("button-abort");
     else if (rheo.bubbleActive || rheo.bubbleTriadActive) rheo.stopBubble();
     else if (rheo.recording) rheo.stopRep();
     else rheo.startRep();
+#endif
     return;
   }
   if (digitalRead(BUTTON_PIN) == HIGH && !sw1) buttonPressed = false;
 
   handleSerialCommand();
-  handleQwiicButton();
+  handleControlButton();
   rheo.loop();
 
   bool active = rheo.isActive() || rheo.manualBlowing || rheo.latchedSuck
@@ -217,10 +312,14 @@ void loop() {
   ledExt(active);
 
   if (!deviceConnected && oldDeviceConnected) {
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+    rheo.systemOff();
+#else
     if (rheo.program.isRunning()) rheo.program.stop("disconnect");
     if (rheo.bubbleActive || rheo.bubbleTriadActive) rheo.stopBubble(true);
     else if (rheo.recording || rheo.triadActive) rheo.stopRep(true);
     rheo.systemOff();
+#endif
     delay(500); pServer->startAdvertising();
     Serial.println("Started advertising again");
     oldDeviceConnected = deviceConnected;

@@ -73,6 +73,11 @@ public:
 
     void blow(int power = -1) override;
     void suck(int power = -1) override;
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+    void systemOff() override;
+    static bool isStopCommand(OSCMessage& msg, const char* address);
+    uint32_t stopGeneration = 0; // Invalidates pending button gestures after a stop.
+#endif
 
     void startRep();
     void startRepTriad();

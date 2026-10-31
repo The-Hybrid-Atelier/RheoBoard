@@ -9,6 +9,20 @@
 SparkFun_MicroPressure mpr;
 Adafruit_PWMServoDriver pwm(PWM_DRIVER_ADDR);
 
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+bool pwmReady() { return v1Hardware::ready(); }
+static void holdUnusedChannelOff() {} // v1 parks unused outputs during init.
+static void parkPumps() { v1Hardware::pumpsOff(); }
+void pumpSetPct(PumpChannel c, int pct) {
+  v1Hardware::pump(c == PUMP_1 ? PWM_CH_PUMP1 : PWM_CH_PUMP2, pct);
+}
+void pumpSet(PumpChannel c, bool on) { pumpSetPct(c, on ? 100 : 0); }
+void pumpsOff() { parkPumps(); }
+void pumpsOffNow() { parkPumps(); }
+void valveSuck() { v1Hardware::valve(false); }
+void valveBlow() { v1Hardware::valve(true); }
+bool halBegin() { return v1Hardware::begin(); }
+#else
 static bool pwmReadyFlag = false;
 
 bool pwmReady() { return pwmReadyFlag; }
@@ -127,6 +141,7 @@ bool halBegin() {
   if (!mprOk) Serial.println("PneumaticSystem: MPRLS pressure sensor not found on Qwiic bus.");
   return pwmOk && mprOk;
 }
+#endif
 
 // ---- Pump / valve -----------------------------------------------------------
 
@@ -216,6 +231,11 @@ void PneumaticSystem::updateAuxiliary() {
 
 void PneumaticSystem::sampleAir() {
   pressure = readPressure();
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  // ThingPlusBLEOSC's sendSampleOSC accepts int. Do not convert a failed
+  // sensor reading (NaN) into an integer; the driver has already latched OFF.
+  if (!isfinite(pressure)) return;
+#endif
   sendSampleOSC("/rheo/sense/air", pressure);
 #if SERIAL_STREAM
   Serial.print("#S,"); Serial.print(millis() - sessionStart());
@@ -270,7 +290,7 @@ void sendApiEntry(const char* entry) {
 
 void PneumaticSystem::setup() {
   if (!halBegin()) {
-    Serial.println("PneumaticSystem: HAL init failed (PCA9685 and/or MPRLS not found).");
+    Serial.println("PneumaticSystem: hardware initialization failed; actuation disabled. Check the selected hardware profile, supplies and I2C devices.");
     while (1) delay(1000);
   }
 }

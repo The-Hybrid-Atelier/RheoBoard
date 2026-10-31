@@ -2,7 +2,7 @@
 
 **Entry point:** `RheoBoardOTS/RheoBoardOTS.ino`. Arduino requires the sketch folder name to match the `.ino` file. The sketch file and BLE device name are `RheoBoardOTS`.
 
-This sketch is the RheoBoardOTS DIY controller. It is not claimed ready for the v1.05 PCB. That board's PCA9685 uses PWM0–PWM4 for pumps and PWM5–PWM6 for valves. PWM8–PWM10 on that board are unconnected.
+This sketch defaults to the RheoBoardOTS DIY controller. An experimental profile for the **older v1 PCB** is described below. It is not claimed ready for the v1.05 PCB. That board's PCA9685 uses PWM0–PWM4 for pumps and PWM5–PWM6 for valves. PWM8–PWM10 on that board are unconnected.
 
 Upload, startup checks, and the [First REP test](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Firmware#first-rep-test) are on the [Firmware](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Firmware) wiki page. RheoData notes are in `../software/README.md`. The download, pairing steps, the connected indicator, and how to start and name a REP are not written yet. That gap stays in the software notes.
 
@@ -10,7 +10,7 @@ Libraries: Adafruit PWM Servo Driver and Adafruit BusIO, SparkFun MicroPressure,
 
 Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](../../LICENSE).
 
-## I2C
+## DIY I2C
 
 `Wire.begin()` uses the SparkFun ESP32 Thing Plus defaults: SDA GPIO 23, SCL GPIO 22. The Qwiic connector is that same bus.
 
@@ -22,7 +22,7 @@ Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](..
 
 PCA9685 VCC is ESP32 3V3. V+ and OE stay open. Product 815 has 220 ohm resistors in series with its outputs.
 
-## Channel map
+## DIY channel map
 
 These constants are in `RheoBoardOTS/PneumaticSystem.h`. `setPWMFreq(1000)` sets 1000 Hz on every channel.
 
@@ -106,10 +106,11 @@ Available over USB when `SERIAL_STREAM` is enabled. A newline or a carriage retu
 |---|---|
 | `REP` | Trigger one REP. |
 | `STOP` | Abort a REP, a bubble, or a pump test. Also stops a purge or timed-air run. |
-| `PUMP1 <pct>` | Run PUMP1 (channel 10) continuously and stream `#S` lines. |
-| `PUMP2 <pct>` | Run PUMP2 (channel 9) continuously and stream `#S` lines. |
-| `VALVE ON` | Channel 8 full-on. Plastic pole, pressure. |
-| `VALVE OFF` | Channel 8 full-off. Metal pole, vacuum. |
+| `PUMP1 <pct>` | Run PUMP1 continuously and stream `#S` lines. DIY channel 10; v1 default channel 1/U11. |
+| `PUMP2 <pct>` | Run PUMP2 continuously and stream `#S` lines. DIY channel 9; v1 default channel 0/U8. |
+| `VALVE ON` | Valve powered. Plastic pole, pressure. DIY channel 8; v1 default TCA P1/U9. |
+| `VALVE OFF` | Valve released. Metal pole, vacuum. |
+| `BUTTONS` | v1 only: print `#BUTTONS,<binary mask>` for SW1–SW4; least significant bit is SW1, 1 means pressed. |
 
 After a REP, Serial Monitor prints:
 
@@ -122,15 +123,54 @@ After a REP, Serial Monitor prints:
 
 `#PH` lines are buffered during the REP and printed together after it ends. With the factory defaults the phase names are `BASELINE`, `RETRACT_VALVE`, `RETRACT_PUMP`, `EXTRUDE_VALVE`, `EXTRUDE_PUMP`, `RELAX`, and `STOP`. A REP does not print `#S` lines. `#S,<ms>,<Pa>` is the bench pump-test line, with `#TEST_START,<Pa>` and `#TEST_END`.
 
-Boot, when the PCA9685 answers, prints the channel map, pulses channel 9 three times, parks it full-off, pulses channel 8 three times, and parks it full-off. Channel 11 stays full-off. The sketch then prints `RheoBoardOTS initialized. Send rheo/api for supported commands.`
+DIY boot, when the PCA9685 answers, prints the channel map, pulses channel 9 three times, parks it full-off, pulses channel 8 three times, and parks it full-off. Channel 11 stays full-off. The v1 profile has no automatic output pulses. The sketch then prints `RheoBoardOTS initialized. Send rheo/api for supported commands.`
 
 Missing-board lines:
 
 ```text
 PneumaticSystem: PCA9685 not found on I2C addr 0x40 (header SDA GPIO 23 / SCL GPIO 22).
 PneumaticSystem: MPRLS pressure sensor not found on Qwiic bus.
-PneumaticSystem: HAL init failed (PCA9685 and/or MPRLS not found).
+PneumaticSystem: hardware initialization failed; actuation disabled. Check the selected hardware profile, supplies and I2C devices.
 Qwiic button not found (optional, skipping).
 ```
 
 The HAL-failed line stops the sketch. The button line does not.
+
+## Older v1 PCB profile (experimental)
+
+This profile targets `RheoBoard_PCB/RheoBoard_v1`, using its own MOSFET stages instead of L298N modules. It has passed host protocol/fault tests and an ESP32 Thing Plus build, but **has not been tested on an assembled PCB**. A successful build does not qualify the power supplies, assembly, sensor startup or pneumatic behavior. The DIY wiki's wiring and startup-pulse instructions do not apply to this profile.
+
+Select `RHEO_PROFILE_PCB_V1` in `RheoBoardOTS/HardwareProfile.h`, or build without changing the default:
+
+```sh
+arduino-cli compile --fqbn esp32:esp32:esp32thing_plus \
+  --build-property compiler.cpp.extra_flags=-DRHEO_HARDWARE_PROFILE=1 \
+  code/firmware/RheoBoardOTS
+```
+
+Run that command from the repository root. It compiles only; it does not upload. The verified local toolchain is ESP32 Arduino core 2.0.11 with the libraries listed above. Omitting the flag builds DIY. Keep the profile selection consistent when compiling and uploading.
+
+| v1 device | Address / output | Connection and default role |
+|---|---|---|
+| PCA9685 | `0x40`, channel 0 | Q3 → U8, PUMP2 / pressure |
+| PCA9685 | `0x40`, channel 1 | Q4 → U11, PUMP1 / vacuum |
+| TCA9534A | `0x3F`, P1 | Q8 → U9, selected valve |
+| TCA9534A | `0x3F`, P0 | Q10 → U10, unused valve held off |
+| TCA9534A | P4–P7 | SW1–SW4, active low |
+| Honeywell MPRLS0025PA00001A | `0x18` | Absolute pressure in Pa, transfer function A |
+
+These addresses assume the PCA address jumpers are open and the TCA address straps match the saved design. `RHEO_V1_VACUUM_CHANNEL` selects 0 or 1; the pressure pump uses the other channel. `RHEO_V1_VALVE_PORT` selects 0/U10 or 1/U9. Confirm tubing direction before assigning pressure/vacuum roles. SW1 uses the existing single-click REP, double-click suck, and hold-to-blow behavior. SW2–SW4 are reported by `BUTTONS` but have no assigned action. Testing SW1 can trigger a routine: leave loads disconnected during button checks.
+
+At initialization, the profile parks all PCA outputs, writes the TCA output latch low before setting P0/P1 as outputs, checks register readback, and requires a valid pressure conversion. Pump PWM is approximately 1.02 kHz with the nominal 25 MHz PCA oscillator. Both valve states are steady DC. The opposite pump is turned off before a pump is energized. Unused PCA outputs and the second valve stay off.
+
+For v1, serial `STOP`, `/system/off`, `/pump/off`, `/slip/pump/off`, `/rheo/stop`, `/slip/pa/stop`, and `/rheo/program/stop` cancel every active routine and release both pumps and the valve. Zero-power `/pump/blow`, `/pump/suck`, `/slip/pump/add`, and `/slip/pump/remove` commands do the same even while busy. A pending button gesture cannot restart an output after a stop; release the button before another gesture. BLE stop requests take priority over a full queue and discard older queued commands. These remain cooperative software stops, dependent on a running controller and functioning I2C bus.
+
+Sensor busy polling has a 30 ms deadline and each ESP32 Wire transaction has a 25 ms timeout; a failed transaction can extend the total call beyond the polling deadline. Sensor faults or failed I2C transfers latch actuation disabled until restart and attempt to switch both expanders off. A failed bus can prevent that shutdown. The expanders can also retain output state during an ESP32-only reset, until initialization reaches them. **Removing the 12 V supply is the independent bench stop.** This firmware does not add a hardware watchdog.
+
+Before connecting a host or load, verify the unpowered board and its unloaded 3.3 V, 4.5 V and 6 V rails. With a USB-powered Thing Plus, do not connect the v1 regulator's 3.3 V output to the host regulator output. A continuity-verified connection using only GND, SDA and SCL avoids that direct tie; it does not prevent power-off backfeeding through SDA/SCL. Do not hot-plug. J3's printed SDA/SCL labels are reversed: its electrical pin order is **1 GND, 2 +3V3, 3 SDA, 4 SCL**. The Qwiic sockets have normal signal order but still connect the two supply outputs with a standard four-wire cable.
+
+The stock v1 sensor reset is only pulled up. Reliable cold startup remains to be established because the Honeywell sensor specifies a supply ramp/reset requirement. `RHEO_V1_SENSOR_RESET_PIN` defaults to `-1`; an optional, reviewed physical wire from a suitable spare ESP32 GPIO to TP3 enables an open-drain reset pulse. Setting a number without that wire cannot fix sensor startup. Do not use an occupied GPIO or a board test point as ground. Repeated boot checks and measurement against ambient absolute pressure are required.
+
+Run software checks from the repository root with `bash code/firmware/tests/run-tests.sh`. They compile the actual v1 driver against a register model and exercise output ordering, transfer-function conversion, buttons, stale-state restart, failures at every startup transaction, corrupt/short reads, and latched bus/sensor faults. These tests do not model electrical transients or certify the physical board. After electrical checks, test each output unloaded, then one load at a time, then the shared REP routine and stop behavior.
+
+`bash code/firmware/tests/run-application-tests.sh` additionally compiles the actual sketch and all its controller sources with the installed OSC and ThingPlusBLEOSC parser. Only the Arduino hardware, radio transport and I2C devices are simulated. It checks serial/BLE commands, REP phases and completion, programs, disconnect, sensor faults, button gestures, queue saturation, and a 70-case stop matrix. Set `ARDUINO_LIBRARIES` if the libraries are outside `~/Documents/Arduino/libraries`. Run again with `RHEO_TEST_ALTERNATE=1` to exercise swapped pump roles and the other valve output. This host simulation does not prove physical behavior, radio delivery, real-time scheduling, or ESP32 timer rollover.

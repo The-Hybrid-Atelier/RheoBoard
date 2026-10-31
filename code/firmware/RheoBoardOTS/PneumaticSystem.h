@@ -3,6 +3,8 @@
 #ifndef PNEUMATIC_SYSTEM_H
 #define PNEUMATIC_SYSTEM_H
 
+#include "HardwareProfile.h"
+#include "V1Hardware.h"
 #include <Arduino.h>
 #include <Wire.h>
 #include <SparkFun_MicroPressure.h>
@@ -12,7 +14,7 @@
 // ---- Build flags ------------------------------------------------------------
 #define SERIAL_STREAM 1        // USB serial bench stream; set 0 to disable
 
-// ---- I2C: one peripheral, two physical connections --------------------------
+// ---- DIY I2C wiring (v1 PCB transactions are in V1Hardware.cpp) --------------
 // Wire.begin() uses the ESP32 Thing Plus defaults (variant esp32thing_plus):
 // SDA = GPIO 23, SCL = GPIO 22. The Qwiic connector and the header SDA/SCL
 // pins are that same bus.
@@ -28,7 +30,7 @@
 #define QWIIC_BUTTON_ADDR 0x6F  // SparkFun Qwiic Button (library default)
 #define PWM_DRIVER_ADDR   0x40  // Adafruit PCA9685, product 815, header jumpers
 
-// ---- Pump/valve enables are PCA9685 outputs, not ESP32 GPIOs ----------------
+// ---- DIY pump/valve wiring; v1 uses PCA pumps and TCA valve outputs ----------
 // Two L298N modules. Direction pins IN1–IN4 are hardwired; these channels
 // drive the enable pins only. On this module INA is ENA (enables OUT1/OUT2)
 // and INB is ENB (enables OUT3/OUT4). Remove the ENA and ENB jumpers.
@@ -41,10 +43,15 @@
 //   OUT3/OUT4 unused. IN3 and IN4 tied to GND. ENB (INB) tied to GND.
 // RIGHT L298N: valve and the other pump. OUT1/OUT2 = FA0520E (ENA / INA, channel 8).
 //   OUT3/OUT4 = right pump (ENB / INB, channel 9).
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+#define PWM_CH_PUMP1 RHEO_V1_VACUUM_CHANNEL
+#define PWM_CH_PUMP2 (1 - RHEO_V1_VACUUM_CHANNEL)
+#else
 #define PWM_CH_VALVE   8   // RIGHT L298N ENA (INA) — FA0520E, full-on / full-off, OUT1/OUT2
 #define PWM_CH_PUMP2   9   // RIGHT L298N ENB (INB) — PUMP_2 extrude / pressure, OUT3/OUT4
 #define PWM_CH_PUMP1   10  // LEFT L298N ENA (INA) — PUMP_1 retract / vacuum, OUT1/OUT2
 #define PWM_CH_UNUSED  11  // not connected; parked full-off so the pin stays low
+#endif
 
 // FA0520E (Adafruit 4663) is a 6 V 3-way solenoid. valveBlow is full-on and
 // valveSuck is full-off. Do not PWM the valve.
@@ -71,6 +78,8 @@ extern Adafruit_PWMServoDriver pwm;  // PCA9685 driving the pump and valve enabl
 enum PumpChannel { PUMP_1 = 1, PUMP_2 = 2 };
 
 // ---- Pump / valve / sensor primitives ---------------------------------------
+// The following describes DIY. v1 maps valve states to a TCA output and pump
+// states to PCA channels 0/1; both profiles share the routine-level interface.
 // 0% and the valve-released state are PCA9685 full-off (setPin 0, always-off
 // bit). 100% and the valve-powered state are full-on (setPin 4095, always-on
 // bit). Intermediate pump duties are normal 12-bit PWM. Pumps park full-off
@@ -86,7 +95,13 @@ void valveBlow();
 bool pwmReady();
 inline void ledExt(bool on)    { if (PIN_LED1 >= 0) digitalWrite(PIN_LED1, on ? HIGH : LOW); }
 inline bool sw1Pressed()       { return PIN_SW1 >= 0 && digitalRead(PIN_SW1) == LOW; }
-inline float readPressure()    { return mpr.readPressure(PA); }
+inline float readPressure() {
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  return v1Hardware::pressurePa();
+#else
+  return mpr.readPressure(PA);
+#endif
+}
 
 bool halBegin();
 void sendApiEntry(const char* entry);  // notifies one /rheo/api reply line over BLE TX
@@ -120,7 +135,7 @@ public:
     void purge();      // /pump/purge  — nonblocking 1 s pressure clear
     void valveOn();    // /valve/on    — energize valve (pressure path, no pump)
     void valveOff();   // /valve/off   — de-energize valve (vacuum path, no pump)
-    void systemOff();  // /system/off  — emergency stop: pumps off, valve park, reset state
+    virtual void systemOff();  // pumps off, valve park; subclass cancels its routines
     void startTimedAir(bool blowDir, int power, int duration);
     void stopTimedAir();
     void updateAuxiliary();

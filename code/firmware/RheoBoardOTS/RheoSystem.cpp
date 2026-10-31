@@ -46,6 +46,27 @@ static void dumpRepMarks(int samples) {
 void RheoSystem::blow(int power) { PneumaticSystem::blow(power < 0 ? extrudePctMax : power); }
 void RheoSystem::suck(int power) { PneumaticSystem::suck(power < 0 ? retractPct    : power); }
 
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+bool RheoSystem::isStopCommand(OSCMessage& msg, const char* address) {
+  return msg.match("/system/off") || msg.match("/pump/off") ||
+      msg.match("/slip/pump/off") || msg.match("/rheo/stop") ||
+      msg.match("/slip/pa/stop") || msg.match("/rheo/program/stop") ||
+      ((msg.match("/pump/blow*") || msg.match("/pump/suck*") ||
+        msg.match("/slip/pump/add*") || msg.match("/slip/pump/remove*")) &&
+       strchr(address, ' ') && getIntArg(msg, 1) <= 0);
+}
+
+void RheoSystem::systemOff() {
+  ++stopGeneration;
+  // Stop outputs before recording flush/delays, then cancel every owner that
+  // could turn them on again in a later loop or after a triad wait.
+  PneumaticSystem::systemOff();
+  if (program.isRunning()) program.stop("cancelled");
+  if (bubbleActive || bubbleTriadActive) stopBubble(true);
+  else if (recording || triadActive) stopRep(true);
+}
+#endif
+
 bool RheoSystem::actuationBusy() const {
   return PneumaticSystem::actuationBusy() || recording || triadActive
       || bubbleActive || bubbleTriadActive || program.isRunning();
@@ -70,7 +91,13 @@ void RheoSystem::captureDueRepSlots() {
   if (millis() - startedAt < static_cast<unsigned long>(repSamplesSent) * REP_GRID_MS) return;
   // One conversion. If it overruns the next slot, hold this reading through
   // those indexes so index k is still the k*18 ms sample.
-  const int32_t pa = static_cast<int32_t>(readPressure());
+  const float measured = readPressure();
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  // A failed read latches the v1 hardware OFF. Do not cast NaN to an integer
+  // or fabricate a pressure sample; the following loop closes the session.
+  if (!isfinite(measured)) return;
+#endif
+  const int32_t pa = static_cast<int32_t>(measured);
   unsigned long slot = (millis() - startedAt) / REP_GRID_MS;
   if (slot >= REP_GRID_COUNT) slot = REP_GRID_COUNT - 1;
   while (repSamplesSent <= static_cast<int>(slot) && repSamplesSent < REP_GRID_COUNT) {
@@ -403,6 +430,14 @@ void RheoSystem::printApi() {
 }
 
 bool RheoSystem::routeOSC(OSCMessage& msg, char* buffer) {
+#if RHEO_HARDWARE_PROFILE == RHEO_PROFILE_PCB_V1
+  // Stops must bypass the running-program command filter and clear routine
+  // state as well as outputs. Otherwise a REP/triad can restart a pump.
+  if (isStopCommand(msg, buffer)) {
+    systemOff();
+    return true;
+  }
+#endif
   if (program.isRunning()) {
     if (msg.match("/rheo/program/stop") || msg.match("/rheo/stop")) {
       program.stop("cancelled");
