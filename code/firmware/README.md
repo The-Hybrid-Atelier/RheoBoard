@@ -18,9 +18,9 @@ Firmware is MIT-licensed. The license notice and full text are in [`LICENSE`](..
 |---|---|---|
 | Qwiic Button | `0x6F` | Qwiic cable |
 | MicroPressure (MPRLS) | `0x18` | Qwiic cable |
-| Adafruit PCA9685, product 815 | `0x40` | Four header jumpers. No address jumpers. No Qwiic socket. |
+| Adafruit PCA9685, product 815 | `0x40` | Qwiic-to-jumper cable from the MicroPressure sensor. No address jumpers. |
 
-PCA9685 VCC is ESP32 3V3. V+ and OE stay open. Product 815 has 220 ohm resistors in series with its outputs.
+PCA9685 VCC receives 3.3 V through the sensor’s Qwiic-to-jumper cable; black is GND, red is VCC, blue is SDA, and yellow is SCL. V+ and OE stay open. Product 815 has 220 ohm resistors in series with its outputs.
 
 ## DIY channel map
 

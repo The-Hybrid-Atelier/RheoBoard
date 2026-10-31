@@ -7398,25 +7398,25 @@
     <rect x="1340.856899698858" y="1810.845115874275" width="18" height="97.85274070194626" rx="7" fill="#252930" opacity="0.17" />
   </g>
   <g id="wires">
-    <g data-from="esp.SDA" data-to="pca.SDA" data-net="sda">
-      <path d="M654.732,230.800 L654.732,170.000 L1080.000,170.000 L1080.000,400.504 L1224.840,400.504" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M654.732,230.800 L654.732,170.000 L1080.000,170.000 L1080.000,400.504 L1224.840,400.504" fill="none" stroke="#1689c4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M654.732,230.800 L654.732,170.000 L1080.000,170.000 L1080.000,400.504 L1224.840,400.504" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <g data-from="sensor.R2" data-to="pca.SDA" data-net="sda">
+      <path d="M1152.000,694.075 L1195.000,694.075 L1195.000,400.504 L1224.840,400.504" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,694.075 L1195.000,694.075 L1195.000,400.504 L1224.840,400.504" fill="none" stroke="#1689c4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,694.075 L1195.000,694.075 L1195.000,400.504 L1224.840,400.504" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </g>
-    <g data-from="esp.SCL" data-to="pca.SCL" data-net="scl">
-      <path d="M633.132,230.800 L633.132,145.000 L1110.000,145.000 L1110.000,367.384 L1224.840,367.384" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M633.132,230.800 L633.132,145.000 L1110.000,145.000 L1110.000,367.384 L1224.840,367.384" fill="none" stroke="#d7ab00" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M633.132,230.800 L633.132,145.000 L1110.000,145.000 L1110.000,367.384 L1224.840,367.384" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <g data-from="sensor.R3" data-to="pca.SCL" data-net="scl">
+      <path d="M1152.000,703.275 L1210.000,703.275 L1210.000,367.384 L1224.840,367.384" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,703.275 L1210.000,703.275 L1210.000,367.384 L1224.840,367.384" fill="none" stroke="#d7ab00" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,703.275 L1210.000,703.275 L1210.000,367.384 L1224.840,367.384" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </g>
-    <g data-from="esp.3V3" data-to="pca.VCC" data-net="3v3">
-      <path d="M352.331,403.600 L352.331,465.000 L1140.000,465.000 L1140.000,433.624 L1224.840,433.624" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M352.331,403.600 L352.331,465.000 L1140.000,465.000 L1140.000,433.624 L1224.840,433.624" fill="none" stroke="#e85845" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M352.331,403.600 L352.331,465.000 L1140.000,465.000 L1140.000,433.624 L1224.840,433.624" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <g data-from="sensor.R1" data-to="pca.VCC" data-net="3v3">
+      <path d="M1152.000,684.875 L1180.000,684.875 L1180.000,433.624 L1224.840,433.624" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,684.875 L1180.000,684.875 L1180.000,433.624 L1224.840,433.624" fill="none" stroke="#e85845" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,684.875 L1180.000,684.875 L1180.000,433.624 L1224.840,433.624" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </g>
-    <g data-from="esp.GND" data-to="pca.GND" data-net="gnd">
-      <path d="M395.531,403.600 L395.531,490.000 L1170.000,490.000 L1170.000,301.144 L1224.840,301.144" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M395.531,403.600 L395.531,490.000 L1170.000,490.000 L1170.000,301.144 L1224.840,301.144" fill="none" stroke="#252930" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M395.531,403.600 L395.531,490.000 L1170.000,490.000 L1170.000,301.144 L1224.840,301.144" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <g data-from="sensor.R0" data-to="pca.GND" data-net="gnd">
+      <path d="M1152.000,675.675 L1165.000,675.675 L1165.000,301.144 L1224.840,301.144" fill="none" stroke="#f5f6f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,675.675 L1165.000,675.675 L1165.000,301.144 L1224.840,301.144" fill="none" stroke="#252930" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1152.000,675.675 L1165.000,675.675 L1165.000,301.144 L1224.840,301.144" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </g>
     <g data-from="esp.Q0" data-to="button.L0" data-net="gnd">
       <path d="M307.472,239.500 L307.472,100.000 L115.000,100.000 L115.000,670.220 L607.854,670.220" fill="none" stroke="#f5f6f7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -7603,11 +7603,8 @@
       <path d="M395.531,403.600 L395.531,515.000 L30.000,515.000 L30.000,1970.000 L1500.000,1970.000 L1500.000,1879.735 L1349.857,1879.735" fill="none" stroke="#252930" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M395.531,403.600 L395.531,515.000 L30.000,515.000 L30.000,1970.000 L1500.000,1970.000 L1500.000,1879.735 L1349.857,1879.735" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </g>
-    <circle cx="654.732203" cy="230.7999997" r="4" fill="#1689c4" stroke="#ffffff" stroke-width="1" />
     <circle cx="1224.84" cy="400.504" r="4" fill="#1689c4" stroke="#ffffff" stroke-width="1" />
-    <circle cx="633.1322" cy="230.7999997" r="4" fill="#d7ab00" stroke="#ffffff" stroke-width="1" />
     <circle cx="1224.84" cy="367.384" r="4" fill="#d7ab00" stroke="#ffffff" stroke-width="1" />
-    <circle cx="352.331" cy="403.600003" r="4" fill="#e85845" stroke="#ffffff" stroke-width="1" />
     <circle cx="1224.84" cy="433.62399999999997" r="4" fill="#e85845" stroke="#ffffff" stroke-width="1" />
     <circle cx="395.531" cy="403.600003" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
     <circle cx="1224.84" cy="301.144" r="4" fill="#252930" stroke="#ffffff" stroke-width="1" />
@@ -7694,7 +7691,6 @@
     <circle cx="1793.5286055469799" cy="1565" r="7" fill="#ad3c80" />
     <circle cx="1902.014426562053" cy="1590" r="7" fill="#252930" />
     <circle cx="1875.4329278050038" cy="1565" r="7" fill="#ad3c80" />
-    <circle cx="395.531" cy="490" r="7" fill="#252930" />
     <rect x="270" y="210" width="43" height="33" rx="3" fill="#272a2d" stroke="#60656a" stroke-width="2" />
     <path d="M274 215V238" stroke="#92989c" stroke-width="1.5" />
     <rect x="595" y="664" width="20" height="39" rx="3" fill="#272a2d" stroke="#60656a" stroke-width="2" />
@@ -7703,6 +7699,8 @@
     <path d="M824 669V698" stroke="#92989c" stroke-width="1.5" />
     <rect x="921" y="669" width="20" height="41" rx="3" fill="#272a2d" stroke="#60656a" stroke-width="2" />
     <path d="M925 674V705" stroke="#92989c" stroke-width="1.5" />
+    <rect x="1135" y="669" width="25" height="41" rx="3" fill="#272a2d" stroke="#60656a" stroke-width="2" />
+    <path d="M1155 674V705" stroke="#92989c" stroke-width="1.5" />
   </g>
   <g id="labels">
     <text x="60" y="60" fill="#263544" font-family="Arial, sans-serif" font-size="38" text-anchor="start" font-weight="bold" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">RheoBoardOTS · DIY wiring</text>
@@ -7754,11 +7752,15 @@
     <text x="1250" y="2030" fill="#263544" font-family="Arial, sans-serif" font-size="25" text-anchor="middle" font-weight="normal">Both drivers: 5V-EN fitted · ENA/ENB caps removed · +5 V outputs kept separate</text>
     <text x="1250" y="2070" fill="#263544" font-family="Arial, sans-serif" font-size="21" text-anchor="middle" font-weight="normal" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">Wire crossings without a dot are not joined. Match terminal labels on your modules.</text>
     <text x="1250" y="2070" fill="#263544" font-family="Arial, sans-serif" font-size="21" text-anchor="middle" font-weight="normal">Wire crossings without a dot are not joined. Match terminal labels on your modules.</text>
-    <text x="845" y="140" fill="#d7ab00" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="normal" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">SCL · GPIO22</text>
-    <text x="845" y="140" fill="#d7ab00" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="normal">SCL · GPIO22</text>
-    <text x="845" y="200" fill="#1689c4" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="normal" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">SDA · GPIO23</text>
-    <text x="845" y="200" fill="#1689c4" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="normal">SDA · GPIO23</text>
-    <text x="850" y="450" fill="#e85845" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="normal" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">3V3 → VCC</text>
-    <text x="850" y="450" fill="#e85845" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="normal">3V3 → VCC</text>
+    <text x="1260" y="650" fill="#263544" font-family="Arial, sans-serif" font-size="24" text-anchor="start" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">Qwiic-to-jumper cable</text>
+    <text x="1260" y="650" fill="#263544" font-family="Arial, sans-serif" font-size="24" text-anchor="start">Qwiic-to-jumper cable</text>
+    <text x="1260" y="685" fill="#252930" font-family="Arial, sans-serif" font-size="21" text-anchor="start" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">Black → GND</text>
+    <text x="1260" y="685" fill="#252930" font-family="Arial, sans-serif" font-size="21" text-anchor="start">Black → GND</text>
+    <text x="1260" y="718" fill="#e85845" font-family="Arial, sans-serif" font-size="21" text-anchor="start" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">Red → VCC (3.3 V)</text>
+    <text x="1260" y="718" fill="#e85845" font-family="Arial, sans-serif" font-size="21" text-anchor="start">Red → VCC (3.3 V)</text>
+    <text x="1260" y="751" fill="#1689c4" font-family="Arial, sans-serif" font-size="21" text-anchor="start" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">Blue → SDA</text>
+    <text x="1260" y="751" fill="#1689c4" font-family="Arial, sans-serif" font-size="21" text-anchor="start">Blue → SDA</text>
+    <text x="1260" y="784" fill="#d7ab00" font-family="Arial, sans-serif" font-size="21" text-anchor="start" stroke="#f5f6f7" stroke-width="6" stroke-linejoin="round">Yellow → SCL</text>
+    <text x="1260" y="784" fill="#d7ab00" font-family="Arial, sans-serif" font-size="21" text-anchor="start">Yellow → SCL</text>
   </g>
 </svg>

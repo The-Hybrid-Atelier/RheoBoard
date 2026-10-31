@@ -9,13 +9,13 @@ seesaw, and it does not draw the sparse one-sheet schematic.
 SparkFun ESP32 Thing Plus. Wire.begin() uses SDA GPIO 23 and SCL GPIO 22.
 Those header pins are the same I2C peripheral as the Qwiic connector.
 
-Two Qwiic cables: Qwiic Button 0x6F and MicroPressure 0x18. The PCA9685
-is not on that chain. Adafruit product 815 has no Qwiic socket. Four
-header jumpers, address 0x40, no address jumpers:
-    ESP32 GND → PCA9685 GND
-    ESP32 3V3 → PCA9685 VCC   (logic only; never 12 V)
-    ESP32 SDA (GPIO 23) → PCA9685 SDA
-    ESP32 SCL (GPIO 22) → PCA9685 SCL
+Two Qwiic cables join the ESP32, Qwiic Button 0x6F and MicroPressure 0x18.
+A Qwiic-to-jumper cable connects the sensor's spare port to PCA9685 0x40:
+    Qwiic black GND → PCA9685 GND
+    Qwiic red 3.3 V → PCA9685 VCC (logic only; never 12 V)
+    Qwiic blue SDA → PCA9685 SDA (ESP32 GPIO 23 bus)
+    Qwiic yellow SCL → PCA9685 SCL (ESP32 GPIO 22 bus)
+Adafruit product 815 has no Qwiic socket. Leave address jumpers unset.
 V+ and OE stay open. Product 815 has 220 ohm resistors in series with
 its outputs.
 
@@ -159,7 +159,7 @@ def _render(out_path: Path, export_sections: bool = False) -> None:
     ax.text(W / 2, 145.7, "Two pumps  ·  One valve  ·  USB-powered ESP32",
             ha="center", va="center", fontsize=18, color=MUTED, zorder=4)
 
-    # ---- 1. Qwiic chain + PCA9685 header jumpers -----------------------
+    # ---- 1. Qwiic chain + PCA9685 breakout cable -----------------------
     s1x, s1y, s1w, s1h = 2.6, 100.2, 162.8, 42.6
     section(s1x, s1y, s1w, s1h, 1, "Qwiic chain")
 
@@ -185,7 +185,7 @@ def _render(out_path: Path, export_sections: bool = False) -> None:
     card(26.2, row_y, 30.5, row_h, ESP_F, ESP_E, [
         "ESP32 Thing Plus",
         "Qwiic connector",
-        "and header pins",
+        "3.3 V I2C bus",
     ], body=13.0, title=16.2)
     card(72.4, row_y, 32.0, row_h, QW_F, QW_E, [
         "Qwiic Button",
@@ -207,40 +207,35 @@ def _render(out_path: Path, export_sections: bool = False) -> None:
     tag(64.55, row_cy + 1.55, "Qwiic cable", QW, size=12.4)
     tag(112.3, row_cy + 1.55, "Qwiic cable", QW, size=12.4)
 
-    tag(116.0, 121.15,
-        "2 Qwiic cables  ·  SDA / SCL / 3.3 V / GND  ·  button and sensor order can vary",
+    tag(84.0, 121.15,
+        "2 Qwiic cables  +  1 Qwiic-to-jumper cable  ·  same 3.3 V I2C bus",
         INK, size=12.6, weight="regular")
 
-    # Header jumpers leave a spine under the ESP32 and run to the PCA9685.
-    # They are not a third Qwiic cable.
-    esp_cx = 26.2 + 30.5 / 2
-    spine_x = esp_cx
+    # The spare MicroPressure Qwiic port feeds the PCA9685 breakout cable.
+    spine_x = 140.2
     taps = [
-        (115.6, "3V3 → VCC  ·  logic only, never 12 V", VCC),
-        (112.2, "GND", GND),
-        (108.8, "SDA  GPIO 23", TEAL),
-        (105.4, "SCL  GPIO 22", TEAL),
+        (115.6, "Red  3.3 V → VCC", "#c4312e"),
+        (112.2, "Black  GND", GND),
+        (108.8, "Blue  SDA", "#1689c4"),
+        (105.4, "Yellow  SCL", "#987700"),
     ]
-    pca_x, pca_y, pca_w, pca_h = 92.5, 103.0, 67.5, 14.6
+    pca_x, pca_y, pca_w, pca_h = 26.2, 103.0, 67.5, 14.6
     spine = "#64748B"
     wire([(spine_x, row_y), (spine_x, taps[-1][0])], spine, lw=2.6)
     node(spine_x, row_y, spine, ms=10)
-    tag(spine_x - 1.4, 120.7, "ESP32 header", TEAL, size=12.0, ha="right")
-    # Keep this caption left of the spine. The long 3V3 label owns the top wire.
-    tag(7.0, 114.2, "header jumpers", TEAL, size=12.0, ha="left")
-    tag(7.0, 111.6, "not a Qwiic cable", TEAL, size=12.0, ha="left")
     for lane_y, label, color in taps:
-        wire([(spine_x, lane_y), (pca_x, lane_y)], color, lw=3.5)
+        edge_x = pca_x + pca_w
+        wire([(spine_x, lane_y), (edge_x, lane_y)], color, lw=3.5)
         node(spine_x, lane_y, color, ms=9)
-        node(pca_x, lane_y, color, ms=9)
-        tag((spine_x + pca_x) / 2, lane_y + 1.15, label, color, size=11.6)
+        node(edge_x, lane_y, color, ms=9)
+        tag((spine_x + edge_x) / 2, lane_y + 1.15, label, color, size=11.6)
 
     card(pca_x, pca_y, pca_w, pca_h, PCA_F, PCA_E, [
         "PCA9685  ·  product 815",
         "I2C 0x40  ·  no address jumpers",
         "V+ open  ·  OE open",
         "220 ohm resistors in series with outputs",
-        "not on the Qwiic chain",
+        "Qwiic-to-jumper cable from sensor",
     ], body=12.4, title=15.5)
 
     # ---- 2. Control and loads -------------------------------------------
