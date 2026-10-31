@@ -12,7 +12,7 @@ This folder contains the electronic wiring diagrams for RheoBoardOTS - DIY. Step
 
 [Driver connections and jumper settings](assembly-driver-detail.png) · [Continuity probe example](assembly-continuity-detail.png)
 
-These focused visuals accompany Assembly Steps 03 and 04. `python3 assembly_details.py` regenerates the PNG and editable SVG files using matplotlib. They show connections by label; use the component wiring picture for the physical layout.
+The driver visual accompanies Assembly Step 03. The continuity example is an optional meter reference; Step 04 uses a plain wiring checklist. `python3 assembly_details.py` regenerates the PNG and editable SVG files using matplotlib. They show connections by label; use the component wiring picture for the physical layout.
 
 **Connection reference**
 
@@ -28,4 +28,4 @@ Channel 10 drives the left L298N ENA: PUMP1 on OUT1/OUT2. Channel 9 drives the r
 
 The channel defines are in [`PneumaticSystem.h`](../../../../code/firmware/RheoBoardOTS/PneumaticSystem.h).
 
-Hookup-wire type and gauge are not stated. The wall-adapter connection to the L298N inputs is in [Connect the power wiring](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#connect-the-power-wiring), and the continuity pairs and expected result are in [Check continuity](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#check-continuity). A leak check and a photo of the finished wiring are not in this folder yet.
+Hookup-wire type and gauge are not stated. The wall-adapter connection to the L298N inputs is in [Connect the power wiring](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#connect-the-power-wiring), and the pre-power checklist is in [Check wiring](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Assembly-instructions#check-wiring-before-power-on). A leak check and a photo of the finished wiring are not in this folder yet.
