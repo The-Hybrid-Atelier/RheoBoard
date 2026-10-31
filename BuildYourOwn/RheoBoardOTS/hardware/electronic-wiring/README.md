@@ -8,6 +8,12 @@ This folder contains the electronic wiring diagrams for RheoBoardOTS - DIY. Step
 
 [Full-size image](rheoboardots-fritzing.png) · [Editable SVG](rheoboardots-fritzing.svg)
 
+**Step details**
+
+[Driver connections and jumper settings](assembly-driver-detail.png) · [Continuity probe example](assembly-continuity-detail.png)
+
+These focused visuals accompany Assembly Steps 03 and 04. `python3 assembly_details.py` regenerates the PNG and editable SVG files using matplotlib. They show connections by label; use the component wiring picture for the physical layout.
+
 **Connection reference**
 
 ![Electrical wiring diagram](wiring-diagram.png)
