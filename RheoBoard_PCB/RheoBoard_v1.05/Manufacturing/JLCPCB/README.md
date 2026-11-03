@@ -8,6 +8,8 @@ five through-hole connectors (`J2`, `J3`, `J19`, `U9`, `U10`). The two pumps
 The external ESP32 controller, power supplies, valves, cables and tubing are
 separate purchases. `U9` and `U10` in this assembly are the valve connectors.
 Controller and firmware requirements are in the [PCB overview](../../../README.md).
+See the [wiki BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/BOM)
+for the assembly scope and separate parts.
 
 ## Upload these files together
 
@@ -19,6 +21,10 @@ fabrication ZIP as-is, and upload the two CSV files at the assembly step.
 | [RheoBoard_v1.05_fabrication.zip](RheoBoard_v1.05_fabrication.zip) | PCB/Gerber upload |
 | [BOM_RheoBoard_v1.05_no_pumps.csv](BOM_RheoBoard_v1.05_no_pumps.csv) | Assembly BOM upload |
 | [CPL_RheoBoard_v1.05_no_pumps.csv](CPL_RheoBoard_v1.05_no_pumps.csv) | Assembly CPL / pick-and-place upload |
+
+Use the BOM and CPL in this folder for the complete 142-position assembly.
+The older SMT-only exports elsewhere contain 137 positions and omit the five
+through-hole connectors. Do not mix those exports with this package.
 
 ## Order settings
 

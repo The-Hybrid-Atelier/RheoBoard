@@ -3,6 +3,7 @@
 - [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
 - [Sensing Setup](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Sensing-Setup)
 - [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options)
+- [Order the v1.05 PCB from JLCPCB](RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/JLCPCB/)
 
 ## RheoBoard
 

@@ -12,13 +12,15 @@ The diagrams show the ESP32 controller, pressure sensing, Qwiic devices, pumps, 
 
 <img src="images/custom-pcb-block-diagram.png" width="576" alt="RheoBoard system overview with the ESP32 Thing Plus, pressure sensor, Qwiic devices, pumps, and valves">
 
+Original v1 system overview. Its circuit labels describe the earlier board; the current v1.05 overview is below.
+
 <img src="images/custom-pcb-block-diagram-v105.png" width="576" alt="RheoBoard block diagram showing power supplies, controller interface, sensor, pumps, valves, and buttons">
 
 [Editable diagram (SVG)](images/custom-pcb-block-diagram-v105.svg).
 
 ## v1.05 files
 
-- [JLCPCB order folder](RheoBoard_v1.05/Manufacturing/JLCPCB/): matching fabrication ZIP, complete assembly BOM/CPL and ordering guide; 142 positions per board, pumps excluded.
+- [JLCPCB order folder](RheoBoard_v1.05/Manufacturing/JLCPCB/): matching fabrication ZIP, complete assembly BOM/CPL and ordering guide; 142 positions per board (137 surface-mount parts and five through-hole connectors), pumps U8/U11 excluded.
 - [KiCad project](RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pro)
 - [Schematic and board](RheoBoard_v1.05/RheoBoard_v1.05/)
 - [Symbols](RheoBoard_v1.05/Symbol/), [footprints](RheoBoard_v1.05/Footprint/) and [3D models](RheoBoard_v1.05/3D/)
@@ -27,5 +29,7 @@ The diagrams show the ESP32 controller, pressure sensing, Qwiic devices, pumps, 
 - [Fabrication ZIP](RheoBoard_v1.05/Manufacturing/RheoBoard_v1.05_fabrication.zip)
 - [SMT-only placement CSV](RheoBoard_v1.05/Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv) and [native position export](RheoBoard_v1.05/Manufacturing/CPL/RheoBoard_v1.05_native_positions.csv)
 - [KiCad drawings](RheoBoard_v1.05/Manufacturing/Drawings/)
+
+The external ESP32 controller, power supplies, valves, cables and tubing are separate purchases. See the [wiki BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/BOM) for the assembly scope and separate parts.
 
 Hardware license: CERN-OHL-W-2.0 — see [LICENSE](../LICENSE).
