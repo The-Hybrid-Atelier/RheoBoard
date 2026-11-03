@@ -2571,7 +2571,7 @@
 		(layer "F.Cu")
 		(uuid "1ebf0945-f7cd-43c3-921f-48c6b0d8803d")
 		(at 125.715283 137.8262 90)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D17"
 			(at 1.1512 -2.940283 90)
@@ -4651,7 +4651,7 @@
 		(layer "F.Cu")
 		(uuid "242dd4f4-3ef8-4448-8327-c5515729616b")
 		(at 134.506258 58.808263)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED")
 		(property "Reference" "D34"
 			(at -0.806258 -1.658263 0)
@@ -8288,7 +8288,7 @@
 		(layer "F.Cu")
 		(uuid "3c2abaa4-1782-4960-a39c-b555cf75f1ec")
 		(at 158.445 53.132377 -90)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D6"
 			(at -3.186399 -0.12155 90)
@@ -9649,7 +9649,7 @@
 		(layer "F.Cu")
 		(uuid "49df6997-8ff1-4dfa-ac02-faa7e7a3a81e")
 		(at 157.6832 137.9162 90)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D19"
 			(at 2.4662 -3.2832 90)
@@ -18021,7 +18021,7 @@
 		(layer "F.Cu")
 		(uuid "84dcd36e-9cfb-4db6-8870-1c42fa1cca5e")
 		(at 106.731895 64.459454)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED")
 		(property "Reference" "D35"
 			(at 0 -1.43 0)
@@ -21412,7 +21412,7 @@
 		(layer "F.Cu")
 		(uuid "93eab7d8-8501-4b4f-89d9-537a3554d453")
 		(at 161.966001 71.178 -90)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D15"
 			(at 2.472 -0.133999 180)
@@ -23287,7 +23287,7 @@
 		(layer "F.Cu")
 		(uuid "9c60119d-f28e-443e-b182-4510c0b70a9e")
 		(at 151.8 53.132377 -90)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D8"
 			(at -3.186399 -0.06115 90)
@@ -25505,7 +25505,7 @@
 		(layer "F.Cu")
 		(uuid "a77691ef-2b71-400b-98dd-0278e2d4bab8")
 		(at 170.28 100.75)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D13"
 			(at 2.345 -0.275 90)
@@ -29451,7 +29451,7 @@
 		(layer "F.Cu")
 		(uuid "bf0510f7-36fa-4c90-94b3-aeb05e169ba1")
 		(at 155.075 53.132377 -90)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D7"
 			(at -3.186399 -0.09135 90)
@@ -30675,7 +30675,7 @@
 		(layer "F.Cu")
 		(uuid "d20e4275-8564-4b65-b590-64d2087ed263")
 		(at 134.480436 71.43591)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED")
 		(property "Reference" "D33"
 			(at 0 -1.443211 0)
@@ -36127,7 +36127,7 @@
 		(layer "F.Cu")
 		(uuid "e109913c-1a6c-4f6a-a00d-a866d5021844")
 		(at 138.3125 100.75)
-		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: Tortai package-size reference, document 2011102023233369053.pdf)")
 		(tags "LED handsolder")
 		(property "Reference" "D14"
 			(at 2.5375 -0.35 90)
