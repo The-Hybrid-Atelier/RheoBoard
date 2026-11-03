@@ -1,10 +1,10 @@
-## Start here: [Wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
+# Start here: [Wiki](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki)
 
 - [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
 - [Sensing Setup](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Sensing-Setup)
 - [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options)
 
-# RheoBoard
+## RheoBoard
 
 <a href="docs/img/home-versions.png?v=dd5ae6e24419"><img src="docs/img/home-versions.png?v=dd5ae6e24419" alt="RheoBoard"></a>
 
