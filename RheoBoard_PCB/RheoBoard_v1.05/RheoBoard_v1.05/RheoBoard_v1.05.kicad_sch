@@ -27351,7 +27351,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/BZT52C2V0.pdf"
+		(property "Datasheet" "https://www.diodes.com/_files/datasheets/ds18004.pdf"
 			(at 99.06 77.47 0)
 			(hide yes)
 			(show_name no)
