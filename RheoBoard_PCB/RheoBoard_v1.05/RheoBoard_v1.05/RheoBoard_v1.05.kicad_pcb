@@ -47372,7 +47372,7 @@
 		(layer "F.Cu")
 		(uuid "eef1b568-2f8a-42b4-ac60-60754f019099")
 		(at 137.5 85)
-		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
+		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.nxp.com/docs/en/package-information/SOT23.pdf)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U14"
 			(at 0 2.5 0)
