@@ -27562,7 +27562,7 @@
 				)
 			)
 		)
-		(property "Assembly Notes" "Fit complete five-pin header C124379. Pin 1 is square/GND. Manual through-hole assembly; 0.60 mm square pins, 3 mm tails, 6 mm mating pins. Existing footprint retained."
+		(property "Assembly Notes" "Fit complete five-pin header C124379. Pin 1 is square/GND. Manual through-hole assembly; 0.64 +/-0.02 mm square pins, 3 mm tails, 6 mm mating pins. Project-local footprint uses 1.10 mm holes for JLCPCB finished-hole tolerance."
 			(at 586.74 93.98 0)
 			(hide yes)
 			(show_name no)
