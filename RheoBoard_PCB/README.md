@@ -18,13 +18,14 @@ The diagrams show the ESP32 controller, pressure sensing, Qwiic devices, pumps, 
 
 ## v1.05 files
 
+- [JLCPCB order folder](RheoBoard_v1.05/Manufacturing/JLCPCB/): matching fabrication ZIP, complete assembly BOM/CPL and ordering guide; 142 positions per board, pumps excluded.
 - [KiCad project](RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pro)
 - [Schematic and board](RheoBoard_v1.05/RheoBoard_v1.05/)
 - [Symbols](RheoBoard_v1.05/Symbol/), [footprints](RheoBoard_v1.05/Footprint/) and [3D models](RheoBoard_v1.05/3D/)
-- [BOM](RheoBoard_v1.05/BOM/)
+- [Full BOM workbook](RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05.xlsx) and [SMT-only BOM export](RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05_JLCPCB.csv)
 - [Gerbers and drills](RheoBoard_v1.05/Manufacturing/Gerber/)
 - [Fabrication ZIP](RheoBoard_v1.05/Manufacturing/RheoBoard_v1.05_fabrication.zip)
-- [Placement files](RheoBoard_v1.05/Manufacturing/CPL/)
+- [SMT-only placement CSV](RheoBoard_v1.05/Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv) and [native position export](RheoBoard_v1.05/Manufacturing/CPL/RheoBoard_v1.05_native_positions.csv)
 - [KiCad drawings](RheoBoard_v1.05/Manufacturing/Drawings/)
 
 Hardware license: CERN-OHL-W-2.0 — see [LICENSE](../LICENSE).
