@@ -3,7 +3,6 @@
 - [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
 - [Sensing Setup](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Sensing-Setup)
 - [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options)
-- [Order the v1.05 PCB from JLCPCB](RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/JLCPCB/)
 
 ## RheoBoard
 
@@ -28,13 +27,10 @@ The current version is version 1. This is the same version certified by OSHWA as
 Machine-readable project metadata and the current version are in
 [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 
-## Disclaimer
-
-If you build or distribute a derived unit, do not imply that it is manufactured, sold, warranted,
-or endorsed by the original designer.
-
 ## Author
 
-Created and maintained by [Charlie Vuong](https://charlie-vuong.com) (The Hybrid Atelier at UT Arlington).
+This project was created and maintained by [Cesar Torres](https://www.cearto.com) and [Charlie Vuong](https://charlie-vuong.com/) (The Hybrid Atelier at UT Arlington).
+
+RheoBoard is part of [Rheoverse](https://rheoverse.cearto.com), the public platform for the NSF CAREER project “Towards Interactive Sensor-Driven Tools for Exploring, Replicating, and Sharing Material Recipes” ([Award 2543683](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2543683)).
 
 <img src="docs/img/hybrid-atelier-logo.png" alt="The Hybrid Atelier, The University of Texas at Arlington" width="96">
