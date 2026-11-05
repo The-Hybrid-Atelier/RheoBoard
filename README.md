@@ -27,10 +27,10 @@ The current version is version 1. This is the same version certified by OSHWA as
 Machine-readable project metadata and the current version are in
 [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 
-## Author
+## Authors
 
 This project was created and maintained by [Cesar Torres](https://www.cearto.com) and [Charlie Vuong](https://charlie-vuong.com/) (The Hybrid Atelier at UT Arlington).
 
-> ⭐ **RheoBoard is part of [Rheoverse](https://rheoverse.cearto.com/)**, the public platform for the NSF CAREER project “Towards Interactive Sensor-Driven Tools for Exploring, Replicating, and Sharing Material Recipes” ([Award 2543683](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2543683)).
+> **RheoBoard is part of [Rheoverse](https://rheoverse.cearto.com/)**, the public platform for the NSF CAREER project “Towards Interactive Sensor-Driven Tools for Exploring, Replicating, and Sharing Material Recipes” ([Award 2543683](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2543683)).
 
 <img src="docs/img/hybrid-atelier-logo.png" alt="The Hybrid Atelier, The University of Texas at Arlington" width="96">
