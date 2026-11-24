@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-11-23
+date-updated: 2026-11-24
 # OSHWA certified version 1, UID US002865: https://certification.oshwa.org/us002865.html
 # The current version is version 1. This is the same version certified by OSHWA as US002865.
 # (OKH 1.0 has no certification field.)
@@ -128,6 +128,8 @@ manufacturing-files:
     title: Inline adapter and electronics-tray designs for RheoPipette
   - path: Sensing Setup
     title: CAD design for the sensing setup, using a GL45 bottle and a tube
+  - path: RheoBoard_PCB/RheoBoard_v2/BOM/BOM_RheoBoard_v2.xlsx
+    title: v2 purchasing BOM with component quantities and supplier parts
   - path: RheoBoard_PCB/RheoBoard_v2/Manufacturing/Gerber
     title: v2 Altium Gerber artwork and board profile
   - path: RheoBoard_PCB/RheoBoard_v2/Manufacturing/NC-Drill

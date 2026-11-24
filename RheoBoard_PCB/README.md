@@ -6,7 +6,7 @@ The assembled and tested v2 board is marked `RheoBoard_V2`. Open the [v2 project
 
 [PCB layout](RheoBoard_v2/Altium/RheoBoard_v2.PcbDoc) · [Main schematic](RheoBoard_v2/Altium/MAIN.SchDoc) · [Power schematic](RheoBoard_v2/Altium/POWER.SchDoc) · [Parts library](RheoBoard_v2/Altium/RheoBoard_v2.IntLib) · [v2 file index](RheoBoard_v2/README.md)
 
-[Complete v2 project ZIP](RheoBoard_v2/RheoBoard_v2-Altium.zip) · [Gerbers, NC drills and board views](RheoBoard_v2/README.md#bare-board-artwork) · [STEP model and preview](RheoBoard_v2/README.md#3d-model)
+[Complete v2 project ZIP](RheoBoard_v2/RheoBoard_v2-Altium.zip) · [Purchasing BOM (Excel)](RheoBoard_v2/BOM/BOM_RheoBoard_v2.xlsx) · [Gerbers, NC drills and board views](RheoBoard_v2/README.md#bare-board-artwork) · [STEP model and preview](RheoBoard_v2/README.md#3d-model)
 
 ## FA0520E valve holder
 
@@ -39,7 +39,7 @@ The v1.05 PCB uses a PCA9685 for pump and valve control, a nominal 5.4 V valve r
 - [SMT-only placement CSV](RheoBoard_v1.05/Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv) and [native position export](RheoBoard_v1.05/Manufacturing/CPL/RheoBoard_v1.05_native_positions.csv)
 - [KiCad drawings](RheoBoard_v1.05/Manufacturing/Drawings/)
 
-The external ESP32 controller, power supplies, valves, cables and tubing are separate purchases. See the [wiki BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/BOM) for the assembly scope and separate parts.
+The external ESP32 controller, power supplies, valves, cables and tubing are separate purchases. See the [v1.05 wiki BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/RheoBoard_v1.05-BOM) for the assembly scope and separate parts.
 
 ### System diagrams
 
