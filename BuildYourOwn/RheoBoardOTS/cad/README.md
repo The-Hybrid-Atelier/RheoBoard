@@ -4,4 +4,10 @@ Enclosure concept visuals, and the CAD design for RheoBoardOTS. The sensing setu
 
 `RheoBoardOTS_CAD/` is the CAD design for RheoBoardOTS: layout drawings, plates to print, the other parts to print, and a tray for each electronics board. The sensing setup CAD, using a GL45 bottle and a tube, is in [`Sensing Setup`](../../../Sensing Setup/). `concept/` holds enclosure concept visuals: `panel-annotated.pdf`, `assembly-open.jpg`, `encloser_pic1.jpg`, `encloser_pic2.jpg`, and `encloser_pic3.jpg`. CAD files are not in `concept/`. Portable adapter and tray files are in [`RheoPipette_CAD`](../../RheoPipette/RheoPipette_CAD/).
 
+## FA0520E valve holder
+
+The FA0520E holder is shared with every RheoBoard PCB revision. The photographed DIY panel uses the zip-tied bracket in [`RheoBoardOTS_CAD/valve_bracket.stl`](RheoBoardOTS_CAD/valve_bracket.stl).
+
+[SolidCraft 0.30.1 project](../../../mechanical/valve-holder/FA0520E-valve-holder.sc) · [STEP model](../../../mechanical/valve-holder/FA0520E-valve-holder.step) · [Printable STL](../../../mechanical/valve-holder/FA0520E-valve-holder.stl)
+
 License: hardware CERN-OHL-W-2.0 — see [`LICENSE`](../../../LICENSE).
