@@ -8,6 +8,8 @@ The assembled and tested v2 board is marked `RheoBoard_V2`. Open the [v2 project
 
 [Complete v2 project ZIP](RheoBoard_v2/RheoBoard_v2-Altium.zip) · [Purchasing BOM (Excel)](RheoBoard_v2/BOM/BOM_RheoBoard_v2.xlsx) · [Gerbers, NC drills and board views](RheoBoard_v2/README.md#bare-board-artwork) · [STEP model and preview](RheoBoard_v2/README.md#3d-model)
 
+For a bare-board order, use the [v2 JLCPCB upload ZIP and order settings](RheoBoard_v2/Manufacturing/JLCPCB/README.md).
+
 ## FA0520E valve holder
 
 All RheoBoard PCB revisions and RheoBoardOTS DIY share this valve-holder design. Four low stops locate three sides of the metal valve frame and leave the plastic head open.
