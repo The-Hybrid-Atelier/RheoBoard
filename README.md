@@ -3,6 +3,7 @@
 - [What is REP?](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/What-is-REP)
 - [Sensing Setup](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Sensing-Setup)
 - [Build options](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Build-options)
+- [Current PCB (v2) and earlier revisions](RheoBoard_PCB/README.md)
 
 ## RheoBoard
 
@@ -20,10 +21,9 @@ All license notices are consolidated in [`LICENSE`](LICENSE):
 
 <a href="https://certification.oshwa.org/us002865.html"><img src="docs/img/oshwa-certification-mark-US002865-wide.svg" alt="OSHW certification mark US002865" height="48"></a>
 
-RheoBoard is certified open source hardware by the Open Source Hardware Association,
+RheoBoard project version 1 is certified open source hardware by the Open Source Hardware Association,
 UID [US002865](https://certification.oshwa.org/us002865.html); details are on the
 [Certification](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/Certification) page.
-The current version is version 1. This is the same version certified by OSHWA as [US002865](https://certification.oshwa.org/us002865.html).
 Machine-readable project metadata and the current version are in
 [`okh-RheoBoard.yml`](okh-RheoBoard.yml).
 

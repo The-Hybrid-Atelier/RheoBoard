@@ -1,10 +1,10 @@
 # RheoBoard PCB
 
-- [v1.05](RheoBoard_v1.05/): current KiCad project and manufacturing files.
-- [v1](RheoBoard_v1/): earlier native KiCad design and its outputs.
-- [v0.05 Altium import](RheoBoard_v0.05-altium/): historical imported design.
+## Current PCB — v2
 
-v1.05 uses the PCA9685 for pump/valve control, a nominal 5.4 V valve rail, and a reset supervisor for the MPRLS sensor. The sketch in [firmware](../code/firmware/README.md) is the RheoBoardOTS DIY controller. It is not a ready-to-run v1.05 PCB driver: that board uses the PCA9685 for pump and valve outputs and J19 for host GPIO button inputs. PCB control and button handling must be implemented and verified for that hardware. Current circuit descriptions are on [PCB Design](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/PCB-Design).
+The assembled and tested v2 board is marked `RheoBoard_V2`. Open the [v2 project in Altium Designer](RheoBoard_v2/Altium/RheoBoard_v2.PrjPcb).
+
+[PCB layout](RheoBoard_v2/Altium/RheoBoard_v2.PcbDoc) · [Main schematic](RheoBoard_v2/Altium/MAIN.SchDoc) · [Power schematic](RheoBoard_v2/Altium/POWER.SchDoc) · [Parts library](RheoBoard_v2/Altium/RheoBoard_v2.IntLib) · [v2 file index](RheoBoard_v2/README.md)
 
 ## FA0520E valve holder
 
@@ -12,19 +12,20 @@ All RheoBoard PCB revisions and RheoBoardOTS DIY share this valve-holder design.
 
 [SolidCraft 0.30.1 project](../mechanical/valve-holder/FA0520E-valve-holder.sc) · [STEP model](../mechanical/valve-holder/FA0520E-valve-holder.step) · [Printable STL](../mechanical/valve-holder/FA0520E-valve-holder.stl)
 
-## System diagrams
+## Earlier revisions
 
-The diagrams show the ESP32 controller, pressure sensing, Qwiic devices, pumps, valves, and power supplies.
+- [v1.05](RheoBoard_v1.05/) — KiCad 10 project and manufacturing files.
+- [Earlier Altium project](RheoBoard_v1-altium/RheoBoard_V1.PrjPcb) — v1 design snapshot.
+- [v1](RheoBoard_v1/) — original KiCad project and outputs.
+- [v0.05 Altium import](RheoBoard_v0.05-altium/) — historical imported design.
 
-<img src="images/custom-pcb-block-diagram.png" width="576" alt="RheoBoard system overview with the ESP32 Thing Plus, pressure sensor, Qwiic devices, pumps, and valves">
+### v1.05 files
 
-Original v1 system overview. Its circuit labels describe the earlier board; the current v1.05 overview is below.
+The v1.05 PCB uses a PCA9685 for pump and valve control, a nominal 5.4 V valve rail, J19 for host button inputs, and a reset supervisor for the MPRLS pressure sensor. The [RheoBoardOTS firmware](../code/firmware/README.md) targets the DIY controller. The v1.05 PCB requires its own actuator and button handling.
 
 <img src="images/custom-pcb-block-diagram-v105.png" width="576" alt="RheoBoard block diagram showing power supplies, controller interface, sensor, pumps, valves, and buttons">
 
-[Editable diagram (SVG)](images/custom-pcb-block-diagram-v105.svg).
-
-## v1.05 files
+[Editable v1.05 diagram (SVG)](images/custom-pcb-block-diagram-v105.svg).
 
 - [JLCPCB order folder](RheoBoard_v1.05/Manufacturing/JLCPCB/): matching fabrication ZIP, complete assembly BOM/CPL and ordering guide; 142 positions per board (137 surface-mount parts and five through-hole connectors), pumps U8/U11 excluded.
 - [KiCad project](RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pro)
@@ -37,5 +38,11 @@ Original v1 system overview. Its circuit labels describe the earlier board; the 
 - [KiCad drawings](RheoBoard_v1.05/Manufacturing/Drawings/)
 
 The external ESP32 controller, power supplies, valves, cables and tubing are separate purchases. See the [wiki BOM](https://github.com/The-Hybrid-Atelier/RheoBoard/wiki/BOM) for the assembly scope and separate parts.
+
+### System diagrams
+
+The original v1 system overview shows the controller, sensor, pumps and valves.
+
+<img src="images/custom-pcb-block-diagram.png" width="576" alt="Original v1 system overview with the ESP32 Thing Plus, pressure sensor, Qwiic devices, pumps, and valves">
 
 Hardware license: CERN-OHL-W-2.0 — see [LICENSE](../LICENSE).

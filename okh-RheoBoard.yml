@@ -4,7 +4,7 @@
 # Keep in sync with README.md when anything changes.
 ---
 date-created: 2026-07-08
-date-updated: 2026-10-29
+date-updated: 2026-11-23
 # OSHWA certified version 1, UID US002865: https://certification.oshwa.org/us002865.html
 # The current version is version 1. This is the same version certified by OSHWA as US002865.
 # (OKH 1.0 has no certification field.)
@@ -24,8 +24,8 @@ description: >
   PLA panel and driven by an ESP32 microcontroller through two L298N H-bridge drivers
   (controlled via an Adafruit PCA9685 16-channel PWM driver, product 815, I2C 0x40), run a
   retract-extrude pulse (REP) on command while a Qwiic MicroPressure sensor streams the
-  pressure trace over BLE. A separate KiCad PCB prototype lives under RheoBoard_PCB and is not
-  this DIY build. Open hardware supporting the RheoMap, RheoData, and SlipAtlas projects.
+  pressure trace over BLE. RheoBoard PCB v2 is the current custom board revision, designed in
+  Altium Designer. Open hardware supporting the RheoMap, RheoData, and SlipAtlas projects.
 intended-use: >
   Bench research and teaching instrument for characterizing the pneumatic pressure response of
   soft/viscous samples. Built and operated by makers, students, and researchers comfortable with
@@ -51,7 +51,7 @@ contact:
 
 version: "1"
 development-stage: prototype
-# The KiCad board's silkscreen label "Rheoboard V1" is that board's own label.
+# Build status refers to the RheoBoardOTS DIY configuration described above.
 made: false
 made-independently: false
 
@@ -88,24 +88,36 @@ design-files:
     title: CAD design for the sensing setup, using a GL45 bottle and a tube
   - path: BuildYourOwn/RheoBoardOTS/cad/concept
     title: Enclosure concept visuals (no CAD files)
+  - path: RheoBoard_PCB/RheoBoard_v2/Altium/RheoBoard_v2.PrjPcb
+    title: Altium Designer project for the current v2 PCB
+  - path: RheoBoard_PCB/RheoBoard_v2/Altium/RheoBoard_v2.PcbDoc
+    title: v2 PCB layout
+  - path: RheoBoard_PCB/RheoBoard_v2/Altium/RheoBoard_v2.IntLib
+    title: v2 integrated symbol and footprint library
   - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pro
-    title: KiCad 10 project for the current v1.05 custom PCB prototype
+    title: KiCad 10 project for the earlier v1.05 PCB
   - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_sch
-    title: KiCad schematic for the current v1.05 custom PCB
+    title: KiCad schematic for the earlier v1.05 PCB
   - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pcb
-    title: KiCad board layout for the current v1.05 custom PCB
+    title: KiCad layout for the earlier v1.05 PCB
 
 schematics:
   - path: BuildYourOwn/RheoBoardOTS/hardware/electronic-wiring/wiring-diagram.png
     title: Electrical schematic
   - path: BuildYourOwn/RheoBoardOTS/hardware/tube-wiring/tube-connection.png
     title: Pneumatic tube-connection diagram
+  - path: RheoBoard_PCB/RheoBoard_v2/Altium/MAIN.SchDoc
+    title: v2 controller interface, sensor and actuator schematic
+  - path: RheoBoard_PCB/RheoBoard_v2/Altium/POWER.SchDoc
+    title: v2 power supply schematic
+  - path: RheoBoard_PCB/RheoBoard_v2/Altium/RheoBoard_v2.SchDoc
+    title: v2 system overview sheet
 
 making-instructions:
   - path: BuildYourOwn/RheoBoardOTS/README.md
     title: RheoBoardOTS - DIY pointer to the wiki RheoBoardOTS page
   - path: RheoBoard_PCB/README.md
-    title: How to open the KiCad board and where its fabrication files are
+    title: Current v2 Altium project and earlier PCB revisions
 
 manufacturing-files:
   - path: BuildYourOwn/RheoBoardOTS/cad/RheoBoardOTS_CAD
@@ -115,15 +127,15 @@ manufacturing-files:
   - path: Sensing Setup
     title: CAD design for the sensing setup, using a GL45 bottle and a tube
   - path: RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/Gerber/RheoBoard_v1.05-job.gbrjob
-    title: v1.05 PCB fabrication job (Gerbers and drills in this folder)
+    title: Earlier v1.05 PCB fabrication job (Gerbers and drills in this folder)
   - path: RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05.xlsx
-    title: RheoBoard v1.05 purchasing BOM with supplier links
+    title: Earlier v1.05 purchasing BOM with supplier links
   - path: RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05_JLCPCB.csv
-    title: RheoBoard v1.05 JLCPCB assembly BOM
+    title: Earlier v1.05 JLCPCB assembly BOM
   - path: RheoBoard_PCB/RheoBoard_v1/8815214A_Y73_SMT026093063736_top.png
     title: Historical JLCPCB corrected top placement for Rheoboard V1 order 8815214A_Y73 / SMT026093063736
   - path: RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/CPL/CPL_RheoBoard_v1.05_JLCPCB_SMT.csv
-    title: RheoBoard v1.05 JLCPCB SMT pick-and-place
+    title: Earlier v1.05 JLCPCB SMT pick-and-place
 
 operating-instructions:
   - path: code/firmware/README.md
