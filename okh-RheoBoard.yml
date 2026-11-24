@@ -94,6 +94,8 @@ design-files:
     title: v2 PCB layout
   - path: RheoBoard_PCB/RheoBoard_v2/Altium/RheoBoard_v2.IntLib
     title: v2 integrated symbol and footprint library
+  - path: RheoBoard_PCB/RheoBoard_v2/3D/RheoBoard_v2.step
+    title: v2 board STEP model
   - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_pro
     title: KiCad 10 project for the earlier v1.05 PCB
   - path: RheoBoard_PCB/RheoBoard_v1.05/RheoBoard_v1.05/RheoBoard_v1.05.kicad_sch
@@ -126,6 +128,10 @@ manufacturing-files:
     title: Inline adapter and electronics-tray designs for RheoPipette
   - path: Sensing Setup
     title: CAD design for the sensing setup, using a GL45 bottle and a tube
+  - path: RheoBoard_PCB/RheoBoard_v2/Manufacturing/Gerber
+    title: v2 Altium Gerber artwork and board profile
+  - path: RheoBoard_PCB/RheoBoard_v2/Manufacturing/NC-Drill
+    title: v2 NC drill files for round and slotted holes
   - path: RheoBoard_PCB/RheoBoard_v1.05/Manufacturing/Gerber/RheoBoard_v1.05-job.gbrjob
     title: Earlier v1.05 PCB fabrication job (Gerbers and drills in this folder)
   - path: RheoBoard_PCB/RheoBoard_v1.05/BOM/BOM_RheoBoard_v1.05.xlsx
